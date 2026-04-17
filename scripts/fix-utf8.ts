@@ -10,7 +10,7 @@ const projectRoot = path.resolve(__dirname, "..");
 
 const textExtensions = new Set([".ts", ".tsx", ".js", ".jsx", ".json", ".md", ".html", ".css", ".txt", ".csv"]);
 const skipDirs = new Set(["node_modules", ".git", "dist", ".tmp-build"]);
-const cp1251Files = new Set([path.join(projectRoot, "tmp_chaikovsky_page.html")]);
+const cp1251Files = new Set<string>();
 const biosRawPath = path.join(projectRoot, "tmp_data", "bios_raw.md");
 const legacyDetailsPath = path.join(projectRoot, "src", "app", "data", "personDetails.legacy.ts");
 const cp1251EncodeMap = new Map([

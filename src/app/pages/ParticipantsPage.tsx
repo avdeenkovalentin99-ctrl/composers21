@@ -275,6 +275,7 @@ export function ParticipantsPage() {
                           <SoloistCard
                             key={`soloist-${person.name}`}
                             person={person}
+                            actionLabel=""
                             onOpen={() => {
                               beginParticipantTransition(`/participants/soloists/${getPersonSlug(person)}`);
                             }}
