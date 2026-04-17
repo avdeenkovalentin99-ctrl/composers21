@@ -1,4 +1,5 @@
 import { generatedComposers, type GeneratedParticipant } from "./participants.generated";
+import { getParticipantImage } from "./images";
 import { composers as legacyComposers } from "./composers.legacy";
 import type { PersonItem } from "./types";
 
@@ -11,12 +12,13 @@ function mergeBySlug(legacyList: PersonItem[], generatedList: GeneratedParticipa
 
   for (const item of generatedList) {
     const existing = merged.get(item.slug);
+    const generatedImage = item.image || getParticipantImage(item.photo);
     merged.set(item.slug, {
       slug: item.slug,
       name: item.name || existing?.name || "",
       role: item.role || existing?.role,
       description: item.description || existing?.description || "",
-      image: item.image || existing?.image || "",
+      image: generatedImage || existing?.image || "",
       link: item.link || existing?.link || "",
     });
   }

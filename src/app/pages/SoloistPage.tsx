@@ -25,6 +25,14 @@ const paragraphVariants = {
   }),
 };
 
+function getSoloistImageClassName(slug: string) {
+  if (slug === "roman-vykulov") {
+    return "aspect-[4/5] w-full object-cover object-[68%_50%] grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]";
+  }
+
+  return "aspect-[4/5] w-full object-cover grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]";
+}
+
 export function SoloistPage() {
   const { slug = "" } = useParams();
   const soloist = findSoloistBySlug(slug);
@@ -80,7 +88,7 @@ export function SoloistPage() {
                       transition={{ duration: 0.9, ease: "easeOut" }}
                       src={soloist.image}
                       alt={soloist.name}
-                      className="aspect-[4/5] w-full object-cover grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]"
+                      className={getSoloistImageClassName(soloist.slug)}
                     />
                   </div>
                 </div>

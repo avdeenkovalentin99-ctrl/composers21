@@ -19,6 +19,14 @@ const paragraphVariants = {
   }),
 };
 
+function getEnsembleImageClassName(slug: string) {
+  if (slug === "kvartet_glinki") {
+    return "aspect-[3/2] h-full w-full object-cover object-[50%_42%] grayscale";
+  }
+
+  return "aspect-[3/2] h-full w-full object-cover grayscale";
+}
+
 export function EnsemblePage() {
   const { slug = "" } = useParams();
   const ensemble = findEnsembleBySlug(slug);
@@ -61,7 +69,7 @@ export function EnsemblePage() {
                 <img
                   src={ensemble.image}
                   alt={ensemble.name}
-                  className="aspect-[16/9] h-full w-full object-cover grayscale md:aspect-[3/2] lg:aspect-auto"
+                  className={getEnsembleImageClassName(ensemble.slug)}
                 />
                 <div aria-hidden="true" className="absolute inset-0 bg-black/5" />
               </motion.div>
@@ -113,4 +121,3 @@ export function EnsemblePage() {
     </section>
   );
 }
-

@@ -4,6 +4,14 @@ import { PageContainer } from "../../layout/PageContainer";
 import { LinkArrow } from "../ui/LinkArrow";
 import { SectionTitle } from "../ui/SectionTitle";
 
+function getPreviewImageClassName(slug: string) {
+  if (slug === "roman-vykulov") {
+    return "h-72 w-full object-cover object-[68%_50%] grayscale";
+  }
+
+  return "h-72 w-full object-cover grayscale";
+}
+
 export function ParticipantsPreview() {
   return (
     <section className="py-18 sm:py-24">
@@ -24,7 +32,7 @@ export function ParticipantsPreview() {
                 transition={{ duration: 0.36, delay: index * 0.04 }}
                 className="border border-black/10 bg-[var(--color-panel)]"
               >
-                <img src={person.image} alt={person.name} className="h-72 w-full object-cover grayscale" />
+                <img src={person.image} alt={person.name} className={getPreviewImageClassName(person.slug)} />
                 <div className="space-y-3 p-6">
                   <h3 className="text-xl font-light tracking-[-0.03em]">{person.name}</h3>
                   <p className="text-sm leading-7 text-[var(--color-muted)]">{person.description}</p>

@@ -70,6 +70,7 @@ function SoloistCard({
   const nameParts = person.name.trim().split(/\s+/);
   const lastName = nameParts.pop() ?? "";
   const firstPart = nameParts.join(" ");
+  const imageClassName = getParticipantImageClassName(person);
 
   return (
     <motion.button
@@ -85,7 +86,7 @@ function SoloistCard({
             transition={{ duration: 0.32, ease: "easeOut" }}
             src={person.image}
             alt={person.name}
-            className="aspect-[4/5] w-full object-cover grayscale"
+            className={["w-full object-cover grayscale", imageClassName].join(" ")}
           />
           <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/6" />
           <div className="pointer-events-none absolute bottom-4 left-4 font-editorial-sans text-[10px] uppercase tracking-[0.14em] text-white/0 transition-colors duration-300 group-hover:text-white/72">
@@ -107,6 +108,18 @@ function SoloistCard({
 function getParticipantImageClassName(person: PersonItem, fallbackClassName = "aspect-[4/5]") {
   if (person.slug === "leonid-desyatnikov") {
     return `${fallbackClassName} object-[50%_18%]`;
+  }
+
+  if (person.slug === "roman-vykulov") {
+    return `${fallbackClassName} object-[68%_50%]`;
+  }
+
+  return fallbackClassName;
+}
+
+function getEnsembleImageClassName(person: PersonItem, fallbackClassName = "aspect-[3/2]") {
+  if (person.slug === "kvartet_glinki") {
+    return `${fallbackClassName} object-[50%_42%]`;
   }
 
   return fallbackClassName;
@@ -242,7 +255,7 @@ export function ParticipantsPage() {
                             onOpen={() => {
                               beginParticipantTransition(`/participants/ensembles/${getPersonSlug(person)}`);
                             }}
-                            imageClassName="aspect-[3/2]"
+                            imageClassName={getEnsembleImageClassName(person)}
                           />
                         ))}
                       </div>
