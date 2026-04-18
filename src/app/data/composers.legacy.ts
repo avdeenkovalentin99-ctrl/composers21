@@ -1,5 +1,5 @@
 import type { PersonItem } from "./types";
-import { localImages } from "./images";
+import { getParticipantImage, localImages } from "./images";
 
 export const composers: PersonItem[] = [
   {
@@ -52,10 +52,24 @@ export const composers: PersonItem[] = [
     link: "https://21centcomposers.ru/composers",
   },
   {
-    name: "Эрик Эшенвалдс",
+    name: "Эрик Эшенвальдс",
     slug: "erik-eshenvalds",
     description: "Композитор, представленный в программе фестиваля.",
     image: "/festlogonowords.svg",
+    link: "https://21centcomposers.ru/composers",
+  },
+  {
+    name: "Эдисон Денисов",
+    slug: "edison-denisov",
+    description: "Композитор, представленный в программе фестиваля.",
+    image: getParticipantImage("EdisonD.jpg") || "/festlogonowords.svg",
+    link: "https://21centcomposers.ru/composers",
+  },
+  {
+    name: "Янис Ксенаксис",
+    slug: "yanis-ksenakis",
+    description: "Композитор, представленный в программе фестиваля.",
+    image: getParticipantImage("ksenaksisYa.jpg") || "/festlogonowords.svg",
     link: "https://21centcomposers.ru/composers",
   },
 ];
