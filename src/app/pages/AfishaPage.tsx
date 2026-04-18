@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
-import { concerts } from "../data/site";
+import { concertProgrammes } from "../data/site";
 import { PageContainer } from "../layout/PageContainer";
 
-type EventItem = (typeof concerts)[number];
+type EventItem = (typeof concertProgrammes)[number];
 
 const weekdayFormatter = new Intl.DateTimeFormat("ru-RU", { weekday: "short" });
 const monthFormatter = new Intl.DateTimeFormat("ru-RU", { month: "short" });
@@ -21,102 +21,6 @@ function buildEventDate(dateLabel: string) {
   };
 }
 
-function normalizeProgrammePart(value: string) {
-  return value
-    .replace(/[«»"]/g, "")
-    .replace(/\s+/g, " ")
-    .replace(/\s*\/\s*/g, " / ")
-    .trim();
-}
-
-function getCustomProgrammeItems(event: EventItem) {
-  if (event.date === "10 мая") {
-    return ["Георг Пелецис. 24 Каприса"];
-  }
-
-  if (event.date === "12 мая") {
-    return [
-      'Кайя Саариахо (1952-2023) "Vent Nocturne"',
-      'Алексей Ретинский (род. 1986) "Dream of Birds"',
-      "Джордж Крам (1929-2022) Четыре Ноктюрна для скрипки и фортепиано",
-      'Андреас Мустукис (род. 1951) "Les Fleur du Mal"',
-      'Сальваторе Шаррино (род. 1947) "De la Nuite"',
-      "Алексей Ретинский (род. 1986) Трио для скрипки, виолончели и фортепиано",
-    ];
-  }
-
-  return null;
-}
-
-function getCustomPerformers(event: EventItem) {
-  if (event.date === "10 мая") {
-    return ["Максим Новиков (альт)"];
-  }
-
-  if (event.date === "12 мая") {
-    return [
-      "Наталья Соколовская (фортепиано)",
-      "Аяко Танабэ (скрипка)",
-      "Сергей Полтавский (альт)",
-      "Евгений Румянцев (виолончель)",
-      "Худ. руководитель ансамбля — Наталья Соколовская",
-    ];
-  }
-
-  return null;
-}
-
-function getCustomProgrammePreview(event: EventItem) {
-  if (event.date === "10 мая") {
-    return "Максим Новиков (альт)";
-  }
-
-  if (event.date === "12 мая") {
-    return "Саариахо · Ретинский · Крам · Мустукис · Шаррино";
-  }
-
-  return null;
-}
-
-function buildProgrammeItems(event: EventItem) {
-  const customProgrammeItems = getCustomProgrammeItems(event);
-
-  if (customProgrammeItems) {
-    return customProgrammeItems;
-  }
-
-  const sources = [event.title, event.description]
-    .flatMap((value) => value.split(/[.;]/))
-    .flatMap((value) => value.split(/, (?=[A-ZА-ЯЁ])/u))
-    .map(normalizeProgrammePart)
-    .filter(Boolean);
-
-  return Array.from(new Set(sources));
-}
-
-function buildProgrammePreview(event: EventItem) {
-  const customProgrammePreview = getCustomProgrammePreview(event);
-
-  if (customProgrammePreview) {
-    return customProgrammePreview;
-  }
-
-  return buildProgrammeItems(event).slice(0, 3).join("  •  ");
-}
-
-function buildPerformers(event: EventItem) {
-  const customPerformers = getCustomPerformers(event);
-
-  if (customPerformers) {
-    return customPerformers;
-  }
-
-  return event.description
-    .split(/[.;]/)
-    .map((part) => part.trim())
-    .filter(Boolean);
-}
-
 function EventAccordion({
   event,
   isOpen,
@@ -127,9 +31,6 @@ function EventAccordion({
   onToggle: () => void;
 }) {
   const dateParts = useMemo(() => buildEventDate(event.date), [event.date]);
-  const programmePreview = useMemo(() => buildProgrammePreview(event), [event]);
-  const programmeItems = useMemo(() => buildProgrammeItems(event), [event]);
-  const performers = useMemo(() => buildPerformers(event), [event]);
 
   return (
     <article className="group py-10 sm:py-12">
@@ -153,7 +54,9 @@ function EventAccordion({
                 {event.title}
               </h2>
 
-              <p className="font-editorial-serif max-w-3xl text-base leading-7 text-neutral-600">{programmePreview}</p>
+              <p className="font-editorial-serif max-w-3xl text-base leading-7 text-neutral-600">
+                {event.description}
+              </p>
 
               <button
                 type="button"
@@ -173,9 +76,9 @@ function EventAccordion({
             </div>
 
             <div className="pr-2 pt-1 text-left md:min-w-[120px] md:text-right">
-              {event.link ? (
+              {event.ticketLink ? (
                 <a
-                  href={event.link}
+                  href={event.ticketLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Купить билеты на концерт"
@@ -196,7 +99,7 @@ function EventAccordion({
                       ПРОГРАММА
                     </p>
                     <div className="font-editorial-serif space-y-3 text-base leading-8 text-neutral-800">
-                      {programmeItems.map((item) => (
+                      {event.programme.map((item) => (
                         <p key={item}>{item}</p>
                       ))}
                     </div>
@@ -207,7 +110,7 @@ function EventAccordion({
                       ИСПОЛНИТЕЛИ
                     </p>
                     <div className="font-editorial-serif space-y-2 text-[1.04rem] leading-7 text-neutral-800">
-                      {performers.map((item) => (
+                      {event.performers.map((item) => (
                         <p key={item}>{item}</p>
                       ))}
                     </div>
@@ -244,24 +147,20 @@ export function AfishaPage() {
         </div>
 
         <div className="divide-y divide-black/8">
-          {concerts.map((concert) => {
-            const eventKey = `${concert.date}-${concert.title}`;
-
-            return (
-              <EventAccordion
-                key={eventKey}
-                event={concert}
-                isOpen={openEventKeys.includes(eventKey)}
-                onToggle={() =>
-                  setOpenEventKeys((current) =>
-                    current.includes(eventKey)
-                      ? current.filter((key) => key !== eventKey)
-                      : [...current, eventKey],
-                  )
-                }
-              />
-            );
-          })}
+          {concertProgrammes.map((concert) => (
+            <EventAccordion
+              key={concert.id}
+              event={concert}
+              isOpen={openEventKeys.includes(concert.id)}
+              onToggle={() =>
+                setOpenEventKeys((current) =>
+                  current.includes(concert.id)
+                    ? current.filter((key) => key !== concert.id)
+                    : [...current, concert.id],
+                )
+              }
+            />
+          ))}
         </div>
       </PageContainer>
     </section>

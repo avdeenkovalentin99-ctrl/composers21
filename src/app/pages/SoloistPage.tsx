@@ -26,6 +26,18 @@ const paragraphVariants = {
 };
 
 function getSoloistImageClassName(slug: string) {
+  if (slug === "maxim_novikov") {
+    return "aspect-[4/5] w-full object-cover object-[15%_50%] grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]";
+  }
+
+  if (slug === "u03c48z581-aleksei-goribol") {
+    return "aspect-[4/5] w-full object-cover object-[29%_56%] grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]";
+  }
+
+  if (slug === "dmitrii-onischenko") {
+    return "aspect-[4/5] w-full object-cover object-[50%_40%] grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]";
+  }
+
   if (slug === "roman-vykulov") {
     return "aspect-[4/5] w-full object-cover object-[68%_50%] grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]";
   }
@@ -42,9 +54,6 @@ export function SoloistPage() {
   }
 
   const biographyParagraphs = personDetails[soloist.slug]?.biography ?? [soloist.description];
-  const nameParts = soloist.name.trim().split(/\s+/);
-  const lastName = nameParts.pop() ?? "";
-  const firstPart = nameParts.join(" ");
 
   return (
     <section className="pb-32 pt-32 sm:pb-36 sm:pt-36">
@@ -77,8 +86,7 @@ export function SoloistPage() {
                       className="absolute bottom-0 left-[-22px] hidden rotate-180 [writing-mode:vertical-rl] lg:block"
                     >
                       <div className="font-editorial-sans text-[0.92rem] font-[360] uppercase tracking-[0.05em] text-[#333333]">
-                        {firstPart ? `${firstPart} ` : ""}
-                        <span className="last-name font-medium text-[#222222]">{lastName}</span>
+                        {soloist.name}
                       </div>
                     </motion.div>
 

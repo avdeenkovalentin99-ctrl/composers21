@@ -67,9 +67,6 @@ function SoloistCard({
   onOpen: (person: PersonItem) => void;
   actionLabel?: string;
 }) {
-  const nameParts = person.name.trim().split(/\s+/);
-  const lastName = nameParts.pop() ?? "";
-  const firstPart = nameParts.join(" ");
   const imageClassName = getParticipantImageClassName(person);
 
   return (
@@ -96,8 +93,7 @@ function SoloistCard({
 
         <div className="pt-8">
           <h2 className="font-editorial-sans text-[0.94rem] font-[360] uppercase tracking-[0.05em] text-[#333333] sm:text-[1rem]">
-            {firstPart ? `${firstPart} ` : ""}
-            <span className="last-name font-medium">{lastName}</span>
+            {person.name}
           </h2>
         </div>
       </div>
@@ -108,6 +104,34 @@ function SoloistCard({
 function getParticipantImageClassName(person: PersonItem, fallbackClassName = "aspect-[4/5]") {
   if (person.slug === "leonid-desyatnikov") {
     return `${fallbackClassName} object-[50%_18%]`;
+  }
+
+  if (person.slug === "maxim_novikov") {
+    return `${fallbackClassName} object-[15%_50%]`;
+  }
+
+  if (person.slug === "aleksandr-malomozhnov") {
+    return `${fallbackClassName} object-[57%_50%]`;
+  }
+
+  if (person.slug === "evgenii-starodubtsev") {
+    return `${fallbackClassName} object-center`;
+  }
+
+  if (person.slug === "kseniya-knorre") {
+    return `${fallbackClassName} object-center`;
+  }
+
+  if (person.slug === "u03c48z581-aleksei-goribol") {
+    return `${fallbackClassName} object-[29%_56%]`;
+  }
+
+  if (person.slug === "yuliya-igonina") {
+    return `${fallbackClassName} object-[62%_50%]`;
+  }
+
+  if (person.slug === "dmitrii-onischenko") {
+    return `${fallbackClassName} object-[50%_40%]`;
   }
 
   if (person.slug === "roman-vykulov") {

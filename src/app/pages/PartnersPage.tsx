@@ -10,7 +10,9 @@ export function PartnersPage() {
           <div className="space-y-8 pt-2">
             {partners.map((partner) => (
               <div key={partner.name} className="grid gap-6 sm:grid-cols-[120px_minmax(0,1fr)] sm:items-start sm:gap-x-8">
-                <img src={partner.image} alt={partner.name} className="h-24 w-24 object-contain" />
+                <div className="flex min-h-24 items-center">
+                  <img src={partner.image} alt={partner.name} className="h-auto max-h-24 w-full max-w-[120px] object-contain object-left" />
+                </div>
 
                 <div className="max-w-3xl pr-2">
                   <div className="flex items-start justify-between gap-5">

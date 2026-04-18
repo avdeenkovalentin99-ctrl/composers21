@@ -26,6 +26,17 @@ export type ConcertItem = {
   link?: string;
 };
 
+export type ConcertProgrammeItem = {
+  id: string;
+  date: string;
+  title: string;
+  description: string;
+  programme: string[];
+  performers: string[];
+  image: string;
+  ticketLink?: string;
+};
+
 export type PersonItem = {
   slug: string;
   name: string;

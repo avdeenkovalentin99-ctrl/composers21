@@ -8,8 +8,9 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
 const textExtensions = new Set([".ts", ".tsx", ".js", ".jsx", ".json", ".md", ".html", ".css", ".txt", ".csv"]);
 const skipDirs = new Set(["node_modules", ".git", "dist", ".tmp-build"]);
-const cp1251Files = new Set([path.join(projectRoot, "tmp_chaikovsky_page.html")]);
+const cp1251Files = new Set();
 const biosRawPath = path.join(projectRoot, "tmp_data", "bios_raw.md");
+const composersBiosPath = path.join(projectRoot, "tmp_data", "composers_bios.md");
 const legacyDetailsPath = path.join(projectRoot, "src", "app", "data", "personDetails.legacy.ts");
 const cp1251EncodeMap = new Map([
     [0x0402, 0x80],
@@ -185,10 +186,42 @@ full:
         await fs.writeFile(biosRawPath, next, "utf8");
     }
 }
+async function fixComposersBiosTemplate() {
+    const template = `<!--
+Отдельный файл для композиторов.
+Солистов продолжайте добавлять в tmp_data/bios_raw.md.
+
+Шаблон блока:
+
+## Имя Фамилия
+slug: unique-slug
+role: composer
+group: composers
+order: 1
+photo: source-file.jpg
+image: /public-image.jpg или https://...
+link: https://...
+description: Короткое описание
+full:
+Первый абзац биографии.
+
+Второй абзац биографии.
+-->
+
+`;
+    const current = await fs.readFile(composersBiosPath, "utf8").catch(() => "");
+    const next = current
+        ? normalizeText(current).replace(/^<!--[\s\S]*?-->\s*/m, template)
+        : template;
+    if (next !== current) {
+        await fs.writeFile(composersBiosPath, next, "utf8");
+    }
+}
 async function pruneLegacyDuplicates() {
-    const biosRaw = await fs.readFile(biosRawPath, "utf8");
+    const biosRaw = await fs.readFile(biosRawPath, "utf8").catch(() => "");
+    const composersBios = await fs.readFile(composersBiosPath, "utf8").catch(() => "");
     const legacy = await fs.readFile(legacyDetailsPath, "utf8");
-    const slugMatches = [...biosRaw.matchAll(/^slug:\s*(.+)$/gm)];
+    const slugMatches = [...biosRaw.matchAll(/^slug:\s*(.+)$/gm), ...composersBios.matchAll(/^slug:\s*(.+)$/gm)];
     const slugs = slugMatches.map((match) => match[1].trim()).filter(Boolean);
     let next = legacy;
     for (const slug of slugs) {
@@ -211,6 +244,7 @@ async function main() {
         await normalizeFile(filePath);
     }
     await fixBiosRawTemplate();
+    await fixComposersBiosTemplate();
     await pruneLegacyDuplicates();
 }
 main().catch((error) => {
