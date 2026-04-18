@@ -90,6 +90,20 @@ export function SiteHeader() {
               ))}
             </nav>
 
+            <NavLink
+              to="/afisha"
+              className={({ isActive }) =>
+                [
+                  "font-editorial-sans inline-flex items-center border text-[12px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:hidden",
+                  isActive
+                    ? "border-transparent bg-neutral-900 px-2 py-2 !text-white"
+                    : "border-neutral-400 px-2 py-2 text-neutral-600 hover:border-neutral-900 hover:text-neutral-900",
+                ].join(" ")
+              }
+            >
+              Афиша
+            </NavLink>
+
             <div className="ml-auto flex items-center gap-3">
               <NavLink
                 to="/afisha"
