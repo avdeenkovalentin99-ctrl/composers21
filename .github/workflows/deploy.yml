@@ -25,6 +25,7 @@ jobs:
           npm run build
 
       - name: Deploy to Remote Server
+        if: success()
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
