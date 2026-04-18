@@ -110,9 +110,17 @@ function EventAccordion({
                       ИСПОЛНИТЕЛИ
                     </p>
                     <div className="font-editorial-serif space-y-2 text-[1.04rem] leading-7 text-neutral-800">
-                      {event.performers.map((item) => (
-                        <p key={item}>{item}</p>
-                      ))}
+                      {event.performers.map((item, index) =>
+                        item.trim() === "" ? (
+                          <div
+                            key={`${event.id}-performer-gap-${index}`}
+                            aria-hidden="true"
+                            className="h-4"
+                          />
+                        ) : (
+                          <p key={`${event.id}-performer-${index}`}>{item}</p>
+                        ),
+                      )}
                     </div>
                   </div>
                 </div>
