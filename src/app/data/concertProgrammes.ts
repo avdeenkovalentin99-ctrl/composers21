@@ -5,7 +5,7 @@ export const concertProgrammes: ConcertProgrammeItem[] = [
     id: "2026-05-10-peletcis-24-kaprisa",
     date: "10 мая",
     title: "Георг Пелецис. 24 Каприса",
-    description: "Посвящение М. Новикову.",
+    description: "Посвящение М. Новикову. Максим Новиков (альт), Алексей Лундин (скрипка).",
     programme: ["Георг Пелецис. 24 Каприса"],
     performers: ["Максим Новиков (альт)", "Алексей Лундин (скрипка)"],
     image: "https://static.tildacdn.com/tild6136-3631-4337-b530-663030396536/01b3902154153c814c24.jpeg",
