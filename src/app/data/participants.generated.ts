@@ -435,7 +435,7 @@ export const generatedPerformers: GeneratedParticipant[] = [
     role: "ensemble",
     description: "Академическая музыка для современного мегаполиса.",
     photo: "",
-    image: "https://static.tildacdn.com/tild3938-6130-4663-a663-616562623063/2J9A7454-scaled.jpg",
+    image: "/assets/external/c9619ec7_2J9A7454-scaled.jpg",
     link: "https://21centcomposers.ru/info/bcix09uev1-ansambl-classica-plus",
   },
   {
@@ -462,7 +462,7 @@ export const generatedPerformers: GeneratedParticipant[] = [
     role: "ensemble",
     description: "Камерно-инструментальный ансамбль, занимающий видное место среди музыкальной элиты России.",
     photo: "",
-    image: "https://static.tildacdn.com/tild3236-3465-4532-a131-346636316464/IMG_20260305_001127_.jpg",
+    image: "/assets/external/ca19e99d_IMG_20260305_001127_.jpg",
     link: "https://21centcomposers.ru/info/kvartet_glinki",
   },
   {
@@ -678,7 +678,7 @@ export const generatedPerformers: GeneratedParticipant[] = [
     role: "ensemble",
     description: "Художественный руководитель — Евгения Кудричевская.",
     photo: "",
-    image: "https://static.tildacdn.com/tild6131-3237-4662-a132-343132646339/IMG-20260124-WA0004.jpg",
+    image: "/assets/external/fedbb67f_IMG-20260124-WA0004.jpg",
     link: "https://21centcomposers.ru/info/2ci5ibo0z1-horovoi-ansambl-melodiya",
   },
   {
@@ -705,7 +705,7 @@ export const generatedPerformers: GeneratedParticipant[] = [
     role: "ensemble",
     description: "Лаборатория старинной и современной музыки и независимое сообщество музыкантов.",
     photo: "",
-    image: "https://static.tildacdn.com/tild3063-3764-4437-a432-353333396333/-5368621893969188115.jpg",
+    image: "/assets/external/c3a19a32_-5368621893969188115.jpg",
     link: "https://21centcomposers.ru/info/185385o731-brezel-ensemble",
   },
   {
@@ -714,7 +714,7 @@ export const generatedPerformers: GeneratedParticipant[] = [
     role: "ensemble",
     description: "Содружество музыкантов, которым подвластны все жанры и стили камерной музыки и искусство импровизации.",
     photo: "",
-    image: "https://static.tildacdn.com/tild3038-3163-4635-b865-613232623166/-5451686574358728414.jpg",
+    image: "/assets/external/1ce0f2e5_-5451686574358728414.jpg",
     link: "https://21centcomposers.ru/info/jsspbiezo1-le-thlme-ensemble",
   },
   {
@@ -723,7 +723,7 @@ export const generatedPerformers: GeneratedParticipant[] = [
     role: "ensemble",
     description: "Оркестр, специализирующийся на исполнении современной музыки.",
     photo: "Opensoundorchestra-4.jpeg",
-    image: "https://static.tildacdn.com/tild3364-3837-4565-a336-663865643261/Opensoundorchestra-4.jpeg",
+    image: "/assets/external/51784523_Opensoundorchestra-4.jpeg",
     link: "https://opensoundorchestra.ru/",
   },
 ];

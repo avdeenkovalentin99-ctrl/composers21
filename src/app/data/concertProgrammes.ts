@@ -8,7 +8,7 @@ export const concertProgrammes: ConcertProgrammeItem[] = [
     description: "Посвящение М. Новикову. Максим Новиков (альт), Алексей Лундин (скрипка).",
     programme: ["Георг Пелецис. 24 Каприса"],
     performers: ["Максим Новиков (альт)", "Алексей Лундин (скрипка)"],
-    image: "https://static.tildacdn.com/tild6136-3631-4337-b530-663030396536/01b3902154153c814c24.jpeg",
+    image: "/assets/external/7ab9274d_01b3902154153c814c24.jpeg",
     ticketLink: "https://nikoartgallery.com/afisha/maksim-novikov-alt-peletsis-/",
   },
   {
@@ -31,7 +31,7 @@ export const concertProgrammes: ConcertProgrammeItem[] = [
       "Евгений Румянцев (виолончель)",
       "Художественный руководитель ансамбля — Наталья Соколовская",
     ],
-    image: "https://static.tildacdn.com/tild3338-3965-4633-b430-613431353963/IMG_20260303_105903_.jpg",
+    image: "/assets/external/a9da4c31_IMG_20260303_105903_.jpg",
     ticketLink: "https://nikoartgallery.com/afisha/ansambl-il-theleme-de-la-nuite-nochyu-/",
   },
   {
@@ -65,7 +65,7 @@ performers: [
       "Евгений Стародубцев",
       "Элеонора Теплухина",
     ],
-    image: "https://static.tildacdn.com/tild3665-3035-4661-a239-303265326166/noroot.png",
+    image: "/assets/external/39e4c798_noroot.png",
     ticketLink: "https://nikoartgallery.com/afisha/kamernye-ansambli-zubets-tursunov-akhunov/",
   },
   {
@@ -83,7 +83,7 @@ performers: [
   "Георг Пелецис — «Цветущий жасмин»",
   "Михаил Тарбагаев — «Скоро лето» для альта и струнного оркестра",
 ],
-    image: "https://static.tildacdn.com/tild3533-6138-4431-b639-313335376661/db39c27515a4605ed73c.jpg",
+    image: "/assets/external/cd0d075c_db39c27515a4605ed73c.jpg",
     ticketLink: "https://nikoartgallery.com/afisha/kamernyy-orkestr-solisty-nizhnego-novgoroda-tsvetushchiy-zhasmin-/",
     performers: [
       "Камерный оркестр \"Солисты Нижнего Новгорода\"",
@@ -105,7 +105,7 @@ performers: [
       "Артем Макоян",
       "Наталья Соколовская",
     ],
-    image: "https://static.tildacdn.com/tild3463-3766-4632-b966-643937303266/IMG-20251121-WA0020.jpg",
+    image: "/assets/external/48f5939f_IMG-20251121-WA0020.jpg",
   },
   {
     id: "2026-05-18-forelnyy-kontsert",
@@ -131,7 +131,7 @@ performers: [
       "Владимир Волков",
       "Наталья Соколовская",
     ],
-    image: "https://static.tildacdn.com/tild3864-3666-4263-b065-363463343962/6362729948f1e85335ac.jpg",
+    image: "/assets/external/aca5621a_6362729948f1e85335ac.jpg",
     ticketLink: "https://nikoartgallery.com/afisha/forelnyy-kontsert-rust-pozyumskiy/",
   },
   {
@@ -153,7 +153,7 @@ performers: [
       "Ксения Жулёва",
       "Ольга Калинова",
     ],
-    image: "https://static.tildacdn.com/tild6163-3236-4265-b534-373436306632/50d42752bd6c38e0c9da.jpeg",
+    image: "/assets/external/d6c06a4b_50d42752bd6c38e0c9da.jpeg",
     ticketLink: "https://nikoartgallery.com/afisha/opensoundquartet-muzyka-sovremennykh-kompozitorov-dlya-kvarteta/",
   },
   {
@@ -169,7 +169,7 @@ performers: [
       "OpensoundOrchestra",
       "Художественный руководитель и дирижёр — Станислав Малышев",
     ],
-    image: "https://static.tildacdn.com/tild6362-3462-4062-b339-653064616533/9ba87e7e7bb322482d4d.jpeg",
+    image: "/assets/external/f4a26f9e_9ba87e7e7bb322482d4d.jpeg",
     ticketLink: "https://nikoartgallery.com/afisha/opensoundorchestra-vremena-goda-ne-vivaldi/",
   },
   {
@@ -185,7 +185,7 @@ performers: [
 ],
 
     performers: ["Пётр Главатских"],
-    image: "https://static.tildacdn.com/tild6134-3565-4538-b835-613037346435/0c98a711c715d8f20ff7.jpg",
+    image: "/assets/external/6c7af7d8_0c98a711c715d8f20ff7.jpg",
     ticketLink: "https://nikoartgallery.com/afisha/pyetr-glavatskikh-perkussiya-/",
   },
   {
@@ -207,7 +207,7 @@ performers: [
       "Иоанна Бердюгина",
       "Мария Михайловская",
     ],
-    image: "https://static.tildacdn.com/tild3935-3431-4035-a564-656336633065/50a0894752382d8d9b1a.jpg",
+    image: "/assets/external/bfd7db6d_50a0894752382d8d9b1a.jpg",
     ticketLink: "https://nikoartgallery.com/afisha/daniil-sayamov-kvartet-im-glinki-aleksandr-chaykovskiy/",
   },
   {
@@ -242,7 +242,7 @@ performers: [
       "Михаил Макорда",
       "Дмитрий Онищенко",
     ],
-    image: "https://static.tildacdn.com/tild3034-6338-4837-a132-353137366638/61afb70ee5afd7e2710b.jpg",
+    image: "/assets/external/c31dbe0b_61afb70ee5afd7e2710b.jpg",
     ticketLink: "https://nikoartgallery.com/afisha/pianisty-kompozitory/",
   },
   {
@@ -264,7 +264,7 @@ performers: [
       "Фёдор Шинкевич",
       "Роман Викулов",
     ],
-    image: "https://static.tildacdn.com/tild6439-3264-4139-a639-623261313730/5ef851e0c6992bfd3e44.jpg",
+    image: "/assets/external/5f68f703_5ef851e0c6992bfd3e44.jpg",
     ticketLink: "https://nikoartgallery.com/afisha/leonid-desyatnikov-lyubov-i-zhizn-poeta/",
   },
   {
@@ -273,34 +273,18 @@ performers: [
     title: 'Brezel ensemble и хоровой ансамбль "Мелодия". Новая сакральность',
     description: "Хоровая и ансамблевая программа.",
     programme: [
-  "Эрикс Эшенвальдс",
-  "«Stars» (стихи С. Тисдейл)",
-  "«In Paradisum»",
-  "",
-
-  "Владимир Мартынов",
-  "«Заповеди блаженства»",
-  "",
-
-  "Петерис Васкс",
-  "Castillo interior",
-  "Plainscapes",
-  "",
-
-  "Арво Пярт",
-  "«Богородице Дево, радуйся»",
-  "«Сольфеджио»",
-  "",
-
-  "Сергей Плешак",
-  "«Credo»",
-],
+      "Эрикс Эшенвальдс — «Stars» (стихи С. Тисдейл), «In Paradisum»",
+      "Владимир Мартынов — «Заповеди блаженства»",
+      "Петерис Васкс — «Castillo interior», «Plainscapes»",
+      "Арво Пярт — «Богородице Дево, радуйся», «Сольфеджио»",
+      "Сергей Плешак — «Credo»",
+    ],
     performers: [
       "Brezel ensemble",
       'Вокально-хоровой ансамбль "Мелодия"',
       "Художественный руководитель — Евгения Кудричевская",
     ],
-    image: "https://static.tildacdn.com/tild6263-3835-4762-b764-663864636338/6b1b5d1bd1f856318444.png",
+    image: "/assets/external/6ff3de26_6b1b5d1bd1f856318444.png",
     ticketLink: "https://nikoartgallery.com/afisha/brezelensamble-i-khorovoy-ansambl-melodiya-novaya-sakralnost/",
   },
   {
@@ -309,28 +293,11 @@ performers: [
     title: "«Громче слова». Заключительный концерт фестиваля",
     description: "Заключительный концерт фестиваля.",
     programme: [
-  "Эрикс Эшенвальдс",
-  "«Stars» (стихи С. Тисдейл)",
-  "«In Paradisum»",
-  "",
-
-  "Владимир Мартынов",
-  "«Заповеди блаженства»",
-  "",
-
-  "Петерис Васкс",
-  "Castillo interior",
-  "Plainscapes",
-  "",
-
-  "Арво Пярт",
-  "«Богородице Дево, радуйся»",
-  "«Сольфеджио»",
-  "",
-
-  "Сергей Плешак",
-  "«Credo»",
-],
+      "Гийом Коннессон — «Технопарад», «Смех Сары», «Секстет»",
+      "Дэвид Лэнг — «Vent», «How to pray» («Как молиться»)",
+      "Павел Карманов — «Второй снег на стадионе», «I Made My Home», «Day one»",
+      "Сергей Ахунов — «Поэзия»",
+    ],
     performers: [
       "Александр Маломожнов",
       "Алиса Калашникова",
@@ -346,7 +313,7 @@ performers: [
       "Валерия Прокушева",
       'Хоровой ансамбль "Мелодия"',
     ],
-    image: "https://static.tildacdn.com/tild3266-3534-4437-b364-633266343038/3356cca21f4277bd7192.jpg",
+    image: "/assets/external/ed37e6cf_3356cca21f4277bd7192.jpg",
     ticketLink: "https://nikoartgallery.com/afisha/karmanov-konneson-leng-/",
   },
 ];

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import festivalMark from "../../../../FestLogoNowords.svg";
 import festivalBottomWord from "/festlogo-bottomword.svg";
@@ -7,18 +7,58 @@ import { featuredConcerts } from "../../data/site";
 import { PageContainer } from "../../layout/PageContainer";
 
 const posterIntervalMs = 6200;
+const pelecisPosterHint = "peletsis";
+const refinedPosterHints = ["peletsis", "de-la-nuite"] as const;
+const coolColorGrainDataUri =
+  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.8' numOctaves='2' seed='17' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0.17 0 0 0 0.07 0 0.22 0 0 0.1 0 0 0.24 0 0.12 0 0 0 0.34 0'/%3E%3C/filter%3E%3Crect width='128' height='128' filter='url(%23n)'/%3E%3C/svg%3E\")";
+const warmColorGrainDataUri =
+  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.65' numOctaves='2' seed='23' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0.24 0 0 0 0.14 0 0.18 0 0 0.1 0 0 0.17 0 0.09 0 0 0 0.33 0'/%3E%3C/filter%3E%3Crect width='128' height='128' filter='url(%23n)'/%3E%3C/svg%3E\")";
 
 export function HomeHero() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeConcert = featuredConcerts[activeIndex];
+  const rotationTimerRef = useRef<number | null>(null);
+  const heroPosters = [
+    {
+      ...featuredConcerts[0],
+      date: "",
+      image: "/assets/external/BerezovkiBedited.png",
+      title: "Борис Березовский",
+      description: "специальный гость фестиваля",
+      link: undefined,
+    },
+    ...featuredConcerts,
+  ];
+  const activeConcert = heroPosters[activeIndex];
+  const isGuestPoster = activeIndex === 0;
+  const isPelecisPoster = activeConcert.link?.includes(pelecisPosterHint) ?? false;
+  const isRefinedPoster =
+    activeConcert.link !== undefined &&
+    refinedPosterHints.some((hint) => activeConcert.link?.includes(hint));
+
+  const resetRotationTimer = useCallback(() => {
+    if (rotationTimerRef.current !== null) {
+      window.clearInterval(rotationTimerRef.current);
+    }
+
+    rotationTimerRef.current = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % heroPosters.length);
+    }, posterIntervalMs);
+  }, [heroPosters.length]);
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveIndex((current) => (current + 1) % featuredConcerts.length);
-    }, posterIntervalMs);
+    resetRotationTimer();
 
-    return () => window.clearInterval(timer);
-  }, []);
+    return () => {
+      if (rotationTimerRef.current !== null) {
+        window.clearInterval(rotationTimerRef.current);
+      }
+    };
+  }, [resetRotationTimer]);
+
+  const handlePosterSelect = (index: number) => {
+    setActiveIndex(index);
+    resetRotationTimer();
+  };
 
   return (
     <section className="relative overflow-hidden bg-white pt-24 sm:pt-28">
@@ -95,31 +135,121 @@ export function HomeHero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
-                className="relative min-h-[580px] flex-1 overflow-hidden border border-black/10 bg-black lg:min-h-[600px]"
+                className={[
+                  "relative min-h-[580px] flex-1 overflow-hidden lg:min-h-[600px]",
+                  isGuestPoster ? "border border-transparent bg-transparent" : "border border-black/10 bg-black",
+                ].join(" ")}
               >
                 <img
                   src={activeConcert.image}
                   alt={activeConcert.title}
-                  className="absolute inset-0 h-full w-full object-cover opacity-90 grayscale"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  style={{
+                    opacity: isGuestPoster ? 1 : 0.95,
+                    objectPosition: isGuestPoster ? "50% 17%" : "50% 50%",
+                    filter: isGuestPoster
+                      ? "none"
+                      : isRefinedPoster
+                      ? "grayscale(0.95) saturate(1.05) brightness(1.1) contrast(1.06)"
+                      : "grayscale(1)",
+                  }}
                 />
-                <div className="absolute inset-0 bg-black/52" />
+                {isGuestPoster ? null : isRefinedPoster ? (
+                  <>
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, rgba(241,229,212,0.05) 0%, rgba(236,219,199,0.08) 52%, rgba(227,210,193,0.06) 100%)",
+                        mixBlendMode: "soft-light",
+                      }}
+                    />
+                    {isPelecisPoster ? (
+                      <>
+                        <div
+                          className="absolute inset-0"
+                          style={{
+                            backgroundImage: coolColorGrainDataUri,
+                            backgroundSize: "128px 128px",
+                            opacity: 0.038,
+                            mixBlendMode: "soft-light",
+                          }}
+                        />
+                        <div
+                          className="absolute inset-0"
+                          style={{
+                            backgroundImage: warmColorGrainDataUri,
+                            backgroundSize: "128px 128px",
+                            opacity: 0.055,
+                            mixBlendMode: "soft-light",
+                          }}
+                        />
+                      </>
+                    ) : null}
+                    <div className="absolute inset-0 bg-black/40" />
+                  </>
+                ) : (
+                  <div className="absolute inset-0 bg-black/52" />
+                )}
 
-                <div className="relative flex h-full flex-col justify-between p-6 text-white sm:p-8">
+                <div
+                  className="relative flex h-full flex-col justify-between p-6 sm:p-8"
+                  style={{ color: isRefinedPoster ? "#edeae4" : "#ffffff" }}
+                >
                   <div className="flex items-start justify-end">
-                    <span className="font-editorial-sans text-[0.64rem] font-light uppercase tracking-[0.18em] text-white/62">
-                      {String(activeIndex + 1).padStart(2, "0")}
+                    <span
+                      className="font-editorial-sans text-[0.64rem] font-light uppercase tracking-[0.18em]"
+                      style={{
+                        color: isRefinedPoster
+                          ? "rgba(237, 234, 228, 0.7)"
+                          : "rgba(255, 255, 255, 0.62)",
+                      }}
+                    >
+                      {isGuestPoster ? "" : String(activeIndex + 1).padStart(2, "0")}
                     </span>
                   </div>
 
-                  <div className="space-y-5">
-                    <div className="space-y-3">
-                      <p className="text-[0.72rem] uppercase tracking-[0.26em] text-white/70">
-                        {activeConcert.date}
+                  <div
+                    className="space-y-5"
+                    style={
+                      isGuestPoster
+                        ? { paddingRight: "0px", marginBottom: "0px", marginRight: "-10px" }
+                        : undefined
+                    }
+                  >
+                    <div className={isGuestPoster ? "space-y-3 text-right" : "space-y-3"}>
+                      <p
+                        className="text-[0.72rem] uppercase tracking-[0.26em]"
+                        style={{
+                          color: isRefinedPoster
+                            ? "rgba(237, 234, 228, 0.76)"
+                            : "rgba(255, 255, 255, 0.70)",
+                        }}
+                      >
+                        {isRefinedPoster ? "" : activeConcert.date}
                       </p>
-                      <h2 className="max-w-lg text-3xl font-light leading-tight tracking-[-0.04em] sm:text-[2.85rem]">
+                      <h2
+                        className={[
+                          "text-3xl font-light leading-tight tracking-[-0.04em]",
+                          isGuestPoster ? "ml-auto max-w-[390px] sm:text-[2.4rem]" : "max-w-lg sm:text-[2.85rem]",
+                        ].join(" ")}
+                      >
                         {activeConcert.title}
                       </h2>
-                      <p className="max-w-lg text-sm leading-7 text-white/82 sm:text-[0.98rem]">
+                      <p
+                        className={[
+                          "text-sm leading-7 sm:text-[0.98rem]",
+                          isGuestPoster ? "font-editorial-sans tracking-[0.08em]" : "",
+                          isGuestPoster ? "ml-auto max-w-[320px]" : "max-w-lg",
+                        ].join(" ")}
+                        style={{
+                          color: isGuestPoster
+                            ? "rgba(237, 234, 228, 0.76)"
+                            : isRefinedPoster
+                            ? "rgba(237, 234, 228, 0.86)"
+                            : "rgba(255, 255, 255, 0.82)",
+                        }}
+                      >
                         {activeConcert.description}
                       </p>
                     </div>
@@ -128,16 +258,32 @@ export function HomeHero() {
               </motion.article>
             </AnimatePresence>
 
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap items-center">
+              <button
+                type="button"
+                onClick={() => handlePosterSelect(0)}
+                aria-label="Показать афишу: Борис Березовский"
+                className="mr-5 inline-flex h-6 w-6 items-center justify-center transition-colors duration-300"
+              >
+                <span
+                  aria-hidden="true"
+                  className={[
+                    "h-[7px] w-[7px] rounded-full transition-colors duration-300",
+                    activeIndex === 0 ? "bg-[#111111]" : "bg-[#b8b8b8]",
+                  ].join(" ")}
+                />
+              </button>
+
+              <div className="flex flex-wrap gap-2">
               {featuredConcerts.map((concert, index) => (
                 <button
                   key={concert.title}
                   type="button"
-                  onClick={() => setActiveIndex(index)}
+                  onClick={() => handlePosterSelect(index + 1)}
                   className={[
                     "border px-3 py-2 text-left text-[0.68rem] uppercase tracking-[0.2em] transition-all duration-300",
-                    activeIndex === index
-                      ? "border-black bg-black text-white"
+                    activeIndex === index + 1
+                      ? "border-black bg-black font-medium tracking-[0.23em] text-[var(--color-panel)]"
                       : "border-black/10 text-[var(--color-muted)] hover:border-black/20 hover:text-[var(--color-text)]",
                   ].join(" ")}
                   aria-label={`Показать афишу: ${concert.title}`}
@@ -145,6 +291,7 @@ export function HomeHero() {
                   {concert.date}
                 </button>
               ))}
+              </div>
             </div>
           </div>
         </div>
