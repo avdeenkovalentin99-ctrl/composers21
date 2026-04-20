@@ -126,6 +126,7 @@ export function HomeHero() {
   const isDesyatnikovPoster = activePoster.link?.includes("leonid-desyatnikov-lyubov-i-zhizn-poeta") ?? false;
   const isNizhnySoloistsPoster =
     activePoster.link?.includes("kamernyy-orkestr-solisty-nizhnego-novgoroda-tsvetushchiy-zhasmin-") ?? false;
+  const isBrezelPoster = activePoster.link?.includes("brezel-melodiya") ?? false;
   const isConcertPoster = activePoster.kind === "concert";
   const isFourthOrFifthConcertPoster = activePoster.kind === "concert";
   const isRefinedPoster =
@@ -161,6 +162,8 @@ export function HomeHero() {
   const gromcheSlovaTitleLine2 = isGromcheSlovaPoster ? "Заключительный концерт фестиваля" : "";
   const desyatnikovTitleLine1 = isDesyatnikovPoster ? "Леонид Десятников" : "";
   const desyatnikovTitleLine2 = isDesyatnikovPoster ? "«Любовь и жизнь поэта»" : "";
+  const brezelTitleLine1 = isBrezelPoster ? "Brezel ensemble и хоровой ансамбль «Мелодия»" : "";
+  const brezelTitleLine2 = isBrezelPoster ? "Новая сакральность" : "";
   const pelecisDescriptionLine1 = isPelecisPoster
     ? "\u041f\u043e\u0441\u0432\u044f\u0449\u0435\u043d\u0438\u0435 \u041c\u0430\u043a\u0441\u0438\u043c\u0443 \u041d\u043e\u0432\u0438\u043a\u043e\u0432\u0443"
     : "";
@@ -326,7 +329,7 @@ export function HomeHero() {
             </div>
           </div>
 
-          <div className="relative flex flex-col lg:min-h-[660px]">
+          <div className="relative flex flex-col overflow-hidden lg:min-h-[660px] lg:overflow-visible">
             <AnimatePresence initial={false} mode="wait" custom={direction}>
               <motion.article
                 key={activePoster.id}
@@ -339,9 +342,9 @@ export function HomeHero() {
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
                 className={[
-                  "relative aspect-[6/5] w-[calc(100%+2.5rem)] -mx-5 sm:mx-auto sm:w-full sm:max-w-[420px] lg:mx-0 lg:min-h-[600px] lg:max-w-none lg:flex-1 lg:aspect-auto",
+                  "relative mx-auto aspect-[6/5] w-full max-w-[360px] sm:max-w-[420px] lg:mx-0 lg:min-h-[600px] lg:max-w-none lg:flex-1 lg:aspect-auto",
                   isOpenSoundQuartetPoster ? "bg-white" : "bg-black",
-                  isConcertPoster ? "overflow-visible" : "overflow-hidden",
+                  isConcertPoster ? "overflow-hidden lg:overflow-visible" : "overflow-hidden",
                 ].join(" ")}
               >
                 <img
@@ -435,10 +438,10 @@ export function HomeHero() {
                       className={[
                         "ml-auto break-normal font-light leading-tight tracking-[-0.02em]",
                         isConcertPoster
-                          ? "overflow-visible"
+                          ? "overflow-hidden lg:overflow-visible"
                           : "overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2]",
                         isFourthOrFifthConcertPoster ? "font-editorial-serif" : "",
-                        isFourthOrFifthConcertPoster ? "relative translate-x-[8px]" : "",
+                        isFourthOrFifthConcertPoster ? "relative lg:translate-x-[8px]" : "",
                         isGuestPoster
                           ? "max-w-[250px] text-[0.86rem] sm:max-w-[320px] sm:text-[1.28rem] lg:max-w-[390px] lg:text-[2.1rem]"
                           : "max-w-[250px] text-[0.88rem] sm:max-w-[360px] sm:text-[1.16rem] lg:max-w-[520px] lg:text-[1.72rem]",
@@ -516,11 +519,27 @@ export function HomeHero() {
                           </span>
                         </span>
                       ) : isDesyatnikovPoster && desyatnikovTitleLine1 !== "" ? (
-                        <>
-                          {desyatnikovTitleLine1}
-                          <br />
-                          {desyatnikovTitleLine2}
-                        </>
+                        <span className="inline-flex flex-col items-end gap-[2px]">
+                          <span className="relative inline-flex items-center px-4 py-[1px] text-[#f4f4f4]">
+                            <span aria-hidden="true" className="absolute inset-y-0 -left-3 -right-10 bg-black" />
+                            <span className="relative">{desyatnikovTitleLine1}</span>
+                          </span>
+                          <span className="relative inline-flex items-center px-4 py-0 text-[#f4f4f4]">
+                            <span aria-hidden="true" className="absolute inset-y-0 -left-3 -right-8 bg-black" />
+                            <span className="relative">{desyatnikovTitleLine2}</span>
+                          </span>
+                        </span>
+                      ) : isBrezelPoster && brezelTitleLine1 !== "" ? (
+                        <span className="inline-flex flex-col items-end gap-[2px]">
+                          <span className="relative inline-flex items-center px-4 py-[1px] text-[#f4f4f4]">
+                            <span aria-hidden="true" className="absolute bottom-[2px] top-[2px] -left-3 -right-10 bg-black" />
+                            <span className="relative">{brezelTitleLine1}</span>
+                          </span>
+                          <span className="relative inline-flex items-center px-4 py-0 text-[#f4f4f4]">
+                            <span aria-hidden="true" className="absolute bottom-[2px] top-[2px] -left-3 -right-8 bg-black" />
+                            <span className="relative">{brezelTitleLine2}</span>
+                          </span>
+                        </span>
                       ) : isConcertPoster ? (
                         <span className="relative mr-0 inline-flex items-center px-4 py-[1px] text-[#f4f4f4]">
                           <span aria-hidden="true" className="absolute inset-y-0 -left-3 -right-10 bg-black" />
@@ -534,7 +553,7 @@ export function HomeHero() {
                       <p
                         className={[
                           "font-editorial-sans ml-auto text-[0.42rem] leading-[0.72rem] tracking-[0.08em]",
-                          isFourthOrFifthConcertPoster ? "relative -translate-x-[8px]" : "",
+                          isFourthOrFifthConcertPoster ? "relative lg:-translate-x-[8px]" : "",
                           isPelecisPoster
                             ? "max-w-[300px] sm:max-w-[400px] lg:max-w-[560px]"
                             : isForelnyyPoster
@@ -544,7 +563,7 @@ export function HomeHero() {
                             : isDeLaNuitePoster
                             ? "max-w-[300px] sm:max-w-[420px] lg:max-w-[560px] lg:whitespace-nowrap"
                             : isOpenSoundQuartetPoster
-                            ? "max-w-[400px] sm:max-w-[560px] lg:max-w-[760px] whitespace-nowrap"
+                            ? "max-w-[400px] sm:max-w-[560px] lg:max-w-[760px] lg:whitespace-nowrap"
                             : isGuestPoster
                             ? "max-w-[230px] sm:max-w-[270px] lg:max-w-[320px]"
                             : "max-w-[230px] sm:max-w-[280px] lg:max-w-[360px]",
@@ -605,8 +624,8 @@ export function HomeHero() {
               </motion.article>
             </AnimatePresence>
 
-            <div className="mt-5 flex min-h-12 items-center justify-between gap-4 sm:mt-6 sm:gap-6">
-              <div className="min-h-12 min-w-0 flex-1">
+            <div className="mt-5 flex min-h-12 items-center justify-between gap-2 sm:mt-6 sm:gap-6">
+              <div className="min-h-12 min-w-0">
                 <HeroConcertSelector
                   activePosterIndex={activeIndex}
                   totalConcerts={orderedConcerts.length}
@@ -616,7 +635,7 @@ export function HomeHero() {
 
               <Link
                 to="/afisha"
-                className="font-editorial-sans inline-flex shrink-0 items-center justify-end whitespace-nowrap leading-none text-[11px] uppercase tracking-[0.22em] text-black/62 transition-colors duration-300 hover:text-black sm:text-right"
+                className="font-editorial-sans inline-flex shrink-0 items-center justify-end whitespace-nowrap leading-none text-[9px] uppercase tracking-[0.12em] text-black/62 transition-colors duration-300 hover:text-black sm:text-right sm:text-[11px] sm:tracking-[0.22em]"
               >
                 <span>{"\u041f\u0420\u041e\u0413\u0420\u0410\u041c\u041c\u0410 \u0424\u0415\u0421\u0422\u0418\u0412\u0410\u041b\u042f \u2192"}</span>
               </Link>

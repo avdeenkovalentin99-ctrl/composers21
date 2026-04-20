@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { LayoutGrid, List } from "lucide-react";
 import { ensembles, getPersonSlug, soloists } from "../data/participants";
 import { composers, performers } from "../data/site";
 import { PageContainer } from "../layout/PageContainer";
@@ -7,6 +8,7 @@ import { PARTICIPANTS_SHELL_CLASS } from "../layout/participantsLayout";
 
 type PersonItem = (typeof composers)[number];
 type CategoryKey = "composers" | "performers";
+type ViewMode = "grid" | "list";
 
 const categoryLabels: Record<CategoryKey, string> = {
   composers: "КОМПОЗИТОРЫ",
@@ -101,6 +103,33 @@ function SoloistCard({
   );
 }
 
+function ParticipantListItem({
+  person,
+  onOpen,
+}: {
+  person: PersonItem;
+  onOpen: (person: PersonItem) => void;
+}) {
+  return (
+    <motion.button
+      type="button"
+      onClick={() => onOpen(person)}
+      transition={{ duration: 0.18, ease: "easeOut" }}
+      className="group block w-full border-b border-black/8 px-3 py-4 text-left sm:px-4 sm:py-5 lg:py-6"
+    >
+      <span className="relative inline-block rounded-[2px] px-[7px] py-[3px]">
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-0 origin-left scale-x-0 rounded-[2px] bg-[#1a1a1a] transition-transform duration-200 ease-out group-hover:scale-x-100"
+        />
+        <span className="font-editorial-sans relative z-[1] inline-block text-[0.98rem] font-normal uppercase tracking-[0.08em] text-neutral-900 transition-colors duration-200 ease-out group-hover:text-white sm:text-[1.2rem] lg:text-[1.48rem]">
+          {person.name}
+        </span>
+      </span>
+    </motion.button>
+  );
+}
+
 function getParticipantImageClassName(person: PersonItem, fallbackClassName = "aspect-[4/5]") {
   if (person.slug === "leonid-desyatnikov") {
     return `${fallbackClassName} object-[50%_18%]`;
@@ -159,6 +188,14 @@ export function ParticipantsPage() {
     return savedCategory === "performers" ? "performers" : "composers";
   });
   const [isLeaving, setIsLeaving] = useState(false);
+  const [viewMode, setViewMode] = useState<ViewMode>(() => {
+    if (typeof window === "undefined") {
+      return "grid";
+    }
+
+    const savedViewMode = window.localStorage.getItem("participants-view-mode");
+    return savedViewMode === "list" ? "list" : "grid";
+  });
   const leaveTimeoutRef = useRef<number | null>(null);
 
   const people = useMemo(
@@ -169,6 +206,10 @@ export function ParticipantsPage() {
   useEffect(() => {
     window.sessionStorage.setItem("participants-active-category", activeCategory);
   }, [activeCategory]);
+
+  useEffect(() => {
+    window.localStorage.setItem("participants-view-mode", viewMode);
+  }, [viewMode]);
 
   useEffect(() => {
     document.body.classList.remove("participants-route-leaving");
@@ -205,42 +246,96 @@ export function ParticipantsPage() {
           className={PARTICIPANTS_SHELL_CLASS}
         >
           <div className="space-y-14 sm:space-y-16">
-            <div className="flex flex-wrap gap-x-7 gap-y-3 sm:gap-x-8">
-              {(["composers", "performers"] as CategoryKey[]).map((category) => {
-                const isActive = activeCategory === category;
+            <div className="space-y-3 sm:space-y-0">
+              <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
+                <div className="flex flex-wrap gap-x-7 gap-y-3 sm:gap-x-8">
+                  {(["composers", "performers"] as CategoryKey[]).map((category) => {
+                    const isActive = activeCategory === category;
 
-                return (
+                    return (
+                      <button
+                        key={category}
+                        type="button"
+                        onClick={() => {
+                          if (isLeaving) {
+                            return;
+                          }
+
+                          window.sessionStorage.setItem("participants-active-category", category);
+                          setActiveCategory(category);
+                        }}
+                        className={[
+                          "font-editorial-sans relative text-[12px] uppercase tracking-[0.14em] transition-colors duration-300 ease-in-out sm:text-[12.5px]",
+                          isActive ? "text-neutral-950" : "text-neutral-400 hover:text-neutral-600",
+                        ].join(" ")}
+                      >
+                        {categoryLabels[category]}
+                        <span
+                          className={[
+                            "absolute -bottom-2 left-0 h-[0.5px] bg-black transition-all duration-300 ease-in-out",
+                            isActive ? "w-full opacity-50" : "w-0 opacity-0",
+                          ].join(" ")}
+                        />
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="hidden items-center gap-0.5 border border-black/12 p-0.5 sm:inline-flex">
                   <button
-                    key={category}
                     type="button"
-                    onClick={() => {
-                      if (isLeaving) {
-                        return;
-                      }
-
-                      window.sessionStorage.setItem("participants-active-category", category);
-                      setActiveCategory(category);
-                    }}
+                    aria-label="Cards view"
+                    onClick={() => setViewMode("grid")}
                     className={[
-                      "font-editorial-sans relative text-[12px] uppercase tracking-[0.14em] transition-colors duration-300 ease-in-out sm:text-[12.5px]",
-                      isActive ? "text-neutral-950" : "text-neutral-400 hover:text-neutral-600",
+                      "inline-flex h-8 w-8 items-center justify-center transition-colors duration-200",
+                      viewMode === "grid" ? "text-neutral-900" : "text-neutral-400 hover:text-neutral-700",
                     ].join(" ")}
                   >
-                    {categoryLabels[category]}
-                    <span
-                      className={[
-                        "absolute -bottom-2 left-0 h-[0.5px] bg-black transition-all duration-300 ease-in-out",
-                        isActive ? "w-full opacity-50" : "w-0 opacity-0",
-                      ].join(" ")}
-                    />
+                    <LayoutGrid size={14} strokeWidth={1.65} />
                   </button>
-                );
-              })}
+                  <button
+                    type="button"
+                    aria-label="List view"
+                    onClick={() => setViewMode("list")}
+                    className={[
+                      "inline-flex h-8 w-8 items-center justify-center transition-colors duration-200",
+                      viewMode === "list" ? "text-neutral-900" : "text-neutral-400 hover:text-neutral-700",
+                    ].join(" ")}
+                  >
+                    <List size={14} strokeWidth={1.65} />
+                  </button>
+                </div>
+              </div>
+
+              <div className="inline-flex items-center gap-0.5 border border-black/12 p-0.5 sm:hidden">
+                <button
+                  type="button"
+                  aria-label="Cards view"
+                  onClick={() => setViewMode("grid")}
+                  className={[
+                    "inline-flex h-8 w-8 items-center justify-center transition-colors duration-200",
+                    viewMode === "grid" ? "text-neutral-900" : "text-neutral-400 hover:text-neutral-700",
+                  ].join(" ")}
+                >
+                  <LayoutGrid size={14} strokeWidth={1.65} />
+                </button>
+                <button
+                  type="button"
+                  aria-label="List view"
+                  onClick={() => setViewMode("list")}
+                  className={[
+                    "inline-flex h-8 w-8 items-center justify-center transition-colors duration-200",
+                    viewMode === "list" ? "text-neutral-900" : "text-neutral-400 hover:text-neutral-700",
+                  ].join(" ")}
+                >
+                  <List size={14} strokeWidth={1.65} />
+                </button>
+              </div>
             </div>
 
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeCategory}
+                key={`${activeCategory}-${viewMode}`}
                 initial={{ opacity: 0, filter: "blur(4px)" }}
                 animate={{ opacity: 1, filter: "blur(0px)" }}
                 exit={{ opacity: 0, filter: "blur(4px)" }}
@@ -248,24 +343,38 @@ export function ParticipantsPage() {
                 className="mt-12 sm:mt-15"
               >
                 {activeCategory === "composers" ? (
-                  <div
-                    className={[
-                      "grid gap-y-20 sm:grid-cols-2 sm:gap-y-24",
-                      "sm:gap-x-12 xl:grid-cols-[repeat(3,320px)] xl:justify-between",
-                    ].join(" ")}
-                  >
-                    {people.map((person) => (
-                      <ParticipantCard
-                        key={`${activeCategory}-${person.name}`}
-                        person={person}
-                        onOpen={() => {
-                          beginParticipantTransition(`/participants/composers/${person.slug}`);
-                        }}
-                        imageClassName={getParticipantImageClassName(person)}
-                      />
-                    ))}
-                  </div>
-                ) : (
+                  viewMode === "grid" ? (
+                    <div
+                      className={[
+                        "grid gap-y-20 sm:grid-cols-2 sm:gap-y-24",
+                        "sm:gap-x-12 xl:grid-cols-[repeat(3,320px)] xl:justify-between",
+                      ].join(" ")}
+                    >
+                      {people.map((person) => (
+                        <ParticipantCard
+                          key={`${activeCategory}-${person.name}`}
+                          person={person}
+                          onOpen={() => {
+                            beginParticipantTransition(`/participants/composers/${person.slug}`);
+                          }}
+                          imageClassName={getParticipantImageClassName(person)}
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="max-w-5xl">
+                      {people.map((person) => (
+                        <ParticipantListItem
+                          key={`${activeCategory}-${person.name}`}
+                          person={person}
+                          onOpen={() => {
+                            beginParticipantTransition(`/participants/composers/${person.slug}`);
+                          }}
+                        />
+                      ))}
+                    </div>
+                  )
+                ) : viewMode === "grid" ? (
                   <div className="space-y-24 sm:space-y-28 lg:space-y-32">
                     <section className="space-y-8">
                       <p className="font-editorial-sans text-[13px] font-normal uppercase tracking-[0.2em] text-neutral-500">
@@ -300,6 +409,42 @@ export function ParticipantsPage() {
                             key={`soloist-${person.name}`}
                             person={person}
                             actionLabel=""
+                            onOpen={() => {
+                              beginParticipantTransition(`/participants/soloists/${getPersonSlug(person)}`);
+                            }}
+                          />
+                        ))}
+                      </div>
+                    </section>
+                  </div>
+                ) : (
+                  <div className="max-w-5xl space-y-14 sm:pl-28 sm:space-y-16 lg:pl-32">
+                    <section className="space-y-4 sm:space-y-5">
+                      <p className="font-editorial-sans text-[11px] uppercase tracking-[0.2em] text-neutral-500 sm:text-[12px]">
+                        АНСАМБЛИ И ОРКЕСТРЫ
+                      </p>
+                      <div>
+                        {ensembles.map((person) => (
+                          <ParticipantListItem
+                            key={`ensemble-${person.name}`}
+                            person={person}
+                            onOpen={() => {
+                              beginParticipantTransition(`/participants/ensembles/${getPersonSlug(person)}`);
+                            }}
+                          />
+                        ))}
+                      </div>
+                    </section>
+
+                    <section className="space-y-4 sm:space-y-5">
+                      <p className="font-editorial-sans text-[11px] uppercase tracking-[0.2em] text-neutral-500 sm:text-[12px]">
+                        СОЛИСТЫ
+                      </p>
+                      <div>
+                        {soloists.map((person) => (
+                          <ParticipantListItem
+                            key={`soloist-${person.name}`}
+                            person={person}
                             onOpen={() => {
                               beginParticipantTransition(`/participants/soloists/${getPersonSlug(person)}`);
                             }}

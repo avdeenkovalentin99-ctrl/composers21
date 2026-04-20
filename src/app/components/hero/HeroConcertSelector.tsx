@@ -1,10 +1,16 @@
 import { animate, motion, useMotionValue, useTransform } from "motion/react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-const itemWidthPx = 56;
-const itemGapPx = 40;
-const itemStepPx = itemWidthPx + itemGapPx;
-const selectorWidthPx = itemWidthPx * 3 + itemGapPx * 2;
+const desktopMetrics = {
+  itemWidthPx: 56,
+  itemGapPx: 40,
+};
+
+const mobileMetrics = {
+  itemWidthPx: 48,
+  itemGapPx: 12,
+};
+
 const bracketMoveDuration = 0.2;
 
 const centerColor = "rgba(15, 15, 15, 1)";
@@ -23,8 +29,15 @@ type SelectorEntry = {
   isGuest: boolean;
 };
 
-function getTrackOffset(index: number) {
-  return selectorWidthPx / 2 - itemWidthPx / 2 - index * itemStepPx;
+type SelectorMetrics = {
+  itemWidthPx: number;
+  itemGapPx: number;
+  itemStepPx: number;
+  selectorWidthPx: number;
+};
+
+function getTrackOffset(index: number, metrics: SelectorMetrics) {
+  return metrics.selectorWidthPx / 2 - metrics.itemWidthPx / 2 - index * metrics.itemStepPx;
 }
 
 function getAnimationDuration(delta: number) {
@@ -33,22 +46,28 @@ function getAnimationDuration(delta: number) {
 
 function SelectorItem({
   entry,
+  metrics,
   x,
   bracketedPosterIndex,
   onSelectPosterIndex,
 }: {
   entry: SelectorEntry;
+  metrics: SelectorMetrics;
   x: ReturnType<typeof useMotionValue<number>>;
   bracketedPosterIndex: number | null;
   onSelectPosterIndex: (posterIndex: number) => void;
 }) {
   const distance = useTransform(x, (latest) => {
-    const center = entry.posterIndex * itemStepPx + latest + itemWidthPx / 2;
+    const center = entry.posterIndex * metrics.itemStepPx + latest + metrics.itemWidthPx / 2;
 
-    return Math.abs(center - selectorWidthPx / 2);
+    return Math.abs(center - metrics.selectorWidthPx / 2);
   });
-  const opacity = useTransform(distance, [0, itemStepPx, itemStepPx * 2], [1, 0.6, 0.34]);
-  const color = useTransform(distance, [0, itemStepPx, itemStepPx * 2], [centerColor, nearColor, farColor]);
+  const opacity = useTransform(distance, [0, metrics.itemStepPx, metrics.itemStepPx * 2], [1, 0.6, 0.34]);
+  const color = useTransform(
+    distance,
+    [0, metrics.itemStepPx, metrics.itemStepPx * 2],
+    [centerColor, nearColor, farColor],
+  );
   const showBrackets = bracketedPosterIndex === entry.posterIndex;
 
   return (
@@ -62,7 +81,7 @@ function SelectorItem({
       }
       aria-pressed={showBrackets}
       className="font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25"
-      style={{ width: itemWidthPx, opacity, color }}
+      style={{ width: metrics.itemWidthPx, opacity, color }}
     >
       <span className="relative inline-flex w-[4.1ch] items-center justify-center">
         {showBrackets ? (
@@ -82,8 +101,8 @@ function SelectorItem({
         <span
           className={
             showBrackets
-              ? "text-[0.92rem] tracking-[-0.04em] sm:text-[1.02rem]"
-              : "text-[0.84rem] tracking-[-0.03em] sm:text-[0.92rem]"
+              ? "text-[0.78rem] tracking-[-0.04em] sm:text-[1.02rem]"
+              : "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]"
           }
         >
           {entry.label}
@@ -112,9 +131,48 @@ export function HeroConcertSelector({
   totalConcerts,
   onSelectPosterIndex,
 }: HeroConcertSelectorProps) {
-  const x = useMotionValue(getTrackOffset(activePosterIndex));
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    return window.matchMedia("(max-width: 639px)").matches;
+  });
+  const metrics = useMemo<SelectorMetrics>(() => {
+    const base = isMobile ? mobileMetrics : desktopMetrics;
+    const itemStepPx = base.itemWidthPx + base.itemGapPx;
+
+    return {
+      itemWidthPx: base.itemWidthPx,
+      itemGapPx: base.itemGapPx,
+      itemStepPx,
+      selectorWidthPx: base.itemWidthPx * 3 + base.itemGapPx * 2,
+    };
+  }, [isMobile]);
+
+  const x = useMotionValue(getTrackOffset(activePosterIndex, metrics));
   const previousPosterIndexRef = useRef(activePosterIndex);
   const [bracketedPosterIndex, setBracketedPosterIndex] = useState<number | null>(activePosterIndex);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(max-width: 639px)");
+    const handleChange = (event: MediaQueryListEvent) => setIsMobile(event.matches);
+
+    setIsMobile(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    x.set(getTrackOffset(activePosterIndex, metrics));
+  }, [metrics, x]);
 
   useEffect(() => {
     const previousPosterIndex = previousPosterIndexRef.current;
@@ -127,7 +185,7 @@ export function HeroConcertSelector({
     previousPosterIndexRef.current = nextPosterIndex;
     setBracketedPosterIndex(null);
 
-    const controls = animate(x, getTrackOffset(nextPosterIndex), {
+    const controls = animate(x, getTrackOffset(nextPosterIndex, metrics), {
       duration: getAnimationDuration(Math.abs(nextPosterIndex - previousPosterIndex)),
       ease: [0.22, 1, 0.36, 1],
       onComplete: () => {
@@ -138,7 +196,7 @@ export function HeroConcertSelector({
     return () => {
       controls.stop();
     };
-  }, [activePosterIndex, x]);
+  }, [activePosterIndex, metrics, x]);
 
   const selectorItems = useMemo(
     () => [
@@ -154,15 +212,16 @@ export function HeroConcertSelector({
 
   return (
     <div className="flex min-h-12 items-center justify-start overflow-hidden">
-      <div className="relative min-h-12 overflow-hidden" style={{ width: selectorWidthPx }}>
+      <div className="relative min-h-12 overflow-hidden" style={{ width: metrics.selectorWidthPx }}>
         <motion.div
-          className="absolute left-0 top-1/2 flex -translate-y-1/2 items-center gap-10 whitespace-nowrap"
-          style={{ x }}
+          className="absolute left-0 top-1/2 flex -translate-y-1/2 items-center whitespace-nowrap"
+          style={{ x, gap: metrics.itemGapPx }}
         >
           {selectorItems.map((entry) => (
             <SelectorItem
               key={entry.posterIndex}
               entry={entry}
+              metrics={metrics}
               x={x}
               bracketedPosterIndex={bracketedPosterIndex}
               onSelectPosterIndex={onSelectPosterIndex}
