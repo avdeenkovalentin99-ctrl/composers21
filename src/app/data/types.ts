@@ -19,6 +19,8 @@ export type FestivalInfo = {
 };
 
 export type ConcertItem = {
+  id: string;
+  programNumber: number;
   date: string;
   title: string;
   description: string;

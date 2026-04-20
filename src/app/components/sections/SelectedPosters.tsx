@@ -4,6 +4,29 @@ import { PageContainer } from "../../layout/PageContainer";
 import { LinkArrow } from "../ui/LinkArrow";
 import { SectionTitle } from "../ui/SectionTitle";
 
+function normalizePosterText(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/["'`«»().,!?;:/\\-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function isPosterDescriptionDuplicate(title: string, description: string) {
+  const normalizedTitle = normalizePosterText(title);
+  const normalizedDescription = normalizePosterText(description);
+
+  if (normalizedTitle === "" || normalizedDescription === "") {
+    return false;
+  }
+
+  return (
+    normalizedTitle === normalizedDescription ||
+    normalizedTitle.includes(normalizedDescription) ||
+    normalizedDescription.includes(normalizedTitle)
+  );
+}
+
 export function SelectedPosters() {
   return (
     <section className="py-18 sm:py-24">
@@ -26,7 +49,9 @@ export function SelectedPosters() {
               >
                 <p className="mb-10 text-[0.68rem] uppercase tracking-[0.26em] text-[var(--color-muted)]">{concert.date}</p>
                 <h3 className="text-2xl font-light leading-tight tracking-[-0.03em]">{concert.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">{concert.description}</p>
+                {!isPosterDescriptionDuplicate(concert.title, concert.description) ? (
+                  <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">{concert.description}</p>
+                ) : null}
               </motion.article>
             ))}
           </div>

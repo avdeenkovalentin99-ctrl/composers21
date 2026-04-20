@@ -9,7 +9,7 @@ export type {
 
 export { siteTitle, navigationItems } from "./navigation";
 export { festivalInfo } from "./festival";
-export { concerts } from "./concerts";
+export { concertOrder, concerts, orderedConcerts } from "./concerts";
 export { concertProgrammes } from "./concertProgrammes";
 export { composers } from "./composers";
 export { performers } from "./performers";
