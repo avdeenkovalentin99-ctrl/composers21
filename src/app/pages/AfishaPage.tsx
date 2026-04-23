@@ -31,6 +31,7 @@ function EventAccordion({
   onToggle: () => void;
 }) {
   const dateParts = useMemo(() => buildEventDate(event.date), [event.date]);
+  const keepPosterInColor = event.id === "2026-05-13-v-ischezayushem-gorode";
 
   return (
     <article className="group py-10 sm:py-12">
@@ -130,7 +131,10 @@ function EventAccordion({
                     src={event.image}
                     alt=""
                     aria-hidden="true"
-                    className="aspect-[4/3] h-auto w-full object-cover object-center grayscale xl:w-[340px]"
+                    className={[
+                      "aspect-[4/3] h-auto w-full object-cover object-center xl:w-[340px]",
+                      keepPosterInColor ? "" : "grayscale",
+                    ].join(" ")}
                   />
                 </div>
               </div>

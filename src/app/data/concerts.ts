@@ -1,7 +1,7 @@
 import type { ConcertItem } from "./types";
 import { concertProgrammes } from "./concertProgrammes";
 
-const concertPosterPlaceholder = "/assets/external/39e4c798_noroot.png";
+const concertPosterPlaceholder = "/assets/external/heroafisha/chamberconcerthero.webp";
 
 export const concerts: ConcertItem[] = concertProgrammes.map((concert, index) => ({
   id: concert.id,

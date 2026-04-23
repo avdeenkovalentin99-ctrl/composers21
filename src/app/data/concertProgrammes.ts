@@ -8,7 +8,7 @@ export const concertProgrammes: ConcertProgrammeItem[] = [
     description: "Посвящение М. Новикову. Максим Новиков (альт), Алексей Лундин (скрипка).",
     programme: ["Георг Пелецис. 24 Каприса"],
     performers: ["Максим Новиков (альт)", "Алексей Лундин (скрипка)"],
-    image: "/assets/external/7ab9274d_01b3902154153c814c24.jpeg",
+    image: "/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.webp",
     ticketLink: "https://nikoartgallery.com/afisha/maksim-novikov-alt-peletsis-/",
   },
   {
@@ -31,7 +31,7 @@ export const concertProgrammes: ConcertProgrammeItem[] = [
       "Евгений Румянцев (виолончель)",
       "Художественный руководитель ансамбля — Наталья Соколовская",
     ],
-    image: "/assets/external/a9da4c31_IMG_20260303_105903_.jpg",
+    image: "/assets/external/heroafisha/a9da4c31_IMG_20260303_105903_.webp",
     ticketLink: "https://nikoartgallery.com/afisha/ansambl-il-theleme-de-la-nuite-nochyu-/",
   },
   {
@@ -65,7 +65,7 @@ performers: [
       "Евгений Стародубцев",
       "Элеонора Теплухина",
     ],
-    image: "/assets/external/39e4c798_noroot.png",
+    image: "/assets/external/heroafisha/chamberconcerthero.webp",
     ticketLink: "https://nikoartgallery.com/afisha/kamernye-ansambli-zubets-tursunov-akhunov/",
   },
   {
@@ -83,7 +83,7 @@ performers: [
   "Георг Пелецис — «Цветущий жасмин»",
   "Михаил Тарбагаев — «Скоро лето» для альта и струнного оркестра",
 ],
-    image: "/assets/external/cd0d075c_db39c27515a4605ed73c.jpg",
+    image: "/assets/external/heroafisha/cd0d075c_db39c27515a4605ed73c.webp",
     ticketLink: "https://nikoartgallery.com/afisha/kamernyy-orkestr-solisty-nizhnego-novgoroda-tsvetushchiy-zhasmin-/",
     performers: [
       "Камерный оркестр «Солисты Нижнего Новгорода»",
@@ -105,7 +105,7 @@ performers: [
       "Артем Макоян",
       "Наталья Соколовская",
     ],
-    image: "/assets/external/48f5939f_IMG-20251121-WA0020.jpg",
+    image: "/assets/external/heroafisha/48f5939f_IMG-20251121-WA0020.webp",
   },
   {
     id: "2026-05-18-forelnyy-kontsert",
@@ -131,7 +131,7 @@ performers: [
       "Владимир Волков",
       "Наталья Соколовская",
     ],
-    image: "/assets/external/aca5621a_6362729948f1e85335ac.jpg",
+    image: "/assets/external/heroafisha/aca5621a_6362729948f1e85335ac.webp",
     ticketLink: "https://nikoartgallery.com/afisha/forelnyy-kontsert-rust-pozyumskiy/",
   },
   {
@@ -153,7 +153,7 @@ performers: [
       "Ксения Жулёва",
       "Ольга Калинова",
     ],
-    image: "/assets/external/d6c06a4b_50d42752bd6c38e0c9da.jpeg",
+    image: "/assets/external/heroafisha/d6c06a4b_50d42752bd6c38e0c9da.webp",
     ticketLink: "https://nikoartgallery.com/afisha/opensoundquartet-muzyka-sovremennykh-kompozitorov-dlya-kvarteta/",
   },
   {
@@ -169,7 +169,7 @@ performers: [
       "OpensoundOrchestra",
       "Художественный руководитель и дирижёр — Станислав Малышев",
     ],
-    image: "/assets/external/f4a26f9e_9ba87e7e7bb322482d4d.jpeg",
+    image: "/assets/external/heroafisha/f4a26f9e_9ba87e7e7bb322482d4d.webp",
     ticketLink: "https://nikoartgallery.com/afisha/opensoundorchestra-vremena-goda-ne-vivaldi/",
   },
   {
@@ -185,7 +185,7 @@ performers: [
 ],
 
     performers: ["Пётр Главатских"],
-    image: "/assets/external/6c7af7d8_0c98a711c715d8f20ff7.jpg",
+    image: "/assets/external/heroafisha/6c7af7d8_0c98a711c715d8f20ff7.webp",
     ticketLink: "https://nikoartgallery.com/afisha/pyetr-glavatskikh-perkussiya-/",
   },
   {
@@ -207,7 +207,7 @@ performers: [
       "Иоанна Бердюгина",
       "Мария Михайловская",
     ],
-    image: "/assets/external/bfd7db6d_50a0894752382d8d9b1a.jpg",
+    image: "/assets/external/heroafisha/bfd7db6d_50a0894752382d8d9b1a.webp",
     ticketLink: "https://nikoartgallery.com/afisha/daniil-sayamov-kvartet-im-glinki-aleksandr-chaykovskiy/",
   },
   {
@@ -242,7 +242,7 @@ performers: [
       "Михаил Макорда",
       "Дмитрий Онищенко",
     ],
-    image: "/assets/external/c31dbe0b_61afb70ee5afd7e2710b.jpg",
+    image: "/assets/external/heroafisha/c31dbe0b_61afb70ee5afd7e2710b.webp",
     ticketLink: "https://nikoartgallery.com/afisha/pianisty-kompozitory/",
   },
   {
@@ -264,7 +264,7 @@ performers: [
       "Фёдор Шинкевич",
       "Роман Викулов",
     ],
-    image: "/assets/external/5f68f703_5ef851e0c6992bfd3e44.jpg",
+    image: "/assets/external/heroafisha/5f68f703_5ef851e0c6992bfd3e44.webp",
     ticketLink: "https://nikoartgallery.com/afisha/leonid-desyatnikov-lyubov-i-zhizn-poeta/",
   },
   {
@@ -284,7 +284,7 @@ performers: [
       "Вокально-хоровой ансамбль «Мелодия»",
       "Художественный руководитель — Евгения Кудричевская",
     ],
-    image: "/assets/external/6ff3de26_6b1b5d1bd1f856318444.png",
+    image: "/assets/external/heroafisha/6ff3de26_6b1b5d1bd1f856318444.webp",
     ticketLink: "https://nikoartgallery.com/afisha/brezelensamble-i-khorovoy-ansambl-melodiya-novaya-sakralnost/",
   },
   {
@@ -319,7 +319,7 @@ performers: [
       "Егор Авилов (Перкуссия)",
       "Мария Захаркина (Перкуссия)",
     ],
-    image: "/assets/external/finalconcert.jpg",
+    image: "/assets/external/heroafisha/finalconcert.webp",
     ticketLink: "https://nikoartgallery.com/afisha/karmanov-konneson-leng-/",
   },
 ];

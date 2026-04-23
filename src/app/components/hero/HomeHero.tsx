@@ -7,6 +7,7 @@ import festivalTopWord from "/festlogo-topword.svg";
 import { orderedConcerts } from "../../data/site";
 import { PageContainer } from "../../layout/PageContainer";
 import { HeroConcertSelector } from "./HeroConcertSelector";
+import { HeroDesktopLoadingOverlay, useHeroLoadingTransition } from "./HeroLoadingTransition";
 
 const pelecisPosterHint = "peletsis";
 const refinedPosterHints = ["peletsis", "de-la-nuite"] as const;
@@ -38,9 +39,11 @@ const specialGuestPoster = {
   date: "",
   title: "\u0411\u043e\u0440\u0438\u0441 \u0411\u0435\u0440\u0435\u0437\u043e\u0432\u0441\u043a\u0438\u0439",
   description: "\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0433\u043e\u0441\u0442\u044c",
-  image: "/assets/external/BerezovkiBedited.png",
+  image: "/assets/external/heroafisha/BerezovkiBedited.webp",
   link: undefined,
 };
+
+const initialHeroPosterId = "2026-05-27-desyatnikov-love-and-life";
 
 type HeroGuestPoster = typeof specialGuestPoster;
 type HeroConcertPoster = (typeof orderedConcerts)[number] & { kind: "concert" };
@@ -73,22 +76,79 @@ function isPosterDescriptionDuplicate(title: string, description: string) {
   );
 }
 
-export function HomeHero() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [direction, setDirection] = useState(1);
-  const rotationTimerRef = useRef<number | null>(null);
-  const touchStartXRef = useRef<number | null>(null);
+function HeroLogoMark({ tone, className = "" }: { tone: "dark" | "light"; className?: string }) {
+  const filter = tone === "light" ? "brightness(0) invert(1)" : undefined;
 
+  return (
+    <div className={`w-full max-w-[560px] ${className}`}>
+      <img
+        src={festivalMark}
+        alt=""
+        aria-hidden="true"
+        className="h-auto w-full object-contain"
+        style={{ filter }}
+      />
+    </div>
+  );
+}
+
+function HeroLogoLockup({ tone, className = "" }: { tone: "dark" | "light"; className?: string }) {
+  const filter = tone === "light" ? "brightness(0) invert(1)" : undefined;
+
+  return (
+    <div className={`relative w-full max-w-[560px] ${className}`}>
+      <img
+        src={festivalMark}
+        alt=""
+        aria-hidden="true"
+        className="h-auto w-full object-contain"
+        style={{ filter }}
+      />
+
+      <div className="absolute left-[2.9%] top-[7.2%] z-10 w-[94.1%] overflow-hidden">
+        <img
+          src={festivalTopWord}
+          alt=""
+          aria-hidden="true"
+          className="h-auto w-full"
+          style={{ filter }}
+        />
+      </div>
+
+      <div className="absolute left-[74.1%] bottom-[14.1%] z-10 w-[22.2%] overflow-hidden">
+        <img
+          src={festivalBottomWord}
+          alt=""
+          aria-hidden="true"
+          className="h-auto w-full"
+          style={{ filter }}
+        />
+      </div>
+    </div>
+  );
+}
+
+export function HomeHero() {
   const heroPosters = useMemo<HeroPoster[]>(
     () => [specialGuestPoster, ...orderedConcerts.map((concert) => ({ ...concert, kind: "concert" as const }))],
     [],
   );
 
+  const defaultActiveIndex = useMemo(() => {
+    const foundIndex = heroPosters.findIndex((poster) => poster.id === initialHeroPosterId);
+    return foundIndex === -1 ? 0 : foundIndex;
+  }, [heroPosters]);
+
+  const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
+  const [direction, setDirection] = useState(1);
+  const rotationTimerRef = useRef<number | null>(null);
+  const touchStartXRef = useRef<number | null>(null);
+
   const autoRotationOrder = useMemo(() => {
     const desiredOrderIds = [
+      "2026-05-27-desyatnikov-love-and-life",
       "special-guest-boris-berezovsky",
       "2026-05-20-opensoundorchestra",
-      "2026-05-27-desyatnikov-love-and-life",
       "2026-05-10-peletcis-24-kaprisa",
       "2026-05-28-brezel-melodiya",
       "2026-05-15-solisty-nizhnego-novgoroda",
@@ -110,6 +170,15 @@ export function HomeHero() {
   }
 
   const activePoster = heroPosters[activeIndex];
+  const {
+    introMode,
+    logoRevealProps,
+    posterRevealProps,
+    selectorRevealProps,
+    showDesktopOverlay,
+    startDesktopCurtain,
+    textRevealProps,
+  } = useHeroLoadingTransition(activePoster.image);
 
   const isGuestPoster = activePoster.kind === "guest";
   const isPelecisPoster = activePoster.link?.includes(pelecisPosterHint) ?? false;
@@ -262,91 +331,121 @@ export function HomeHero() {
     handlePrevious();
   };
 
+  const isDesktopLoadingTransition = introMode === "desktop";
+
   return (
     <section className="relative overflow-hidden bg-white pt-24 sm:pt-28">
-      <PageContainer className="relative py-6 sm:py-10 lg:py-12">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(420px,0.95fr)] lg:gap-14">
-          <div className="flex flex-col lg:min-h-[660px]">
-            <div className="pointer-events-none relative flex items-start justify-start overflow-hidden -mt-10 lg:-mt-12 lg:flex-1">
-              <div className="relative w-full max-w-[560px]">
-                <motion.img
-                  src={festivalMark}
-                  alt=""
-                  aria-hidden="true"
-                  initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="h-auto w-full object-contain"
-                />
+      <div className="relative">
+        <HeroDesktopLoadingOverlay
+          show={showDesktopOverlay}
+          startCurtain={startDesktopCurtain}
+          logo={<HeroLogoMark tone="light" />}
+        />
 
-                <motion.div
-                  initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
-                  animate={{ opacity: 1, clipPath: "inset(0 0% 0 0)" }}
-                  transition={{ duration: 0.72, delay: 0.22, ease: "easeOut" }}
-                  className="absolute left-[2.9%] top-[7.2%] z-10 w-[94.1%] overflow-hidden"
-                >
-                  <img
-                    src={festivalTopWord}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-auto w-full"
-                  />
-                </motion.div>
+        <PageContainer className="relative z-10 py-6 sm:py-10 lg:py-12">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(420px,0.95fr)] lg:gap-14">
+            <div className="flex flex-col lg:min-h-[660px]">
+              <div className="pointer-events-none relative flex items-start justify-start overflow-hidden -mt-10 lg:-mt-12 lg:flex-1">
+                {isDesktopLoadingTransition ? (
+                  <motion.div {...logoRevealProps} className="w-full max-w-[560px]">
+                    <HeroLogoLockup tone="dark" />
+                  </motion.div>
+                ) : (
+                  <div className="relative w-full max-w-[560px]">
+                    <motion.img
+                      src={festivalMark}
+                      alt=""
+                      aria-hidden="true"
+                      initial={{ opacity: 0, y: 18 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, ease: "easeOut" }}
+                      className="h-auto w-full object-contain"
+                    />
 
-                <motion.div
-                  initial={{ opacity: 0, clipPath: "inset(0 0 0 100%)" }}
-                  animate={{ opacity: 1, clipPath: "inset(0 0 0 0%)" }}
-                  transition={{ duration: 0.9, delay: 1.02, ease: "easeOut" }}
-                  className="absolute left-[74.1%] bottom-[14.1%] z-10 w-[22.2%] overflow-hidden"
-                >
-                  <img
-                    src={festivalBottomWord}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-auto w-full"
-                  />
-                </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+                      animate={{ opacity: 1, clipPath: "inset(0 0% 0 0)" }}
+                      transition={{ duration: 0.72, delay: 0.22, ease: "easeOut" }}
+                      className="absolute left-[2.9%] top-[7.2%] z-10 w-[94.1%] overflow-hidden"
+                    >
+                      <img
+                        src={festivalTopWord}
+                        alt=""
+                        aria-hidden="true"
+                        className="h-auto w-full"
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, clipPath: "inset(0 0 0 100%)" }}
+                      animate={{ opacity: 1, clipPath: "inset(0 0 0 0%)" }}
+                      transition={{ duration: 0.9, delay: 1.02, ease: "easeOut" }}
+                      className="absolute left-[74.1%] bottom-[14.1%] z-10 w-[22.2%] overflow-hidden"
+                    >
+                      <img
+                        src={festivalBottomWord}
+                        alt=""
+                        aria-hidden="true"
+                        className="h-auto w-full"
+                      />
+                    </motion.div>
+                  </div>
+                )}
               </div>
+
+              {isDesktopLoadingTransition ? (
+                <motion.div
+                  {...textRevealProps}
+                  className="mx-auto w-full max-w-[560px] pt-5 text-center sm:pt-6"
+                >
+                  <p className="font-editorial-sans text-[14px] font-normal uppercase tracking-[0.24em] text-[#111111] sm:text-[15px]">
+                    {"\u041c\u0443\u0437\u044b\u043a\u0430\u043b\u044c\u043d\u044b\u0439 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044c"}
+                  </p>
+                  <p className="font-editorial-sans mt-2 text-[12px] font-light uppercase tracking-[0.15em] text-[#4b5563] sm:mt-[10px] sm:text-[13px]">
+                    {"\u0413\u0430\u043b\u0435\u0440\u0435\u044f \u041d\u0438\u043a\u043e \u00b7 \u041c\u043e\u0441\u043a\u0432\u0430 \u00b7 10-31 \u043c\u0430\u044f"}
+                  </p>
+                </motion.div>
+              ) : (
+                <div className="mx-auto w-full max-w-[560px] pt-5 text-center sm:pt-6">
+                  <motion.p
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.85, delay: 1.22, ease: "easeOut" }}
+                    className="font-editorial-sans text-[14px] font-normal uppercase tracking-[0.24em] text-[#111111] sm:text-[15px]"
+                  >
+                    {"\u041c\u0443\u0437\u044b\u043a\u0430\u043b\u044c\u043d\u044b\u0439 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044c"}
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 0.9, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1.42, ease: "easeOut" }}
+                    className="font-editorial-sans mt-2 text-[12px] font-light uppercase tracking-[0.15em] text-[#4b5563] sm:mt-[10px] sm:text-[13px]"
+                  >
+                    {"\u0413\u0430\u043b\u0435\u0440\u0435\u044f \u041d\u0438\u043a\u043e \u00b7 \u041c\u043e\u0441\u043a\u0432\u0430 \u00b7 10-31 \u043c\u0430\u044f"}
+                  </motion.p>
+                </div>
+              )}
             </div>
 
-            <div className="mx-auto w-full max-w-[560px] pt-5 text-center sm:pt-6">
-              <motion.p
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.85, delay: 1.22, ease: "easeOut" }}
-                className="font-editorial-sans text-[14px] font-normal uppercase tracking-[0.24em] text-[#111111] sm:text-[15px]"
-              >
-                {"\u041c\u0443\u0437\u044b\u043a\u0430\u043b\u044c\u043d\u044b\u0439 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044c"}
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 0.9, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.42, ease: "easeOut" }}
-                className="font-editorial-sans mt-2 text-[12px] font-light uppercase tracking-[0.15em] text-[#4b5563] sm:mt-[10px] sm:text-[13px]"
-              >
-                {"\u0413\u0430\u043b\u0435\u0440\u0435\u044f \u041d\u0438\u043a\u043e \u00b7 \u041c\u043e\u0441\u043a\u0432\u0430 \u00b7 10-31 \u043c\u0430\u044f"}
-              </motion.p>
-            </div>
-          </div>
-
-          <div className="relative flex flex-col overflow-hidden lg:min-h-[660px] lg:overflow-visible">
-            <AnimatePresence initial={false} mode="wait" custom={direction}>
-              <motion.article
-                key={activePoster.id}
-                custom={direction}
-                variants={posterVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1] }}
-                onTouchStart={handleTouchStart}
-                onTouchEnd={handleTouchEnd}
-                className={[
-                  "relative mx-auto aspect-[6/5] w-full max-w-[360px] sm:max-w-[420px] lg:mx-0 lg:min-h-[600px] lg:max-w-none lg:flex-1 lg:aspect-auto",
-                  isOpenSoundQuartetPoster ? "bg-white" : "bg-black",
-                  isConcertPoster ? "overflow-hidden lg:overflow-visible" : "overflow-hidden",
-                ].join(" ")}
-              >
+            <div className="relative flex flex-col overflow-hidden lg:min-h-[660px] lg:overflow-visible">
+              <motion.div {...posterRevealProps} className="lg:flex-1">
+                <AnimatePresence initial={false} mode="wait" custom={direction}>
+                <motion.article
+                  key={activePoster.id}
+                  custom={direction}
+                  variants={posterVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1] }}
+                  onTouchStart={handleTouchStart}
+                  onTouchEnd={handleTouchEnd}
+                  className={[
+                    "relative mx-auto aspect-[6/5] w-full max-w-[360px] sm:max-w-[420px] lg:mx-0 lg:h-full lg:min-h-[600px] lg:max-w-none lg:flex-1 lg:aspect-auto",
+                    isOpenSoundQuartetPoster ? "bg-white" : "bg-black",
+                    isConcertPoster ? "overflow-hidden lg:overflow-visible" : "overflow-hidden",
+                  ].join(" ")}
+                >
                 <img
                   src={activePoster.image}
                   alt={activePoster.title}
@@ -363,6 +462,8 @@ export function HomeHero() {
                     filter: isGuestPoster
                       ? "none"
                       : isGromcheSlovaPoster
+                        ? "none"
+                      : isVIschezayushemGorodePoster
                         ? "none"
                       : isPaintingPoster
                         ? "none"
@@ -621,40 +722,44 @@ export function HomeHero() {
                     ) : null}
                   </div>
                 </div>
-              </motion.article>
-            </AnimatePresence>
+                </motion.article>
+                </AnimatePresence>
+              </motion.div>
 
-            <div className="mt-5 flex min-h-12 items-center justify-between gap-2 sm:mt-6 sm:gap-6">
-              <div className="min-h-12 min-w-0">
-                <HeroConcertSelector
-                  activePosterIndex={activeIndex}
-                  totalConcerts={orderedConcerts.length}
-                  onSelectPosterIndex={handlePosterSelect}
-                />
+              <motion.div {...selectorRevealProps}>
+                <div className="mt-5 flex min-h-12 items-center justify-between gap-2 sm:mt-6 sm:gap-6">
+                  <div className="min-h-12 min-w-0">
+                    <HeroConcertSelector
+                      activePosterIndex={activeIndex}
+                      totalConcerts={orderedConcerts.length}
+                      onSelectPosterIndex={handlePosterSelect}
+                    />
+                  </div>
+
+                  <Link
+                    to="/afisha"
+                    className="font-editorial-sans inline-flex shrink-0 items-center justify-end whitespace-nowrap leading-none text-[9px] uppercase tracking-[0.12em] text-black/62 transition-colors duration-300 hover:text-black sm:text-right sm:text-[11px] sm:tracking-[0.22em]"
+                  >
+                    <span>{"\u041f\u0420\u041e\u0413\u0420\u0410\u041c\u041C\u0410 \u0424\u0415\u0421\u0422\u0418\u0412\u0410\u041B\u042F \u2192"}</span>
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          <div className="pb-2 pt-8 sm:pb-3 sm:pt-10 lg:pt-12">
+            <div aria-hidden="true" className="flex w-full items-center gap-[10px]">
+              <div className="h-px flex-1 bg-black" />
+              <div className="flex items-center gap-[3px]">
+                <div className="h-3 w-px bg-black" />
+                <div className="h-3 w-px bg-black" />
+                <div className="h-3 w-px bg-black" />
               </div>
-
-              <Link
-                to="/afisha"
-                className="font-editorial-sans inline-flex shrink-0 items-center justify-end whitespace-nowrap leading-none text-[9px] uppercase tracking-[0.12em] text-black/62 transition-colors duration-300 hover:text-black sm:text-right sm:text-[11px] sm:tracking-[0.22em]"
-              >
-                <span>{"\u041f\u0420\u041e\u0413\u0420\u0410\u041c\u041c\u0410 \u0424\u0415\u0421\u0422\u0418\u0412\u0410\u041b\u042f \u2192"}</span>
-              </Link>
+              <div className="h-px flex-1 bg-black" />
             </div>
           </div>
-        </div>
-
-        <div className="pb-2 pt-8 sm:pb-3 sm:pt-10 lg:pt-12">
-          <div aria-hidden="true" className="flex w-full items-center gap-[10px]">
-            <div className="h-px flex-1 bg-black" />
-            <div className="flex items-center gap-[3px]">
-              <div className="h-3 w-px bg-black" />
-              <div className="h-3 w-px bg-black" />
-              <div className="h-3 w-px bg-black" />
-            </div>
-            <div className="h-px flex-1 bg-black" />
-          </div>
-        </div>
-      </PageContainer>
+        </PageContainer>
+      </div>
     </section>
   );
 }
