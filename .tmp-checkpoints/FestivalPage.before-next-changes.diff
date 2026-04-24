@@ -1,0 +1,727 @@
+﻿diff --git a/src/app/pages/FestivalPage.tsx b/src/app/pages/FestivalPage.tsx
+index b0b2c8b..25ad9b2 100644
+--- a/src/app/pages/FestivalPage.tsx
++++ b/src/app/pages/FestivalPage.tsx
+@@ -1,5 +1,10 @@
++import { type CSSProperties, useEffect, useRef, useState } from "react";
++import { motion, useMotionTemplate, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
+ import { HomeHero } from "../components/hero/HomeHero";
+ import { PageContainer } from "../layout/PageContainer";
++import nikoGalleryWideImage from "../../../10aa7226843afc00528da7dfda93102e.png";
++import nikoGallerySkylightImage from "../../../92e2f8774758880a88a1c63625b99f96.png";
++import nikoGalleryPianoDetailImage from "../../../tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png";
+ 
+ const festivalIntroLead =
+   "Этот проект посвящён музыке современников — произведениям, ставшим значимыми событиями нашего времени.";
+@@ -31,39 +36,680 @@ const bodyTextClassName =
+ const sideLabelClassName =
+   "font-editorial-serif text-[1.9rem] leading-[0.95] font-normal tracking-[0.14em] lowercase text-neutral-900 sm:text-[2.2rem] lg:text-[2.5rem]";
+ 
++type FestivalCutoutMockProps = {
++  align?: "left" | "right";
++  frameClassName: string;
++  frameStyle?: CSSProperties;
++  primaryWindowClassName: string;
++  secondaryWindowClassName?: string;
++  primaryImageSrc: string;
++  secondaryImageSrc?: string;
++  primaryImagePosition?: string;
++  secondaryImagePosition?: string;
++  primaryXRange?: [number, number];
++  secondaryXRange?: [number, number];
++  secondaryYRange?: [number, number];
++  secondaryRevealScaleXRange?: [number, number];
++  secondaryRevealOrigin?: "left" | "right";
++  smoothMotion?: boolean;
++  secondaryUseIndependentMotion?: boolean;
++  secondaryUseIndependentPosition?: boolean;
++};
++
++type FloatingDividerDashProps = {
++  gap: any;
++  opacity: any;
++  shiftX: any;
++  width: any;
++};
++
++function FloatingDividerDash({ gap, opacity, shiftX, width }: FloatingDividerDashProps) {
++  return (
++    <motion.span
++      aria-hidden="true"
++      className="inline-flex overflow-hidden align-baseline text-black/22"
++      style={{ width, marginLeft: gap, marginRight: gap }}
++    >
++      <motion.span className="inline-block" style={{ opacity, x: shiftX }}>
++        —
++      </motion.span>
++    </motion.span>
++  );
++}
++
++function FestivalCutoutMock({
++  align = "left",
++  frameClassName,
++  frameStyle,
++  primaryWindowClassName,
++  secondaryWindowClassName,
++  primaryImageSrc,
++  secondaryImageSrc,
++  primaryImagePosition = "50% 50%",
++  secondaryImagePosition = "50% 50%",
++  primaryXRange = [-32, 28],
++  secondaryXRange = [22, -18],
++  secondaryYRange = [0, 0],
++  secondaryRevealScaleXRange = [1, 1],
++  secondaryRevealOrigin = "left",
++  smoothMotion = false,
++  secondaryUseIndependentMotion = false,
++  secondaryUseIndependentPosition = false,
++}: FestivalCutoutMockProps) {
++  const cutoutRef = useRef<HTMLDivElement | null>(null);
++  const primaryWindowRef = useRef<HTMLDivElement | null>(null);
++  const secondaryWindowRef = useRef<HTMLDivElement | null>(null);
++  const prefersReducedMotion = useReducedMotion();
++  const [frameSize, setFrameSize] = useState({ width: 0, height: 0 });
++  const [primaryWindowOffset, setPrimaryWindowOffset] = useState({ left: 0, top: 0 });
++  const [secondaryWindowOffset, setSecondaryWindowOffset] = useState({ left: 0, top: 0 });
++  const { scrollYProgress } = useScroll({
++    target: cutoutRef,
++    offset: ["start 88%", "end 18%"],
++  });
++
++  useEffect(() => {
++    const frameElement = cutoutRef.current;
++    const primaryWindowElement = primaryWindowRef.current;
++
++    if (!frameElement || !primaryWindowElement) {
++      return;
++    }
++
++    const updateGeometry = () => {
++      const frameRect = frameElement.getBoundingClientRect();
++      const primaryRect = primaryWindowElement.getBoundingClientRect();
++      const secondaryRect = secondaryWindowRef.current?.getBoundingClientRect();
++
++      setFrameSize({ width: frameRect.width, height: frameRect.height });
++      setPrimaryWindowOffset({
++        left: primaryRect.left - frameRect.left,
++        top: primaryRect.top - frameRect.top,
++      });
++
++      if (secondaryRect) {
++        setSecondaryWindowOffset({
++          left: secondaryRect.left - frameRect.left,
++          top: secondaryRect.top - frameRect.top,
++        });
++      }
++    };
++
++    updateGeometry();
++
++    const resizeObserver =
++      typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => updateGeometry()) : null;
++
++    resizeObserver?.observe(frameElement);
++    resizeObserver?.observe(primaryWindowElement);
++
++    if (secondaryWindowRef.current) {
++      resizeObserver?.observe(secondaryWindowRef.current);
++    }
++
++    window.addEventListener("resize", updateGeometry);
++
++    return () => {
++      resizeObserver?.disconnect();
++      window.removeEventListener("resize", updateGeometry);
++    };
++  }, [secondaryWindowClassName]);
++
++  const primaryXRaw = useTransform(
++    scrollYProgress,
++    [0, 1],
++    prefersReducedMotion ? [0, 0] : primaryXRange,
++  );
++  const secondaryXRaw = useTransform(
++    scrollYProgress,
++    [0, 1],
++    prefersReducedMotion ? [0, 0] : secondaryXRange,
++  );
++  const secondaryYRaw = useTransform(
++    scrollYProgress,
++    [0, 1],
++    prefersReducedMotion ? [0, 0] : secondaryYRange,
++  );
++  const secondaryRevealProgressRaw = useTransform(
++    scrollYProgress,
++    [0, 1],
++    prefersReducedMotion
++      ? [secondaryRevealScaleXRange[1], secondaryRevealScaleXRange[1]]
++      : secondaryRevealScaleXRange,
++  );
++  const primaryXSmooth = useSpring(primaryXRaw, { stiffness: 180, damping: 28, mass: 0.35 });
++  const secondaryXSmooth = useSpring(secondaryXRaw, { stiffness: 180, damping: 28, mass: 0.35 });
++  const secondaryYSmooth = useSpring(secondaryYRaw, { stiffness: 180, damping: 28, mass: 0.35 });
++  const secondaryRevealProgressSmooth = useSpring(secondaryRevealProgressRaw, {
++    stiffness: 180,
++    damping: 28,
++    mass: 0.35,
++  });
++  const primaryX = smoothMotion ? primaryXSmooth : primaryXRaw;
++  const secondaryX = smoothMotion ? secondaryXSmooth : secondaryXRaw;
++  const secondaryY = smoothMotion ? secondaryYSmooth : secondaryYRaw;
++  const secondaryRevealProgress = smoothMotion ? secondaryRevealProgressSmooth : secondaryRevealProgressRaw;
++  const secondaryRevealClipPath = useTransform(secondaryRevealProgress, (value) => {
++    const clamped = Math.max(0, Math.min(1, value));
++    const hiddenPercent = `${(1 - clamped) * 100}%`;
++
++    return secondaryRevealOrigin === "right"
++      ? `inset(0 0 0 ${hiddenPercent})`
++      : `inset(0 ${hiddenPercent} 0 0)`;
++  });
++  const primaryScale = useTransform(
++    scrollYProgress,
++    [0, 1],
++    prefersReducedMotion ? [1.22, 1.22] : [1.28, 1.18],
++  );
++  const secondaryScale = useTransform(
++    scrollYProgress,
++    [0, 1],
++    prefersReducedMotion ? [1.24, 1.24] : [1.3, 1.2],
++  );
++  const grayscale = useTransform(
++    scrollYProgress,
++    [0, 0.28, 0.58, 0.82, 1],
++    prefersReducedMotion ? [0.38, 0.38, 0.38, 0.38, 0.38] : [0.98, 0.9, 0.7, 0.34, 0.24],
++  );
++  const saturate = useTransform(
++    scrollYProgress,
++    [0, 0.28, 0.58, 0.82, 1],
++    prefersReducedMotion ? [0.88, 0.88, 0.88, 0.88, 0.88] : [0.7, 0.76, 0.84, 0.94, 0.98],
++  );
++  const brightness = useTransform(
++    scrollYProgress,
++    [0, 0.28, 0.58, 0.82, 1],
++    prefersReducedMotion ? [0.988, 0.988, 0.988, 0.988, 0.988] : [0.96, 0.97, 0.98, 0.992, 0.998],
++  );
++  const contrast = useTransform(
++    scrollYProgress,
++    [0, 0.28, 0.58, 0.82, 1],
++    prefersReducedMotion ? [1.02, 1.02, 1.02, 1.02, 1.02] : [1.01, 1.016, 1.024, 1.032, 1.036],
++  );
++  const sharedFilter = useMotionTemplate`grayscale(${grayscale}) saturate(${saturate}) brightness(${brightness}) contrast(${contrast})`;
++  const isContinuousSecondaryImage = secondaryImageSrc === undefined || secondaryImageSrc === primaryImageSrc;
++  const useIndependentSecondaryLayer = secondaryUseIndependentMotion || secondaryUseIndependentPosition;
++  const resolvedSecondaryX = useIndependentSecondaryLayer
++    ? secondaryX
++    : isContinuousSecondaryImage
++      ? primaryX
++      : secondaryX;
++  const resolvedSecondaryY = useIndependentSecondaryLayer ? secondaryY : 0;
++  const resolvedSecondaryScale = useIndependentSecondaryLayer
++    ? primaryScale
++    : isContinuousSecondaryImage
++      ? primaryScale
++      : secondaryScale;
++  const resolvedSecondaryPosition = (isContinuousSecondaryImage && !secondaryUseIndependentPosition)
++    ? primaryImagePosition
++    : secondaryImagePosition;
++
++  return (
++    <div
++      className={`mt-8 flex sm:mt-10 lg:mt-12 ${align === "right" ? "justify-start lg:justify-end" : "justify-start"}`}
++    >
++      <div
++        ref={cutoutRef}
++        aria-hidden="true"
++        className={["relative", frameClassName].join(" ")}
++        style={frameStyle}
++      >
++        <div
++          ref={primaryWindowRef}
++          className={[
++            "absolute overflow-hidden",
++            primaryWindowClassName,
++          ].join(" ")}
++        >
++          <motion.img
++            src={primaryImageSrc}
++            alt=""
++            aria-hidden="true"
++            className="absolute max-w-none will-change-transform"
++            style={{
++              width: frameSize.width || undefined,
++              height: frameSize.height || undefined,
++              left: -(primaryWindowOffset.left || 0),
++              top: -(primaryWindowOffset.top || 0),
++              x: primaryX,
++              scale: primaryScale,
++              filter: sharedFilter,
++              objectPosition: primaryImagePosition,
++              objectFit: "cover",
++              transformOrigin: "0 0",
++            }}
++          />
++        </div>
++        {secondaryWindowClassName ? (
++          <motion.div
++            ref={secondaryWindowRef}
++            className={[
++              "absolute overflow-hidden",
++              secondaryWindowClassName,
++            ].join(" ")}
++            style={{
++              clipPath: secondaryRevealClipPath,
++            }}
++          >
++            <motion.img
++              src={secondaryImageSrc ?? primaryImageSrc}
++              alt=""
++              aria-hidden="true"
++              className="absolute max-w-none will-change-transform"
++              style={{
++                width: frameSize.width || undefined,
++                height: frameSize.height || undefined,
++              left: -(secondaryWindowOffset.left || 0),
++              top: -(secondaryWindowOffset.top || 0),
++              x: resolvedSecondaryX,
++              y: resolvedSecondaryY,
++              scale: resolvedSecondaryScale,
++              filter: sharedFilter,
++              objectPosition: resolvedSecondaryPosition,
++                objectFit: "cover",
++                transformOrigin: "0 0",
++              }}
++            />
++          </motion.div>
++        ) : null}
++      </div>
++    </div>
++  );
++}
++
+ export function FestivalPage() {
++  const festivalSectionRef = useRef<HTMLElement | null>(null);
++  const projectIntroTextRef = useRef<HTMLDivElement | null>(null);
++  const projectVisualRef = useRef<HTMLDivElement | null>(null);
++  const projectMainWindowRef = useRef<HTMLDivElement | null>(null);
++  const projectStripWindowRef = useRef<HTMLDivElement | null>(null);
++  const ideaLabelRef = useRef<HTMLParagraphElement | null>(null);
++  const ideaTextRef = useRef<HTMLDivElement | null>(null);
++  const [projectFrameSize, setProjectFrameSize] = useState({ width: 0, height: 0 });
++  const [projectMainWindowOffset, setProjectMainWindowOffset] = useState({ left: 0, top: 0 });
++  const [projectStripWindowOffset, setProjectStripWindowOffset] = useState({ left: 0, top: 0 });
++  const [projectVisualHeightPx, setProjectVisualHeightPx] = useState<number | null>(null);
++  const [ideaFrameHeightPx, setIdeaFrameHeightPx] = useState<number | null>(null);
++  const [projectIdeaDividerTopPx, setProjectIdeaDividerTopPx] = useState<number | null>(null);
++  const prefersReducedMotion = useReducedMotion();
++  const { scrollYProgress: projectImageProgress } = useScroll({
++    target: projectVisualRef,
++    offset: ["start 88%", "end 18%"],
++  });
++  const { scrollYProgress: projectIdeaDividerProgress } = useScroll({
++    target: festivalSectionRef,
++    offset: ["start 92%", "end 18%"],
++  });
++  const dividerDashOpacity = useTransform(
++    projectIdeaDividerProgress,
++    [0, 0.4, 1],
++    prefersReducedMotion ? [0.18, 0.18, 0.18] : [0.02, 0.12, 0.26],
++  );
++  const dividerDashWidth = useTransform(
++    projectIdeaDividerProgress,
++    [0, 0.4, 1],
++    prefersReducedMotion ? ["0.62em", "0.62em", "0.62em"] : ["0.05em", "0.24em", "0.68em"],
++  );
++  const dividerDashGap = useTransform(
++    projectIdeaDividerProgress,
++    [0, 0.4, 1],
++    prefersReducedMotion ? ["0.16em", "0.16em", "0.16em"] : ["-0.03em", "0.05em", "0.17em"],
++  );
++  const dividerDashShiftLeft = useTransform(
++    projectIdeaDividerProgress,
++    [0, 0.4, 1],
++    prefersReducedMotion ? ["0em", "0em", "0em"] : ["-0.18em", "-0.08em", "0em"],
++  );
++  const dividerDashShiftRight = useTransform(
++    projectIdeaDividerProgress,
++    [0, 0.4, 1],
++    prefersReducedMotion ? ["0em", "0em", "0em"] : ["0.18em", "0.08em", "0em"],
++  );
++  const dividerParallaxY = useTransform(
++    projectIdeaDividerProgress,
++    [0, 1],
++    prefersReducedMotion ? [0, 0] : [-10, 18],
++  );
++  const projectImageX = useTransform(
++    projectImageProgress,
++    [0, 1],
++    prefersReducedMotion ? [0, 0] : [28, -36],
++  );
++  const projectImageScale = useTransform(
++    projectImageProgress,
++    [0, 1],
++    prefersReducedMotion ? [1.22, 1.22] : [1.28, 1.18],
++  );
++  const projectStripRevealProgressRaw = useTransform(
++    projectImageProgress,
++    [0, 0.32, 0.78, 1],
++    prefersReducedMotion ? [1, 1, 1, 1] : [0, 0, 1, 1],
++  );
++  const projectStripClipPath = useTransform(projectStripRevealProgressRaw, (value) => {
++    const clamped = Math.max(0, Math.min(1, value));
++
++    return `inset(0 0 0 ${(1 - clamped) * 100}%)`;
++  });
++  const projectImageGrayscale = useTransform(
++    projectImageProgress,
++    [0, 0.28, 0.58, 0.82, 1],
++    prefersReducedMotion ? [0.38, 0.38, 0.38, 0.38, 0.38] : [0.98, 0.9, 0.7, 0.34, 0.24],
++  );
++  const projectImageSaturate = useTransform(
++    projectImageProgress,
++    [0, 0.28, 0.58, 0.82, 1],
++    prefersReducedMotion ? [0.88, 0.88, 0.88, 0.88, 0.88] : [0.7, 0.76, 0.84, 0.94, 0.98],
++  );
++  const projectImageBrightness = useTransform(
++    projectImageProgress,
++    [0, 0.28, 0.58, 0.82, 1],
++    prefersReducedMotion ? [0.988, 0.988, 0.988, 0.988, 0.988] : [0.96, 0.97, 0.98, 0.992, 0.998],
++  );
++  const projectImageContrast = useTransform(
++    projectImageProgress,
++    [0, 0.28, 0.58, 0.82, 1],
++    prefersReducedMotion ? [1.02, 1.02, 1.02, 1.02, 1.02] : [1.01, 1.016, 1.024, 1.032, 1.036],
++  );
++  const projectImageFilter = useMotionTemplate`grayscale(${projectImageGrayscale}) saturate(${projectImageSaturate}) brightness(${projectImageBrightness}) contrast(${projectImageContrast})`;
++  const projectImageLayerWidth = projectFrameSize.width ? projectFrameSize.width * 1.7 : undefined;
++
++  useEffect(() => {
++    const introTextElement = projectIntroTextRef.current;
++
++    if (!introTextElement) {
++      return;
++    }
++
++    const desktopBreakpointPx = 1024;
++    const mainWindowBottomInsetPx = 68;
++    const targetBottomOffsetPx = 56;
++
++    const updateProjectHeight = () => {
++      if (window.innerWidth < desktopBreakpointPx) {
++        setProjectVisualHeightPx(null);
++        return;
++      }
++
++      const introTextRect = introTextElement.getBoundingClientRect();
++      const nextHeight = Math.max(
++        576,
++        Math.round(introTextRect.height + mainWindowBottomInsetPx + targetBottomOffsetPx),
++      );
++
++      setProjectVisualHeightPx(nextHeight);
++    };
++
++    updateProjectHeight();
++
++    const resizeObserver =
++      typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => updateProjectHeight()) : null;
++
++    resizeObserver?.observe(introTextElement);
++    window.addEventListener("resize", updateProjectHeight);
++
++    return () => {
++      resizeObserver?.disconnect();
++      window.removeEventListener("resize", updateProjectHeight);
++    };
++  }, []);
++
++  useEffect(() => {
++    const frameElement = projectVisualRef.current;
++    const mainWindowElement = projectMainWindowRef.current;
++    const stripWindowElement = projectStripWindowRef.current;
++
++    if (!frameElement || !mainWindowElement || !stripWindowElement) {
++      return;
++    }
++
++    const updateProjectGeometry = () => {
++      const frameRect = frameElement.getBoundingClientRect();
++      const mainWindowRect = mainWindowElement.getBoundingClientRect();
++      const stripWindowRect = stripWindowElement.getBoundingClientRect();
++
++      setProjectFrameSize({ width: frameRect.width, height: frameRect.height });
++      setProjectMainWindowOffset({
++        left: mainWindowRect.left - frameRect.left,
++        top: mainWindowRect.top - frameRect.top,
++      });
++      setProjectStripWindowOffset({
++        left: stripWindowRect.left - frameRect.left,
++        top: stripWindowRect.top - frameRect.top,
++      });
++    };
++
++    updateProjectGeometry();
++
++    const resizeObserver =
++      typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => updateProjectGeometry()) : null;
++
++    resizeObserver?.observe(frameElement);
++    resizeObserver?.observe(mainWindowElement);
++    resizeObserver?.observe(stripWindowElement);
++    window.addEventListener("resize", updateProjectGeometry);
++
++    return () => {
++      resizeObserver?.disconnect();
++      window.removeEventListener("resize", updateProjectGeometry);
++    };
++  }, []);
++
++  useEffect(() => {
++    const ideaLabelElement = ideaLabelRef.current;
++    const ideaTextElement = ideaTextRef.current;
++
++    if (!ideaLabelElement || !ideaTextElement) {
++      return;
++    }
++
++    const desktopBreakpointPx = 1024;
++    const cutoutTopGapPx = 48;
++    const targetBottomOffsetPx = 70;
++
++    const updateIdeaGeometry = () => {
++      if (window.innerWidth < desktopBreakpointPx) {
++        setIdeaFrameHeightPx(null);
++        return;
++      }
++
++      const labelRect = ideaLabelElement.getBoundingClientRect();
++      const textRect = ideaTextElement.getBoundingClientRect();
++      const nextHeight = Math.max(
++        360,
++        Math.round(textRect.height + targetBottomOffsetPx - labelRect.height - cutoutTopGapPx),
++      );
++
++      setIdeaFrameHeightPx(nextHeight);
++    };
++
++    updateIdeaGeometry();
++
++    const resizeObserver =
++      typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => updateIdeaGeometry()) : null;
++
++    resizeObserver?.observe(ideaLabelElement);
++    resizeObserver?.observe(ideaTextElement);
++    window.addEventListener("resize", updateIdeaGeometry);
++
++    return () => {
++      resizeObserver?.disconnect();
++      window.removeEventListener("resize", updateIdeaGeometry);
++    };
++  }, []);
++
++  useEffect(() => {
++    const sectionElement = festivalSectionRef.current;
++    const projectVisualElement = projectVisualRef.current;
++    const ideaLabelElement = ideaLabelRef.current;
++
++    if (!sectionElement || !projectVisualElement || !ideaLabelElement) {
++      return;
++    }
++
++    const updateDividerGeometry = () => {
++      const sectionRect = sectionElement.getBoundingClientRect();
++      const projectVisualRect = projectVisualElement.getBoundingClientRect();
++      const ideaLabelRect = ideaLabelElement.getBoundingClientRect();
++      const projectBottom = projectVisualRect.bottom - sectionRect.top;
++      const ideaTop = ideaLabelRect.top - sectionRect.top;
++      const nextTop = Math.round(projectBottom + (ideaTop - projectBottom) * 0.48);
++
++      setProjectIdeaDividerTopPx(nextTop);
++    };
++
++    updateDividerGeometry();
++
++    const resizeObserver =
++      typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => updateDividerGeometry()) : null;
++
++    resizeObserver?.observe(sectionElement);
++    resizeObserver?.observe(projectVisualElement);
++    resizeObserver?.observe(ideaLabelElement);
++    window.addEventListener("resize", updateDividerGeometry);
++
++    return () => {
++      resizeObserver?.disconnect();
++      window.removeEventListener("resize", updateDividerGeometry);
++    };
++  }, [projectVisualHeightPx, ideaFrameHeightPx]);
++
+   return (
+     <>
+       <HomeHero />
+ 
+-      <section className="pb-20 pt-4 sm:pb-24 sm:pt-6">
++      <section ref={festivalSectionRef} className="relative pb-20 pt-4 sm:pb-24 sm:pt-6">
++          <motion.div
++          aria-hidden="true"
++          className="pointer-events-none absolute inset-x-0 z-30 overflow-x-clip"
++          style={projectIdeaDividerTopPx ? { top: projectIdeaDividerTopPx, y: dividerParallaxY } : { y: dividerParallaxY }}
++        >
++          <div className="relative left-[-14vw] w-[148vw] overflow-hidden">
++            <p className="font-editorial-sans whitespace-nowrap text-[0.68rem] font-thin uppercase tracking-[0.22em] text-black/32 sm:text-[0.74rem] lg:text-[0.8rem]">
++              <span>КОМПОЗИТОРЫ XXI ВЕКА</span>
++              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
++              <span>МОСКВА</span>
++              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftRight} width={dividerDashWidth} />
++              <span>ГАЛЕРЕЯ НИКО</span>
++              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
++              <span>10–31 МАЯ</span>
++              <span className="mx-[1.5em] inline-block" />
++              <span>КОМПОЗИТОРЫ XXI ВЕКА</span>
++              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftRight} width={dividerDashWidth} />
++              <span>МОСКВА</span>
++              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
++              <span>ГАЛЕРЕЯ НИКО</span>
++              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftRight} width={dividerDashWidth} />
++              <span>10–31 МАЯ</span>
++              <span className="mx-[1.5em] inline-block" />
++              <span>КОМПОЗИТОРЫ XXI ВЕКА</span>
++              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
++              <span>МОСКВА</span>
++              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftRight} width={dividerDashWidth} />
++              <span>ГАЛЕРЕЯ НИКО</span>
++              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
++              <span>10–31 МАЯ</span>
++            </p>
++          </div>
++        </motion.div>
++
+         <PageContainer className="space-y-18 sm:space-y-24">
+           <div className="mx-auto grid max-w-6xl gap-8 pb-24 pt-5 sm:pb-28 sm:pt-6 lg:grid-cols-[720px_minmax(0,1fr)] lg:items-baseline lg:gap-12">
+-            <div className={introTextClassName}>
++            <div ref={projectIntroTextRef} className={introTextClassName}>
+               <p>{festivalIntroLead}</p>
+               <p>{festivalIntroParagraphs[0]}</p>
+               {festivalIntroParagraphs.slice(1).map((paragraph) => (
+                 <p key={paragraph}>{paragraph}</p>
+               ))}
+             </div>
+-            <div className="order-first lg:-mr-[28px] lg:order-none lg:text-right">
+-              <p className={sideLabelClassName}>о проекте</p>
++            <div className="order-first lg:order-none">
++              <div
++                ref={projectVisualRef}
++                className="relative mt-8 h-[388px] sm:mt-10 sm:h-[466px] lg:mt-2 lg:h-[576px]"
++                style={projectVisualHeightPx ? { height: `${projectVisualHeightPx}px` } : undefined}
++              >
++                <div
++                  className="pointer-events-none absolute bottom-[52px] left-[8%] right-[-1.25rem] top-[78px] sm:bottom-[60px] sm:left-[10%] sm:right-[-2rem] sm:top-[96px] lg:bottom-[68px] lg:left-[10%] lg:right-[clamp(-6rem,calc((1248px-100vw)/2),0px)] lg:top-[118px]"
++                >
++                  <div ref={projectMainWindowRef} className="absolute inset-0 overflow-hidden">
++                    <motion.img
++                      src={nikoGalleryWideImage}
++                      alt=""
++                      aria-hidden="true"
++                      className="absolute max-w-none will-change-transform"
++                      style={{
++                        width: projectImageLayerWidth,
++                        height: projectFrameSize.height || undefined,
++                        left: -(projectMainWindowOffset.left || 0),
++                        top: -(projectMainWindowOffset.top || 0),
++                        x: projectImageX,
++                        scale: projectImageScale,
++                        filter: projectImageFilter,
++                        objectPosition: "54% 50%",
++                        objectFit: "cover",
++                        transformOrigin: "0 0",
++                      }}
++                    />
++                  </div>
++                  <motion.div
++                    ref={projectStripWindowRef}
++                    className="absolute bottom-[-28px] right-[calc(100%+0.375rem)] top-[44px] w-[12px] overflow-hidden sm:bottom-[-30px] sm:right-[calc(100%+0.5rem)] sm:top-[54px] sm:w-[16px] lg:bottom-[-34px] lg:right-[calc(100%+0.625rem)] lg:top-[62px] lg:w-[18px]"
++                    style={{ clipPath: projectStripClipPath }}
++                  >
++                    <motion.img
++                      src={nikoGalleryWideImage}
++                      alt=""
++                      aria-hidden="true"
++                      className="absolute max-w-none will-change-transform"
++                      style={{
++                        width: projectImageLayerWidth,
++                        height: projectFrameSize.height || undefined,
++                        left: -(projectStripWindowOffset.left || 0),
++                        top: -(projectStripWindowOffset.top || 0),
++                        x: projectImageX,
++                        scale: projectImageScale,
++                        filter: projectImageFilter,
++                        objectPosition: "54% 50%",
++                        objectFit: "cover",
++                        transformOrigin: "0 0",
++                      }}
++                    />
++                  </motion.div>
++                </div>
++                <div className="relative flex h-full items-start lg:justify-end">
++                  <p className={`${sideLabelClassName} ml-[16px] mt-[16px] text-left sm:ml-[22px] sm:mt-[22px] lg:ml-0 lg:mr-[-28px] lg:mt-[54px] lg:text-right`}>
++                    о проекте
++                  </p>
++                </div>
++              </div>
+             </div>
+           </div>
+ 
+-          <div className="border-t border-black/10 pb-24 pt-8 sm:pb-28">
+-            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[220px_720px_minmax(0,1fr)] lg:items-baseline lg:gap-12">
+-              <div>
+-                <p className={sideLabelClassName}>идея</p>
++          <div className="pb-10 pt-8 sm:pb-14">
++            <div className="mx-auto grid max-w-6xl gap-10 sm:gap-12 lg:grid-cols-[minmax(320px,1fr)_720px] lg:items-start lg:gap-10 xl:gap-12">
++              <div className="flex flex-col">
++                <p ref={ideaLabelRef} className={sideLabelClassName}>
++                  идея
++                </p>
++                <FestivalCutoutMock
++                  frameClassName="-mt-[10px] h-[296px] w-[128%] max-w-none -ml-[10%] sm:-mt-[14px] sm:h-[372px] sm:w-[132%] sm:-ml-[14%] lg:-mt-[26px] lg:w-[132%] lg:-ml-[18vw] xl:w-[138%] xl:-ml-[16vw]"
++                  frameStyle={ideaFrameHeightPx ? { height: `${ideaFrameHeightPx}px` } : undefined}
++                  primaryWindowClassName="bottom-0 left-0 right-[26px] top-[20px] sm:right-[34px] sm:top-[24px] lg:right-[42px] lg:top-[30px]"
++                  secondaryWindowClassName="right-[-6px] top-[10px] bottom-[14px] w-[12px] sm:right-[-8px] sm:top-[14px] sm:bottom-[18px] sm:w-[16px] lg:right-[-10px] lg:top-[18px] lg:bottom-[20px] lg:w-[18px]"
++                  primaryImageSrc={nikoGalleryPianoDetailImage}
++                  primaryImagePosition="56% 48%"
++                  secondaryImageSrc={nikoGalleryPianoDetailImage}
++                  primaryXRange={[-28, 36]}
++                  secondaryRevealScaleXRange={[0, 1]}
++                  secondaryRevealOrigin="left"
++                />
+               </div>
+ 
+-              <div className={`${bodyTextClassName} lg:pl-[36px]`}>
++              <div ref={ideaTextRef} className={`${bodyTextClassName} lg:pl-[36px]`}>
+                 {projectParagraphs.map((paragraph) => (
+                   <p key={paragraph}>{paragraph}</p>
+                 ))}
+               </div>
+-
+-              <div aria-hidden="true" />
+             </div>
+           </div>
+ 
+@@ -75,8 +721,18 @@ export function FestivalPage() {
+                 ))}
+               </div>
+ 
+-              <div className="order-1 lg:-mr-[28px] lg:order-2 lg:text-right">
++              <div className="order-1 flex w-full flex-col lg:-mr-[28px] lg:order-2 lg:items-end lg:text-right">
+                 <p className={`${sideLabelClassName} lg:pr-[0px]`}>пространство</p>
++                <FestivalCutoutMock
++                  align="right"
++                  frameClassName="-mt-[10px] h-[248px] w-full max-w-[360px] sm:-mt-[14px] sm:h-[292px] sm:max-w-[416px] lg:-mt-[26px] lg:h-[360px] lg:w-[468px] lg:max-w-none lg:-mr-[96px]"
++                  primaryWindowClassName="bottom-[18px] left-[22px] right-0 top-[20px] sm:bottom-[22px] sm:left-[28px] sm:top-[24px] lg:bottom-[28px] lg:left-[28px] lg:right-0 lg:top-[30px]"
++                  secondaryWindowClassName="bottom-[14px] left-[-6px] top-[34px] w-[12px] sm:bottom-[18px] sm:left-[-8px] sm:top-[42px] sm:w-[16px] lg:bottom-[20px] lg:left-[-10px] lg:top-[50px] lg:w-[18px]"
++                  primaryImageSrc={nikoGallerySkylightImage}
++                  primaryImagePosition="46% 50%"
++                  secondaryImageSrc={nikoGallerySkylightImage}
++                  primaryXRange={[28, -36]}
++                />
+               </div>
+             </div>
+           </div>

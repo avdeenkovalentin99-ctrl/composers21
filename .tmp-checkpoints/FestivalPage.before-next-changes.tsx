@@ -2,10 +2,9 @@ import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { motion, useMotionTemplate, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 import { HomeHero } from "../components/hero/HomeHero";
 import { PageContainer } from "../layout/PageContainer";
+import nikoGalleryWideImage from "../../../10aa7226843afc00528da7dfda93102e.png";
+import nikoGallerySkylightImage from "../../../92e2f8774758880a88a1c63625b99f96.png";
 import nikoGalleryPianoDetailImage from "../../../tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png";
-
-const nikoGalleryHeroPanoramaImage = "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png";
-const nikoGalleryHeroSecondImage = "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg";
 
 const festivalIntroLead =
   "Этот проект посвящён музыке современников — произведениям, ставшим значимыми событиями нашего времени.";
@@ -56,6 +55,27 @@ type FestivalCutoutMockProps = {
   secondaryUseIndependentMotion?: boolean;
   secondaryUseIndependentPosition?: boolean;
 };
+
+type FloatingDividerDashProps = {
+  gap: any;
+  opacity: any;
+  shiftX: any;
+  width: any;
+};
+
+function FloatingDividerDash({ gap, opacity, shiftX, width }: FloatingDividerDashProps) {
+  return (
+    <motion.span
+      aria-hidden="true"
+      className="inline-flex overflow-hidden align-baseline text-black/22"
+      style={{ width, marginLeft: gap, marginRight: gap }}
+    >
+      <motion.span className="inline-block" style={{ opacity, x: shiftX }}>
+        —
+      </motion.span>
+    </motion.span>
+  );
+}
 
 function FestivalCutoutMock({
   align = "left",
@@ -227,7 +247,7 @@ function FestivalCutoutMock({
 
   return (
     <div
-      className={`flex ${align === "right" ? "justify-start lg:justify-end" : "justify-start"}`}
+      className={`mt-8 flex sm:mt-10 lg:mt-12 ${align === "right" ? "justify-start lg:justify-end" : "justify-start"}`}
     >
       <div
         ref={cutoutRef}
@@ -300,22 +320,57 @@ function FestivalCutoutMock({
 
 export function FestivalPage() {
   const festivalSectionRef = useRef<HTMLElement | null>(null);
-  const projectIntroBodyRef = useRef<HTMLDivElement | null>(null);
+  const projectIntroTextRef = useRef<HTMLDivElement | null>(null);
   const projectVisualRef = useRef<HTMLDivElement | null>(null);
   const projectMainWindowRef = useRef<HTMLDivElement | null>(null);
   const projectStripWindowRef = useRef<HTMLDivElement | null>(null);
   const ideaLabelRef = useRef<HTMLParagraphElement | null>(null);
-  const ideaTextBodyRef = useRef<HTMLDivElement | null>(null);
+  const ideaTextRef = useRef<HTMLDivElement | null>(null);
   const [projectFrameSize, setProjectFrameSize] = useState({ width: 0, height: 0 });
   const [projectMainWindowOffset, setProjectMainWindowOffset] = useState({ left: 0, top: 0 });
   const [projectStripWindowOffset, setProjectStripWindowOffset] = useState({ left: 0, top: 0 });
   const [projectVisualHeightPx, setProjectVisualHeightPx] = useState<number | null>(null);
   const [ideaFrameHeightPx, setIdeaFrameHeightPx] = useState<number | null>(null);
+  const [projectIdeaDividerTopPx, setProjectIdeaDividerTopPx] = useState<number | null>(null);
   const prefersReducedMotion = useReducedMotion();
   const { scrollYProgress: projectImageProgress } = useScroll({
     target: projectVisualRef,
     offset: ["start 88%", "end 18%"],
   });
+  const { scrollYProgress: projectIdeaDividerProgress } = useScroll({
+    target: festivalSectionRef,
+    offset: ["start 92%", "end 18%"],
+  });
+  const dividerDashOpacity = useTransform(
+    projectIdeaDividerProgress,
+    [0, 0.4, 1],
+    prefersReducedMotion ? [0.18, 0.18, 0.18] : [0.02, 0.12, 0.26],
+  );
+  const dividerDashWidth = useTransform(
+    projectIdeaDividerProgress,
+    [0, 0.4, 1],
+    prefersReducedMotion ? ["0.62em", "0.62em", "0.62em"] : ["0.05em", "0.24em", "0.68em"],
+  );
+  const dividerDashGap = useTransform(
+    projectIdeaDividerProgress,
+    [0, 0.4, 1],
+    prefersReducedMotion ? ["0.16em", "0.16em", "0.16em"] : ["-0.03em", "0.05em", "0.17em"],
+  );
+  const dividerDashShiftLeft = useTransform(
+    projectIdeaDividerProgress,
+    [0, 0.4, 1],
+    prefersReducedMotion ? ["0em", "0em", "0em"] : ["-0.18em", "-0.08em", "0em"],
+  );
+  const dividerDashShiftRight = useTransform(
+    projectIdeaDividerProgress,
+    [0, 0.4, 1],
+    prefersReducedMotion ? ["0em", "0em", "0em"] : ["0.18em", "0.08em", "0em"],
+  );
+  const dividerParallaxY = useTransform(
+    projectIdeaDividerProgress,
+    [0, 1],
+    prefersReducedMotion ? [0, 0] : [-10, 18],
+  );
   const projectImageX = useTransform(
     projectImageProgress,
     [0, 1],
@@ -360,7 +415,7 @@ export function FestivalPage() {
   const projectImageLayerWidth = projectFrameSize.width ? projectFrameSize.width * 1.7 : undefined;
 
   useEffect(() => {
-    const introTextElement = projectIntroBodyRef.current;
+    const introTextElement = projectIntroTextRef.current;
 
     if (!introTextElement) {
       return;
@@ -442,7 +497,7 @@ export function FestivalPage() {
 
   useEffect(() => {
     const ideaLabelElement = ideaLabelRef.current;
-    const ideaTextElement = ideaTextBodyRef.current;
+    const ideaTextElement = ideaTextRef.current;
 
     if (!ideaLabelElement || !ideaTextElement) {
       return;
@@ -483,29 +538,94 @@ export function FestivalPage() {
     };
   }, []);
 
+  useEffect(() => {
+    const sectionElement = festivalSectionRef.current;
+    const projectVisualElement = projectVisualRef.current;
+    const ideaLabelElement = ideaLabelRef.current;
+
+    if (!sectionElement || !projectVisualElement || !ideaLabelElement) {
+      return;
+    }
+
+    const updateDividerGeometry = () => {
+      const sectionRect = sectionElement.getBoundingClientRect();
+      const projectVisualRect = projectVisualElement.getBoundingClientRect();
+      const ideaLabelRect = ideaLabelElement.getBoundingClientRect();
+      const projectBottom = projectVisualRect.bottom - sectionRect.top;
+      const ideaTop = ideaLabelRect.top - sectionRect.top;
+      const nextTop = Math.round(projectBottom + (ideaTop - projectBottom) * 0.48);
+
+      setProjectIdeaDividerTopPx(nextTop);
+    };
+
+    updateDividerGeometry();
+
+    const resizeObserver =
+      typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => updateDividerGeometry()) : null;
+
+    resizeObserver?.observe(sectionElement);
+    resizeObserver?.observe(projectVisualElement);
+    resizeObserver?.observe(ideaLabelElement);
+    window.addEventListener("resize", updateDividerGeometry);
+
+    return () => {
+      resizeObserver?.disconnect();
+      window.removeEventListener("resize", updateDividerGeometry);
+    };
+  }, [projectVisualHeightPx, ideaFrameHeightPx]);
+
   return (
     <>
       <HomeHero />
 
       <section ref={festivalSectionRef} className="relative pb-20 pt-4 sm:pb-24 sm:pt-6">
+          <motion.div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 z-30 overflow-x-clip"
+          style={projectIdeaDividerTopPx ? { top: projectIdeaDividerTopPx, y: dividerParallaxY } : { y: dividerParallaxY }}
+        >
+          <div className="relative left-[-14vw] w-[148vw] overflow-hidden">
+            <p className="font-editorial-sans whitespace-nowrap text-[0.68rem] font-thin uppercase tracking-[0.22em] text-black/32 sm:text-[0.74rem] lg:text-[0.8rem]">
+              <span>КОМПОЗИТОРЫ XXI ВЕКА</span>
+              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
+              <span>МОСКВА</span>
+              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftRight} width={dividerDashWidth} />
+              <span>ГАЛЕРЕЯ НИКО</span>
+              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
+              <span>10–31 МАЯ</span>
+              <span className="mx-[1.5em] inline-block" />
+              <span>КОМПОЗИТОРЫ XXI ВЕКА</span>
+              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftRight} width={dividerDashWidth} />
+              <span>МОСКВА</span>
+              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
+              <span>ГАЛЕРЕЯ НИКО</span>
+              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftRight} width={dividerDashWidth} />
+              <span>10–31 МАЯ</span>
+              <span className="mx-[1.5em] inline-block" />
+              <span>КОМПОЗИТОРЫ XXI ВЕКА</span>
+              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
+              <span>МОСКВА</span>
+              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftRight} width={dividerDashWidth} />
+              <span>ГАЛЕРЕЯ НИКО</span>
+              <FloatingDividerDash gap={dividerDashGap} opacity={dividerDashOpacity} shiftX={dividerDashShiftLeft} width={dividerDashWidth} />
+              <span>10–31 МАЯ</span>
+            </p>
+          </div>
+        </motion.div>
+
         <PageContainer className="space-y-18 sm:space-y-24">
-          <div className="mx-auto grid max-w-6xl gap-8 pb-24 pt-5 sm:pb-28 sm:pt-6 lg:grid-cols-[720px_minmax(0,1fr)] lg:items-start lg:gap-12">
-            <div>
-              <p className={`${sideLabelClassName} mb-8 sm:mb-10 lg:mb-12`}>
-                о проекте
-              </p>
-              <div ref={projectIntroBodyRef} className={introTextClassName}>
-                <p>{festivalIntroLead}</p>
-                <p>{festivalIntroParagraphs[0]}</p>
-                {festivalIntroParagraphs.slice(1).map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
+          <div className="mx-auto grid max-w-6xl gap-8 pb-24 pt-5 sm:pb-28 sm:pt-6 lg:grid-cols-[720px_minmax(0,1fr)] lg:items-baseline lg:gap-12">
+            <div ref={projectIntroTextRef} className={introTextClassName}>
+              <p>{festivalIntroLead}</p>
+              <p>{festivalIntroParagraphs[0]}</p>
+              {festivalIntroParagraphs.slice(1).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
-            <div className="order-first hidden lg:order-none lg:block">
+            <div className="order-first lg:order-none">
               <div
                 ref={projectVisualRef}
-                className="relative h-[388px] sm:h-[466px] lg:h-[576px]"
+                className="relative mt-8 h-[388px] sm:mt-10 sm:h-[466px] lg:mt-2 lg:h-[576px]"
                 style={projectVisualHeightPx ? { height: `${projectVisualHeightPx}px` } : undefined}
               >
                 <div
@@ -513,7 +633,7 @@ export function FestivalPage() {
                 >
                   <div ref={projectMainWindowRef} className="absolute inset-0 overflow-hidden">
                     <motion.img
-                      src={nikoGalleryHeroSecondImage}
+                      src={nikoGalleryWideImage}
                       alt=""
                       aria-hidden="true"
                       className="absolute max-w-none will-change-transform"
@@ -525,7 +645,7 @@ export function FestivalPage() {
                         x: projectImageX,
                         scale: projectImageScale,
                         filter: projectImageFilter,
-                        objectPosition: "8% 68%",
+                        objectPosition: "54% 50%",
                         objectFit: "cover",
                         transformOrigin: "0 0",
                       }}
@@ -537,7 +657,7 @@ export function FestivalPage() {
                     style={{ clipPath: projectStripClipPath }}
                   >
                     <motion.img
-                      src={nikoGalleryHeroSecondImage}
+                      src={nikoGalleryWideImage}
                       alt=""
                       aria-hidden="true"
                       className="absolute max-w-none will-change-transform"
@@ -549,12 +669,17 @@ export function FestivalPage() {
                         x: projectImageX,
                         scale: projectImageScale,
                         filter: projectImageFilter,
-                        objectPosition: "8% 68%",
+                        objectPosition: "54% 50%",
                         objectFit: "cover",
                         transformOrigin: "0 0",
                       }}
                     />
                   </motion.div>
+                </div>
+                <div className="relative flex h-full items-start lg:justify-end">
+                  <p className={`${sideLabelClassName} ml-[16px] mt-[16px] text-left sm:ml-[22px] sm:mt-[22px] lg:ml-0 lg:mr-[-28px] lg:mt-[54px] lg:text-right`}>
+                    о проекте
+                  </p>
                 </div>
               </div>
             </div>
@@ -562,14 +687,17 @@ export function FestivalPage() {
 
           <div className="pb-10 pt-8 sm:pb-14">
             <div className="mx-auto grid max-w-6xl gap-10 sm:gap-12 lg:grid-cols-[minmax(320px,1fr)_720px] lg:items-start lg:gap-10 xl:gap-12">
-              <div className="hidden lg:flex lg:flex-col">
+              <div className="flex flex-col">
+                <p ref={ideaLabelRef} className={sideLabelClassName}>
+                  идея
+                </p>
                 <FestivalCutoutMock
                   frameClassName="-mt-[10px] h-[296px] w-[128%] max-w-none -ml-[10%] sm:-mt-[14px] sm:h-[372px] sm:w-[132%] sm:-ml-[14%] lg:-mt-[26px] lg:w-[132%] lg:-ml-[18vw] xl:w-[138%] xl:-ml-[16vw]"
                   frameStyle={ideaFrameHeightPx ? { height: `${ideaFrameHeightPx}px` } : undefined}
                   primaryWindowClassName="bottom-0 left-0 right-[26px] top-[20px] sm:right-[34px] sm:top-[24px] lg:right-[42px] lg:top-[30px]"
                   secondaryWindowClassName="right-[-6px] top-[10px] bottom-[14px] w-[12px] sm:right-[-8px] sm:top-[14px] sm:bottom-[18px] sm:w-[16px] lg:right-[-10px] lg:top-[18px] lg:bottom-[20px] lg:w-[18px]"
                   primaryImageSrc={nikoGalleryPianoDetailImage}
-                  primaryImagePosition="56% 68%"
+                  primaryImagePosition="56% 48%"
                   secondaryImageSrc={nikoGalleryPianoDetailImage}
                   primaryXRange={[-28, 36]}
                   secondaryRevealScaleXRange={[0, 1]}
@@ -577,41 +705,32 @@ export function FestivalPage() {
                 />
               </div>
 
-              <div className="lg:pl-[36px]">
-                <p ref={ideaLabelRef} className={`${sideLabelClassName} mb-8 sm:mb-10 lg:mb-12`}>
-                  идея
-                </p>
-                <div ref={ideaTextBodyRef} className={bodyTextClassName}>
-                  {projectParagraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
+              <div ref={ideaTextRef} className={`${bodyTextClassName} lg:pl-[36px]`}>
+                {projectParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="pt-8">
-            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[720px_minmax(0,1fr)] lg:items-start lg:gap-12">
-              <div className="order-2 lg:order-1">
-                <p className={`${sideLabelClassName} mb-8 sm:mb-10 lg:mb-12`}>
-                  пространство
-                </p>
-                <div className={bodyTextClassName}>
-                  {spaceParagraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
+          <div className="border-t border-black/10 pt-8">
+            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[720px_minmax(0,1fr)] lg:items-baseline lg:gap-12">
+              <div className={`${bodyTextClassName} order-2 lg:order-1`}>
+                {spaceParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
               </div>
 
-              <div className="order-1 hidden w-full flex-col lg:-mr-[28px] lg:order-2 lg:flex lg:items-end lg:text-right">
+              <div className="order-1 flex w-full flex-col lg:-mr-[28px] lg:order-2 lg:items-end lg:text-right">
+                <p className={`${sideLabelClassName} lg:pr-[0px]`}>пространство</p>
                 <FestivalCutoutMock
                   align="right"
                   frameClassName="-mt-[10px] h-[248px] w-full max-w-[360px] sm:-mt-[14px] sm:h-[292px] sm:max-w-[416px] lg:-mt-[26px] lg:h-[360px] lg:w-[468px] lg:max-w-none lg:-mr-[96px]"
                   primaryWindowClassName="bottom-[18px] left-[22px] right-0 top-[20px] sm:bottom-[22px] sm:left-[28px] sm:top-[24px] lg:bottom-[28px] lg:left-[28px] lg:right-0 lg:top-[30px]"
                   secondaryWindowClassName="bottom-[14px] left-[-6px] top-[34px] w-[12px] sm:bottom-[18px] sm:left-[-8px] sm:top-[42px] sm:w-[16px] lg:bottom-[20px] lg:left-[-10px] lg:top-[50px] lg:w-[18px]"
-                  primaryImageSrc={nikoGalleryHeroPanoramaImage}
-                  primaryImagePosition="46% 62%"
-                  secondaryImageSrc={nikoGalleryHeroPanoramaImage}
+                  primaryImageSrc={nikoGallerySkylightImage}
+                  primaryImagePosition="46% 50%"
+                  secondaryImageSrc={nikoGallerySkylightImage}
                   primaryXRange={[28, -36]}
                 />
               </div>

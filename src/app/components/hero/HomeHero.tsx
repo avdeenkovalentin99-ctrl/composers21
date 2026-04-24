@@ -747,7 +747,7 @@ export function HomeHero() {
             </div>
           </div>
 
-          <div className="pb-2 pt-8 sm:pb-3 sm:pt-10 lg:pt-12">
+          <div className="pb-20 pt-16 sm:pb-24 sm:pt-20 lg:pb-28 lg:pt-20">
             <div aria-hidden="true" className="flex w-full items-center gap-[10px]">
               <div className="h-px flex-1 bg-black" />
               <div className="flex items-center gap-[3px]">
