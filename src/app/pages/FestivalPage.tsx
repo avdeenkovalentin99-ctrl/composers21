@@ -501,7 +501,7 @@ export function FestivalPage() {
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
-              <div className="hidden md:block lg:hidden">
+              <div className="hidden">
                 <div className="relative ml-auto mt-12 h-[320px] w-[78%] max-w-[520px]">
                   <div className="pointer-events-none absolute bottom-[38px] left-[6%] right-0 top-[58px]">
                     <div className="absolute inset-0 overflow-hidden">
@@ -596,7 +596,7 @@ export function FestivalPage() {
 
           <div className="pb-10 pt-8 sm:pb-14 md:px-4 lg:px-0">
             <div className="mx-auto grid max-w-6xl gap-10 sm:gap-12 lg:grid-cols-[minmax(260px,1fr)_minmax(0,520px)] lg:items-start lg:gap-8 xl:grid-cols-[minmax(320px,1fr)_720px] xl:gap-12">
-              <div className="hidden md:block lg:hidden">
+              <div className="hidden">
                 <FestivalCutoutMock
                   frameClassName="-mt-[8px] h-[300px] w-[78%] max-w-[500px] -ml-[2%]"
                   primaryWindowClassName="bottom-0 left-0 right-[26px] top-[18px]"
@@ -648,7 +648,7 @@ export function FestivalPage() {
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
-                <div className="hidden md:block lg:hidden">
+                <div className="hidden">
                   <FestivalCutoutMock
                     align="right"
                     frameClassName="-mt-[8px] ml-auto mt-12 h-[468px] w-[92%] max-w-[680px]"
