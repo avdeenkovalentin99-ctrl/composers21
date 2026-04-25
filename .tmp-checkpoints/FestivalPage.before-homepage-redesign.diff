@@ -1,0 +1,164 @@
+﻿diff --git a/src/app/pages/FestivalPage.tsx b/src/app/pages/FestivalPage.tsx
+index 1f3bcf1..b285f9f 100644
+--- a/src/app/pages/FestivalPage.tsx
++++ b/src/app/pages/FestivalPage.tsx
+@@ -48,8 +48,10 @@ type FestivalCutoutMockProps = {
+   primaryImagePosition?: string;
+   secondaryImagePosition?: string;
+   primaryXRange?: [number, number];
++  primaryScaleRange?: [number, number];
+   secondaryXRange?: [number, number];
+   secondaryYRange?: [number, number];
++  secondaryScaleRange?: [number, number];
+   secondaryRevealScaleXRange?: [number, number];
+   secondaryRevealOrigin?: "left" | "right";
+   smoothMotion?: boolean;
+@@ -68,8 +70,10 @@ function FestivalCutoutMock({
+   primaryImagePosition = "50% 50%",
+   secondaryImagePosition = "50% 50%",
+   primaryXRange = [-32, 28],
++  primaryScaleRange = [1.28, 1.18],
+   secondaryXRange = [22, -18],
+   secondaryYRange = [0, 0],
++  secondaryScaleRange = [1.3, 1.2],
+   secondaryRevealScaleXRange = [1, 1],
+   secondaryRevealOrigin = "left",
+   smoothMotion = false,
+@@ -180,12 +184,12 @@ function FestivalCutoutMock({
+   const primaryScale = useTransform(
+     scrollYProgress,
+     [0, 1],
+-    prefersReducedMotion ? [1.22, 1.22] : [1.28, 1.18],
++    prefersReducedMotion ? [primaryScaleRange[1], primaryScaleRange[1]] : primaryScaleRange,
+   );
+   const secondaryScale = useTransform(
+     scrollYProgress,
+     [0, 1],
+-    prefersReducedMotion ? [1.24, 1.24] : [1.3, 1.2],
++    prefersReducedMotion ? [secondaryScaleRange[1], secondaryScaleRange[1]] : secondaryScaleRange,
+   );
+   const grayscale = useTransform(
+     scrollYProgress,
+@@ -311,6 +315,7 @@ export function FestivalPage() {
+   const [projectStripWindowOffset, setProjectStripWindowOffset] = useState({ left: 0, top: 0 });
+   const [projectVisualHeightPx, setProjectVisualHeightPx] = useState<number | null>(null);
+   const [ideaFrameHeightPx, setIdeaFrameHeightPx] = useState<number | null>(null);
++  const [isDesktopWideLayout, setIsDesktopWideLayout] = useState(false);
+   const prefersReducedMotion = useReducedMotion();
+   const { scrollYProgress: projectImageProgress } = useScroll({
+     target: projectVisualRef,
+@@ -359,6 +364,21 @@ export function FestivalPage() {
+   const projectImageFilter = useMotionTemplate`grayscale(${projectImageGrayscale}) saturate(${projectImageSaturate}) brightness(${projectImageBrightness}) contrast(${projectImageContrast})`;
+   const projectImageLayerWidth = projectFrameSize.width ? projectFrameSize.width * 1.7 : undefined;
+ 
++  useEffect(() => {
++    const desktopWideBreakpointPx = 1280;
++
++    const updateLayoutMode = () => {
++      setIsDesktopWideLayout(window.innerWidth >= desktopWideBreakpointPx);
++    };
++
++    updateLayoutMode();
++    window.addEventListener("resize", updateLayoutMode);
++
++    return () => {
++      window.removeEventListener("resize", updateLayoutMode);
++    };
++  }, []);
++
+   useEffect(() => {
+     const introTextElement = projectIntroBodyRef.current;
+ 
+@@ -489,7 +509,7 @@ export function FestivalPage() {
+ 
+       <section ref={festivalSectionRef} className="relative pb-20 pt-4 sm:pb-24 sm:pt-6">
+         <PageContainer className="space-y-18 sm:space-y-24">
+-          <div className="mx-auto grid max-w-6xl gap-8 pb-24 pt-5 sm:pb-28 sm:pt-6 md:px-4 lg:grid-cols-[minmax(0,520px)_minmax(280px,1fr)] lg:items-start lg:gap-8 lg:px-0 xl:grid-cols-[720px_minmax(0,1fr)] xl:gap-12">
++          <div className="mx-auto grid max-w-6xl gap-8 pb-24 pt-5 sm:pb-28 sm:pt-6 md:px-4 lg:grid-cols-[minmax(0,65fr)_minmax(0,35fr)] lg:items-start lg:gap-10 lg:px-0 xl:grid-cols-[720px_minmax(0,1fr)] xl:gap-12">
+             <div>
+               <p className={`${sideLabelClassName} mb-8 sm:mb-10 lg:mb-12`}>
+                 о проекте
+@@ -539,11 +559,11 @@ export function FestivalPage() {
+             <div className="order-first hidden lg:order-none lg:block">
+               <div
+                 ref={projectVisualRef}
+-                className="relative h-[388px] sm:h-[466px] lg:h-[520px] xl:h-[576px]"
++                className="relative h-[388px] sm:h-[466px] lg:h-[420px] xl:h-[576px]"
+                 style={projectVisualHeightPx ? { height: `${projectVisualHeightPx}px` } : undefined}
+               >
+                 <div
+-                  className="pointer-events-none absolute bottom-[52px] left-[8%] right-[-1.25rem] top-[78px] sm:bottom-[60px] sm:left-[10%] sm:right-[-2rem] sm:top-[96px] lg:bottom-[56px] lg:left-[8%] lg:right-[-2rem] lg:top-[92px] xl:bottom-[68px] xl:left-[10%] xl:right-[clamp(-6rem,calc((1248px-100vw)/2),0px)] xl:top-[118px]"
++                  className="pointer-events-none absolute bottom-[52px] left-[8%] right-[-1.25rem] top-[78px] sm:bottom-[60px] sm:left-[10%] sm:right-[-2rem] sm:top-[96px] lg:bottom-[42px] lg:left-[6%] lg:right-[-0.25rem] lg:top-[74px] xl:bottom-[68px] xl:left-[10%] xl:right-[clamp(-6rem,calc((1248px-100vw)/2),0px)] xl:top-[118px]"
+                 >
+                   <div ref={projectMainWindowRef} className="absolute inset-0 overflow-hidden">
+                     <motion.img
+@@ -567,7 +587,7 @@ export function FestivalPage() {
+                   </div>
+                   <motion.div
+                     ref={projectStripWindowRef}
+-                    className="absolute bottom-[-28px] right-[calc(100%+0.375rem)] top-[44px] w-[12px] overflow-hidden sm:bottom-[-30px] sm:right-[calc(100%+0.5rem)] sm:top-[54px] sm:w-[16px] lg:bottom-[-28px] lg:right-[calc(100%+0.5rem)] lg:top-[48px] lg:w-[16px] xl:bottom-[-34px] xl:right-[calc(100%+0.625rem)] xl:top-[62px] xl:w-[18px]"
++                    className="absolute bottom-[-28px] right-[calc(100%+0.375rem)] top-[44px] w-[12px] overflow-hidden sm:bottom-[-30px] sm:right-[calc(100%+0.5rem)] sm:top-[54px] sm:w-[16px] lg:bottom-[-18px] lg:right-[calc(100%+0.35rem)] lg:top-[36px] lg:w-[12px] xl:bottom-[-34px] xl:right-[calc(100%+0.625rem)] xl:top-[62px] xl:w-[18px]"
+                     style={{ clipPath: projectStripClipPath }}
+                   >
+                     <motion.img
+@@ -595,7 +615,7 @@ export function FestivalPage() {
+           </div>
+ 
+           <div className="pb-10 pt-8 sm:pb-14 md:px-4 lg:px-0">
+-            <div className="mx-auto grid max-w-6xl gap-10 sm:gap-12 lg:grid-cols-[minmax(260px,1fr)_minmax(0,520px)] lg:items-start lg:gap-8 xl:grid-cols-[minmax(320px,1fr)_720px] xl:gap-12">
++            <div className="mx-auto grid max-w-6xl gap-10 sm:gap-12 lg:grid-cols-[minmax(0,35fr)_minmax(0,65fr)] lg:items-start lg:gap-10 xl:grid-cols-[minmax(320px,1fr)_720px] xl:gap-12">
+               <div className="hidden">
+                 <FestivalCutoutMock
+                   frameClassName="-mt-[8px] h-[300px] w-[78%] max-w-[500px] -ml-[2%]"
+@@ -611,20 +631,23 @@ export function FestivalPage() {
+               </div>
+               <div className="hidden lg:flex lg:flex-col">
+                 <FestivalCutoutMock
+-                  frameClassName="-mt-[10px] h-[296px] w-[128%] max-w-none -ml-[10%] sm:-mt-[14px] sm:h-[372px] sm:w-[132%] sm:-ml-[14%] lg:-mt-[18px] lg:w-[112%] lg:-ml-[6vw] xl:-mt-[26px] xl:w-[138%] xl:-ml-[16vw]"
++                  frameClassName="-mt-[10px] h-[296px] w-[128%] max-w-none -ml-[10%] sm:-mt-[14px] sm:h-[372px] sm:w-[132%] sm:-ml-[14%] lg:-mt-[10px] lg:h-[318px] lg:w-[100%] lg:-ml-[1vw] xl:-mt-[26px] xl:w-[138%] xl:-ml-[16vw]"
+                   frameStyle={ideaFrameHeightPx ? { height: `${ideaFrameHeightPx}px` } : undefined}
+-                  primaryWindowClassName="bottom-0 left-0 right-[26px] top-[20px] sm:right-[34px] sm:top-[24px] lg:right-[42px] lg:top-[30px]"
+-                  secondaryWindowClassName="right-[-6px] top-[10px] bottom-[14px] w-[12px] sm:right-[-8px] sm:top-[14px] sm:bottom-[18px] sm:w-[16px] lg:right-[-10px] lg:top-[18px] lg:bottom-[20px] lg:w-[18px]"
++                  primaryWindowClassName="bottom-0 left-0 right-[26px] top-[20px] sm:right-[34px] sm:top-[24px] lg:right-[28px] lg:top-[20px] xl:right-[42px] xl:top-[30px]"
++                  secondaryWindowClassName="right-[-6px] top-[10px] bottom-[14px] w-[12px] sm:right-[-8px] sm:top-[14px] sm:bottom-[18px] sm:w-[16px] lg:right-[-6px] lg:top-[12px] lg:bottom-[14px] lg:w-[12px] xl:right-[-10px] xl:top-[18px] xl:bottom-[20px] xl:w-[18px]"
+                   primaryImageSrc={nikoGalleryPianoDetailImage}
+                   primaryImagePosition="56% 68%"
+                   secondaryImageSrc={nikoGalleryPianoDetailImage}
+-                  primaryXRange={[-28, 36]}
+-                  secondaryRevealScaleXRange={[0, 1]}
++                  primaryXRange={isDesktopWideLayout ? [-28, 36] : [0, 0]}
++                  primaryScaleRange={isDesktopWideLayout ? [1.28, 1.18] : [1.18, 1.18]}
++                  secondaryXRange={isDesktopWideLayout ? [22, -18] : [0, 0]}
++                  secondaryScaleRange={isDesktopWideLayout ? [1.3, 1.2] : [1.18, 1.18]}
++                  secondaryRevealScaleXRange={isDesktopWideLayout ? [0, 1] : [1, 1]}
+                   secondaryRevealOrigin="left"
+                 />
+               </div>
+ 
+-              <div className="lg:pl-[16px] xl:pl-[36px]">
++              <div className="lg:pl-[12px] xl:pl-[36px]">
+                 <p ref={ideaLabelRef} className={`${sideLabelClassName} mb-8 sm:mb-10 lg:mb-12`}>
+                   идея
+                 </p>
+@@ -638,7 +661,7 @@ export function FestivalPage() {
+           </div>
+ 
+           <div className="pt-8 md:px-4 lg:px-0">
+-            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,500px)_minmax(320px,1fr)] lg:items-start lg:gap-8 xl:grid-cols-[720px_minmax(0,1fr)] xl:gap-12">
++            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,65fr)_minmax(0,35fr)] lg:items-start lg:gap-10 xl:grid-cols-[720px_minmax(0,1fr)] xl:gap-12">
+               <div className="order-2 lg:order-1">
+                 <p className={`${sideLabelClassName} mb-8 sm:mb-10 lg:mb-12`}>
+                   пространство
+@@ -665,9 +688,9 @@ export function FestivalPage() {
+               <div className="order-1 hidden w-full flex-col lg:order-2 lg:flex lg:items-end lg:text-right xl:-mr-[28px]">
+                 <FestivalCutoutMock
+                   align="right"
+-                  frameClassName="-mt-[10px] h-[248px] w-full max-w-[360px] sm:-mt-[14px] sm:h-[292px] sm:max-w-[416px] lg:-mt-[18px] lg:h-[360px] lg:w-[420px] lg:max-w-none lg:-mr-[12px] xl:-mt-[26px] xl:h-[360px] xl:w-[468px] xl:-mr-[96px]"
+-                  primaryWindowClassName="bottom-[18px] left-[22px] right-0 top-[20px] sm:bottom-[22px] sm:left-[28px] sm:top-[24px] lg:bottom-[28px] lg:left-[28px] lg:right-0 lg:top-[30px]"
+-                  secondaryWindowClassName="bottom-[14px] left-[-6px] top-[34px] w-[12px] sm:bottom-[18px] sm:left-[-8px] sm:top-[42px] sm:w-[16px] lg:bottom-[20px] lg:left-[-10px] lg:top-[50px] lg:w-[18px]"
++                  frameClassName="-mt-[10px] h-[248px] w-full max-w-[360px] sm:-mt-[14px] sm:h-[292px] sm:max-w-[416px] lg:-mt-[10px] lg:h-[316px] lg:w-[332px] lg:max-w-none lg:-mr-[4px] xl:-mt-[26px] xl:h-[360px] xl:w-[468px] xl:-mr-[96px]"
++                  primaryWindowClassName="bottom-[18px] left-[22px] right-0 top-[20px] sm:bottom-[22px] sm:left-[28px] sm:top-[24px] lg:bottom-[18px] lg:left-[18px] lg:right-0 lg:top-[18px] xl:bottom-[28px] xl:left-[28px] xl:right-0 xl:top-[30px]"
++                  secondaryWindowClassName="bottom-[14px] left-[-6px] top-[34px] w-[12px] sm:bottom-[18px] sm:left-[-8px] sm:top-[42px] sm:w-[16px] lg:bottom-[14px] lg:left-[-6px] lg:top-[28px] lg:w-[12px] xl:bottom-[20px] xl:left-[-10px] xl:top-[50px] xl:w-[18px]"
+                   primaryImageSrc={nikoGalleryHeroPanoramaImage}
+                   primaryImagePosition="46% 62%"
+                   secondaryImageSrc={nikoGalleryHeroPanoramaImage}
