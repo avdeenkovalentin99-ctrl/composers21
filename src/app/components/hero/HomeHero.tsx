@@ -42,6 +42,7 @@ const specialGuestPoster = {
   image: "/assets/external/heroafisha/BerezovkiBedited.webp",
   link: undefined,
 };
+const concertStartTime = "19:30";
 
 const initialHeroPosterId = "2026-05-27-desyatnikov-love-and-life";
 
@@ -148,6 +149,7 @@ export function HomeHero() {
     const desiredOrderIds = [
       "2026-05-27-desyatnikov-love-and-life",
       "special-guest-boris-berezovsky",
+      "2026-05-21-petr-glavatskikh",
       "2026-05-20-opensoundorchestra",
       "2026-05-10-peletcis-24-kaprisa",
       "2026-05-28-brezel-melodiya",
@@ -461,6 +463,8 @@ export function HomeHero() {
                     transformOrigin: isOpenSoundQuartetPoster ? "center center" : undefined,
                     filter: isGuestPoster
                       ? "none"
+                      : isPelecisPoster
+                        ? "grayscale(1) brightness(1.02) contrast(1.04)"
                       : isGromcheSlovaPoster
                         ? "none"
                       : isVIschezayushemGorodePoster
@@ -483,7 +487,7 @@ export function HomeHero() {
                         mixBlendMode: "soft-light",
                       }}
                     />
-                    {isPelecisPoster ? (
+                    {isPelecisPoster ? null : (
                       <>
                         <div
                           className="absolute inset-0"
@@ -504,7 +508,7 @@ export function HomeHero() {
                           }}
                         />
                       </>
-                    ) : null}
+                    )}
                   </>
                 ) : null}
 
@@ -514,10 +518,10 @@ export function HomeHero() {
                 >
                   <div className="flex items-start justify-end">
                     {isConcertPoster ? (
-                      <span className="relative mr-0 inline-flex items-center px-2 py-0">
+                      <span className="relative mr-0 inline-flex translate-x-3 items-center px-2 py-0">
                         <span aria-hidden="true" className="absolute inset-y-0 -left-2 -right-12 bg-white" />
                         <span className="font-editorial-sans relative text-[0.64rem] font-light uppercase tracking-[0.24em] text-[#1a1a1a] sm:text-[0.72rem]">
-                          {activePoster.date}
+                          {activePoster.date} / {concertStartTime}
                         </span>
                       </span>
                     ) : (
