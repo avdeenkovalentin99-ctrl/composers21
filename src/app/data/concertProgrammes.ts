@@ -8,7 +8,7 @@ export const concertProgrammes: ConcertProgrammeItem[] = [
     description: "Посвящение М. Новикову. Максим Новиков (альт), Алексей Лундин (скрипка).",
     programme: ["Георг Пелецис. 24 Каприса"],
     performers: ["Максим Новиков (альт)", "Алексей Лундин (скрипка)"],
-    image: "/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.webp",
+    image: "/assets/external/heroafisha/LundinNovikov.webp",
     ticketLink: "https://nikoartgallery.com/afisha/maksim-novikov-alt-peletsis-/",
   },
   {
