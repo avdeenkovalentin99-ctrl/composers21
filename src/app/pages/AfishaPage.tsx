@@ -6,6 +6,7 @@ import { PageContainer } from "../layout/PageContainer";
 
 type EventItem = (typeof concertProgrammes)[number];
 
+const concertStartTime = "19:30";
 const weekdayFormatter = new Intl.DateTimeFormat("ru-RU", { weekday: "short" });
 const monthFormatter = new Intl.DateTimeFormat("ru-RU", { month: "short" });
 
@@ -38,9 +39,14 @@ function EventAccordion({
       <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">
         <div className="relative shrink-0 md:w-[100px]">
           <div className="pr-6 md:pr-8">
-            <p className="font-editorial-serif text-3xl font-normal tracking-[-0.04em] text-neutral-900 sm:text-4xl">
-              {dateParts.dayNumber}
-            </p>
+            <div className="flex items-start justify-between gap-2">
+              <p className="font-editorial-serif text-3xl font-normal tracking-[-0.04em] text-neutral-900 sm:text-4xl">
+                {dateParts.dayNumber}
+              </p>
+              <p className="font-editorial-sans pt-1 translate-x-3 text-[0.7rem] uppercase tracking-[0.14em] text-neutral-500 sm:text-xs">
+                {concertStartTime}
+              </p>
+            </div>
             <p className="font-editorial-sans mt-2 text-xs uppercase tracking-[0.14em] text-neutral-500">
               {dateParts.weekday} / {dateParts.month}
             </p>
@@ -93,6 +99,11 @@ function EventAccordion({
 
           {isOpen ? (
             <div className="mt-6 border-t border-black/10 pt-6 md:mt-7 md:pt-7">
+              <div className="mb-5 flex justify-end md:mb-6">
+                <p className="font-editorial-sans text-[0.7rem] uppercase tracking-[0.14em] text-neutral-500 sm:text-xs">
+                  {concertStartTime}
+                </p>
+              </div>
               <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_340px] xl:gap-x-10">
                 <div className="grid gap-8 md:grid-cols-2 md:gap-x-10">
                   <div>
