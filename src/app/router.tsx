@@ -6,7 +6,7 @@ import { SiteHeader } from "./layout/SiteHeader";
 import {
   initializeYandexMetrika,
   isYandexMetrikaEnabled,
-  reachYandexMetrikaGoal,
+  sendMetrikaGoal,
   trackYandexMetrikaPageView,
 } from "./utils/yandexMetrika";
 import { AboutFestivalPage } from "./pages/AboutFestivalPage";
@@ -100,7 +100,7 @@ function RootLayout() {
 
     const pageGoal = PAGE_GOAL_BY_PATHNAME[location.pathname];
     if (pageGoal) {
-      reachYandexMetrikaGoal(pageGoal);
+      sendMetrikaGoal(pageGoal);
     }
   }, [location.hash, location.pathname, location.search]);
 

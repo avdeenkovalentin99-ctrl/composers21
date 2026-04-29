@@ -5,7 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { concertProgrammes } from "../data/site";
 import { PageContainer } from "../layout/PageContainer";
 import { resolvePublicAssetPath } from "../utils/assets";
-import { reachYandexMetrikaGoal } from "../utils/yandexMetrika";
+import { sendMetrikaGoal } from "../utils/yandexMetrika";
 
 type EventItem = (typeof concertProgrammes)[number];
 
@@ -82,7 +82,7 @@ function EventAccordion({
   }, [event.id]);
 
   function handleTicketClick() {
-    reachYandexMetrikaGoal("niko_ticket_click", {
+    sendMetrikaGoal("niko_ticket_click", {
       concertId: event.id,
       concertTitle: event.title,
       destination: event.ticketLink,
@@ -280,7 +280,7 @@ export function AfishaPage() {
     }
 
     lastTrackedConcertGoalRef.current = targetEventKey;
-    reachYandexMetrikaGoal("afisha_concert_view", {
+    sendMetrikaGoal("afisha_concert_view", {
       concertId: concert.id,
       concertQueryKey: queryKey,
       concertTitle: concert.title,

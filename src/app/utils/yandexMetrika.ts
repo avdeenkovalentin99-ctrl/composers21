@@ -13,7 +13,7 @@ declare global {
   }
 }
 
-const METRIKA_SCRIPT_SRC = "https://mc.yandex.ru/metrika/tag.js";
+const METRIKA_SCRIPT_BASE_SRC = "https://mc.yandex.ru/metrika/tag.js";
 const METRIKA_SCRIPT_ID = "yandex-metrika-tag";
 const METRIKA_ID = Number(import.meta.env.VITE_YANDEX_METRIKA_ID);
 
@@ -23,7 +23,7 @@ function getMetrikaId() {
   return Number.isInteger(METRIKA_ID) && METRIKA_ID > 0 ? METRIKA_ID : null;
 }
 
-function ensureYmBootstrap() {
+function ensureYmBootstrap(metrikaId: number) {
   if (typeof window === "undefined" || typeof document === "undefined") {
     return null;
   }
@@ -41,7 +41,7 @@ function ensureYmBootstrap() {
     const script = document.createElement("script");
     script.id = METRIKA_SCRIPT_ID;
     script.async = true;
-    script.src = METRIKA_SCRIPT_SRC;
+    script.src = `${METRIKA_SCRIPT_BASE_SRC}?id=${metrikaId}`;
     document.head.appendChild(script);
   }
 
@@ -55,7 +55,7 @@ export function initializeYandexMetrika() {
     return false;
   }
 
-  const ym = ensureYmBootstrap();
+  const ym = ensureYmBootstrap(metrikaId);
 
   if (!ym) {
     return false;
@@ -74,32 +74,41 @@ export function initializeYandexMetrika() {
   return true;
 }
 
-export function trackYandexMetrikaPageView(url = window.location.href) {
+export function trackYandexMetrikaPageView(url?: string) {
   const metrikaId = getMetrikaId();
 
-  if (metrikaId === null || typeof window === "undefined" || !window.ym) {
+  initializeYandexMetrika();
+
+  const ym = metrikaId === null ? null : ensureYmBootstrap(metrikaId);
+
+  if (metrikaId === null || typeof window === "undefined" || typeof document === "undefined" || !ym) {
     return;
   }
 
-  window.ym(metrikaId, "hit", url, {
+  ym(metrikaId, "hit", url ?? window.location.href, {
     title: document.title,
     referer: document.referrer,
   });
 }
 
-export function reachYandexMetrikaGoal(goal: string, params?: Record<string, unknown>) {
+export function sendMetrikaGoal(goalId: string, params?: Record<string, unknown>) {
   const metrikaId = getMetrikaId();
 
-  if (metrikaId === null || typeof window === "undefined" || !window.ym) {
-    return;
+  initializeYandexMetrika();
+
+  const ym = metrikaId === null ? null : ensureYmBootstrap(metrikaId);
+
+  if (metrikaId === null || !ym) {
+    return false;
   }
 
   if (params) {
-    window.ym(metrikaId, "reachGoal", goal, params);
-    return;
+    ym(metrikaId, "reachGoal", goalId, params);
+    return true;
   }
 
-  window.ym(metrikaId, "reachGoal", goal);
+  ym(metrikaId, "reachGoal", goalId);
+  return true;
 }
 
 export function isYandexMetrikaEnabled() {
