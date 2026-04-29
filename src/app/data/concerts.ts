@@ -1,7 +1,8 @@
 import type { ConcertItem } from "./types";
 import { concertProgrammes } from "./concertProgrammes";
+import { resolvePublicAssetPath } from "../utils/assets";
 
-const concertPosterPlaceholder = "/assets/external/heroafisha/chamberconcerthero.webp";
+const concertPosterPlaceholder = resolvePublicAssetPath("/assets/external/heroafisha/chamberconcerthero.webp");
 
 export const concerts: ConcertItem[] = concertProgrammes.map((concert, index) => ({
   id: concert.id,
@@ -9,7 +10,7 @@ export const concerts: ConcertItem[] = concertProgrammes.map((concert, index) =>
   date: concert.date,
   title: concert.title,
   description: concert.description,
-  image: concert.image || concertPosterPlaceholder,
+  image: concert.image ? resolvePublicAssetPath(concert.image) : concertPosterPlaceholder,
   link: concert.ticketLink,
 }));
 
