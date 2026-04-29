@@ -6,6 +6,7 @@ import festivalBottomWord from "/festlogo-bottomword.svg";
 import festivalTopWord from "/festlogo-topword.svg";
 import { orderedConcerts } from "../../data/site";
 import { PageContainer } from "../../layout/PageContainer";
+import { resolvePublicAssetPath } from "../../utils/assets";
 import { HeroConcertSelector } from "./HeroConcertSelector";
 import { HeroDesktopLoadingOverlay, useHeroLoadingTransition } from "./HeroLoadingTransition";
 
@@ -39,7 +40,7 @@ const specialGuestPoster = {
   date: "",
   title: "\u0411\u043e\u0440\u0438\u0441 \u0411\u0435\u0440\u0435\u0437\u043e\u0432\u0441\u043a\u0438\u0439",
   description: "\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0433\u043e\u0441\u0442\u044c",
-  image: "/assets/external/heroafisha/BerezovkiBedited.webp",
+  image: resolvePublicAssetPath("/assets/external/heroafisha/BerezovkiBedited.webp"),
   link: undefined,
 };
 const concertStartTime = "19:30";
@@ -344,7 +345,7 @@ export function HomeHero() {
           logo={<HeroLogoMark tone="light" />}
         />
 
-        <PageContainer className="relative z-10 py-6 sm:py-10 lg:py-12">
+        <PageContainer className="relative z-10 pt-6 pb-2 sm:pt-10 sm:pb-3 lg:pt-12 lg:pb-4">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(420px,0.95fr)] lg:gap-14">
             <div className="flex flex-col lg:min-h-[660px]">
               <div className="pointer-events-none relative flex items-start justify-start overflow-hidden -mt-10 lg:-mt-12 lg:flex-1">
@@ -449,7 +450,7 @@ export function HomeHero() {
                   ].join(" ")}
                 >
                 <img
-                  src={activePoster.image}
+                  src={resolvePublicAssetPath(activePoster.image)}
                   alt={activePoster.title}
                   className="absolute inset-0 h-full w-full object-cover"
                   style={{
@@ -751,15 +752,15 @@ export function HomeHero() {
             </div>
           </div>
 
-          <div className="pb-20 pt-16 sm:pb-24 sm:pt-20 lg:pb-28 lg:pt-20">
+          <div className="pb-6 pt-8 sm:pb-8 sm:pt-10 lg:pb-10 lg:pt-10">
             <div aria-hidden="true" className="flex w-full items-center gap-[10px]">
-              <div className="h-px flex-1 bg-black" />
+              <div className="h-px flex-1 bg-[rgba(24,24,24,0.1)]" />
               <div className="flex items-center gap-[3px]">
-                <div className="h-3 w-px bg-black" />
-                <div className="h-3 w-px bg-black" />
-                <div className="h-3 w-px bg-black" />
+                <div className="h-3 w-px bg-[rgba(24,24,24,0.1)]" />
+                <div className="h-3 w-px bg-[rgba(24,24,24,0.1)]" />
+                <div className="h-3 w-px bg-[rgba(24,24,24,0.1)]" />
               </div>
-              <div className="h-px flex-1 bg-black" />
+              <div className="h-px flex-1 bg-[rgba(24,24,24,0.1)]" />
             </div>
           </div>
         </PageContainer>

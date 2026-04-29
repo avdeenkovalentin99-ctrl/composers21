@@ -1,4 +1,4 @@
-﻿branch: homepage-redesign
+branch: homepage-redesign
 head: 7107cf5
 created: 2026-04-25T14:07:58
 files: src/app/pages/FestivalPage.tsx
