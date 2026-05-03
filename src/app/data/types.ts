@@ -49,6 +49,7 @@ export type PersonItem = {
 };
 
 export type PartnerItem = {
+  tier: "general" | "media" | "partner";
   role: string;
   name: string;
   description: string;

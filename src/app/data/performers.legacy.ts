@@ -46,10 +46,10 @@ export const performers: PersonItem[] = [
     link: "https://21centcomposers.ru/info/2ci5ibo0z1-horovoi-ansambl-melodiya",
   },
   {
-    name: "Ile Theleme Ensemble",
+    name: "Île Thélème Ensemble",
     slug: "jsspbiezo1-le-thlme-ensemble",
     description: "Содружество музыкантов, которым подвластны камерные жанры и искусство импровизации.",
-    image: "/assets/external/1ce0f2e5_-5451686574358728414.jpg",
+    image: "/assets/external/ile-theleme-ensemble-main.jpg",
     link: "https://21centcomposers.ru/info/jsspbiezo1-le-thlme-ensemble",
   },
   {

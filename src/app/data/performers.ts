@@ -2,12 +2,20 @@ import { generatedPerformers, type GeneratedParticipant } from "./participants.g
 import { getParticipantImage } from "./images";
 import { performers as legacyPerformers } from "./performers.legacy";
 import type { PersonItem } from "./types";
+import { resolvePublicAssetPath } from "../utils/assets";
+
+function resolveParticipantImage(image: string) {
+  return image ? resolvePublicAssetPath(image) : "";
+}
 
 function mergeBySlug(legacyList: PersonItem[], generatedList: GeneratedParticipant[]) {
   const merged = new Map<string, PersonItem>();
 
   for (const item of legacyList) {
-    merged.set(item.slug, item);
+    merged.set(item.slug, {
+      ...item,
+      image: resolveParticipantImage(item.image),
+    });
   }
 
   for (const item of generatedList) {
@@ -18,7 +26,7 @@ function mergeBySlug(legacyList: PersonItem[], generatedList: GeneratedParticipa
       name: item.name || existing?.name || "",
       role: item.role || existing?.role,
       description: item.description || existing?.description || "",
-      image: generatedImage || existing?.image || "",
+      image: resolveParticipantImage(generatedImage || existing?.image || ""),
       link: item.link || existing?.link || "",
     });
   }

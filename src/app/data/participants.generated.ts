@@ -238,6 +238,15 @@ export const generatedComposers: GeneratedParticipant[] = [
     link: "https://21centcomposers.ru/persons/gi3ty9zkm1-mihail-tarbagaev",
   },
   {
+    name: "Миляуша Хайруллина",
+    slug: "milyausha-khayrullina",
+    role: "composer",
+    description: "Композитор и пианистка, автор оперной, симфонической, хоровой, камерно-инструментальной, вокальной и театральной музыки.",
+    photo: "",
+    image: "/assets/external/heroafisha/milyausha-khayrullina.jpg",
+    link: "",
+  },
+  {
     name: "Настасья Хрущёва",
     slug: "nastasya-khrushcheva",
     role: "composer",
@@ -574,6 +583,15 @@ export const generatedPerformers: GeneratedParticipant[] = [
     link: "https://21centcomposers.ru/natalia-sokolovskaya",
   },
   {
+    name: "Миляуша Хайруллина",
+    slug: "milyausha-khayrullina",
+    role: "soloist",
+    description: "Пианистка и композитор, выпускница Казанской государственной консерватории имени Н. Г. Жиганова.",
+    photo: "",
+    image: "/assets/external/heroafisha/milyausha-khayrullina.jpg",
+    link: "",
+  },
+  {
     name: "Ольга Демина",
     slug: "olga-demina",
     role: "soloist",
@@ -712,9 +730,9 @@ export const generatedPerformers: GeneratedParticipant[] = [
     name: "Île Thélème Ensemble",
     slug: "jsspbiezo1-le-thlme-ensemble",
     role: "ensemble",
-    description: "Содружество музыкантов, которым подвластны все жанры и стили камерной музыки и искусство импровизации.",
+    description: "Île Thélème Ensemble — это содружество музыкантов, которым подвластны все форматы и стили камерной музыки.",
     photo: "",
-    image: "/assets/external/1ce0f2e5_-5451686574358728414.jpg",
+    image: "/assets/external/ile-theleme-ensemble-main.jpg",
     link: "https://21centcomposers.ru/info/jsspbiezo1-le-thlme-ensemble",
   },
   {

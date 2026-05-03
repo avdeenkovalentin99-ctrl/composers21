@@ -28,7 +28,7 @@ export function findComposerBySlug(slug: string) {
 }
 
 export const soloists = performers.filter((person) => !isEnsemble(person));
-export const ensembles = performers.filter((person) => isEnsemble(person)).slice(0, 6);
+export const ensembles = performers.filter((person) => isEnsemble(person));
 
 export function findSoloistBySlug(slug: string) {
   return soloists.find((person) => getPersonSlug(person) === slug) ?? null;
