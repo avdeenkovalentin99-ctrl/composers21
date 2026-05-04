@@ -32,7 +32,7 @@ const fallbackNames = [
   "Ансамбль Classica Plus",
   "Квартет имени Глинки",
   "Хоровой ансамбль Мелодия",
-  "Ile Theleme Ensemble",
+  "Île Thélème Ensemble",
   "Виртуозы Москвы",
 ];
 

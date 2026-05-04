@@ -61,6 +61,6 @@ export function FestivalPage() {
           </motion.div>
         </PageContainer>
       </section>
-    </>
+3    </>
   );
 }

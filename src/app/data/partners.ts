@@ -7,7 +7,7 @@ export const partners: PartnerItem[] = [
     name: "Галерея Нико",
     description:
       "Музей работ классика советского и постсоветского искусства академика Н. Б. Никогосяна и креативное пространство в центре Москвы, открытое для творческих идей.",
-    image: "/assets/external/c20f321a__.svg",
+    image: "/assets/partners/niko-logo.png",
     link: "https://nikoartgallery.com/",
   },
   {

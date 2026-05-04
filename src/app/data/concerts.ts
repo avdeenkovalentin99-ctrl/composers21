@@ -28,6 +28,7 @@ export const concertOrder: string[] = [
   "2026-05-26-pianisty-kompozitory",
   "2026-05-27-desyatnikov-love-and-life",
   "2026-05-28-brezel-melodiya",
+  "2026-05-29-milyausha-khayrullina",
   "2026-05-31-gromche-slova",
 ];
 

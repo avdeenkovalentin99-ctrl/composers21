@@ -238,6 +238,15 @@ export const generatedComposers: GeneratedParticipant[] = [
     link: "https://21centcomposers.ru/persons/gi3ty9zkm1-mihail-tarbagaev",
   },
   {
+    name: "Миляуша Хайруллина",
+    slug: "milyausha-khayrullina",
+    role: "composer",
+    description: "Композитор, пианистка, автор оперы «Кави-Сарвар», лауреат исполнительских и композиторских конкурсов.",
+    photo: "",
+    image: "/assets/external/heroafisha/milyausha-khayrullina.jpg",
+    link: "https://nikoartgallery.com/afisha/milyausha-khayrullina-tvorcheskiy-vecher-kompozitora/",
+  },
+  {
     name: "Настасья Хрущёва",
     slug: "nastasya-khrushcheva",
     role: "composer",
@@ -556,6 +565,15 @@ export const generatedPerformers: GeneratedParticipant[] = [
     link: "https://21centcomposers.ru/lilya-valieva-i-mihail-makorda",
   },
   {
+    name: "Миляуша Хайруллина",
+    slug: "milyausha-khayrullina",
+    role: "soloist",
+    description: "Пианистка и композитор, автор оперной, симфонической, хоровой, камерно-инструментальной, вокальной и театральной музыки.",
+    photo: "",
+    image: "/assets/external/heroafisha/milyausha-khayrullina.jpg",
+    link: "https://nikoartgallery.com/afisha/milyausha-khayrullina-tvorcheskiy-vecher-kompozitora/",
+  },
+  {
     name: "Наталья Мурадымова",
     slug: "natalia-muradymova",
     role: "soloist",
@@ -714,7 +732,7 @@ export const generatedPerformers: GeneratedParticipant[] = [
     role: "ensemble",
     description: "Содружество музыкантов, которым подвластны все жанры и стили камерной музыки и искусство импровизации.",
     photo: "",
-    image: "/assets/external/1ce0f2e5_-5451686574358728414.jpg",
+    image: "/assets/external/ile-theleme-ensemble-main.jpg",
     link: "https://21centcomposers.ru/info/jsspbiezo1-le-thlme-ensemble",
   },
   {
