@@ -10,6 +10,7 @@ import {
   trackYandexMetrikaPageView,
 } from "./utils/yandexMetrika";
 import { AboutFestivalPage } from "./pages/AboutFestivalPage";
+import { AcademiesPage } from "./pages/AcademiesPage";
 import { AfishaPage } from "./pages/AfishaPage";
 import { ComposerPage } from "./pages/ComposerPage";
 import { EnsemblePage } from "./pages/EnsemblePage";
@@ -17,6 +18,7 @@ import { FestivalLabPage } from "./pages/FestivalLabPage";
 import { FestivalPage } from "./pages/FestivalPage";
 import { ParticipantsPage } from "./pages/ParticipantsPage";
 import { PartnersPage } from "./pages/PartnersPage";
+import { PrivacyPage } from "./pages/PrivacyPage";
 import { SoloistPage } from "./pages/SoloistPage";
 
 const PAGE_GOAL_BY_PATHNAME: Record<string, string> = {
@@ -142,6 +144,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <FestivalPage /> },
       { path: "festival", element: <AboutFestivalPage /> },
+      { path: "academies", element: <AcademiesPage /> },
       { path: "festival-lab", element: <FestivalLabPage /> },
       { path: "afisha", element: <AfishaPage /> },
       { path: "participants", element: <ParticipantsPage /> },
@@ -149,6 +152,7 @@ export const router = createBrowserRouter([
       { path: "participants/ensembles/:slug", element: <EnsemblePage /> },
       { path: "participants/soloists/:slug", element: <SoloistPage /> },
       { path: "partners", element: <PartnersPage /> },
+      { path: "privacy", element: <PrivacyPage /> },
     ],
   },
 ]);

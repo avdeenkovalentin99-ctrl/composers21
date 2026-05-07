@@ -22,6 +22,14 @@ export const partners: PartnerItem[] = [
   {
     tier: "general",
     role: "Генеральный партнёр",
+    name: "Lifestyle",
+    description: "",
+    image: "/assets/partners/lifestyle-logo.png",
+    link: "https://obrazfund.ru/",
+  },
+  {
+    tier: "general",
+    role: "Генеральный партнёр",
     name: "Île Thélème",
     description:
       "Île Thélème — художественное пространство в Москве, где выставки, концерты, лекции и кинопоказы складываются в единую культурную программу.",
@@ -58,6 +66,7 @@ export const partners: PartnerItem[] = [
     name: "Бельканто",
     description: "",
     image: "/assets/partners/belcantologo.png",
+    link: "https://www.belcanto.ru",
   },
   {
     tier: "media",

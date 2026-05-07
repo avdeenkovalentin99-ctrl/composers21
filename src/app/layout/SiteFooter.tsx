@@ -1,4 +1,5 @@
 import { Send } from "lucide-react";
+import { Link } from "react-router-dom";
 import { festivalInfo, siteTitle } from "../data/site";
 import { PageContainer } from "./PageContainer";
 
@@ -35,6 +36,11 @@ export function SiteFooter() {
                 >
                   {festivalInfo.email}
                 </a>
+              </p>
+              <p className="font-editorial-sans text-sm leading-[1.6] text-neutral-500/70">
+                <Link to="/privacy" className="transition-colors duration-200 hover:text-neutral-900">
+                  {"\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438"}
+                </Link>
               </p>
             </div>
 
