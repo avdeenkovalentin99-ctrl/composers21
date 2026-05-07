@@ -46,16 +46,11 @@ function PartnerLogo({
   const className = `group relative flex min-h-24 w-full items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:opacity-75 sm:min-h-28 ${rhythmClassName}`;
   const scaleClassName = variant === "general" ? generalLogoScaleByName[partner.name] ?? "" : "";
   const logo = (
-    <>
-      <img
-        src={partner.image}
-        alt={partner.name}
-        className={`h-auto w-auto object-contain transition-all duration-300 ease-out ${logoClassNames[variant]} ${scaleClassName}`}
-      />
-      <span className="pointer-events-none absolute left-1/2 top-full mt-5 -translate-x-1/2 whitespace-nowrap font-editorial-sans text-[10px] uppercase tracking-[0.24em] text-neutral-500/0 transition-colors duration-300 ease-out group-hover:text-neutral-500/55">
-        {partner.name}
-      </span>
-    </>
+    <img
+      src={partner.image}
+      alt={partner.name}
+      className={`h-auto w-auto object-contain transition-all duration-300 ease-out ${logoClassNames[variant]} ${scaleClassName}`}
+    />
   );
 
   if (!partner.link) {

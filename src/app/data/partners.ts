@@ -54,6 +54,13 @@ export const partners: PartnerItem[] = [
   },
   {
     tier: "media",
+    role: "Информационный партнёр",
+    name: "Бельканто",
+    description: "",
+    image: "/assets/partners/belcantologo.png",
+  },
+  {
+    tier: "media",
     role: "Медиа-партнёр",
     name: "Ревизор",
     description: "",
