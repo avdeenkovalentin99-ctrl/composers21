@@ -12,15 +12,37 @@ type EventItem = (typeof concertProgrammes)[number];
 const concertStartTime = "19:30";
 const queryKeyByConcertId = {
   "2026-05-10-peletcis-24-kaprisa": "10may",
+  "2026-05-12-il-theleme-de-la-nuite": "2026-05-12-il-theleme-de-la-nuite",
   "2026-05-13-v-ischezayushem-gorode": "13may",
+  "2026-05-15-solisty-nizhnego-novgoroda": "2026-05-15-solisty-nizhnego-novgoroda",
+  "2026-05-16-improvizirovannyy-uzhin": "2026-05-16-improvizirovannyy-uzhin",
+  "2026-05-18-forelnyy-kontsert": "2026-05-18-forelnyy-kontsert",
   "2026-05-19-opensoundquartet": "19may",
   "2026-05-20-opensoundorchestra": "20may",
+  "2026-05-21-petr-glavatskikh": "2026-05-21-petr-glavatskikh",
+  "2026-05-25-daniil-sayamov-glinka-quartet": "2026-05-25-daniil-sayamov-glinka-quartet",
+  "2026-05-26-pianisty-kompozitory": "2026-05-26-pianisty-kompozitory",
+  "2026-05-27-desyatnikov-love-and-life": "2026-05-27-desyatnikov-love-and-life",
+  "2026-05-28-brezel-melodiya": "2026-05-28-brezel-melodiya",
+  "2026-05-29-milyausha-khayrullina": "2026-05-29-milyausha-khayrullina",
+  "2026-05-31-gromche-slova": "2026-05-31-gromche-slova",
 } as const;
 const concertIdByQueryKey = {
   "10may": "2026-05-10-peletcis-24-kaprisa",
+  "2026-05-12-il-theleme-de-la-nuite": "2026-05-12-il-theleme-de-la-nuite",
   "13may": "2026-05-13-v-ischezayushem-gorode",
+  "2026-05-15-solisty-nizhnego-novgoroda": "2026-05-15-solisty-nizhnego-novgoroda",
+  "2026-05-16-improvizirovannyy-uzhin": "2026-05-16-improvizirovannyy-uzhin",
+  "2026-05-18-forelnyy-kontsert": "2026-05-18-forelnyy-kontsert",
   "19may": "2026-05-19-opensoundquartet",
   "20may": "2026-05-20-opensoundorchestra",
+  "2026-05-21-petr-glavatskikh": "2026-05-21-petr-glavatskikh",
+  "2026-05-25-daniil-sayamov-glinka-quartet": "2026-05-25-daniil-sayamov-glinka-quartet",
+  "2026-05-26-pianisty-kompozitory": "2026-05-26-pianisty-kompozitory",
+  "2026-05-27-desyatnikov-love-and-life": "2026-05-27-desyatnikov-love-and-life",
+  "2026-05-28-brezel-melodiya": "2026-05-28-brezel-melodiya",
+  "2026-05-29-milyausha-khayrullina": "2026-05-29-milyausha-khayrullina",
+  "2026-05-31-gromche-slova": "2026-05-31-gromche-slova",
 } as const;
 const scrollOffsetPx = 104;
 const initialRevealDelayMs = 220;
@@ -92,6 +114,7 @@ function EventAccordion({
   return (
     <article
       ref={containerRef}
+      id={event.id}
       className="group scroll-mt-28 py-10 sm:py-12"
     >
       <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-8">

@@ -6,6 +6,7 @@ import { PageContainer } from "../layout/PageContainer";
 export function FestivalPage() {
   return (
     <>
+      <h1 className="sr-only">{"\u0424\u0435\u0441\u0442\u0438\u0432\u0430\u043B\u044C \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439 \u043C\u0443\u0437\u044B\u043A\u0438 \u201E\u041A\u043E\u043C\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u044B XXI \u0432\u0435\u043A\u0430\u201C"}</h1>
       <HomeHero />
       <section className="bg-[var(--color-bg)] pb-16 pt-8 text-neutral-950 sm:pb-20 sm:pt-10">
         <PageContainer>
@@ -61,6 +62,6 @@ export function FestivalPage() {
           </motion.div>
         </PageContainer>
       </section>
-3    </>
+    </>
   );
 }
