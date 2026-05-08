@@ -9,7 +9,7 @@
     "check:encoding": "node scripts/check-encoding.js",
     "import:composers": "node ./scripts/import-composers.mjs",
     "build:bios": "npm run fix:utf8 && npm run check:utf8 && tsc ./scripts/build-bios.ts --module NodeNext --target ES2022 --outDir .tmp-build --skipLibCheck --ignoreConfig && node ./.tmp-build/build-bios.js",
-    "build": "npm run fix:utf8 && npm run check:utf8 && tsc -b && vite build",
+    "build": "npm run check:utf8 && tsc -b && vite build",
     "preview": "vite preview"
   },
   "keywords": [],

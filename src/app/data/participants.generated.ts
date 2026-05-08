@@ -412,6 +412,15 @@ export const generatedPerformers: GeneratedParticipant[] = [
     link: "https://21centcomposers.ru/bxainxg0p1-aleksei-lundin",
   },
   {
+    name: "Алексей Петров",
+    slug: "aleksei-petrov",
+    role: "soloist",
+    description: "Лауреат международных конкурсов, стипендиат Международного фонда «Новые имена» и Специального фонда Президента Республики Беларусь по поддержке талантливой молодежи.",
+    photo: "PetrovA.jpg",
+    image: "",
+    link: "https://21centcomposers.ru/aleksei-petrov",
+  },
+  {
     name: "Алиса Тен",
     slug: "alisa-ten",
     role: "soloist",

@@ -1,4 +1,4 @@
-import { partners } from "../data/site";
+import { partners } from "../data/partners";
 import type { PartnerItem } from "../data/types";
 import { PageContainer } from "../layout/PageContainer";
 
@@ -51,6 +51,8 @@ function PartnerLogo({
     <img
       src={partner.image}
       alt={partner.name}
+      loading="lazy"
+      decoding="async"
       className={`h-auto w-auto object-contain transition-all duration-300 ease-out ${logoClassNames[variant]} ${scaleClassName}`}
     />
   );
@@ -116,6 +118,7 @@ export function PartnersPage() {
   return (
     <section className="pb-36 pt-32 sm:pb-44 sm:pt-40">
       <PageContainer className="mx-auto max-w-[1180px]">
+        <h1 className="sr-only">Партнёры фестиваля</h1>
         <div className="space-y-18 sm:space-y-22 lg:space-y-24">
           {sections.map((section) => (
             <PartnersSection key={section.variant} {...section} />

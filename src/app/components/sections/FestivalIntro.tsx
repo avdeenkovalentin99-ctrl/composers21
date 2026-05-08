@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { festivalInfo } from "../../data/site";
+import { festivalInfo } from "../../data/festival";
 import { PageContainer } from "../../layout/PageContainer";
 import { SectionTitle } from "../ui/SectionTitle";
 

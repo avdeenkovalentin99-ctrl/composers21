@@ -1,0 +1,18 @@
+
+> composersxxi@1.0.0 dev
+> vite --host 127.0.0.1 --port 5173
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  [32m[1mVITE[22m v8.0.8[39m  [2mready in [0m[1m457[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5175[22m/[39m
+[2m21:04:18[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/styles/globals.css[22m
+[2m21:51:50[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/pages/ParticipantsPage.tsx, /src/app/pages/PartnersPage.tsx[22m
+[2m21:52:04[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/styles/globals.css, /src/app/pages/ParticipantsPage.tsx[22m
+[2m21:53:16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/pages/ParticipantsPage.tsx, /src/app/pages/PartnersPage.tsx[22m
+[2m21:53:16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/pages/ParticipantsPage.tsx, /src/app/pages/PartnersPage.tsx[22m
+[2m21:55:04[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/styles/globals.css, /src/app/components/hero/HomeHero.tsx, /src/app/pages/AfishaPage.tsx[22m
+[2m21:55:17[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/styles/globals.css, /src/app/pages/AfishaPage.tsx[22m
+[2m21:56:18[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/styles/globals.css, /src/app/components/hero/HomeHero.tsx, /src/app/pages/AfishaPage.tsx[22m

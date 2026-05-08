@@ -2,7 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { LayoutGrid, List } from "lucide-react";
 import { ensembles, getPersonSlug, soloists } from "../data/participants";
-import { composers, performers } from "../data/site";
+import { composers } from "../data/composers";
+import { performers } from "../data/performers";
 import { PageContainer } from "../layout/PageContainer";
 import { PARTICIPANTS_SHELL_CLASS } from "../layout/participantsLayout";
 
@@ -40,6 +41,8 @@ function ParticipantCard({
             transition={{ duration: 0.32, ease: "easeOut" }}
             src={person.image}
             alt={person.name}
+            loading="lazy"
+            decoding="async"
             className={["w-full object-cover grayscale", imageClassName ?? "aspect-[4/5]"].join(" ")}
           />
           <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/6" />
@@ -85,6 +88,8 @@ function SoloistCard({
             transition={{ duration: 0.32, ease: "easeOut" }}
             src={person.image}
             alt={person.name}
+            loading="lazy"
+            decoding="async"
             className={["w-full object-cover grayscale", imageClassName].join(" ")}
           />
           <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/6" />
@@ -240,6 +245,7 @@ export function ParticipantsPage() {
   return (
     <section className="pb-20 pt-32 sm:pb-24 sm:pt-36">
       <PageContainer>
+        <h1 className="sr-only">Участники фестиваля</h1>
         <motion.div
           animate={{ opacity: isLeaving ? 0 : 1 }}
           transition={{ duration: 0.16, ease: "easeOut" }}

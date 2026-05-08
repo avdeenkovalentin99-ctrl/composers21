@@ -6,7 +6,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
 
-const ignoredDirectories = new Set(["node_modules", ".git", "dist", "build"]);
+const ignoredDirectories = new Set([
+  "node_modules",
+  ".git",
+  "dist",
+  "build",
+  ".tmp-build",
+  ".tmp-audit",
+  "tmp_data",
+  "tmp_scrape",
+  "logos_to_send",
+]);
 const textExtensions = new Set([
   ".js",
   ".mjs",

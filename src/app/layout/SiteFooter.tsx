@@ -1,6 +1,7 @@
 import { Send } from "lucide-react";
 import { Link } from "react-router-dom";
-import { festivalInfo, siteTitle } from "../data/site";
+import { festivalInfo } from "../data/festival";
+import { siteTitle } from "../data/navigation";
 import { PageContainer } from "./PageContainer";
 
 export function SiteFooter() {
@@ -54,12 +55,6 @@ export function SiteFooter() {
               >
                 <Send size={14} strokeWidth={1.8} />
               </a>
-              <span
-                aria-label="VK"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 font-editorial-sans text-[11px] tracking-[0.04em] text-neutral-500/80 transition-colors duration-200 hover:border-neutral-900 hover:text-neutral-900"
-              >
-                VK
-              </span>
             </div>
           </div>
         </div>

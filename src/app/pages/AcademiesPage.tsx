@@ -160,6 +160,8 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
                 <img
                   src={event.image}
                   alt={event.imageAlt}
+                  loading="eager"
+                  decoding="async"
                   className="max-h-[76vh] w-full object-cover grayscale lg:min-h-[62vh]"
                 />
               </motion.div>
@@ -264,6 +266,8 @@ export function AcademiesPage() {
                       <img
                         src={event.image}
                         alt={event.imageAlt}
+                        loading="lazy"
+                        decoding="async"
                         className={`${imageAspectByIndex[index % imageAspectByIndex.length]} w-full object-cover object-center grayscale transition duration-700 ease-out group-hover:scale-[1.015] group-hover:opacity-90`}
                       />
                     </div>

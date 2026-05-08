@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { concerts } from "../../data/site";
+import { concerts } from "../../data/concerts";
 import { PageContainer } from "../../layout/PageContainer";
 import { LinkArrow } from "../ui/LinkArrow";
 import { SectionTitle } from "../ui/SectionTitle";

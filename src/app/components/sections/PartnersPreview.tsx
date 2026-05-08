@@ -1,5 +1,5 @@
 import { PageContainer } from "../../layout/PageContainer";
-import { partners } from "../../data/site";
+import { partners } from "../../data/partners";
 import { LinkArrow } from "../ui/LinkArrow";
 import { SectionTitle } from "../ui/SectionTitle";
 
@@ -16,7 +16,13 @@ export function PartnersPreview() {
           </div>
 
           <article className="grid gap-6 border border-black/10 bg-[var(--color-panel)] p-6 sm:grid-cols-[180px_1fr] sm:p-8">
-            <img src={partner.image} alt={partner.name} className="h-24 w-24 object-contain sm:h-32 sm:w-32" />
+            <img
+              src={partner.image}
+              alt={partner.name}
+              loading="lazy"
+              decoding="async"
+              className="h-24 w-24 object-contain sm:h-32 sm:w-32"
+            />
             <div className="space-y-4">
               <p className="text-[0.68rem] uppercase tracking-[0.26em] text-[var(--color-muted)]">{partner.role}</p>
               <h3 className="text-2xl font-light tracking-[-0.03em]">{partner.name}</h3>

@@ -15,7 +15,7 @@ export const concerts: ConcertItem[] = concertProgrammes.map((concert, index) =>
 }));
 
 export const concertOrder: string[] = [
-  "2026-05-10-peletcis-24-kaprisa",
+  "2026-05-10-peletsis-24-kaprisa",
   "2026-05-12-il-theleme-de-la-nuite",
   "2026-05-13-v-ischezayushem-gorode",
   "2026-05-15-solisty-nizhnego-novgoroda",

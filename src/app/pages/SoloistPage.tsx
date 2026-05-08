@@ -96,6 +96,8 @@ export function SoloistPage() {
                       transition={{ duration: 0.9, ease: "easeOut" }}
                       src={soloist.image}
                       alt={soloist.name}
+                      loading="eager"
+                      decoding="async"
                       className={getSoloistImageClassName(soloist.slug)}
                     />
                   </div>

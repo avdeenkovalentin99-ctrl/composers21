@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import festivalMark from "../../../../FestLogoNowords.svg";
 import festivalBottomWord from "/festlogo-bottomword.svg";
 import festivalTopWord from "/festlogo-topword.svg";
-import { orderedConcerts } from "../../data/site";
+import { orderedConcerts } from "../../data/concerts";
 import { PageContainer } from "../../layout/PageContainer";
 import { resolvePublicAssetPath } from "../../utils/assets";
 import { HeroConcertSelector } from "./HeroConcertSelector";
@@ -87,6 +87,7 @@ function HeroLogoMark({ tone, className = "" }: { tone: "dark" | "light"; classN
         src={festivalMark}
         alt=""
         aria-hidden="true"
+        decoding="async"
         className="h-auto w-full object-contain"
         style={{ filter }}
       />
@@ -103,6 +104,7 @@ function HeroLogoLockup({ tone, className = "" }: { tone: "dark" | "light"; clas
         src={festivalMark}
         alt=""
         aria-hidden="true"
+        decoding="async"
         className="h-auto w-full object-contain"
         style={{ filter }}
       />
@@ -112,6 +114,7 @@ function HeroLogoLockup({ tone, className = "" }: { tone: "dark" | "light"; clas
           src={festivalTopWord}
           alt=""
           aria-hidden="true"
+          decoding="async"
           className="h-auto w-full"
           style={{ filter }}
         />
@@ -122,6 +125,7 @@ function HeroLogoLockup({ tone, className = "" }: { tone: "dark" | "light"; clas
           src={festivalBottomWord}
           alt=""
           aria-hidden="true"
+          decoding="async"
           className="h-auto w-full"
           style={{ filter }}
         />
@@ -152,7 +156,7 @@ export function HomeHero() {
       "special-guest-boris-berezovsky",
       "2026-05-21-petr-glavatskikh",
       "2026-05-20-opensoundorchestra",
-      "2026-05-10-peletcis-24-kaprisa",
+      "2026-05-10-peletsis-24-kaprisa",
       "2026-05-28-brezel-melodiya",
       "2026-05-15-solisty-nizhnego-novgoroda",
     ] as const;
@@ -359,6 +363,7 @@ export function HomeHero() {
                       src={festivalMark}
                       alt=""
                       aria-hidden="true"
+                      decoding="async"
                       initial={{ opacity: 0, y: 18 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, ease: "easeOut" }}
@@ -375,6 +380,7 @@ export function HomeHero() {
                         src={festivalTopWord}
                         alt=""
                         aria-hidden="true"
+                        decoding="async"
                         className="h-auto w-full"
                       />
                     </motion.div>
@@ -389,6 +395,7 @@ export function HomeHero() {
                         src={festivalBottomWord}
                         alt=""
                         aria-hidden="true"
+                        decoding="async"
                         className="h-auto w-full"
                       />
                     </motion.div>
@@ -452,6 +459,8 @@ export function HomeHero() {
                 <img
                   src={resolvePublicAssetPath(activePoster.image)}
                   alt={activePoster.title}
+                  loading="eager"
+                  decoding="async"
                   className="absolute inset-0 h-full w-full object-cover"
                   style={{
                     opacity: isGuestPoster ? 1 : 0.96,

@@ -1,0 +1,2416 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "/",
+    "url": "http://127.0.0.1:5173/",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\desktop-home.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [
+        "Фестиваль современной музыки „Композиторы XXI века“"
+      ],
+      "scroll": {
+        "width": 1440,
+        "clientWidth": 1440,
+        "bodyWidth": 1440,
+        "height": 1404
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "DIV",
+          "cls": "absolute left-0 top-1/2 flex -translate-y-1/2 items-center whitespace-nowrap",
+          "text": "·0102030405060708091011[12]131415",
+          "left": -326,
+          "right": 1171,
+          "top": 784,
+          "bottom": 832,
+          "w": 1496,
+          "h": 48
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "·",
+          "left": -326,
+          "right": -269,
+          "top": 784,
+          "bottom": 832,
+          "w": 56,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "·",
+          "left": -314,
+          "right": -281,
+          "top": 796,
+          "bottom": 820,
+          "w": 32,
+          "h": 23
+        },
+        {
+          "tag": "SPAN",
+          "cls": "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]",
+          "text": "·",
+          "left": -299,
+          "right": -296,
+          "top": 796,
+          "bottom": 820,
+          "w": 3,
+          "h": 23
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "01",
+          "left": -230,
+          "right": -173,
+          "top": 784,
+          "bottom": 832,
+          "w": 56,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "01",
+          "left": -218,
+          "right": -185,
+          "top": 796,
+          "bottom": 820,
+          "w": 32,
+          "h": 23
+        },
+        {
+          "tag": "SPAN",
+          "cls": "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]",
+          "text": "01",
+          "left": -209,
+          "right": -194,
+          "top": 796,
+          "bottom": 820,
+          "w": 14,
+          "h": 23
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "02",
+          "left": -134,
+          "right": -77,
+          "top": 784,
+          "bottom": 832,
+          "w": 56,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "02",
+          "left": -122,
+          "right": -89,
+          "top": 796,
+          "bottom": 820,
+          "w": 32,
+          "h": 23
+        },
+        {
+          "tag": "SPAN",
+          "cls": "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]",
+          "text": "02",
+          "left": -113,
+          "right": -98,
+          "top": 796,
+          "bottom": 820,
+          "w": 14,
+          "h": 23
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "03",
+          "left": -38,
+          "right": 19,
+          "top": 784,
+          "bottom": 832,
+          "w": 56,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "03",
+          "left": -26,
+          "right": 7,
+          "top": 796,
+          "bottom": 820,
+          "w": 32,
+          "h": 23
+        },
+        {
+          "tag": "SPAN",
+          "cls": "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]",
+          "text": "03",
+          "left": -17,
+          "right": -2,
+          "top": 796,
+          "bottom": 820,
+          "w": 14,
+          "h": 23
+        }
+      ],
+      "images": 4,
+      "brokenImgs": [],
+      "missingAltImgs": [
+        {
+          "src": "data:image/svg+xml,%3c?xml%20version=%271.0%27%20encoding=%27utf-8%27?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2026.1.0,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version=%271.1%27%20xmlns=%27http://www.w3.org/2000/svg%27%20xmlns:xlink=%27http://www.w3.org/1999/xlink%27%20x=%270px%27%20y=%270px%27%20viewBox=%270%200%201080%201080%27%20style=%27enable-background:new%200%200%201080%201080;%27%20xml:space=%27preserve%27%3e%3cg%20id=%27Layer_1%27%3e%3cpolygon%20points=%27773.18,869.28%20781.63,869.28%20673.92,617.96%20669.7,628.52%20%27/%3e%3cpolygon%20points=%27781.63,180.81%20790.08,180.81%20669.7,446.9%20665.48,436.34%20%27/%3e%3cpolygon%20points=%27756.29,869.28%20764.73,869.28%20665.48,639.08%20661.25,651.75%20%27/%3e%3cpolygon%20points=%27764.73,180.81%20772.75,180.81%20652.38,446.9%20650.27,434.23%20%27/%3e%3cpolyline%20points=%27468.48,201.09%20608.71,526.59%20456.7,869.28%20472.41,869.28%20624.42,526.59%20474.22,180.81%20458.51,180.81%20%27/%3e%3c/g%3e%3cg%20id=%27Layer_2%27%3e%3cpolygon%20points=%27483.86,180.81%20564.11,180.81%20677.05,451.13%20798.52,180.81%20876.66,180.81%20717.17,529.27%20866.1,869.28%20790.08,869.28%20680.21,604.84%20572.55,869.28%20485.97,869.28%20635.35,526.8%20%27/%3e%3crect%20x=%27965.36%27%20y=%27180.81%27%20width=%2773.92%27%20height=%27688.47%27/%3e%3crect%20x=%27950.76%27%20y=%27180.68%27%20width=%278.63%27%20height=%27688.38%27/%3e%3crect%20x=%27927.53%27%20y=%27180.81%27%20width=%2714.6%27%20height=%27688.47%27/%3e%3cpolygon%20points=%27341.16,868.87%20349.61,868.87%20241.9,617.56%20237.68,628.12%20%27/%3e%3cpolygon%20points=%27349.61,180.41%20358.05,180.41%20237.68,446.5%20233.45,435.94%20%27/%3e%3cpolygon%20points=%27324.26,868.87%20332.71,868.87%20233.45,638.68%20229.23,651.35%20%27/%3e%3cpolygon%20points=%27332.71,180.41%20340.73,180.41%20220.36,446.5%20218.24,433.83%20%27/%3e%3cpolyline%20points=%2736.46,200.69%20176.69,526.19%2024.68,868.87%2040.38,868.87%20192.4,526.19%2044.31,182.52%2028.6,182.52%20%27/%3e%3cpolygon%20points=%2751.83,180.41%20132.08,180.41%20245.02,450.72%20366.5,180.41%20444.64,180.41%20285.15,528.86%20434.08,868.87%20358.05,868.87%20248.19,604.44%20140.53,868.87%2053.95,868.87%20203.33,526.39%20%27/%3e%3c/g%3e%3c/svg%3e",
+          "alt": "",
+          "naturalWidth": 150,
+          "naturalHeight": 150,
+          "renderedWidth": 560,
+          "renderedHeight": 560,
+          "loading": ""
+        },
+        {
+          "src": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='114%20146%20870%2068'%20fill='none'%3e%3cpath%20d='M121.7%20177l26.62-26.81h9.38l-29.25%2029.16%2030.19%2033.38h-9.56l-25.59-28.69-1.78%201.78v26.91h-6.94v-62.53h6.94V177z'%20fill='%23000'/%3e%3cpath%20d='M181.05%20181.5c0-18.66%2014.53-32.34%2032.53-32.34s32.53%2013.69%2032.53%2032.34c0%2018.56-14.44%2032.34-32.53%2032.34s-32.53-13.78-32.53-32.34zm7.13%200c0%2014.34%2011.34%2025.78%2025.41%2025.78S239%20195.84%20239%20181.5s-11.34-25.78-25.41-25.78-25.41%2011.44-25.41%2025.78z'%20fill='%23000'/%3e%3cpath%20d='M277.06%20212.72l10.41-66%2024%2052.78%2024.47-52.88%209.75%2066.09h-7.12l-5.91-43.5-21.28%2046.12-21-46.12-6.19%2043.5h-7.13z'%20fill='%23000'/%3e%3cpath%20d='M426.41%20150.19v62.53h-6.94v-55.97h-32.06v55.97h-6.94v-62.53h45.94z'%20fill='%23000'/%3e%3cpath%20d='M459.51%20181.5c0-18.66%2014.53-32.34%2032.53-32.34s32.53%2013.69%2032.53%2032.34c0%2018.56-14.44%2032.34-32.53%2032.34s-32.53-13.78-32.53-32.34zm7.12%200c0%2014.34%2011.34%2025.78%2025.41%2025.78s25.41-11.44%2025.41-25.78-11.34-25.78-25.41-25.78-25.41%2011.44-25.41%2025.78z'%20fill='%23000'/%3e%3cpath%20d='M556.08%20158.25c5.06-7.5%2011.81-9.09%2017.91-9.09%203.19%200%208.91.47%2013.22%204.41%202.72%202.44%204.88%206.38%204.88%2011.53%200%206.38-3.75%2010.97-8.62%2013.22%208.34%201.88%2012.56%208.53%2012.56%2016.12%200%207.78-3.94%2012.56-7.78%2015.28-3.94%202.72-9.19%204.12-14.25%204.12-12.38%200-19.41-7.69-22.59-15l6.75-3c2.53%207.03%208.62%2011.44%2016.12%2011.44%203.38%200%206.94-.84%209.56-2.62%204.03-2.81%205.06-6.66%205.06-10.03%200-11.44-10.59-12.28-16.69-12.28h-5.62v-6.56h5.62c8.72%200%2012.75-4.88%2012.75-10.59%200-2.72-1.03-5.06-2.53-6.56-2.44-2.53-6-2.91-8.44-2.91-4.5%200-8.81%201.31-12.56%206.75l-5.44-4.78z'%20fill='%23000'/%3e%3cpath%20d='M672.61%20165l-43.5%2050.53v-65.34h6.94v47.91l43.5-50.53v65.16h-6.94V165z'%20fill='%23000'/%3e%3cpath%20d='M731.4%20156.75v55.97h-6.94v-55.97h-15.19v-6.56h37.31v6.56H731.4z'%20fill='%23000'/%3e%3cpath%20d='M769.65%20181.5c0-18.66%2014.53-32.34%2032.53-32.34s32.53%2013.69%2032.53%2032.34c0%2018.56-14.44%2032.34-32.53%2032.34s-32.53-13.78-32.53-32.34zm7.13%200c0%2014.34%2011.34%2025.78%2025.41%2025.78s25.41-11.44%2025.41-25.78-11.34-25.78-25.41-25.78-25.41%2011.44-25.41%2025.78z'%20fill='%23000'/%3e%3cpath%20d='M879.16%20150.19c6.28%200%2011.53.75%2015.75%204.41%204.59%203.94%205.72%209.47%205.72%2013.41%200%208.81-5.53%2017.53-19.78%2017.53h-6.09v27.19h-6.94v-62.53h11.34zm-4.4%2028.78h5.72c8.25%200%2013.22-4.12%2013.22-11.34%200-9.94-9.28-10.88-13.78-10.88h-5.16v22.22z'%20fill='%23000'/%3e%3cpath%20d='M930.91%20150.19h6.94v25.97h8.44c7.69%200%2021.56%201.59%2021.56%2017.62%200%2011.91-7.97%2018.94-20.25%2018.94h-16.69v-62.53zm6.94%2055.97h8.06c2.81%200%207.97%200%2011.53-3.47%201.69-1.59%203.28-4.41%203.28-8.91%200-3-.75-7.12-5.06-9.47-2.91-1.59-6.66-1.59-10.5-1.59h-7.31v23.44zm43.5-55.97v62.53h-6.94v-62.53h6.94z'%20fill='%23000'/%3e%3c/svg%3e",
+          "alt": "",
+          "naturalWidth": 300,
+          "naturalHeight": 23,
+          "renderedWidth": 527,
+          "renderedHeight": 41,
+          "loading": ""
+        },
+        {
+          "src": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='749%20878%20234%2050'%20fill='none'%3e%3cpath%20d='M763.88%20882.31c2.34%200%206.17.11%209.26%202.55%201.6%201.28%203.83%203.83%203.83%208.3%200%203.83-1.6%207.02-4.79%209.04.75.11%203.19.64%205.32%202.45%201.92%201.7%203.72%204.36%203.72%208.72%200%204.89-2.23%207.77-4.36%209.36-3.4%202.66-7.87%202.98-10.64%202.98h-16.49v-43.41h14.15zm0%2018.94c1.6%200%204.04-.11%206.17-1.81%201.17-.96%202.66-2.77%202.66-5.74%200-2.87-1.49-4.68-2.66-5.64-2.02-1.6-4.79-1.7-6.17-1.7h-9.89v14.89h9.89zm2.34%2020.42c1.6%200%205-.11%207.45-1.92%201.38-1.06%203.09-2.98%203.09-6.49%200-2.77-1.06-4.68-2.87-6.06-2.23-1.7-5.21-1.92-7.66-1.92h-12.23v16.38h12.23z'%20fill='%23000'/%3e%3cpath%20d='M814.62%20904.54c0%2011.06%208.09%2018.3%2017.23%2018.3%207.02%200%2012.34-4.15%2015.11-9.89l3.62%202.13c-2.55%204.89-8.3%2011.81-19.04%2011.81-13.51%200-21.38-10-21.38-22.66%200-15.11%2010.43-22.87%2021.06-22.87%2011.7%200%2020.53%209.36%2020.53%2023.19h-37.13zm32.66-4.04c-1.06-8.62-7.45-15.11-16.06-15.11-8.83%200-15.11%206.7-16.28%2015.11h32.34z'%20fill='%23000'/%3e%3cpath%20d='M887.7%20882.31v20.64l21.92-20.64h5.75l-22.13%2020.64%2023.83%2022.77h-6.17l-20.85-19.89-2.34%202.23v17.66h-4.25v-43.41h4.25z'%20fill='%23000'/%3e%3cpath%20d='M977.81%20882.31h4.25v43.41h-4.25v-7.77c-4.36%206.7-11.28%208.94-16.92%208.94-11.38%200-21.17-8.62-21.17-22.87%200-13.4%208.51-22.66%2021.17-22.66%206.81%200%2012.77%202.66%2016.92%208.51v-7.56zm-33.62%2021.38c0%209.79%206.06%2019.15%2017.02%2019.15%2010.85%200%2016.81-9.15%2016.81-19.15%200-12.87-9.47-18.3-16.92-18.3-8.61.01-16.91%206.5-16.91%2018.3z'%20fill='%23000'/%3e%3c/svg%3e",
+          "alt": "",
+          "naturalWidth": 300,
+          "naturalHeight": 64,
+          "renderedWidth": 124,
+          "renderedHeight": 27,
+          "loading": ""
+        }
+      ],
+      "links": 12,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Главная",
+          "w": 78,
+          "h": 14
+        },
+        {
+          "tag": "A",
+          "text": "Фестиваль",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Академии",
+          "w": 76,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Участники",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Партнёры",
+          "w": 73,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "A",
+          "text": "ПРОГРАММА ФЕСТИВАЛЯ →",
+          "w": 198,
+          "h": 11
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 166,
+          "h": 21
+        },
+        {
+          "tag": "BUTTON",
+          "text": "OK",
+          "w": 35,
+          "h": 24
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "desktop",
+    "route": "/festival",
+    "url": "http://127.0.0.1:5173/festival",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\desktop-festival.png",
+    "gotoError": "",
+    "consoleMessages": [
+      "warning: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."
+    ],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [],
+      "scroll": {
+        "width": 1440,
+        "clientWidth": 1440,
+        "bodyWidth": 1440,
+        "height": 2328
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "IMG",
+          "cls": "absolute max-w-none will-change-transform",
+          "text": "",
+          "left": 907,
+          "right": 1710,
+          "top": 152,
+          "bottom": 860,
+          "w": 803,
+          "h": 708
+        },
+        {
+          "tag": "IMG",
+          "cls": "absolute max-w-none will-change-transform",
+          "text": "",
+          "left": 907,
+          "right": 1710,
+          "top": 152,
+          "bottom": 860,
+          "w": 803,
+          "h": 708
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative -mt-[10px] h-[296px] w-[128%] max-w-none -ml-[10%] sm:-mt-[14px] sm:h-[372px] sm:w-[132%] sm:-ml-[14%] lg:-mt-[10px] lg:h-[318px] lg:w-[100%] lg:-ml-[1vw] xl:-mt-[26px] xl:w-[138%] xl:-ml-[16vw]",
+          "text": "",
+          "left": -87,
+          "right": 444,
+          "top": 942,
+          "bottom": 1330,
+          "w": 530,
+          "h": 388
+        },
+        {
+          "tag": "DIV",
+          "cls": "absolute overflow-hidden bottom-0 left-0 right-[26px] top-[20px] sm:right-[34px] sm:top-[24px] lg:right-[28px] lg:top-[20px] xl:right-[42px] xl:top-[30px]",
+          "text": "",
+          "left": -87,
+          "right": 402,
+          "top": 972,
+          "bottom": 1330,
+          "w": 488,
+          "h": 358
+        },
+        {
+          "tag": "IMG",
+          "cls": "absolute max-w-none will-change-transform",
+          "text": "",
+          "left": -115,
+          "right": 564,
+          "top": 942,
+          "bottom": 1439,
+          "w": 679,
+          "h": 497
+        },
+        {
+          "tag": "IMG",
+          "cls": "absolute max-w-none will-change-transform",
+          "text": "",
+          "left": -115,
+          "right": 564,
+          "top": 942,
+          "bottom": 1439,
+          "w": 679,
+          "h": 497
+        },
+        {
+          "tag": "IMG",
+          "cls": "absolute max-w-none will-change-transform",
+          "text": "",
+          "left": 952,
+          "right": 1552,
+          "top": 1616,
+          "bottom": 2078,
+          "w": 600,
+          "h": 461
+        },
+        {
+          "tag": "IMG",
+          "cls": "absolute max-w-none will-change-transform",
+          "text": "",
+          "left": 952,
+          "right": 1552,
+          "top": 1616,
+          "bottom": 2078,
+          "w": 600,
+          "h": 461
+        }
+      ],
+      "images": 12,
+      "brokenImgs": [],
+      "missingAltImgs": [
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 802,
+          "renderedHeight": 708,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 802,
+          "renderedHeight": 708,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png",
+          "alt": "",
+          "naturalWidth": 1198,
+          "naturalHeight": 834,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png",
+          "alt": "",
+          "naturalWidth": 1198,
+          "naturalHeight": 834,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png",
+          "alt": "",
+          "naturalWidth": 1198,
+          "naturalHeight": 834,
+          "renderedWidth": 678,
+          "renderedHeight": 497,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png",
+          "alt": "",
+          "naturalWidth": 1198,
+          "naturalHeight": 834,
+          "renderedWidth": 678,
+          "renderedHeight": 497,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 599,
+          "renderedHeight": 461,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 599,
+          "renderedHeight": 461,
+          "loading": ""
+        }
+      ],
+      "links": 11,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Главная",
+          "w": 62,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Фестиваль",
+          "w": 98,
+          "h": 14
+        },
+        {
+          "tag": "A",
+          "text": "Академии",
+          "w": 76,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Участники",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Партнёры",
+          "w": 73,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "desktop",
+    "route": "/academies",
+    "url": "http://127.0.0.1:5173/academies",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\desktop-academies.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "Академии — Композиторы XXI века",
+      "h1s": [
+        "Академии"
+      ],
+      "scroll": {
+        "width": 1440,
+        "clientWidth": 1440,
+        "bodyWidth": 1440,
+        "height": 1699
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 3,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 11,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Главная",
+          "w": 62,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Фестиваль",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Академии",
+          "w": 92,
+          "h": 14
+        },
+        {
+          "tag": "A",
+          "text": "Участники",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Партнёры",
+          "w": 73,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "desktop",
+    "route": "/festival-lab",
+    "url": "http://127.0.0.1:5173/festival-lab",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\desktop-festival-lab.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [
+        "Нотный стан как сцена"
+      ],
+      "scroll": {
+        "width": 1440,
+        "clientWidth": 1440,
+        "bodyWidth": 1440,
+        "height": 4695
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "SPAN",
+          "cls": "font-editorial-sans absolute uppercase text-black/70 whitespace-nowrap text-[10px] leading-[1.5] tracking-[0.18em] sm:text-[11px] sm:tracking-[0.2em]",
+          "text": "Небойша Йован Живкович",
+          "left": 1242,
+          "right": 1445,
+          "top": 1106,
+          "bottom": 1123,
+          "w": 202,
+          "h": 17
+        }
+      ],
+      "images": 0,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 13,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Главная",
+          "w": 62,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Фестиваль",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Академии",
+          "w": 76,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Участники",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Партнёры",
+          "w": 73,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "desktop",
+    "route": "/afisha",
+    "url": "http://127.0.0.1:5173/afisha",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\desktop-afisha.png",
+    "gotoError": "",
+    "consoleMessages": [
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. ",
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. ",
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. ",
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. "
+    ],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [],
+      "scroll": {
+        "width": 1440,
+        "clientWidth": 1440,
+        "bodyWidth": 1440,
+        "height": 4072
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 15,
+      "brokenImgs": [],
+      "missingAltImgs": [
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/LundinNovikov.webp",
+          "alt": "",
+          "naturalWidth": 1985,
+          "naturalHeight": 1440,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/a9da4c31_IMG_20260303_105903_.webp",
+          "alt": "",
+          "naturalWidth": 1680,
+          "naturalHeight": 1119,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/chamberconcerthero.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 842,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/cd0d075c_db39c27515a4605ed73c.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 901,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/48f5939f_IMG-20251121-WA0020.webp",
+          "alt": "",
+          "naturalWidth": 960,
+          "naturalHeight": 1280,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/aca5621a_6362729948f1e85335ac.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 675,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/d6c06a4b_50d42752bd6c38e0c9da.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/f4a26f9e_9ba87e7e7bb322482d4d.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/6c7af7d8_0c98a711c715d8f20ff7.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/bfd7db6d_50a0894752382d8d9b1a.webp",
+          "alt": "",
+          "naturalWidth": 1600,
+          "naturalHeight": 900,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/c31dbe0b_61afb70ee5afd7e2710b.webp",
+          "alt": "",
+          "naturalWidth": 1600,
+          "naturalHeight": 1067,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/5f68f703_5ef851e0c6992bfd3e44.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 949,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/6ff3de26_6b1b5d1bd1f856318444.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 866,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/milyausha-khayrullina.jpg",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 814,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/finalconcert.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "renderedWidth": 340,
+          "renderedHeight": 255,
+          "loading": ""
+        }
+      ],
+      "links": 25,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Главная",
+          "w": 62,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Фестиваль",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Академии",
+          "w": 76,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Участники",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Партнёры",
+          "w": 73,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "desktop",
+    "route": "/participants",
+    "url": "http://127.0.0.1:5173/participants",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\desktop-participants.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [],
+      "scroll": {
+        "width": 1440,
+        "clientWidth": 1440,
+        "bodyWidth": 1440,
+        "height": 8249
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 42,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 11,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Главная",
+          "w": 62,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Фестиваль",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Академии",
+          "w": 76,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Участники",
+          "w": 98,
+          "h": 14
+        },
+        {
+          "tag": "A",
+          "text": "Партнёры",
+          "w": 73,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "BUTTON",
+          "text": "КОМПОЗИТОРЫ",
+          "w": 145,
+          "h": 24
+        },
+        {
+          "tag": "BUTTON",
+          "text": "ИСПОЛНИТЕЛИ",
+          "w": 143,
+          "h": 24
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "desktop",
+    "route": "/partners",
+    "url": "http://127.0.0.1:5173/partners",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\desktop-partners.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [],
+      "scroll": {
+        "width": 1440,
+        "clientWidth": 1440,
+        "bodyWidth": 1440,
+        "height": 1248
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 9,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 19,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Главная",
+          "w": 62,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Фестиваль",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Академии",
+          "w": 76,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Участники",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Партнёры",
+          "w": 89,
+          "h": 14
+        },
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "desktop",
+    "route": "/privacy",
+    "url": "http://127.0.0.1:5173/privacy",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\desktop-privacy.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [
+        "Политика конфиденциальности"
+      ],
+      "scroll": {
+        "width": 1440,
+        "clientWidth": 1440,
+        "bodyWidth": 1440,
+        "height": 1104
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 0,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 12,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Главная",
+          "w": 62,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Фестиваль",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Академии",
+          "w": 76,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Участники",
+          "w": 82,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Партнёры",
+          "w": 73,
+          "h": 12
+        },
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 125,
+          "h": 23
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "mobile",
+    "route": "/",
+    "url": "http://127.0.0.1:5173/",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\mobile-home.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [
+        "Фестиваль современной музыки „Композиторы XXI века“"
+      ],
+      "scroll": {
+        "width": 390,
+        "clientWidth": 390,
+        "bodyWidth": 390,
+        "height": 1353
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "SPAN",
+          "cls": "absolute inset-y-0 -left-2 -right-12 bg-white",
+          "text": "",
+          "left": 240,
+          "right": 414,
+          "top": 545,
+          "bottom": 561,
+          "w": 174,
+          "h": 16
+        },
+        {
+          "tag": "SPAN",
+          "cls": "absolute inset-y-0 -left-3 -right-10 bg-black",
+          "text": "",
+          "left": 201,
+          "right": 394,
+          "top": 741,
+          "bottom": 762,
+          "w": 193,
+          "h": 20
+        },
+        {
+          "tag": "DIV",
+          "cls": "absolute left-0 top-1/2 flex -translate-y-1/2 items-center whitespace-nowrap",
+          "text": "·0102030405060708091011[12]131415",
+          "left": -640,
+          "right": 308,
+          "top": 840,
+          "bottom": 889,
+          "w": 948,
+          "h": 48
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "·",
+          "left": -640,
+          "right": -592,
+          "top": 840,
+          "bottom": 889,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "·",
+          "left": -632,
+          "right": -600,
+          "top": 856,
+          "bottom": 874,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "tag": "SPAN",
+          "cls": "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]",
+          "text": "·",
+          "left": -617,
+          "right": -615,
+          "top": 856,
+          "bottom": 874,
+          "w": 2,
+          "h": 18
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "01",
+          "left": -580,
+          "right": -532,
+          "top": 840,
+          "bottom": 889,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "01",
+          "left": -572,
+          "right": -540,
+          "top": 856,
+          "bottom": 874,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "tag": "SPAN",
+          "cls": "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]",
+          "text": "01",
+          "left": -562,
+          "right": -550,
+          "top": 856,
+          "bottom": 874,
+          "w": 11,
+          "h": 18
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "02",
+          "left": -520,
+          "right": -472,
+          "top": 840,
+          "bottom": 889,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "02",
+          "left": -512,
+          "right": -480,
+          "top": 856,
+          "bottom": 874,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "tag": "SPAN",
+          "cls": "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]",
+          "text": "02",
+          "left": -502,
+          "right": -490,
+          "top": 856,
+          "bottom": 874,
+          "w": 11,
+          "h": 18
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "03",
+          "left": -460,
+          "right": -412,
+          "top": 840,
+          "bottom": 889,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "03",
+          "left": -452,
+          "right": -420,
+          "top": 856,
+          "bottom": 874,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "tag": "SPAN",
+          "cls": "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]",
+          "text": "03",
+          "left": -442,
+          "right": -430,
+          "top": 856,
+          "bottom": 874,
+          "w": 11,
+          "h": 18
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "04",
+          "left": -400,
+          "right": -352,
+          "top": 840,
+          "bottom": 889,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "04",
+          "left": -392,
+          "right": -360,
+          "top": 856,
+          "bottom": 874,
+          "w": 32,
+          "h": 18
+        },
+        {
+          "tag": "SPAN",
+          "cls": "text-[0.72rem] tracking-[-0.03em] sm:text-[0.92rem]",
+          "text": "04",
+          "left": -382,
+          "right": -370,
+          "top": 856,
+          "bottom": 874,
+          "w": 11,
+          "h": 18
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "font-editorial-serif relative inline-flex h-12 items-center justify-center bg-transparent p-0 leading-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black/25",
+          "text": "05",
+          "left": -340,
+          "right": -292,
+          "top": 840,
+          "bottom": 889,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "tag": "SPAN",
+          "cls": "relative inline-flex w-[4.1ch] items-center justify-center",
+          "text": "05",
+          "left": -332,
+          "right": -300,
+          "top": 856,
+          "bottom": 874,
+          "w": 32,
+          "h": 18
+        }
+      ],
+      "images": 4,
+      "brokenImgs": [],
+      "missingAltImgs": [
+        {
+          "src": "data:image/svg+xml,%3c?xml%20version=%271.0%27%20encoding=%27utf-8%27?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2026.1.0,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version=%271.1%27%20xmlns=%27http://www.w3.org/2000/svg%27%20xmlns:xlink=%27http://www.w3.org/1999/xlink%27%20x=%270px%27%20y=%270px%27%20viewBox=%270%200%201080%201080%27%20style=%27enable-background:new%200%200%201080%201080;%27%20xml:space=%27preserve%27%3e%3cg%20id=%27Layer_1%27%3e%3cpolygon%20points=%27773.18,869.28%20781.63,869.28%20673.92,617.96%20669.7,628.52%20%27/%3e%3cpolygon%20points=%27781.63,180.81%20790.08,180.81%20669.7,446.9%20665.48,436.34%20%27/%3e%3cpolygon%20points=%27756.29,869.28%20764.73,869.28%20665.48,639.08%20661.25,651.75%20%27/%3e%3cpolygon%20points=%27764.73,180.81%20772.75,180.81%20652.38,446.9%20650.27,434.23%20%27/%3e%3cpolyline%20points=%27468.48,201.09%20608.71,526.59%20456.7,869.28%20472.41,869.28%20624.42,526.59%20474.22,180.81%20458.51,180.81%20%27/%3e%3c/g%3e%3cg%20id=%27Layer_2%27%3e%3cpolygon%20points=%27483.86,180.81%20564.11,180.81%20677.05,451.13%20798.52,180.81%20876.66,180.81%20717.17,529.27%20866.1,869.28%20790.08,869.28%20680.21,604.84%20572.55,869.28%20485.97,869.28%20635.35,526.8%20%27/%3e%3crect%20x=%27965.36%27%20y=%27180.81%27%20width=%2773.92%27%20height=%27688.47%27/%3e%3crect%20x=%27950.76%27%20y=%27180.68%27%20width=%278.63%27%20height=%27688.38%27/%3e%3crect%20x=%27927.53%27%20y=%27180.81%27%20width=%2714.6%27%20height=%27688.47%27/%3e%3cpolygon%20points=%27341.16,868.87%20349.61,868.87%20241.9,617.56%20237.68,628.12%20%27/%3e%3cpolygon%20points=%27349.61,180.41%20358.05,180.41%20237.68,446.5%20233.45,435.94%20%27/%3e%3cpolygon%20points=%27324.26,868.87%20332.71,868.87%20233.45,638.68%20229.23,651.35%20%27/%3e%3cpolygon%20points=%27332.71,180.41%20340.73,180.41%20220.36,446.5%20218.24,433.83%20%27/%3e%3cpolyline%20points=%2736.46,200.69%20176.69,526.19%2024.68,868.87%2040.38,868.87%20192.4,526.19%2044.31,182.52%2028.6,182.52%20%27/%3e%3cpolygon%20points=%2751.83,180.41%20132.08,180.41%20245.02,450.72%20366.5,180.41%20444.64,180.41%20285.15,528.86%20434.08,868.87%20358.05,868.87%20248.19,604.44%20140.53,868.87%2053.95,868.87%20203.33,526.39%20%27/%3e%3c/g%3e%3c/svg%3e",
+          "alt": "",
+          "naturalWidth": 150,
+          "naturalHeight": 150,
+          "renderedWidth": 350,
+          "renderedHeight": 350,
+          "loading": ""
+        },
+        {
+          "src": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='114%20146%20870%2068'%20fill='none'%3e%3cpath%20d='M121.7%20177l26.62-26.81h9.38l-29.25%2029.16%2030.19%2033.38h-9.56l-25.59-28.69-1.78%201.78v26.91h-6.94v-62.53h6.94V177z'%20fill='%23000'/%3e%3cpath%20d='M181.05%20181.5c0-18.66%2014.53-32.34%2032.53-32.34s32.53%2013.69%2032.53%2032.34c0%2018.56-14.44%2032.34-32.53%2032.34s-32.53-13.78-32.53-32.34zm7.13%200c0%2014.34%2011.34%2025.78%2025.41%2025.78S239%20195.84%20239%20181.5s-11.34-25.78-25.41-25.78-25.41%2011.44-25.41%2025.78z'%20fill='%23000'/%3e%3cpath%20d='M277.06%20212.72l10.41-66%2024%2052.78%2024.47-52.88%209.75%2066.09h-7.12l-5.91-43.5-21.28%2046.12-21-46.12-6.19%2043.5h-7.13z'%20fill='%23000'/%3e%3cpath%20d='M426.41%20150.19v62.53h-6.94v-55.97h-32.06v55.97h-6.94v-62.53h45.94z'%20fill='%23000'/%3e%3cpath%20d='M459.51%20181.5c0-18.66%2014.53-32.34%2032.53-32.34s32.53%2013.69%2032.53%2032.34c0%2018.56-14.44%2032.34-32.53%2032.34s-32.53-13.78-32.53-32.34zm7.12%200c0%2014.34%2011.34%2025.78%2025.41%2025.78s25.41-11.44%2025.41-25.78-11.34-25.78-25.41-25.78-25.41%2011.44-25.41%2025.78z'%20fill='%23000'/%3e%3cpath%20d='M556.08%20158.25c5.06-7.5%2011.81-9.09%2017.91-9.09%203.19%200%208.91.47%2013.22%204.41%202.72%202.44%204.88%206.38%204.88%2011.53%200%206.38-3.75%2010.97-8.62%2013.22%208.34%201.88%2012.56%208.53%2012.56%2016.12%200%207.78-3.94%2012.56-7.78%2015.28-3.94%202.72-9.19%204.12-14.25%204.12-12.38%200-19.41-7.69-22.59-15l6.75-3c2.53%207.03%208.62%2011.44%2016.12%2011.44%203.38%200%206.94-.84%209.56-2.62%204.03-2.81%205.06-6.66%205.06-10.03%200-11.44-10.59-12.28-16.69-12.28h-5.62v-6.56h5.62c8.72%200%2012.75-4.88%2012.75-10.59%200-2.72-1.03-5.06-2.53-6.56-2.44-2.53-6-2.91-8.44-2.91-4.5%200-8.81%201.31-12.56%206.75l-5.44-4.78z'%20fill='%23000'/%3e%3cpath%20d='M672.61%20165l-43.5%2050.53v-65.34h6.94v47.91l43.5-50.53v65.16h-6.94V165z'%20fill='%23000'/%3e%3cpath%20d='M731.4%20156.75v55.97h-6.94v-55.97h-15.19v-6.56h37.31v6.56H731.4z'%20fill='%23000'/%3e%3cpath%20d='M769.65%20181.5c0-18.66%2014.53-32.34%2032.53-32.34s32.53%2013.69%2032.53%2032.34c0%2018.56-14.44%2032.34-32.53%2032.34s-32.53-13.78-32.53-32.34zm7.13%200c0%2014.34%2011.34%2025.78%2025.41%2025.78s25.41-11.44%2025.41-25.78-11.34-25.78-25.41-25.78-25.41%2011.44-25.41%2025.78z'%20fill='%23000'/%3e%3cpath%20d='M879.16%20150.19c6.28%200%2011.53.75%2015.75%204.41%204.59%203.94%205.72%209.47%205.72%2013.41%200%208.81-5.53%2017.53-19.78%2017.53h-6.09v27.19h-6.94v-62.53h11.34zm-4.4%2028.78h5.72c8.25%200%2013.22-4.12%2013.22-11.34%200-9.94-9.28-10.88-13.78-10.88h-5.16v22.22z'%20fill='%23000'/%3e%3cpath%20d='M930.91%20150.19h6.94v25.97h8.44c7.69%200%2021.56%201.59%2021.56%2017.62%200%2011.91-7.97%2018.94-20.25%2018.94h-16.69v-62.53zm6.94%2055.97h8.06c2.81%200%207.97%200%2011.53-3.47%201.69-1.59%203.28-4.41%203.28-8.91%200-3-.75-7.12-5.06-9.47-2.91-1.59-6.66-1.59-10.5-1.59h-7.31v23.44zm43.5-55.97v62.53h-6.94v-62.53h6.94z'%20fill='%23000'/%3e%3c/svg%3e",
+          "alt": "",
+          "naturalWidth": 300,
+          "naturalHeight": 23,
+          "renderedWidth": 329,
+          "renderedHeight": 26,
+          "loading": ""
+        },
+        {
+          "src": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='749%20878%20234%2050'%20fill='none'%3e%3cpath%20d='M763.88%20882.31c2.34%200%206.17.11%209.26%202.55%201.6%201.28%203.83%203.83%203.83%208.3%200%203.83-1.6%207.02-4.79%209.04.75.11%203.19.64%205.32%202.45%201.92%201.7%203.72%204.36%203.72%208.72%200%204.89-2.23%207.77-4.36%209.36-3.4%202.66-7.87%202.98-10.64%202.98h-16.49v-43.41h14.15zm0%2018.94c1.6%200%204.04-.11%206.17-1.81%201.17-.96%202.66-2.77%202.66-5.74%200-2.87-1.49-4.68-2.66-5.64-2.02-1.6-4.79-1.7-6.17-1.7h-9.89v14.89h9.89zm2.34%2020.42c1.6%200%205-.11%207.45-1.92%201.38-1.06%203.09-2.98%203.09-6.49%200-2.77-1.06-4.68-2.87-6.06-2.23-1.7-5.21-1.92-7.66-1.92h-12.23v16.38h12.23z'%20fill='%23000'/%3e%3cpath%20d='M814.62%20904.54c0%2011.06%208.09%2018.3%2017.23%2018.3%207.02%200%2012.34-4.15%2015.11-9.89l3.62%202.13c-2.55%204.89-8.3%2011.81-19.04%2011.81-13.51%200-21.38-10-21.38-22.66%200-15.11%2010.43-22.87%2021.06-22.87%2011.7%200%2020.53%209.36%2020.53%2023.19h-37.13zm32.66-4.04c-1.06-8.62-7.45-15.11-16.06-15.11-8.83%200-15.11%206.7-16.28%2015.11h32.34z'%20fill='%23000'/%3e%3cpath%20d='M887.7%20882.31v20.64l21.92-20.64h5.75l-22.13%2020.64%2023.83%2022.77h-6.17l-20.85-19.89-2.34%202.23v17.66h-4.25v-43.41h4.25z'%20fill='%23000'/%3e%3cpath%20d='M977.81%20882.31h4.25v43.41h-4.25v-7.77c-4.36%206.7-11.28%208.94-16.92%208.94-11.38%200-21.17-8.62-21.17-22.87%200-13.4%208.51-22.66%2021.17-22.66%206.81%200%2012.77%202.66%2016.92%208.51v-7.56zm-33.62%2021.38c0%209.79%206.06%2019.15%2017.02%2019.15%2010.85%200%2016.81-9.15%2016.81-19.15%200-12.87-9.47-18.3-16.92-18.3-8.61.01-16.91%206.5-16.91%2018.3z'%20fill='%23000'/%3e%3c/svg%3e",
+          "alt": "",
+          "naturalWidth": 300,
+          "naturalHeight": 64,
+          "renderedWidth": 78,
+          "renderedHeight": 17,
+          "loading": ""
+        }
+      ],
+      "links": 12,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "w": 86,
+          "h": 24
+        },
+        {
+          "tag": "A",
+          "text": "ПРОГРАММА ФЕСТИВАЛЯ →",
+          "w": 143,
+          "h": 9
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 166,
+          "h": 21
+        },
+        {
+          "tag": "BUTTON",
+          "text": "OK",
+          "w": 35,
+          "h": 24
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "mobile",
+    "route": "/festival",
+    "url": "http://127.0.0.1:5173/festival",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\mobile-festival.png",
+    "gotoError": "",
+    "consoleMessages": [
+      "warning: Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly."
+    ],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [],
+      "scroll": {
+        "width": 390,
+        "clientWidth": 390,
+        "bodyWidth": 390,
+        "height": 2774
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 12,
+      "brokenImgs": [],
+      "missingAltImgs": [
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png",
+          "alt": "",
+          "naturalWidth": 1198,
+          "naturalHeight": 834,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png",
+          "alt": "",
+          "naturalWidth": 1198,
+          "naturalHeight": 834,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png",
+          "alt": "",
+          "naturalWidth": 1198,
+          "naturalHeight": 834,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png",
+          "alt": "",
+          "naturalWidth": 1198,
+          "naturalHeight": 834,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        },
+        {
+          "src": "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png",
+          "alt": "",
+          "naturalWidth": 2560,
+          "naturalHeight": 987,
+          "renderedWidth": 0,
+          "renderedHeight": 0,
+          "loading": ""
+        }
+      ],
+      "links": 11,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "w": 86,
+          "h": 24
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "mobile",
+    "route": "/academies",
+    "url": "http://127.0.0.1:5173/academies",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\mobile-academies.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "Академии — Композиторы XXI века",
+      "h1s": [
+        "Академии"
+      ],
+      "scroll": {
+        "width": 390,
+        "clientWidth": 390,
+        "bodyWidth": 390,
+        "height": 3240
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 3,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 11,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "w": 86,
+          "h": 24
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "mobile",
+    "route": "/festival-lab",
+    "url": "http://127.0.0.1:5173/festival-lab",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\mobile-festival-lab.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [
+        "Нотный стан как сцена"
+      ],
+      "scroll": {
+        "width": 390,
+        "clientWidth": 390,
+        "bodyWidth": 390,
+        "height": 4647
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 0,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 13,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "w": 86,
+          "h": 24
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "mobile",
+    "route": "/afisha",
+    "url": "http://127.0.0.1:5173/afisha",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\mobile-afisha.png",
+    "gotoError": "",
+    "consoleMessages": [
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. ",
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. ",
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. ",
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. ",
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. ",
+      "error: Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. "
+    ],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [],
+      "scroll": {
+        "width": 390,
+        "clientWidth": 390,
+        "bodyWidth": 390,
+        "height": 6083
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 15,
+      "brokenImgs": [],
+      "missingAltImgs": [
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/LundinNovikov.webp",
+          "alt": "",
+          "naturalWidth": 1985,
+          "naturalHeight": 1440,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/a9da4c31_IMG_20260303_105903_.webp",
+          "alt": "",
+          "naturalWidth": 1680,
+          "naturalHeight": 1119,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/chamberconcerthero.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 842,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/cd0d075c_db39c27515a4605ed73c.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 901,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/48f5939f_IMG-20251121-WA0020.webp",
+          "alt": "",
+          "naturalWidth": 960,
+          "naturalHeight": 1280,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/aca5621a_6362729948f1e85335ac.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 675,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/d6c06a4b_50d42752bd6c38e0c9da.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/f4a26f9e_9ba87e7e7bb322482d4d.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/6c7af7d8_0c98a711c715d8f20ff7.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/bfd7db6d_50a0894752382d8d9b1a.webp",
+          "alt": "",
+          "naturalWidth": 1600,
+          "naturalHeight": 900,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/c31dbe0b_61afb70ee5afd7e2710b.webp",
+          "alt": "",
+          "naturalWidth": 1600,
+          "naturalHeight": 1067,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/5f68f703_5ef851e0c6992bfd3e44.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 949,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/6ff3de26_6b1b5d1bd1f856318444.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 866,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/milyausha-khayrullina.jpg",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 814,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        },
+        {
+          "src": "http://127.0.0.1:5173/assets/external/heroafisha/finalconcert.webp",
+          "alt": "",
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "renderedWidth": 350,
+          "renderedHeight": 263,
+          "loading": ""
+        }
+      ],
+      "links": 25,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "w": 86,
+          "h": 24
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "БИЛЕТЫ",
+          "w": 69,
+          "h": 22
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "mobile",
+    "route": "/participants",
+    "url": "http://127.0.0.1:5173/participants",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\mobile-participants.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [],
+      "scroll": {
+        "width": 390,
+        "clientWidth": 390,
+        "bodyWidth": 390,
+        "height": 24686
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 42,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 11,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "w": 86,
+          "h": 24
+        },
+        {
+          "tag": "BUTTON",
+          "text": "КОМПОЗИТОРЫ",
+          "w": 145,
+          "h": 24
+        },
+        {
+          "tag": "BUTTON",
+          "text": "ИСПОЛНИТЕЛИ",
+          "w": 143,
+          "h": 24
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "mobile",
+    "route": "/partners",
+    "url": "http://127.0.0.1:5173/partners",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\mobile-partners.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [],
+      "scroll": {
+        "width": 390,
+        "clientWidth": 390,
+        "bodyWidth": 390,
+        "height": 1646
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 9,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 19,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "w": 86,
+          "h": 24
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  },
+  {
+    "viewport": "mobile",
+    "route": "/privacy",
+    "url": "http://127.0.0.1:5173/privacy",
+    "screenshot": "C:\\Users\\user\\.codex\\memories\\composers21-main-merge\\.tmp-audit\\screens\\mobile-privacy.png",
+    "gotoError": "",
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": [],
+    "metrics": {
+      "title": "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
+      "h1s": [
+        "Политика конфиденциальности"
+      ],
+      "scroll": {
+        "width": 390,
+        "clientWidth": 390,
+        "bodyWidth": 390,
+        "height": 1448
+      },
+      "horizontalOverflow": false,
+      "overflowOffenders": [],
+      "images": 0,
+      "brokenImgs": [],
+      "missingAltImgs": [],
+      "links": 12,
+      "weakLinks": [],
+      "tinyTargets": [
+        {
+          "tag": "A",
+          "text": "Афиша",
+          "w": 67,
+          "h": 30
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Меню",
+          "w": 86,
+          "h": 24
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 125,
+          "h": 23
+        },
+        {
+          "tag": "A",
+          "text": "+7 926 276 8057",
+          "w": 104,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "shtillwater@list.ru",
+          "w": 117,
+          "h": 19
+        },
+        {
+          "tag": "A",
+          "text": "Политика конфиденциальности",
+          "w": 212,
+          "h": 19
+        }
+      ],
+      "mojibakeCount": 0,
+      "mojibakeSamples": []
+    }
+  }
+]

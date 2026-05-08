@@ -24,7 +24,7 @@ function CookieNotice() {
 
   return (
     <aside
-      className="font-editorial-sans fixed bottom-7 left-4 z-[60] max-w-[calc(100vw-2rem)] border border-black/8 bg-white px-4 py-[10px] text-[11px] leading-5 text-neutral-600 sm:bottom-8 sm:left-5 sm:max-w-[360px] sm:px-5"
+      className="font-editorial-sans fixed bottom-7 left-4 z-30 max-w-[calc(100vw-2rem)] border border-black/8 bg-white px-4 py-[10px] text-[11px] leading-5 text-neutral-600 sm:bottom-8 sm:left-5 sm:max-w-[360px] sm:px-5"
       aria-label="Cookie"
     >
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1">

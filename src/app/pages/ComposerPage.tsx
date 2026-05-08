@@ -78,6 +78,8 @@ export function ComposerPage() {
                       transition={{ duration: 0.9, ease: "easeOut" }}
                       src={composer.image}
                       alt={composer.name}
+                      loading="eager"
+                      decoding="async"
                       className={["lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]", imageClassName].join(" ")}
                     />
                   </div>

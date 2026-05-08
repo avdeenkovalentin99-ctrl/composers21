@@ -2,7 +2,8 @@ import { MouseEvent, useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { festivalInfo, navigationItems } from "../data/site";
+import { festivalInfo } from "../data/festival";
+import { navigationItems } from "../data/navigation";
 import { PageContainer } from "./PageContainer";
 
 function getNavClassName(isActive: boolean) {

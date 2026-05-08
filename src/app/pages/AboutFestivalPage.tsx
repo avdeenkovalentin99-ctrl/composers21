@@ -249,6 +249,8 @@ function FestivalCutoutMock({
             src={primaryImageSrc}
             alt=""
             aria-hidden="true"
+            loading="lazy"
+            decoding="async"
             className="absolute max-w-none will-change-transform"
             style={{
               width: frameSize.width || undefined,
@@ -279,6 +281,8 @@ function FestivalCutoutMock({
               src={secondaryImageSrc ?? primaryImageSrc}
               alt=""
               aria-hidden="true"
+              loading="lazy"
+              decoding="async"
               className="absolute max-w-none will-change-transform"
               style={{
                 width: frameSize.width || undefined,
@@ -506,6 +510,7 @@ export function AboutFestivalPage() {
     <>
       <section ref={festivalSectionRef} className="relative pb-20 pt-28 sm:pb-24 sm:pt-32">
         <PageContainer className="space-y-18 sm:space-y-24">
+          <h1 className="sr-only">О фестивале</h1>
           <div className="mx-auto grid max-w-6xl gap-8 pb-24 pt-5 sm:pb-28 sm:pt-6 md:px-4 lg:grid-cols-[minmax(0,65fr)_minmax(0,35fr)] lg:items-start lg:gap-10 lg:px-0 xl:grid-cols-[720px_minmax(0,1fr)] xl:gap-12">
             <div>
               <p className={`${sideLabelClassName} mb-8 sm:mb-10 lg:mb-12`}>
@@ -517,40 +522,6 @@ export function AboutFestivalPage() {
                 {festivalIntroParagraphs.slice(1).map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
-              </div>
-              <div className="hidden">
-                <div className="relative ml-auto mt-12 h-[320px] w-[78%] max-w-[520px]">
-                  <div className="pointer-events-none absolute bottom-[38px] left-[6%] right-0 top-[58px]">
-                    <div className="absolute inset-0 overflow-hidden">
-                      <motion.img
-                        src={nikoGalleryHeroSecondImage}
-                        alt=""
-                        aria-hidden="true"
-                        className="absolute inset-0 h-full w-full object-cover will-change-transform"
-                        style={{
-                          x: projectImageX,
-                          scale: projectImageScale,
-                          filter: projectImageFilter,
-                          objectPosition: "8% 68%",
-                        }}
-                      />
-                    </div>
-                    <div className="absolute bottom-[-18px] right-[calc(100%+0.375rem)] top-[32px] w-[12px] overflow-hidden">
-                      <motion.img
-                        src={nikoGalleryHeroSecondImage}
-                        alt=""
-                        aria-hidden="true"
-                        className="absolute inset-0 h-full w-full object-cover will-change-transform"
-                        style={{
-                          x: projectImageX,
-                          scale: projectImageScale,
-                          filter: projectImageFilter,
-                          objectPosition: "8% 68%",
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="order-first hidden lg:order-none lg:block">
@@ -567,6 +538,8 @@ export function AboutFestivalPage() {
                       src={nikoGalleryHeroSecondImage}
                       alt=""
                       aria-hidden="true"
+                      loading="eager"
+                      decoding="async"
                       className="absolute max-w-none will-change-transform"
                       style={{
                         width: projectImageLayerWidth,
@@ -591,6 +564,8 @@ export function AboutFestivalPage() {
                       src={nikoGalleryHeroSecondImage}
                       alt=""
                       aria-hidden="true"
+                      loading="eager"
+                      decoding="async"
                       className="absolute max-w-none will-change-transform"
                       style={{
                         width: projectImageLayerWidth,
@@ -613,19 +588,6 @@ export function AboutFestivalPage() {
 
           <div className="pb-10 pt-8 sm:pb-14 md:px-4 lg:px-0">
             <div className="mx-auto grid max-w-6xl gap-10 sm:gap-12 lg:grid-cols-[minmax(0,35fr)_minmax(0,65fr)] lg:items-start lg:gap-10 xl:grid-cols-[minmax(320px,1fr)_720px] xl:gap-12">
-              <div className="hidden">
-                <FestivalCutoutMock
-                  frameClassName="-mt-[8px] h-[300px] w-[78%] max-w-[500px] -ml-[2%]"
-                  primaryWindowClassName="bottom-0 left-0 right-[26px] top-[18px]"
-                  secondaryWindowClassName="right-[-6px] top-[12px] bottom-[14px] w-[12px]"
-                  primaryImageSrc={nikoGalleryPianoDetailImage}
-                  primaryImagePosition="56% 68%"
-                  secondaryImageSrc={nikoGalleryPianoDetailImage}
-                  primaryXRange={[-22, 28]}
-                  secondaryRevealScaleXRange={[0, 1]}
-                  secondaryRevealOrigin="left"
-                />
-              </div>
               <div className="hidden lg:flex lg:flex-col">
                 <FestivalCutoutMock
                   frameClassName="-mt-[10px] h-[296px] w-[128%] max-w-none -ml-[10%] sm:-mt-[14px] sm:h-[372px] sm:w-[132%] sm:-ml-[14%] lg:-mt-[10px] lg:h-[318px] lg:w-[100%] lg:-ml-[1vw] xl:-mt-[26px] xl:w-[138%] xl:-ml-[16vw]"
@@ -667,18 +629,6 @@ export function AboutFestivalPage() {
                   {spaceParagraphs.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
-                </div>
-                <div className="hidden">
-                  <FestivalCutoutMock
-                    align="right"
-                    frameClassName="-mt-[8px] ml-auto mt-12 h-[468px] w-[92%] max-w-[680px]"
-                    primaryWindowClassName="bottom-[10px] left-[14px] right-0 top-[12px]"
-                    secondaryWindowClassName="bottom-[10px] left-[-6px] top-[22px] w-[12px]"
-                    primaryImageSrc={nikoGalleryHeroPanoramaImage}
-                    primaryImagePosition="46% 62%"
-                    secondaryImageSrc={nikoGalleryHeroPanoramaImage}
-                    primaryXRange={[24, -28]}
-                  />
                 </div>
               </div>
 

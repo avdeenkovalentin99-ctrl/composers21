@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 import { useSearchParams } from "react-router-dom";
-import { concertProgrammes } from "../data/site";
+import { concertProgrammes } from "../data/concertProgrammes";
 import { PageContainer } from "../layout/PageContainer";
 import { resolvePublicAssetPath } from "../utils/assets";
 import { sendMetrikaGoal } from "../utils/yandexMetrika";
@@ -11,7 +11,7 @@ type EventItem = (typeof concertProgrammes)[number];
 
 const concertStartTime = "19:30";
 const queryKeyByConcertId = {
-  "2026-05-10-peletcis-24-kaprisa": "10may",
+  "2026-05-10-peletsis-24-kaprisa": "10may",
   "2026-05-12-il-theleme-de-la-nuite": "2026-05-12-il-theleme-de-la-nuite",
   "2026-05-13-v-ischezayushem-gorode": "13may",
   "2026-05-15-solisty-nizhnego-novgoroda": "2026-05-15-solisty-nizhnego-novgoroda",
@@ -28,7 +28,7 @@ const queryKeyByConcertId = {
   "2026-05-31-gromche-slova": "2026-05-31-gromche-slova",
 } as const;
 const concertIdByQueryKey = {
-  "10may": "2026-05-10-peletcis-24-kaprisa",
+  "10may": "2026-05-10-peletsis-24-kaprisa",
   "2026-05-12-il-theleme-de-la-nuite": "2026-05-12-il-theleme-de-la-nuite",
   "13may": "2026-05-13-v-ischezayushem-gorode",
   "2026-05-15-solisty-nizhnego-novgoroda": "2026-05-15-solisty-nizhnego-novgoroda",
@@ -59,6 +59,29 @@ function buildEventDate(dateLabel: string) {
     weekday: weekdayFormatter.format(date).replace(".", "").toUpperCase(),
     month: monthFormatter.format(date).replace(".", "").toUpperCase(),
   };
+}
+
+function renderTextRows(items: string[], keyPrefix: string, gapClassName = "h-4") {
+  return items.map((item, index) => {
+    const normalizedItem = item.trim();
+
+    if (normalizedItem === "") {
+      return <div key={`${keyPrefix}-gap-${index}`} aria-hidden="true" className={gapClassName} />;
+    }
+
+    if (/^\d+\s+отделение$/i.test(normalizedItem)) {
+      return (
+        <p
+          key={`${keyPrefix}-section-${index}`}
+          className="font-editorial-sans pt-1 text-[12px] uppercase tracking-[0.14em] text-neutral-500"
+        >
+          {item}
+        </p>
+      );
+    }
+
+    return <p key={`${keyPrefix}-item-${index}`}>{item}</p>;
+  });
 }
 
 function EventAccordion({
@@ -203,9 +226,7 @@ function EventAccordion({
                         {"\u041F\u0420\u041E\u0413\u0420\u0410\u041C\u041C\u0410"}
                       </p>
                       <div className="font-editorial-serif space-y-3 text-base leading-8 text-neutral-800">
-                        {event.programme.map((item) => (
-                          <p key={item}>{item}</p>
-                        ))}
+                        {renderTextRows(event.programme, `${event.id}-programme`)}
                       </div>
                     </div>
 
@@ -214,31 +235,25 @@ function EventAccordion({
                         {"\u0418\u0421\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u0418"}
                       </p>
                       <div className="font-editorial-serif space-y-2 text-[1.04rem] leading-7 text-neutral-800">
-                        {event.performers.map((item, index) =>
-                          item.trim() === "" ? (
-                            <div
-                              key={`${event.id}-performer-gap-${index}`}
-                              aria-hidden="true"
-                              className="h-4"
-                            />
-                          ) : (
-                            <p key={`${event.id}-performer-${index}`}>{item}</p>
-                          ),
-                        )}
+                        {renderTextRows(event.performers, `${event.id}-performer`)}
                       </div>
                     </div>
                   </div>
 
                   <div className="order-first xl:order-last xl:justify-self-end xl:pt-2">
-                    <img
-                      src={resolvePublicAssetPath(event.image)}
-                      alt=""
-                      aria-hidden="true"
-                      className={[
-                        "aspect-[4/3] h-auto w-full object-cover object-center xl:w-[340px]",
-                        keepPosterInColor ? "" : "grayscale",
-                      ].join(" ")}
-                    />
+                    {isOpen ? (
+                      <img
+                        src={resolvePublicAssetPath(event.image)}
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                        className={[
+                          "aspect-[4/3] h-auto w-full object-cover object-center xl:w-[340px]",
+                          keepPosterInColor ? "" : "grayscale",
+                        ].join(" ")}
+                      />
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -407,9 +422,9 @@ export function AfishaPage() {
     >
       <PageContainer className="space-y-7 sm:space-y-8">
         <div>
-          <p className="font-editorial-serif text-[1.9rem] leading-[0.95] font-normal tracking-[0.08em] lowercase text-neutral-900 sm:text-[2.2rem] lg:text-[2.5rem]">
+          <h1 className="font-editorial-serif text-[1.9rem] leading-[0.95] font-normal tracking-[0.08em] lowercase text-neutral-900 sm:text-[2.2rem] lg:text-[2.5rem]">
             {"\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043B\u044F"}
-          </p>
+          </h1>
         </div>
 
         <div className="divide-y divide-black/8">
