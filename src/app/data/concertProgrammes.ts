@@ -14,14 +14,14 @@ export const concertProgrammes: ConcertProgrammeItem[] = [
   {
     id: "2026-05-12-il-theleme-de-la-nuite",
     date: "12 мая",
-    title: "Ансамбль Île Thélème. «De la Nuite» («О ночи»)",
+    title: "Île Thélème Ensemble. «De la nuit» («О ночи»)",
     description: "Саариахо · Ретинский · Крам · Мустукис · Шаррино",
     programme: [
       "Кайя Саариахо (1952-2023) «Vent Nocturne»",
       "Алексей Ретинский (род. 1986) «Dream of Birds»",
       "Джордж Крам (1929-2022). Четыре ноктюрна для скрипки и фортепиано",
       "Андреас Мустукис (род. 1951) «Les Fleur du Mal»",
-      "Сальваторе Шаррино (род. 1947) «De la Nuite»",
+      "Сальваторе Шаррино (род. 1947) «De la nuit»",
       "Алексей Ретинский (род. 1986). Трио для скрипки, виолончели и фортепиано",
     ],
     performers: [

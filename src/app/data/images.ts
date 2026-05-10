@@ -1,5 +1,6 @@
 import ileThelemeLogoBlack from "../../../Ile_theleme_logo_black.png";
 import gnessinLogo from "../../../Gnessinlogo.png";
+import tarusaLogo from "../../../tarusalogo.png";
 
 const participantImageModules = import.meta.glob("../../assets/participants/*", {
   eager: true,
@@ -29,6 +30,7 @@ const tursunovImage = getParticipantImage("tursunov.jpg");
 export const localImages = {
   ileThelemeLogoBlack,
   gnessinLogo,
+  tarusaLogo,
   aleksandrChaikovskyImage,
   akhunovImage,
   alisaTenImage,

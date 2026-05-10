@@ -30,6 +30,14 @@ export const partners: PartnerItem[] = [
   {
     tier: "general",
     role: "Генеральный партнёр",
+    name: "Дом литераторов | Таруса",
+    description: "",
+    image: localImages.tarusaLogo,
+    link: "https://t.me/a097789",
+  },
+  {
+    tier: "general",
+    role: "Генеральный партнёр",
     name: "Île Thélème",
     description:
       "Île Thélème — художественное пространство в Москве, где выставки, концерты, лекции и кинопоказы складываются в единую культурную программу.",

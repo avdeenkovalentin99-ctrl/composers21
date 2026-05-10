@@ -215,7 +215,7 @@ export function HomeHero() {
   const nizhnySoloistsTitleLine1 = isNizhnySoloistsPoster ? "Солисты Нижнего Новгорода" : "";
   const nizhnySoloistsTitleLine2 = isNizhnySoloistsPoster ? "«Цветущий жасмин»" : "";
   const deLaNuiteTitleLine1 = isDeLaNuitePoster ? "Île Thélème Ensemble" : "";
-  const deLaNuiteTitleLine2 = isDeLaNuitePoster ? "«De la Nuite» («О ночи»)" : "";
+  const deLaNuiteTitleLine2 = isDeLaNuitePoster ? "«De la nuit» («О ночи»)" : "";
   const vischezayushemGorodeTitleLine1 = isVIschezayushemGorodePoster ? "" : "";
   const vischezayushemGorodeTitleLine2 = isVIschezayushemGorodePoster ? "" : "";
   const displayDescription = activePoster.description;
