@@ -2,16 +2,15 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { PageContainer } from "../layout/PageContainer";
 
-const pageTitle = "Академии";
-const metaTitle = "Академии — Композиторы XXI века";
-const metaDescription =
-  "Параллельная программа фестиваля “Композиторы XXI века”: беседы, мастер-классы и встречи с участниками фестиваля.";
+const pageDate = "14–22 мая";
+const pageTitle = "Встречи с композиторами и музыкантами";
+const metaTitle = "Встречи с композиторами и музыкантами";
+const metaDescription = "Встречи с композиторами и музыкантами.";
 
 const introParagraphs = [
-  "В Île Thélème пройдет параллельная программа фестиваля — “Академии”.",
-  "Беседы, мастер-классы и открытые встречи, посвященные музыкальному мышлению, композиторским практикам и современному художественному языку.",
+  "В Île Thélème мы проведем параллельную программу фестиваля. Эта часть фестиваля живет в подвижном, импровизированном формате и сочетает интервью, живое общение со зрителями и мастер-классы. Каждый раз мы будем подстраивать этот формат под конкретных участников, чтобы наиболее полно раскрыть мир их идей.",
   "Все встречи проведет Варвара Мягкова.",
-  "Для студентов музыкальных направлений вход свободный.",
+  "Для студентов музыкальных направлений вход бесплатный — для регистрации пишите на info@ile-theleme.com.",
 ];
 
 const ticketLabel = "Билеты";
@@ -25,10 +24,10 @@ const academyEvents = [
     teaser:
       "Композитор расскажет о своем опыте сочинительства и о том, что делает классическую музыку долговечной.",
     paragraphs: [
-      "Композитор расскажет о своем опыте сочинительства, о том, чем искусство отличается от подражания искусству и о том, что делает классическую музыку долговечной в отличие от других жанров.",
-      "В разговоре будут затронуты вопросы вдохновения, смыслов, природы искусства и того, что мы всегда ощущали, слушая музыку, но не могли определить до конца.",
+      "Композитор расскажет о своем опыте сочинительства, о том, чем искусство отличается от подражания искусству и о том, что делает классическую музыку долговечной в отличие от дургих жанров. В разговоре затронем и другие сложные вопросы: о вдохновении, смыслах, искусстве как таковом и обо всем, что мы всегда ощущали, слушая музыку, но так и не смогли определить до конца.",
     ],
-    highlight: "Что мы всегда ощущали, слушая музыку, но не могли определить до конца.",
+    highlight:
+      "«Это беседы в прямом смысле слова. Все, что я расскажу, я приобрел из своего собственного опыта сочинительства и именно этим опытом я хочу поделится со слушателем. В беседах нет ни одной «вычитанной» мысли, и, если таковая найдется, я обязательно упомяну того, кого я цитирую. Я коснусь вещей, которые очень сложно выразить словами, не говоря о том, чтобы их объяснить. Но именно эти вещи составляют существо музыки и именно к пониманию их мы приблизимся насколько это возможно». — Композитор Сергей Ахунов.",
     image: "/assets/academies/akhunov-academy.jpg",
     imageAlt: "Сергей Ахунов",
     ticketLabel,
@@ -36,7 +35,7 @@ const academyEvents = [
   },
   {
     id: "festival-creators-meeting",
-    date: "17 мая — 16:00",
+    date: "17 мая — 19:00",
     title: "Встреча с создателями фестиваля",
     teaser: "Разговор о фестивале, композиторах, музыкантах, проблемах и задачах современной музыкальной среды.",
     paragraphs: [
@@ -47,29 +46,27 @@ const academyEvents = [
       "Наталья Соколовская — художественный руководитель Île Thélème Ensemble, пианистка, композитор.",
       "Юра Гинзбург — музыкант-мультиинструменталист, композитор, саунд-дизайнер. Принимал участие во многих известных фестивалях, в том числе в Зальцбурге, Люцерне, Руре, Бремене, Венецианской биеннале.",
       "Екатерина Мочалова — исполнительница на домре и мандолине, солистка и концертмейстер Национального академического оркестра народных инструментов России имени Осипова.",
-      "Разговоры будут прерываться музыкой, затем продолжаться, и вновь перетекать в музыку.",
     ],
     highlight: "Разговоры будут прерываться музыкой, затем продолжаться, и вновь перетекать в музыку.",
     image: "/assets/academies/myagkova-academy.jpg",
     imageAlt: "Встреча с создателями фестиваля",
     ticketLabel,
-    href: "https://widget.afisha.yandex.ru/w/sessions/NTA3NTV8ODI4OTc2fDQ0MzQzNTB8MTc3OTAyMjgwMDAwMA==?clientKey=e674ad9f-44e9-44b9-ae30-c68f2e27e228",
+    href: "https://widget.afisha.yandex.ru/w/sessions/NTA3NTV8ODI4OTc2fDQ0MzQzNTB8MTc3OTAzMzYwMDAwMA==?clientKey=e674ad9f-44e9-44b9-ae30-c68f2e27e228",
   },
   {
     id: "ile-theleme-ensemble-meeting",
-    date: "22 мая — 16:00",
+    date: "22 мая — 19:00",
     title: "Встреча с Île Thélème Ensemble",
     teaser: "Поговорим о современном репертуаре, новых средствах выразительности и задачах исполнителя.",
     paragraphs: [
       "Мы поговорим о современном репертуаре, новых средствах выразительности, основных сложностях и задачах исполнителя.",
       "Île Thélème Ensemble — резиденты галереи, содружество музыкантов, которым подвластны все форматы и стили камерной музыки. Интеллектуально взвешенная и одновременно страстная манера исполнения, интерес к малоизвестной или совершенно неизвестной музыке XIX-XXI веков, концептуальные программы, в которых произведения далекого прошлого вступают в диалог с новейшей музыкой — все это составляет суть творческого метода ансамбля. Художественный руководитель — Наталья Соколовская.",
-      "Ансамбль и его худрук Наталья Соколовская сыграют избранные опусы из репертуара.",
     ],
-    highlight: "Произведения далекого прошлого вступают в диалог с новейшей музыкой.",
+    highlight: "Ансамбль и его худрук Наталья Соколовская сыграют избранные опусы из репертуара.",
     image: "/assets/academies/ile-theleme-academy.jpg",
     imageAlt: "Île Thélème Ensemble",
     ticketLabel,
-    href: "https://widget.afisha.yandex.ru/w/sessions/NTA3NTV8ODI4OTgzfDQ0MzQzNTB8MTc3OTQ1NDgwMDAwMA==?clientKey=e674ad9f-44e9-44b9-ae30-c68f2e27e228",
+    href: "https://widget.afisha.yandex.ru/w/sessions/NTA3NTV8ODI4OTgzfDQ0MzQzNTB8MTc3OTQ2NTYwMDAwMA==?clientKey=e674ad9f-44e9-44b9-ae30-c68f2e27e228",
   },
 ];
 
@@ -140,7 +137,7 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
       {event ? (
         <>
         <motion.div
-          className="fixed inset-0 z-50 overflow-y-auto bg-[#f8f7f3]/95 text-neutral-950 backdrop-blur-[2px]"
+          className="fixed inset-0 z-[60] overflow-y-auto bg-[#f8f7f3] text-neutral-950"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -149,8 +146,8 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
           aria-modal="true"
           aria-labelledby={`academy-overlay-${event.id}`}
         >
-          <div className="min-h-screen px-5 py-20 sm:px-8 sm:py-24 lg:px-14 lg:py-16">
-            <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[minmax(0,0.43fr)_minmax(0,0.57fr)] lg:gap-20 xl:gap-28">
+          <div className="min-h-screen px-5 pb-16 pt-20 sm:px-8 sm:py-24 lg:px-14 lg:py-16">
+            <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] lg:gap-16 xl:gap-20">
               <motion.div
                 className="lg:sticky lg:top-16 lg:self-start"
                 initial={{ opacity: 0, y: 18 }}
@@ -162,12 +159,12 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
                   alt={event.imageAlt}
                   loading="eager"
                   decoding="async"
-                  className="max-h-[76vh] w-full object-cover grayscale lg:min-h-[62vh]"
+                  className="max-h-[70vh] w-full object-cover grayscale lg:min-h-[62vh]"
                 />
               </motion.div>
 
               <motion.div
-                className="pb-14 lg:pb-28 lg:pt-[10vh]"
+                className="max-w-[640px] pb-14 pr-12 sm:pr-0 lg:pb-24"
                 initial={{ opacity: 0, y: 22 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.14, ease: [0.42, 0, 0.58, 1] }}
@@ -178,23 +175,23 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
 
                 <h2
                   id={`academy-overlay-${event.id}`}
-                  className="font-editorial-serif mt-8 max-w-4xl text-[3.3rem] font-normal leading-[0.96] text-neutral-950 sm:text-[5rem] lg:text-[6.2rem]"
+                  className="font-editorial-serif mt-7 max-w-[600px] text-[2rem] font-normal leading-[1.08] text-neutral-950 sm:text-[2.75rem] sm:leading-[1.04] lg:text-[3.25rem]"
                 >
                   {event.title}
                 </h2>
 
-                <div className="mt-20 max-w-3xl space-y-10 font-editorial-serif text-[1.25rem] leading-9 text-neutral-700 sm:text-[1.42rem] sm:leading-10">
+                <div className="mt-12 max-w-[560px] space-y-7 font-editorial-serif text-[1.08rem] leading-8 text-neutral-700 sm:mt-14 sm:text-[1.18rem] sm:leading-8">
                   {event.paragraphs.slice(0, 2).map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
 
-                <blockquote className="font-editorial-serif my-20 max-w-3xl text-[2.15rem] font-normal leading-[1.06] text-neutral-950 sm:my-24 sm:text-[3rem]">
+                <blockquote className="font-editorial-serif my-12 max-w-[520px] border-l border-black/10 pl-5 text-[1.12rem] font-normal leading-8 text-neutral-800 sm:my-14 sm:text-[1.24rem] sm:leading-8">
                   {event.highlight}
                 </blockquote>
 
                 {event.paragraphs.length > 2 ? (
-                  <div className="max-w-3xl space-y-8 font-editorial-serif text-[1.14rem] leading-8 text-neutral-700 sm:text-[1.28rem] sm:leading-9">
+                  <div className="max-w-[560px] space-y-6 font-editorial-serif text-[1.04rem] leading-8 text-neutral-700 sm:text-[1.12rem] sm:leading-8">
                     {event.paragraphs.slice(2).map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
@@ -205,7 +202,7 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
                   href={event.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-editorial-sans mt-20 inline-flex border-b border-black/20 pb-1 text-[11px] uppercase tracking-[0.18em] text-neutral-600 transition-colors duration-200 hover:border-black/40 hover:text-neutral-950"
+                  className="font-editorial-sans mt-14 inline-flex border-b border-black/20 pb-1 text-[11px] uppercase tracking-[0.18em] text-neutral-600 transition-colors duration-200 hover:border-black/40 hover:text-neutral-950 sm:mt-16"
                 >
                   {event.ticketLabel}
                 </a>
@@ -216,7 +213,7 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
 
           <button
             type="button"
-            className="font-editorial-sans fixed right-5 top-5 z-60 flex h-10 w-10 items-center justify-center text-2xl leading-none text-neutral-500 transition-colors duration-200 hover:text-neutral-950 sm:right-8 sm:top-8"
+            className="font-editorial-sans fixed right-4 top-4 z-[80] flex h-11 w-11 items-center justify-center border border-black/10 bg-[#f8f7f3] text-2xl leading-none text-neutral-500 transition-colors duration-200 hover:text-neutral-950 sm:right-8 sm:top-8"
             onClick={onClose}
             aria-label="Закрыть"
           >
@@ -237,8 +234,15 @@ export function AcademiesPage() {
     <section className="pb-20 pt-32 text-neutral-950 sm:pb-24 sm:pt-36">
       <PageContainer>
         <div className="mx-auto max-w-6xl">
-          <h1 className="sr-only">{pageTitle}</h1>
           <div className="pb-8 sm:pb-10 lg:pb-12">
+            <div className="mb-10 max-w-2xl sm:mb-12">
+              <p className="font-editorial-sans text-[11px] leading-5 text-neutral-400">
+                {pageDate}
+              </p>
+              <h1 className="font-editorial-serif mt-4 text-[1.55rem] font-normal leading-[1.28] text-neutral-900 sm:text-[1.85rem] sm:leading-[1.22] lg:text-[2.05rem]">
+                {pageTitle}
+              </h1>
+            </div>
             <div className="font-editorial-serif max-w-2xl space-y-5 text-left text-[1.02rem] leading-8 text-neutral-700 sm:text-[1.1rem] sm:leading-8">
               {introParagraphs.map((paragraph, index) => (
                 <p key={paragraph} className={index > 1 ? "text-neutral-600" : ""}>

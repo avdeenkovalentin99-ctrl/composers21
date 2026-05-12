@@ -41,8 +41,8 @@ const PAGE_META_BY_PATHNAME: Record<string, PageMeta> = {
     canonicalPath: "/festival",
   },
   "/academies": {
-    title: "Академии — Композиторы XXI века",
-    description: "Параллельная программа фестиваля: беседы, мастер-классы и открытые встречи с участниками.",
+    title: "Встречи с композиторами и музыкантами",
+    description: "Встречи с композиторами и музыкантами.",
     canonicalPath: "/academies",
   },
   "/festival-lab": {
