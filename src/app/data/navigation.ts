@@ -7,5 +7,6 @@ export const navigationItems: NavItem[] = [
   { label: "\u0424\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044c", to: "/festival" },
   { label: "\u0410\u043a\u0430\u0434\u0435\u043c\u0438\u0438", to: "/academies" },
   { label: "\u0423\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u0438", to: "/participants" },
+  { label: "\u0422\u0440\u0430\u043d\u0441\u043b\u044f\u0446\u0438\u0438", to: "/translyatsii" },
   { label: "\u041f\u0430\u0440\u0442\u043d\u0451\u0440\u044b", to: "/partners" },
 ];

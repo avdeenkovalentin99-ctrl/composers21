@@ -98,6 +98,7 @@ function EventAccordion({
   shouldAnimateOnMount: boolean;
 }) {
   const dateParts = useMemo(() => buildEventDate(event.date), [event.date]);
+  const eventStartTime = event.time ?? concertStartTime;
   const keepPosterInColor = event.id === "2026-05-13-v-ischezayushem-gorode";
   const contentRef = useRef<HTMLDivElement | null>(null);
   const [contentHeight, setContentHeight] = useState(0);
@@ -148,7 +149,7 @@ function EventAccordion({
                 {dateParts.dayNumber}
               </p>
               <p className="font-editorial-sans pt-1 translate-x-3 text-[0.7rem] uppercase tracking-[0.14em] text-neutral-500 sm:text-xs">
-                {concertStartTime}
+                {eventStartTime}
               </p>
             </div>
             <p className="font-editorial-sans mt-2 text-xs uppercase tracking-[0.14em] text-neutral-500">

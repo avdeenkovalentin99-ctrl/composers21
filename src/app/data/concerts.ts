@@ -8,6 +8,7 @@ export const concerts: ConcertItem[] = concertProgrammes.map((concert, index) =>
   id: concert.id,
   programNumber: index + 1,
   date: concert.date,
+  time: concert.time,
   title: concert.title,
   description: concert.description,
   image: concert.image ? resolvePublicAssetPath(concert.image) : concertPosterPlaceholder,

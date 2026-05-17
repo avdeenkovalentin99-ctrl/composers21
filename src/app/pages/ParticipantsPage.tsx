@@ -156,6 +156,10 @@ function getParticipantImageClassName(person: PersonItem, fallbackClassName = "a
     return `${fallbackClassName} object-center`;
   }
 
+  if (person.slug === "lilya-valieva-i-mihail-makorda") {
+    return `${fallbackClassName} object-[28%_50%]`;
+  }
+
   if (person.slug === "u03c48z581-aleksei-goribol") {
     return `${fallbackClassName} object-[29%_56%]`;
   }

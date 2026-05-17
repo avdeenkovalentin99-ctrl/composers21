@@ -15,6 +15,7 @@ import {
 const AboutFestivalPage = lazy(() => import("./pages/AboutFestivalPage").then((module) => ({ default: module.AboutFestivalPage })));
 const AcademiesPage = lazy(() => import("./pages/AcademiesPage").then((module) => ({ default: module.AcademiesPage })));
 const AfishaPage = lazy(() => import("./pages/AfishaPage").then((module) => ({ default: module.AfishaPage })));
+const BroadcastsPage = lazy(() => import("./pages/BroadcastsPage").then((module) => ({ default: module.BroadcastsPage })));
 const ComposerPage = lazy(() => import("./pages/ComposerPage").then((module) => ({ default: module.ComposerPage })));
 const EnsemblePage = lazy(() => import("./pages/EnsemblePage").then((module) => ({ default: module.EnsemblePage })));
 const FestivalLabPage = lazy(() => import("./pages/FestivalLabPage").then((module) => ({ default: module.FestivalLabPage })));
@@ -55,6 +56,11 @@ const PAGE_META_BY_PATHNAME: Record<string, PageMeta> = {
     title: "Программа и билеты — Композиторы XXI века",
     description: "Афиша концертов фестиваля «Композиторы XXI века»: программа, даты, исполнители и билеты.",
     canonicalPath: "/afisha",
+  },
+  "/translyatsii": {
+    title: "Архив фестиваля — Композиторы XXI века",
+    description: "Записи концертов фестиваля «Композиторы XXI века» на портале «Культура.РФ».",
+    canonicalPath: "/translyatsii",
   },
   "/participants": {
     title: "Участники — Композиторы XXI века",
@@ -235,6 +241,7 @@ export const router = createBrowserRouter([
       { path: "academies", element: <AcademiesPage /> },
       { path: "festival-lab", element: <FestivalLabPage /> },
       { path: "afisha", element: <AfishaPage /> },
+      { path: "translyatsii", element: <BroadcastsPage /> },
       { path: "participants", element: <ParticipantsPage /> },
       { path: "participants/composers/:slug", element: <ComposerPage /> },
       { path: "participants/ensembles/:slug", element: <EnsemblePage /> },

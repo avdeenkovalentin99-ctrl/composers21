@@ -219,6 +219,7 @@ export function HomeHero() {
   const vischezayushemGorodeTitleLine1 = isVIschezayushemGorodePoster ? "" : "";
   const vischezayushemGorodeTitleLine2 = isVIschezayushemGorodePoster ? "" : "";
   const displayDescription = activePoster.description;
+  const activePosterStartTime = isConcertPoster ? (activePoster.time ?? concertStartTime) : concertStartTime;
   const nizhnyComposerParts = isNizhnySoloistsPoster
     ? displayDescription.split(" · ").map((part) => part.trim()).filter(Boolean)
     : [];
@@ -531,7 +532,7 @@ export function HomeHero() {
                       <span className="relative mr-0 inline-flex translate-x-3 items-center px-2 py-0">
                         <span aria-hidden="true" className="absolute inset-y-0 -left-2 -right-12 bg-white" />
                         <span className="font-editorial-sans relative text-[0.64rem] font-light uppercase tracking-[0.24em] text-[#1a1a1a] sm:text-[0.72rem]">
-                          {activePoster.date} / {concertStartTime}
+                          {activePoster.date} / {activePosterStartTime}
                         </span>
                       </span>
                     ) : (

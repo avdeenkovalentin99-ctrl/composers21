@@ -38,6 +38,10 @@ function getSoloistImageClassName(slug: string) {
     return "aspect-[4/5] w-full object-cover object-[50%_40%] grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]";
   }
 
+  if (slug === "lilya-valieva-i-mihail-makorda") {
+    return "aspect-[4/5] w-full object-cover object-[28%_50%] grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]";
+  }
+
   if (slug === "roman-vykulov") {
     return "aspect-[4/5] w-full object-cover object-[68%_50%] grayscale lg:absolute lg:bottom-0 lg:left-0 lg:w-[384px]";
   }

@@ -22,6 +22,7 @@ export type ConcertItem = {
   id: string;
   programNumber: number;
   date: string;
+  time?: string;
   title: string;
   description: string;
   image: string;
@@ -31,6 +32,7 @@ export type ConcertItem = {
 export type ConcertProgrammeItem = {
   id: string;
   date: string;
+  time?: string;
   title: string;
   description: string;
   programme: string[];
