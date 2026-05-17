@@ -79,23 +79,32 @@ function BroadcastRows({
 
 function BroadcastCta({ broadcast, isCardLinked = false }: { broadcast: BroadcastItem; isCardLinked?: boolean }) {
   const className =
-    "font-editorial-sans inline-flex border-b border-black/16 pb-[3px] text-[11px] uppercase leading-5 tracking-[0.14em] text-neutral-600 transition-colors duration-300 group-hover:border-black/30 group-hover:text-neutral-900 sm:text-[12px]";
+    "font-editorial-sans inline-flex items-center gap-1.5 border-b border-black/16 pb-[3px] text-[11px] uppercase leading-5 tracking-[0.14em] text-neutral-600 transition-colors duration-300 group-hover:border-black/30 group-hover:text-neutral-900 sm:text-[12px]";
+  const label = broadcast.cta.replace(/\s*↗\s*$/u, "");
+  const content = (
+    <>
+      {label}
+      <span aria-hidden="true" className="font-sans leading-none">
+        {"\u2197\uFE0E"}
+      </span>
+    </>
+  );
 
   if (broadcast.url === "#") {
     return (
       <span className={className} aria-disabled="true">
-        {broadcast.cta}
+        {content}
       </span>
     );
   }
 
   if (isCardLinked) {
-    return <span className={className}>{broadcast.cta}</span>;
+    return <span className={className}>{content}</span>;
   }
 
   return (
     <a href={broadcast.url} target="_blank" rel="noreferrer" className={className}>
-      {broadcast.cta}
+      {content}
     </a>
   );
 }
