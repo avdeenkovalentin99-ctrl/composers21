@@ -80,7 +80,11 @@ function renderTextRows(items: string[], keyPrefix: string, gapClassName = "h-4"
       );
     }
 
-    return <p key={`${keyPrefix}-item-${index}`}>{item}</p>;
+    return (
+      <p key={`${keyPrefix}-item-${index}`} className="whitespace-normal break-words">
+        {item}
+      </p>
+    );
   });
 }
 
@@ -100,32 +104,6 @@ function EventAccordion({
   const dateParts = useMemo(() => buildEventDate(event.date), [event.date]);
   const eventStartTime = event.time ?? concertStartTime;
   const keepPosterInColor = event.id === "2026-05-13-v-ischezayushem-gorode";
-  const contentRef = useRef<HTMLDivElement | null>(null);
-  const [contentHeight, setContentHeight] = useState(0);
-
-  useEffect(() => {
-    const element = contentRef.current;
-    if (!element) {
-      return;
-    }
-
-    const updateHeight = () => {
-      setContentHeight(element.scrollHeight);
-    };
-
-    updateHeight();
-
-    const resizeObserver =
-      typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => updateHeight()) : null;
-
-    resizeObserver?.observe(element);
-    window.addEventListener("resize", updateHeight);
-
-    return () => {
-      resizeObserver?.disconnect();
-      window.removeEventListener("resize", updateHeight);
-    };
-  }, [event.id]);
 
   function handleTicketClick() {
     sendMetrikaGoal("niko_ticket_click", {
@@ -212,17 +190,17 @@ function EventAccordion({
           <motion.div
             initial={shouldAnimateOnMount ? { height: 0, opacity: 0 } : false}
             animate={{
-              height: isOpen ? contentHeight : 0,
+              height: isOpen ? "auto" : 0,
               opacity: isOpen ? 1 : 0,
             }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div ref={contentRef}>
+            <div>
               <div className="mt-6 border-t border-black/10 pt-6 md:mt-7 md:pt-7">
                 <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_340px] xl:gap-x-10">
                   <div className="grid gap-8 md:grid-cols-2 md:gap-x-10">
-                    <div>
+                    <div className="min-w-0">
                       <p className="font-editorial-sans mb-4 text-xs uppercase tracking-[0.14em] text-neutral-400">
                         {"\u041F\u0420\u041E\u0413\u0420\u0410\u041C\u041C\u0410"}
                       </p>
@@ -231,7 +209,7 @@ function EventAccordion({
                       </div>
                     </div>
 
-                    <div>
+                    <div className="min-w-0">
                       <p className="font-editorial-sans mb-4 text-xs uppercase tracking-[0.14em] text-neutral-400">
                         {"\u0418\u0421\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u0418"}
                       </p>
