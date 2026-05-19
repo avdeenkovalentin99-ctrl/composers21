@@ -15,11 +15,13 @@ const introParagraphs = [
 
 const ticketLabel = "Билеты";
 const eventDetailsLabel = "открыть событие";
+const pastEventLabel = "событие прошло";
 
 const academyEvents = [
   {
     id: "sergey-akhunov",
     date: "14 мая — 16:00",
+    dateTime: "2026-05-14T16:00:00+03:00",
     title: "Сергей Ахунов. Беседы о музыке",
     teaser:
       "Композитор расскажет о своем опыте сочинительства и о том, что делает классическую музыку долговечной.",
@@ -36,6 +38,7 @@ const academyEvents = [
   {
     id: "festival-creators-meeting",
     date: "17 мая — 19:00",
+    dateTime: "2026-05-17T19:00:00+03:00",
     title: "Встреча с создателями фестиваля",
     teaser: "Разговор о фестивале, композиторах, музыкантах, проблемах и задачах современной музыкальной среды.",
     paragraphs: [
@@ -55,6 +58,7 @@ const academyEvents = [
   {
     id: "ile-theleme-ensemble-meeting",
     date: "22 мая — 19:00",
+    dateTime: "2026-05-22T19:00:00+03:00",
     title: "Встреча с Île Thélème Ensemble",
     teaser: "Поговорим о современном репертуаре, новых средствах выразительности и задачах исполнителя.",
     paragraphs: [
@@ -74,6 +78,10 @@ type AcademyEvent = (typeof academyEvents)[number];
 const imageAspectByIndex = ["aspect-[3/4]", "aspect-[4/5]", "aspect-[5/6]"];
 const cardOffsetByIndex = ["", "lg:pt-12", "lg:pt-6"];
 const imageWidthByIndex = ["w-[90%]", "w-[90%]", "w-[90%]"];
+
+function isAcademyEventPast(event: AcademyEvent, currentDate = new Date()) {
+  return new Date(event.dateTime).getTime() < currentDate.getTime();
+}
 
 function useAcademiesMeta() {
   useEffect(() => {
@@ -115,6 +123,7 @@ function useOverlayScrollLock(isOpen: boolean) {
 
 function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClose: () => void }) {
   useOverlayScrollLock(Boolean(event));
+  const isPast = event ? isAcademyEventPast(event) : false;
 
   useEffect(() => {
     if (!event) {
@@ -136,7 +145,7 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
       {event ? (
         <>
         <motion.div
-          className="fixed inset-0 z-[60] overflow-y-auto bg-[#f8f7f3] text-neutral-950"
+          className="fixed inset-0 z-[60] overflow-y-auto bg-white text-neutral-950"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -197,14 +206,16 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
                   </div>
                 ) : null}
 
-                <a
-                  href={event.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-editorial-sans mt-14 inline-flex border-b border-black/20 pb-1 text-[11px] uppercase tracking-[0.18em] text-neutral-600 transition-colors duration-200 hover:border-black/40 hover:text-neutral-950 sm:mt-16"
-                >
-                  {event.ticketLabel}
-                </a>
+                {!isPast ? (
+                  <a
+                    href={event.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-editorial-sans mt-14 inline-flex border-b border-black/20 pb-1 text-[11px] uppercase tracking-[0.18em] text-neutral-600 transition-colors duration-200 hover:border-black/40 hover:text-neutral-950 sm:mt-16"
+                  >
+                    {event.ticketLabel}
+                  </a>
+                ) : null}
               </motion.div>
             </div>
           </div>
@@ -212,7 +223,7 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
 
           <button
             type="button"
-            className="font-editorial-sans fixed right-4 top-4 z-[80] flex h-11 w-11 items-center justify-center border border-black/10 bg-[#f8f7f3] text-2xl leading-none text-neutral-500 transition-colors duration-200 hover:text-neutral-950 sm:right-8 sm:top-8"
+            className="font-editorial-sans fixed right-4 top-4 z-[80] flex h-11 w-11 items-center justify-center border border-black/10 bg-white text-2xl leading-none text-neutral-500 transition-colors duration-200 hover:text-neutral-950 sm:right-8 sm:top-8"
             onClick={onClose}
             aria-label="Закрыть"
           >
@@ -230,7 +241,7 @@ export function AcademiesPage() {
   useAcademiesMeta();
 
   return (
-    <section className="pb-20 pt-32 text-neutral-950 sm:pb-24 sm:pt-36">
+    <section className="bg-white pb-20 pt-32 text-neutral-950 sm:pb-24 sm:pt-36">
       <PageContainer>
         <div className="mx-auto max-w-6xl">
           <div className="pb-8 sm:pb-10 lg:pb-12">
@@ -253,42 +264,58 @@ export function AcademiesPage() {
 
           <section className="pt-12 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-32">
             <div className="grid gap-x-10 gap-y-20 sm:grid-cols-2 sm:gap-y-24 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-28">
-              {academyEvents.map((event, index) => (
-                <article key={event.id} className={cardOffsetByIndex[index % cardOffsetByIndex.length]}>
-                  <button
-                    type="button"
-                    className="group block w-full cursor-pointer bg-transparent py-2 text-left focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-6 focus-visible:outline-black/30"
-                    onClick={() => setSelectedEvent(event)}
-                    aria-label={`Открыть: ${event.title}`}
-                  >
-                    <p className="font-editorial-sans mb-5 text-[11px] uppercase leading-5 tracking-[0.16em] text-neutral-500">
-                      {event.date}
-                    </p>
+              {academyEvents.map((event, index) => {
+                const isPast = isAcademyEventPast(event);
 
-                    <div className={`${imageWidthByIndex[index % imageWidthByIndex.length]} overflow-hidden`}>
-                      <img
-                        src={event.image}
-                        alt={event.imageAlt}
-                        loading="lazy"
-                        decoding="async"
-                        className={`${imageAspectByIndex[index % imageAspectByIndex.length]} w-full object-cover object-center grayscale transition duration-700 ease-out group-hover:scale-[1.015] group-hover:opacity-90`}
-                      />
-                    </div>
+                return (
+                  <article key={event.id} className={cardOffsetByIndex[index % cardOffsetByIndex.length]}>
+                    <button
+                      type="button"
+                      className="group block w-full cursor-pointer bg-transparent py-2 text-left focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-6 focus-visible:outline-black/30"
+                      onClick={() => setSelectedEvent(event)}
+                      aria-label={`Открыть: ${event.title}`}
+                    >
+                      <div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+                        <p className="font-editorial-sans text-[11px] uppercase leading-5 tracking-[0.16em] text-neutral-500">
+                          {event.date}
+                        </p>
+                        {isPast ? (
+                          <span className="font-editorial-sans border-l border-black/12 pl-4 text-[10px] lowercase leading-5 tracking-[0.18em] text-neutral-400">
+                            {pastEventLabel}
+                          </span>
+                        ) : null}
+                      </div>
 
-                    <div className="mt-6 max-w-[90%]">
-                      <h2 className="font-editorial-serif text-[1.72rem] font-normal leading-[1.1] text-neutral-950 transition-[text-decoration-color] duration-300 decoration-black/0 underline-offset-[5px] group-hover:decoration-black/25 sm:text-[1.95rem]">
-                        {event.title}
-                      </h2>
+                      <div className={`${imageWidthByIndex[index % imageWidthByIndex.length]} overflow-hidden`}>
+                        <img
+                          src={event.image}
+                          alt={event.imageAlt}
+                          loading="lazy"
+                          decoding="async"
+                          className={`${imageAspectByIndex[index % imageAspectByIndex.length]} w-full object-cover object-center grayscale transition duration-700 ease-out group-hover:scale-[1.015] group-hover:opacity-90`}
+                        />
+                      </div>
 
-                      <p className="mt-4 font-editorial-serif text-[0.98rem] leading-7 text-neutral-600">{event.teaser}</p>
+                      <div className="mt-6 max-w-[90%]">
+                        <h2 className="font-editorial-serif text-[1.72rem] font-normal leading-[1.1] text-neutral-950 transition-[text-decoration-color] duration-300 decoration-black/0 underline-offset-[5px] group-hover:decoration-black/25 sm:text-[1.95rem]">
+                          {event.title}
+                        </h2>
 
-                      <span className="font-editorial-sans mt-6 inline-flex border-b border-transparent pb-[2px] text-[10px] lowercase tracking-[0.2em] text-neutral-500 transition-colors duration-300 group-hover:border-black/25 group-hover:text-neutral-800">
-                        {eventDetailsLabel}
-                      </span>
-                    </div>
-                  </button>
-                </article>
-              ))}
+                        <p className="mt-4 font-editorial-serif text-[0.98rem] leading-7 text-neutral-600">{event.teaser}</p>
+
+                        <span
+                          className={[
+                            "font-editorial-sans mt-6 inline-flex border-b border-transparent pb-[2px] text-[10px] lowercase tracking-[0.2em] transition-colors duration-300",
+                            "text-neutral-500 group-hover:border-black/25 group-hover:text-neutral-800",
+                          ].join(" ")}
+                        >
+                          {eventDetailsLabel}
+                        </span>
+                      </div>
+                    </button>
+                  </article>
+                );
+              })}
             </div>
           </section>
         </div>
