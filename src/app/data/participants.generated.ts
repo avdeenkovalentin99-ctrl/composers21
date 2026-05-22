@@ -229,6 +229,15 @@ export const generatedComposers: GeneratedParticipant[] = [
     link: "https://21centcomposers.ru/persons/ax4111gjb1-marianna-domnikova",
   },
   {
+    name: "Михаил Макорда",
+    slug: "mihail-makorda",
+    role: "composer",
+    description: "Композитор и пианист, автор произведений для фортепиано соло и фортепианного дуэта.",
+    photo: "macordamich.jpg",
+    image: "",
+    link: "https://21centcomposers.ru/mihail-makorda",
+  },
+  {
     name: "Михаил Тарбагаев",
     slug: "mikhail-tarbagaev",
     role: "composer",
