@@ -40,6 +40,9 @@ const urlByConcertId: Partial<Record<ConcertProgrammeItem["id"], string>> = {
     "https://www.culture.ru/live/broadcast/157983/kamernyi-orkestr-solisty-nizhnego-novgoroda-cvetushii-zhasmin",
   "2026-05-18-forelnyy-kontsert":
     "https://www.culture.ru/live/broadcast/158564/forelnyi-koncert-rust-pozyumskii",
+  "2026-05-19-opensoundquartet": "https://www.culture.ru/live/broadcast/158190/opensoundorchestra-kvartety",
+  "2026-05-20-opensoundorchestra":
+    "https://www.culture.ru/live/broadcast/158193/opensoundorchestra-vremena-goda-ne-vivaldi",
 };
 
 const composersByConcertId: Record<ConcertProgrammeItem["id"], string> = {
@@ -66,11 +69,14 @@ const initialRecordedConcertIds = new Set<ConcertProgrammeItem["id"]>([
   "2026-05-12-il-theleme-de-la-nuite",
   "2026-05-13-v-ischezayushem-gorode",
   "2026-05-15-solisty-nizhnego-novgoroda",
+  "2026-05-19-opensoundquartet",
+  "2026-05-20-opensoundorchestra",
 ]);
 
 const excludedBroadcastConcertIds = new Set<ConcertProgrammeItem["id"]>([
   "2026-05-10-peletsis-24-kaprisa",
   "2026-05-16-improvizirovannyy-uzhin",
+  "2026-05-21-petr-glavatskikh",
 ]);
 
 function formatPerformers(performers: string[]) {
