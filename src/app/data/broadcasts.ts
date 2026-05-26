@@ -43,6 +43,18 @@ const urlByConcertId: Partial<Record<ConcertProgrammeItem["id"], string>> = {
   "2026-05-19-opensoundquartet": "https://www.culture.ru/live/broadcast/158190/opensoundorchestra-kvartety",
   "2026-05-20-opensoundorchestra":
     "https://www.culture.ru/live/broadcast/158193/opensoundorchestra-vremena-goda-ne-vivaldi",
+  "2026-05-25-daniil-sayamov-glinka-quartet":
+    "https://www.culture.ru/live/broadcast/158195/daniil-sayamov-kvartet-im-glinki",
+  "2026-05-26-pianisty-kompozitory":
+    "https://www.culture.ru/live/broadcast/159195/pianisty-kompozitory",
+  "2026-05-27-desyatnikov-love-and-life":
+    "https://www.culture.ru/live/broadcast/159196/leonid-desyatnikov-lyubov-i-zhizn-poeta",
+  "2026-05-28-brezel-melodiya":
+    "https://www.culture.ru/live/broadcast/159198/brezel-ensemble-i-khorovoi-ansambl-melodiya-novaya-sakralnost",
+  "2026-05-29-milyausha-khayrullina":
+    "https://www.culture.ru/live/broadcast/159201/milyausha-khairullina-tvorcheskii-vecher-kompozitora",
+  "2026-05-31-gromche-slova":
+    "https://www.culture.ru/live/broadcast/159204/gromche-slova-zaklyuchitelnyi-koncert-festivalya",
 };
 
 const composersByConcertId: Record<ConcertProgrammeItem["id"], string> = {
@@ -71,6 +83,7 @@ const initialRecordedConcertIds = new Set<ConcertProgrammeItem["id"]>([
   "2026-05-15-solisty-nizhnego-novgoroda",
   "2026-05-19-opensoundquartet",
   "2026-05-20-opensoundorchestra",
+  "2026-05-25-daniil-sayamov-glinka-quartet",
 ]);
 
 const excludedBroadcastConcertIds = new Set<ConcertProgrammeItem["id"]>([

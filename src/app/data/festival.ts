@@ -18,5 +18,5 @@ export const festivalInfo: FestivalInfo = {
     "Галерея Нико — музей работ классика советского и постсоветского искусства академика Н. Б. Никогосяна и креативное пространство в центре Москвы, открытое для творческих идей.",
   telegram: "https://t.me/shtillwater",
   phone: "+7 926 276 8057",
-  email: "shtillwater@list.ru",
+  email: "festival@21centurycomposers.com",
 };

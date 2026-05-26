@@ -1,10 +1,12 @@
-import { MouseEvent, useEffect, useState } from "react";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { festivalInfo } from "../data/festival";
 import { navigationItems } from "../data/navigation";
 import { PageContainer } from "./PageContainer";
+
+const HEADER_ROUTE_SETTLE_MS = 560;
 
 function getNavClassName(isActive: boolean) {
   return [
@@ -21,6 +23,10 @@ export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isParticipantsLeaving, setIsParticipantsLeaving] = useState(false);
+  const [isRouteSettling, setIsRouteSettling] = useState(false);
+  const previousPathnameRef = useRef(location.pathname);
+  const hasSolidHeaderBackground = isParticipantsLeaving || isScrolled || isRouteSettling;
+  const hasHeaderBorder = isScrolled && !isParticipantsLeaving;
 
   const handleFestivalClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.currentTarget.getAttribute("href") !== "/") {
@@ -48,6 +54,21 @@ export function SiteHeader() {
 
   useEffect(() => {
     setMenuOpen(false);
+
+    if (previousPathnameRef.current === location.pathname) {
+      return;
+    }
+
+    previousPathnameRef.current = location.pathname;
+    setIsRouteSettling(true);
+
+    const settleTimeoutId = window.setTimeout(() => {
+      setIsRouteSettling(false);
+    }, HEADER_ROUTE_SETTLE_MS);
+
+    return () => {
+      window.clearTimeout(settleTimeoutId);
+    };
   }, [location.pathname]);
 
   useEffect(() => {
@@ -69,11 +90,8 @@ export function SiteHeader() {
       <header
         className={[
           "fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color] duration-150",
-          isParticipantsLeaving
-            ? "border-transparent bg-white"
-            : isScrolled
-              ? "border-black/70 bg-white"
-              : "border-transparent bg-transparent",
+          hasSolidHeaderBackground ? "bg-white duration-300" : "bg-transparent duration-500",
+          hasHeaderBorder ? "border-black/70" : "border-transparent",
         ].join(" ")}
       >
         <PageContainer>

@@ -116,6 +116,10 @@ function getPageMeta(pathname: string): PageMeta {
   };
 }
 
+function PageLoadingSpace() {
+  return <div aria-hidden="true" className="min-h-[calc(100svh-5rem)] bg-[var(--color-bg)]" />;
+}
+
 function RootLayout() {
   const location = useLocation();
   const outlet = useOutlet();
@@ -222,7 +226,7 @@ function RootLayout() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.42, 0, 0.58, 1] }}
           >
-            <Suspense fallback={null}>{outlet}</Suspense>
+            <Suspense fallback={<PageLoadingSpace />}>{outlet}</Suspense>
             {showFooter ? <SiteFooter /> : null}
           </motion.div>
         </AnimatePresence>

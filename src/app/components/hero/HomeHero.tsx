@@ -559,8 +559,8 @@ export function HomeHero() {
                         isFourthOrFifthConcertPoster ? "font-editorial-serif" : "",
                         isFourthOrFifthConcertPoster ? "relative lg:translate-x-[8px]" : "",
                         isGuestPoster
-                          ? "max-w-[250px] text-[0.86rem] sm:max-w-[320px] sm:text-[1.28rem] lg:max-w-[390px] lg:text-[2.1rem]"
-                          : "max-w-[250px] text-[0.88rem] sm:max-w-[360px] sm:text-[1.16rem] lg:max-w-[520px] lg:text-[1.72rem]",
+                          ? "max-w-[270px] text-[0.98rem] sm:max-w-[320px] sm:text-[1.28rem] lg:max-w-[390px] lg:text-[2.1rem]"
+                          : "max-w-[292px] text-[1.04rem] sm:max-w-[360px] sm:text-[1.16rem] lg:max-w-[520px] lg:text-[1.72rem]",
                       ].join(" ")}
                     >
                       {isOpenSoundOrchestraPoster && openSoundOrchestraTitleLine1 !== "" ? (
@@ -668,21 +668,21 @@ export function HomeHero() {
                     {shouldShowDescription ? (
                       <p
                         className={[
-                          "font-editorial-sans ml-auto text-[0.42rem] leading-[0.72rem] tracking-[0.08em]",
+                          "font-editorial-sans ml-auto text-[0.54rem] leading-[0.86rem] tracking-[0.08em]",
                           isFourthOrFifthConcertPoster ? "relative lg:-translate-x-[8px]" : "",
                           isPelecisPoster
                             ? "max-w-[300px] sm:max-w-[400px] lg:max-w-[560px]"
                             : isForelnyyPoster
                             ? "max-w-[280px] sm:max-w-[560px] lg:max-w-[760px] sm:whitespace-nowrap"
                             : isNizhnySoloistsPoster
-                            ? "max-w-[230px] sm:max-w-[290px] lg:max-w-[350px]"
+                            ? "max-w-[270px] sm:max-w-[290px] lg:max-w-[350px]"
                             : isDeLaNuitePoster
                             ? "max-w-[300px] sm:max-w-[420px] lg:max-w-[560px] lg:whitespace-nowrap"
                             : isOpenSoundQuartetPoster
                             ? "max-w-[400px] sm:max-w-[560px] lg:max-w-[760px] lg:whitespace-nowrap"
                             : isGuestPoster
-                            ? "max-w-[230px] sm:max-w-[270px] lg:max-w-[320px]"
-                            : "max-w-[230px] sm:max-w-[280px] lg:max-w-[360px]",
+                            ? "max-w-[260px] sm:max-w-[270px] lg:max-w-[320px]"
+                            : "max-w-[270px] sm:max-w-[280px] lg:max-w-[360px]",
                           "sm:text-[0.68rem] sm:leading-[1.02rem] lg:text-[0.86rem] lg:leading-6",
                         ].join(" ")}
                         style={

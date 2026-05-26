@@ -61,6 +61,14 @@ function buildEventDate(dateLabel: string) {
   };
 }
 
+function buildEventDateTime(dateLabel: string, timeLabel: string) {
+  const dayMatch = dateLabel.match(/\d{1,2}/);
+  const [hours = 0, minutes = 0] = timeLabel.split(":").map(Number);
+  const day = dayMatch ? Number(dayMatch[0]) : 1;
+
+  return new Date(2026, 4, day, hours, minutes).getTime();
+}
+
 function renderTextRows(items: string[], keyPrefix: string, gapClassName = "h-4") {
   return items.map((item, index) => {
     const normalizedItem = item.trim();
@@ -103,6 +111,7 @@ function EventAccordion({
 }) {
   const dateParts = useMemo(() => buildEventDate(event.date), [event.date]);
   const eventStartTime = event.time ?? concertStartTime;
+  const isPastEvent = Date.now() > buildEventDateTime(event.date, eventStartTime);
   const keepPosterInColor = event.id === "2026-05-13-v-ischezayushem-gorode";
 
   function handleTicketClick() {
@@ -157,7 +166,7 @@ function EventAccordion({
                     ? "\u0421\u0432\u0435\u0440\u043D\u0443\u0442\u044C \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0443"
                     : "\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0443"
                 }
-                className="inline-flex h-10 w-10 items-center justify-center text-neutral-500 transition-colors duration-200 ease-out hover:text-neutral-900"
+                className="hidden h-10 w-10 items-center justify-center text-neutral-500 transition-colors duration-200 ease-out hover:text-neutral-900 md:inline-flex"
               >
                 <motion.span
                   animate={{ rotate: isOpen ? 180 : 0 }}
@@ -169,21 +178,46 @@ function EventAccordion({
               </button>
             </div>
 
-            <div className="pr-2 pt-1 text-left md:min-w-[120px] md:text-right">
-              {event.ticketLink ? (
-                <a
-                  href={event.ticketLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleTicketClick}
-                  aria-label={
-                    "\u041A\u0443\u043F\u0438\u0442\u044C \u0431\u0438\u043B\u0435\u0442\u044B \u043D\u0430 \u043A\u043E\u043D\u0446\u0435\u0440\u0442"
-                  }
-                  className="font-editorial-sans relative inline-flex px-1 py-[1px] text-[13px] font-normal uppercase tracking-[0.12em] text-neutral-500 transition-all duration-150 ease-out hover:px-3 hover:py-[2px] hover:text-neutral-900 before:pointer-events-none before:absolute before:bottom-[3px] before:left-0 before:top-[3px] before:w-0 before:border-l before:border-neutral-800 before:opacity-0 before:transition-opacity before:duration-150 before:ease-out hover:before:opacity-100 after:pointer-events-none after:absolute after:bottom-[3px] after:right-0 after:top-[3px] after:w-0 after:border-r after:border-neutral-800 after:opacity-0 after:transition-opacity after:duration-150 after:ease-out hover:after:opacity-100"
+            <div className="flex flex-col gap-3 pr-2 pt-1 md:min-w-[120px]">
+              <div className="text-right">
+                {isPastEvent ? (
+                  <span className="font-editorial-sans font-small-caps relative inline-flex px-3 py-[2px] text-[13px] font-normal tracking-[0.12em] text-neutral-400 before:pointer-events-none before:absolute before:bottom-[3px] before:left-0 before:top-[3px] before:w-0 before:border-l before:border-neutral-300 after:pointer-events-none after:absolute after:bottom-[3px] after:right-0 after:top-[3px] after:w-0 after:border-r after:border-neutral-300 md:px-1 md:py-[1px] md:before:hidden md:after:hidden">
+                    {"\u0441\u043E\u0431\u044B\u0442\u0438\u0435 \u043F\u0440\u043E\u0448\u043B\u043E"}
+                  </span>
+                ) : event.ticketLink ? (
+                  <a
+                    href={event.ticketLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={handleTicketClick}
+                    aria-label={
+                      "\u041A\u0443\u043F\u0438\u0442\u044C \u0431\u0438\u043B\u0435\u0442\u044B \u043D\u0430 \u043A\u043E\u043D\u0446\u0435\u0440\u0442"
+                    }
+                    className="font-editorial-sans relative inline-flex px-3 py-[2px] text-[13px] font-normal uppercase tracking-[0.12em] text-neutral-500 transition-colors duration-150 ease-out hover:text-neutral-900 before:pointer-events-none before:absolute before:bottom-[3px] before:left-0 before:top-[3px] before:w-0 before:border-l before:border-neutral-500 before:transition-colors before:duration-150 before:ease-out hover:before:border-neutral-800 after:pointer-events-none after:absolute after:bottom-[3px] after:right-0 after:top-[3px] after:w-0 after:border-r after:border-neutral-500 after:transition-colors after:duration-150 after:ease-out hover:after:border-neutral-800 md:px-1 md:py-[1px] md:transition-all md:before:opacity-0 md:after:opacity-0 md:hover:px-3 md:hover:py-[2px] md:hover:before:opacity-100 md:hover:after:opacity-100"
+                  >
+                    {"\u0411\u0418\u041B\u0415\u0422\u042B"}
+                  </a>
+                ) : null}
+              </div>
+              <button
+                type="button"
+                onClick={onToggle}
+                aria-expanded={isOpen}
+                aria-label={
+                  isOpen
+                    ? "\u0421\u0432\u0435\u0440\u043D\u0443\u0442\u044C \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0443"
+                    : "\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0443"
+                }
+                className="inline-flex h-10 w-10 items-center justify-center text-neutral-500 transition-colors duration-200 ease-out hover:text-neutral-900 md:hidden"
+              >
+                <motion.span
+                  animate={{ rotate: isOpen ? 180 : 0 }}
+                  transition={{ duration: 0.24, ease: "easeInOut" }}
+                  className="inline-flex"
                 >
-                  {"\u0411\u0418\u041B\u0415\u0422\u042B"}
-                </a>
-              ) : null}
+                  <ChevronDown size={20} strokeWidth={1.4} />
+                </motion.span>
+              </button>
             </div>
           </div>
 
