@@ -424,7 +424,7 @@ export const generatedPerformers: GeneratedParticipant[] = [
     name: "Алексей Петров",
     slug: "aleksei-petrov",
     role: "soloist",
-    description: "Лауреат международных конкурсов, стипендиат Международного фонда «Новые имена» и Специального фонда Президента Республики Беларусь по поддержке талантливой молодежи.",
+    description: "Пианист, лауреат международных конкурсов, выпускник Московской консерватории и Royal College of Music в Лондоне.",
     photo: "PetrovA.jpg",
     image: "",
     link: "https://21centcomposers.ru/aleksei-petrov",
