@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { LayoutGrid, List } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { ensembles, getPersonSlug, soloists } from "../data/participants";
 import { composers } from "../data/composers";
 import { performers } from "../data/performers";
@@ -10,6 +11,8 @@ import { PARTICIPANTS_SHELL_CLASS } from "../layout/participantsLayout";
 type PersonItem = (typeof composers)[number];
 type CategoryKey = "composers" | "performers";
 type ViewMode = "grid" | "list";
+
+const PARTICIPANTS_SCROLL_KEY = "participants-scroll-y";
 
 const categoryLabels: Record<CategoryKey, string> = {
   composers: "КОМПОЗИТОРЫ",
@@ -188,6 +191,7 @@ function getEnsembleImageClassName(person: PersonItem, fallbackClassName = "aspe
 }
 
 export function ParticipantsPage() {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState<CategoryKey>(() => {
     if (typeof window === "undefined") {
       return "composers";
@@ -223,6 +227,18 @@ export function ParticipantsPage() {
   useEffect(() => {
     document.body.classList.remove("participants-route-leaving");
 
+    const savedScrollY = window.sessionStorage.getItem(PARTICIPANTS_SCROLL_KEY);
+    if (savedScrollY !== null) {
+      window.sessionStorage.removeItem(PARTICIPANTS_SCROLL_KEY);
+
+      const scrollY = Number(savedScrollY);
+      if (!Number.isNaN(scrollY)) {
+        requestAnimationFrame(() => {
+          window.scrollTo({ top: scrollY, behavior: "auto" });
+        });
+      }
+    }
+
     return () => {
       document.body.classList.remove("participants-route-leaving");
 
@@ -238,11 +254,12 @@ export function ParticipantsPage() {
     }
 
     window.sessionStorage.setItem("participants-active-category", activeCategory);
+    window.sessionStorage.setItem(PARTICIPANTS_SCROLL_KEY, String(window.scrollY));
     document.body.classList.add("participants-route-leaving");
     window.dispatchEvent(new CustomEvent("participants:leave"));
     setIsLeaving(true);
     leaveTimeoutRef.current = window.setTimeout(() => {
-      window.location.assign(targetPath);
+      navigate(targetPath);
     }, 140);
   };
 

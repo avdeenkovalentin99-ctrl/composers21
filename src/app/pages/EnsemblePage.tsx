@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { ChevronLeft } from "lucide-react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import { getBiographyParagraphs } from "../data/biography";
 import { findEnsembleBySlug } from "../data/participants";
-import { personDetails } from "../data/personDetails";
 import { PageContainer } from "../layout/PageContainer";
 import { PARTICIPANTS_SHELL_CLASS } from "../layout/participantsLayout";
 
@@ -35,7 +35,7 @@ export function EnsemblePage() {
     return <Navigate to="/participants" replace />;
   }
 
-  const biographyParagraphs = personDetails[ensemble.slug]?.biography ?? [ensemble.description];
+  const biographyParagraphs = getBiographyParagraphs(ensemble.slug, ensemble.description);
   const introParagraphs =
     biographyParagraphs.length > 2 ? biographyParagraphs.slice(0, 2) : biographyParagraphs.slice(0, 1);
   const continuationParagraphs = biographyParagraphs.slice(introParagraphs.length);

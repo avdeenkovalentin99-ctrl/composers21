@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { ChevronLeft } from "lucide-react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import { getBiographyParagraphs } from "../data/biography";
 import { findSoloistBySlug } from "../data/participants";
-import { personDetails } from "../data/personDetails";
 import { PageContainer } from "../layout/PageContainer";
 import {
   BIOGRAPHY_STANDARD_ASIDE_CLASS,
@@ -57,7 +57,7 @@ export function SoloistPage() {
     return <Navigate to="/participants" replace />;
   }
 
-  const biographyParagraphs = personDetails[soloist.slug]?.biography ?? [soloist.description];
+  const biographyParagraphs = getBiographyParagraphs(soloist.slug, soloist.description);
 
   return (
     <section className="pb-32 pt-32 sm:pb-36 sm:pt-36">
@@ -122,7 +122,7 @@ export function SoloistPage() {
               <div className="font-editorial-serif space-y-7 text-[1.05rem] leading-[1.78] text-neutral-800 sm:text-[1.12rem]">
                 {biographyParagraphs.map((paragraph, index) => (
                   <motion.p
-                    key={paragraph}
+                    key={`${soloist.slug}-${index}`}
                     custom={index}
                     initial="hidden"
                     animate="visible"

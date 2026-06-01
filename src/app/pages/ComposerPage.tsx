@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { ChevronLeft } from "lucide-react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import { getBiographyParagraphs } from "../data/biography";
 import { findComposerBySlug } from "../data/participants";
-import { personDetails } from "../data/personDetails";
 import { PageContainer } from "../layout/PageContainer";
 import {
   BIOGRAPHY_STANDARD_ASIDE_CLASS,
@@ -33,7 +33,7 @@ export function ComposerPage() {
     return <Navigate to="/participants" replace />;
   }
 
-  const biographyParagraphs = personDetails[composer.slug]?.biography ?? [composer.description];
+  const biographyParagraphs = getBiographyParagraphs(composer.slug, composer.description);
   const imageClassName =
     composer.slug === "leonid-desyatnikov"
       ? "aspect-[4/5] w-full object-cover object-[50%_18%] grayscale"
@@ -102,7 +102,7 @@ export function ComposerPage() {
               <div className="font-editorial-serif space-y-7 text-[1.05rem] leading-[1.78] text-neutral-800 sm:text-[1.12rem]">
                 {biographyParagraphs.map((paragraph, index) => (
                   <motion.p
-                    key={paragraph}
+                    key={`${composer.slug}-${index}`}
                     custom={index}
                     initial="hidden"
                     animate="visible"
