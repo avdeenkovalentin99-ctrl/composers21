@@ -3,6 +3,12 @@ export type NavItem = {
   to: string;
 };
 
+export type NavGroup = {
+  label: string;
+  to?: string;
+  children: NavItem[];
+};
+
 export type FestivalInfo = {
   title: string;
   subtitle: string;

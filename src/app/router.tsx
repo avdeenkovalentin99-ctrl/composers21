@@ -20,10 +20,12 @@ const ComposerPage = lazy(() => import("./pages/ComposerPage").then((module) => 
 const EnsemblePage = lazy(() => import("./pages/EnsemblePage").then((module) => ({ default: module.EnsemblePage })));
 const FestivalLabPage = lazy(() => import("./pages/FestivalLabPage").then((module) => ({ default: module.FestivalLabPage })));
 const FestivalPage = lazy(() => import("./pages/FestivalPage").then((module) => ({ default: module.FestivalPage })));
+const MediaPage = lazy(() => import("./pages/MediaPage").then((module) => ({ default: module.MediaPage })));
 const ParticipantsPage = lazy(() => import("./pages/ParticipantsPage").then((module) => ({ default: module.ParticipantsPage })));
 const PartnersPage = lazy(() => import("./pages/PartnersPage").then((module) => ({ default: module.PartnersPage })));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage").then((module) => ({ default: module.PrivacyPage })));
 const SoloistPage = lazy(() => import("./pages/SoloistPage").then((module) => ({ default: module.SoloistPage })));
+const TeamPage = lazy(() => import("./pages/TeamPage").then((module) => ({ default: module.TeamPage })));
 
 const PAGE_GOAL_BY_PATHNAME: Record<string, string> = {
   "/afisha": "afisha_page_view",
@@ -62,10 +64,20 @@ const PAGE_META_BY_PATHNAME: Record<string, PageMeta> = {
     description: "Записи концертов фестиваля «Композиторы XXI века» на портале «Культура.РФ».",
     canonicalPath: "/translyatsii",
   },
+  "/media": {
+    title: "Медиа — Композиторы XXI века",
+    description: "Публикации, анонсы и репортажи о первом сезоне фестиваля «Композиторы XXI века».",
+    canonicalPath: "/media",
+  },
   "/participants": {
     title: "Участники — Композиторы XXI века",
     description: "Композиторы, солисты, ансамбли и оркестры фестиваля «Композиторы XXI века».",
     canonicalPath: "/participants",
+  },
+  "/team": {
+    title: "Команда — Композиторы XXI века",
+    description: "Команда фестиваля «Композиторы XXI века»: организация, видео, трансляции и звукозапись.",
+    canonicalPath: "/team",
   },
   "/partners": {
     title: "Партнёры — Композиторы XXI века",
@@ -246,7 +258,9 @@ export const router = createBrowserRouter([
       { path: "festival-lab", element: <FestivalLabPage /> },
       { path: "afisha", element: <AfishaPage /> },
       { path: "translyatsii", element: <BroadcastsPage /> },
+      { path: "media", element: <MediaPage /> },
       { path: "participants", element: <ParticipantsPage /> },
+      { path: "team", element: <TeamPage /> },
       { path: "participants/composers/:slug", element: <ComposerPage /> },
       { path: "participants/ensembles/:slug", element: <EnsemblePage /> },
       { path: "participants/soloists/:slug", element: <SoloistPage /> },

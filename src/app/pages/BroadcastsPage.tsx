@@ -265,7 +265,7 @@ export function BroadcastsPage() {
                 id="broadcasts-archive-heading"
                 className="font-editorial-serif text-[1.9rem] font-normal leading-[0.98] tracking-[0.06em] text-neutral-900 sm:text-[2.35rem] lg:text-[2.8rem]"
               >
-                архив фестиваля
+                архив трансляций
               </h2>
             </div>
 

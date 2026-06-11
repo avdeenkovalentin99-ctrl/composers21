@@ -15,6 +15,8 @@ const sectionShellClassName = "space-y-8 sm:space-y-10";
 
 const sectionTitleClassName =
   "font-editorial-sans text-center text-[11px] font-light uppercase tracking-[0.18em] text-neutral-950/50 sm:text-[12px]";
+const featuredSectionTitleClassName =
+  "font-editorial-serif text-center text-[1.9rem] font-normal leading-[0.98] tracking-[0.06em] text-neutral-900 sm:text-[2.35rem] lg:text-[2.8rem]";
 
 const gridClassNames: Record<PartnerSectionVariant, string> = {
   general:
@@ -80,9 +82,11 @@ function PartnersSection({ title, items, variant, className = "" }: PartnerSecti
     return null;
   }
 
+  const titleClassName = variant === "partner" ? sectionTitleClassName : featuredSectionTitleClassName;
+
   return (
     <section className={`${sectionShellClassName} ${className}`} aria-labelledby={`partners-${variant}`}>
-      <h2 id={`partners-${variant}`} className={sectionTitleClassName}>
+      <h2 id={`partners-${variant}`} className={titleClassName}>
         {title}
       </h2>
 
@@ -98,12 +102,12 @@ function PartnersSection({ title, items, variant, className = "" }: PartnerSecti
 export function PartnersPage() {
   const sections: PartnerSection[] = [
     {
-      title: "Генеральные партнёры",
+      title: "генеральные партнёры",
       items: partners.filter((partner) => partner.tier === "general"),
       variant: "general",
     },
     {
-      title: "Медиа-партнёры",
+      title: "медиа-партнёры",
       items: partners.filter((partner) => partner.tier === "media"),
       variant: "media",
       className: "pt-10 sm:pt-14 lg:pt-18",

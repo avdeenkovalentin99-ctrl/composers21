@@ -34,22 +34,12 @@ const posterVariants = {
   }),
 };
 
-const specialGuestPoster = {
-  id: "special-guest-boris-berezovsky",
-  kind: "guest" as const,
-  date: "",
-  title: "\u0411\u043e\u0440\u0438\u0441 \u0411\u0435\u0440\u0435\u0437\u043e\u0432\u0441\u043a\u0438\u0439",
-  description: "\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0433\u043e\u0441\u0442\u044c",
-  image: resolvePublicAssetPath("/assets/external/heroafisha/BerezovkiBedited.webp"),
-  link: undefined,
-};
 const concertStartTime = "19:30";
 
 const initialHeroPosterId = "2026-05-27-desyatnikov-love-and-life";
 
-type HeroGuestPoster = typeof specialGuestPoster;
 type HeroConcertPoster = (typeof orderedConcerts)[number] & { kind: "concert" };
-type HeroPoster = HeroGuestPoster | HeroConcertPoster;
+type HeroPoster = HeroConcertPoster;
 
 function wrapIndex(index: number, length: number) {
   return (index + length) % length;
@@ -136,7 +126,7 @@ function HeroLogoLockup({ tone, className = "" }: { tone: "dark" | "light"; clas
 
 export function HomeHero() {
   const heroPosters = useMemo<HeroPoster[]>(
-    () => [specialGuestPoster, ...orderedConcerts.map((concert) => ({ ...concert, kind: "concert" as const }))],
+    () => orderedConcerts.map((concert) => ({ ...concert, kind: "concert" as const })),
     [],
   );
 
@@ -153,7 +143,6 @@ export function HomeHero() {
   const autoRotationOrder = useMemo(() => {
     const desiredOrderIds = [
       "2026-05-27-desyatnikov-love-and-life",
-      "special-guest-boris-berezovsky",
       "2026-05-21-petr-glavatskikh",
       "2026-05-20-opensoundorchestra",
       "2026-05-10-peletsis-24-kaprisa",
@@ -187,7 +176,6 @@ export function HomeHero() {
     textRevealProps,
   } = useHeroLoadingTransition(activePoster.image);
 
-  const isGuestPoster = activePoster.kind === "guest";
   const isPelecisPoster = activePoster.link?.includes(pelecisPosterHint) ?? false;
   const isDeLaNuitePoster = activePoster.link?.includes("de-la-nuite") ?? false;
   const isVIschezayushemGorodePoster =
@@ -464,17 +452,13 @@ export function HomeHero() {
                   decoding="async"
                   className="absolute inset-0 h-full w-full object-cover"
                   style={{
-                    opacity: isGuestPoster ? 1 : 0.96,
-                    objectPosition: isGuestPoster
-                      ? "50% 17%"
-                      : isOpenSoundQuartetPoster
+                    opacity: 0.96,
+                    objectPosition: isOpenSoundQuartetPoster
                         ? "50% 42%"
                         : "50% 50%",
                     transform: isOpenSoundQuartetPoster ? "scale(0.985)" : undefined,
                     transformOrigin: isOpenSoundQuartetPoster ? "center center" : undefined,
-                    filter: isGuestPoster
-                      ? "none"
-                      : isPelecisPoster
+                    filter: isPelecisPoster
                         ? "grayscale(1) brightness(1.02) contrast(1.04)"
                       : isGromcheSlovaPoster
                         ? "none"
@@ -488,7 +472,7 @@ export function HomeHero() {
                   }}
                 />
 
-                {isGuestPoster ? null : isRefinedPoster ? (
+                {isRefinedPoster ? (
                   <>
                     <div
                       className="absolute inset-0"
@@ -525,7 +509,7 @@ export function HomeHero() {
 
                 <div
                   className="relative flex h-full flex-col justify-between p-4 sm:p-8"
-                  style={{ color: isRefinedPoster || isGuestPoster ? "#edeae4" : "#ffffff" }}
+                  style={{ color: isRefinedPoster ? "#edeae4" : "#ffffff" }}
                 >
                   <div className="flex items-start justify-end">
                     {isConcertPoster ? (
@@ -539,7 +523,7 @@ export function HomeHero() {
                       <span
                         className="font-editorial-sans text-[0.64rem] font-light uppercase tracking-[0.24em] sm:text-[0.72rem]"
                         style={{
-                          color: isRefinedPoster || isGuestPoster
+                          color: isRefinedPoster
                             ? "rgba(237, 234, 228, 0.78)"
                             : "rgba(255, 255, 255, 0.72)",
                         }}
@@ -558,9 +542,7 @@ export function HomeHero() {
                           : "overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2]",
                         isFourthOrFifthConcertPoster ? "font-editorial-serif" : "",
                         isFourthOrFifthConcertPoster ? "relative lg:translate-x-[8px]" : "",
-                        isGuestPoster
-                          ? "max-w-[270px] text-[0.98rem] sm:max-w-[320px] sm:text-[1.28rem] lg:max-w-[390px] lg:text-[2.1rem]"
-                          : "max-w-[292px] text-[1.04rem] sm:max-w-[360px] sm:text-[1.16rem] lg:max-w-[520px] lg:text-[1.72rem]",
+                        "max-w-[292px] text-[1.04rem] sm:max-w-[360px] sm:text-[1.16rem] lg:max-w-[520px] lg:text-[1.72rem]",
                       ].join(" ")}
                     >
                       {isOpenSoundOrchestraPoster && openSoundOrchestraTitleLine1 !== "" ? (
@@ -680,8 +662,6 @@ export function HomeHero() {
                             ? "max-w-[300px] sm:max-w-[420px] lg:max-w-[560px] lg:whitespace-nowrap"
                             : isOpenSoundQuartetPoster
                             ? "max-w-[400px] sm:max-w-[560px] lg:max-w-[760px] lg:whitespace-nowrap"
-                            : isGuestPoster
-                            ? "max-w-[260px] sm:max-w-[270px] lg:max-w-[320px]"
                             : "max-w-[270px] sm:max-w-[280px] lg:max-w-[360px]",
                           "sm:text-[0.68rem] sm:leading-[1.02rem] lg:text-[0.86rem] lg:leading-6",
                         ].join(" ")}
@@ -692,7 +672,7 @@ export function HomeHero() {
                                 fontVariantCaps: isFourthOrFifthConcertPoster ? "all-small-caps" : undefined,
                               }
                             : {
-                                color: isRefinedPoster || isGuestPoster
+                                color: isRefinedPoster
                                   ? "rgba(237, 234, 228, 0.86)"
                                   : "rgba(255, 255, 255, 0.82)",
                               }
