@@ -1,6 +1,17 @@
 import { concertProgrammes } from "./concertProgrammes";
 import type { ConcertProgrammeItem } from "./types";
 
+export type BroadcastProgramWork = {
+  composer?: string;
+  title: string;
+  details?: string;
+};
+
+export type BroadcastProgramSection = {
+  section: string;
+  works: BroadcastProgramWork[];
+};
+
 export type BroadcastItem = {
   id: string;
   date: string;
@@ -9,6 +20,7 @@ export type BroadcastItem = {
   title: string;
   composers: string;
   performers: string;
+  program?: BroadcastProgramSection[];
   status: "Запись" | "Трансляция";
   cta: string;
   url: string;
@@ -57,6 +69,239 @@ const urlByConcertId: Partial<Record<ConcertProgrammeItem["id"], string>> = {
     "https://www.culture.ru/live/broadcast/159204/gromche-slova-zaklyuchitelnyi-koncert-festivalya",
 };
 
+const programByConcertId: Partial<Record<ConcertProgrammeItem["id"], BroadcastProgramSection[]>> = {
+  "2026-05-25-daniil-sayamov-glinka-quartet": [
+    {
+      section: "I отделение",
+      works: [
+        {
+          title: "13 вариаций на тему Б. Мокроусова для альта и фортепиано, ор. 140",
+        },
+        {
+          title: "Соната №1 «Флорентийский фантом», ор. 120",
+          details: "2-я редакция",
+        },
+        {
+          title: "Соната №2, ор. 85",
+          details: "I. Чакона; II. Скерцо; III. Ария",
+        },
+      ],
+    },
+    {
+      section: "II отделение",
+      works: [
+        {
+          title: "Сюита для домры и фортепиано, 2025",
+          details: "I. Шторм; II. Заутреня; III. Moderato («Цыганская»)",
+        },
+        {
+          title: "Квинтет для двух скрипок, альта, виолончели и фортепиано, ор. 48",
+          details: "Одночастный",
+        },
+      ],
+    },
+  ],
+  "2026-05-26-pianisty-kompozitory": [
+    {
+      section: "I отделение",
+      works: [
+        {
+          composer: "Глеб Яковлев",
+          title: "«Три эскиза для фортепиано», Basso Ostinato",
+          details: "Исполняют: Глеб Яковлев, Игорь Степанич — фортепиано",
+        },
+        {
+          composer: "И. Г. Соколов",
+          title: "Фортепианные пьесы по картинам Дитмара Боннена № 1, 3, 6, 7, 8",
+          details: "Исполняет: Игорь Степанич — фортепиано",
+        },
+        {
+          composer: "Ольга Иванова",
+          title: "Melting Variations, «Юмореска»",
+        },
+        {
+          composer: "Иван Соколов",
+          title: "«Ноктюрн»",
+        },
+        {
+          composer: "Владимир Мартынов",
+          title: "«Поцелуй вампира»",
+          details: "Исполняет: Ольга Иванова — фортепиано",
+        },
+        {
+          composer: "Андрей Зубец",
+          title: "«Две зеркальные прелюдии»",
+          details: "Исполняет: Евгений Стародубцев — фортепиано",
+        },
+        {
+          composer: "Евгений Стародубцев",
+          title: "«Сюита для Мэрилин», «Вальс», «Рождественская элегия», «Деньрожденческий клоун», «Две мазурки», «Арлекин»",
+          details: "Исполняет: Евгений Стародубцев — фортепиано",
+        },
+        {
+          composer: "Андрей Комиссаров",
+          title:
+            "«По дороге на Берлин» — вокальный цикл на слова поэтов — участников Великой Отечественной войны",
+          details:
+            "«По дороге на Берлин» — А. Твардовский; «Ты помнишь, Алёша» — К. Симонов; «Быть может» — М. Джалиль; «На войне» — А. Твардовский. Исполняют: Андрей Комиссаров — фортепиано, Сергей Москальков — баритон",
+        },
+      ],
+    },
+    {
+      section: "II отделение",
+      works: [
+        {
+          composer: "Михаил Макорда",
+          title:
+            "Четыре пьесы из кантаты Carmina Burana в транскрипции для двух фортепиано М. Макорда: O Fortuna, «Приближается весна», «Танец», «Хоровод»",
+        },
+        {
+          composer: "М. Макорда",
+          title: "Две пьесы для двух фортепиано: «Полет над горным озером», «Пульс времён»",
+          details: "Исполняют: Михаил Макорда — фортепиано, Лиля Валиева — фортепиано",
+        },
+        {
+          composer: "Алексей Петров",
+          title: "«Этюд», «Последний ноктюрн», «Этюд октавы»",
+        },
+        {
+          composer: "Дмитрий Онищенко",
+          title: "Трио си минор для скрипки, виолончели и фортепиано, op. 28",
+          details: "Исполняют: Дмитрий Онищенко — фортепиано, Юлия Игонина — скрипка, Ольга Дёмина — виолончель",
+        },
+      ],
+    },
+  ],
+  "2026-05-27-desyatnikov-love-and-life": [
+    {
+      section: "Программа",
+      works: [
+        {
+          title: "«Альбом для Айлики»",
+          details: "Для фортепиано в 4 руки",
+        },
+        {
+          title: "Десять избранных прелюдий из фортепианного цикла «Буковинские песни»",
+        },
+        {
+          title: "«В сторону Лебедя»",
+          details: "Для двух фортепиано",
+        },
+        {
+          title: "«Любовь и жизнь поэта»",
+          details: "Вокальный цикл для тенора и фортепиано на слова Д. Хармса и Н. Олейникова",
+        },
+      ],
+    },
+  ],
+  "2026-05-28-brezel-melodiya": [
+    {
+      section: "Программа",
+      works: [
+        {
+          composer: "Николя Челоро",
+          title: "«Колокола Суздаля»",
+        },
+        {
+          composer: "Эрикс Эшенвальдс",
+          title: "«Stars»",
+          details: "Стихи С. Тисдейл",
+        },
+        {
+          composer: "Владимир Мартынов",
+          title: "«Заповеди блаженства»",
+        },
+        {
+          composer: "Петерис Васкс",
+          title: "Castillo interior",
+        },
+        {
+          composer: "Петерис Васкс",
+          title: "Plainscapes",
+        },
+        {
+          composer: "Арво Пярт",
+          title: "«Богородице Дево, радуйся»",
+        },
+        {
+          composer: "Арво Пярт",
+          title: "«Сольфеджио»",
+        },
+        {
+          composer: "Эрикс Эшенвальдс",
+          title: "«In Paradisum»",
+        },
+        {
+          composer: "Сергей Плешак",
+          title: "«Credo»",
+        },
+      ],
+    },
+  ],
+  "2026-05-29-milyausha-khayrullina": [
+    {
+      section: "Программа",
+      works: [
+        {
+          title: "Три прелюдии для фортепиано: «Звёзды», «Солнечный ветер», «Планета»",
+        },
+        {
+          title: "Соната для скрипки и фортепиано",
+        },
+        {
+          title: "«В гостях у сказки»",
+          details: "Избранные пьесы из фортепианной сюиты для юных музыкантов",
+        },
+        {
+          title: "«Жизнь-река»",
+          details:
+            "Цикл романсов для голоса и фортепиано на стихи Р. Гаташа в переводах А. Зорина и Р. Бухараева",
+        },
+        {
+          title: "«Тема матери»",
+          details: "Музыка из спектакля «Приключения Рустема» в редакции для скрипки и фортепиано",
+        },
+        {
+          title: "«Любовь и жизнь женщины»",
+          details: "Две песни из авторского песенного цикла",
+        },
+        {
+          title: "«Кави-Сарвар»",
+          details: "Фрагменты из оперы о жизни и любви писателя Кави Наджми и его супруги Сарвар Адгамовой",
+        },
+      ],
+    },
+  ],
+  "2026-05-31-gromche-slova": [
+    {
+      section: "I отделение",
+      works: [
+        {
+          composer: "Гийом Коннессон",
+          title: "«Технопарад», «Смех Сары», «Секстет»",
+        },
+        {
+          composer: "Дэвид Лэнг",
+          title: "«Vent», «How to pray»",
+        },
+      ],
+    },
+    {
+      section: "II отделение",
+      works: [
+        {
+          composer: "Сергей Ахунов",
+          title: "Цикл «Поэзия»",
+        },
+        {
+          composer: "Павел Карманов",
+          title: "«Второй снег на стадионе», «I Made My Home», «Day one»",
+        },
+      ],
+    },
+  ],
+};
+
 const composersByConcertId: Record<ConcertProgrammeItem["id"], string> = {
   "2026-05-10-peletsis-24-kaprisa": "Георг Пелецис",
   "2026-05-12-il-theleme-de-la-nuite": "Кайя Саариахо, Алексей Ретинский, Джордж Крам, Андреас Мустукис, Сальваторе Шаррино",
@@ -71,7 +316,8 @@ const composersByConcertId: Record<ConcertProgrammeItem["id"], string> = {
   "2026-05-25-daniil-sayamov-glinka-quartet": "Александр Чайковский",
   "2026-05-26-pianisty-kompozitory": "Игорь Степанич, Ольга Иванова, Евгений Стародубцев, Андрей Комиссаров, Михаил Макорда, Лиля Валиева, Алексей Петров, Дмитрий Онищенко",
   "2026-05-27-desyatnikov-love-and-life": "Леонид Десятников",
-  "2026-05-28-brezel-melodiya": "Эрикс Эшенвальдс, Владимир Мартынов, Петерис Васкс, Арво Пярт, Сергей Плешак",
+  "2026-05-28-brezel-melodiya":
+    "Николя Челоро, Эрикс Эшенвальдс, Владимир Мартынов, Петерис Васкс, Арво Пярт, Сергей Плешак",
   "2026-05-29-milyausha-khayrullina": "Миляуша Хайруллина",
   "2026-05-31-gromche-slova": "Гийом Коннессон, Дэвид Лэнг, Павел Карманов, Сергей Ахунов",
 };
@@ -110,6 +356,7 @@ export const broadcasts: BroadcastItem[] = concertProgrammes
     title: concert.title,
     composers: composersByConcertId[concert.id],
     performers: formatPerformers(concert.performers),
+    program: programByConcertId[concert.id],
     status: initialRecordedConcertIds.has(concert.id) ? "Запись" : "Трансляция",
     cta: "Смотреть на Культура.РФ ↗",
     url: urlByConcertId[concert.id] ?? "#",

@@ -201,7 +201,7 @@ export function MediaPage() {
               </div>
             </MediaSection>
 
-            <MediaSection title="репортажи">
+            <MediaSection title="репортажи" hasTopBorder={false}>
               <div className="grid gap-4 md:grid-cols-2">
                 {cultureReports.map((material) => (
                   <ExternalMaterialLink key={material.id} material={material} variant="featured" />
