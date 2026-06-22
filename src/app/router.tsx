@@ -19,7 +19,7 @@ const BroadcastsPage = lazy(() => import("./pages/BroadcastsPage").then((module)
 const ComposerPage = lazy(() => import("./pages/ComposerPage").then((module) => ({ default: module.ComposerPage })));
 const EnsemblePage = lazy(() => import("./pages/EnsemblePage").then((module) => ({ default: module.EnsemblePage })));
 const FestivalLabPage = lazy(() => import("./pages/FestivalLabPage").then((module) => ({ default: module.FestivalLabPage })));
-const FestivalPage = lazy(() => import("./pages/FestivalPage").then((module) => ({ default: module.FestivalPage })));
+const FestivalPageLegacy = lazy(() => import("./pages/FestivalPageLegacy").then((module) => ({ default: module.FestivalPageLegacy })));
 const MediaPage = lazy(() => import("./pages/MediaPage").then((module) => ({ default: module.MediaPage })));
 const ParticipantsPage = lazy(() => import("./pages/ParticipantsPage").then((module) => ({ default: module.ParticipantsPage })));
 const PartnersPage = lazy(() => import("./pages/PartnersPage").then((module) => ({ default: module.PartnersPage })));
@@ -34,58 +34,58 @@ const PAGE_GOAL_BY_PATHNAME: Record<string, string> = {
 
 const PAGE_META_BY_PATHNAME: Record<string, PageMeta> = {
   "/": {
-    title: "КОМПОЗИТОРЫ XXI ВЕКА — фестиваль современной музыки",
-    description: "Фестиваль современной академической музыки в Москве. Галерея Нико. 10-31 мая 2026.",
+    title: "Композиторы XXI века",
+    description: "Фестиваль современной академической музыки",
     canonicalPath: "/",
   },
   "/festival": {
-    title: "О фестивале — Композиторы XXI века",
+    title: "О фестивале",
     description: "О проекте, идее и пространстве фестиваля современной академической музыки «Композиторы XXI века».",
     canonicalPath: "/festival",
   },
   "/academies": {
-    title: "Встречи с композиторами и музыкантами",
+    title: "Академии",
     description: "Встречи с композиторами и музыкантами.",
     canonicalPath: "/academies",
   },
   "/festival-lab": {
-    title: "Festival Lab — Композиторы XXI века",
+    title: "Festival Lab",
     description: "Пробный интерактивный раздел фестивального сайта.",
     canonicalPath: "/festival-lab",
     robots: "noindex, nofollow",
   },
   "/afisha": {
-    title: "Программа и билеты — Композиторы XXI века",
+    title: "Афиша",
     description: "Афиша концертов фестиваля «Композиторы XXI века»: программа, даты, исполнители и билеты.",
     canonicalPath: "/afisha",
   },
   "/translyatsii": {
-    title: "Архив фестиваля — Композиторы XXI века",
+    title: "Трансляции",
     description: "Записи концертов фестиваля «Композиторы XXI века» на портале «Культура.РФ».",
     canonicalPath: "/translyatsii",
   },
   "/media": {
-    title: "Медиа — Композиторы XXI века",
+    title: "Медиа",
     description: "Публикации, анонсы и репортажи о первом сезоне фестиваля «Композиторы XXI века».",
     canonicalPath: "/media",
   },
   "/participants": {
-    title: "Участники — Композиторы XXI века",
+    title: "Участники",
     description: "Композиторы, солисты, ансамбли и оркестры фестиваля «Композиторы XXI века».",
     canonicalPath: "/participants",
   },
   "/team": {
-    title: "Команда — Композиторы XXI века",
+    title: "Команда",
     description: "Команда фестиваля «Композиторы XXI века»: организация, видео, трансляции и звукозапись.",
     canonicalPath: "/team",
   },
   "/partners": {
-    title: "Партнёры — Композиторы XXI века",
+    title: "Партнёры",
     description: "Генеральные партнёры, медиа-партнёры и партнёры фестиваля «Композиторы XXI века».",
     canonicalPath: "/partners",
   },
   "/privacy": {
-    title: "Политика конфиденциальности — Композиторы XXI века",
+    title: "Политика конфиденциальности",
     description: "Политика конфиденциальности сайта фестиваля «Композиторы XXI века».",
     canonicalPath: "/privacy",
   },
@@ -98,7 +98,7 @@ function getPageMeta(pathname: string): PageMeta {
 
   if (pathname.startsWith("/participants/composers/")) {
     return {
-      title: "Композитор — Композиторы XXI века",
+      title: "Композитор",
       description: "Страница композитора фестиваля «Композиторы XXI века».",
       canonicalPath: pathname,
     };
@@ -106,7 +106,7 @@ function getPageMeta(pathname: string): PageMeta {
 
   if (pathname.startsWith("/participants/ensembles/")) {
     return {
-      title: "Ансамбль — Композиторы XXI века",
+      title: "Ансамбль",
       description: "Страница ансамбля или оркестра фестиваля «Композиторы XXI века».",
       canonicalPath: pathname,
     };
@@ -114,14 +114,14 @@ function getPageMeta(pathname: string): PageMeta {
 
   if (pathname.startsWith("/participants/soloists/")) {
     return {
-      title: "Солист — Композиторы XXI века",
+      title: "Солист",
       description: "Страница солиста фестиваля «Композиторы XXI века».",
       canonicalPath: pathname,
     };
   }
 
   return {
-    title: "Страница не найдена — Композиторы XXI века",
+    title: "Страница не найдена",
     description: "Страница не найдена.",
     canonicalPath: pathname,
     robots: "noindex, follow",
@@ -228,7 +228,14 @@ function RootLayout() {
 
   return (
     <div className="min-h-screen overflow-x-clip bg-[var(--color-bg)] text-[var(--color-text)]">
-      <SiteHeader />
+      {location.pathname === "/" ? (
+        <>
+          <SiteHeader mode="home-old-hero" />
+          <SiteHeader mode="home-old-solid" />
+        </>
+      ) : (
+        <SiteHeader />
+      )}
       <main>
         <AnimatePresence mode="wait" initial={false} onExitComplete={handleExitComplete}>
           <motion.div
@@ -252,7 +259,7 @@ export const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
-      { index: true, element: <FestivalPage /> },
+      { index: true, element: <FestivalPageLegacy /> },
       { path: "festival", element: <AboutFestivalPage /> },
       { path: "academies", element: <AcademiesPage /> },
       { path: "festival-lab", element: <FestivalLabPage /> },

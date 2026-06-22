@@ -70,6 +70,195 @@ const urlByConcertId: Partial<Record<ConcertProgrammeItem["id"], string>> = {
 };
 
 const programByConcertId: Partial<Record<ConcertProgrammeItem["id"], BroadcastProgramSection[]>> = {
+  "2026-05-12-il-theleme-de-la-nuite": [
+    {
+      section: "Программа",
+      works: [
+        {
+          composer: "Кайя Саариахо",
+          title: "Vent nocturne / «Ночной ветер»",
+        },
+        {
+          composer: "Алексей Ретинский",
+          title: "Dream of Birds / «Сны птиц»",
+        },
+        {
+          composer: "Джордж Крамб",
+          title: "«Четыре ноктюрна» для скрипки и фортепиано",
+        },
+        {
+          composer: "Андреас Мустукис",
+          title: "Les Fleurs du Mal",
+        },
+        {
+          composer: "Сальваторе Шаррино",
+          title: "De la Nuit",
+        },
+        {
+          composer: "Сальваторе Шаррино",
+          title: "Melencolia / «Меланхолия» для виолончели и фортепиано",
+        },
+        {
+          composer: "Алексей Ретинский",
+          title: "Трио для скрипки, виолончели и фортепиано",
+        },
+      ],
+    },
+  ],
+  "2026-05-13-v-ischezayushem-gorode": [
+    {
+      section: "Программа",
+      works: [
+        {
+          composer: "Андрей Зубец",
+          title: "Три ноты «Туламби»",
+        },
+        {
+          composer: "Павел Турсунов",
+          title: "Квинтет «В исчезающем городе»",
+        },
+        {
+          composer: "Павел Турсунов",
+          title: "Квинтет для маримбы и струнных «Цветные свадьбы»",
+        },
+        {
+          composer: "Сергей Ахунов",
+          title: "Соната для альта и фортепиано",
+        },
+        {
+          composer: "Марианна Домникова",
+          title: "Цикл из шести романсов на стихи М. Цветаевой",
+        },
+      ],
+    },
+  ],
+  "2026-05-15-solisty-nizhnego-novgoroda": [
+    {
+      section: "I отделение",
+      works: [
+        {
+          composer: "Олег Пайбердин",
+          title: "Lamento для альта и струнного оркестра",
+          details: "Мировая премьера",
+        },
+        {
+          composer: "Павел Турсунов",
+          title: "«Портрет рисовальщика»",
+        },
+        {
+          composer: "Георгий Пелецис",
+          title: "«Цветущий жасмин»",
+        },
+      ],
+    },
+    {
+      section: "II отделение",
+      works: [
+        {
+          composer: "Андрей Зеленский",
+          title: "Ave Maria",
+        },
+        {
+          composer: "Екатерина Кожевникова",
+          title: "«Голубая планета, улетающая в бесконечность» для струнного оркестра",
+        },
+        {
+          composer: "Сергей Жуков",
+          title: "«Песни прощания»",
+          details: "на стихи Яна Хендрика Леопольда для сопрано, кларнета, клавесина и струнного оркестра",
+        },
+      ],
+    },
+  ],
+  "2026-05-18-forelnyy-kontsert": [
+    {
+      section: "Программа",
+      works: [
+        {
+          composer: "Франц Шуберт",
+          title: "«Die Forelle» для голоса и фортепиано",
+        },
+        {
+          composer: "Руст Позюмский",
+          title: "Интермеццо 1 для двух скрипок",
+        },
+        {
+          composer: "Франц Шуберт",
+          title: "Фортепианный квинтет «Die Forelle» (I часть)",
+        },
+        {
+          composer: "Руст Позюмский",
+          title: "Интермеццо 2 для виолончели соло",
+        },
+        {
+          composer: "Владимир Радченков",
+          title: "Division on Schubert: тема «Die Forelle» для струнного квинтета",
+        },
+        {
+          composer: "Руст Позюмский",
+          title: "Интермеццо 3 для альта и фортепиано",
+        },
+        {
+          composer: "Павел Карманов",
+          title: "«Forellenquintet»",
+        },
+        {
+          composer: "Владимир Волков",
+          title: "Интермеццо 4 (контрабасовая импровизация на тему «Форели»)",
+        },
+        {
+          composer: "Руст Позюмский",
+          title: "Поэма «Форель» для голоса и камерного ансамбля (памяти П.Карманова)",
+        },
+      ],
+    },
+  ],
+  "2026-05-19-opensoundquartet": [
+    {
+      section: "Программа",
+      works: [
+        {
+          composer: "Эльмир Низамов",
+          title: "Сюита «Люди»",
+        },
+        {
+          composer: "Владимир Кобекин",
+          title: "«Три русские песни»",
+        },
+        {
+          composer: "Настасья Хрущёва",
+          title: "«Пять песен на Рождество»",
+        },
+        {
+          composer: "Юрий Каспаров",
+          title: "«Пурпурные облака»",
+        },
+        {
+          composer: "Павел Карманов",
+          title: "String quaREtet",
+        },
+        {
+          composer: "Анастасия Дружинина",
+          title: "«Эхо пяти желаний» для квартета и электроники",
+        },
+      ],
+    },
+  ],
+  "2026-05-20-opensoundorchestra": [
+    {
+      section: "Программа",
+      works: [
+        {
+          composer: "Сергей Ахунов",
+          title: "«Времена года»",
+        },
+        {
+          composer: "Владимир Мартынов",
+          title: "«Времена года»",
+        },
+      ],
+    },
+  ],
   "2026-05-25-daniil-sayamov-glinka-quartet": [
     {
       section: "I отделение",

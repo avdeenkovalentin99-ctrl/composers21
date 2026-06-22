@@ -7,9 +7,9 @@ export type PageMeta = {
 };
 
 const siteOrigin = "https://21centurycomposers.com";
-const defaultDescription =
-  "Фестиваль современной академической музыки в Москве. Галерея Нико. 10-31 мая 2026.";
-const defaultImage = `${siteOrigin}/assets/external/heroafisha/finalconcert.jpg`;
+const siteTitle = "Композиторы XXI века";
+const defaultDescription = "Фестиваль современной академической музыки";
+const defaultImage = `${siteOrigin}/og-image.png`;
 
 function ensureMeta(selector: string, attributes: Record<string, string>) {
   let element = document.querySelector<HTMLMetaElement>(selector);
@@ -54,13 +54,15 @@ export function applyPageMeta(meta: PageMeta) {
 
   setMeta('meta[name="description"]', { name: "description" }, description);
   setMeta('meta[name="robots"]', { name: "robots" }, meta.robots ?? "index, follow");
-  setMeta('meta[property="og:title"]', { property: "og:title" }, meta.title);
-  setMeta('meta[property="og:description"]', { property: "og:description" }, description);
+  setMeta('meta[property="og:title"]', { property: "og:title" }, siteTitle);
+  setMeta('meta[property="og:description"]', { property: "og:description" }, defaultDescription);
   setMeta('meta[property="og:type"]', { property: "og:type" }, "website");
   setMeta('meta[property="og:url"]', { property: "og:url" }, canonicalUrl);
   setMeta('meta[property="og:image"]', { property: "og:image" }, image);
+  setMeta('meta[property="og:image:width"]', { property: "og:image:width" }, "1200");
+  setMeta('meta[property="og:image:height"]', { property: "og:image:height" }, "630");
   setMeta('meta[name="twitter:card"]', { name: "twitter:card" }, "summary_large_image");
-  setMeta('meta[name="twitter:title"]', { name: "twitter:title" }, meta.title);
-  setMeta('meta[name="twitter:description"]', { name: "twitter:description" }, description);
+  setMeta('meta[name="twitter:title"]', { name: "twitter:title" }, siteTitle);
+  setMeta('meta[name="twitter:description"]', { name: "twitter:description" }, defaultDescription);
   setMeta('meta[name="twitter:image"]', { name: "twitter:image" }, image);
 }

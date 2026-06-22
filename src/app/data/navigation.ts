@@ -13,6 +13,7 @@ export const navigationGroups: NavGroup[] = [
     to: "/festival",
     children: [
       { label: "\u041e \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u0435", to: "/festival" },
+      { label: "\u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430", to: "/afisha" },
       { label: "\u0410\u043a\u0430\u0434\u0435\u043c\u0438\u0438", to: "/academies" },
       { label: "\u0423\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u0438", to: "/participants" },
       { label: "\u041a\u043e\u043c\u0430\u043d\u0434\u0430", to: "/team" },

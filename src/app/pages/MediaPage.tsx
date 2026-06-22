@@ -49,8 +49,8 @@ function ExternalMaterialLink({
           className={[
             "font-editorial-serif font-normal tracking-[-0.01em] text-neutral-950",
             isFeatured
-              ? "mt-5 text-[1.75rem] leading-[1.08] sm:text-[2.08rem] lg:text-[2.32rem]"
-              : "mt-5 max-w-3xl text-[1.35rem] leading-[1.22] sm:text-[1.58rem]",
+              ? "mt-5 text-[1.65rem] leading-[1.08] sm:text-[1.95rem] lg:text-[2.18rem]"
+              : "mt-5 max-w-3xl text-[1.28rem] leading-[1.22] sm:text-[1.48rem]",
           ].join(" ")}
         >
           {material.title}
@@ -129,6 +129,7 @@ export function MediaPage() {
   const primaryPublicationMaterials = publicationMaterials.slice(0, visiblePublicationCount);
   const hiddenPublicationMaterials = publicationMaterials.slice(visiblePublicationCount);
   const hasHiddenPublicationMaterials = hiddenPublicationMaterials.length > 0;
+  const publicationMaterialsPanelId = "media-publication-materials";
   const publicationToggleClassName =
     "font-editorial-sans inline-flex items-center gap-1.5 border-b border-black/16 pb-[3px] text-[11px] uppercase leading-5 tracking-[0.14em] text-neutral-600 transition-colors duration-300 hover:border-black/30 hover:text-neutral-950 sm:text-[12px]";
 
@@ -148,8 +149,30 @@ export function MediaPage() {
     >
       <PageContainer>
         <div className="mx-auto max-w-6xl">
-          <h1 className="sr-only">Медиа фестиваля «Композиторы XXI века»</h1>
           <div className="space-y-16 sm:space-y-20 lg:space-y-24">
+            <section className="border-y border-black/10 py-8 sm:py-10">
+              <div className="grid items-center gap-6 md:grid-cols-[minmax(0,1fr)_auto]">
+                <p className="font-editorial-serif text-[1.45rem] leading-8 text-neutral-900 sm:text-[1.72rem] sm:leading-9">
+                  Трансляции фестиваля собраны в отдельном архиве.
+                </p>
+                <Link
+                  to="/translyatsii"
+                  className="font-editorial-sans group inline-flex items-center gap-2 justify-self-end border border-neutral-400 px-4 py-3 text-[11px] uppercase leading-none tracking-[0.14em] text-neutral-700 transition-colors duration-300 hover:border-neutral-900 hover:text-neutral-950"
+                >
+                  Архив трансляций
+                  <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
+                </Link>
+              </div>
+            </section>
+
+            <MediaSection title="репортажи" hasTopBorder={false}>
+              <div className="grid gap-4 md:grid-cols-2">
+                {cultureReports.map((material) => (
+                  <ExternalMaterialLink key={material.id} material={material} variant="featured" />
+                ))}
+              </div>
+            </MediaSection>
+
             <MediaSection title="публикации и анонсы" hasTopBorder={false} sectionRef={publicationsSectionRef}>
               <div>
                 {primaryPublicationMaterials.map((material) => (
@@ -162,6 +185,7 @@ export function MediaPage() {
                       onClick={() => setShowAllPublications(true)}
                       className={`mt-7 ${publicationToggleClassName}`}
                       aria-expanded={showAllPublications}
+                      aria-controls={publicationMaterialsPanelId}
                     >
                       показать все материалы
                       <span aria-hidden="true" className="font-sans text-[10px] leading-none text-neutral-500">
@@ -173,6 +197,7 @@ export function MediaPage() {
                 <AnimatePresence initial={false}>
                   {showAllPublications ? (
                     <motion.div
+                      id={publicationMaterialsPanelId}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -188,6 +213,7 @@ export function MediaPage() {
                           onClick={collapsePublications}
                           className="font-editorial-sans mt-7 inline-flex items-center gap-1.5 text-[10px] uppercase leading-5 tracking-[0.14em] text-neutral-400 transition-colors duration-300 hover:text-neutral-700 sm:text-[11px]"
                           aria-expanded={showAllPublications}
+                          aria-controls={publicationMaterialsPanelId}
                         >
                           свернуть список
                           <span aria-hidden="true" className="font-sans text-[9px] leading-none text-neutral-400">
@@ -198,14 +224,6 @@ export function MediaPage() {
                     </motion.div>
                   ) : null}
                 </AnimatePresence>
-              </div>
-            </MediaSection>
-
-            <MediaSection title="репортажи" hasTopBorder={false}>
-              <div className="grid gap-4 md:grid-cols-2">
-                {cultureReports.map((material) => (
-                  <ExternalMaterialLink key={material.id} material={material} variant="featured" />
-                ))}
               </div>
             </MediaSection>
 
@@ -232,24 +250,6 @@ export function MediaPage() {
               </MediaSection>
             ) : null}
 
-            <section className="border-y border-black/10 py-8 sm:py-10">
-              <div className="grid items-center gap-6 md:grid-cols-[minmax(0,1fr)_auto]">
-                <p className="font-editorial-serif text-[1.45rem] leading-8 text-neutral-900 sm:text-[1.72rem] sm:leading-9">
-                  Все записи трансляций доступны в отдельном разделе.
-                </p>
-                <Link
-                  to="/translyatsii"
-                  className="font-editorial-sans group inline-flex items-center gap-2 justify-self-start border border-neutral-400 px-4 py-3 text-[11px] uppercase leading-none tracking-[0.14em] text-neutral-700 transition-colors duration-300 hover:border-neutral-900 hover:text-neutral-950 md:justify-self-end"
-                >
-                  Перейти к трансляциям
-                  <ArrowUpRight
-                    size={15}
-                    strokeWidth={1.5}
-                    className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  />
-                </Link>
-              </div>
-            </section>
           </div>
         </div>
       </PageContainer>

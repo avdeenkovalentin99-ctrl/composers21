@@ -2,6 +2,7 @@ import { MouseEvent, useEffect, useRef, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import festivalLogo from "../../../logofestnew.png";
 import { navigationGroups, navigationItems } from "../data/navigation";
 import type { NavGroup, NavItem } from "../data/types";
 import { PageContainer } from "./PageContainer";
@@ -9,19 +10,25 @@ import { PageContainer } from "./PageContainer";
 const HEADER_ROUTE_SETTLE_MS = 560;
 const MOBILE_NAVIGATION_DELAY_MS = 250;
 
-function getNavClassName(isActive: boolean) {
+function getNavClassName(isActive: boolean, isLightOnHero = false) {
   return [
     "font-editorial-sans relative text-[12px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200",
     isActive
       ? "bg-neutral-900 px-2 py-[1px] !text-white"
-      : "text-neutral-600 hover:text-neutral-900",
+      : isLightOnHero
+        ? "text-white/72 hover:text-white"
+        : "text-neutral-600 hover:text-neutral-900",
   ].join(" ");
 }
 
-function getNavGroupClassName(isActive: boolean) {
+function getNavGroupClassName(isActive: boolean, isLightOnHero = false) {
   return [
     "font-editorial-sans relative inline-flex text-[12px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200",
-    isActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "text-neutral-600 hover:text-neutral-900",
+    isActive
+      ? "bg-neutral-900 px-2 py-[1px] !text-white"
+      : isLightOnHero
+        ? "text-white/72 hover:text-white"
+        : "text-neutral-600 hover:text-neutral-900",
   ].join(" ");
 }
 
@@ -47,6 +54,7 @@ function DropdownNavItem({
   onToggle,
   onItemClick,
   useHoverInteraction,
+  isLightOnHero,
 }: {
   group: NavGroup;
   pathname: string;
@@ -57,9 +65,13 @@ function DropdownNavItem({
   onToggle: () => void;
   onItemClick: () => void;
   useHoverInteraction: boolean;
+  isLightOnHero?: boolean;
 }) {
   const isActive = isNavGroupActive(group, pathname);
   const groupTarget = group.to ?? group.children[0]?.to ?? "/";
+  const dropdownId = `desktop-navigation-${group.children
+    .map((item) => item.to.replace(/[^a-z0-9]+/gi, "-"))
+    .join("-")}`;
 
   return (
     <div
@@ -69,8 +81,9 @@ function DropdownNavItem({
     >
       <a
         href={groupTarget}
-        className={getNavGroupClassName(isActive)}
+        className={getNavGroupClassName(isActive, isLightOnHero)}
         aria-expanded={isOpen}
+        aria-controls={dropdownId}
         aria-haspopup="true"
         onClick={(event) => {
           if (useHoverInteraction) {
@@ -85,12 +98,18 @@ function DropdownNavItem({
       </a>
       {isOpen ? (
         <motion.div
+          id={dropdownId}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.14, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute left-1/2 top-full z-10 inline-flex w-fit max-w-[calc(100vw-2.5rem)] -translate-x-[38%] pt-4"
+          className="absolute left-1/2 top-full z-[60] inline-flex w-fit max-w-[calc(100vw-2.5rem)] -translate-x-[38%] pt-4"
         >
-          <div className="inline-flex w-fit border border-black/[0.07] bg-white/[0.92] px-1 py-0.5">
+          <div
+            className={[
+              "inline-flex w-fit px-1 py-0.5",
+              isLightOnHero ? "bg-transparent" : "bg-white",
+            ].join(" ")}
+          >
             <div className="inline-flex w-fit flex-nowrap items-center gap-x-5 gap-y-1.5">
               {group.children.map((item, index) => (
                 <motion.span
@@ -110,7 +129,13 @@ function DropdownNavItem({
                     className={({ isActive: isChildActive }) =>
                       [
                         "font-editorial-sans whitespace-nowrap text-[10px] font-normal uppercase tracking-[0.12em] leading-none transition-colors duration-200",
-                        isChildActive ? "text-neutral-950" : "text-neutral-500 hover:text-neutral-900",
+                        isLightOnHero
+                          ? isChildActive
+                            ? "text-white"
+                            : "text-white/72 hover:text-white"
+                          : isChildActive
+                            ? "text-neutral-950"
+                            : "text-neutral-500 hover:text-neutral-900",
                       ].join(" ")
                     }
                   >
@@ -138,7 +163,7 @@ function MobileNavGroup({
   const isActive = isNavGroupActive(group, pathname);
   const labelClassName = [
     "font-editorial-sans inline-flex text-[13px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:text-[14px]",
-    isActive ? "text-neutral-900" : "text-neutral-600",
+    isActive ? "!text-neutral-900" : "!text-neutral-900",
   ].join(" ");
   const labelContent = isActive ? (
     <span className="inline-flex items-center gap-1.5">
@@ -151,7 +176,7 @@ function MobileNavGroup({
   );
 
   return (
-    <div className="flex w-full flex-col items-center gap-4">
+    <div className="flex w-full flex-col items-start gap-4">
       {group.to ? (
         <NavLink to={group.to} onClick={(event) => onNavigate(event, group.to!)} className={labelClassName}>
           {labelContent}
@@ -168,7 +193,7 @@ function MobileNavGroup({
             className={({ isActive: isChildActive }) =>
               [
                 "font-editorial-sans inline-flex text-[11px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:text-[12px]",
-                isChildActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "text-neutral-500 hover:text-neutral-900",
+                isChildActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "!text-neutral-600 hover:!text-neutral-900",
               ].join(" ")
             }
           >
@@ -180,9 +205,14 @@ function MobileNavGroup({
   );
 }
 
-export function SiteHeader() {
+type SiteHeaderMode = "default" | "home-old-hero" | "home-old-solid";
+
+export function SiteHeader({ mode = "default" }: { mode?: SiteHeaderMode }) {
   const location = useLocation();
   const navigate = useNavigate();
+  const isHomeOldMode = mode === "home-old-hero" || mode === "home-old-solid";
+  const isHomeOldHeroMode = mode === "home-old-hero";
+  const isHomeOldSolidMode = mode === "home-old-solid";
   const [useHoverInteraction, setUseHoverInteraction] = useState(() =>
     typeof window === "undefined" ? false : window.matchMedia("(hover: hover) and (pointer: fine)").matches,
   );
@@ -194,8 +224,10 @@ export function SiteHeader() {
   const headerRef = useRef<HTMLElement | null>(null);
   const previousPathnameRef = useRef(location.pathname);
   const mobileNavigationTimeoutRef = useRef<number | null>(null);
-  const hasSolidHeaderBackground = isParticipantsLeaving || isScrolled || isRouteSettling;
-  const hasHeaderBorder = isScrolled && !isParticipantsLeaving;
+  const hasSolidHeaderBackground =
+    isHomeOldSolidMode || isParticipantsLeaving || isScrolled || (isRouteSettling && !isHomeOldMode);
+  const hasHeaderBorder = (isHomeOldSolidMode || isScrolled) && !isParticipantsLeaving;
+  const isLightOnHero = isHomeOldHeroMode && !isScrolled && !menuOpen;
   const [homeItem, partnersItem] = navigationItems;
   const [festivalGroup, archiveGroup] = navigationGroups;
 
@@ -253,11 +285,33 @@ export function SiteHeader() {
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 48);
+    const onScroll = () => {
+      if (!isHomeOldMode) {
+        setIsScrolled(window.scrollY > 48);
+        return;
+      }
+
+      const heroElement = document.getElementById("home-old-hero");
+      if (!heroElement) {
+        setIsScrolled(false);
+        return;
+      }
+
+      const headerHeight = headerRef.current?.offsetHeight ?? 64;
+      const heroBottom = heroElement.getBoundingClientRect().bottom;
+      setIsScrolled(heroBottom <= headerHeight);
+    };
+
     onScroll();
+    const animationFrameId = window.requestAnimationFrame(onScroll);
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [isHomeOldMode]);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -332,19 +386,63 @@ export function SiteHeader() {
       <header
         ref={headerRef}
         className={[
-          "fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color] duration-150",
+          "inset-x-0 top-0 z-50 border-b transition-[opacity,transform,background-color,border-color] duration-300 ease-out",
+          isHomeOldHeroMode ? "absolute" : "fixed",
+          isHomeOldHeroMode && isScrolled ? "pointer-events-none opacity-0" : "",
+          isHomeOldSolidMode && !isScrolled ? "pointer-events-none opacity-0" : "",
+          isHomeOldSolidMode && isScrolled ? "opacity-100" : "",
           hasSolidHeaderBackground ? "bg-white duration-300" : "bg-transparent duration-500",
           hasHeaderBorder ? "border-black/70" : "border-transparent",
+          isLightOnHero ? "site-header-light-on-hero" : "",
         ].join(" ")}
       >
         <PageContainer>
-          <div className="mb-1 flex items-center justify-between gap-6 py-4 sm:mb-1">
-            <nav className="hidden items-center gap-x-8 lg:flex xl:gap-x-12 2xl:gap-x-16" aria-label="Основная навигация">
+          <div className="mb-1 flex items-center justify-between gap-6 pb-4 pt-6">
+            <NavLink
+              to="/"
+              onClick={handleFestivalClick}
+              className={[
+                "shrink-0 items-center gap-3",
+                isLightOnHero ? "hidden" : "hidden text-neutral-800 lg:inline-flex",
+              ].join(" ")}
+              aria-label="Композиторы XXI века — главная"
+            >
+              <span className="relative block h-8 w-[41px] shrink-0 overflow-hidden" aria-hidden="true">
+                <img
+                  src={festivalLogo}
+                  alt=""
+                  className={[
+                    "pointer-events-none absolute -left-2 -top-[19px] h-auto w-[105px] max-w-none",
+                    isLightOnHero ? "brightness-0 invert" : "",
+                  ].join(" ")}
+                />
+                  <span
+                    className="pointer-events-none absolute -left-2 bottom-0 aspect-[3/2] w-[105px] max-w-none bg-[#C77482]"
+                    style={{
+                      /* дополнительно уменьшено: увеличены inset на 3px со всех сторон */
+                      clipPath: "inset(calc(64% + 4px) calc(53% + 4px) calc(30% + 4px) calc(43% + 4px))",
+                      maskImage: `url(${festivalLogo})`,
+                      maskPosition: "center",
+                      maskRepeat: "no-repeat",
+                      maskSize: "100% 100%",
+                      WebkitMaskImage: `url(${festivalLogo})`,
+                      WebkitMaskPosition: "center",
+                      WebkitMaskRepeat: "no-repeat",
+                      WebkitMaskSize: "100% 100%",
+                    }}
+                  />
+              </span>
+              <span className="font-editorial-sans whitespace-nowrap text-[11px] font-normal uppercase leading-none tracking-[0.13em]">
+                Композиторы XXI века
+              </span>
+            </NavLink>
+
+            <nav className="hidden items-center gap-x-16 lg:ml-auto lg:flex xl:gap-x-24 2xl:gap-x-32" aria-label="Основная навигация">
               {homeItem ? (
                 <NavLink
                   to={homeItem.to}
                   onClick={homeItem.to === "/" ? handleFestivalClick : undefined}
-                  className={({ isActive }) => getNavClassName(isActive)}
+                  className={({ isActive }) => getNavClassName(isActive, isLightOnHero)}
                 >
                   {homeItem.label}
                 </NavLink>
@@ -360,6 +458,7 @@ export function SiteHeader() {
                   onToggle={() => setOpenDesktopGroup((current) => (current === festivalGroup.label ? null : festivalGroup.label))}
                   onItemClick={() => setOpenDesktopGroup(null)}
                   useHoverInteraction={useHoverInteraction}
+                  isLightOnHero={isLightOnHero}
                 />
               ) : null}
               {archiveGroup ? (
@@ -373,47 +472,24 @@ export function SiteHeader() {
                   onToggle={() => setOpenDesktopGroup((current) => (current === archiveGroup.label ? null : archiveGroup.label))}
                   onItemClick={() => setOpenDesktopGroup(null)}
                   useHoverInteraction={useHoverInteraction}
+                  isLightOnHero={isLightOnHero}
                 />
               ) : null}
               {partnersItem ? (
-                <NavLink to={partnersItem.to} className={({ isActive }) => getNavClassName(isActive)}>
+                <NavLink to={partnersItem.to} className={({ isActive }) => getNavClassName(isActive, isLightOnHero)}>
                   {partnersItem.label}
                 </NavLink>
               ) : null}
             </nav>
 
-            <NavLink
-              to="/afisha"
-              className={({ isActive }) =>
-                [
-                  "font-editorial-sans inline-flex items-center border text-[12px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:hidden",
-                  isActive
-                    ? "border-transparent bg-neutral-900 px-2 py-2 !text-white"
-                    : "border-neutral-400 px-2 py-2 text-neutral-600 hover:border-neutral-900 hover:text-neutral-900",
-                ].join(" ")
-              }
-            >
-              Афиша
-            </NavLink>
-
-            <div className="ml-auto flex items-center gap-3">
-              <NavLink
-                to="/afisha"
-                className={({ isActive }) =>
-                  [
-                    "font-editorial-sans hidden items-center border text-[12px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:inline-flex",
-                    isActive
-                      ? "border-transparent bg-neutral-900 px-2 py-2 !text-white"
-                      : "border-neutral-400 px-2 py-2 text-neutral-600 hover:border-neutral-900 hover:text-neutral-900",
-                  ].join(" ")
-                }
-              >
-                Афиша
-              </NavLink>
+            <div className="-mr-2 ml-auto flex items-center gap-3 lg:hidden">
               <button
                 type="button"
                 onClick={() => setMenuOpen((value) => !value)}
-                className="font-editorial-sans inline-flex items-center gap-2 text-[0.74rem] font-light uppercase tracking-[0.18em] leading-none text-black/72 lg:hidden"
+                className={[
+                  "font-editorial-sans inline-flex items-center gap-2 text-[0.74rem] font-light uppercase tracking-[0.18em] leading-none transition-colors duration-200 lg:hidden",
+                  isLightOnHero ? "text-white/72" : "text-black/72",
+                ].join(" ")}
                 aria-expanded={menuOpen}
                 aria-controls="mobile-navigation"
               >
@@ -436,7 +512,7 @@ export function SiteHeader() {
             className="fixed inset-0 z-40 bg-white/99 pt-24 lg:hidden"
           >
             <PageContainer className="flex h-full flex-col pb-10">
-              <nav className="flex flex-col items-center gap-8 text-center" aria-label="Мобильная навигация">
+              <nav className="mx-auto flex w-[190px] translate-x-12 flex-col items-start gap-8 text-left" aria-label="Мобильная навигация">
                 {homeItem ? (
                   <NavLink
                     to={homeItem.to}
@@ -444,7 +520,7 @@ export function SiteHeader() {
                     className={({ isActive }) =>
                       [
                         "font-editorial-sans inline-flex text-[13px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:text-[14px]",
-                        isActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "text-neutral-600 hover:text-neutral-900",
+                        isActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "!text-neutral-900 hover:!text-neutral-950",
                       ].join(" ")
                     }
                   >
@@ -472,7 +548,7 @@ export function SiteHeader() {
                     className={({ isActive }) =>
                       [
                         "font-editorial-sans inline-flex text-[13px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:text-[14px]",
-                        isActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "text-neutral-600 hover:text-neutral-900",
+                        isActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "!text-neutral-900 hover:!text-neutral-950",
                       ].join(" ")
                     }
                   >

@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope-variable.ttf") format("truetype");
+  font-weight: 300 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/fonts/eb-garamond-variable.ttf") format("truetype");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-bg: #ffffff;
   --color-panel: #fbfbfb;
@@ -87,4 +103,26 @@ select {
 
 ::selection {
   background: rgba(18, 18, 18, 0.14);
+}
+
+.site-header-light-on-hero a,
+.site-header-light-on-hero button {
+  color: rgba(255, 255, 255, 0.74) !important;
+}
+
+.site-header-light-on-hero a:hover,
+.site-header-light-on-hero button:hover {
+  color: #ffffff !important;
+}
+
+.site-header-light-on-hero a {
+  background: transparent !important;
+}
+
+.site-header-light-on-hero a[href="/afisha"] {
+  border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.site-header-light-on-hero a[href="/afisha"]:hover {
+  border-color: rgba(255, 255, 255, 0.7) !important;
 }

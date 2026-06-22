@@ -113,6 +113,7 @@ function EventAccordion({
   const eventStartTime = event.time ?? concertStartTime;
   const isPastEvent = Date.now() > buildEventDateTime(event.date, eventStartTime);
   const keepPosterInColor = event.id === "2026-05-13-v-ischezayushem-gorode";
+  const programmePanelId = `${event.id}-programme-panel`;
 
   function handleTicketClick() {
     sendMetrikaGoal("niko_ticket_click", {
@@ -161,6 +162,7 @@ function EventAccordion({
                 type="button"
                 onClick={onToggle}
                 aria-expanded={isOpen}
+                aria-controls={programmePanelId}
                 aria-label={
                   isOpen
                     ? "\u0421\u0432\u0435\u0440\u043D\u0443\u0442\u044C \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0443"
@@ -203,6 +205,7 @@ function EventAccordion({
                 type="button"
                 onClick={onToggle}
                 aria-expanded={isOpen}
+                aria-controls={programmePanelId}
                 aria-label={
                   isOpen
                     ? "\u0421\u0432\u0435\u0440\u043D\u0443\u0442\u044C \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0443"
@@ -222,6 +225,7 @@ function EventAccordion({
           </div>
 
           <motion.div
+            id={programmePanelId}
             initial={shouldAnimateOnMount ? { height: 0, opacity: 0 } : false}
             animate={{
               height: isOpen ? "auto" : 0,
@@ -400,26 +404,26 @@ export function AfishaPage() {
   }, [openEventKeys]);
 
   function updateConcertQuery(nextEventKey: string | null) {
-    const nextParams = new URLSearchParams(searchParams);
+    setSearchParams((currentParams) => {
+      const nextParams = new URLSearchParams(currentParams);
 
-    if (nextEventKey && Object.prototype.hasOwnProperty.call(queryKeyByConcertId, nextEventKey)) {
-      nextParams.set("concert", queryKeyByConcertId[nextEventKey as keyof typeof queryKeyByConcertId]);
-    } else {
-      nextParams.delete("concert");
-    }
+      if (nextEventKey && Object.prototype.hasOwnProperty.call(queryKeyByConcertId, nextEventKey)) {
+        nextParams.set("concert", queryKeyByConcertId[nextEventKey as keyof typeof queryKeyByConcertId]);
+      } else {
+        nextParams.delete("concert");
+      }
 
-    setSearchParams(nextParams, { replace: true });
+      return nextParams;
+    }, { replace: true });
   }
 
   function handleToggle(eventKey: string) {
-    setOpenEventKeys((current) => {
-      const isOpen = current.includes(eventKey);
-      const nextEventKeys = isOpen ? current.filter((key) => key !== eventKey) : [...current, eventKey];
-      const latestOpenedEventKey = nextEventKeys[nextEventKeys.length - 1] ?? null;
+    const isOpen = openEventKeys.includes(eventKey);
+    const nextEventKeys = isOpen ? openEventKeys.filter((key) => key !== eventKey) : [...openEventKeys, eventKey];
+    const latestOpenedEventKey = nextEventKeys[nextEventKeys.length - 1] ?? null;
 
-      updateConcertQuery(latestOpenedEventKey);
-      return nextEventKeys;
-    });
+    setOpenEventKeys(nextEventKeys);
+    updateConcertQuery(latestOpenedEventKey);
   }
 
   return (

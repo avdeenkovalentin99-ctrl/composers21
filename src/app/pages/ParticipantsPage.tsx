@@ -283,6 +283,7 @@ export function ParticipantsPage() {
                       <button
                         key={category}
                         type="button"
+                        aria-pressed={isActive}
                         onClick={() => {
                           if (isLeaving) {
                             return;
@@ -312,6 +313,7 @@ export function ParticipantsPage() {
                   <button
                     type="button"
                     aria-label="Cards view"
+                    aria-pressed={viewMode === "grid"}
                     onClick={() => setViewMode("grid")}
                     className={[
                       "inline-flex h-8 w-8 items-center justify-center transition-colors duration-200",
@@ -323,6 +325,7 @@ export function ParticipantsPage() {
                   <button
                     type="button"
                     aria-label="List view"
+                    aria-pressed={viewMode === "list"}
                     onClick={() => setViewMode("list")}
                     className={[
                       "inline-flex h-8 w-8 items-center justify-center transition-colors duration-200",
@@ -338,6 +341,7 @@ export function ParticipantsPage() {
                 <button
                   type="button"
                   aria-label="Cards view"
+                  aria-pressed={viewMode === "grid"}
                   onClick={() => setViewMode("grid")}
                   className={[
                     "inline-flex h-8 w-8 items-center justify-center transition-colors duration-200",
@@ -349,6 +353,7 @@ export function ParticipantsPage() {
                 <button
                   type="button"
                   aria-label="List view"
+                  aria-pressed={viewMode === "list"}
                   onClick={() => setViewMode("list")}
                   className={[
                     "inline-flex h-8 w-8 items-center justify-center transition-colors duration-200",
