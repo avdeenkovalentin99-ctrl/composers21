@@ -7,9 +7,10 @@ export type PageMeta = {
 };
 
 const siteOrigin = "https://21centurycomposers.com";
-const siteTitle = "Композиторы XXI века";
-const defaultDescription = "Фестиваль современной академической музыки";
-const defaultImage = `${siteOrigin}/og-image.png`;
+const siteName = "Композиторы XXI века";
+const siteTitle = "Фестиваль современной музыки";
+const defaultDescription = "10–31 мая · Москва · Галерея НИКО · 15 концертов";
+const defaultImage = `${siteOrigin}/OGImage1.png`;
 
 function ensureMeta(selector: string, attributes: Record<string, string>) {
   let element = document.querySelector<HTMLMetaElement>(selector);
@@ -58,9 +59,10 @@ export function applyPageMeta(meta: PageMeta) {
   setMeta('meta[property="og:description"]', { property: "og:description" }, defaultDescription);
   setMeta('meta[property="og:type"]', { property: "og:type" }, "website");
   setMeta('meta[property="og:url"]', { property: "og:url" }, canonicalUrl);
+  setMeta('meta[property="og:site_name"]', { property: "og:site_name" }, siteName);
   setMeta('meta[property="og:image"]', { property: "og:image" }, image);
-  setMeta('meta[property="og:image:width"]', { property: "og:image:width" }, "1200");
-  setMeta('meta[property="og:image:height"]', { property: "og:image:height" }, "630");
+  setMeta('meta[property="og:image:width"]', { property: "og:image:width" }, "1731");
+  setMeta('meta[property="og:image:height"]', { property: "og:image:height" }, "909");
   setMeta('meta[name="twitter:card"]', { name: "twitter:card" }, "summary_large_image");
   setMeta('meta[name="twitter:title"]', { name: "twitter:title" }, siteTitle);
   setMeta('meta[name="twitter:description"]', { name: "twitter:description" }, defaultDescription);

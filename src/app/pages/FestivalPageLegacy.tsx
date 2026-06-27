@@ -148,7 +148,7 @@ export function FestivalPageLegacy() {
             className="flex items-end justify-between gap-10"
           >
             <p className="font-editorial-sans text-[10px] font-normal uppercase leading-none tracking-[0.18em] text-white/68">
-              2026 · 10—31 мая · Москва · Галерея НИКО · 15 концертов
+              10—31 мая · Москва · Галерея НИКО · 15 концертов
             </p>
             <Link
               to="/media"

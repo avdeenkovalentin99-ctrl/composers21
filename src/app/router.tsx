@@ -34,8 +34,8 @@ const PAGE_GOAL_BY_PATHNAME: Record<string, string> = {
 
 const PAGE_META_BY_PATHNAME: Record<string, PageMeta> = {
   "/": {
-    title: "Композиторы XXI века",
-    description: "Фестиваль современной академической музыки",
+    title: "Фестиваль современной музыки",
+    description: "10–31 мая · Москва · Галерея НИКО · 15 концертов",
     canonicalPath: "/",
   },
   "/festival": {
