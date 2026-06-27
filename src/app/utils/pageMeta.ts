@@ -10,7 +10,7 @@ const siteOrigin = "https://21centurycomposers.com";
 const siteName = "Композиторы XXI века";
 const siteTitle = "Фестиваль современной музыки";
 const defaultDescription = "10–31 мая · Москва · Галерея НИКО · 15 концертов";
-const defaultImage = `${siteOrigin}/OGImage2.png`;
+const defaultImage = `${siteOrigin}/OGImage3.png`;
 
 function ensureMeta(selector: string, attributes: Record<string, string>) {
   let element = document.querySelector<HTMLMetaElement>(selector);
