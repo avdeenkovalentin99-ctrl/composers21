@@ -8,7 +8,6 @@ export type PageMeta = {
 
 const siteOrigin = "https://21centurycomposers.com";
 const ogTitle = "Композиторы XXI века";
-const siteName = "Фестиваль современной музыки";
 const defaultDescription = "10–31 мая · Москва · Галерея НИКО · 15 концертов";
 const defaultImage = `${siteOrigin}/OGimage3.png`;
 
