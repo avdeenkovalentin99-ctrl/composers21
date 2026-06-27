@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import festivalLogo from "../../../logofestnew.png";
+import festivalLogo from "../../../LogoV3main2.0.svg";
 import { VideoHomeHero } from "../components/hero/VideoHomeHero";
 import { PageContainer } from "../layout/PageContainer";
 
@@ -91,27 +91,9 @@ export function FestivalPageLegacy() {
               <div className="relative aspect-[2.6/1] w-full overflow-hidden">
                 <img
                   src={festivalLogo}
-                  alt=""
-                  className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2 opacity-[0.98] brightness-0 invert"
-                  decoding="async"
-                  style={{ clipPath: "inset(0 53% 0 0)" }}
-                />
-                <img
-                  src={festivalLogo}
                   alt="Композиторы XXI века"
-                  className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2 scale-[1.06] opacity-90 brightness-0 invert"
+                  className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2 opacity-[0.79]"
                   decoding="async"
-                  style={{
-                    clipPath: "inset(0 0 0 47%)",
-                    transformOrigin: "47% 50%",
-                  }}
-                />
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute left-0 top-1/2 aspect-[3/2] w-full -translate-y-1/2 bg-[#8A2432]"
-                  style={{
-                    clipPath: "inset(64% 53% 30% 43%)",
-                  }}
                 />
               </div>
               <span aria-hidden="true" className="ml-[10%] mt-3 block h-px w-[65%] bg-[#8A2432]/70" />
@@ -150,24 +132,8 @@ export function FestivalPageLegacy() {
               <img
                 src={festivalLogo}
                 alt="Композиторы XXI века"
-                className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2 opacity-[0.82] brightness-0 invert"
-                style={{ clipPath: "inset(0 55% 0 0)" }}
+                className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2 opacity-[0.79]"
                 decoding="async"
-              />
-              <img
-                src={festivalLogo}
-                alt=""
-                aria-hidden="true"
-                className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2 opacity-[0.86] brightness-0 invert"
-                style={{ clipPath: "inset(0 0 0 45%)" }}
-                decoding="async"
-              />
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute left-0 top-1/2 aspect-[3/2] w-full -translate-y-1/2 bg-[#8A2432]"
-                style={{
-                  clipPath: "inset(64% 53% 30% 43%)",
-                }}
               />
             </div>
             <p className="font-editorial-sans mt-1.5 w-full whitespace-nowrap text-[13px] font-normal uppercase leading-none tracking-[0.12em] text-white/76 xl:text-[14px]">
