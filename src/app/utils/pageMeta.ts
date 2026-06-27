@@ -8,6 +8,7 @@ export type PageMeta = {
 
 const siteOrigin = "https://21centurycomposers.com";
 const ogTitle = "Композиторы XXI века";
+const siteName = "Фестиваль современной музыки";
 const defaultDescription = "10–31 мая · Москва · Галерея НИКО · 15 концертов";
 const defaultImage = `${siteOrigin}/OGimage3.png`;
 
@@ -58,6 +59,7 @@ export function applyPageMeta(meta: PageMeta) {
   setMeta('meta[property="og:description"]', { property: "og:description" }, defaultDescription);
   setMeta('meta[property="og:type"]', { property: "og:type" }, "website");
   setMeta('meta[property="og:url"]', { property: "og:url" }, canonicalUrl);
+  setMeta('meta[property="og:site_name"]', { property: "og:site_name" }, siteName);
   setMeta('meta[property="og:image"]', { property: "og:image" }, image);
   setMeta('meta[property="og:image:secure_url"]', { property: "og:image:secure_url" }, image);
   setMeta('meta[property="og:image:type"]', { property: "og:image:type" }, "image/png");
