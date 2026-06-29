@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import festivalLogo from "../../../LogoV3main2.0.svg";
+import festivalLogoMobile from "../../logofinalmob.svg";
+const festivalLogo = "/LogoV5finalbig.svg";
 import { VideoHomeHero } from "../components/hero/VideoHomeHero";
 import { PageContainer } from "../layout/PageContainer";
 
@@ -88,18 +89,20 @@ export function FestivalPageLegacy() {
               }}
               className="flex w-[260px] flex-col items-start sm:w-[292px]"
             >
-              <div className="relative aspect-[2.6/1] w-full overflow-hidden">
-                <img
-                  src={festivalLogo}
-                  alt="Композиторы XXI века"
-                  className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2 opacity-[0.79]"
-                  decoding="async"
-                />
+              <div className="ml-[10%] w-[205px] sm:w-[220px]">
+                <div className="flex h-[90px] items-center overflow-visible">
+                  <img
+                    src={festivalLogoMobile}
+                    alt="Композиторы XXI века"
+                    className="h-auto w-full opacity-[0.79]"
+                    decoding="async"
+                  />
+                </div>
+                <span aria-hidden="true" className="mt-3 block h-px w-4/5 bg-[#8A2432]/70" />
+                <p className="font-editorial-sans mt-3 whitespace-nowrap text-[8px] font-normal uppercase leading-none tracking-[0.254em] text-white/65 sm:text-[9px]">
+                  Фестиваль современной музыки
+                </p>
               </div>
-              <span aria-hidden="true" className="ml-[10%] mt-3 block h-px w-[65%] bg-[#8A2432]/70" />
-              <p className="font-editorial-sans ml-[10%] mt-3 whitespace-nowrap text-[8px] font-normal uppercase leading-none tracking-[0.37em] text-white/65 sm:text-[9px]">
-                Фестиваль современной музыки
-              </p>
             </motion.div>
           </motion.div>
 
@@ -132,7 +135,7 @@ export function FestivalPageLegacy() {
               <img
                 src={festivalLogo}
                 alt="Композиторы XXI века"
-                className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2 opacity-[0.79]"
+                className="absolute left-[10%] top-1/2 h-auto w-2/3 -translate-y-1/2 opacity-[0.79]"
                 decoding="async"
               />
             </div>

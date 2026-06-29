@@ -66,7 +66,7 @@ const PAGE_META_BY_PATHNAME: Record<string, PageMeta> = {
   },
   "/media": {
     title: "Медиа",
-    description: "Публикации, анонсы и репортажи о первом сезоне фестиваля «Композиторы XXI века».",
+    description: "Публикации, анонсы, репортажи и афиша первого сезона фестиваля «Композиторы XXI века».",
     canonicalPath: "/media",
   },
   "/participants": {

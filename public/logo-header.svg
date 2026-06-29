@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-label="Композиторы XXI века">
+  <g fill="#231f20" shape-rendering="geometricPrecision">
+    <path d="M20 20h96l305 796h-99z" />
+    <path d="M462 20h97l305 796h-99z" />
+    <path d="M928 20h94v796h-94z" />
+  </g>
+  <g fill="none" stroke="#231f20" stroke-width="20" stroke-linecap="square" shape-rendering="geometricPrecision">
+    <path d="M318 159 260 311M181 522 68 817" />
+    <path d="M759 159 701 311M622 522 509 817" />
+  </g>
+  <rect x="1075" y="744" width="92" height="92" rx="2" fill="#952733" shape-rendering="geometricPrecision" />
+</svg>

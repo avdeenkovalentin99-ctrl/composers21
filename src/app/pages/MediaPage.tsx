@@ -1,77 +1,59 @@
 import { ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import type { ReactNode, Ref } from "react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { cultureReports, mediaCollections, publicationMaterials, type MediaMaterial } from "../data/media";
+import {
+  cultureReports,
+  mediaCollections,
+  mediaMaterials,
+  type MediaMaterial,
+} from "../data/media";
 import { PageContainer } from "../layout/PageContainer";
 
-const visiblePublicationCount = 3;
+const visibleMaterialCount = 4;
 
-function MaterialTypeBadge({ type }: { type: MediaMaterial["type"] }) {
+function MaterialCategoryBadge({ category }: { category: MediaMaterial["category"] }) {
   return (
-    <span className="font-editorial-sans inline-flex border border-black/12 px-2 py-1 text-[10px] uppercase leading-none tracking-[0.16em] text-neutral-500">
-      {type}
+    <span className="font-editorial-sans inline-flex border border-black/12 px-2 py-1 text-[10px] uppercase leading-none tracking-[0.08em] text-neutral-500 md:tracking-[0.16em]">
+      {category}
     </span>
   );
 }
 
-function ExternalMaterialLink({
+function EditorialMaterialLink({
   material,
-  variant = "compact",
 }: {
   material: MediaMaterial;
-  variant?: "compact" | "featured";
 }) {
-  const isFeatured = variant === "featured";
-
   return (
     <a
       href={material.url}
       target="_blank"
       rel="noreferrer"
-      className={[
-        "group block border-black/10 transition-[border-color,transform] duration-300 ease-out hover:-translate-y-0.5 hover:border-black/20",
-        isFeatured
-          ? "border bg-white px-5 py-6 sm:px-7 sm:py-7 lg:px-8 lg:py-8"
-          : "border-t py-5 sm:py-6",
-      ].join(" ")}
+      className="group box-border flex h-auto min-h-0 w-full flex-col border border-black/[0.08] px-5 py-[18px] transition-colors duration-300 hover:border-black/15 md:min-h-[10.75rem] md:border-black/[0.07] md:px-6 md:py-6"
     >
-      <div className={isFeatured ? "flex min-h-full flex-col" : ""}>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
-          {!isFeatured ? <MaterialTypeBadge type={material.type} /> : null}
-          <p className="font-editorial-sans text-[11px] uppercase leading-5 tracking-[0.16em] text-neutral-500">
-            {material.source}
-          </p>
-        </div>
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 md:gap-x-4 md:gap-y-3">
+        <MaterialCategoryBadge category={material.category} />
+        <p className="font-editorial-sans text-[10px] uppercase leading-none tracking-[0.08em] text-neutral-500 md:text-[11px] md:leading-5 md:tracking-[0.16em]">
+          {material.source}
+        </p>
+      </div>
 
-        <h3
-          className={[
-            "font-editorial-serif font-normal tracking-[-0.01em] text-neutral-950",
-            isFeatured
-              ? "mt-5 text-[1.65rem] leading-[1.08] sm:text-[1.95rem] lg:text-[2.18rem]"
-              : "mt-5 max-w-3xl text-[1.28rem] leading-[1.22] sm:text-[1.48rem]",
-          ].join(" ")}
-        >
-          {material.title}
-        </h3>
+      <h3 className="font-editorial-serif mt-4 max-w-none text-[18px] font-normal leading-[1.15] tracking-[-0.01em] text-neutral-950 md:text-[1.5rem] md:leading-[1.18]">
+        {material.title}
+      </h3>
 
-        <div
-          className={[
-            "font-editorial-sans flex items-center justify-between gap-5 border-black/8 text-[11px] uppercase leading-5 tracking-[0.16em] text-neutral-500",
-            isFeatured ? "mt-auto border-t pt-6" : "mt-5",
-          ].join(" ")}
-        >
-          <span>{material.date}</span>
-          <span className="inline-flex items-center gap-1.5 text-neutral-700 transition-colors duration-300 group-hover:text-neutral-950">
-            Открыть
-            <ArrowUpRight
-              size={15}
-              strokeWidth={1.5}
-              className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-            />
-          </span>
-        </div>
+      <div className="font-editorial-sans mt-auto flex flex-wrap items-center justify-between gap-x-5 gap-y-2 pt-[22px] text-[10px] uppercase leading-5 tracking-[0.12em] text-neutral-500 md:flex-nowrap md:items-end md:pt-5 md:text-[11px] md:tracking-[0.16em]">
+        <span>{material.date}</span>
+        <span className="inline-flex shrink-0 items-center gap-1.5 text-neutral-700 transition-colors duration-300 group-hover:text-neutral-950">
+          Открыть
+          <ArrowUpRight
+            size={15}
+            strokeWidth={1.5}
+            className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          />
+        </span>
       </div>
     </a>
   );
@@ -98,19 +80,20 @@ function MediaSection({
     <section ref={sectionRef} className={className} aria-labelledby={headingId}>
       <div
         className={[
-          "mb-8 sm:mb-10",
-          hasTopBorder ? "border-t border-black/10 pt-7 sm:pt-9" : "",
+          "mb-5 md:mb-10",
+          hasTopBorder ? "border-t border-black/10 pt-7 md:pt-9" : "",
         ].join(" ")}
       >
         {eyebrow ? (
-          <p className="font-editorial-sans text-[10px] uppercase leading-5 tracking-[0.2em] text-neutral-400 sm:text-[11px]">
+          <p className="font-editorial-sans text-[10px] uppercase leading-5 tracking-[0.2em] text-neutral-400 md:text-[11px]">
             {eyebrow}
           </p>
         ) : null}
         <h2
           id={headingId}
           className={[
-            "font-editorial-serif text-[1.9rem] font-normal leading-[1.04] tracking-[-0.01em] text-neutral-950 sm:text-[2.35rem]",
+            "font-editorial-serif font-normal tracking-[-0.01em] text-neutral-950 md:text-[2.35rem] md:leading-[1.04]",
+            "text-[28px] leading-none",
             eyebrow ? "mt-3" : "",
           ].join(" ")}
         >
@@ -124,40 +107,29 @@ function MediaSection({
 
 export function MediaPage() {
   const hasPhotoCollections = mediaCollections.length > 0;
-  const publicationsSectionRef = useRef<HTMLElement | null>(null);
-  const [showAllPublications, setShowAllPublications] = useState(false);
-  const primaryPublicationMaterials = publicationMaterials.slice(0, visiblePublicationCount);
-  const hiddenPublicationMaterials = publicationMaterials.slice(visiblePublicationCount);
-  const hasHiddenPublicationMaterials = hiddenPublicationMaterials.length > 0;
-  const publicationMaterialsPanelId = "media-publication-materials";
-  const publicationToggleClassName =
-    "font-editorial-sans inline-flex items-center gap-1.5 border-b border-black/16 pb-[3px] text-[11px] uppercase leading-5 tracking-[0.14em] text-neutral-600 transition-colors duration-300 hover:border-black/30 hover:text-neutral-950 sm:text-[12px]";
-
-  const collapsePublications = () => {
-    setShowAllPublications(false);
-    window.setTimeout(() => {
-      publicationsSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 80);
-  };
+  const visibleMaterials = mediaMaterials.slice(0, visibleMaterialCount);
+  const hiddenMaterials = mediaMaterials.slice(visibleMaterialCount);
+  const [showAllMaterials, setShowAllMaterials] = useState(false);
+  const materialsPanelId = "additional-media-materials";
 
   return (
     <motion.section
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-      className="pb-24 pt-32 text-neutral-950 sm:pb-32 sm:pt-40"
+      className="box-border pb-4 pt-24 text-neutral-950 md:pb-32 md:pt-40"
     >
-      <PageContainer>
-        <div className="mx-auto max-w-6xl">
-          <div className="space-y-16 sm:space-y-20 lg:space-y-24">
-            <section className="border-y border-black/10 py-8 sm:py-10">
-              <div className="grid items-center gap-6 md:grid-cols-[minmax(0,1fr)_auto]">
-                <p className="font-editorial-serif text-[1.45rem] leading-8 text-neutral-900 sm:text-[1.72rem] sm:leading-9">
-                  Трансляции фестиваля собраны в отдельном архиве.
+      <PageContainer className="box-border !px-5 sm:!px-5 md:!px-8 lg:!px-12">
+        <div className="mx-0 w-full max-w-none md:mx-auto md:max-w-6xl">
+          <div className="space-y-[42px] md:space-y-24 lg:space-y-28">
+            <section className="border-y border-black/10 py-6 md:py-10">
+              <div className="grid items-center gap-5 md:grid-cols-[minmax(0,1fr)_auto] md:gap-6">
+                <p className="font-editorial-serif text-[22px] leading-[1.35] text-neutral-900 md:text-[1.72rem] md:leading-9">
+                  Трансляции концертов фестиваля собраны в отдельном разделе.
                 </p>
                 <Link
                   to="/translyatsii"
-                  className="font-editorial-sans group inline-flex items-center gap-2 justify-self-end border border-neutral-400 px-4 py-3 text-[11px] uppercase leading-none tracking-[0.14em] text-neutral-700 transition-colors duration-300 hover:border-neutral-900 hover:text-neutral-950"
+                  className="font-editorial-sans group inline-flex items-center gap-2 justify-self-start border border-neutral-400 px-4 py-3 text-[11px] uppercase leading-none tracking-[0.14em] text-neutral-700 transition-colors duration-300 hover:border-neutral-900 hover:text-neutral-950 md:justify-self-end"
                 >
                   Архив трансляций
                   <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
@@ -166,65 +138,62 @@ export function MediaPage() {
             </section>
 
             <MediaSection title="репортажи" hasTopBorder={false}>
-              <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid gap-[14px] md:grid-cols-2 md:gap-6">
                 {cultureReports.map((material) => (
-                  <ExternalMaterialLink key={material.id} material={material} variant="featured" />
+                  <EditorialMaterialLink key={material.id} material={material} />
                 ))}
               </div>
             </MediaSection>
 
-            <MediaSection title="публикации и анонсы" hasTopBorder={false} sectionRef={publicationsSectionRef}>
-              <div>
-                {primaryPublicationMaterials.map((material) => (
-                  <ExternalMaterialLink key={material.id} material={material} />
+            <MediaSection
+              title="СМИ о нас"
+              hasTopBorder={false}
+            >
+              <div className="grid gap-[14px] md:grid-cols-2 md:gap-6">
+                {visibleMaterials.map((material) => (
+                  <EditorialMaterialLink key={material.id} material={material} />
                 ))}
-                {hasHiddenPublicationMaterials ? (
-                  !showAllPublications ? (
+              </div>
+              {!showAllMaterials ? (
+                <button
+                  type="button"
+                  onClick={() => setShowAllMaterials(true)}
+                  className="font-editorial-sans mb-12 mt-6 flex w-fit items-center gap-1.5 border-b border-black/15 pb-[3px] text-[14px] uppercase leading-5 tracking-[0.12em] text-neutral-600 transition-colors duration-300 hover:border-black/30 hover:text-neutral-950 md:mb-0 md:mt-8 md:inline-flex md:text-[11px] md:tracking-[0.14em]"
+                  aria-expanded={showAllMaterials}
+                  aria-controls={materialsPanelId}
+                >
+                  показать все материалы
+                  <span aria-hidden="true">↓</span>
+                </button>
+              ) : null}
+              <AnimatePresence initial={false}>
+                {showAllMaterials ? (
+                  <motion.div
+                    id={materialsPanelId}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <div className="grid gap-[14px] pt-[14px] md:grid-cols-2 md:gap-6 md:pt-6">
+                      {hiddenMaterials.map((material) => (
+                        <EditorialMaterialLink key={material.id} material={material} />
+                      ))}
+                    </div>
                     <button
                       type="button"
-                      onClick={() => setShowAllPublications(true)}
-                      className={`mt-7 ${publicationToggleClassName}`}
-                      aria-expanded={showAllPublications}
-                      aria-controls={publicationMaterialsPanelId}
+                      onClick={() => setShowAllMaterials(false)}
+                      className="font-editorial-sans mb-12 mt-7 flex w-fit items-center gap-1.5 text-[10px] uppercase leading-5 tracking-[0.14em] text-neutral-400 transition-colors duration-300 hover:text-neutral-700 md:mb-0 md:mt-8 md:inline-flex md:text-[11px]"
+                      aria-expanded={showAllMaterials}
+                      aria-controls={materialsPanelId}
                     >
-                      показать все материалы
-                      <span aria-hidden="true" className="font-sans text-[10px] leading-none text-neutral-500">
-                        ↓
-                      </span>
+                      свернуть список
+                      <span aria-hidden="true">↑</span>
                     </button>
-                  ) : null
+                  </motion.div>
                 ) : null}
-                <AnimatePresence initial={false}>
-                  {showAllPublications ? (
-                    <motion.div
-                      id={publicationMaterialsPanelId}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-                      className="overflow-hidden"
-                    >
-                      <div className="pt-5">
-                        {hiddenPublicationMaterials.map((material) => (
-                          <ExternalMaterialLink key={material.id} material={material} />
-                        ))}
-                        <button
-                          type="button"
-                          onClick={collapsePublications}
-                          className="font-editorial-sans mt-7 inline-flex items-center gap-1.5 text-[10px] uppercase leading-5 tracking-[0.14em] text-neutral-400 transition-colors duration-300 hover:text-neutral-700 sm:text-[11px]"
-                          aria-expanded={showAllPublications}
-                          aria-controls={publicationMaterialsPanelId}
-                        >
-                          свернуть список
-                          <span aria-hidden="true" className="font-sans text-[9px] leading-none text-neutral-400">
-                            ↑
-                          </span>
-                        </button>
-                      </div>
-                    </motion.div>
-                  ) : null}
-                </AnimatePresence>
-              </div>
+              </AnimatePresence>
             </MediaSection>
 
             {hasPhotoCollections ? (

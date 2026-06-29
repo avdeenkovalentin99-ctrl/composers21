@@ -2,14 +2,12 @@ import { MouseEvent, useEffect, useRef, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import festivalLogo from "../../../logofestnew.png";
 import { navigationGroups, navigationItems } from "../data/navigation";
 import type { NavGroup, NavItem } from "../data/types";
 import { PageContainer } from "./PageContainer";
 
 const HEADER_ROUTE_SETTLE_MS = 560;
 const MOBILE_NAVIGATION_DELAY_MS = 250;
-
 function getNavClassName(isActive: boolean, isLightOnHero = false) {
   return [
     "font-editorial-sans relative text-[12px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200",
@@ -68,7 +66,12 @@ function DropdownNavItem({
   isLightOnHero?: boolean;
 }) {
   const isActive = isNavGroupActive(group, pathname);
-  const groupTarget = group.to ?? group.children[0]?.to ?? "/";
+  const activeChild = group.children.find((item) => isNavItemActive(item, pathname));
+  const showActiveChildAsGroup = activeChild?.to === "/media";
+  const groupTarget = showActiveChildAsGroup
+    ? activeChild.to
+    : group.to ?? group.children[0]?.to ?? "/";
+  const groupLabel = showActiveChildAsGroup ? activeChild.label : group.label;
   const dropdownId = `desktop-navigation-${group.children
     .map((item) => item.to.replace(/[^a-z0-9]+/gi, "-"))
     .join("-")}`;
@@ -94,7 +97,7 @@ function DropdownNavItem({
           onToggle();
         }}
       >
-        {group.label}
+        {groupLabel}
       </a>
       {isOpen ? (
         <motion.div
@@ -160,7 +163,8 @@ function MobileNavGroup({
   pathname: string;
   onNavigate: (event: MouseEvent<HTMLAnchorElement>, to: string) => void;
 }) {
-  const isActive = isNavGroupActive(group, pathname);
+  const isMediaChildActive = pathname === "/media" && group.children.some((item) => item.to === "/media");
+  const isActive = isNavGroupActive(group, pathname) && !isMediaChildActive;
   const labelClassName = [
     "font-editorial-sans inline-flex text-[13px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:text-[14px]",
     isActive ? "!text-neutral-900" : "!text-neutral-900",
@@ -402,36 +406,12 @@ export function SiteHeader({ mode = "default" }: { mode?: SiteHeaderMode }) {
               to="/"
               onClick={handleFestivalClick}
               className={[
-                "shrink-0 items-center gap-3",
+                "shrink-0 items-center gap-1.5",
                 isLightOnHero ? "hidden" : "hidden text-neutral-800 lg:inline-flex",
               ].join(" ")}
               aria-label="Композиторы XXI века — главная"
             >
-              <span className="relative block h-8 w-[41px] shrink-0 overflow-hidden" aria-hidden="true">
-                <img
-                  src={festivalLogo}
-                  alt=""
-                  className={[
-                    "pointer-events-none absolute -left-2 -top-[19px] h-auto w-[105px] max-w-none",
-                    isLightOnHero ? "brightness-0 invert" : "",
-                  ].join(" ")}
-                />
-                  <span
-                    className="pointer-events-none absolute -left-2 bottom-0 aspect-[3/2] w-[105px] max-w-none bg-[#C77482]"
-                    style={{
-                      /* дополнительно уменьшено: увеличены inset на 3px со всех сторон */
-                      clipPath: "inset(calc(64% + 4px) calc(53% + 4px) calc(30% + 4px) calc(43% + 4px))",
-                      maskImage: `url(${festivalLogo})`,
-                      maskPosition: "center",
-                      maskRepeat: "no-repeat",
-                      maskSize: "100% 100%",
-                      WebkitMaskImage: `url(${festivalLogo})`,
-                      WebkitMaskPosition: "center",
-                      WebkitMaskRepeat: "no-repeat",
-                      WebkitMaskSize: "100% 100%",
-                    }}
-                  />
-              </span>
+              <span className="block h-[9px] w-[9px] shrink-0 bg-[#952733]" aria-hidden="true" />
               <span className="font-editorial-sans whitespace-nowrap text-[11px] font-normal uppercase leading-none tracking-[0.13em]">
                 Композиторы XXI века
               </span>

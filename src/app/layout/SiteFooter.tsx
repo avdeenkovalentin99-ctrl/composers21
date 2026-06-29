@@ -1,12 +1,15 @@
 import { Send } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { festivalInfo } from "../data/festival";
 import { siteTitle } from "../data/navigation";
 import { PageContainer } from "./PageContainer";
 
 export function SiteFooter() {
+  const location = useLocation();
+  const spacingClassName = location.pathname === "/media" ? "mt-0 md:mt-24" : "mt-24";
+
   return (
-    <footer className="mt-24 border-t border-neutral-200 pb-7 pt-10">
+    <footer className={`${spacingClassName} border-t border-neutral-200 pb-7 pt-10`}>
       <PageContainer>
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-start">
           <div className="shrink-0">
