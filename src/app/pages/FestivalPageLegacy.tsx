@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import festivalLogoMobile from "../../logofinalmob.svg";
-const festivalLogo = "/LogoV5finalbig.svg";
+import festivalLogoDesktop from "../../../lofofinaldesktop.svg";
+import festivalLogoMobile from "../../../logofinalmob2.svg";
 import { VideoHomeHero } from "../components/hero/VideoHomeHero";
 import { PageContainer } from "../layout/PageContainer";
 
 const cookieStorageKey = "composersxxi_cookie_notice_accepted";
+const desktopFestivalLabel = "ФЕСТИВАЛЬ СОВРЕМЕННОЙ МУЗЫКИ";
 
 const mobileArchiveCards = [
   {
@@ -94,7 +95,7 @@ export function FestivalPageLegacy() {
                   <img
                     src={festivalLogoMobile}
                     alt="Композиторы XXI века"
-                    className="h-auto w-full opacity-[0.79]"
+                    className="h-auto w-full opacity-75"
                     decoding="async"
                   />
                 </div>
@@ -133,15 +134,26 @@ export function FestivalPageLegacy() {
             </p>
             <div className="relative aspect-[2.6/1] w-full overflow-hidden">
               <img
-                src={festivalLogo}
+                src={festivalLogoDesktop}
                 alt="Композиторы XXI века"
-                className="absolute left-[10%] top-1/2 h-auto w-2/3 -translate-y-1/2 opacity-[0.79]"
+                className="absolute left-[8.25%] top-1/2 h-auto w-2/3 -translate-y-1/2 opacity-75"
                 decoding="async"
               />
+              <span
+                aria-hidden="true"
+                className="absolute bottom-6 left-[10%] block h-px w-[52.58%] bg-[#8A2432]/70"
+              />
+              <p
+                className="font-editorial-sans absolute bottom-0 left-[10%] flex w-[63.47%] items-center justify-between whitespace-nowrap text-[13px] font-normal uppercase leading-none text-white/76 xl:text-[14px]"
+                aria-label={desktopFestivalLabel}
+              >
+                {Array.from(desktopFestivalLabel).map((character, index) => (
+                  <span key={`${character}-${index}`} aria-hidden="true" className="whitespace-pre">
+                    {character}
+                  </span>
+                ))}
+              </p>
             </div>
-            <p className="font-editorial-sans mt-1.5 w-full whitespace-nowrap text-[13px] font-normal uppercase leading-none tracking-[0.12em] text-white/76 xl:text-[14px]">
-              Фестиваль современной музыки
-            </p>
           </motion.div>
 
           <motion.div
