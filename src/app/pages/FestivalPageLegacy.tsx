@@ -7,7 +7,7 @@ import { VideoHomeHero } from "../components/hero/VideoHomeHero";
 import { PageContainer } from "../layout/PageContainer";
 
 const cookieStorageKey = "composersxxi_cookie_notice_accepted";
-const desktopFestivalLabel = "ФЕСТИВАЛЬ СОВРЕМЕННОЙ МУЗЫКИ";
+const festivalLabel = "ФЕСТИВАЛЬ СОВРЕМЕННОЙ МУЗЫКИ";
 
 const mobileArchiveCards = [
   {
@@ -95,13 +95,20 @@ export function FestivalPageLegacy() {
                   <img
                     src={festivalLogoMobile}
                     alt="Композиторы XXI века"
-                    className="h-auto w-full opacity-75"
+                    className="relative left-[-5.03%] h-auto w-full opacity-75"
                     decoding="async"
                   />
                 </div>
                 <span aria-hidden="true" className="mt-3 block h-px w-4/5 bg-[#8A2432]/70" />
-                <p className="font-editorial-sans mt-3 whitespace-nowrap text-[8px] font-normal uppercase leading-none tracking-[0.254em] text-white/65 sm:text-[9px]">
-                  Фестиваль современной музыки
+                <p
+                  className="font-editorial-sans mt-3 flex w-[91.35%] items-center justify-between whitespace-nowrap text-[8px] font-normal uppercase leading-none text-white/65 sm:text-[9px]"
+                  aria-label={festivalLabel}
+                >
+                  {Array.from(festivalLabel).map((character, index) => (
+                    <span key={`${character}-${index}`} aria-hidden="true" className="whitespace-pre">
+                      {character}
+                    </span>
+                  ))}
                 </p>
               </div>
             </motion.div>
@@ -145,9 +152,9 @@ export function FestivalPageLegacy() {
               />
               <p
                 className="font-editorial-sans absolute bottom-0 left-[10%] flex w-[63.47%] items-center justify-between whitespace-nowrap text-[13px] font-normal uppercase leading-none text-white/76 xl:text-[14px]"
-                aria-label={desktopFestivalLabel}
+                aria-label={festivalLabel}
               >
-                {Array.from(desktopFestivalLabel).map((character, index) => (
+                {Array.from(festivalLabel).map((character, index) => (
                   <span key={`${character}-${index}`} aria-hidden="true" className="whitespace-pre">
                     {character}
                   </span>

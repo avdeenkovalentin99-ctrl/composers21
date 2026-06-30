@@ -10,7 +10,7 @@ const siteOrigin = "https://21centurycomposers.com";
 const ogTitle = "Композиторы XXI века";
 const siteName = "Фестиваль современной музыки";
 const defaultDescription = "10–31 мая · Москва · Галерея НИКО · 15 концертов";
-const defaultImage = `${siteOrigin}/OGImage3.png`;
+const defaultImage = `${siteOrigin}/Ogimagenew.png`;
 
 function ensureMeta(selector: string, attributes: Record<string, string>) {
   let element = document.querySelector<HTMLMetaElement>(selector);
@@ -63,8 +63,8 @@ export function applyPageMeta(meta: PageMeta) {
   setMeta('meta[property="og:image"]', { property: "og:image" }, image);
   setMeta('meta[property="og:image:secure_url"]', { property: "og:image:secure_url" }, image);
   setMeta('meta[property="og:image:type"]', { property: "og:image:type" }, "image/png");
-  setMeta('meta[property="og:image:width"]', { property: "og:image:width" }, "1200");
-  setMeta('meta[property="og:image:height"]', { property: "og:image:height" }, "630");
+  setMeta('meta[property="og:image:width"]', { property: "og:image:width" }, "1731");
+  setMeta('meta[property="og:image:height"]', { property: "og:image:height" }, "909");
   setMeta('meta[property="og:image:alt"]', { property: "og:image:alt" }, ogTitle);
   setMeta('meta[name="twitter:card"]', { name: "twitter:card" }, "summary_large_image");
   setMeta('meta[name="twitter:title"]', { name: "twitter:title" }, ogTitle);
