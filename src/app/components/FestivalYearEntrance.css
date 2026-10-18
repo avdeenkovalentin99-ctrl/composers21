@@ -1,0 +1,80 @@
+/* Static graphic shapes frame a slow assembly of the grid and typography. */
+[data-year-entrance] {
+  --year-assembly-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-year-entrance] [data-digit-index="0"] { --year-index: 0; }
+[data-year-entrance] [data-digit-index="1"] { --year-index: 1; }
+[data-year-entrance] [data-digit-index="2"] { --year-index: 2; }
+[data-year-entrance] [data-digit-index="3"] { --year-index: 3; }
+
+.year-graphic-mask,
+.year-inversion-counter {
+  position: absolute;
+  inset: 0;
+}
+
+.year-graphic-mask {
+  z-index: 3;
+}
+
+[data-year-entrance="pending"] [data-year-digit],
+[data-year-entrance="pending"] [data-year-dot] {
+  visibility: hidden;
+}
+
+[data-year-entrance="pending"] .home-year-column + .home-year-column::before {
+  transform: scaleY(0);
+}
+
+[data-year-entrance] .home-year-column + .home-year-column::before {
+  transform-origin: top;
+}
+
+[data-year-entrance="visible"] .home-year-column + .home-year-column::before {
+  animation: year-divider-in 1650ms var(--year-assembly-ease) backwards;
+}
+
+/* Typewriter timing: each stationary numeral switches on in a single step. */
+[data-year-entrance="visible"] [data-year-digit] {
+  animation: year-digit-in 1ms step-end calc(1750ms + var(--year-index) * 600ms) backwards;
+}
+
+[data-year-entrance="visible"] [data-year-dot] {
+  animation: year-digit-in 1ms step-end 4150ms backwards;
+}
+
+[data-year-entrance="pending"] [data-year-nav-label] {
+  opacity: 0;
+  translate: 0 10px;
+}
+
+[data-year-entrance="visible"] [data-year-nav-label] {
+  animation: year-nav-in 1500ms ease-out calc(4450ms + var(--year-nav-index) * 150ms) backwards;
+}
+
+[data-year-entrance]:not([data-year-entrance="complete"]) [data-year-nav-indicator] {
+  visibility: hidden;
+}
+
+@keyframes year-divider-in {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes year-digit-in {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
+
+@keyframes year-nav-in {
+  from { opacity: 0; translate: 0 10px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-year-entrance] :is([data-year-digit], [data-year-dot], [data-year-nav-label], [data-year-nav-indicator]),
+  [data-year-entrance] .home-year-column + .home-year-column::before {
+    animation: none;
+  }
+}

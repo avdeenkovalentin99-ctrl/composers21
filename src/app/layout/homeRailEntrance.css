@@ -1,0 +1,136 @@
+@media (min-width: 64rem) {
+  /* Animate the existing rail surface; its palette and artwork stay in globals.css. */
+  .navigation-rail[data-home="true"] {
+    transform: translateX(calc(100% + 1px));
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 520ms cubic-bezier(0.4, 0, 0.2, 1), visibility 0s 520ms;
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="visible"] {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s;
+  }
+
+  .navigation-rail[data-home="true"] :is(.navigation-rail-art-item, .navigation-rail-action) {
+    --rail-label-delay: calc(1000ms + (var(--rail-step) - 1) * 900ms);
+  }
+
+  /*
+   * Reveal the original continuous line without replacing its geometry or
+   * changing artwork stacking. The final state is the original rail design.
+   */
+  .navigation-rail[data-home="true"] .navigation-rail-art::before {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-label {
+    opacity: 0;
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-indicator {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-action {
+    visibility: hidden;
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-action[data-rail-step="0"] {
+    --rail-label-delay: 460ms;
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="visible"] .navigation-rail-indicator {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 260ms ease-out 460ms, transform 260ms ease-out 460ms;
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="visible"] .navigation-rail-art::before {
+    animation: home-rail-line-sequence 2000ms linear both;
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="visible"] .navigation-rail-label {
+    opacity: 1;
+    transition: opacity 500ms ease-out var(--rail-label-delay);
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="visible"] .navigation-rail-action {
+    visibility: visible;
+    transition: visibility 0s linear var(--rail-label-delay);
+  }
+}
+
+/* Each line segment finishes before its next label appears. */
+@keyframes home-rail-line-sequence {
+  0%, 33% { clip-path: inset(0 0 100% 0); }
+  40%, 48% { clip-path: inset(0 0 77.777778% 0); }
+  55%, 63% { clip-path: inset(0 0 55.555556% 0); }
+  70%, 78% { clip-path: inset(0 0 33.333333% 0); }
+  85%, 93% { clip-path: inset(0 0 11.111111% 0); }
+  99.99% { clip-path: inset(0); }
+  100% { clip-path: none; }
+}
+
+@media (min-width: 64rem) and (prefers-reduced-motion: reduce) {
+  .navigation-rail[data-home="true"],
+  .navigation-rail[data-home="true"] :is(.navigation-rail-indicator, .navigation-rail-label, .navigation-rail-action) {
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="visible"] .navigation-rail-art::before {
+    animation: none;
+    clip-path: none;
+  }
+}
+
+@media (min-width: 64rem) {
+  /* Keep the artwork intact while the surface leaves the viewport. */
+  .navigation-rail[data-home="true"][data-entrance="leaving"] .navigation-rail-label,
+  .navigation-rail[data-home="true"][data-entrance="leaving"] .navigation-rail-indicator {
+    opacity: 1;
+    transition: none;
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="leaving"] .navigation-rail-indicator {
+    transform: scale(1);
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="leaving"] .navigation-rail-art-item::before,
+  .navigation-rail[data-home="true"][data-entrance="leaving"] .navigation-rail-art-item::after {
+    transform: scaleY(1);
+    transition: none;
+  }
+}
+
+@media (min-width: 64rem) {
+  /* Once consumed, keep all artwork ready even while the rail is offscreen. */
+  .navigation-rail[data-home="true"][data-label-entrance="complete"][data-entrance] :is(.navigation-rail-label, .navigation-rail-indicator) {
+    opacity: 1;
+    transition: none;
+  }
+
+  .navigation-rail[data-home="true"][data-label-entrance="complete"][data-entrance] .navigation-rail-indicator {
+    transform: scale(1);
+  }
+
+  .navigation-rail[data-home="true"][data-label-entrance="complete"][data-entrance] .navigation-rail-action {
+    visibility: visible;
+    transition: none;
+  }
+
+  .navigation-rail[data-home="true"][data-label-entrance="complete"][data-entrance] .navigation-rail-art::before {
+    animation: none;
+    clip-path: none;
+  }
+
+  .navigation-rail[data-home="true"][data-label-entrance="complete"][data-entrance] .navigation-rail-art-item::before,
+  .navigation-rail[data-home="true"][data-label-entrance="complete"][data-entrance] .navigation-rail-art-item::after {
+    transform: scaleY(1);
+    transition: none;
+  }
+}

@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/* Keep in sync with homeDesktopQuery in layout/homeViewport.ts. */
+@custom-variant home-desktop {
+  @media (min-width: 64rem) and (orientation: landscape), (min-width: 80rem) {
+    @slot;
+  }
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond-variable.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "Manrope";
   src: url("/fonts/manrope-variable.ttf") format("truetype");
@@ -18,6 +33,7 @@
 
 :root {
   --color-bg: #ffffff;
+  --color-dark: #080808;
   --color-panel: #fbfbfb;
   --color-text: #0f0f0f;
   --color-muted: #5d5d5d;
@@ -33,6 +49,7 @@ html {
   overflow-y: scroll;
   scrollbar-gutter: stable;
   overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -69,6 +86,15 @@ select {
 
 .font-editorial-serif {
   font-family: var(--font-editorial-serif);
+}
+
+.font-display-serif {
+  font-family: "Bodoni MT", Didot, "Times New Roman", serif;
+}
+
+.font-condensed-display {
+  font-family: "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+  font-stretch: condensed;
 }
 
 .font-small-caps {
@@ -125,4 +151,425 @@ select {
 
 .site-header-light-on-hero a[href="/afisha"]:hover {
   border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Both opaque artwork copies share the same fixed geometry. */
+.navigation-rail {
+  isolation: isolate;
+  background: var(--color-bg);
+}
+
+.navigation-rail-art {
+  --rail-surface: var(--color-bg);
+  --rail-ink: var(--color-text);
+  --rail-muted: var(--color-muted);
+  --rail-line: var(--rail-muted);
+  background: var(--rail-surface);
+  border-left: 1px solid transparent;
+  color: var(--rail-muted);
+}
+
+.navigation-rail-art[data-theme="dark"] {
+  --rail-surface: var(--color-dark);
+  --rail-ink: var(--color-panel);
+  --rail-muted: #a3a3a3;
+}
+
+.navigation-rail-art::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: var(--rail-line);
+}
+
+.navigation-rail-art [data-emphasized="true"] {
+  color: var(--rail-ink);
+}
+
+.navigation-rail-art [data-focused="true"] {
+  outline: 2px solid var(--rail-ink);
+  outline-offset: -3px;
+}
+
+.navigation-rail-label,
+.navigation-rail-indicator-space {
+  background: var(--rail-surface);
+}
+
+.navigation-rail-indicator {
+  mix-blend-mode: normal;
+}
+
+.navigation-rail-footer-window {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  .home-broadcast-photo {
+    filter: saturate(0.45) brightness(0.9);
+    transition: filter 400ms ease;
+  }
+
+  .home-broadcast-card:is(:hover, :focus-visible) .home-broadcast-photo {
+    filter: saturate(1) brightness(1);
+  }
+
+  .home-year-composition {
+    height: clamp(420px, 39.5vw, 600px);
+  }
+
+  .home-year-column + .home-year-column::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: clamp(56px, 5vw, 80px);
+    bottom: 0;
+    width: 1px;
+    background: rgb(0 0 0 / 12%);
+  }
+
+  .home-year-digit {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: clamp(80px, 8vw, 118px);
+    transform: translateX(-50%);
+    color: var(--color-text);
+    font-size: clamp(240px, 26.5vw, 430px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+
+  .home-year-square {
+    position: absolute;
+    background: #64111f;
+    aspect-ratio: 1;
+  }
+
+  [data-digit-index="0"] .home-year-square {
+    left: 6%;
+    bottom: clamp(98px, 9.1vw, 144px);
+    width: 40%;
+  }
+
+  .home-year-diagonal {
+    position: absolute;
+    z-index: 3;
+    left: 34%;
+    bottom: clamp(86px, 8vw, 126px);
+    height: clamp(120px, 12vw, 192px);
+    width: 1px;
+    background: var(--color-text);
+    transform: rotate(43deg);
+    transform-origin: bottom;
+  }
+
+  .home-year-inversion {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background: var(--color-text);
+  }
+
+  .home-year-inversion .home-year-digit {
+    color: var(--color-bg);
+  }
+
+  [data-digit-index="1"] .home-year-inversion {
+    --year-rectangle-bottom: clamp(98px, 9.1vw, 144px);
+    clip-path: inset(calc(54% - var(--year-rectangle-bottom)) 10% var(--year-rectangle-bottom) 56%);
+  }
+
+  [data-digit-index="2"] .home-year-inversion {
+    clip-path: inset(8% 42% 69% 28%);
+  }
+
+  .home-year-hairline {
+    position: absolute;
+    top: 5.5%;
+    left: 20%;
+    width: 1px;
+    height: 40%;
+    background: #64111f;
+  }
+
+  [data-digit-index="3"] .home-year-square {
+    top: 20%;
+    right: 12%;
+    width: 26%;
+  }
+
+  [data-nav-dark-start] {
+    border-top-width: 0;
+    padding-top: calc(2.5rem + 1px);
+  }
+
+  .home-media-tile {
+    --media-bleed: max(3rem, calc((100vw - 1340px) / 2));
+    isolation: isolate;
+  }
+
+  .home-media-tile::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    left: calc(-1 * var(--media-bleed));
+    z-index: -1;
+    /* One continuous surface: no scaled extension meeting a separate tile. */
+    background: #64111f;
+    clip-path: inset(0 0 0 var(--media-bleed));
+    transition: clip-path 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .home-media-tile:is(:hover, :focus-visible)::before {
+    clip-path: inset(0);
+  }
+
+  .home-media-arrow-shaft {
+    transform-box: fill-box;
+    transform-origin: right center;
+    transform: scaleX(0.4);
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .home-media-tile:is(:hover, :focus-visible) .home-media-arrow-shaft {
+    transform: scaleX(1);
+    transition-delay: 100ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-media-tile::before,
+  .home-media-arrow-shaft {
+    transition: none;
+  }
+}
+
+@keyframes rail-light-window {
+  from { transform: translate3d(0, 100%, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes rail-light-artwork {
+  from { transform: translate3d(0, -100%, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@supports (animation-timeline: --home-rail-media) and (animation-range: entry 0% exit-crossing 0%) and (timeline-scope: --home-rail-media) {
+  @media (min-width: 64rem) {
+    #root {
+      timeline-scope: --home-rail-media, --home-rail-footer;
+    }
+
+    [data-nav-light-start] {
+      view-timeline: --home-rail-media block;
+      view-timeline-inset: 0;
+    }
+
+    [data-nav-dark-start] {
+      view-timeline: --home-rail-footer block;
+      view-timeline-inset: 0;
+    }
+
+    .navigation-rail[data-native-scroll="true"] {
+      overflow: clip;
+    }
+
+    .navigation-rail[data-native-scroll="true"] > .navigation-rail-art[data-theme="dark"] {
+      animation: rail-top-artwork auto linear both;
+      animation-timeline: --home-rail-media;
+      animation-range: entry 0% exit-crossing 0%;
+    }
+
+    /* The reveal window moves with Media; the inverse transform keeps the
+       artwork stationary. Only transforms change, on the compositor thread. */
+    .navigation-rail[data-native-scroll="true"] > .navigation-rail-light-window {
+      z-index: 1;
+      background: var(--color-bg);
+      overflow: clip;
+      transform: translate3d(0, 100%, 0);
+      animation: rail-light-window auto linear both;
+    }
+
+    .navigation-rail[data-native-scroll="true"] > .navigation-rail-light-window > .navigation-rail-art {
+      transform: translate3d(0, -100%, 0);
+      animation: rail-light-artwork auto linear both;
+    }
+
+    .navigation-rail[data-native-scroll="true"] > .navigation-rail-light-window,
+    .navigation-rail[data-native-scroll="true"] > .navigation-rail-light-window > .navigation-rail-art {
+      /* Start when Media's TOP meets the viewport bottom; end when its TOP
+         meets the viewport top. This also works if Media is shorter than it. */
+      animation-timeline: --home-rail-media;
+      animation-range: entry 0% exit-crossing 0%;
+      will-change: transform;
+    }
+
+    /* Footer uses exactly the same independent reveal as Media. No nested
+       clips driven by different timelines; the opaque dark layer covers white. */
+    .navigation-rail[data-native-scroll="true"] > .navigation-rail-footer-window {
+      display: block;
+      z-index: 2;
+      background: var(--color-dark);
+      overflow: clip;
+      transform: translate3d(0, 100%, 0);
+      animation: rail-light-window auto linear both;
+    }
+
+    .navigation-rail[data-native-scroll="true"] > .navigation-rail-footer-window > .navigation-rail-art {
+      clip-path: none !important;
+      transform: translate3d(0, -100%, 0);
+      animation: rail-light-artwork auto linear both;
+    }
+
+    .navigation-rail[data-native-scroll="true"] > .navigation-rail-footer-window,
+    .navigation-rail[data-native-scroll="true"] > .navigation-rail-footer-window > .navigation-rail-art {
+      animation-timeline: --home-rail-footer;
+      animation-range: entry 0% exit-crossing 0%;
+      will-change: transform;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  /* One section background spans the content and the rail. Independent
+     painted surfaces must never meet at the scrolling section boundary. */
+  .navigation-rail[data-section-background="true"],
+  .navigation-rail[data-section-background="true"] .navigation-rail-art,
+  .navigation-rail[data-section-background="true"] > .navigation-rail-light-window,
+  .navigation-rail[data-section-background="true"] > .navigation-rail-footer-window {
+    background: transparent;
+  }
+}
+
+@keyframes rail-top-artwork {
+  from { clip-path: inset(0); }
+  to { clip-path: inset(0 0 100% 0); }
+}
+
+@media (min-width: 64rem) {
+  /* Mutually exclusive text layers; neither copy paints a label backdrop. */
+  .navigation-rail[data-native-scroll="true"] > .navigation-rail-light-window > .navigation-rail-art {
+    animation-name: rail-light-artwork, rail-top-artwork;
+    animation-timeline: --home-rail-media, --home-rail-footer;
+    animation-range: entry 0% exit-crossing 0%, entry 0% exit-crossing 0%;
+  }
+
+  .navigation-rail[data-home="true"]:not([data-native-scroll="true"]) > .navigation-rail-light-window {
+    clip-path: inset(var(--rail-light-top, 0px) 0 var(--rail-light-bottom, 0px) 0);
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-label,
+  .navigation-rail[data-home="true"] .navigation-rail-indicator-space {
+    background: transparent;
+    flex-shrink: 0;
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-art::before {
+    display: none;
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-art-item {
+    flex-direction: column;
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-label {
+    position: static;
+    transform: none;
+    translate: none;
+    rotate: none;
+    writing-mode: vertical-rl;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-art-item::before,
+  .navigation-rail[data-home="true"] .navigation-rail-art-item::after {
+    content: "";
+    flex: 1 1 0;
+    width: 1px;
+    background: var(--rail-line);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 200ms linear;
+  }
+
+  .navigation-rail[data-home="true"] .navigation-rail-art-item:first-child::before {
+    background: transparent;
+  }
+
+  /* First reveal: labels at 1000/1900/2800/3700ms, each fading for 500ms.
+     Connecting lines draw between labels; repeat entrances are already complete. */
+  .navigation-rail[data-home="true"][data-entrance="visible"] .navigation-rail-art-item::before {
+    transform: scaleY(1);
+    transition-delay: calc(-100ms + var(--rail-step) * 900ms);
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="visible"] .navigation-rail-art-item::after {
+    transform: scaleY(1);
+    transition-delay: calc(600ms + var(--rail-step) * 900ms);
+  }
+
+  .navigation-rail[data-home="true"][data-entrance="visible"] .navigation-rail-art-item:last-child::after {
+    transition-duration: 300ms;
+  }
+}
+
+@media (min-width: 64rem) and (prefers-reduced-motion: reduce) {
+  .navigation-rail[data-home="true"] .navigation-rail-art-item::before,
+  .navigation-rail[data-home="true"] .navigation-rail-art-item::after {
+    transition: none;
+  }
+}
+
+@media (min-width: 64rem) and (orientation: landscape), (min-width: 80rem) {
+  /* Keep the original dark rail through Hero, the white intro, and Broadcasts.
+     Paint its strip with those sections so its lower edge is their own edge. */
+  main[data-homepage] > div > section:has(~ [data-nav-light-start]):not([aria-labelledby="homepage-broadcasts-title"]) {
+    position: relative;
+  }
+
+  main[data-homepage] > div > section:has(~ [data-nav-light-start]):not([aria-labelledby="homepage-broadcasts-title"])::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    inset-block: 0;
+    right: 0;
+    width: 4rem;
+    background: var(--color-dark);
+    pointer-events: none;
+    transform: translateX(calc(100% + 1px));
+    transition: transform 520ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #root:has(.navigation-rail[data-section-background="true"][data-entrance="visible"]) main[data-homepage] > div > section:has(~ [data-nav-light-start]):not([aria-labelledby="homepage-broadcasts-title"])::after {
+    transform: translateX(0);
+    transition-duration: 420ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@media (min-width: 64rem) and (prefers-reduced-motion: reduce) {
+  main[data-homepage] > div > section:has(~ [data-nav-light-start]):not([aria-labelledby="homepage-broadcasts-title"])::after {
+    transition: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .home-broadcast-watch > span {
+    transition: translate 220ms ease-out;
+  }
+
+  .home-broadcast-card:is(:hover, :focus-visible) .home-broadcast-watch > span {
+    translate: 4px 0;
+  }
+
+  .home-broadcast-card:is(:hover, :focus-visible) .home-broadcast-watch > [aria-hidden] {
+    translate: 7px 0;
+  }
 }

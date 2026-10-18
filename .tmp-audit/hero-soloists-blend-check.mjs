@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:900}});
+await page.goto('http://127.0.0.1:5173/',{waitUntil:'domcontentloaded'});
+await page.locator('.festival-hero__soloists--upper').waitFor();
+await page.evaluate(()=>document.fonts.ready);
+const state=await page.locator('.festival-hero__soloists').evaluateAll(els=>els.map(el=>({color:getComputedStyle(el).color,blend:getComputedStyle(el).mixBlendMode,names:el.querySelectorAll('li').length})));
+if(state.length!==2||state.some(s=>s.blend!=='difference'||s.names!==36))throw new Error('Soloist blending failed');
+await page.screenshot({path:'.tmp-audit/hero/soloists-inversion.png'});
+console.log(JSON.stringify(state));
+await browser.close();

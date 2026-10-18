@@ -1,0 +1,103 @@
+.mobile-festival-hero {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 100svh;
+  overflow: clip;
+  isolation: isolate;
+  background: #080808;
+  color: #f8f8f6;
+}
+
+.mobile-festival-hero__stage {
+  position: relative;
+  z-index: 1;
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 941 / 1672;
+}
+
+.mobile-festival-hero__lettering {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mobile-festival-hero__century {
+  position: absolute;
+  z-index: 3;
+  top: 130.180659cqw;
+  left: 76.514346%;
+  margin: 0;
+  font-family: "Festival Display", var(--font-editorial-sans);
+  font-size: 4.250797cqw;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  transform: scaleX(1.25);
+  transform-origin: left center;
+  white-space: nowrap;
+}
+
+.mobile-festival-hero__footer {
+  position: absolute;
+  z-index: 3;
+  right: 6%;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  left: 6%;
+  color: #d4d4d4;
+  font-family: var(--font-editorial-sans);
+  font-size: clamp(8px, 2.05vw, 11px);
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.mobile-festival-hero__status {
+  position: absolute;
+  z-index: 3;
+  top: 80.233794cqw;
+  left: 9.776833%;
+  margin: 0;
+  font-family: var(--font-editorial-sans);
+  font-size: 2.019129cqw;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.mobile-festival-hero__metadata {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 0;
+}
+
+.mobile-festival-hero__metadata span {
+  white-space: nowrap;
+}
+
+.mobile-festival-hero__metadata span + span::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background: #98213c;
+  vertical-align: middle;
+}
+
+/* Fit the portrait artwork into a tablet screen without stretching the hero. */
+@media (min-width: 40rem) {
+  .mobile-festival-hero__stage {
+    width: min(100%, calc(100svh * 941 / 1672));
+    margin-inline: auto;
+  }
+}

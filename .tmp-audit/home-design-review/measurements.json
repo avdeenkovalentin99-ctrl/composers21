@@ -1,0 +1,1103 @@
+{
+  "errors": [],
+  "measurements": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "overflow": false,
+      "typography": [
+        {
+          "text": "композиторыxxi века",
+          "font": "\"Cormorant Garamond\", \"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "62.64px",
+          "lineHeight": "51.9912px",
+          "color": "rgb(16, 17, 18)"
+        },
+        {
+          "text": "10–31 маяМосква · Галерея НИКО15 концертов",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "15.1269px",
+          "lineHeight": "22.6904px",
+          "color": "rgb(65, 67, 70)"
+        },
+        {
+          "text": "«Композиторы XXI века» — фестиваль современной академической музыки, объединяющи",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "40px",
+          "lineHeight": "43.2px",
+          "color": "oklch(0.145 0 0)"
+        },
+        {
+          "text": "Здесь встречаются разные поколения, художественные языки и традиции — от уже сло",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "13px",
+          "lineHeight": "21.45px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "Фестиваль задуман как пространство живого звучания, внимательного слушания и диа",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "13px",
+          "lineHeight": "21.45px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "О фестивалеО фестивале",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "трансляции",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "74.88px",
+          "lineHeight": "65.8944px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "все трансляциивсе трансляции",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "text": "медиа",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "57.6px",
+          "lineHeight": "51.84px",
+          "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.88)"
+        },
+        {
+          "text": "РБК Стиль",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "Новая академическая музыка прозвучит на фестивале «Композиторы XXI века»",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "18 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "Музыкальная жизнь",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "С точностью до бесконечности",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "22 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "ClassicalMusicNews",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "Варвара Мягкова — о диалоге исполнителей, композиторов и слушателя",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "9 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "Belcanto",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "Варвара Мягкова: «Большое искусство требует не ума, а интуиции»",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "3 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "все публикациивсе публикации",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "фестиваль 2026",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "74.88px",
+          "lineHeight": "65.8944px",
+          "color": "oklch(0.145 0 0)"
+        }
+      ],
+      "brokenImages": []
+    },
+    {
+      "name": "laptop",
+      "width": 1366,
+      "overflow": false,
+      "typography": [
+        {
+          "text": "композиторыxxi века",
+          "font": "\"Cormorant Garamond\", \"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "59.421px",
+          "lineHeight": "49.3194px",
+          "color": "rgb(16, 17, 18)"
+        },
+        {
+          "text": "10–31 маяМосква · Галерея НИКО15 концертов",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14.3496px",
+          "lineHeight": "21.5243px",
+          "color": "rgb(65, 67, 70)"
+        },
+        {
+          "text": "«Композиторы XXI века» — фестиваль современной академической музыки, объединяющи",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "40px",
+          "lineHeight": "43.2px",
+          "color": "oklch(0.145 0 0)"
+        },
+        {
+          "text": "Здесь встречаются разные поколения, художественные языки и традиции — от уже сло",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "13px",
+          "lineHeight": "21.45px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "Фестиваль задуман как пространство живого звучания, внимательного слушания и диа",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "13px",
+          "lineHeight": "21.45px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "О фестивалеО фестивале",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "трансляции",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "71.032px",
+          "lineHeight": "62.5082px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "все трансляциивсе трансляции",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "text": "медиа",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "54.64px",
+          "lineHeight": "49.176px",
+          "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.88)"
+        },
+        {
+          "text": "РБК Стиль",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "Новая академическая музыка прозвучит на фестивале «Композиторы XXI века»",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "18 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "Музыкальная жизнь",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "С точностью до бесконечности",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "22 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "ClassicalMusicNews",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "Варвара Мягкова — о диалоге исполнителей, композиторов и слушателя",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "9 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "Belcanto",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "Варвара Мягкова: «Большое искусство требует не ума, а интуиции»",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "3 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "все публикациивсе публикации",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "фестиваль 2026",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "71.032px",
+          "lineHeight": "62.5082px",
+          "color": "oklch(0.145 0 0)"
+        }
+      ],
+      "brokenImages": []
+    },
+    {
+      "name": "wide",
+      "width": 1920,
+      "overflow": false,
+      "typography": [
+        {
+          "text": "композиторыxxi века",
+          "font": "\"Cormorant Garamond\", \"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "83.52px",
+          "lineHeight": "69.3216px",
+          "color": "rgb(16, 17, 18)"
+        },
+        {
+          "text": "10–31 маяМосква · Галерея НИКО15 концертов",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "20.1692px",
+          "lineHeight": "30.2538px",
+          "color": "rgb(65, 67, 70)"
+        },
+        {
+          "text": "«Композиторы XXI века» — фестиваль современной академической музыки, объединяющи",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "40px",
+          "lineHeight": "43.2px",
+          "color": "oklch(0.145 0 0)"
+        },
+        {
+          "text": "Здесь встречаются разные поколения, художественные языки и традиции — от уже сло",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "13px",
+          "lineHeight": "21.45px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "Фестиваль задуман как пространство живого звучания, внимательного слушания и диа",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "13px",
+          "lineHeight": "21.45px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "О фестивалеО фестивале",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "трансляции",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "76px",
+          "lineHeight": "66.88px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "все трансляциивсе трансляции",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "text": "медиа",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "60px",
+          "lineHeight": "54px",
+          "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.88)"
+        },
+        {
+          "text": "РБК Стиль",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "Новая академическая музыка прозвучит на фестивале «Композиторы XXI века»",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "18 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "Музыкальная жизнь",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "С точностью до бесконечности",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "22 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "ClassicalMusicNews",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "Варвара Мягкова — о диалоге исполнителей, композиторов и слушателя",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "9 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "Belcanto",
+          "font": "\"Arial Narrow\", \"Roboto Condensed\", \"Helvetica Neue\", Arial, sans-serif",
+          "size": "15px",
+          "lineHeight": "17.25px",
+          "color": "oklch(0.269 0 0)"
+        },
+        {
+          "text": "Варвара Мягкова: «Большое искусство требует не ума, а интуиции»",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "16px",
+          "lineHeight": "19.2px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "3 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "9px",
+          "color": "oklch(0.708 0 0)"
+        },
+        {
+          "text": "все публикациивсе публикации",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "фестиваль 2026",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "76px",
+          "lineHeight": "66.88px",
+          "color": "oklch(0.145 0 0)"
+        }
+      ],
+      "brokenImages": []
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "overflow": false,
+      "typography": [
+        {
+          "text": "композиторыxxi века",
+          "font": "\"Cormorant Garamond\", \"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "30px",
+          "lineHeight": "24.9px",
+          "color": "rgb(16, 17, 18)"
+        },
+        {
+          "text": "10–31 маяМосква · Галерея НИКО15 концертов",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "11.332px",
+          "lineHeight": "16.9981px",
+          "color": "rgb(65, 67, 70)"
+        },
+        {
+          "text": "«Композиторы XXI века» — фестиваль современной академической музыки, объединяющи",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "27px",
+          "lineHeight": "29.16px",
+          "color": "oklch(0.145 0 0)"
+        },
+        {
+          "text": "Здесь встречаются разные поколения, художественные языки и традиции — от уже сло",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "12px",
+          "lineHeight": "19.8px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "Фестиваль задуман как пространство живого звучания, внимательного слушания и диа",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "12px",
+          "lineHeight": "19.8px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "О фестивалеО фестивале",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "трансляции",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "50.7px",
+          "lineHeight": "48.165px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "Громче слова",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "20.28px",
+          "lineHeight": "23.1192px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "31 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9.165px",
+          "lineHeight": "12.831px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "De la nuit / О ночи",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "20.28px",
+          "lineHeight": "23.1192px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "12 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9.165px",
+          "lineHeight": "12.831px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "Новая сакральность",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "20.28px",
+          "lineHeight": "23.1192px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "28 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9.165px",
+          "lineHeight": "12.831px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "Леонид Десятников. Любовь и жизнь поэта",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "20.28px",
+          "lineHeight": "23.1192px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "27 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9.165px",
+          "lineHeight": "12.831px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "Цветущий жасмин",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "20.28px",
+          "lineHeight": "23.1192px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "15 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9.165px",
+          "lineHeight": "12.831px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "все трансляциивсе трансляции",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "text": "медиа",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "50.7px",
+          "lineHeight": "48.165px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Новости культуры · 19 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "Новости культуры · 15 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "18 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "22 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "9 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "3 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "все публикациивсе публикации",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "фестиваль 2026",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "12px",
+          "lineHeight": "12px",
+          "color": "rgb(15, 15, 15)"
+        }
+      ],
+      "brokenImages": []
+    },
+    {
+      "name": "small",
+      "width": 320,
+      "overflow": false,
+      "typography": [
+        {
+          "text": "композиторыxxi века",
+          "font": "\"Cormorant Garamond\", \"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "30px",
+          "lineHeight": "24.9px",
+          "color": "rgb(16, 17, 18)"
+        },
+        {
+          "text": "10–31 маяМосква · Галерея НИКО15 концертов",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9.29808px",
+          "lineHeight": "13.9471px",
+          "color": "rgb(65, 67, 70)"
+        },
+        {
+          "text": "«Композиторы XXI века» — фестиваль современной академической музыки, объединяющи",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "27px",
+          "lineHeight": "29.16px",
+          "color": "oklch(0.145 0 0)"
+        },
+        {
+          "text": "Здесь встречаются разные поколения, художественные языки и традиции — от уже сло",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "12px",
+          "lineHeight": "19.8px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "Фестиваль задуман как пространство живого звучания, внимательного слушания и диа",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "12px",
+          "lineHeight": "19.8px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "О фестивалеО фестивале",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "трансляции",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "44px",
+          "lineHeight": "41.8px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "Громче слова",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "19px",
+          "lineHeight": "21.66px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "31 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "12.6px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "De la nuit / О ночи",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "19px",
+          "lineHeight": "21.66px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "12 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "12.6px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "Новая сакральность",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "19px",
+          "lineHeight": "21.66px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "28 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "12.6px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "Леонид Десятников. Любовь и жизнь поэта",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "19px",
+          "lineHeight": "21.66px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "27 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "12.6px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "Цветущий жасмин",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "19px",
+          "lineHeight": "21.66px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "15 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "12.6px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "все трансляциивсе трансляции",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "text": "медиа",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "44px",
+          "lineHeight": "41.8px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Новости культуры · 19 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "Новости культуры · 15 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "18 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "22 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "9 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "3 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "все публикациивсе публикации",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "фестиваль 2026",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "12px",
+          "lineHeight": "12px",
+          "color": "rgb(15, 15, 15)"
+        }
+      ],
+      "brokenImages": []
+    },
+    {
+      "name": "large",
+      "width": 430,
+      "overflow": false,
+      "typography": [
+        {
+          "text": "композиторыxxi века",
+          "font": "\"Cormorant Garamond\", \"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "30.1px",
+          "lineHeight": "24.983px",
+          "color": "rgb(16, 17, 18)"
+        },
+        {
+          "text": "10–31 маяМосква · Галерея НИКО15 концертов",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "12.4943px",
+          "lineHeight": "18.7414px",
+          "color": "rgb(65, 67, 70)"
+        },
+        {
+          "text": "«Композиторы XXI века» — фестиваль современной академической музыки, объединяющи",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "29.67px",
+          "lineHeight": "32.0436px",
+          "color": "oklch(0.145 0 0)"
+        },
+        {
+          "text": "Здесь встречаются разные поколения, художественные языки и традиции — от уже сло",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "12px",
+          "lineHeight": "19.8px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "Фестиваль задуман как пространство живого звучания, внимательного слушания и диа",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "12px",
+          "lineHeight": "19.8px",
+          "color": "oklch(0.371 0 0)"
+        },
+        {
+          "text": "О фестивалеО фестивале",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "трансляции",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "55.9px",
+          "lineHeight": "53.105px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "Громче слова",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "22.36px",
+          "lineHeight": "25.4904px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "31 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "10.105px",
+          "lineHeight": "14.147px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "De la nuit / О ночи",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "22.36px",
+          "lineHeight": "25.4904px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "12 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "10.105px",
+          "lineHeight": "14.147px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "Новая сакральность",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "22.36px",
+          "lineHeight": "25.4904px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "28 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "10.105px",
+          "lineHeight": "14.147px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "Леонид Десятников. Любовь и жизнь поэта",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "22.36px",
+          "lineHeight": "25.4904px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "27 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "10.105px",
+          "lineHeight": "14.147px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "Цветущий жасмин",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "22.36px",
+          "lineHeight": "25.4904px",
+          "color": "rgb(248, 248, 246)"
+        },
+        {
+          "text": "15 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "10.105px",
+          "lineHeight": "14.147px",
+          "color": "rgb(163, 163, 163)"
+        },
+        {
+          "text": "все трансляциивсе трансляции",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "text": "медиа",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "55.9px",
+          "lineHeight": "53.105px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Новости культуры · 19 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "Новости культуры · 15 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "18 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "22 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "9 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "3 мая 2026",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "9px",
+          "lineHeight": "14.85px",
+          "color": "rgb(93, 93, 93)"
+        },
+        {
+          "text": "все публикациивсе публикации",
+          "font": "Manrope, \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+          "size": "14px",
+          "lineHeight": "14px",
+          "color": "rgb(38, 38, 38)"
+        },
+        {
+          "text": "фестиваль 2026",
+          "font": "\"EB Garamond\", \"Times New Roman\", Georgia, serif",
+          "size": "12px",
+          "lineHeight": "12px",
+          "color": "rgb(15, 15, 15)"
+        }
+      ],
+      "brokenImages": []
+    }
+  ]
+}

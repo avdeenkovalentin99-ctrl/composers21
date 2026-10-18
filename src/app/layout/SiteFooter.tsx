@@ -6,14 +6,15 @@ import { PageContainer } from "./PageContainer";
 
 export function SiteFooter() {
   const location = useLocation();
-  const spacingClassName = location.pathname === "/media" ? "mt-0 md:mt-24" : "mt-24";
+  const isInverted = location.pathname === "/";
+  const spacingClassName = isInverted ? "mt-0" : location.pathname === "/media" ? "mt-0 md:mt-24" : "mt-24";
 
   return (
-    <footer className={`${spacingClassName} border-t border-neutral-200 pb-7 pt-10`}>
+    <footer data-nav-dark-start={isInverted ? "" : undefined} className={`${spacingClassName} border-t pb-7 pt-10 ${isInverted ? "border-white/12 bg-[var(--color-dark)] [&_p]:!text-white/55 [&_a]:!text-white/65 [&_a:hover]:!text-white/90" : "border-neutral-200"}`}>
       <PageContainer>
-        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-start">
+        <div className="site-footer__content flex flex-col justify-between gap-8 md:flex-row md:items-start">
           <div className="shrink-0">
-            <p className="font-editorial-serif text-base leading-[1.4] text-neutral-800">
+            <p className={`font-editorial-serif text-base leading-[1.4] ${isInverted ? "!text-white/90" : "text-neutral-800"}`}>
               {siteTitle}
             </p>
             <p className="mt-4 font-editorial-sans text-sm leading-[1.6] text-neutral-500/70">
@@ -54,7 +55,11 @@ export function SiteFooter() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Telegram"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 text-neutral-500/80 transition-colors duration-200 hover:border-neutral-900 hover:text-neutral-900"
+                className={`inline-flex h-8 w-8 items-center justify-center rounded-full border transition-colors duration-200 ${
+                  isInverted
+                    ? "border-white/25 text-white/65 hover:border-white/70 hover:text-white"
+                    : "border-neutral-300 text-neutral-500/80 hover:border-neutral-900 hover:text-neutral-900"
+                }`}
               >
                 <Send size={14} strokeWidth={1.8} />
               </a>

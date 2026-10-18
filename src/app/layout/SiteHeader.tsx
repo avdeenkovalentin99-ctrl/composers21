@@ -1,34 +1,13 @@
-import { MouseEvent, useEffect, useRef, useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { type CSSProperties, type FocusEvent, type RefObject, useEffect, useId, useRef, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
-import { navigationGroups, navigationItems } from "../data/navigation";
+import { navigationItems } from "../data/navigation";
 import type { NavGroup, NavItem } from "../data/types";
-import { PageContainer } from "./PageContainer";
-
-const HEADER_ROUTE_SETTLE_MS = 560;
-const MOBILE_NAVIGATION_DELAY_MS = 250;
-function getNavClassName(isActive: boolean, isLightOnHero = false) {
-  return [
-    "font-editorial-sans relative text-[12px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200",
-    isActive
-      ? "bg-neutral-900 px-2 py-[1px] !text-white"
-      : isLightOnHero
-        ? "text-white/72 hover:text-white"
-        : "text-neutral-600 hover:text-neutral-900",
-  ].join(" ");
-}
-
-function getNavGroupClassName(isActive: boolean, isLightOnHero = false) {
-  return [
-    "font-editorial-sans relative inline-flex text-[12px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200",
-    isActive
-      ? "bg-neutral-900 px-2 py-[1px] !text-white"
-      : isLightOnHero
-        ? "text-white/72 hover:text-white"
-        : "text-neutral-600 hover:text-neutral-900",
-  ].join(" ");
-}
+import { MobileNavigation } from "./MobileNavigation";
+import { type NavTheme, useNavigationRailTheme } from "./useNavigationRailTheme";
+import { useHomeRailEntrance } from "./useHomeRailEntrance";
+import "./homeRailEntrance.css";
+import { homeDesktopQuery } from "./homeViewport";
 
 function isNavItemActive(item: NavItem, pathname: string) {
   if (item.to === "/") {
@@ -42,504 +21,233 @@ function isNavGroupActive(group: NavGroup, pathname: string) {
   return group.children.some((item) => isNavItemActive(item, pathname));
 }
 
-function DropdownNavItem({
-  group,
-  pathname,
-  onHomeClick,
-  isOpen,
-  onOpen,
-  onClose,
-  onToggle,
-  onItemClick,
-  useHoverInteraction,
-  isLightOnHero,
-}: {
-  group: NavGroup;
-  pathname: string;
-  onHomeClick: (event: MouseEvent<HTMLAnchorElement>) => void;
-  isOpen: boolean;
-  onOpen: () => void;
-  onClose: () => void;
-  onToggle: () => void;
-  onItemClick: () => void;
-  useHoverInteraction: boolean;
-  isLightOnHero?: boolean;
-}) {
-  const isActive = isNavGroupActive(group, pathname);
-  const activeChild = group.children.find((item) => isNavItemActive(item, pathname));
-  const showActiveChildAsGroup = activeChild?.to === "/media";
-  const groupTarget = showActiveChildAsGroup
-    ? activeChild.to
-    : group.to ?? group.children[0]?.to ?? "/";
-  const groupLabel = showActiveChildAsGroup ? activeChild.label : group.label;
-  const dropdownId = `desktop-navigation-${group.children
-    .map((item) => item.to.replace(/[^a-z0-9]+/gi, "-"))
-    .join("-")}`;
-
-  return (
-    <div
-      className="relative flex items-center"
-      onMouseEnter={useHoverInteraction ? onOpen : undefined}
-      onMouseLeave={useHoverInteraction ? onClose : undefined}
-    >
-      <a
-        href={groupTarget}
-        className={getNavGroupClassName(isActive, isLightOnHero)}
-        aria-expanded={isOpen}
-        aria-controls={dropdownId}
-        aria-haspopup="true"
-        onClick={(event) => {
-          if (useHoverInteraction) {
-            return;
-          }
-
-          event.preventDefault();
-          onToggle();
-        }}
-      >
-        {groupLabel}
-      </a>
-      {isOpen ? (
-        <motion.div
-          id={dropdownId}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.14, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute left-1/2 top-full z-[60] inline-flex w-fit max-w-[calc(100vw-2.5rem)] -translate-x-[38%] pt-4"
-        >
-          <div
-            className={[
-              "inline-flex w-fit px-1 py-0.5",
-              isLightOnHero ? "bg-transparent" : "bg-white",
-            ].join(" ")}
-          >
-            <div className="inline-flex w-fit flex-nowrap items-center gap-x-5 gap-y-1.5">
-              {group.children.map((item, index) => (
-                <motion.span
-                  key={`${group.label}-${item.to}`}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.18, delay: index * 0.035, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  <NavLink
-                    to={item.to}
-                    onClick={(event) => {
-                      if (item.to === "/") {
-                        onHomeClick(event);
-                      }
-                      onItemClick();
-                    }}
-                    className={({ isActive: isChildActive }) =>
-                      [
-                        "font-editorial-sans whitespace-nowrap text-[10px] font-normal uppercase tracking-[0.12em] leading-none transition-colors duration-200",
-                        isLightOnHero
-                          ? isChildActive
-                            ? "text-white"
-                            : "text-white/72 hover:text-white"
-                          : isChildActive
-                            ? "text-neutral-950"
-                            : "text-neutral-500 hover:text-neutral-900",
-                      ].join(" ")
-                    }
-                  >
-                    {item.label}
-                  </NavLink>
-                </motion.span>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      ) : null}
-    </div>
-  );
+function isNavGroup(item: NavItem | NavGroup): item is NavGroup {
+  return "children" in item;
 }
 
-function MobileNavGroup({
-  group,
+function DesktopNavigationRail({
   pathname,
-  onNavigate,
+  openGroup,
+  onToggleGroup,
+  onClose,
+  navigationRef,
+  navTheme,
 }: {
-  group: NavGroup;
   pathname: string;
-  onNavigate: (event: MouseEvent<HTMLAnchorElement>, to: string) => void;
+  openGroup: string | null;
+  onToggleGroup: (label: string) => void;
+  onClose: () => void;
+  navigationRef: RefObject<HTMLDivElement | null>;
+  navTheme?: NavTheme;
 }) {
-  const isMediaChildActive = pathname === "/media" && group.children.some((item) => item.to === "/media");
-  const isActive = isNavGroupActive(group, pathname) && !isMediaChildActive;
-  const labelClassName = [
-    "font-editorial-sans inline-flex text-[13px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:text-[14px]",
-    isActive ? "!text-neutral-900" : "!text-neutral-900",
-  ].join(" ");
-  const labelContent = isActive ? (
-    <span className="inline-flex items-center gap-1.5">
-      <span aria-hidden="true">|</span>
-      <span>{group.label}</span>
-      <span aria-hidden="true">|</span>
-    </span>
-  ) : (
-    group.label
+  const [hoveredSubmenuIndex, setHoveredSubmenuIndex] = useState<number | null>(null);
+  const [submenuIndicator, setSubmenuIndicator] = useState({ y: 0, height: 0 });
+  const activeGroup = navigationItems.find((item): item is NavGroup => isNavGroup(item) && item.label === openGroup);
+  const railRef = useRef<HTMLElement | null>(null);
+  const clipRef = useRef<SVGClipPathElement | null>(null);
+  const clipId = `navigation-rail-${useId().replace(/:/g, "")}`;
+  const [hoveredRailIndex, setHoveredRailIndex] = useState<number | null>(null);
+  const [focusedRailIndex, setFocusedRailIndex] = useState<number | null>(null);
+  useNavigationRailTheme({ railRef, clipRef, pathname, navTheme });
+  useHomeRailEntrance({ railRef, pathname });
+
+  const railItemClassName = "font-editorial-sans relative flex min-h-0 flex-1 items-center justify-center text-[11px] font-medium uppercase leading-none tracking-[0.14em]";
+  const renderArtwork = (theme: NavTheme) => (
+    <div
+      aria-hidden="true"
+      data-theme={theme}
+      className="navigation-rail-art pointer-events-none absolute inset-0 flex flex-col"
+      style={theme === "dark" ? { clipPath: `url(#${clipId})` } : undefined}
+    >
+      {navigationItems.map((item, index) => {
+        const isActive = isNavGroup(item) ? isNavGroupActive(item, pathname) || openGroup === item.label : isNavItemActive(item, pathname);
+        return (
+          <div
+            key={item.label}
+            className={`${railItemClassName} navigation-rail-art-item`}
+            style={{ "--rail-step": index } as CSSProperties}
+            data-emphasized={isActive || hoveredRailIndex === index || focusedRailIndex === index}
+            data-focused={focusedRailIndex === index}
+          >
+            {!isNavGroup(item) && item.to === "/" ? (
+              <span className="navigation-rail-indicator-space relative p-2">
+                <span className="block h-3 w-3" />
+                <span
+                  className={`pointer-events-none absolute bottom-full left-1/2 mb-1 -translate-x-1/2 whitespace-nowrap text-[8px] font-medium leading-none tracking-[0.08em] transition-[opacity,translate] duration-200 motion-reduce:transition-none ${hoveredRailIndex === 0 || focusedRailIndex === 0 ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"}`}
+                >
+                  Главная
+                </span>
+              </span>
+            ) : (
+              <span className="navigation-rail-label absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 whitespace-nowrap px-2 py-1">{item.label}</span>
+            )}
+          </div>
+        );
+      })}
+    </div>
   );
 
+  useEffect(() => setHoveredSubmenuIndex(null), [openGroup]);
+
   return (
-    <div className="flex w-full flex-col items-start gap-4">
-      {group.to ? (
-        <NavLink to={group.to} onClick={(event) => onNavigate(event, group.to!)} className={labelClassName}>
-          {labelContent}
-        </NavLink>
-      ) : (
-        <span className={labelClassName}>{labelContent}</span>
-      )}
-      <div className="flex translate-x-8 flex-col items-start gap-4 text-left">
-        {group.children.map((item) => (
-          <NavLink
-            key={`${group.label}-${item.to}`}
-            to={item.to}
-            onClick={(event) => onNavigate(event, item.to)}
-            className={({ isActive: isChildActive }) =>
-              [
-                "font-editorial-sans inline-flex text-[11px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:text-[12px]",
-                isChildActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "!text-neutral-600 hover:!text-neutral-900",
-              ].join(" ")
-            }
+    <div ref={navigationRef} className={`pointer-events-none fixed inset-y-0 right-0 z-[80] hidden ${pathname === "/" ? "home-desktop:block" : "lg:block"}`}>
+      <AnimatePresence>
+        {activeGroup ? (
+          <motion.button
+            key="desktop-navigation-backdrop"
+            type="button"
+            aria-label="Закрыть подменю"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.22, ease: "easeOut" }}
+            onClick={onClose}
+            className="pointer-events-auto fixed inset-y-0 left-0 right-16 z-0 cursor-default bg-black/14"
+          />
+        ) : null}
+      </AnimatePresence>
+      <AnimatePresence>
+        {activeGroup ? (
+          <motion.aside
+            id="desktop-navigation-drawer"
+            initial={{ x: 340 }}
+            animate={{ x: 0 }}
+            exit={{ x: 340 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="pointer-events-auto fixed inset-y-0 right-16 z-10 flex w-[340px] items-center border-r border-black/12 !bg-white"
+            aria-label={`Подменю «${activeGroup.label}»`}
           >
-            {item.label}
-          </NavLink>
-        ))}
-      </div>
+            <div className="w-full px-10">
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div key={activeGroup.label} initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -10 }} transition={{ duration: 0.16, ease: [0.22, 1, 0.36, 1] }}>
+                  {activeGroup.label !== "2026" ? <p className="font-editorial-sans mb-8 text-[10px] font-medium uppercase tracking-[0.18em] text-[#64111f]">{activeGroup.label}</p> : null}
+                  {activeGroup.label === "2026" ? (
+                    <nav className="relative flex flex-col border-y border-black/12" aria-label="Навигация фестиваля 2026" onMouseLeave={() => setHoveredSubmenuIndex(null)}>
+                      <motion.span aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 bg-black" initial={false} animate={{ y: submenuIndicator.y, height: submenuIndicator.height, opacity: hoveredSubmenuIndex === null ? 0 : 1 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }} />
+                      {activeGroup.children.map((item, index) => (
+                        <NavLink
+                          key={item.to}
+                          to={item.to}
+                          onClick={onClose}
+                          onMouseEnter={(event) => {
+                            setHoveredSubmenuIndex(index);
+                            setSubmenuIndicator({ y: event.currentTarget.offsetTop, height: event.currentTarget.offsetHeight });
+                          }}
+                          className={({ isActive }) => [
+                            "font-editorial-sans relative z-10 px-5 py-4 text-[11px] font-medium uppercase leading-none tracking-[0.15em] transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#64111f]",
+                            hoveredSubmenuIndex === index ? "!text-white" : isActive ? "!text-[#64111f]" : "!text-neutral-800",
+                          ].join(" ")}
+                        >{item.label}</NavLink>
+                      ))}
+                    </nav>
+                  ) : (
+                    <nav className="flex flex-col border-y border-black/12" aria-label="Навигация раздела фестиваля">
+                      {activeGroup.children.map((item) => (
+                        <NavLink key={item.to} to={item.to} onClick={onClose} className={({ isActive }) => [
+                          "font-editorial-sans relative border-b border-black/12 px-5 py-4 text-[11px] font-medium uppercase leading-none tracking-[0.15em] transition-colors duration-150 last:border-b-0 before:absolute before:bottom-3 before:left-0 before:top-3 before:w-[2px] before:bg-[#64111f] before:transition-opacity before:duration-150 hover:!text-[#64111f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-[#64111f]",
+                          isActive ? "!text-[#64111f] before:opacity-100" : "!text-neutral-800 before:opacity-0 hover:before:opacity-100",
+                        ].join(" ")}>{item.label}</NavLink>
+                      ))}
+                    </nav>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </motion.aside>
+        ) : null}
+      </AnimatePresence>
+      <nav ref={railRef} data-section-background={pathname === "/"} data-home={pathname === "/" || pathname === "/hero2" || pathname === "/hero3"} data-entrance={pathname === "/" || pathname === "/hero2" || pathname === "/hero3" ? "hidden" : undefined} className="navigation-rail pointer-events-auto fixed inset-y-0 right-0 z-20 w-16" aria-label="Основная навигация">
+        <svg aria-hidden="true" focusable="false" className="pointer-events-none absolute h-0 w-0">
+          <defs><clipPath ref={clipRef} id={clipId} clipPathUnits="userSpaceOnUse" /></defs>
+        </svg>
+        <div aria-hidden="true" className="navigation-rail-light-window pointer-events-none absolute inset-0">
+          {renderArtwork("light")}
+        </div>
+        {renderArtwork("dark")}
+        <div aria-hidden="true" className="navigation-rail-footer-window pointer-events-none absolute inset-0">
+          {renderArtwork("dark")}
+        </div>
+        <div className="relative z-10 flex h-full flex-col border-l border-transparent">
+        {navigationItems.map((item, index) => {
+          const hasSubmenu = isNavGroup(item);
+          const isOpen = hasSubmenu && openGroup === item.label;
+          const interactionProps = {
+            className: `${railItemClassName} navigation-rail-action group focus-visible:outline-none`,
+            style: { "--rail-step": index } as CSSProperties,
+            "data-rail-step": index,
+            onMouseEnter: () => setHoveredRailIndex(index),
+            onMouseLeave: () => setHoveredRailIndex(null),
+            onPointerDown: () => setFocusedRailIndex(null),
+            onFocus: (event: FocusEvent<HTMLElement>) => setFocusedRailIndex(event.currentTarget.matches(":focus-visible") ? index : null),
+            onBlur: () => setFocusedRailIndex(null),
+          };
+          return hasSubmenu ? (
+            <button key={item.label} type="button" {...interactionProps} aria-expanded={isOpen} aria-controls="desktop-navigation-drawer" onClick={() => onToggleGroup(item.label)}>
+              <span className="sr-only">{item.label}</span>
+            </button>
+          ) : (
+            <NavLink key={item.to} to={item.to} onClick={onClose} {...interactionProps} aria-label={item.to === "/" ? "Главная" : undefined}>
+              {item.to === "/" ? (
+                <span className="navigation-rail-indicator p-2" aria-hidden="true">
+                  <span className="block h-3 w-3 bg-[#64111f] transition-transform duration-200 ease-in-out group-hover:rotate-45 group-focus-visible:rotate-45 motion-reduce:transition-none" />
+                </span>
+              ) : (
+                <span className="sr-only">{item.label}</span>
+              )}
+            </NavLink>
+          );
+        })}
+        </div>
+      </nav>
     </div>
   );
 }
 
 type SiteHeaderMode = "default" | "home-old-hero" | "home-old-solid";
 
-export function SiteHeader({ mode = "default" }: { mode?: SiteHeaderMode }) {
+export function SiteHeader({ mode = "default", navTheme }: { mode?: SiteHeaderMode; navTheme?: NavTheme }) {
   const location = useLocation();
-  const navigate = useNavigate();
-  const isHomeOldMode = mode === "home-old-hero" || mode === "home-old-solid";
-  const isHomeOldHeroMode = mode === "home-old-hero";
-  const isHomeOldSolidMode = mode === "home-old-solid";
-  const [useHoverInteraction, setUseHoverInteraction] = useState(() =>
-    typeof window === "undefined" ? false : window.matchMedia("(hover: hover) and (pointer: fine)").matches,
-  );
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const [openDesktopGroup, setOpenDesktopGroup] = useState<string | null>(null);
-  const [isParticipantsLeaving, setIsParticipantsLeaving] = useState(false);
-  const [isRouteSettling, setIsRouteSettling] = useState(false);
-  const headerRef = useRef<HTMLElement | null>(null);
-  const previousPathnameRef = useRef(location.pathname);
-  const mobileNavigationTimeoutRef = useRef<number | null>(null);
-  const hasSolidHeaderBackground =
-    isHomeOldSolidMode || isParticipantsLeaving || isScrolled || (isRouteSettling && !isHomeOldMode);
-  const hasHeaderBorder = (isHomeOldSolidMode || isScrolled) && !isParticipantsLeaving;
-  const isLightOnHero = isHomeOldHeroMode && !isScrolled && !menuOpen;
-  const [homeItem, partnersItem] = navigationItems;
-  const [festivalGroup, archiveGroup] = navigationGroups;
+  const desktopNavigationRef = useRef<HTMLDivElement | null>(null);
 
-  const handleFestivalClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (event.currentTarget.getAttribute("href") !== "/") {
-      return;
-    }
-
-    event.preventDefault();
-    setMenuOpen(false);
-    setOpenDesktopGroup(null);
-
-    if (location.pathname !== "/") {
-      navigate("/");
-    }
-
-    window.requestAnimationFrame(() => {
-      window.scrollTo({ top: 0, behavior: "auto" });
-    });
-  };
-
-  const handleMobileNavigation = (event: MouseEvent<HTMLAnchorElement>, to: string) => {
-    event.preventDefault();
-    setMenuOpen(false);
-
-    if (mobileNavigationTimeoutRef.current !== null) {
-      window.clearTimeout(mobileNavigationTimeoutRef.current);
-    }
-
-    mobileNavigationTimeoutRef.current = window.setTimeout(() => {
-      mobileNavigationTimeoutRef.current = null;
-
-      if (location.pathname !== to) {
-        navigate(to);
-        return;
-      }
-
-      window.scrollTo({ top: 0, behavior: "auto" });
-    }, MOBILE_NAVIGATION_DELAY_MS);
-  };
+  useEffect(() => setOpenDesktopGroup(null), [location.pathname]);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
-    const updateInteractionMode = () => {
-      setUseHoverInteraction(mediaQuery.matches);
-      setOpenDesktopGroup(null);
-    };
-
-    updateInteractionMode();
-    mediaQuery.addEventListener("change", updateInteractionMode);
-
-    return () => {
-      mediaQuery.removeEventListener("change", updateInteractionMode);
-    };
-  }, []);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (!isHomeOldMode) {
-        setIsScrolled(window.scrollY > 48);
-        return;
-      }
-
-      const heroElement = document.getElementById("home-old-hero");
-      if (!heroElement) {
-        setIsScrolled(false);
-        return;
-      }
-
-      const headerHeight = headerRef.current?.offsetHeight ?? 64;
-      const heroBottom = heroElement.getBoundingClientRect().bottom;
-      setIsScrolled(heroBottom <= headerHeight);
-    };
-
-    onScroll();
-    const animationFrameId = window.requestAnimationFrame(onScroll);
-    window.addEventListener("scroll", onScroll);
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.cancelAnimationFrame(animationFrameId);
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, [isHomeOldMode]);
-
-  useEffect(() => {
-    setMenuOpen(false);
-    setOpenDesktopGroup(null);
-
-    if (previousPathnameRef.current === location.pathname) {
-      return;
-    }
-
-    previousPathnameRef.current = location.pathname;
-    setIsRouteSettling(true);
-
-    const settleTimeoutId = window.setTimeout(() => {
-      setIsRouteSettling(false);
-    }, HEADER_ROUTE_SETTLE_MS);
-
-    return () => {
-      window.clearTimeout(settleTimeoutId);
-    };
-  }, [location.pathname]);
-
-  useEffect(() => {
-    if (!openDesktopGroup) {
-      return;
-    }
-
+    if (!openDesktopGroup) return;
     const handlePointerDown = (event: PointerEvent) => {
-      const headerElement = headerRef.current;
-
-      if (headerElement?.contains(event.target as Node)) {
-        return;
-      }
-
-      setOpenDesktopGroup(null);
+      if (!desktopNavigationRef.current?.contains(event.target as Node)) setOpenDesktopGroup(null);
     };
-
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setOpenDesktopGroup(null);
-      }
+      if (event.key === "Escape") setOpenDesktopGroup(null);
     };
-
+    const desktopQuery = window.matchMedia(location.pathname === "/" ? homeDesktopQuery : "(min-width: 64rem)");
+    const handleResize = () => { if (!desktopQuery.matches) setOpenDesktopGroup(null); };
     document.addEventListener("pointerdown", handlePointerDown);
     document.addEventListener("keydown", handleKeyDown);
-
+    desktopQuery.addEventListener("change", handleResize);
+    const previousRootOverflow = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = "hidden";
     return () => {
       document.removeEventListener("pointerdown", handlePointerDown);
       document.removeEventListener("keydown", handleKeyDown);
+      desktopQuery.removeEventListener("change", handleResize);
+      document.documentElement.style.overflow = previousRootOverflow;
     };
-  }, [openDesktopGroup]);
+  }, [openDesktopGroup, location.pathname]);
 
-  useEffect(() => {
-    const handleParticipantsLeave = () => setIsParticipantsLeaving(true);
-
-    window.addEventListener("participants:leave", handleParticipantsLeave);
-
-    return () => {
-      if (mobileNavigationTimeoutRef.current !== null) {
-        window.clearTimeout(mobileNavigationTimeoutRef.current);
-      }
-
-      window.removeEventListener("participants:leave", handleParticipantsLeave);
-    };
-  }, []);
-
-  useEffect(() => {
-    setIsParticipantsLeaving(false);
-  }, [location.pathname]);
+  if (mode === "home-old-solid") return null;
 
   return (
     <>
-      <header
-        ref={headerRef}
-        className={[
-          "inset-x-0 top-0 z-50 border-b transition-[opacity,transform,background-color,border-color] duration-300 ease-out",
-          isHomeOldHeroMode ? "absolute" : "fixed",
-          isHomeOldHeroMode && isScrolled ? "pointer-events-none opacity-0" : "",
-          isHomeOldSolidMode && !isScrolled ? "pointer-events-none opacity-0" : "",
-          isHomeOldSolidMode && isScrolled ? "opacity-100" : "",
-          hasSolidHeaderBackground ? "bg-white duration-300" : "bg-transparent duration-500",
-          hasHeaderBorder ? "border-black/70" : "border-transparent",
-          isLightOnHero ? "site-header-light-on-hero" : "",
-        ].join(" ")}
-      >
-        <PageContainer>
-          <div className="mb-1 flex items-center justify-between gap-6 pb-4 pt-6">
-            <NavLink
-              to="/"
-              onClick={handleFestivalClick}
-              className={[
-                "shrink-0 items-center gap-1.5",
-                isLightOnHero ? "hidden" : "hidden text-neutral-800 lg:inline-flex",
-              ].join(" ")}
-              aria-label="Композиторы XXI века — главная"
-            >
-              <span className="block h-[9px] w-[9px] shrink-0 bg-[#952733]" aria-hidden="true" />
-              <span className="font-editorial-sans whitespace-nowrap text-[11px] font-normal uppercase leading-none tracking-[0.13em]">
-                Композиторы XXI века
-              </span>
-            </NavLink>
-
-            <nav className="hidden items-center gap-x-16 lg:ml-auto lg:flex xl:gap-x-24 2xl:gap-x-32" aria-label="Основная навигация">
-              {homeItem ? (
-                <NavLink
-                  to={homeItem.to}
-                  onClick={homeItem.to === "/" ? handleFestivalClick : undefined}
-                  className={({ isActive }) => getNavClassName(isActive, isLightOnHero)}
-                >
-                  {homeItem.label}
-                </NavLink>
-              ) : null}
-              {festivalGroup ? (
-                <DropdownNavItem
-                  group={festivalGroup}
-                  pathname={location.pathname}
-                  onHomeClick={handleFestivalClick}
-                  isOpen={openDesktopGroup === festivalGroup.label}
-                  onOpen={() => setOpenDesktopGroup(festivalGroup.label)}
-                  onClose={() => setOpenDesktopGroup(null)}
-                  onToggle={() => setOpenDesktopGroup((current) => (current === festivalGroup.label ? null : festivalGroup.label))}
-                  onItemClick={() => setOpenDesktopGroup(null)}
-                  useHoverInteraction={useHoverInteraction}
-                  isLightOnHero={isLightOnHero}
-                />
-              ) : null}
-              {archiveGroup ? (
-                <DropdownNavItem
-                  group={archiveGroup}
-                  pathname={location.pathname}
-                  onHomeClick={handleFestivalClick}
-                  isOpen={openDesktopGroup === archiveGroup.label}
-                  onOpen={() => setOpenDesktopGroup(archiveGroup.label)}
-                  onClose={() => setOpenDesktopGroup(null)}
-                  onToggle={() => setOpenDesktopGroup((current) => (current === archiveGroup.label ? null : archiveGroup.label))}
-                  onItemClick={() => setOpenDesktopGroup(null)}
-                  useHoverInteraction={useHoverInteraction}
-                  isLightOnHero={isLightOnHero}
-                />
-              ) : null}
-              {partnersItem ? (
-                <NavLink to={partnersItem.to} className={({ isActive }) => getNavClassName(isActive, isLightOnHero)}>
-                  {partnersItem.label}
-                </NavLink>
-              ) : null}
-            </nav>
-
-            <div className="-mr-2 ml-auto flex items-center gap-3 lg:hidden">
-              <button
-                type="button"
-                onClick={() => setMenuOpen((value) => !value)}
-                className={[
-                  "font-editorial-sans inline-flex items-center gap-2 text-[0.74rem] font-light uppercase tracking-[0.18em] leading-none transition-colors duration-200 lg:hidden",
-                  isLightOnHero ? "text-white/72" : "text-black/72",
-                ].join(" ")}
-                aria-expanded={menuOpen}
-                aria-controls="mobile-navigation"
-              >
-                {menuOpen ? <X size={18} strokeWidth={1.6} /> : <Menu size={18} strokeWidth={1.6} />}
-                Меню
-              </button>
-            </div>
-          </div>
-        </PageContainer>
-      </header>
-
-      <AnimatePresence>
-        {menuOpen ? (
-          <motion.div
-            id="mobile-navigation"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.24 }}
-            className="fixed inset-0 z-40 bg-white/99 pt-24 lg:hidden"
-          >
-            <PageContainer className="flex h-full flex-col pb-10">
-              <nav className="mx-auto flex w-[190px] translate-x-12 flex-col items-start gap-8 text-left" aria-label="Мобильная навигация">
-                {homeItem ? (
-                  <NavLink
-                    to={homeItem.to}
-                    onClick={(event) => handleMobileNavigation(event, homeItem.to)}
-                    className={({ isActive }) =>
-                      [
-                        "font-editorial-sans inline-flex text-[13px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:text-[14px]",
-                        isActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "!text-neutral-900 hover:!text-neutral-950",
-                      ].join(" ")
-                    }
-                  >
-                    {homeItem.label}
-                  </NavLink>
-                ) : null}
-                {festivalGroup ? (
-                  <MobileNavGroup
-                    group={festivalGroup}
-                    pathname={location.pathname}
-                    onNavigate={handleMobileNavigation}
-                  />
-                ) : null}
-                {archiveGroup ? (
-                  <MobileNavGroup
-                    group={archiveGroup}
-                    pathname={location.pathname}
-                    onNavigate={handleMobileNavigation}
-                  />
-                ) : null}
-                {partnersItem ? (
-                  <NavLink
-                    to={partnersItem.to}
-                    onClick={(event) => handleMobileNavigation(event, partnersItem.to)}
-                    className={({ isActive }) =>
-                      [
-                        "font-editorial-sans inline-flex text-[13px] font-normal uppercase tracking-[0.11em] leading-none transition-colors duration-200 sm:text-[14px]",
-                        isActive ? "bg-neutral-900 px-2 py-[1px] !text-white" : "!text-neutral-900 hover:!text-neutral-950",
-                      ].join(" ")
-                    }
-                  >
-                    {partnersItem.label}
-                  </NavLink>
-                ) : null}
-              </nav>
-            </PageContainer>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+      <MobileNavigation />
+      <DesktopNavigationRail
+        pathname={location.pathname}
+        openGroup={openDesktopGroup}
+        onToggleGroup={(label) => setOpenDesktopGroup((current) => current === label ? null : label)}
+        onClose={() => setOpenDesktopGroup(null)}
+        navigationRef={desktopNavigationRef}
+        navTheme={navTheme}
+      />
     </>
   );
 }

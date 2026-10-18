@@ -271,10 +271,10 @@ function ArchiveBroadcastCard({
   totalCount: number;
 }) {
   const offsetClassName = cardOffsets[index % cardOffsets.length];
-  const isLinked = broadcast.url !== "#";
   const hasProgram = (broadcast.program?.some((section) => section.works.length > 0) ?? false);
-  const isCardLinked = isLinked && !hasProgram;
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isProgramOpen, setIsProgramOpen] = useState(false);
+  const detailsId = `${broadcast.id}-details`;
   const programId = `${broadcast.id}-program`;
   const content = (
     <>
@@ -291,49 +291,50 @@ function ArchiveBroadcastCard({
         {broadcast.title}
       </h3>
 
-      <BroadcastRows
-        broadcast={broadcast}
-        variant="archive"
-        trailingAction={
-          hasProgram ? (
-            <BroadcastProgramToggle
-              isOpen={isProgramOpen}
-              onToggle={() => setIsProgramOpen((current) => !current)}
-              controlsId={programId}
-            />
-          ) : null
-        }
-      />
+      <div id={detailsId} hidden={!isDetailsOpen}>
+        <BroadcastRows
+          broadcast={broadcast}
+          variant="archive"
+          trailingAction={
+            hasProgram ? (
+              <BroadcastProgramToggle
+                isOpen={isProgramOpen}
+                onToggle={() => setIsProgramOpen((current) => !current)}
+                controlsId={programId}
+              />
+            ) : null
+          }
+        />
+  
+        <BroadcastProgram broadcast={broadcast} isOpen={isProgramOpen} id={programId} />
+      </div>
 
-      <BroadcastProgram broadcast={broadcast} isOpen={isProgramOpen} id={programId} />
-
-      <div className="mt-8 border-t border-black/8 pt-5">
-        <BroadcastCta broadcast={broadcast} isCardLinked={isCardLinked} />
+      <div className="mt-8 flex items-center justify-between gap-4 border-t border-black/8 pt-5">
+        <BroadcastCta broadcast={broadcast} />
+        <button
+          type="button"
+          aria-expanded={isDetailsOpen}
+          aria-controls={detailsId}
+          aria-label={`${isDetailsOpen ? "Скрыть" : "Показать"} информацию о концерте «${broadcast.title}»`}
+          onClick={() => {
+            setIsDetailsOpen((current) => !current);
+            setIsProgramOpen(false);
+          }}
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center text-neutral-500 transition-colors duration-200 hover:text-neutral-950 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-[#64111f]"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
+            <path d="M3 10H17" />
+            <path d="M10 3V17" className={`origin-center transition-transform duration-200 motion-reduce:transition-none ${isDetailsOpen ? "rotate-90" : ""}`} />
+          </svg>
+        </button>
       </div>
     </>
   );
   const className = [
-    "group relative block border border-black/10 bg-white px-5 py-6 transition-[border-color,transform] duration-300 ease-out hover:-translate-y-0.5 hover:border-black/18 sm:px-7 sm:py-7 lg:px-9 lg:py-8",
+    "broadcast-archive-card group relative block border border-black/10 bg-white px-5 py-6 transition-[border-color,transform] duration-300 ease-out hover:-translate-y-0.5 hover:border-black/18 sm:px-7 sm:py-7 lg:px-9 lg:py-8",
     index > 0 ? "-mt-px md:-mt-2" : "",
     offsetClassName,
   ].join(" ");
-
-  if (isCardLinked) {
-    return (
-      <motion.a
-        href={broadcast.url}
-        target="_blank"
-        rel="noreferrer"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.42, delay: index * 0.045, ease: [0.22, 1, 0.36, 1] }}
-        className={className}
-        style={{ zIndex: totalCount - index }}
-      >
-        {content}
-      </motion.a>
-    );
-  }
 
   return (
     <motion.article

@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "Festival Display";
+  src: url("/fonts/roboto-flex.ttf") format("truetype");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+.festival-hero {
+  /* All coordinates follow the 1672 x 941 heroref3 artwork. */
+  --hero-black: #080909;
+  --hero-paper: #d0d2d3;
+  --hero-burgundy: #690e28;
+  --title-x: 2.45cqw;
+  --title-y: 21.95cqw;
+  --title-size: 12.05cqw;
+  --title-scale: 1.07;
+  --violin-x: 61.423445cqw;
+  --violin-y: min(0px, calc(28.139952cqw - 50svh));
+  --piano-y: 39.533493cqw;
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  overflow: clip;
+  width: 100%;
+  color: var(--hero-black);
+  background: #101315;
+}
+
+.festival-hero__composition {
+  display: grid;
+  align-items: center;
+  min-height: 100svh;
+  background: radial-gradient(ellipse at 48% 46%, #151819 0%, #101315 75%);
+}
+
+.festival-hero__stage {
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 1672 / 941;
+}
+
+.festival-hero__band {
+  position: absolute;
+  inset: 20.873206cqw 0 auto;
+  height: 16.507177cqw;
+  background: var(--hero-paper);
+}
+
+.festival-hero__title {
+  position: absolute;
+  z-index: 2;
+  top: var(--title-y);
+  left: var(--title-x);
+  width: max-content;
+  margin: 0;
+  color: var(--hero-black);
+  font-family: "Festival Display", "Helvetica Neue", sans-serif;
+  font-size: var(--title-size);
+  font-weight: 200;
+  font-variation-settings: "opsz" 144, "wght" 200, "GRAD" 0, "wdth" 125;
+  font-optical-sizing: none;
+  font-synthesis: none;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+  transform: scaleX(var(--title-scale));
+  transform-origin: top left;
+}
+
+.festival-hero__status {
+  position: absolute;
+  z-index: 4;
+  top: 26.70cqw;
+  left: 33.7cqw;
+  margin: 0;
+  padding: 0.4em 0.75em;
+  background: var(--hero-paper);
+  font-family: var(--font-editorial-sans);
+  font-size: 1.08cqw;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.22em;
+  white-space: nowrap;
+}
+
+.festival-hero__century {
+  position: absolute;
+  z-index: 2;
+  top: 32.82cqw;
+  right: 2.8cqw;
+  margin: 0;
+  color: var(--hero-burgundy);
+  font-family: "Festival Display", "Helvetica Neue", sans-serif;
+  font-size: 1.95cqw;
+  transform: scaleX(1.28);
+  transform-origin: right top;
+  font-weight: 200;
+  font-variation-settings: "opsz" 60, "wght" 200, "wdth" 110;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.festival-hero__century-word {
+  font-size: 1.4em;
+  line-height: 0;
+}
+
+.festival-hero__metadata {
+  position: absolute;
+  z-index: 2;
+  right: 3.23%;
+  bottom: clamp(12px, 1vw, 20px);
+  left: 3.23%;
+  margin: 0;
+  color: #b7b9bb;
+  font-family: var(--font-editorial-sans);
+  font-size: clamp(10px, 0.95vw, 18px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  word-spacing: 0.5em;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.festival-hero__media {
+  position: absolute;
+  overflow: hidden;
+  background: #080909;
+}
+
+.festival-hero__media--choir {
+  top: 3.767943cqw;
+  left: 1.913876cqw;
+  width: 58.313397cqw;
+  height: 16.686603cqw;
+}
+
+.festival-hero__media--violin {
+  z-index: 3;
+  top: var(--violin-y);
+  left: var(--violin-x);
+  width: 16.507177cqw;
+  height: calc(45.813398cqw - var(--violin-y));
+  /* Crop at the piano's top edge without reframing the vertical video. */
+  clip-path: inset(0 0 calc(45.813398cqw - var(--piano-y)) 0);
+}
+
+.festival-hero__media--piano {
+  top: var(--piano-y);
+  left: 20.035885cqw;
+  width: 79.964115cqw;
+  /* Reach the hero bottom, including the gap below a vertically centered stage. */
+  height: calc(max(56.279904cqw, 28.139952cqw + 50svh) - var(--piano-y));
+}
+
+.festival-hero__media-source {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--media-position);
+}
+
+.festival-hero__clip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.festival-hero__title--over-media {
+  top: calc(var(--title-y) - var(--violin-y));
+  left: calc(var(--title-x) - var(--violin-x));
+  color: #fff;
+}
+
+.festival-hero__rail-trigger {
+  position: absolute;
+  top: 32.215311cqw;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.festival-hero__media--choir .festival-hero__media-source {
+  transform: scale(1.25);
+}
+
+/* The alternate route keeps the same geometry on one continuous graphite field. */
+.festival-hero--graphite {
+  --hero-paper: #101315;
+  color: #f4f4f2;
+}
+
+.festival-hero--graphite .festival-hero__composition {
+  background: var(--hero-paper);
+}
+
+.festival-hero--graphite .festival-hero__title {
+  color: #fff;
+}
+
+.festival-hero--graphite .festival-hero__century {
+  color: #dedcda;
+}
+
+
+.festival-hero--graphite .festival-hero__media--violin {
+  isolation: isolate;
+}
+
+.festival-hero--graphite .festival-hero__clip {
+  mix-blend-mode: difference;
+}
+
+/* Start focusing with actual playback; the frame and lettering stay sharp. */
+@media (prefers-reduced-motion: no-preference) {
+  .festival-hero__media--violin .festival-hero__media-source {
+    animation: festival-hero-violin-focus 7s linear both paused;
+  }
+
+  .festival-hero__media--piano .festival-hero__media-source {
+    animation: festival-hero-violin-focus 7s linear 1s both paused;
+  }
+
+  .festival-hero__media--violin .festival-hero__media-source[data-playing="true"],
+  .festival-hero__media--piano .festival-hero__media-source[data-playing="true"] {
+    animation-play-state: running;
+  }
+}
+
+@keyframes festival-hero-violin-focus {
+  from { filter: blur(5px); }
+  to { filter: blur(0); }
+}

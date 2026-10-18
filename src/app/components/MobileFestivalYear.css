@@ -1,0 +1,175 @@
+.mobile-festival-year {
+  background: #fff;
+  color: var(--color-text);
+}
+
+.mobile-festival-year__inner {
+  width: 88%;
+  margin-inline: auto;
+  padding-block: clamp(40px, calc(9 * var(--home-mobile-unit, 1vw)), 72px);
+}
+
+.mobile-festival-year h2 {
+  position: absolute;
+  z-index: 4;
+  top: 47%;
+  left: 54%;
+  width: max-content;
+  margin: 0;
+  color: var(--color-text);
+  transform: translate(-50%, -50%);
+  font-family: var(--font-editorial-serif);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  text-transform: lowercase;
+}
+
+.mobile-festival-year__composition {
+  position: relative;
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  pointer-events: none;
+  user-select: none;
+}
+
+.mobile-festival-year__figure {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.mobile-festival-year__digit,
+.mobile-festival-year__dot-anchor {
+  position: absolute;
+  z-index: 2;
+  bottom: -2cqw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 68cqw;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.mobile-festival-year__square {
+  position: absolute;
+  background: #64111f;
+  aspect-ratio: 1;
+}
+
+.mobile-festival-year__figure[data-digit-index="0"] .mobile-festival-year__square {
+  left: 6%;
+  bottom: 10%;
+  width: 40%;
+}
+
+.mobile-festival-year__figure[data-digit-index="3"] .mobile-festival-year__square {
+  top: 20%;
+  right: 12%;
+  width: 26%;
+}
+
+.mobile-festival-year__diagonal {
+  position: absolute;
+  z-index: 3;
+  left: 34%;
+  bottom: 8%;
+  height: 65%;
+  width: 1px;
+  background: var(--color-text);
+  transform: rotate(43deg);
+  transform-origin: bottom;
+}
+
+.mobile-festival-year__hairline {
+  position: absolute;
+  left: 20%;
+  top: 5%;
+  width: 1px;
+  height: 40%;
+  background: #64111f;
+}
+
+.mobile-festival-year__inversion {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  background: var(--color-text);
+}
+
+.mobile-festival-year__inversion .mobile-festival-year__digit {
+  color: #fff;
+}
+
+.mobile-festival-year__figure[data-digit-index="1"] .mobile-festival-year__inversion {
+  clip-path: inset(30% 10% 10% 56%);
+}
+
+.mobile-festival-year__figure[data-digit-index="2"] .mobile-festival-year__inversion {
+  clip-path: inset(0 42% 69% 28%);
+}
+
+.mobile-festival-year__links {
+  width: 62%;
+  margin-left: 22%;
+  margin-right: 16%;
+  margin-top: 36px;
+  border-top: 1px solid rgb(0 0 0 / 16%);
+}
+
+.mobile-festival-year__links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 16px;
+  border-bottom: 1px solid rgb(0 0 0 / 16%);
+  font-family: var(--font-editorial-sans);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.mobile-festival-year__links a > span {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-muted);
+}
+
+[data-year-entrance="complete"] .mobile-festival-year__links a:is(:hover, :focus-visible) {
+  color: #64111f;
+}
+
+.mobile-festival-year__links a:focus-visible {
+  outline: 1px solid #64111f;
+  outline-offset: 4px;
+}
+
+/* Pull each pair toward the shared center without moving its decorative shapes. */
+.mobile-festival-year__figure:is([data-digit-index="0"], [data-digit-index="2"]) .mobile-festival-year__digit {
+  left: 60%;
+}
+
+.mobile-festival-year__figure:is([data-digit-index="1"], [data-digit-index="3"]) :is(.mobile-festival-year__digit, .mobile-festival-year__dot-anchor) {
+  left: 40%;
+}
+
+.mobile-festival-year__dot {
+  position: absolute;
+  left: calc(100% + 2cqw);
+  bottom: 0.19em;
+  width: 3.5cqw;
+  height: 3.5cqw;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Preserve the dot's original glyph-relative position without animating it. */
+.mobile-festival-year__dot-spacer {
+  visibility: hidden;
+}

@@ -1,0 +1,86 @@
+/* Keep the phone's portrait composition when the device is turned sideways. */
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) and (min-width: 35rem) and (max-width: 63.99rem) and (max-height: 31.25rem) {
+  .site-shell--home {
+    --phone-layout-width: clamp(320px, 100svh, 430px);
+    --home-mobile-unit: calc(var(--phone-layout-width) / 100);
+    width: var(--phone-layout-width);
+    margin-inline: auto;
+  }
+
+  .site-shell--home .logo-video-hero {
+    min-height: 100svw;
+  }
+
+  .site-shell--home .logo-video-hero__status {
+    font-size: max(11px, 4.4025cqw);
+    line-height: 1.4;
+    white-space: normal;
+  }
+
+  .site-shell--home .logo-video-hero__year {
+    right: -31%;
+    font-size: max(11px, 4.4025cqw);
+    line-height: 1.4;
+  }
+
+  .site-shell--home .logo-video-hero__emblem {
+    top: 42%;
+    left: 39%;
+    width: 66%;
+  }
+
+  .site-shell--home .logo-video-hero__title {
+    top: calc(66% - 20px);
+    left: 30%;
+    width: 58%;
+    font-size: clamp(32px, calc(7.9 * var(--home-mobile-unit)), 56px);
+  }
+
+  .site-shell--home .logo-video-hero__metadata {
+    bottom: 6%;
+    font-size: max(11px, calc(2.90565 * var(--home-mobile-unit)));
+    transform: none;
+    padding-inline: 20px;
+    gap: 0.35em 1em;
+    letter-spacing: 0.1em;
+    flex-wrap: wrap;
+  }
+
+  .site-shell--home .page-container {
+    padding-inline: 20px;
+  }
+
+  .site-shell--home .festival-intro-content h2 {
+    font-size: clamp(27px, calc(6.9 * var(--home-mobile-unit)), 38px);
+  }
+
+  .site-shell--home .mobile-home-media__reports {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .site-shell--home .mobile-home-media__report:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .site-shell--home .site-footer__content {
+    flex-direction: column;
+  }
+
+  .site-shell--home .mobile-navigation {
+    inset-inline: calc((100% - var(--phone-layout-width)) / 2);
+  }
+
+  .site-shell--home aside[aria-label="Cookie"] {
+    left: calc((100% - var(--phone-layout-width)) / 2 + 16px);
+    max-width: calc(var(--phone-layout-width) - 32px);
+    padding-inline: 16px;
+  }
+
+  @media (max-height: 23.75rem) {
+    .site-shell--home .logo-video-hero__metadata p:nth-child(2) {
+      order: 1;
+      flex-basis: 100%;
+    }
+  }
+}

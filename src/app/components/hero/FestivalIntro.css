@@ -1,0 +1,20 @@
+/* Whole blocks fade and move in sequence, without masks or syncopation. */
+.festival-intro-reveal {
+  opacity: 0;
+  transform: translate3d(var(--intro-x, 0px), var(--intro-y, 0px), 0);
+  transition: opacity 650ms cubic-bezier(0.22, 0.61, 0.36, 1) var(--intro-delay, 0ms), transform 650ms cubic-bezier(0.22, 0.61, 0.36, 1) var(--intro-delay, 0ms);
+}
+.festival-intro-lead { --intro-x: -36px; }
+.festival-intro-paragraph-first { --intro-y: -28px; --intro-delay: 400ms; }
+.festival-intro-paragraph-second { --intro-y: 28px; --intro-delay: 800ms; }
+.festival-intro-cta {
+  --intro-y: 12px;
+  --intro-delay: 1200ms;
+  visibility: hidden;
+  transition: opacity 600ms ease-out var(--intro-delay), transform 600ms ease-out var(--intro-delay), visibility 0s linear var(--intro-delay);
+}
+.festival-intro-content[data-visible="true"] .festival-intro-reveal { opacity: 1; transform: translate3d(0, 0, 0); }
+.festival-intro-content[data-visible="true"] .festival-intro-cta { visibility: visible; }
+@media (prefers-reduced-motion: reduce) {
+  .festival-intro-content[data-visible] .festival-intro-reveal { opacity: 1; transform: none; transition: none; visibility: visible; }
+}

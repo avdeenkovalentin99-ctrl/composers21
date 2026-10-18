@@ -1,0 +1,61 @@
+.editorial-cta {
+  position: relative;
+  display: inline-grid;
+  width: fit-content;
+  font-family: var(--font-editorial-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #262626;
+}
+
+.editorial-cta--light {
+  --editorial-cta-accent: #fff;
+  --editorial-cta-inverse: #000;
+  color: rgb(255 255 255 / 82%);
+}
+
+.editorial-cta::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 1em;
+  background: var(--editorial-cta-accent, var(--color-accent));
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Shared geometry keeps the label stationary during the color inversion. */
+.editorial-cta-label,
+.editorial-cta-fill {
+  grid-area: 1 / 1;
+  padding: 10px 16px;
+}
+
+.editorial-cta-fill {
+  color: var(--editorial-cta-inverse, #fff);
+  background: var(--editorial-cta-accent, var(--color-accent));
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+  pointer-events: none;
+}
+
+.editorial-cta:is(:hover, :focus-visible) .editorial-cta-fill {
+  opacity: 1;
+}
+
+.editorial-cta:focus-visible {
+  outline: 1px solid var(--editorial-cta-accent, var(--color-accent));
+  outline-offset: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-cta-fill {
+    transition: none;
+  }
+}

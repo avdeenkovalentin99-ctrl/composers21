@@ -1,0 +1,68 @@
+.media-sync-text-mask {
+  display: block;
+  padding: 4px;
+  margin: -4px;
+}
+
+.media-sync-text-content {
+  display: block;
+}
+
+/* Applied before paint, only after successful initialization. */
+[data-sync-active] .media-sync-text-mask {
+  overflow: hidden;
+}
+
+[data-sync-image-mask],
+[data-sync-image-shift] {
+  position: absolute;
+  inset: 0;
+}
+
+[data-sync-active] [data-sync-image-shift] img {
+  /* The original image hover resumes after the reveal. */
+  transform: none;
+}
+
+[data-sync-image-error] img {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-sync-active],
+  [data-sync-active] [data-sync-image-mask],
+  [data-sync-active] [data-sync-image-shift],
+  [data-sync-active] [data-sync-row],
+  [data-sync-active] [data-sync-play],
+  [data-sync-all-active],
+  [data-sync-active] .media-sync-text-content {
+    clip-path: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  [data-sync-active] .media-sync-text-mask {
+    overflow: visible;
+  }
+}
+
+/* Move article text independently of the entrance and divider lines. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .home-media-article > p {
+    transition: color 200ms ease, translate 220ms ease-out;
+  }
+
+  .home-media-article:is(:hover, :focus-visible) > p {
+    translate: 4px 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .home-media-report {
+    transition: transform 240ms ease-out;
+  }
+
+  .home-media-report:is(:hover, :focus-visible) {
+    transform: translateY(-5px);
+  }
+}

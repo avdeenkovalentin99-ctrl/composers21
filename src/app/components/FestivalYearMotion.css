@@ -1,0 +1,35 @@
+@media (min-width: 64rem) {
+  .home-year-square,
+  .home-year-diagonal,
+  .home-year-inversion {
+    translate: var(--figure-x, 0px) var(--figure-y, 0px);
+  }
+
+  /* Move the clipping shape while keeping its inverted numeral registered. */
+  .home-year-inversion .home-year-digit {
+    translate: calc(-1 * var(--figure-x, 0px)) calc(-1 * var(--figure-y, 0px));
+  }
+
+  .home-year-hairline {
+    rotate: var(--figure-angle, 0deg);
+    transform-origin: center;
+  }
+
+  .home-year-team-dot {
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 400ms ease;
+  }
+
+  [data-year-entrance="complete"] .home-year-column:hover .home-year-team-dot {
+    transform: scale(1.14);
+  }
+}
+
+@media (min-width: 64rem) and (prefers-reduced-motion: reduce) {
+  .home-year-team-dot,
+  [data-year-entrance="complete"] .home-year-column:hover .home-year-team-dot {
+    transform: none;
+    transition: none;
+  }
+}

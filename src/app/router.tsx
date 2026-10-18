@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { createBrowserRouter, useLocation, useOutlet } from "react-router-dom";
 import { SiteFooter } from "./layout/SiteFooter";
+import "./layout/HomePhoneLandscape.css";
 import { SiteHeader } from "./layout/SiteHeader";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { applyPageMeta, type PageMeta } from "./utils/pageMeta";
@@ -20,6 +21,7 @@ const ComposerPage = lazy(() => import("./pages/ComposerPage").then((module) => 
 const EnsemblePage = lazy(() => import("./pages/EnsemblePage").then((module) => ({ default: module.EnsemblePage })));
 const FestivalLabPage = lazy(() => import("./pages/FestivalLabPage").then((module) => ({ default: module.FestivalLabPage })));
 const FestivalPageLegacy = lazy(() => import("./pages/FestivalPageLegacy").then((module) => ({ default: module.FestivalPageLegacy })));
+const HeroVariantPage = lazy(() => import("./pages/HeroVariantPage").then((module) => ({ default: module.HeroVariantPage })));
 const MediaPage = lazy(() => import("./pages/MediaPage").then((module) => ({ default: module.MediaPage })));
 const ParticipantsPage = lazy(() => import("./pages/ParticipantsPage").then((module) => ({ default: module.ParticipantsPage })));
 const PartnersPage = lazy(() => import("./pages/PartnersPage").then((module) => ({ default: module.PartnersPage })));
@@ -37,6 +39,18 @@ const PAGE_META_BY_PATHNAME: Record<string, PageMeta> = {
     title: "Фестиваль современной музыки",
     description: "10–31 мая · Москва · Галерея НИКО · 15 концертов",
     canonicalPath: "/",
+  },
+  "/hero2": {
+    title: "Композиторы XXI века — графитовый hero",
+    description: "Второй вариант главного экрана фестиваля.",
+    canonicalPath: "/hero2",
+    robots: "noindex, nofollow",
+  },
+  "/hero3": {
+    title: "Композиторы XXI века — белый hero",
+    description: "Третий вариант главного экрана фестиваля.",
+    canonicalPath: "/hero3",
+    robots: "noindex, nofollow",
   },
   "/festival": {
     title: "О фестивале",
@@ -135,7 +149,6 @@ function PageLoadingSpace() {
 function RootLayout() {
   const location = useLocation();
   const outlet = useOutlet();
-  const showFooter = location.pathname !== "/";
   const previousPathnameRef = useRef(location.pathname);
   const transitionPendingRef = useRef(false);
   const lastTrackedUrlRef = useRef<string | null>(null);
@@ -227,8 +240,8 @@ function RootLayout() {
   }
 
   return (
-    <div className="min-h-screen overflow-x-clip bg-[var(--color-bg)] text-[var(--color-text)]">
-      {location.pathname === "/" ? (
+    <div className={`site-shell ${location.pathname === "/" ? "site-shell--home" : ""} min-h-screen overflow-x-clip bg-[var(--color-bg)] text-[var(--color-text)]`}>
+      {(location.pathname === "/" || location.pathname === "/hero2" || location.pathname === "/hero3") ? (
         <>
           <SiteHeader mode="home-old-hero" />
           <SiteHeader mode="home-old-solid" />
@@ -236,7 +249,7 @@ function RootLayout() {
       ) : (
         <SiteHeader />
       )}
-      <main>
+      <main data-homepage={location.pathname === "/" ? "" : undefined}>
         <AnimatePresence mode="wait" initial={false} onExitComplete={handleExitComplete}>
           <motion.div
             key={location.pathname}
@@ -246,7 +259,7 @@ function RootLayout() {
             transition={{ duration: 0.4, ease: [0.42, 0, 0.58, 1] }}
           >
             <Suspense fallback={<PageLoadingSpace />}>{outlet}</Suspense>
-            {showFooter ? <SiteFooter /> : null}
+            <SiteFooter />
           </motion.div>
         </AnimatePresence>
       </main>
@@ -260,6 +273,8 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <FestivalPageLegacy /> },
+      { path: "hero2", element: <HeroVariantPage /> },
+      { path: "hero3", element: <HeroVariantPage variant="paper" /> },
       { path: "festival", element: <AboutFestivalPage /> },
       { path: "academies", element: <AcademiesPage /> },
       { path: "festival-lab", element: <FestivalLabPage /> },

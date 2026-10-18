@@ -1,0 +1,107 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import { readFile, writeFile } from 'node:fs/promises';
+
+const reports = JSON.parse(await readFile('.tmp-audit/hero/geometry.json', 'utf8'));
+for (const s of reports) {
+  assert.equal(s.h1Count, 1);
+  assert.equal(s.choirTextStyle.color,'rgb(255, 255, 255)');
+  assert.equal(s.choirTextStyle.webkitTextFillColor,'rgb(255, 255, 255)');
+  assert.equal(s.choirTextStyle.webkitTextStrokeWidth,'0px');
+  assert.equal(s.outlines.length,2);
+  for (const outline of s.outlines) for (const key of ['x','y','width','height']) assert(Math.abs(s.title[key]-outline[key]) < 0.04, 'title copy '+key);
+  assert(s.choir.bottom > s.title.y && s.choir.bottom < s.band.y);
+  assert.equal(s.videos, 0);
+  assert(s.scrollWidth <= s.viewport);
+  for (const [a,b] of [[s.title,s.outline],[s.year,s.whiteYear]]) for (const key of ['x','y','width','height']) assert(Math.abs(a[key]-b[key]) < 0.04, key+' misalignment');
+  for (const [a,b] of [[s.titleStyle,s.outlineStyle],[s.yearStyle,s.whiteYearStyle]]) for (const key of ['fontFamily','fontSize','fontWeight','fontVariationSettings','letterSpacing','lineHeight','transform']) assert.equal(a[key],b[key]);
+  assert(s.band.x < s.violin.x && s.band.right > s.violin.right);
+  assert(s.band.right < s.title.right - 40);
+  assert(s.century.x > s.violin.right && s.century.right < s.band.right);
+  assert(s.year.y < s.piano.bottom && s.year.bottom > s.piano.bottom);
+  assert(s.year.bottom < s.metadata.y);
+  assert(s.media.every(m => m.loaded && m.opacity==='1' && m.fit==='cover'));
+  assert(s.clips.every(c => c.overflow==='hidden' && c.hidden==='true'));
+}
+assert.deepEqual(JSON.parse(await readFile('.tmp-audit/hero/sections-before.json','utf8')),JSON.parse(await readFile('.tmp-audit/hero/sections-after.json','utf8')));
+
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:900}});
+const errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:5174/',{waitUntil:'domcontentloaded'});
+await page.locator('.festival-hero').waitFor();
+await page.evaluate(()=>document.fonts.ready);
+const cookie=page.getByRole('button',{name:'OK',exact:true});
+if(await cookie.isVisible())await cookie.click();
+const rail=page.locator('.navigation-rail');
+const state=()=>rail.evaluate(el=>{
+  const mark=el.querySelector('.navigation-rail-indicator > span');
+  const labels=[...el.querySelectorAll('.navigation-rail-art[data-theme="dark"] .navigation-rail-label')];
+  const style=getComputedStyle(el);
+  const originalLine=getComputedStyle(el.querySelector('.navigation-rail-art'),'::before');
+  return {entrance:el.dataset.entrance,inert:el.inert,hidden:el.getAttribute('aria-hidden'),transform:style.transform,border:style.borderLeft,markRadius:getComputedStyle(mark).borderRadius,markColor:getComputedStyle(mark).backgroundColor,markOpacity:getComputedStyle(mark.parentElement).opacity,labels:labels.map(label=>getComputedStyle(label).opacity),line:originalLine.clipPath};
+});
+await page.waitForFunction(()=>document.querySelector('.navigation-rail').dataset.entrance==='hidden');
+assert.equal((await state()).inert,true);
+const threshold=await page.locator('[data-hero-rail-trigger]').evaluate(el=>el.getBoundingClientRect().top);
+await page.evaluate(y=>window.scrollTo({top:y,behavior:'instant'}),Math.floor(threshold)-2);
+await page.waitForTimeout(60);
+assert.equal((await state()).entrance,'hidden');
+await page.evaluate(y=>window.scrollTo({top:y,behavior:'instant'}),Math.ceil(threshold)+1);
+await page.waitForFunction(()=>document.querySelector('.navigation-rail').dataset.entrance==='visible');
+const stages=[];
+for(const [name,delay] of [['surface',120],['square',430],['first-item',400],['complete',1250]]){
+  await page.waitForTimeout(delay);
+  stages.push({name,...await state()});
+  await page.screenshot({path:'.tmp-audit/hero/rail-'+name+'.png'});
+}
+const done=await state();
+assert.equal(done.inert,false);
+assert.equal(done.markRadius,'0px');
+assert.equal(done.markColor,'rgb(100, 17, 31)');
+assert.equal(done.markOpacity,'1');
+assert(done.labels.every(value=>value==='1'));
+assert.equal(await page.locator('.navigation-rail-separator').count(),0);
+// Once the animation finishes, compare the same rail with its new animation sheet disabled.
+await rail.screenshot({path:'.tmp-audit/hero/rail-final.png'});
+await page.evaluate(()=>{const sheet=[...document.querySelectorAll('style[data-vite-dev-id]')].find(el=>el.dataset.viteDevId.endsWith('/homeRailEntrance.css'));if(!sheet)throw new Error('Entrance sheet missing');sheet.sheet.disabled=true;});
+await rail.screenshot({path:'.tmp-audit/hero/rail-original.png'});
+await page.evaluate(()=>{const sheet=[...document.querySelectorAll('style[data-vite-dev-id]')].find(el=>el.dataset.viteDevId.endsWith('/homeRailEntrance.css'));sheet.sheet.disabled=false;});
+await page.waitForTimeout(2100);
+// Verify the menu remains usable after the reveal.
+const group=page.locator('.navigation-rail button').first();
+await group.click();
+await page.locator('#desktop-navigation-drawer').waitFor();
+await page.getByRole('button',{name:'Закрыть подменю',exact:true}).click();
+await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+await page.waitForFunction(()=>document.querySelector('.navigation-rail').dataset.entrance==='hidden');
+assert.equal((await state()).inert,true);
+await page.goto('http://127.0.0.1:5174/media',{waitUntil:'domcontentloaded'});
+await page.locator('.navigation-rail[data-home="false"]').waitFor();
+assert.equal(await page.locator('.navigation-rail').evaluate(el=>el.inert),false);
+await page.screenshot({path:'.tmp-audit/hero/rail-media.png'});
+await page.setViewportSize({width:1920,height:1080});
+await page.goto('http://127.0.0.1:5174/',{waitUntil:'domcontentloaded'});
+await page.locator('[data-hero-rail-trigger]').waitFor();
+const largeThreshold=await page.locator('[data-hero-rail-trigger]').evaluate(el=>el.getBoundingClientRect().top);
+await page.evaluate(y=>window.scrollTo({top:y,behavior:'instant'}),Math.ceil(largeThreshold)+1);
+await page.waitForFunction(()=>document.querySelector('.navigation-rail').dataset.entrance==='visible');
+await page.waitForTimeout(2100);
+await page.screenshot({path:'.tmp-audit/hero/rail-1920.png'});
+assert.equal((await state()).markRadius,'0px');
+await page.emulateMedia({reducedMotion:'reduce'});
+await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+await page.waitForFunction(()=>document.querySelector('.navigation-rail').dataset.entrance==='hidden');
+await page.evaluate(y=>window.scrollTo({top:y,behavior:'instant'}),Math.ceil(largeThreshold)+1);
+await page.waitForFunction(()=>document.querySelector('.navigation-rail').dataset.entrance==='visible');
+await page.waitForTimeout(60);
+assert.equal((await state()).markOpacity,'1');
+await page.setViewportSize({width:390,height:844});
+await page.waitForFunction(()=>!document.querySelector('.festival-hero'));
+assert.equal(await page.locator('h1').count(),1);
+assert.equal(await page.locator('#home-old-hero video').count(),1);
+await writeFile('.tmp-audit/hero/rail-sequence.json',JSON.stringify(stages,null,2));
+await browser.close();
+assert.deepEqual(errors,[]);
+console.log('PASS: Hero intersections at 1440/1672/1920, other sections unchanged, rail sequence/reset/menu/routes/1920/reduced motion, existing mobile Hero.');

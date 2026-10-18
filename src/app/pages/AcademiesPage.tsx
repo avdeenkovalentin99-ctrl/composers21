@@ -103,16 +103,15 @@ function useAcademiesMeta() {
 
 function useOverlayScrollLock(isOpen: boolean) {
   useEffect(() => {
+    if (!isOpen) return;
     const body = document.body;
     const html = document.documentElement;
 
     const previousBodyOverflow = body.style.overflow;
     const previousHtmlOverflow = html.style.overflow;
 
-    if (isOpen) {
-      body.style.overflow = "hidden";
-      html.style.overflow = "hidden";
-    }
+    body.style.overflow = "hidden";
+    html.style.overflow = "hidden";
 
     return () => {
       body.style.overflow = previousBodyOverflow;

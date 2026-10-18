@@ -1,0 +1,64 @@
+.reference-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  overflow: clip;
+  background: #080808;
+  color: #fafaf8;
+}
+.reference-hero__edition, .reference-hero__year-status, .reference-hero__brand, .reference-hero__metadata {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+}
+.reference-hero__edition {
+  top: 3.8%;
+  left: 2.75%;
+  font-family: var(--font-editorial-serif);
+  font-size: clamp(22px, 1.92vw, 42px);
+  line-height: 1;
+}
+.reference-hero__year-status { top: 11.3%; right: 5.25%; text-align: right; }
+.reference-hero__year {
+  margin: 0;
+  font-family: var(--font-editorial-serif);
+  font-size: clamp(58px, 4.9vw, 112px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+.reference-hero__status {
+  margin: 0.75em 0 0;
+  font-family: var(--font-editorial-sans);
+  font-size: clamp(10px, 1.12vw, 24px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.reference-hero__brand { top: 25.5%; left: 7.1%; width: 58%; line-height: 0; }
+.reference-hero__logo { display: block; width: 100%; height: auto; }
+.reference-hero__metadata {
+  bottom: 8.6%;
+  left: 7.4%;
+  display: grid;
+  gap: 0.8em;
+  font-family: var(--font-editorial-sans);
+  font-size: clamp(12px, 1.2vw, 26px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+.reference-hero__metadata p { margin: 0; }
+.reference-hero__dates { font-size: 1.15em; letter-spacing: 0.1em; }
+.reference-hero__rail-trigger { position: absolute; bottom: 0; left: 0; width: 1px; height: 1px; pointer-events: none; }
+
+@media (max-width: 63.99rem) and (orientation: portrait) {
+  .reference-hero__edition { top: max(28px, env(safe-area-inset-top)); left: 7.5%; }
+  .reference-hero__year-status { top: 9%; right: 7.5%; }
+  .reference-hero__year { font-size: clamp(56px, 12vw, 96px); }
+  .reference-hero__status { font-size: clamp(9px, 2.1vw, 15px); letter-spacing: 0.18em; }
+  .reference-hero__brand { top: 37%; left: 6%; width: 88%; }
+  .reference-hero__metadata { left: 7.5%; bottom: max(8%, env(safe-area-inset-bottom)); font-size: clamp(10px, 2.6vw, 17px); gap: 1em; }
+}

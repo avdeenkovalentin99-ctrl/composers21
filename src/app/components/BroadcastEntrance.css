@@ -1,0 +1,135 @@
+/* Content-only entrance: the navigation rail never participates. */
+[data-broadcast-intro="pending"] [data-broadcast-title] {
+  opacity: 0;
+  translate: 0 14px;
+}
+
+[data-broadcast-intro="pending"] [data-broadcast-photo] {
+  opacity: 0;
+  transform: scale(1.012);
+}
+
+[data-broadcast-intro="visible"] [data-broadcast-title] {
+  animation: broadcast-title-in 500ms ease-out backwards;
+}
+
+[data-broadcast-photo] {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+}
+
+[data-broadcast-intro="visible"] [data-broadcast-photo] {
+  animation: broadcast-photo-in 800ms cubic-bezier(0.25, 0.1, 0.25, 1) 180ms backwards;
+}
+
+[data-broadcast-list] {
+  position: relative;
+}
+
+[data-broadcast-list]::before,
+[data-broadcast-row]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--broadcast-rule-color, rgb(255 255 255 / 10%));
+  transform-origin: left;
+  pointer-events: none;
+}
+
+[data-broadcast-list]::before {
+  top: -1px;
+}
+
+[data-broadcast-row]::after {
+  bottom: -1px;
+}
+
+[data-broadcast-list-state="pending"] [data-broadcast-list]::before,
+[data-broadcast-list-state="pending"] [data-broadcast-row]::after {
+  transform: scaleX(0);
+}
+
+[data-broadcast-list-state="visible"] [data-broadcast-list]::before,
+[data-broadcast-list-state="visible"] [data-broadcast-row]::after {
+  animation: broadcast-rule-in 650ms ease-in-out var(--broadcast-list-start, 700ms) backwards;
+}
+
+[data-broadcast-list-state="pending"] :is([data-broadcast-copy], [data-broadcast-all]) {
+  opacity: 0;
+}
+
+[data-broadcast-list-state="visible"] [data-broadcast-number] {
+  animation: broadcast-fade-in 450ms ease-out calc(var(--broadcast-list-start, 700ms) + 700ms + var(--broadcast-row, 0) * 300ms) backwards;
+}
+
+/* All titles and dates share one fade after the final number has appeared. */
+[data-broadcast-list-state="visible"] [data-broadcast-details] {
+  animation: broadcast-fade-in 550ms ease-out calc(var(--broadcast-list-start, 700ms) + 1250ms + var(--broadcast-last-row, 4) * 300ms) backwards;
+}
+
+[data-broadcast-marker],
+[data-broadcast-list] .mobile-home-broadcasts__details::before {
+  transform-origin: bottom;
+}
+
+[data-broadcast-list-state="pending"] [data-broadcast-marker],
+[data-broadcast-list-state="pending"] .mobile-home-broadcasts__details::before {
+  transform: scaleY(0);
+}
+
+[data-broadcast-list-state="visible"] [data-broadcast-marker],
+[data-broadcast-list-state="visible"] .mobile-home-broadcasts__details::before {
+  animation: broadcast-marker-in 450ms ease-out calc(var(--broadcast-list-start, 700ms) + 1900ms + var(--broadcast-last-row, 4) * 300ms) backwards;
+}
+
+[data-broadcast-list-state="visible"] [data-broadcast-all] {
+  animation: broadcast-fade-in 450ms ease-out calc(var(--broadcast-list-start, 700ms) + 2400ms + var(--broadcast-last-row, 4) * 300ms) backwards;
+}
+
+/* Keep the mobile list's existing divider geometry. */
+.mobile-home-broadcasts [data-broadcast-list] {
+  --broadcast-rule-color: rgb(255 255 255 / 22%);
+}
+
+.mobile-home-broadcasts [data-broadcast-list]::before,
+.mobile-home-broadcasts [data-broadcast-row]:last-child::after {
+  content: none;
+}
+
+@keyframes broadcast-title-in {
+  from { opacity: 0; translate: 0 14px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@keyframes broadcast-photo-in {
+  from { opacity: 0; transform: scale(1.012); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes broadcast-rule-in {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes broadcast-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes broadcast-marker-in {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-broadcast-intro] :is([data-broadcast-title], [data-broadcast-photo]),
+  [data-broadcast-list-state] :is([data-broadcast-copy], [data-broadcast-all], [data-broadcast-marker]),
+  [data-broadcast-list-state] [data-broadcast-list]::before,
+  [data-broadcast-list-state] [data-broadcast-row]::after,
+  [data-broadcast-list-state] .mobile-home-broadcasts__details::before {
+    animation: none;
+  }
+}

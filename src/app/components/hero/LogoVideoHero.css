@@ -1,0 +1,52 @@
+.logo-video-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  overflow: clip;
+  background: #222426;
+  color: #fafaf8;
+}
+.logo-video-hero__year { position: absolute; z-index: 2; top: 11.351351%; right: -76%; margin: 0; font-family: var(--font-editorial-sans); font-size: max(11px, 2.1885cqw); font-weight: 300; line-height: 1; letter-spacing: 0.1em; }
+.logo-video-hero__year::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 0.65em);
+  width: clamp(6px, 0.4em, 10px);
+  height: 1.4em;
+  background: #a50b35;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.logo-video-hero__heading { position: absolute; z-index: 2; left: 24.21875%; width: 34.375%; bottom: calc(97.297297% + 12px); display: flex; align-items: baseline; justify-content: space-between; }
+.logo-video-hero__status { flex: 0 0 34.375cqw; margin: 0; line-height: 1; text-align: left; font-family: var(--font-editorial-sans); font-size: max(11px, 2.1885cqw); font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; }
+.logo-video-hero__emblem { container-type: inline-size; position: absolute; top: 48%; left: 33%; width: min(48vw, 94.5svh); aspect-ratio: 256 / 185; transform: translate(-50%, -50%); opacity: 0; transition: opacity 320ms ease; }
+.logo-video-hero__emblem[data-video-ready="true"] { opacity: 1; }
+.logo-video-hero__mass { position: absolute; overflow: hidden; background: #777b7d; }
+.logo-video-hero__mass--first { left: 24.21875%; top: 2.702703%; width: 34.375%; height: 88.648649%; }
+.logo-video-hero__mass--second { left: 66.40625%; top: 11.351351%; width: 17.96875%; height: 85.405405%; }
+.logo-video-hero__mass video { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+.logo-video-hero__mass--first video { object-position: 46% center; }
+.logo-video-hero__mass--second video { object-position: 58% center; }
+.logo-video-hero__drawing { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.logo-video-hero__title { position: absolute; top: 48%; left: 56%; width: 36%; transform: translateY(-50%); margin: 0; font-family: "Cormorant Garamond", var(--font-editorial-serif); font-size: clamp(38px, 4.35vw, 88px); font-weight: 300; line-height: 0.83; letter-spacing: -0.055em; text-align: center; white-space: nowrap; }
+.logo-video-hero__title span { display: block; margin-top: 0.2em; font-size: 0.7em; letter-spacing: -0.015em; }
+.logo-video-hero__metadata { position: absolute; bottom: 6%; right: 0; left: 0; transform: translateX(4vw); display: flex; justify-content: center; text-align: center; flex-wrap: wrap; align-items: center; gap: 0.8em 1.7em; font-family: var(--font-editorial-sans); font-size: max(11px, min(1.05048vw, 2.0681325svh)); font-weight: 400; line-height: 1.5; letter-spacing: 0.17em; text-transform: uppercase; color: #d0d1d2; }
+.logo-video-hero__metadata p { margin: 0; }
+.logo-video-hero__rail-trigger { position: absolute; top: 65%; left: 0; width: 1px; height: 1px; pointer-events: none; }
+@media (max-width: 63.99rem) and (orientation: portrait) {
+  .logo-video-hero__status { font-size: max(11px, 4.4025cqw); line-height: 1.4; white-space: normal; }
+  .logo-video-hero__year { right: -31%; font-size: max(11px, 4.4025cqw); line-height: 1.4; }
+  .logo-video-hero__emblem { top: 42%; left: 39%; width: 66%; }
+  .logo-video-hero__title { top: calc(66% - 20px); left: 30%; width: 58%; font-size: clamp(32px, 7.9vw, 56px); }
+  .logo-video-hero__metadata { bottom: max(6%, env(safe-area-inset-bottom)); right: 0; left: 0; padding-inline: 20px; transform: none; font-size: max(11px, 2.90565vw); gap: 0.35em 1em; letter-spacing: 0.1em; }
+}
+@media (max-width: 23.75rem) and (orientation: portrait) {
+  .logo-video-hero__metadata p:nth-child(2) { order: 1; flex-basis: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-video-hero__emblem { transition: none; }
+}
+
+.logo-video-hero--paper { background: #fff; color: #101112; }
+.logo-video-hero--paper .logo-video-hero__metadata { color: #414346; }

@@ -7,6 +7,7 @@ export type NavGroup = {
   label: string;
   to?: string;
   children: NavItem[];
+  dropdownAlign?: "left" | "right";
 };
 
 export type FestivalInfo = {

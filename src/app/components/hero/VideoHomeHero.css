@@ -1,0 +1,7 @@
+.home-hero-video { position: absolute; z-index: 0; inset: 0; overflow: hidden; background: #080808; }
+.home-hero-video video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.home-hero-video::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(0 0 0 / 32%), rgb(0 0 0 / 5%) 75%), linear-gradient(0deg, rgb(0 0 0 / 28%), transparent 40%, rgb(0 0 0 / 14%)); pointer-events: none; }
+@media (max-width: 63.99rem) and (orientation: portrait) {
+  .home-hero-video video { object-position: 60% center; }
+  .home-hero-video::after { background: linear-gradient(0deg, rgb(0 0 0 / 55%), rgb(0 0 0 / 20%) 50%, rgb(0 0 0 / 30%)); }
+}

@@ -1,24 +1,55 @@
-import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { type CSSProperties, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import { Link } from "react-router-dom";
-import festivalLogoDesktop from "../../../lofofinaldesktop.svg";
-import festivalLogoMobile from "../../../logofinalmob2.svg";
-import { VideoHomeHero } from "../components/hero/VideoHomeHero";
+import { MobileHomeMedia } from "../components/MobileHomeMedia";
+import { EditorialCta } from "../components/ui/EditorialCta";
+import { MediaSyncText } from "../components/MediaSyncText";
+import { useMediaSyncopation } from "../components/useMediaSyncopation";
+import { MobileFestivalYear } from "../components/MobileFestivalYear";
+import { useBroadcastEntrance } from "../components/useBroadcastEntrance";
+import { MobileHomeBroadcasts } from "../components/MobileHomeBroadcasts";
+import { LogoVideoHero } from "../components/hero/LogoVideoHero";
+import { FestivalIntro } from "../components/hero/FestivalIntro";
+import { broadcasts } from "../data/broadcasts";
+import { cultureReports, mediaMaterials } from "../data/media";
 import { PageContainer } from "../layout/PageContainer";
+import { useFestivalYearEntrance } from "../components/useFestivalYearEntrance";
+import { useFestivalFigureMotion } from "../components/useFestivalFigureMotion";
+import "../components/FestivalYearMotion.css";
 
 const cookieStorageKey = "composersxxi_cookie_notice_accepted";
-const festivalLabel = "ФЕСТИВАЛЬ СОВРЕМЕННОЙ МУЗЫКИ";
 
-const mobileArchiveCards = [
-  {
-    title: "Трансляции",
-    to: "/translyatsii",
-  },
-  {
-    title: "Медиа",
-    to: "/media",
-  },
+
+
+const homepageBroadcastSelection = [
+  { id: "2026-05-31-gromche-slova", number: "15", title: "Громче слова", previewImage: "/assets/hero/p31.png" },
+  { id: "2026-05-12-il-theleme-de-la-nuite", number: "02", title: "De la nuit / О ночи", previewImage: "/assets/hero/p12.png" },
+  { id: "2026-05-28-brezel-melodiya", number: "12", title: "Новая сакральность", previewImage: "/assets/hero/p28.png" },
+  { id: "2026-05-27-desyatnikov-love-and-life", number: "11", title: "Леонид Десятников. Любовь и жизнь поэта", previewImage: "/assets/hero/p27.png" },
+  { id: "2026-05-15-solisty-nizhnego-novgoroda", number: "04", title: "Цветущий жасмин", previewImage: "/assets/hero/p15.png" },
 ] as const;
+
+const homepageBroadcasts = homepageBroadcastSelection.flatMap((selection) => {
+  const broadcast = broadcasts.find((item) => item.id === selection.id);
+  return broadcast
+    ? [{ ...broadcast, ...selection }]
+    : [];
+});
+
+const homepageReportPreviews: Record<string, string> = {
+  "smotrim-news-culture-main-report": "/assets/hero/culture1.webp",
+  "smotrim-solisty-nizhnego-novgoroda": "/assets/hero/culture2.webp",
+};
+
+const homepageCultureReports = cultureReports.flatMap((report) => {
+  const previewImage = homepageReportPreviews[report.id];
+
+  return previewImage ? [{ ...report, previewImage }] : [];
+});
+
+const homepageMediaArticles = [mediaMaterials[0], mediaMaterials[2], mediaMaterials[1], mediaMaterials[3]].filter(
+  (article): article is NonNullable<typeof article> => article !== undefined,
+);
 
 function CookieNotice() {
   const [isVisible, setIsVisible] = useState(false);
@@ -59,157 +90,318 @@ function CookieNotice() {
 }
 
 export function FestivalPageLegacy() {
+  const mediaRef = useMediaSyncopation("desktop");
+  const broadcastRef = useBroadcastEntrance("desktop");
+  const [activeBroadcastIndex, setActiveBroadcastIndex] = useState(0);
+  const [hoveredFestivalNavIndex, setHoveredFestivalNavIndex] = useState<number | null>(null);
+  const [festivalNavIndicator, setFestivalNavIndicator] = useState({ x: 0, width: 0 });
+  const [shouldAnimateFestivalNavIndicator, setShouldAnimateFestivalNavIndicator] = useState(false);
+  const activeBroadcast = homepageBroadcasts[activeBroadcastIndex];
+  const festivalFigureMotion = useFestivalFigureMotion();
+  const { ref: festivalYearRef, isReady: festivalYearReady } = useFestivalYearEntrance("desktop");
+
+  useEffect(() => {
+    if (festivalYearReady) return;
+    setHoveredFestivalNavIndex(null);
+    setShouldAnimateFestivalNavIndicator(false);
+    for (let index = 0; index < 4; index += 1) festivalFigureMotion.setColumnHovered(index, false);
+  }, [festivalYearReady, festivalFigureMotion.setColumnHovered]);
+
+  useEffect(() => {
+    if (hoveredFestivalNavIndex === null || shouldAnimateFestivalNavIndicator) {
+      return;
+    }
+
+    const frame = window.requestAnimationFrame(() => setShouldAnimateFestivalNavIndicator(true));
+    return () => window.cancelAnimationFrame(frame);
+  }, [hoveredFestivalNavIndex, shouldAnimateFestivalNavIndicator]);
+
+  function activateFestivalColumn(index: number, column: HTMLAnchorElement) {
+    if (!festivalYearReady || hoveredFestivalNavIndex === index) return;
+    festivalFigureMotion.setColumnHovered(index, true);
+    if (hoveredFestivalNavIndex === null) setShouldAnimateFestivalNavIndicator(false);
+    setHoveredFestivalNavIndex(index);
+    setFestivalNavIndicator({
+      x: column.offsetLeft + 10,
+      width: Math.max(0, column.offsetWidth - 20),
+    });
+  }
+
+
   return (
     <>
-      <h1 className="sr-only">{"Фестиваль современной музыки „Композиторы XXI века“"}</h1>
-      <section id="home-old-hero" className="relative min-h-[100svh] overflow-hidden bg-black text-white">
-        <VideoHomeHero />
-        <PageContainer className="relative z-10 min-h-[100svh] lg:hidden">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.12,
-                  delayChildren: 0.1,
-                },
-              },
-            }}
-            className="absolute left-1 top-[116px] sm:left-2 sm:top-[124px]"
-          >
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 18 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.56, ease: [0.22, 1, 0.36, 1] },
-                },
-              }}
-              className="flex w-[260px] flex-col items-start sm:w-[292px]"
-            >
-              <div className="ml-[10%] w-[205px] sm:w-[220px]">
-                <div className="flex h-[90px] items-center overflow-visible">
-                  <img
-                    src={festivalLogoMobile}
-                    alt="Композиторы XXI века"
-                    className="relative left-[-5.03%] h-auto w-full opacity-75"
-                    decoding="async"
-                  />
-                </div>
-                <span aria-hidden="true" className="mt-3 block h-px w-4/5 bg-[#8A2432]/70" />
-                <p
-                  className="font-editorial-sans mt-3 flex w-[91.35%] items-center justify-between whitespace-nowrap text-[8px] font-normal uppercase leading-none text-white/65 sm:text-[9px]"
-                  aria-label={festivalLabel}
+      <LogoVideoHero variant="paper" />
+      <FestivalIntro />
+      <MobileHomeBroadcasts broadcasts={homepageBroadcasts} activeIndex={activeBroadcastIndex} onSelect={setActiveBroadcastIndex} />
+      <MobileHomeMedia reports={homepageCultureReports} articles={homepageMediaArticles} />
+      <MobileFestivalYear />
+      {activeBroadcast ? (
+        <section className="hidden bg-[var(--color-dark)] text-white home-desktop:block" aria-labelledby="homepage-broadcasts-title">
+          <PageContainer className="py-20 xl:py-24 2xl:py-28">
+            <div ref={broadcastRef} className="mx-auto max-w-[1340px]">
+              <div className="flex items-start justify-between gap-12">
+                <h2
+                  id="homepage-broadcasts-title"
+                  data-broadcast-title
+                  className="font-editorial-serif inline-block origin-left scale-x-[0.96] scale-y-[1.03] text-[clamp(56px,5.2vw,76px)] font-extralight lowercase leading-[0.88] tracking-[0.025em] text-white"
                 >
-                  {Array.from(festivalLabel).map((character, index) => (
-                    <span key={`${character}-${index}`} aria-hidden="true" className="whitespace-pre">
-                      {character}
-                    </span>
-                  ))}
-                </p>
+                  трансляции
+                </h2>
               </div>
-            </motion.div>
-          </motion.div>
 
-          <div className="font-editorial-sans absolute bottom-[52px] left-6 border-l border-[#8A2432] pl-4 text-[11px] font-medium uppercase leading-[1.85] tracking-[0.16em] text-white/85 sm:bottom-14 sm:left-8 sm:text-[12px]">
-            <p>10–31 мая</p>
-            <p>Москва</p>
-            <p>Галерея НИКО</p>
-            <p>15 концертов</p>
-          </div>
+              <div className="mt-12 grid grid-cols-[minmax(0,1.68fr)_minmax(340px,0.86fr)] items-start gap-x-12 xl:mt-14 xl:gap-x-16">
+                <div>
+                  <a
+                    href={activeBroadcast.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Смотреть запись: ${activeBroadcast.title}`}
+                    className="home-broadcast-card group relative block aspect-[1.9/1] overflow-hidden bg-neutral-900 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  >
+                    <div data-broadcast-photo>
+                    <AnimatePresence mode="wait" initial={false}>
+                      <motion.img
+                        key={activeBroadcast.id}
+                        src={activeBroadcast.previewImage}
+                        alt=""
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.28 }}
+                        className="home-broadcast-photo absolute inset-0 h-full w-full object-cover"
+                      />
+                    </AnimatePresence>
+                    <div className="absolute bottom-6 left-6 z-10 xl:bottom-7 xl:left-7">
+                      <span
+                        className="home-broadcast-watch font-editorial-sans mt-4 inline-flex items-center gap-3 pb-2 text-[11px] font-medium uppercase leading-none tracking-[0.24em] text-white/82 transition-colors duration-200 group-hover:text-white group-focus-visible:text-white"
+                      >
+                        <span>смотреть запись</span>
+                        <span aria-hidden="true" className="text-[14px] font-light text-white/58">→</span>
+                      </span>
+                    </div>
+                    </div>
+                  </a>
+                </div>
 
-          <p className="font-editorial-sans absolute bottom-[52px] right-6 text-right text-[12px] font-medium uppercase leading-[1.65] tracking-[0.16em] text-white/85 sm:bottom-14 sm:right-7 sm:text-[13px]">
-            Фестиваль
-            <br />
-            состоялся
-          </p>
-        </PageContainer>
+                <div className="flex min-h-full flex-col">
+                  <div data-broadcast-list className="grid aspect-[0.973/1] grid-rows-5 border-t border-transparent">
+                    {homepageBroadcasts.map((broadcast, index) => {
+                      const isActive = index === activeBroadcastIndex;
 
-        <PageContainer className="relative z-10 hidden min-h-[100svh] flex-col justify-between pb-8 pt-[27vh] lg:flex">
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.56, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="hero-brand relative -ml-2 w-[46vw] max-w-[600px]"
-          >
-            <p className="font-editorial-sans absolute -top-[42px] left-0 flex items-center gap-2 whitespace-nowrap text-[10px] font-normal uppercase leading-none tracking-[0.18em]">
-              <span aria-hidden="true" className="text-[#8A2432]">—</span>
-              <span className="text-white/72">Фестиваль состоялся</span>
-            </p>
-            <div className="relative aspect-[2.6/1] w-full overflow-hidden">
-              <img
-                src={festivalLogoDesktop}
-                alt="Композиторы XXI века"
-                className="absolute left-[8.25%] top-1/2 h-auto w-2/3 -translate-y-1/2 opacity-75"
-                decoding="async"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute bottom-6 left-[10%] block h-px w-[52.58%] bg-[#8A2432]/70"
-              />
-              <p
-                className="font-editorial-sans absolute bottom-0 left-[10%] flex w-[63.47%] items-center justify-between whitespace-nowrap text-[13px] font-normal uppercase leading-none text-white/76 xl:text-[14px]"
-                aria-label={festivalLabel}
-              >
-                {Array.from(festivalLabel).map((character, index) => (
-                  <span key={`${character}-${index}`} aria-hidden="true" className="whitespace-pre">
-                    {character}
-                  </span>
-                ))}
-              </p>
+                      return (
+                        <button
+                          key={broadcast.id}
+                          data-broadcast-row
+                          style={{ "--broadcast-row": index } as CSSProperties}
+                          type="button"
+                          onClick={() => setActiveBroadcastIndex(index)}
+                          className="group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6"
+                          aria-pressed={isActive}
+                        >
+                          <span
+                            aria-hidden="true"
+                            data-broadcast-marker
+                            className={`absolute bottom-[9px] left-[58px] top-[9px] w-[4px] bg-[#64111f] transition-opacity duration-200 xl:left-[64px] ${isActive ? "opacity-100" : "opacity-0"}`}
+                          />
+                          <span data-broadcast-copy data-broadcast-number className="font-condensed-display text-[39px] font-light leading-none tracking-[-0.04em] text-white/70 transition-colors duration-200 group-hover:text-white/90 xl:text-[44px]">
+                            {broadcast.number}
+                          </span>
+                          <span data-broadcast-copy data-broadcast-details className="block pl-1">
+                            <span className="font-condensed-display block text-[15px] font-medium leading-[1.14] tracking-[0.06em] text-white/84 transition-colors duration-200 group-hover:text-white xl:text-[16px]">
+                              {broadcast.title}
+                            </span>
+                            <span className="font-editorial-sans mt-2.5 block text-[11px] font-medium uppercase leading-none tracking-[0.24em] text-white/65">
+                              {broadcast.date}
+                            </span>
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  <EditorialCta
+                    to="/translyatsii"
+                    data-broadcast-all
+                    className="editorial-cta--light mt-10 self-end"
+                  >
+                    все трансляции
+                  </EditorialCta>
+                </div>
+              </div>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.56, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            className="flex items-end justify-between gap-10"
-          >
-            <p className="font-editorial-sans text-[10px] font-normal uppercase leading-none tracking-[0.18em] text-white/68">
-              10—31 мая · Москва · Галерея НИКО · 15 концертов
-            </p>
+          </PageContainer>
+        </section>
+      ) : null}
+      <section data-nav-light-start className="hidden bg-white text-neutral-950 home-desktop:block" aria-labelledby="homepage-media-title">
+        <PageContainer className="pb-32 pt-24 xl:pb-38 xl:pt-28 2xl:pb-40 2xl:pt-32">
+          <div ref={mediaRef} className="mx-auto grid max-w-[1340px] grid-cols-[minmax(190px,0.78fr)_minmax(0,1.08fr)_minmax(0,1fr)_minmax(260px,1.22fr)] items-start gap-x-7 xl:gap-x-9">
             <Link
               to="/media"
-              className="font-editorial-sans inline-flex shrink-0 items-center gap-2 text-[11px] font-normal uppercase leading-none tracking-[0.16em] text-white/72 transition-colors duration-300 hover:text-white"
+              data-sync-group="tile"
+              className="home-media-tile group relative flex min-h-[330px] translate-y-22 flex-col justify-between px-7 pb-8 pt-4 text-white xl:min-h-[370px] xl:translate-y-26 xl:px-9 xl:pb-10 xl:pt-5"
             >
-              Медиа фестиваля
-              <span aria-hidden="true" className="text-[#8A2432]">→</span>
+              <h2
+                id="homepage-media-title"
+                className="font-editorial-serif -ml-2 w-max origin-left -translate-y-3 scale-x-[0.96] scale-y-[1.03] text-left text-[clamp(42px,4vw,60px)] xl:-ml-4 font-extralight lowercase leading-[0.9] tracking-[0.025em] text-white/88"
+              >
+                <MediaSyncText id="label">медиа</MediaSyncText>
+              </h2>
+              <span
+                aria-hidden="true"
+                className="font-editorial-sans -mr-3 inline-flex items-center gap-9 self-end xl:-mr-5"
+              >
+                <span className="translate-x-2 text-[11px] font-medium uppercase leading-none tracking-[0.16em] text-white/70 opacity-0 transition-[opacity,translate] duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100 motion-reduce:transition-none">
+                  смотреть медиа
+                </span>
+                <span className="relative block h-5 w-5 shrink-0 text-white/62">
+                  <svg className="absolute right-0 top-0 h-5 w-12 overflow-visible" viewBox="0 0 48 20" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path className="home-media-arrow-shaft" d="M6 10H46" vectorEffect="non-scaling-stroke" />
+                    <path d="m42 6 5 4-5 4" />
+                  </svg>
+                </span>
+              </span>
             </Link>
-          </motion.div>
+
+            {homepageCultureReports.map((report, index) => (
+              <a
+                key={report.id}
+                data-sync-group={index === 0 ? "a" : "b"}
+                href={report.url}
+                target="_blank"
+                rel="noreferrer"
+                className={`home-media-report group flex min-w-0 flex-col ${index === 1 ? "translate-y-19 xl:translate-y-25" : ""}`}
+              >
+                <div className={`relative overflow-hidden ${index === 0 ? "aspect-[1.3/1]" : "aspect-[1.45/1]"}`}>
+                  <div data-sync-image-mask>
+                    <div data-sync-image-shift>
+                      <img
+                        src={report.previewImage}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover grayscale transition-[filter] duration-500 group-hover:grayscale-0 group-focus-visible:grayscale-0"
+                      />
+                    </div>
+                  </div>
+                  <span data-sync-play className="absolute bottom-4 left-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/88 pl-0.5 text-[12px] text-neutral-900" aria-hidden="true">
+                    ▶
+                  </span>
+                </div>
+                <h3 className={`font-editorial-serif mt-4 font-normal leading-[1.18] tracking-[-0.01em] text-neutral-900 ${index === 0 ? "text-[21px] xl:text-[23px]" : "text-[19px] xl:text-[21px]"}`}>
+                  <MediaSyncText id="title">{report.title}</MediaSyncText>
+                </h3>
+                <p className="font-editorial-sans mt-3 text-[11px] font-medium uppercase leading-[1.5] tracking-[0.16em] text-neutral-600">
+                  <MediaSyncText id="meta">{report.source} · {report.date}</MediaSyncText>
+                </p>
+              </a>
+            ))}
+
+            <div data-sync-group="articles" className="flex min-h-[330px] flex-col pl-7 xl:min-h-[370px] xl:pl-9">
+              <div className="flex-1 divide-y divide-black/10">
+                {homepageMediaArticles.map((article) => (
+                  <a
+                    key={article.id}
+                    data-sync-row
+                    href={article.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="home-media-article group block py-5 first:pt-0 xl:py-6"
+                  >
+                    <p className="font-condensed-display text-[14px] font-medium leading-[1.15] tracking-[0.055em] text-neutral-800 transition-colors duration-200 group-hover:text-[#64111f] xl:text-[15px]">
+                      {article.source}
+                    </p>
+                    <p className="font-editorial-serif mt-2 line-clamp-2 text-[15px] leading-[1.2] text-neutral-700 xl:text-[16px]">
+                      {article.title}
+                    </p>
+                    <p className="font-editorial-sans mt-3 text-[11px] font-medium uppercase leading-none tracking-[0.16em] text-neutral-500">
+                      {article.date}
+                    </p>
+                  </a>
+                ))}
+              </div>
+
+              <EditorialCta to="/media" data-sync-all className="mt-6 self-start">
+                все публикации
+              </EditorialCta>
+            </div>
+          </div>
         </PageContainer>
       </section>
-      <section className="bg-white text-neutral-950 sm:hidden" aria-labelledby="mobile-festival-archive-title">
-        <PageContainer className="py-12">
-          <h2
-            id="mobile-festival-archive-title"
-            className="font-editorial-serif text-[2rem] font-normal leading-none tracking-[-0.01em]"
-          >
-            архив фестиваля
-          </h2>
+      <section className="hidden bg-white text-neutral-950 home-desktop:block" aria-labelledby="festival-year-title">
+        <PageContainer className="pb-24 pt-16 xl:pb-28 xl:pt-20 2xl:pb-32 2xl:pt-24">
+          <div ref={festivalYearRef} className="relative mx-auto max-w-[1340px] pt-10 xl:pt-12">
+            <h2 data-year-title id="festival-year-title" className="font-editorial-serif absolute left-5 -top-6 xl:-top-8 z-10 origin-left scale-x-[0.96] scale-y-[1.03] text-[clamp(56px,5.2vw,76px)] font-extralight lowercase leading-[0.88] tracking-[0.025em] text-neutral-950">
+              фестиваль<span className="sr-only"> 2026</span>
+            </h2>
 
-          <nav className="mt-8 border-t border-black/10" aria-label="Архив фестиваля">
-            {mobileArchiveCards.map((card) => (
-              <Link
-                key={card.title}
-                to={card.to}
-                className="group flex items-center justify-between gap-5 border-b border-black/10 py-5"
-              >
-                <span className="font-editorial-sans min-w-0 text-[12px] font-normal uppercase leading-none tracking-[0.14em] text-neutral-800">
-                  {card.title}
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="font-editorial-sans shrink-0 text-[17px] leading-none text-neutral-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-neutral-800"
+            <nav
+              ref={festivalFigureMotion.ref}
+              className="home-year-composition relative grid grid-cols-[repeat(4,minmax(0,1fr))_minmax(0,0.82fr)]"
+              aria-label="Разделы фестиваля 2026"
+              onMouseLeave={() => {
+                setHoveredFestivalNavIndex(null);
+                setShouldAnimateFestivalNavIndicator(false);
+              }}
+            >
+              <motion.span
+                aria-hidden="true"
+                data-year-nav-indicator
+                className="pointer-events-none absolute bottom-2 left-0 h-10 bg-black"
+                initial={false}
+                animate={{
+                  x: festivalNavIndicator.x,
+                  width: festivalNavIndicator.width,
+                  opacity: !festivalYearReady || hoveredFestivalNavIndex === null ? 0 : 1,
+                }}
+                transition={{
+                  x: { duration: shouldAnimateFestivalNavIndicator ? 0.28 : 0, ease: [0.22, 1, 0.36, 1] },
+                  width: { duration: shouldAnimateFestivalNavIndicator ? 0.28 : 0, ease: [0.22, 1, 0.36, 1] },
+                  opacity: { duration: 0.2, ease: "easeOut" },
+                }}
+              />
+              {[
+                { label: "Программа", to: "/afisha" },
+                { label: "Участники", to: "/participants" },
+                { label: "Академии", to: "/academies" },
+                { label: "Партнёры", to: "/partners" },
+                { label: "Команда", to: "/team" },
+              ].map((item, index) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onMouseEnter={(event) => activateFestivalColumn(index, event.currentTarget)}
+                  onMouseMove={(event) => activateFestivalColumn(index, event.currentTarget)}
+                  onMouseLeave={() => festivalFigureMotion.setColumnHovered(index, false)}
+                  className="home-year-column relative z-10 block min-w-0 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#64111f]"
                 >
-                  →
-                </span>
-              </Link>
-            ))}
-          </nav>
+                  {index < 4 ? (
+                    <span aria-hidden="true" className="home-year-figure pointer-events-none absolute inset-0" data-digit-index={index}>
+                      {index === 0 ? <><span data-year-graphic className="home-year-square" /><span data-year-line="diagonal" className="home-year-diagonal" /></> : null}
+                      {index === 2 ? <span data-year-line="vertical" className="home-year-hairline" /> : null}
+                      {index === 3 ? <span data-year-graphic className="home-year-square" /> : null}
+                      <span data-year-digit className="home-year-digit font-display-serif">{"2026"[index]}</span>
+                      {index === 1 || index === 2 ? (
+                        <span data-year-graphic className="year-graphic-mask">
+                          <span className="home-year-inversion">
+                            <span className="year-inversion-counter">
+                              <span data-year-digit className="home-year-digit font-display-serif">{"2026"[index]}</span>
+                            </span>
+                          </span>
+                        </span>
+                      ) : null}
+                    </span>
+                  ) : (
+                    <span aria-hidden="true" className="home-year-digit font-display-serif pointer-events-none">
+                      <span data-year-dot className="home-year-team-dot inline-block h-[44px] w-[44px] rounded-full bg-black align-baseline" />
+                    </span>
+                  )}
+                  <span data-year-nav-label style={{ "--year-nav-index": index } as CSSProperties} className={`font-editorial-sans absolute inset-x-0 bottom-2 flex h-10 items-center justify-center whitespace-nowrap text-[10px] font-medium uppercase leading-none tracking-[0.2em] transition-colors duration-200 xl:text-[12px] ${festivalYearReady && hoveredFestivalNavIndex === index ? "!text-white" : "text-neutral-900"}`}>
+                    {item.label}
+                  </span>
+                </Link>
+              ))}
+            </nav>
+          </div>
         </PageContainer>
       </section>
       <CookieNotice />
