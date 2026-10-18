@@ -1,9 +1,9 @@
-name: Build and Deploy
+name: Restore previous website version
 
 on:
   push:
     branches:
-      - main
+      - codex/restore-af60030-20261018
 
 jobs:
   build-and-deploy:
