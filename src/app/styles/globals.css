@@ -181,9 +181,10 @@ select {
   top: 10%;
   bottom: 0;
   left: 50%;
-  width: 1px;
+  width: 0.5px;
   transform: translateX(-50%);
   background: var(--rail-line);
+  opacity: 0.7;
 }
 
 .navigation-rail-art [data-emphasized="true"] {
@@ -501,8 +502,9 @@ select {
   .navigation-rail[data-home="true"] .navigation-rail-art-item::after {
     content: "";
     flex: 1 1 0;
-    width: 1px;
+    width: 0.5px;
     background: var(--rail-line);
+    opacity: 0.7;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 200ms linear;
