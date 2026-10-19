@@ -549,7 +549,7 @@ select {
     z-index: 5;
     inset-block: 0;
     right: 0;
-    width: 4rem;
+    width: 3.5rem;
     background: var(--color-dark);
     pointer-events: none;
     transform: translateX(calc(100% + 1px));

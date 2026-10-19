@@ -102,7 +102,7 @@ function DesktopNavigationRail({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
             onClick={onClose}
-            className="pointer-events-auto fixed inset-y-0 left-0 right-16 z-0 cursor-default bg-black/14"
+            className="pointer-events-auto fixed inset-y-0 left-0 right-14 z-0 cursor-default bg-black/14"
           />
         ) : null}
       </AnimatePresence>
@@ -114,7 +114,7 @@ function DesktopNavigationRail({
             animate={{ x: 0 }}
             exit={{ x: 340 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="pointer-events-auto fixed inset-y-0 right-16 z-10 flex w-[340px] items-center border-r border-black/12 !bg-white"
+            className="pointer-events-auto fixed inset-y-0 right-14 z-10 flex w-[340px] items-center border-r border-black/12 !bg-white"
             aria-label={`Подменю «${activeGroup.label}»`}
           >
             <div className="w-full px-10">
@@ -156,7 +156,7 @@ function DesktopNavigationRail({
           </motion.aside>
         ) : null}
       </AnimatePresence>
-      <nav ref={railRef} data-section-background={pathname === "/"} data-home={pathname === "/" || pathname === "/hero2" || pathname === "/hero3"} data-entrance={pathname === "/" || pathname === "/hero2" || pathname === "/hero3" ? "hidden" : undefined} className="navigation-rail pointer-events-auto fixed inset-y-0 right-0 z-20 w-16" aria-label="Основная навигация">
+      <nav ref={railRef} data-section-background={pathname === "/"} data-home={pathname === "/" || pathname === "/hero2" || pathname === "/hero3"} data-entrance={pathname === "/" || pathname === "/hero2" || pathname === "/hero3" ? "hidden" : undefined} className="navigation-rail pointer-events-auto fixed inset-y-0 right-0 z-20 w-14" aria-label="Основная навигация">
         <svg aria-hidden="true" focusable="false" className="pointer-events-none absolute h-0 w-0">
           <defs><clipPath ref={clipRef} id={clipId} clipPathUnits="userSpaceOnUse" /></defs>
         </svg>
