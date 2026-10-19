@@ -79,7 +79,7 @@ function DesktopNavigationRail({
                 </span>
               </span>
             ) : (
-              <span className="navigation-rail-label absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 whitespace-nowrap px-2 py-1">{item.label}</span>
+              <span className="navigation-rail-label">{item.label}</span>
             )}
           </div>
         );

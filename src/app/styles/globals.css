@@ -200,6 +200,17 @@ select {
   background: var(--rail-surface);
 }
 
+/* Keep label transforms in one property so production CSS optimization cannot
+   combine the home reset while leaving individual utility transforms active. */
+.navigation-rail-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+}
+
 .navigation-rail-indicator {
   mix-blend-mode: normal;
 }
@@ -482,8 +493,6 @@ select {
   .navigation-rail[data-home="true"] .navigation-rail-label {
     position: static;
     transform: none;
-    translate: none;
-    rotate: none;
     writing-mode: vertical-rl;
     padding: 0.5rem 0.25rem;
   }
