@@ -38,7 +38,7 @@
   .logo-video-hero__status { font-size: max(11px, 4.4025cqw); line-height: 1.4; white-space: normal; }
   .logo-video-hero__year { right: -31%; font-size: max(11px, 4.4025cqw); line-height: 1.4; }
   .logo-video-hero__emblem { top: 42%; left: 39%; width: 66%; }
-  .logo-video-hero__title { top: calc(66% - 20px); left: 30%; width: 58%; font-size: clamp(32px, 7.9vw, 56px); }
+  .logo-video-hero__title { top: calc(66% - 20px); left: 50%; width: 58%; transform: translate(-50%, -50%); font-size: clamp(32px, 7.9vw, 56px); }
   .logo-video-hero__metadata { bottom: max(6%, env(safe-area-inset-bottom)); right: 0; left: 0; padding-inline: 20px; transform: none; font-size: max(11px, 2.90565vw); gap: 0.35em 1em; letter-spacing: 0.1em; }
 }
 @media (max-width: 23.75rem) and (orientation: portrait) {

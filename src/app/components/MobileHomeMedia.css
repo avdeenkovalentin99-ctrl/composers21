@@ -134,7 +134,10 @@
   line-height: 1.25;
 }
 
-.mobile-home-media__all {
+.editorial-cta.mobile-home-media__all {
+  display: grid;
+  font-size: 11px;
+  margin-left: auto;
   margin-top: 28px;
 }
 

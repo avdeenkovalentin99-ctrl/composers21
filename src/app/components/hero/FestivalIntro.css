@@ -13,6 +13,10 @@
   visibility: hidden;
   transition: opacity 600ms ease-out var(--intro-delay), transform 600ms ease-out var(--intro-delay), visibility 0s linear var(--intro-delay);
 }
+.editorial-cta.festival-intro-cta { font-size: 11px; }
+@media (min-width: 64rem) and (orientation: landscape), (min-width: 80rem) {
+  .editorial-cta.festival-intro-cta { font-size: 14px; }
+}
 .festival-intro-content[data-visible="true"] .festival-intro-reveal { opacity: 1; transform: translate3d(0, 0, 0); }
 .festival-intro-content[data-visible="true"] .festival-intro-cta { visibility: visible; }
 @media (prefers-reduced-motion: reduce) {

@@ -66,7 +66,7 @@ export function LogoVideoHero({ variant = "graphite" }: { variant?: "graphite" |
   const onSecondReady = useCallback(() => setReadyFilms((current) => current | 2), []);
   return (
     <section id="home-old-hero" className={`logo-video-hero${variant === "paper" ? " logo-video-hero--paper" : ""}`} aria-labelledby="logo-video-hero-title">
-      <div className="logo-video-hero__emblem" data-video-ready={readyFilms === 3}>
+      <div className="logo-video-hero__emblem" data-mobile-menu-boundary data-video-ready={readyFilms === 3}>
         <div className="logo-video-hero__heading">
           <p className="logo-video-hero__status">Фестиваль состоялся</p>
         </div>
@@ -86,7 +86,7 @@ export function LogoVideoHero({ variant = "graphite" }: { variant?: "graphite" |
           <circle cx="237" cy="157" r="12.5" fill="#a50b35" />
         </svg>
       </div>
-      <h1 id="logo-video-hero-title" className="logo-video-hero__title">композиторы<span>xxi века</span></h1>
+      <h1 id="logo-video-hero-title" className="logo-video-hero__title" aria-label="Композиторы XXI века">композиторы<span>xxı века</span></h1>
       <div className="logo-video-hero__metadata"><p>10–31 мая</p><p>Москва · Галерея НИКО</p><p>15 концертов</p></div>
       <span data-hero-rail-trigger className="logo-video-hero__rail-trigger" aria-hidden="true" />
     </section>

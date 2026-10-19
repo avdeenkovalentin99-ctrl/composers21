@@ -1,4 +1,4 @@
-// One passive scroll listener for the desktop rail.
+// One passive scroll listener shared by desktop and mobile navigation.
 // Measure every subscriber before committing any DOM writes.
 type ViewportReader = () => void | (() => void);
 

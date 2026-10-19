@@ -34,7 +34,7 @@ export function FestivalIntro() {
             </p>
             <EditorialCta
               to="/festival"
-              className="festival-intro-reveal festival-intro-cta mt-3 home-desktop:mt-auto self-start"
+              className="festival-intro-reveal festival-intro-cta mt-3 home-desktop:mt-auto self-end home-desktop:self-start"
             >
               О фестивале
             </EditorialCta>

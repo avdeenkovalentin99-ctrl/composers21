@@ -4,11 +4,14 @@ import { navigationItems } from "../data/navigation";
 import type { NavGroup } from "../data/types";
 import "./MobileNavigation.css";
 import { homeDesktopQuery } from "./homeViewport";
+import { useMobileMenuEntrance } from "./useMobileMenuEntrance";
 
 export function MobileNavigation() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const hasPassedLogo = useMobileMenuEntrance(location.pathname);
+  const isTriggerVisible = isOpen || hasPassedLogo;
   const rootRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
@@ -55,19 +58,23 @@ export function MobileNavigation() {
     const root = rootRef.current;
     const trigger = groupTriggerRef.current;
     const primary = trigger?.closest(".mobile-navigation__primary");
-    if (!root || !trigger || !primary) return;
+    const secondary = secondaryRef.current;
+    const submenu = secondary?.querySelector("nav");
+    if (!root || !trigger || !primary || !secondary || !submenu) return;
 
     const alignSubmenu = () => {
       const triggerRect = trigger.getBoundingClientRect();
       const firstRowHeight = firstSubLinkRef.current?.getBoundingClientRect().height ?? triggerRect.height;
       const top = triggerRect.top - root.getBoundingClientRect().top + (triggerRect.height - firstRowHeight) / 2;
-      root.style.setProperty("--mobile-submenu-top", `${Math.max(0, top)}px`);
+      const bottomPadding = parseFloat(getComputedStyle(secondary).paddingBottom);
+      const maxTop = Math.max(0, root.clientHeight - submenu.scrollHeight - bottomPadding);
+      root.style.setProperty("--mobile-submenu-top", `${Math.min(Math.max(0, top), maxTop)}px`);
     };
     alignSubmenu();
-    if (secondaryRef.current) secondaryRef.current.scrollTop = 0;
     const observer = new ResizeObserver(alignSubmenu);
     observer.observe(root);
     observer.observe(trigger);
+    observer.observe(submenu);
     if (firstSubLinkRef.current) observer.observe(firstSubLinkRef.current);
     primary.addEventListener("scroll", alignSubmenu, { passive: true });
     return () => {
@@ -83,7 +90,7 @@ export function MobileNavigation() {
   }
 
   return (
-    <div ref={rootRef} className={`mobile-navigation ${location.pathname === "/" ? "home-desktop:hidden" : "lg:hidden"}`} data-open={isOpen} data-submenu-open={Boolean(activeGroup)}
+    <div ref={rootRef} className={`mobile-navigation ${location.pathname === "/" ? "home-desktop:hidden" : "lg:hidden"}`} data-open={isOpen} data-submenu-open={Boolean(activeGroup)} data-trigger-visible={isTriggerVisible}
       role={isOpen ? "dialog" : undefined} aria-modal={isOpen ? true : undefined}
       aria-label={isOpen ? "Мобильная навигация" : undefined}
       onKeyDown={(event) => {
@@ -129,6 +136,7 @@ export function MobileNavigation() {
         </nav>
       </div>
       <button ref={triggerRef} className="mobile-navigation__trigger" type="button"
+        inert={!isTriggerVisible} aria-hidden={!isTriggerVisible}
         aria-label={isOpen ? "Закрыть навигацию" : "Открыть меню"} aria-expanded={isOpen} aria-controls="mobile-primary-menu"
         onClick={() => { if (isOpen) closeMenu(); else setIsOpen(true); }}>
         <span className="mobile-navigation__plaque" aria-hidden="true"><span /><span /></span>

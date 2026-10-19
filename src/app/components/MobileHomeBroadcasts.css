@@ -137,7 +137,9 @@
   color: #a3a3a3;
 }
 
-.mobile-home-broadcasts__all {
+.editorial-cta.mobile-home-broadcasts__all {
+  display: grid;
+  font-size: 11px;
   margin-left: auto;
   margin-top: clamp(28px, calc(7 * var(--home-mobile-unit, 1vw)), 52px);
 }

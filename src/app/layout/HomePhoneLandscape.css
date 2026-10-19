@@ -31,8 +31,9 @@
 
   .site-shell--home .logo-video-hero__title {
     top: calc(66% - 20px);
-    left: 30%;
+    left: 50%;
     width: 58%;
+    transform: translate(-50%, -50%);
     font-size: clamp(32px, calc(7.9 * var(--home-mobile-unit)), 56px);
   }
 
