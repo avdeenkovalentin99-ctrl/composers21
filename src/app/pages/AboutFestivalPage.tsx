@@ -2,9 +2,8 @@ import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { motion, useMotionTemplate, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 import { PageContainer } from "../layout/PageContainer";
 import nikoGalleryPianoDetailImage from "../../../tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png";
-
-const nikoGalleryHeroPanoramaImage = "https://nikoartgallery.com/upload/iblock/3e8/3e80a65d6dda9c625e4615380e61724b.png";
-const nikoGalleryHeroSecondImage = "https://nikoartgallery.com/upload/iblock/0da/0dabca39ed4a742c2857d6c53e8b85c6.jpg";
+import nikoGalleryHeroPanoramaImage from "../../../tmp_data/niko_refs/ef1e9f3848ad26bbb2044d6aa988f5dd.png";
+import nikoGalleryHeroSecondImage from "../../../tmp_data/niko_refs/15ddc20161b9c42c54840f6fcfe544f5.png";
 
 const festivalIntroLead =
   "Этот проект посвящён музыке современников — произведениям, ставшим значимыми событиями нашего времени.";
