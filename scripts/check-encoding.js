@@ -13,7 +13,6 @@ const ignoredDirectories = new Set([
   "build",
   ".tmp-build",
   ".tmp-audit",
-  "tmp_data",
   "tmp_scrape",
   "logos_to_send",
 ]);
@@ -34,38 +33,44 @@ const textExtensions = new Set([
   ".yaml",
   ".xml",
   ".svg",
-  ".env",
   ".ini",
   ".toml",
 ]);
 
 const suspiciousPatterns = [
-  { name: "mojibake-cp1251", regex: /\u0420[\u0452\u0453\u0454\u0455\u0456\u0457\u0409\u040A\u040B\u040F\u0451\u2116\u00BB\u00AB\u00B0\u00B1\u00B5\u00B7]/u },
-  { name: "mojibake-cp1251", regex: /\u0421[\u0452\u0453\u0454\u0455\u0456\u0457\u0409\u040A\u040B\u040F\u0451\u2116\u00BB\u00AB\u00B0\u00B1\u00B5\u00B7]/u },
-  { name: "mojibake-latin1", regex: /\u00D0./u },
-  { name: "mojibake-latin1", regex: /\u00D1./u },
-  { name: "mojibake-latin1", regex: /\u00C3./u },
+  { name: "mojibake-cp1251", regex: /(?:[\u0420\u0421][\u0080-\u00bf\u0400-\u040f\u0450-\u045f]){2,}/u },
+  { name: "mojibake-latin1", regex: /[\u00c2\u00c3\u00d0\u00d1][\u0080-\u00bf]/u },
+  { name: "broken-punctuation-cp1251", regex: /\u0432\u0402[\u2010-\u203f\u00a0-\u00ff]/u },
+  { name: "broken-punctuation-latin1", regex: /\u00e2[\u0080-\u00bf\u20ac][\u0080-\u00bf\u2122\u0153]/u },
   { name: "replacement-char", regex: /\uFFFD/u },
+  { name: "control-characters", regex: /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/u },
 ];
+
+// Only these Markdown files feed build:bios. Raw scraped JSON/HTML are
+// historical evidence, not build inputs; do not rewrite or validate those.
+const biographySources = new Set(["bios_raw.md", "composers_bios.md", "ensembles_raw.md"]);
 
 function isTextFile(fileName) {
   const ext = path.extname(fileName).toLowerCase();
   return textExtensions.has(ext);
 }
 
-async function walk(directory, collected = []) {
+async function walk(directory, root, collected = []) {
   const entries = await readdir(directory, { withFileTypes: true });
 
   for (const entry of entries) {
     const fullPath = path.join(directory, entry.name);
 
     if (entry.isDirectory()) {
-      if (!ignoredDirectories.has(entry.name)) {
-        await walk(fullPath, collected);
+      if (!ignoredDirectories.has(entry.name) && !entry.name.startsWith(".tmp")) {
+        await walk(fullPath, root, collected);
       }
       continue;
     }
 
+    const relative = path.relative(root, fullPath).split(path.sep).join("/");
+    if (relative.startsWith("tmp_data/") && !biographySources.has(relative.slice("tmp_data/".length))) continue;
+    if (entry.name === ".env" || entry.name.startsWith(".env.")) continue;
     if (entry.isFile() && isTextFile(entry.name)) {
       collected.push(fullPath);
     }
@@ -74,32 +79,39 @@ async function walk(directory, collected = []) {
   return collected;
 }
 
-function detectEncodingIssues(text) {
+export function detectEncodingIssues(bytes) {
+  let text;
+  try {
+    text = new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+  } catch {
+    return ["invalid-utf8"];
+  }
   return suspiciousPatterns
     .filter(({ regex }) => regex.test(text))
     .map(({ name }) => name);
 }
 
-async function main() {
-  const files = await walk(projectRoot);
+export async function checkEncoding(root = projectRoot) {
+  const files = await walk(root, root);
   const brokenFiles = [];
-  const selfPath = path.join(projectRoot, "scripts", "check-encoding.js");
 
   for (const filePath of files) {
-    if (filePath === selfPath) {
-      continue;
-    }
-
-    const content = await readFile(filePath, "utf8");
+    const content = await readFile(filePath);
     const issues = detectEncodingIssues(content);
 
     if (issues.length > 0) {
       brokenFiles.push({
-        path: path.relative(projectRoot, filePath),
+        path: path.relative(root, filePath),
         issues,
       });
     }
   }
+
+  return { checkedFiles: files.length, brokenFiles };
+}
+
+async function main() {
+  const { checkedFiles, brokenFiles } = await checkEncoding();
 
   if (brokenFiles.length > 0) {
     console.error("Encoding issues found in files:");
@@ -110,11 +122,13 @@ async function main() {
     return;
   }
 
-  console.log("Encoding check passed.");
+  console.log(`Encoding check passed (${checkedFiles} text files, including biography sources).`);
 }
 
-main().catch((error) => {
-  console.error("Encoding check failed with error:");
-  console.error(error);
-  process.exitCode = 1;
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  main().catch((error) => {
+    console.error("Encoding check failed with error:");
+    console.error(error);
+    process.exitCode = 1;
+  });
+}

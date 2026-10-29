@@ -1,0 +1,19 @@
+{
+  "source": "Selected fields from tmp_data/composers_raw.json; popup markup in the tests follows tmp_scrape/tilda-feed.js, not a live fetch.",
+  "posts": [
+    {
+      "uid": "x9v3yy1up1",
+      "title": "Ольга Иванова",
+      "descr": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+      "url": "https://21centcomposers.ru/persons/x9v3yy1up1-olga-ivanova",
+      "text": ""
+    },
+    {
+      "uid": "02h5zxc7r1",
+      "title": "Леонид Десятников",
+      "descr": "Советский российский композитор. Лауреат Государственной премии РФ, Заслуженный деятель искусств РФ.",
+      "url": "https://21centcomposers.ru/persons/02h5zxc7r1-leonid-desyatnikov",
+      "text": ""
+    }
+  ]
+}

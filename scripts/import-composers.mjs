@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { extractTildaBiography } from "./tilda-biography.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -376,129 +377,56 @@ async function loadAllFeedPosts(page) {
     console.log(`Clicked "Показать ещё" ${loadStep} time(s): ${currentCount} -> ${nextCount}`);
   }
 
-  const posts = await page.evaluate((recid) => {
+  const rawPosts = await page.evaluate((recid) => {
     const container = document.querySelector(`#rec${recid} .js-feed-container`);
     const store = window.tFeedPosts?.[recid] ?? {};
     const order = Array.from(container?.querySelectorAll(".js-feed-post") ?? [])
       .map((element) => element.getAttribute("data-post-uid"))
       .filter(Boolean);
 
-    function cleanupParagraphs(html, fallbackText) {
-      const source = html || fallbackText || "";
-      const root = document.createElement("div");
-      root.innerHTML = source;
-
-      for (const br of root.querySelectorAll("br")) {
-        br.replaceWith("\n");
-      }
-
-      const text = (root.innerText || root.textContent || source)
-        .replace(/\u00a0/g, " ")
-        .replace(/[ \t]+\n/g, "\n")
-        .replace(/\n{3,}/g, "\n\n")
-        .trim();
-
-      return text
-        .split(/\n{2,}/)
-        .map((paragraph) => paragraph.replace(/\s*\n\s*/g, " ").replace(/[ \t]{2,}/g, " ").trim())
-        .filter(Boolean);
-    }
-
     return order
       .map((uid) => store[uid])
       .filter((post) => post && typeof post === "object")
-      .map((post) => {
-        const biography = cleanupParagraphs(post.text, post.descr);
-        const title = (post.title || "").replace(/\s+/g, " ").trim();
-        const description = cleanupParagraphs("", post.descr)[0] ?? biography[0] ?? "";
-
-        return {
+      .map((post) => ({
           uid: post.uid,
-          name: title,
-          description,
-          biography,
+          name: (post.title || "").replace(/\s+/g, " ").trim(),
+          text: post.text || "",
+          descr: post.descr || "",
           image: post.image || post.thumb || "",
           link: post.directlink || post.url || "",
-        };
-      });
+      }));
   }, FEED_RECID);
+
+  const posts = await Promise.all(rawPosts.map(async ({ text, descr, ...post }) => {
+    const [fullText, descriptionText] = await Promise.all([
+      page.evaluate(extractTildaBiography, { html: text }),
+      page.evaluate(extractTildaBiography, { html: descr }),
+    ]);
+    return {
+      ...post,
+      description: descriptionText[0] ?? fullText[0] ?? "",
+      biography: fullText.length ? fullText : descriptionText,
+      hasFullText: fullText.length > 0,
+    };
+  }));
 
   console.log(`Loaded ${posts.length} composers from list`);
   return posts;
 }
 
-async function fetchComposerBiography(page, link, fallbackDescription) {
-  const candidates = createLegacyDetailUrlCandidates(link);
+export async function fetchComposerBiography(page, post) {
+  // The feed's complete text already belongs to this uid. Do not replace it
+  // with a rendered summary, a different post, or an error page.
+  if (post.hasFullText) return post.biography;
+  const candidates = createLegacyDetailUrlCandidates(post.link);
 
   for (const candidate of candidates) {
     try {
-      await page.goto(candidate, { waitUntil: "domcontentloaded", timeout: 60000 });
+      const response = await page.goto(candidate, { waitUntil: "domcontentloaded", timeout: 60000 });
+      if (response && !response.ok()) continue;
       await page.waitForLoadState("networkidle", { timeout: 60000 }).catch(() => {});
 
-      const result = await page.evaluate((description) => {
-        const normalize = (text) =>
-          String(text ?? "")
-            .replace(/\u00a0/g, " ")
-            .replace(/[ \t]+\n/g, "\n")
-            .replace(/\n{3,}/g, "\n\n")
-            .trim();
-
-        const selectors = [
-          ".t-feed__post-popup",
-          ".t-records",
-          "main",
-          "#allrecords",
-          "body",
-        ];
-
-        function collectParagraphs(root) {
-          const candidates = Array.from(
-            root.querySelectorAll("p, li, blockquote, .t-text, .t-descr, .t-title, .t-name, .t-card__descr, .js-feed-post")
-          );
-
-          const seen = new Set();
-          const paragraphs = [];
-
-          for (const node of candidates) {
-            const text = normalize(node.innerText || node.textContent || "");
-
-            if (!text || text.length < 70) {
-              continue;
-            }
-
-            if (text === description || text.startsWith(description)) {
-              continue;
-            }
-
-            if (/^(Главная|Афиша|Композиторы|Исполнители|Партнёры|Контакты|Подписаться)/i.test(text)) {
-              continue;
-            }
-
-            if (!seen.has(text)) {
-              seen.add(text);
-              paragraphs.push(text);
-            }
-          }
-
-          return paragraphs;
-        }
-
-        for (const selector of selectors) {
-          const root = document.querySelector(selector);
-
-          if (!root) {
-            continue;
-          }
-
-          const paragraphs = collectParagraphs(root);
-
-          if (paragraphs.length > 0) {
-            return paragraphs;
-          }
-        }
-
-        return [];
-      }, fallbackDescription);
+      const result = await page.evaluate(extractTildaBiography, { uid: post.uid, name: post.name });
 
       if (result.length > 0) {
         return result;
@@ -508,7 +436,8 @@ async function fetchComposerBiography(page, link, fallbackDescription) {
     }
   }
 
-  return [];
+  console.warn(`No identified full biography for "${post.name}" (${post.uid}); keeping this feed post's own text/description.`);
+  return post.biography;
 }
 
 async function main() {
@@ -544,11 +473,7 @@ async function main() {
         const slug = resolved.slug;
 
         if (link) {
-          const detailedBiography = await fetchComposerBiography(detailPage, link, description);
-
-          if (detailedBiography.length > 0) {
-            biography = detailedBiography;
-          }
+          biography = await fetchComposerBiography(detailPage, { ...item, link, biography });
         }
 
         composers.push({
@@ -620,7 +545,9 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(error instanceof Error ? error.message : error);
-  process.exitCode = 1;
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  main().catch((error) => {
+    console.error(error instanceof Error ? error.message : error);
+    process.exitCode = 1;
+  });
+}
