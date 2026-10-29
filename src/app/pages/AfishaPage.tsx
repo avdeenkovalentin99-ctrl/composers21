@@ -1,9 +1,11 @@
+import { ResponsiveImage } from "../components/ResponsiveImage";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useNavigationType, useSearchParams } from "react-router-dom";
 import { concertProgrammes } from "../data/concertProgrammes";
 import { PageContainer } from "../layout/PageContainer";
+import { hasSavedScrollPosition } from "../layout/RouteScrollRestoration";
 import { resolvePublicAssetPath } from "../utils/assets";
 import { sendMetrikaGoal } from "../utils/yandexMetrika";
 
@@ -259,7 +261,7 @@ function EventAccordion({
 
                   <div className="order-first xl:order-last xl:justify-self-end xl:pt-2">
                     {isOpen ? (
-                      <img
+                      <ResponsiveImage
                         src={resolvePublicAssetPath(event.image)}
                         alt=""
                         aria-hidden="true"
@@ -284,17 +286,20 @@ function EventAccordion({
 
 export function AfishaPage() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
+  const navigationType = useNavigationType();
+  const restoresHistoryPosition = useRef(navigationType === "POP" && hasSavedScrollPosition(location.key)).current;
   const [openEventKeys, setOpenEventKeys] = useState<string[]>([]);
   const eventRefs = useRef<Record<string, HTMLElement | null>>({});
   const initialSyncDoneRef = useRef(false);
   const lastTrackedConcertGoalRef = useRef<string | null>(null);
   const initialConcertQuery = searchParams.get("concert");
   const initialDeepLinkedEventKeyRef = useRef<string | null>(
-    initialConcertQuery && Object.prototype.hasOwnProperty.call(concertIdByQueryKey, initialConcertQuery)
+    !restoresHistoryPosition && initialConcertQuery && Object.prototype.hasOwnProperty.call(concertIdByQueryKey, initialConcertQuery)
       ? concertIdByQueryKey[initialConcertQuery as keyof typeof concertIdByQueryKey]
       : null,
   );
-  const skipNextAutoScrollRef = useRef(Boolean(initialDeepLinkedEventKeyRef.current));
+  const skipNextAutoScrollRef = useRef(restoresHistoryPosition || Boolean(initialDeepLinkedEventKeyRef.current));
   const initialPositionReadyRef = useRef(!initialDeepLinkedEventKeyRef.current);
   const [isInitialPositionReady, setIsInitialPositionReady] = useState(initialPositionReadyRef.current);
 

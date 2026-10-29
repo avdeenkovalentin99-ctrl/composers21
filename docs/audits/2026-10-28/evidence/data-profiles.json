@@ -1,0 +1,1905 @@
+{
+  "counts": {
+    "composers": 43,
+    "soloists": 36,
+    "ensembles": 7,
+    "totalProfiles": 86,
+    "performers": 43,
+    "biographyRecords": 82
+  },
+  "profiles": [
+    {
+      "category": "composers",
+      "name": "Леонид Десятников",
+      "slug": "leonid-desyatnikov",
+      "url": "/participants/composers/leonid-desyatnikov",
+      "image": "/src/assets/participants/DesyatnikovL.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/DesyatnikovL.jpg"
+      },
+      "biographyParagraphs": 15,
+      "biographyChars": 1788,
+      "hasDetails": true,
+      "descriptionChars": 100,
+      "biographyStart": "16 октября 1955 года, Харьков.",
+      "sourceLink": "https://21centcomposers.ru/persons/02h5zxc7r1-leonid-desyatnikov"
+    },
+    {
+      "category": "composers",
+      "name": "Александр Чайковский",
+      "slug": "aleksandr-chaykovsky",
+      "url": "/participants/composers/aleksandr-chaykovsky",
+      "image": "/src/assets/participants/ChaikovskiiA.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/ChaikovskiiA.jpg"
+      },
+      "biographyParagraphs": 26,
+      "biographyChars": 5722,
+      "hasDetails": true,
+      "descriptionChars": 213,
+      "biographyStart": "Александр Чайковский родился в 1946 году в Москве в семье музыкантов. Его отец — выпускник Московской консерватории, в 1960–70‑х годах — директор Московского академического музыкал",
+      "sourceLink": "https://21centcomposers.ru/persons/dhfi8dcj81-aleksandr-chaikovskii"
+    },
+    {
+      "category": "composers",
+      "name": "Сергей Ахунов",
+      "slug": "sergey-akhunov",
+      "url": "/participants/composers/sergey-akhunov",
+      "image": "/src/assets/participants/AkhunovS.jpeg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/AkhunovS.jpeg"
+      },
+      "biographyParagraphs": 12,
+      "biographyChars": 1656,
+      "hasDetails": true,
+      "descriptionChars": 116,
+      "biographyStart": "1967 год.",
+      "sourceLink": "https://21centcomposers.ru/persons/sergey_akhunov"
+    },
+    {
+      "category": "composers",
+      "name": "Павел Карманов",
+      "slug": "pavel-karmanov",
+      "url": "/participants/composers/pavel-karmanov",
+      "image": "/src/assets/participants/Karmanov.webp",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/Karmanov.webp"
+      },
+      "biographyParagraphs": 31,
+      "biographyChars": 4447,
+      "hasDetails": true,
+      "descriptionChars": 218,
+      "biographyStart": "1970–2024",
+      "sourceLink": "https://21centcomposers.ru/persons/bre22mnrn1-pavel-karmanov"
+    },
+    {
+      "category": "composers",
+      "name": "Владимир Мартынов",
+      "slug": "vladimir-martynov",
+      "url": "/participants/composers/vladimir-martynov",
+      "image": "/src/assets/participants/MartynovV.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/MartynovV.jpg"
+      },
+      "biographyParagraphs": 18,
+      "biographyChars": 2577,
+      "hasDetails": true,
+      "descriptionChars": 58,
+      "biographyStart": "Владимир Мартынов родился в 1946 году в Москве. Окончил Московскую государственную консерваторию имени П. И. Чайковского:",
+      "sourceLink": "https://21centcomposers.ru/persons/2xn0ua3jt1-vladimir-martinov"
+    },
+    {
+      "category": "composers",
+      "name": "Павел Турсунов",
+      "slug": "pavel-tursunov",
+      "url": "/participants/composers/pavel-tursunov",
+      "image": "/src/assets/participants/TursunovP.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/TursunovP.jpg"
+      },
+      "biographyParagraphs": 20,
+      "biographyChars": 2424,
+      "hasDetails": true,
+      "descriptionChars": 146,
+      "biographyStart": "Турсунов Павел Зикриёвич родился в городе Сталинабад (ныне Душанбе), Таджикистан.",
+      "sourceLink": "https://21centcomposers.ru/persons/d7ynx78du1-pavel-tursunov"
+    },
+    {
+      "category": "composers",
+      "name": "Георг Пелецис",
+      "slug": "georg-peletsis",
+      "url": "/participants/composers/georg-peletsis",
+      "image": "/src/assets/participants/PeletsisG.png",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/PeletsisG.png"
+      },
+      "biographyParagraphs": 9,
+      "biographyChars": 1240,
+      "hasDetails": true,
+      "descriptionChars": 60,
+      "biographyStart": "1947 год, Латвия.",
+      "sourceLink": "https://21centcomposers.ru/persons/georg_pelecis"
+    },
+    {
+      "category": "composers",
+      "name": "Эрик Эшенвалдс",
+      "slug": "erik-eshenvalds",
+      "url": "/participants/composers/erik-eshenvalds",
+      "image": "/src/assets/participants/EshenvaldsE.png",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/EshenvaldsE.png"
+      },
+      "biographyParagraphs": 11,
+      "biographyChars": 3229,
+      "hasDetails": true,
+      "descriptionChars": 169,
+      "biographyStart": "Эрикс Эшенвалдс — один из самых востребованных композиторов, работающих сегодня в жанре хоровой музыки. Его «ящик заказов» всегда полон, а его музыка звучит на всех континентах зем",
+      "sourceLink": "https://21centcomposers.ru/persons/anbe3zxp01-eriks-eshenvalds"
+    },
+    {
+      "category": "composers",
+      "name": "Эдисон Денисов",
+      "slug": "edison-denisov",
+      "url": "/participants/composers/edison-denisov",
+      "image": "/src/assets/participants/EdisonD.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/EdisonD.jpg"
+      },
+      "biographyParagraphs": 10,
+      "biographyChars": 1721,
+      "hasDetails": true,
+      "descriptionChars": 49,
+      "biographyStart": "Эдисон Денисов (1929–1996) — один из ключевых композиторов советского и постсоветского авангарда, фигура, во многом определившая развитие современной академической музыки в России ",
+      "sourceLink": "https://21centcomposers.ru/composers"
+    },
+    {
+      "category": "composers",
+      "name": "Янис Ксенаксис",
+      "slug": "yanis-ksenakis",
+      "url": "/participants/composers/yanis-ksenakis",
+      "image": "/src/assets/participants/ksenaksisYa.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/ksenaksisYa.jpg"
+      },
+      "biographyParagraphs": 15,
+      "biographyChars": 3101,
+      "hasDetails": true,
+      "descriptionChars": 49,
+      "biographyStart": "Янис Ксенакис (1922–2001) — греко-французский композитор, архитектор и инженер, один из крупнейших новаторов музыкального искусства XX века, радикально изменивший представление о п",
+      "sourceLink": "https://21centcomposers.ru/composers"
+    },
+    {
+      "category": "composers",
+      "name": "Алексей Ретинский",
+      "slug": "aleksei-retinskii",
+      "url": "/participants/composers/aleksei-retinskii",
+      "image": "/src/assets/participants/RetinskiiA.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/RetinskiiA.jpg"
+      },
+      "biographyParagraphs": 15,
+      "biographyChars": 2679,
+      "hasDetails": true,
+      "descriptionChars": 124,
+      "biographyStart": "14 ноября 1986 года, Симферополь.",
+      "sourceLink": "https://21centcomposers.ru/persons/ffhxv9g7y1-aleksei-retinskii"
+    },
+    {
+      "category": "composers",
+      "name": "Анастасия Дружинина",
+      "slug": "anastasiya-druzhinina",
+      "url": "/participants/composers/anastasiya-druzhinina",
+      "image": "/src/assets/participants/DruzhininaA.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/DruzhininaA.jpg"
+      },
+      "biographyParagraphs": 15,
+      "biographyChars": 2130,
+      "hasDetails": true,
+      "descriptionChars": 123,
+      "biographyStart": "Родилась в г. Улан‑Удэ. Окончила Улан‑Удэнский музыкальный колледж и Московскую государственную консерваторию имени П. И. Чайковского (класс профессора А. В. Чайковского).",
+      "sourceLink": "https://21centcomposers.ru/persons/18a986gh21-anastasiya-druzhinina"
+    },
+    {
+      "category": "composers",
+      "name": "Андреас Мустукис",
+      "slug": "andreas-mustukis",
+      "url": "/participants/composers/andreas-mustukis",
+      "image": "/src/assets/participants/MustukisA.png",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/MustukisA.png"
+      },
+      "biographyParagraphs": 6,
+      "biographyChars": 953,
+      "hasDetails": true,
+      "descriptionChars": 125,
+      "biographyStart": "Андреас Мустукис — выпускник Санкт‑Петербургской государственной консерватории имени Н. А. Римского‑Корсакова (класс Б. Тищенко).",
+      "sourceLink": "https://21centcomposers.ru/persons/6961my8na1-andreas-mustukis"
+    },
+    {
+      "category": "composers",
+      "name": "Андрей Зеленский",
+      "slug": "andrei-zelenskii",
+      "url": "/participants/composers/andrei-zelenskii",
+      "image": "/src/assets/participants/ZelenskiiA.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/ZelenskiiA.jpg"
+      },
+      "biographyParagraphs": 16,
+      "biographyChars": 2211,
+      "hasDetails": true,
+      "descriptionChars": 62,
+      "biographyStart": "Зеленский Андрей Валерьевич родился в Благовещенске 24.01.1963 г.",
+      "sourceLink": "https://21centcomposers.ru/persons/27rupn4jm1-andrei-zelenskii"
+    },
+    {
+      "category": "composers",
+      "name": "Андрей Зубец",
+      "slug": "andrei-zubets",
+      "url": "/participants/composers/andrei-zubets",
+      "image": "/src/assets/participants/ZubetsA.png",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/ZubetsA.png"
+      },
+      "biographyParagraphs": 17,
+      "biographyChars": 3090,
+      "hasDetails": true,
+      "descriptionChars": 50,
+      "biographyStart": "Родился 17 июля 1990 года в Москве.",
+      "sourceLink": "https://21centcomposers.ru/persons/vkga9m5l61-andrei-zubets"
+    },
+    {
+      "category": "composers",
+      "name": "Андрей Комиссаров",
+      "slug": "andrei-komissarov",
+      "url": "/participants/composers/andrei-komissarov",
+      "image": "/src/assets/participants/KomissarovA.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/KomissarovA.jpg"
+      },
+      "biographyParagraphs": 16,
+      "biographyChars": 1452,
+      "hasDetails": true,
+      "descriptionChars": 98,
+      "biographyStart": "Родился в Москве в 1981 году.",
+      "sourceLink": "https://21centcomposers.ru/persons/dxo66u4g11-andrei-komissarov"
+    },
+    {
+      "category": "composers",
+      "name": "Арво Пярт",
+      "slug": "arvo-pyart",
+      "url": "/participants/composers/arvo-pyart",
+      "image": "/src/assets/participants/PyartA.png",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/PyartA.png"
+      },
+      "biographyParagraphs": 14,
+      "biographyChars": 2256,
+      "hasDetails": true,
+      "descriptionChars": 25,
+      "biographyStart": "11 сентября 1935 года, Пайде (Эстония).",
+      "sourceLink": "https://21centcomposers.ru/persons/pmmsurlkn1-arvo-pyart"
+    },
+    {
+      "category": "composers",
+      "name": "Артем Макоян",
+      "slug": "artem-makoyan",
+      "url": "/participants/composers/artem-makoyan",
+      "image": "/src/assets/participants/MakoyanA.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/MakoyanA.jpg"
+      },
+      "biographyParagraphs": 5,
+      "biographyChars": 414,
+      "hasDetails": true,
+      "descriptionChars": 46,
+      "biographyStart": "Артём Макоян — музыкант, пианист‑импровизатор.",
+      "sourceLink": "https://21centcomposers.ru/persons/fm4zysben1-artem-makoyan"
+    },
+    {
+      "category": "composers",
+      "name": "Владимир Волков",
+      "slug": "vladimir-volkov",
+      "url": "/participants/composers/vladimir-volkov",
+      "image": "/src/assets/participants/volkovv.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/volkovv.jpg"
+      },
+      "biographyParagraphs": 6,
+      "biographyChars": 1453,
+      "hasDetails": true,
+      "descriptionChars": 34,
+      "biographyStart": "Легендарный питерский музыкант, контрабасист, композитор и музыкальный продюсер.",
+      "sourceLink": "https://21centcomposers.ru/persons/6v098tlt11-vladimir-volkov"
+    },
+    {
+      "category": "composers",
+      "name": "Владимир Кобекин",
+      "slug": "vladimir-kobekin",
+      "url": "/participants/composers/vladimir-kobekin",
+      "image": "/src/assets/participants/KobekinV.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/KobekinV.jpg"
+      },
+      "biographyParagraphs": 37,
+      "biographyChars": 6255,
+      "hasDetails": true,
+      "descriptionChars": 210,
+      "biographyStart": "Кобекин Владимир Александрович родился 22 июля 1947 года в г. Березники Пермской области.",
+      "sourceLink": "https://21centcomposers.ru/persons/m15e8egtz1-vladimir-kobekin"
+    },
+    {
+      "category": "composers",
+      "name": "Владимир Радченков",
+      "slug": "vladimir-radchenkov",
+      "url": "/participants/composers/vladimir-radchenkov",
+      "image": "/src/assets/participants/RadchenkovV.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/RadchenkovV.jpg"
+      },
+      "biographyParagraphs": 35,
+      "biographyChars": 6061,
+      "hasDetails": true,
+      "descriptionChars": 23,
+      "biographyStart": "Радченков Владимир Михайлович — клавесинист, композитор.",
+      "sourceLink": "https://21centcomposers.ru/persons/1o1b8i8f71-vladimir-radchenkov"
+    },
+    {
+      "category": "composers",
+      "name": "Гийом Конессон",
+      "slug": "giiom-konesson",
+      "url": "/participants/composers/giiom-konesson",
+      "image": "/src/assets/participants/KonessonG.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/KonessonG.jpg"
+      },
+      "biographyParagraphs": 7,
+      "biographyChars": 2504,
+      "hasDetails": true,
+      "descriptionChars": 67,
+      "biographyStart": "Гийом Коннессон, 1970 г. р., в настоящее время является одним из самых исполняемых французских композиторов в мире. Большинство его произведений созданы по заказу (Королевский орке",
+      "sourceLink": "https://21centcomposers.ru/persons/cynp378ti1-giiom-konesson"
+    },
+    {
+      "category": "composers",
+      "name": "Глеб Яковлев",
+      "slug": "gleb-yakovlev",
+      "url": "/participants/composers/gleb-yakovlev",
+      "image": "/src/assets/participants/YakovlevG.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/YakovlevG.jpg"
+      },
+      "biographyParagraphs": 10,
+      "biographyChars": 981,
+      "hasDetails": true,
+      "descriptionChars": 65,
+      "biographyStart": "Родился в 1988 г. в Омске.",
+      "sourceLink": "https://21centcomposers.ru/persons/3z633pzu31-gleb-yakovlev"
+    },
+    {
+      "category": "composers",
+      "name": "Джордж Крам",
+      "slug": "dzhordzh-kram",
+      "url": "/participants/composers/dzhordzh-kram",
+      "image": "/src/assets/participants/KramD.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/KramD.jpg"
+      },
+      "biographyParagraphs": 5,
+      "biographyChars": 1089,
+      "hasDetails": true,
+      "descriptionChars": 38,
+      "biographyStart": "Джордж Крам (24 октября 1929 г. — 6 февраля 2022 г.) — американский композитор, приверженец «технического расширения» возможностей музыки.",
+      "sourceLink": "https://21centcomposers.ru/persons/kvs7fo4a21-dzhordzh-kram"
+    },
+    {
+      "category": "composers",
+      "name": "Дэвид Лэнг",
+      "slug": "devid-leng",
+      "url": "/participants/composers/devid-leng",
+      "image": "/src/assets/participants/LengD.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/LengD.jpg"
+      },
+      "biographyParagraphs": 5,
+      "biographyChars": 1293,
+      "hasDetails": true,
+      "descriptionChars": 131,
+      "biographyStart": "Дэвид Лэнг — один из самых исполняемых современных американских композиторов. Лауреат ряда престижных премий, среди которых — Пулитцеровская, Римская, «Грэмми». Автор музыки к филь",
+      "sourceLink": "https://21centcomposers.ru/persons/v8zd6od2k1-devid-leng"
+    },
+    {
+      "category": "composers",
+      "name": "Екатерина Кожевникова",
+      "slug": "ekaterina-kozhevnikova",
+      "url": "/participants/composers/ekaterina-kozhevnikova",
+      "image": "/src/assets/participants/KozhevnikovaE.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/KozhevnikovaE.jpg"
+      },
+      "biographyParagraphs": 22,
+      "biographyChars": 3773,
+      "hasDetails": true,
+      "descriptionChars": 55,
+      "biographyStart": "Екатерина Кожевникова родилась в Москве в 1954 году в семье писателя Вадима Михайловича Кожевникова.",
+      "sourceLink": "https://21centcomposers.ru/persons/3bi18rrhl1-ekaterina-kozhevnikova"
+    },
+    {
+      "category": "composers",
+      "name": "Иван Соколов",
+      "slug": "ivan-sokolov",
+      "url": "/participants/composers/ivan-sokolov",
+      "image": "/src/assets/participants/SokolovI.png",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/SokolovI.png"
+      },
+      "biographyParagraphs": 11,
+      "biographyChars": 1237,
+      "hasDetails": true,
+      "descriptionChars": 27,
+      "biographyStart": "Родился в Москве в семье историка античного искусства Г. И. Соколова.",
+      "sourceLink": "https://21centcomposers.ru/persons/rogy0py791-ivan-sokolov"
+    },
+    {
+      "category": "composers",
+      "name": "Кайя Саариахо",
+      "slug": "kaiya-saariakho",
+      "url": "/participants/composers/kaiya-saariakho",
+      "image": "/src/assets/participants/SaariakhoK.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/SaariakhoK.jpg"
+      },
+      "biographyParagraphs": 14,
+      "biographyChars": 2422,
+      "hasDetails": true,
+      "descriptionChars": 55,
+      "biographyStart": "14 октября 1952 г., Хельсинки — 2 июня 2023 г., Париж.",
+      "sourceLink": "https://21centcomposers.ru/persons/5fhhmcr2l1-kaiya-saariaho"
+    },
+    {
+      "category": "composers",
+      "name": "Марианна Домникова",
+      "slug": "marianna-domnikova",
+      "url": "/participants/composers/marianna-domnikova",
+      "image": "/src/assets/participants/DomnikovaM.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/DomnikovaM.jpg"
+      },
+      "biographyParagraphs": 1,
+      "biographyChars": 98,
+      "hasDetails": true,
+      "descriptionChars": 104,
+      "biographyStart": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+      "sourceLink": "https://21centcomposers.ru/persons/ax4111gjb1-marianna-domnikova"
+    },
+    {
+      "category": "composers",
+      "name": "Михаил Макорда",
+      "slug": "mihail-makorda",
+      "url": "/participants/composers/mihail-makorda",
+      "image": "/src/assets/participants/macordamich.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/macordamich.jpg"
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 1700,
+      "hasDetails": true,
+      "descriptionChars": 83,
+      "biographyStart": "Михаил Макорда — композитор и пианист, родился в городе Геленджике 26 декабря 1974 года.",
+      "sourceLink": "https://21centcomposers.ru/mihail-makorda"
+    },
+    {
+      "category": "composers",
+      "name": "Михаил Тарбагаев",
+      "slug": "mikhail-tarbagaev",
+      "url": "/participants/composers/mikhail-tarbagaev",
+      "image": "/src/assets/participants/TarbagaevM.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/TarbagaevM.jpg"
+      },
+      "biographyParagraphs": 1,
+      "biographyChars": 98,
+      "hasDetails": true,
+      "descriptionChars": 31,
+      "biographyStart": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+      "sourceLink": "https://21centcomposers.ru/persons/gi3ty9zkm1-mihail-tarbagaev"
+    },
+    {
+      "category": "composers",
+      "name": "Настасья Хрущёва",
+      "slug": "nastasya-khrushcheva",
+      "url": "/participants/composers/nastasya-khrushcheva",
+      "image": "/src/assets/participants/KhrushchevaN.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/KhrushchevaN.jpg"
+      },
+      "biographyParagraphs": 11,
+      "biographyChars": 1450,
+      "hasDetails": true,
+      "descriptionChars": 50,
+      "biographyStart": "Профессор кафедры специальной композиции и импровизации и доцент кафедры истории зарубежной музыки Санкт‑Петербургской консерватории им. Н. А. Римского‑Корсакова. Член Союза композ",
+      "sourceLink": "https://21centcomposers.ru/persons/rlv43f1on1-nastasya-hruschyova"
+    },
+    {
+      "category": "composers",
+      "name": "Небойша Йован Живкович",
+      "slug": "neboisha-zhivkovich",
+      "url": "/participants/composers/neboisha-zhivkovich",
+      "image": "/src/assets/participants/ZhivkovichN.jpeg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/ZhivkovichN.jpeg"
+      },
+      "biographyParagraphs": 16,
+      "biographyChars": 2448,
+      "hasDetails": true,
+      "descriptionChars": 77,
+      "biographyStart": "Небойша Живкович — композитор и перкуссионист‑виртуоз, исполнитель на маримбе. Родился в 1962 году в Сербии. С 1980 года живёт и работает в Германии, профессиональное образование п",
+      "sourceLink": "https://21centcomposers.ru/persons/frvs8n17k1-neboisha-iovan-zhivkovich"
+    },
+    {
+      "category": "composers",
+      "name": "Олег Пайбердин",
+      "slug": "oleg-paiberdin",
+      "url": "/participants/composers/oleg-paiberdin",
+      "image": "/src/assets/participants/PaiberdinO.jpeg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/PaiberdinO.jpeg"
+      },
+      "biographyParagraphs": 41,
+      "biographyChars": 8437,
+      "hasDetails": true,
+      "descriptionChars": 61,
+      "biographyStart": "Родился 13 декабря 1971 года на Алтае (Россия).",
+      "sourceLink": "https://21centcomposers.ru/persons/z7m7o83hn1-oleg-paiberdin"
+    },
+    {
+      "category": "composers",
+      "name": "Ольга Иванова",
+      "slug": "olga-ivanova",
+      "url": "/participants/composers/olga-ivanova",
+      "image": "/src/assets/participants/IvanovaO.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/IvanovaO.jpg"
+      },
+      "biographyParagraphs": 18,
+      "biographyChars": 2514,
+      "hasDetails": true,
+      "descriptionChars": 98,
+      "biographyStart": "Ольга Иванова — многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика.",
+      "sourceLink": "https://21centcomposers.ru/persons/x9v3yy1up1-olga-ivanova"
+    },
+    {
+      "category": "composers",
+      "name": "Петерис Васкс",
+      "slug": "peteris-vasks",
+      "url": "/participants/composers/peteris-vasks",
+      "image": "/src/assets/participants/VasksP.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/VasksP.jpg"
+      },
+      "biographyParagraphs": 18,
+      "biographyChars": 3032,
+      "hasDetails": true,
+      "descriptionChars": 65,
+      "biographyStart": "Сын священника, по окончании Рижской средней специальной музыкальной школы им. Э. Дарзиня, по идеологическим соображениям был вынужден получить первое высшее образование не на роди",
+      "sourceLink": "https://21centcomposers.ru/persons/2bio4ks0z1-peteris-vasks"
+    },
+    {
+      "category": "composers",
+      "name": "Пётр Главатских",
+      "slug": "petr-glavatskikh",
+      "url": "/participants/composers/petr-glavatskikh",
+      "image": "/src/assets/participants/GlavatskikhP.png",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/GlavatskikhP.png"
+      },
+      "biographyParagraphs": 14,
+      "biographyChars": 2244,
+      "hasDetails": true,
+      "descriptionChars": 43,
+      "biographyStart": "Пётр Главатских — мультиинструменталист, композитор, продюсер. Родился в 1979 году в Екатеринбурге. Окончил Специальную музыкальную школу при Уральской консерватории (класс Леонида",
+      "sourceLink": "https://21centcomposers.ru/persons/sb1j1spbz1-pyotr-glavatskih"
+    },
+    {
+      "category": "composers",
+      "name": "Руст Позюмский",
+      "slug": "rust-pozyumskii",
+      "url": "/participants/composers/rust-pozyumskii",
+      "image": "/src/assets/participants/PozyumskiiR.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/PozyumskiiR.jpg"
+      },
+      "biographyParagraphs": 18,
+      "biographyChars": 1876,
+      "hasDetails": true,
+      "descriptionChars": 140,
+      "biographyStart": "Родился в 1976 году в Одессе. Получил образование в Одесской ССМШ имени П. С. Столярского, затем в ССМШ при Санкт‑Петербургской государственной консерватории имени Н. А. Римского‑К",
+      "sourceLink": "https://21centcomposers.ru/persons/4og0c8o7s1-rust-pozyumskii"
+    },
+    {
+      "category": "composers",
+      "name": "Сальваторе Шаррино",
+      "slug": "salvatore-sharrino",
+      "url": "/participants/composers/salvatore-sharrino",
+      "image": "/src/assets/participants/SharrinoS.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/SharrinoS.jpg"
+      },
+      "biographyParagraphs": 15,
+      "biographyChars": 3522,
+      "hasDetails": true,
+      "descriptionChars": 80,
+      "biographyStart": "1947 г. р.",
+      "sourceLink": "https://21centcomposers.ru/persons/b3ydbyxbt1-salvatore-sharrino"
+    },
+    {
+      "category": "composers",
+      "name": "Сергей Жуков",
+      "slug": "sergei-zhukov",
+      "url": "/participants/composers/sergei-zhukov",
+      "image": "/src/assets/participants/ZhukovS.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/ZhukovS.jpg"
+      },
+      "biographyParagraphs": 24,
+      "biographyChars": 4665,
+      "hasDetails": true,
+      "descriptionChars": 100,
+      "biographyStart": "«Творческий дар композитора Сергея Жукова привлекает прежде всего тем, что он никогда не бывает отягощён какими бы то ни было надуманными построениями. Каждая чисто музыкальная стр",
+      "sourceLink": "https://21centcomposers.ru/persons/x1i689pst1-sergei-zhukov"
+    },
+    {
+      "category": "composers",
+      "name": "Сергей Плешак",
+      "slug": "sergei-pleshak",
+      "url": "/participants/composers/sergei-pleshak",
+      "image": "/src/assets/participants/PleshakS.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/PleshakS.jpg"
+      },
+      "biographyParagraphs": 27,
+      "biographyChars": 4496,
+      "hasDetails": true,
+      "descriptionChars": 40,
+      "biographyStart": "C отличием окончил Хоровое училище им. М. И. Глинки, дирижёрско‑хоровой факультет и ассистентуру‑стажировку (класс профессора Е. П. Кудрявцевой) Санкт‑Петербургской консерватории и",
+      "sourceLink": "https://21centcomposers.ru/persons/e4ab8jh4f1-sergei-pleshak"
+    },
+    {
+      "category": "composers",
+      "name": "Эльмир Низамов",
+      "slug": "elmir-nizamov",
+      "url": "/participants/composers/elmir-nizamov",
+      "image": "/src/assets/participants/NizamovE.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/NizamovE.jpg"
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 3054,
+      "hasDetails": true,
+      "descriptionChars": 84,
+      "biographyStart": "Эльмир Низамов родился 24 декабря 1986 года в Ульяновске. В 2006 году окончил фортепианное отделение Ульяновского музыкального училища, а в 2011 году — композиторский факультет Каз",
+      "sourceLink": "https://21centcomposers.ru/persons/67g7eegk31-elmir-nizamov"
+    },
+    {
+      "category": "composers",
+      "name": "Юрий Каспаров",
+      "slug": "yurii-kasparov",
+      "url": "/participants/composers/yurii-kasparov",
+      "image": "/src/assets/participants/KasparovY.png",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/KasparovY.png"
+      },
+      "biographyParagraphs": 29,
+      "biographyChars": 5073,
+      "hasDetails": true,
+      "descriptionChars": 78,
+      "biographyStart": "Юрий Каспаров — российский композитор, музыкальный педагог, профессор Московской консерватории. Заслуженный деятель искусств России, Заслуженный деятель культуры Казахстана, кавале",
+      "sourceLink": "https://21centcomposers.ru/persons/cs06bex6b1-yurii-kasparov"
+    },
+    {
+      "category": "soloists",
+      "name": "Алексей Гориболь",
+      "slug": "u03c48z581-aleksei-goribol",
+      "url": "/participants/soloists/u03c48z581-aleksei-goribol",
+      "image": "/assets/external/6f5aec75_IMG_2162.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "public/assets/external/6f5aec75_IMG_2162.jpg"
+      },
+      "biographyParagraphs": 13,
+      "biographyChars": 3607,
+      "hasDetails": true,
+      "descriptionChars": 144,
+      "biographyStart": "Алексей Гориболь — пианист, музыкальный деятель, продюсер, художественный руководитель фестивалей и культурно-просветительских проектов, заслуженный артист России.",
+      "sourceLink": "https://21centcomposers.ru/info/u03c48z581-aleksei-goribol"
+    },
+    {
+      "category": "soloists",
+      "name": "Максим Новиков",
+      "slug": "maxim_novikov",
+      "url": "/participants/soloists/maxim_novikov",
+      "image": "/assets/external/90596f76_MaximNovikov1.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "public/assets/external/90596f76_MaximNovikov1.jpg"
+      },
+      "biographyParagraphs": 1,
+      "biographyChars": 135,
+      "hasDetails": false,
+      "descriptionChars": 135,
+      "biographyStart": "Альтист, блестящий интерпретатор классических и современных произведений, многие из которых впервые прозвучали именно в его исполнении.",
+      "sourceLink": "https://21centcomposers.ru/info/maxim_novikov"
+    },
+    {
+      "category": "soloists",
+      "name": "Алексей Лундин",
+      "slug": "bxainxg0p1-aleksei-lundin",
+      "url": "/participants/soloists/bxainxg0p1-aleksei-lundin",
+      "image": "/assets/external/5ac0c729_Aleksej-Lundin.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "public/assets/external/5ac0c729_Aleksej-Lundin.jpg"
+      },
+      "biographyParagraphs": 5,
+      "biographyChars": 1693,
+      "hasDetails": true,
+      "descriptionChars": 325,
+      "biographyStart": "Алексей Лундин родился в Москве в семье музыкантов. Окончил Московскую среднюю специальную музыкальную школу имени Гнесиных, Московскую государственную консерваторию имени П. И. Ча",
+      "sourceLink": "https://21centcomposers.ru/bxainxg0p1-aleksei-lundin"
+    },
+    {
+      "category": "soloists",
+      "name": "Андрей Березин",
+      "slug": "vtyrvc09l1-andrei-berezin",
+      "url": "/participants/soloists/vtyrvc09l1-andrei-berezin",
+      "image": "/assets/external/10d8aa03_628777e6-f5b4-4784-c.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "public/assets/external/10d8aa03_628777e6-f5b4-4784-c.jpg"
+      },
+      "biographyParagraphs": 3,
+      "biographyChars": 1023,
+      "hasDetails": true,
+      "descriptionChars": 280,
+      "biographyStart": "Андрей Березин — музыкант, работающий с виолончелью, контрабасом и виолой да гамба, а также композитор, аранжировщик и актёр. Родился в Москве, окончил Московскую государственную к",
+      "sourceLink": "https://21centcomposers.ru/vtyrvc09l1-andrei-berezin"
+    },
+    {
+      "category": "soloists",
+      "name": "Даниил Саямов",
+      "slug": "xphk1vgsn1-daniil-sayamov",
+      "url": "/participants/soloists/xphk1vgsn1-daniil-sayamov",
+      "image": "/assets/external/f972c468_IMG_2432.jpeg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "public/assets/external/f972c468_IMG_2432.jpeg"
+      },
+      "biographyParagraphs": 4,
+      "biographyChars": 1207,
+      "hasDetails": true,
+      "descriptionChars": 286,
+      "biographyStart": "Даниил Саямов родился в Ростове-на-Дону в семье музыкантов. После обучения в Ростовской консерватории был приглашён в Московскую консерваторию в класс Веры Горностаевой, где окончи",
+      "sourceLink": "https://21centcomposers.ru/xphk1vgsn1-daniil-sayamov"
+    },
+    {
+      "category": "soloists",
+      "name": "Сергей Полтавский",
+      "slug": "sergei-poltavskii",
+      "url": "/participants/soloists/sergei-poltavskii",
+      "image": "/src/assets/participants/SergPoltavskiy.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/SergPoltavskiy.jpg"
+      },
+      "biographyParagraphs": 6,
+      "biographyChars": 2401,
+      "hasDetails": true,
+      "descriptionChars": 350,
+      "biographyStart": "Сергей Полтавский — альтист, исполнитель на виоль д’амур, саунд-дизайнер. Окончил Академическое музыкальное училище при Московской государственной консерватории, консерваторию и ас",
+      "sourceLink": "https://21centcomposers.ru/sergei-poltavskii"
+    },
+    {
+      "category": "soloists",
+      "name": "Наталья Мурадымова",
+      "slug": "natalia-muradymova",
+      "url": "/participants/soloists/natalia-muradymova",
+      "image": "/src/assets/participants/NataliMuradymova.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/NataliMuradymova.jpg"
+      },
+      "biographyParagraphs": 4,
+      "biographyChars": 1041,
+      "hasDetails": true,
+      "descriptionChars": 177,
+      "biographyStart": "Наталья Мурадымова в 2000–2003 годах была солисткой Екатеринбургского академического театра оперы и балета, где исполняла партии Иоланты, Татьяны, Марии, Памины, Мими и Микаэлы.",
+      "sourceLink": "https://21centcomposers.ru/natalia-muradymova"
+    },
+    {
+      "category": "soloists",
+      "name": "Юлия Игонина",
+      "slug": "yuliya-igonina",
+      "url": "/participants/soloists/yuliya-igonina",
+      "image": "/src/assets/participants/JuliaIgonina.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/JuliaIgonina.jpg"
+      },
+      "biographyParagraphs": 5,
+      "biographyChars": 1608,
+      "hasDetails": true,
+      "descriptionChars": 297,
+      "biographyStart": "Юлия Игонина — одна из самых заметных российских скрипачек, чей репертуар включает более сорока концертов для скрипки с оркестром, сонаты, концертные пьесы и камерную музыку разных",
+      "sourceLink": "https://21centcomposers.ru/yuliya-igonina"
+    },
+    {
+      "category": "soloists",
+      "name": "Алиса Тен",
+      "slug": "alisa-ten",
+      "url": "/participants/soloists/alisa-ten",
+      "image": "/src/assets/participants/Alisaten.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/Alisaten.jpg"
+      },
+      "biographyParagraphs": 4,
+      "biographyChars": 998,
+      "hasDetails": true,
+      "descriptionChars": 225,
+      "biographyStart": "Алиса Тен — мультижанровая певица, композитор и исполнительница на виоле да гамба. Её репертуар охватывает музыку барокко, древнерусскую, этническую и современную академическую муз",
+      "sourceLink": "https://21centcomposers.ru/alisa-ten"
+    },
+    {
+      "category": "soloists",
+      "name": "Александр Маломожнов",
+      "slug": "aleksandr-malomozhnov",
+      "url": "/participants/soloists/aleksandr-malomozhnov",
+      "image": "/src/assets/participants/malomozhnova.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/malomozhnova.jpg"
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 715,
+      "hasDetails": true,
+      "descriptionChars": 173,
+      "biographyStart": "Скрипач, лауреат международных конкурсов. Учился у таких мастеров смычкового цеха, как Доровских, Неволин Д., Шисман А. А. Проходил обучение у профессора Верникова в Италии.",
+      "sourceLink": "https://21centcomposers.ru/aleksandr-malomozhnov"
+    },
+    {
+      "category": "soloists",
+      "name": "Александра Лотова",
+      "slug": "lotova-aleksandra",
+      "url": "/participants/soloists/lotova-aleksandra",
+      "image": "/src/assets/participants/lotovaa.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/lotovaa.jpg"
+      },
+      "biographyParagraphs": 17,
+      "biographyChars": 2521,
+      "hasDetails": true,
+      "descriptionChars": 72,
+      "biographyStart": "Александра Лотова — пианистка, педагог, лауреат международных конкурсов.",
+      "sourceLink": "https://21centcomposers.ru/lotova-aleksandra"
+    },
+    {
+      "category": "soloists",
+      "name": "Алексей Петров",
+      "slug": "aleksei-petrov",
+      "url": "/participants/soloists/aleksei-petrov",
+      "image": "/src/assets/participants/PetrovA.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/PetrovA.jpg"
+      },
+      "biographyParagraphs": 7,
+      "biographyChars": 1652,
+      "hasDetails": true,
+      "descriptionChars": 112,
+      "biographyStart": "Алексей Петров родился в 1982 году в Москве в семье музыкантов. В 1990 году поступил в Центральную музыкальную школу в класс Елены Ховен, в 1997 году продолжил занятия с Андреем Пи",
+      "sourceLink": "https://21centcomposers.ru/aleksei-petrov"
+    },
+    {
+      "category": "soloists",
+      "name": "Аяко Танабэ",
+      "slug": "ayako-tanabe",
+      "url": "/participants/soloists/ayako-tanabe",
+      "image": "/src/assets/participants/tanabeA.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/tanabeA.jpg"
+      },
+      "biographyParagraphs": 6,
+      "biographyChars": 1949,
+      "hasDetails": true,
+      "descriptionChars": 155,
+      "biographyStart": "Аяко Танабэ родилась в г. Сайтама (Япония). Окончила Московскую консерваторию в 2012 году (класс профессора С. И. Кравченко, класс квартета А. А. Шишлова).",
+      "sourceLink": "https://21centcomposers.ru/ayako-tanabe"
+    },
+    {
+      "category": "soloists",
+      "name": "Владимир Волков",
+      "slug": "vladimir-volkov",
+      "url": "/participants/soloists/vladimir-volkov",
+      "image": "/src/assets/participants/volkovv.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/volkovv.jpg"
+      },
+      "biographyParagraphs": 6,
+      "biographyChars": 1453,
+      "hasDetails": true,
+      "descriptionChars": 80,
+      "biographyStart": "Легендарный питерский музыкант, контрабасист, композитор и музыкальный продюсер.",
+      "sourceLink": "https://21centcomposers.ru/vladimir-volkov"
+    },
+    {
+      "category": "soloists",
+      "name": "Дмитрий Онищенко",
+      "slug": "dmitrii-onischenko",
+      "url": "/participants/soloists/dmitrii-onischenko",
+      "image": "/src/assets/participants/onischenkod.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/onischenkod.jpg"
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 2702,
+      "hasDetails": true,
+      "descriptionChars": 205,
+      "biographyStart": "Родился Дмитрий Онищенко в 1983 году в городе Львове (УССР). Начал обучаться музыке с четырёх лет под руководством своей матери, профессора Львовской консерватории Ирины Немиры, а ",
+      "sourceLink": "https://21centcomposers.ru/dmitrii-onischenko"
+    },
+    {
+      "category": "soloists",
+      "name": "Евгений Румянцев",
+      "slug": "evgenii-rumyantsev",
+      "url": "/participants/soloists/evgenii-rumyantsev",
+      "image": "/src/assets/participants/rumyantsevE.jfif",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/rumyantsevE.jfif"
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 2359,
+      "hasDetails": true,
+      "descriptionChars": 518,
+      "biographyStart": "Один из самых ярких и харизматичных молодых российских музыкантов, Евгений Румянцев (виолончель) сочетает блестящую виртуозность и глубину интерпретации с захватывающим темперамент",
+      "sourceLink": "https://21centcomposers.ru/evgenii-rumyantsev"
+    },
+    {
+      "category": "soloists",
+      "name": "Евгений Стародубцев",
+      "slug": "evgenii-starodubtsev",
+      "url": "/participants/soloists/evgenii-starodubtsev",
+      "image": "/src/assets/participants/starodubtsevE.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/starodubtsevE.jpg"
+      },
+      "biographyParagraphs": 13,
+      "biographyChars": 2795,
+      "hasDetails": true,
+      "descriptionChars": 72,
+      "biographyStart": "Евгений Стародубцев — российский пианист и педагог, родился в 1981 году.",
+      "sourceLink": "https://21centcomposers.ru/evgenii-starodubtsev"
+    },
+    {
+      "category": "soloists",
+      "name": "Екатерина Мочалова",
+      "slug": "ekaterina-mochalova",
+      "url": "/participants/soloists/ekaterina-mochalova",
+      "image": "/src/assets/participants/MochalovaK.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/MochalovaK.jpg"
+      },
+      "biographyParagraphs": 3,
+      "biographyChars": 1781,
+      "hasDetails": true,
+      "descriptionChars": 122,
+      "biographyStart": "Екатерина Мочалова в 2012 году окончила Российскую академию музыки имени Гнесиных по двум специальностям: «Домра» (класс народного артиста России, профессора В. П. Круглова) и «Дир",
+      "sourceLink": "https://21centcomposers.ru/ekaterina-mochalova"
+    },
+    {
+      "category": "soloists",
+      "name": "Елизавета Грунина",
+      "slug": "grunina-elizaveta",
+      "url": "/participants/soloists/grunina-elizaveta",
+      "image": "/src/assets/participants/gruninae.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/gruninae.jpg"
+      },
+      "biographyParagraphs": 7,
+      "biographyChars": 789,
+      "hasDetails": true,
+      "descriptionChars": 84,
+      "biographyStart": "Грунина Елизавета, 16 лет. Родилась и живёт в Москве, учится в МССМШ имени Гнесиных.",
+      "sourceLink": "https://21centcomposers.ru/grunina-elizaveta"
+    },
+    {
+      "category": "soloists",
+      "name": "Игорь Степанич",
+      "slug": "igor-stepanich",
+      "url": "/participants/soloists/igor-stepanich",
+      "image": "/src/assets/participants/stepanichi.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/stepanichi.jpg"
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 465,
+      "hasDetails": true,
+      "descriptionChars": 46,
+      "biographyStart": "Выпускник Московской консерватории (2017 год).",
+      "sourceLink": "https://21centcomposers.ru/igor-stepanich"
+    },
+    {
+      "category": "soloists",
+      "name": "Инна Зильберман",
+      "slug": "inna-zilberman",
+      "url": "/participants/soloists/inna-zilberman",
+      "image": "/src/assets/participants/zilbermani.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/zilbermani.jpg"
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 1037,
+      "hasDetails": true,
+      "descriptionChars": 21,
+      "biographyStart": "Родилась в Караганде.",
+      "sourceLink": "https://21centcomposers.ru/inna-zilberman"
+    },
+    {
+      "category": "soloists",
+      "name": "Ксения Жулева",
+      "slug": "kseniya-zhuleva",
+      "url": "/participants/soloists/kseniya-zhuleva",
+      "image": "/src/assets/participants/zhulevak.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/zhulevak.jpg"
+      },
+      "biographyParagraphs": 5,
+      "biographyChars": 1145,
+      "hasDetails": true,
+      "descriptionChars": 309,
+      "biographyStart": "Ксения Жулёва родилась в 1984 году в Москве. Окончила Академический музыкальный колледж при Московской консерватории (класс альта Екатерины Марковой) и Московскую государственную к",
+      "sourceLink": "https://21centcomposers.ru/kseniya-zhuleva"
+    },
+    {
+      "category": "soloists",
+      "name": "Ксения Кнорре",
+      "slug": "kseniya-knorre",
+      "url": "/participants/soloists/kseniya-knorre",
+      "image": "/src/assets/participants/knorreK.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/knorreK.jpg"
+      },
+      "biographyParagraphs": 23,
+      "biographyChars": 2084,
+      "hasDetails": true,
+      "descriptionChars": 139,
+      "biographyStart": "Заслуженная артистка России. Профессор Московской государственной консерватории имени П. И. Чайковского. Член Московского союза музыкантов.",
+      "sourceLink": "https://21centcomposers.ru/kseniya-knorre"
+    },
+    {
+      "category": "soloists",
+      "name": "Лиля Валиева Михаил Макорда",
+      "slug": "lilya-valieva-i-mihail-makorda",
+      "url": "/participants/soloists/lilya-valieva-i-mihail-makorda",
+      "image": "/src/assets/participants/valievamakorda.jfif",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/valievamakorda.jfif"
+      },
+      "biographyParagraphs": 16,
+      "biographyChars": 1679,
+      "hasDetails": true,
+      "descriptionChars": 14,
+      "biographyStart": "Михаил Макорда",
+      "sourceLink": "https://21centcomposers.ru/lilya-valieva-i-mihail-makorda"
+    },
+    {
+      "category": "soloists",
+      "name": "Наталья Соколовская",
+      "slug": "natalia-sokolovskaya",
+      "url": "/participants/soloists/natalia-sokolovskaya",
+      "image": "/src/assets/participants/sokolovskayaN.jpeg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/sokolovskayaN.jpeg"
+      },
+      "biographyParagraphs": 9,
+      "biographyChars": 1570,
+      "hasDetails": true,
+      "descriptionChars": 92,
+      "biographyStart": "Наталья Соколовская — пианист, композитор, художественный руководитель Île Thélème Ensemble.",
+      "sourceLink": "https://21centcomposers.ru/natalia-sokolovskaya"
+    },
+    {
+      "category": "soloists",
+      "name": "Ольга Демина",
+      "slug": "olga-demina",
+      "url": "/participants/soloists/olga-demina",
+      "image": "/src/assets/participants/olgademinaB.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/olgademinaB.jpg"
+      },
+      "biographyParagraphs": 9,
+      "biographyChars": 1122,
+      "hasDetails": true,
+      "descriptionChars": 126,
+      "biographyStart": "Родилась в семье музыкантов, с ранних лет начала обучаться игре на фортепиано, но в дальнейшем отдала предпочтение виолончели.",
+      "sourceLink": "https://21centcomposers.ru/olga-demina"
+    },
+    {
+      "category": "soloists",
+      "name": "Ольга Иванова",
+      "slug": "olga-ivanova",
+      "url": "/participants/soloists/olga-ivanova",
+      "image": "/src/assets/participants/ivanovaO.jfif",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/ivanovaO.jfif"
+      },
+      "biographyParagraphs": 18,
+      "biographyChars": 2514,
+      "hasDetails": true,
+      "descriptionChars": 106,
+      "biographyStart": "Ольга Иванова — многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика.",
+      "sourceLink": "https://21centcomposers.ru/olga-ivanova"
+    },
+    {
+      "category": "soloists",
+      "name": "Ольга Калинова",
+      "slug": "olga-kalinova",
+      "url": "/participants/soloists/olga-kalinova",
+      "image": "/src/assets/participants/kalinovao.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/kalinovao.jpg"
+      },
+      "biographyParagraphs": 7,
+      "biographyChars": 1162,
+      "hasDetails": true,
+      "descriptionChars": 176,
+      "biographyStart": "Виолончелистка Ольга Калинова окончила Московскую консерваторию. Она — лауреат Всероссийского конкурса имени Танеева, престижных итальянских конкурсов Кальтаниссетта и Трапани.",
+      "sourceLink": "https://21centcomposers.ru/olga-kalinova"
+    },
+    {
+      "category": "soloists",
+      "name": "Павел Домбровский",
+      "slug": "pavel-dombrovskiy",
+      "url": "/participants/soloists/pavel-dombrovskiy",
+      "image": "/src/assets/participants/Dombrovskiy.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/Dombrovskiy.jpg"
+      },
+      "biographyParagraphs": 7,
+      "biographyChars": 1626,
+      "hasDetails": true,
+      "descriptionChars": 34,
+      "biographyStart": "Родился 15 мая 1982 года в Москве.",
+      "sourceLink": "https://21centcomposers.ru/pavel-dombrovskiy"
+    },
+    {
+      "category": "soloists",
+      "name": "Петр Главатских",
+      "slug": "pyotr-glavatskih",
+      "url": "/participants/soloists/pyotr-glavatskih",
+      "image": "/src/assets/participants/glavatskihp.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/glavatskihp.jpg"
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 1318,
+      "hasDetails": true,
+      "descriptionChars": 62,
+      "biographyStart": "Пётр Главатских — мультиинструменталист, композитор, продюсер.",
+      "sourceLink": "https://21centcomposers.ru/pyotr-glavatskih"
+    },
+    {
+      "category": "soloists",
+      "name": "Роман Викулов",
+      "slug": "roman-vykulov",
+      "url": "/participants/soloists/roman-vykulov",
+      "image": "/src/assets/participants/vykulovr.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/vykulovr.jpg"
+      },
+      "biographyParagraphs": 14,
+      "biographyChars": 1331,
+      "hasDetails": true,
+      "descriptionChars": 222,
+      "biographyStart": "Роман Викулов родился в 1993 году в Тобольске. Учился в Центре искусств для одарённых детей Севера в Ханты‑Мансийске (класс Владимира Рысина), был удостоен стипендии губернатора Ха",
+      "sourceLink": "https://21centcomposers.ru/roman-vykulov"
+    },
+    {
+      "category": "soloists",
+      "name": "Руст Позюмский",
+      "slug": "rust-pozyumskii",
+      "url": "/participants/soloists/rust-pozyumskii",
+      "image": "/src/assets/participants/pozumskiir.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/pozumskiir.jpg"
+      },
+      "biographyParagraphs": 18,
+      "biographyChars": 1876,
+      "hasDetails": true,
+      "descriptionChars": 158,
+      "biographyStart": "Родился в 1976 году в Одессе. Получил образование в Одесской ССМШ имени П. С. Столярского, затем в ССМШ при Санкт‑Петербургской государственной консерватории имени Н. А. Римского‑К",
+      "sourceLink": "https://21centcomposers.ru/rust-pozyumskii"
+    },
+    {
+      "category": "soloists",
+      "name": "Станислав Малышев",
+      "slug": "stanislav-malyshev",
+      "url": "/participants/soloists/stanislav-malyshev",
+      "image": "/src/assets/participants/malyshevs.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/malyshevs.jpg"
+      },
+      "biographyParagraphs": 11,
+      "biographyChars": 4291,
+      "hasDetails": true,
+      "descriptionChars": 369,
+      "biographyStart": "Станислав Малышев окончил Московскую консерваторию (класс скрипки профессора Игоря Фролова) и аспирантуру того же вуза (класс камерного ансамбля профессора Нины Коган). Дирижёрское",
+      "sourceLink": "https://21centcomposers.ru/stanislav-malyshev"
+    },
+    {
+      "category": "soloists",
+      "name": "Федор Шинкевич",
+      "slug": "fyodor-shinkevich",
+      "url": "/participants/soloists/fyodor-shinkevich",
+      "image": "/src/assets/participants/shinkevichf.jpeg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/shinkevichf.jpeg"
+      },
+      "biographyParagraphs": 12,
+      "biographyChars": 3763,
+      "hasDetails": true,
+      "descriptionChars": 354,
+      "biographyStart": "В  шесть лет поступил в Республиканскую гимназию‑колледж при Белорусской государственной академии музыки на хоровое отделение (Минск, Беларусь), которую закончил в 2014 году по спе",
+      "sourceLink": "https://21centcomposers.ru/fyodor-shinkevich"
+    },
+    {
+      "category": "soloists",
+      "name": "Фейгинова Элла",
+      "slug": "feiginova-ella",
+      "url": "/participants/soloists/feiginova-ella",
+      "image": "/src/assets/participants/feiginovaE.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/feiginovaE.jpg"
+      },
+      "biographyParagraphs": 20,
+      "biographyChars": 3070,
+      "hasDetails": true,
+      "descriptionChars": 237,
+      "biographyStart": "Фейгинова Элла Викторовна (Москва) — солистка Московского Музыкального Академического театра имени К. С. Станиславского и В. И. Немировича‑Данченко (меццо‑сопрано), режиссёр музыка",
+      "sourceLink": "https://21centcomposers.ru/feiginova-ella"
+    },
+    {
+      "category": "soloists",
+      "name": "Элеонора Теплухина",
+      "slug": "eleonora-tepluhina",
+      "url": "/participants/soloists/eleonora-tepluhina",
+      "image": "/src/assets/participants/tepluhinae.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/tepluhinae.jpg"
+      },
+      "biographyParagraphs": 13,
+      "biographyChars": 3132,
+      "hasDetails": true,
+      "descriptionChars": 311,
+      "biographyStart": "«Тонкость в сочетании с большой энергетической мощью», «поэтичность и виртуозность», «глубина и очарование», «единство гармонии ощущений с рефлексивностью острого ума» — таковы наи",
+      "sourceLink": "https://21centcomposers.ru/eleonora-tepluhina"
+    },
+    {
+      "category": "ensembles",
+      "name": "Солисты Нижнего Новгорода",
+      "slug": "2k7b12lg01-solisti-nizhnego-novgoroda",
+      "url": "/participants/ensembles/2k7b12lg01-solisti-nizhnego-novgoroda",
+      "image": "/assets/external/2194aac8__DSC5721.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "public/assets/external/2194aac8__DSC5721.jpg"
+      },
+      "biographyParagraphs": 9,
+      "biographyChars": 3581,
+      "hasDetails": true,
+      "descriptionChars": 105,
+      "biographyStart": "Солисты Нижнего Новгорода — муниципальный камерный оркестр поволжской столицы, один из ведущих камерных оркестров современной России.",
+      "sourceLink": "https://21centcomposers.ru/info/2k7b12lg01-solisti-nizhnego-novgoroda"
+    },
+    {
+      "category": "ensembles",
+      "name": "OpensoundOrchestra",
+      "slug": "opensoundorchestra",
+      "url": "/participants/ensembles/opensoundorchestra",
+      "image": "https://static.tildacdn.com/tild3364-3837-4565-a336-663865643261/Opensoundorchestra-4.jpeg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 16,
+      "biographyChars": 5361,
+      "hasDetails": true,
+      "descriptionChars": 61,
+      "biographyStart": "OpensoundOrchestra — оркестр, специализирующийся на исполнении современной музыки. Коллектив был основан в 2018 году скрипачом и дирижёром Станиславом Малышевым и виолончелисткой О",
+      "sourceLink": "https://opensoundorchestra.ru/"
+    },
+    {
+      "category": "ensembles",
+      "name": "Brezel ensemble",
+      "slug": "185385o731-brezel-ensemble",
+      "url": "/participants/ensembles/185385o731-brezel-ensemble",
+      "image": "https://static.tildacdn.com/tild3063-3764-4437-a432-353333396333/-5368621893969188115.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 4,
+      "biographyChars": 791,
+      "hasDetails": true,
+      "descriptionChars": 79,
+      "biographyStart": "Brezel ensemble — лаборатория старинной и современной музыки и независимое сообщество музыкантов.",
+      "sourceLink": "https://21centcomposers.ru/info/185385o731-brezel-ensemble"
+    },
+    {
+      "category": "ensembles",
+      "name": "Ансамбль Classica Plus",
+      "slug": "bcix09uev1-ansambl-classica-plus",
+      "url": "/participants/ensembles/bcix09uev1-ansambl-classica-plus",
+      "image": "https://static.tildacdn.com/tild3938-6130-4663-a663-616562623063/2J9A7454-scaled.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 11,
+      "biographyChars": 1791,
+      "hasDetails": true,
+      "descriptionChars": 49,
+      "biographyStart": "Ансамбль Classica Plus:",
+      "sourceLink": "https://21centcomposers.ru/info/bcix09uev1-ansambl-classica-plus"
+    },
+    {
+      "category": "ensembles",
+      "name": "Государственный струнный квартет имени М. И. Глинки",
+      "slug": "kvartet_glinki",
+      "url": "/participants/ensembles/kvartet_glinki",
+      "image": "https://static.tildacdn.com/tild3236-3465-4532-a131-346636316464/IMG_20260305_001127_.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 9,
+      "biographyChars": 1776,
+      "hasDetails": true,
+      "descriptionChars": 90,
+      "biographyStart": "Камерно-инструментальный ансамбль, занимающий видное место среди музыкальной элиты России.",
+      "sourceLink": "https://21centcomposers.ru/info/kvartet_glinki"
+    },
+    {
+      "category": "ensembles",
+      "name": "Хоровой ансамбль \"Мелодия\"",
+      "slug": "2ci5ibo0z1-horovoi-ansambl-melodiya",
+      "url": "/participants/ensembles/2ci5ibo0z1-horovoi-ansambl-melodiya",
+      "image": "https://static.tildacdn.com/tild6131-3237-4662-a132-343132646339/IMG-20260124-WA0004.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 9,
+      "biographyChars": 1903,
+      "hasDetails": true,
+      "descriptionChars": 51,
+      "biographyStart": "Художественный руководитель — Евгения Кудричевская.",
+      "sourceLink": "https://21centcomposers.ru/info/2ci5ibo0z1-horovoi-ansambl-melodiya"
+    },
+    {
+      "category": "ensembles",
+      "name": "Île Thélème Ensemble",
+      "slug": "jsspbiezo1-le-thlme-ensemble",
+      "url": "/participants/ensembles/jsspbiezo1-le-thlme-ensemble",
+      "image": "https://static.tildacdn.com/tild3038-3163-4635-b865-613232623166/-5451686574358728414.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 2436,
+      "hasDetails": true,
+      "descriptionChars": 102,
+      "biographyStart": "Исполнители: Наталья Соколовская (фортепиано) Аяко Танабэ (скрипка) Сергей Полтавский (альт) Евгений Румянцев (виолончель)",
+      "sourceLink": "https://21centcomposers.ru/info/jsspbiezo1-le-thlme-ensemble"
+    }
+  ],
+  "missingImages": [],
+  "externalImages": [
+    {
+      "category": "ensembles",
+      "name": "OpensoundOrchestra",
+      "slug": "opensoundorchestra",
+      "url": "/participants/ensembles/opensoundorchestra",
+      "image": "https://static.tildacdn.com/tild3364-3837-4565-a336-663865643261/Opensoundorchestra-4.jpeg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 16,
+      "biographyChars": 5361,
+      "hasDetails": true,
+      "descriptionChars": 61,
+      "biographyStart": "OpensoundOrchestra — оркестр, специализирующийся на исполнении современной музыки. Коллектив был основан в 2018 году скрипачом и дирижёром Станиславом Малышевым и виолончелисткой О",
+      "sourceLink": "https://opensoundorchestra.ru/"
+    },
+    {
+      "category": "ensembles",
+      "name": "Brezel ensemble",
+      "slug": "185385o731-brezel-ensemble",
+      "url": "/participants/ensembles/185385o731-brezel-ensemble",
+      "image": "https://static.tildacdn.com/tild3063-3764-4437-a432-353333396333/-5368621893969188115.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 4,
+      "biographyChars": 791,
+      "hasDetails": true,
+      "descriptionChars": 79,
+      "biographyStart": "Brezel ensemble — лаборатория старинной и современной музыки и независимое сообщество музыкантов.",
+      "sourceLink": "https://21centcomposers.ru/info/185385o731-brezel-ensemble"
+    },
+    {
+      "category": "ensembles",
+      "name": "Ансамбль Classica Plus",
+      "slug": "bcix09uev1-ansambl-classica-plus",
+      "url": "/participants/ensembles/bcix09uev1-ansambl-classica-plus",
+      "image": "https://static.tildacdn.com/tild3938-6130-4663-a663-616562623063/2J9A7454-scaled.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 11,
+      "biographyChars": 1791,
+      "hasDetails": true,
+      "descriptionChars": 49,
+      "biographyStart": "Ансамбль Classica Plus:",
+      "sourceLink": "https://21centcomposers.ru/info/bcix09uev1-ansambl-classica-plus"
+    },
+    {
+      "category": "ensembles",
+      "name": "Государственный струнный квартет имени М. И. Глинки",
+      "slug": "kvartet_glinki",
+      "url": "/participants/ensembles/kvartet_glinki",
+      "image": "https://static.tildacdn.com/tild3236-3465-4532-a131-346636316464/IMG_20260305_001127_.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 9,
+      "biographyChars": 1776,
+      "hasDetails": true,
+      "descriptionChars": 90,
+      "biographyStart": "Камерно-инструментальный ансамбль, занимающий видное место среди музыкальной элиты России.",
+      "sourceLink": "https://21centcomposers.ru/info/kvartet_glinki"
+    },
+    {
+      "category": "ensembles",
+      "name": "Хоровой ансамбль \"Мелодия\"",
+      "slug": "2ci5ibo0z1-horovoi-ansambl-melodiya",
+      "url": "/participants/ensembles/2ci5ibo0z1-horovoi-ansambl-melodiya",
+      "image": "https://static.tildacdn.com/tild6131-3237-4662-a132-343132646339/IMG-20260124-WA0004.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 9,
+      "biographyChars": 1903,
+      "hasDetails": true,
+      "descriptionChars": 51,
+      "biographyStart": "Художественный руководитель — Евгения Кудричевская.",
+      "sourceLink": "https://21centcomposers.ru/info/2ci5ibo0z1-horovoi-ansambl-melodiya"
+    },
+    {
+      "category": "ensembles",
+      "name": "Île Thélème Ensemble",
+      "slug": "jsspbiezo1-le-thlme-ensemble",
+      "url": "/participants/ensembles/jsspbiezo1-le-thlme-ensemble",
+      "image": "https://static.tildacdn.com/tild3038-3163-4635-b865-613232623166/-5451686574358728414.jpg",
+      "imageCheck": {
+        "kind": "external",
+        "exists": null
+      },
+      "biographyParagraphs": 8,
+      "biographyChars": 2436,
+      "hasDetails": true,
+      "descriptionChars": 102,
+      "biographyStart": "Исполнители: Наталья Соколовская (фортепиано) Аяко Танабэ (скрипка) Сергей Полтавский (альт) Евгений Румянцев (виолончель)",
+      "sourceLink": "https://21centcomposers.ru/info/jsspbiezo1-le-thlme-ensemble"
+    }
+  ],
+  "emptyBiographies": [],
+  "fallbackBiographies": [
+    {
+      "category": "soloists",
+      "name": "Максим Новиков",
+      "slug": "maxim_novikov",
+      "url": "/participants/soloists/maxim_novikov",
+      "image": "/assets/external/90596f76_MaximNovikov1.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "public/assets/external/90596f76_MaximNovikov1.jpg"
+      },
+      "biographyParagraphs": 1,
+      "biographyChars": 135,
+      "hasDetails": false,
+      "descriptionChars": 135,
+      "biographyStart": "Альтист, блестящий интерпретатор классических и современных произведений, многие из которых впервые прозвучали именно в его исполнении.",
+      "sourceLink": "https://21centcomposers.ru/info/maxim_novikov"
+    }
+  ],
+  "shortBiographies": [
+    {
+      "category": "composers",
+      "name": "Марианна Домникова",
+      "slug": "marianna-domnikova",
+      "url": "/participants/composers/marianna-domnikova",
+      "image": "/src/assets/participants/DomnikovaM.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/DomnikovaM.jpg"
+      },
+      "biographyParagraphs": 1,
+      "biographyChars": 98,
+      "hasDetails": true,
+      "descriptionChars": 104,
+      "biographyStart": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+      "sourceLink": "https://21centcomposers.ru/persons/ax4111gjb1-marianna-domnikova"
+    },
+    {
+      "category": "composers",
+      "name": "Михаил Тарбагаев",
+      "slug": "mikhail-tarbagaev",
+      "url": "/participants/composers/mikhail-tarbagaev",
+      "image": "/src/assets/participants/TarbagaevM.jpg",
+      "imageCheck": {
+        "kind": "local",
+        "exists": true,
+        "file": "src/assets/participants/TarbagaevM.jpg"
+      },
+      "biographyParagraphs": 1,
+      "biographyChars": 98,
+      "hasDetails": true,
+      "descriptionChars": 31,
+      "biographyStart": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+      "sourceLink": "https://21centcomposers.ru/persons/gi3ty9zkm1-mihail-tarbagaev"
+    }
+  ],
+  "repeatedBiographyParagraphs": [
+    {
+      "paragraph": "Спектакль театра «Практика» «Пётр и Феврония Муромские», музыкальным руководителем которого выступил Пётр Главатских, был в 2015 году удостоен Национальной театральной премии «Золотая маска» в номинации «Эксперимент».",
+      "slugs": [
+        "pyotr-glavatskih",
+        "petr-glavatskikh"
+      ]
+    },
+    {
+      "paragraph": "Сольный диск Петра Главатских The Unfound Sound (Fancymusic) вошёл в шорт‑лист премии International Classical Music Awards.",
+      "slugs": [
+        "pyotr-glavatskih",
+        "petr-glavatskikh"
+      ]
+    },
+    {
+      "paragraph": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+      "slugs": [
+        "rust-pozyumskii",
+        "aleksandr-chaykovsky",
+        "sergey-akhunov",
+        "pavel-karmanov",
+        "vladimir-martynov",
+        "pavel-tursunov",
+        "georg-peletsis",
+        "leonid-desyatnikov",
+        "erik-eshenvalds",
+        "aleksei-retinskii",
+        "arvo-pyart",
+        "neboisha-zhivkovich",
+        "andrei-komissarov",
+        "kaiya-saariakho",
+        "nastasya-khrushcheva",
+        "andrei-zelenskii",
+        "sergei-zhukov",
+        "sergei-pleshak",
+        "dzhordzh-kram",
+        "elmir-nizamov",
+        "salvatore-sharrino",
+        "giiom-konesson",
+        "marianna-domnikova",
+        "devid-leng",
+        "peteris-vasks",
+        "petr-glavatskikh",
+        "anastasiya-druzhinina",
+        "yurii-kasparov",
+        "vladimir-kobekin",
+        "ivan-sokolov",
+        "mikhail-tarbagaev",
+        "andreas-mustukis",
+        "ekaterina-kozhevnikova",
+        "andrei-zubets",
+        "gleb-yakovlev",
+        "vladimir-radchenkov",
+        "oleg-paiberdin",
+        "artem-makoyan"
+      ]
+    }
+  ],
+  "sameNameWithinCategory": [],
+  "duplicateRawSlugs": {
+    "legacyComposers": [],
+    "generatedComposers": [
+      {
+        "key": "artem-makoyan",
+        "items": [
+          {
+            "name": "Артем Макоян",
+            "slug": "artem-makoyan",
+            "role": "composer",
+            "description": "Музыкант, пианист-импровизатор",
+            "photo": "MakoyanA.jpg",
+            "image": "",
+            "link": "https://21centcomposers.ru/persons/fm4zysben1-artem-makoyan"
+          },
+          {
+            "name": "Артем Макоян",
+            "slug": "artem-makoyan",
+            "role": "composer",
+            "description": "Артём Макоян — музыкант, пианист‑импровизатор.",
+            "photo": "MakoyanA.jpg",
+            "image": "",
+            "link": "https://21centcomposers.ru/persons/fm4zysben1-artem-makoyan"
+          }
+        ]
+      }
+    ],
+    "legacyPerformers": [],
+    "generatedPerformers": []
+  },
+  "orphanBiographies": [],
+  "sitemapMissingProfiles": [
+    "/participants/composers/leonid-desyatnikov",
+    "/participants/composers/aleksandr-chaykovsky",
+    "/participants/composers/sergey-akhunov",
+    "/participants/composers/pavel-karmanov",
+    "/participants/composers/vladimir-martynov",
+    "/participants/composers/pavel-tursunov",
+    "/participants/composers/georg-peletsis",
+    "/participants/composers/erik-eshenvalds",
+    "/participants/composers/edison-denisov",
+    "/participants/composers/yanis-ksenakis",
+    "/participants/composers/aleksei-retinskii",
+    "/participants/composers/anastasiya-druzhinina",
+    "/participants/composers/andreas-mustukis",
+    "/participants/composers/andrei-zelenskii",
+    "/participants/composers/andrei-zubets",
+    "/participants/composers/andrei-komissarov",
+    "/participants/composers/arvo-pyart",
+    "/participants/composers/artem-makoyan",
+    "/participants/composers/vladimir-volkov",
+    "/participants/composers/vladimir-kobekin",
+    "/participants/composers/vladimir-radchenkov",
+    "/participants/composers/giiom-konesson",
+    "/participants/composers/gleb-yakovlev",
+    "/participants/composers/dzhordzh-kram",
+    "/participants/composers/devid-leng",
+    "/participants/composers/ekaterina-kozhevnikova",
+    "/participants/composers/ivan-sokolov",
+    "/participants/composers/kaiya-saariakho",
+    "/participants/composers/marianna-domnikova",
+    "/participants/composers/mihail-makorda",
+    "/participants/composers/mikhail-tarbagaev",
+    "/participants/composers/nastasya-khrushcheva",
+    "/participants/composers/neboisha-zhivkovich",
+    "/participants/composers/oleg-paiberdin",
+    "/participants/composers/olga-ivanova",
+    "/participants/composers/peteris-vasks",
+    "/participants/composers/petr-glavatskikh",
+    "/participants/composers/rust-pozyumskii",
+    "/participants/composers/salvatore-sharrino",
+    "/participants/composers/sergei-zhukov",
+    "/participants/composers/sergei-pleshak",
+    "/participants/composers/elmir-nizamov",
+    "/participants/composers/yurii-kasparov",
+    "/participants/soloists/u03c48z581-aleksei-goribol",
+    "/participants/soloists/maxim_novikov",
+    "/participants/soloists/bxainxg0p1-aleksei-lundin",
+    "/participants/soloists/vtyrvc09l1-andrei-berezin",
+    "/participants/soloists/xphk1vgsn1-daniil-sayamov",
+    "/participants/soloists/sergei-poltavskii",
+    "/participants/soloists/natalia-muradymova",
+    "/participants/soloists/yuliya-igonina",
+    "/participants/soloists/alisa-ten",
+    "/participants/soloists/aleksandr-malomozhnov",
+    "/participants/soloists/lotova-aleksandra",
+    "/participants/soloists/aleksei-petrov",
+    "/participants/soloists/ayako-tanabe",
+    "/participants/soloists/vladimir-volkov",
+    "/participants/soloists/dmitrii-onischenko",
+    "/participants/soloists/evgenii-rumyantsev",
+    "/participants/soloists/evgenii-starodubtsev",
+    "/participants/soloists/ekaterina-mochalova",
+    "/participants/soloists/grunina-elizaveta",
+    "/participants/soloists/igor-stepanich",
+    "/participants/soloists/inna-zilberman",
+    "/participants/soloists/kseniya-zhuleva",
+    "/participants/soloists/kseniya-knorre",
+    "/participants/soloists/lilya-valieva-i-mihail-makorda",
+    "/participants/soloists/natalia-sokolovskaya",
+    "/participants/soloists/olga-demina",
+    "/participants/soloists/olga-ivanova",
+    "/participants/soloists/olga-kalinova",
+    "/participants/soloists/pavel-dombrovskiy",
+    "/participants/soloists/pyotr-glavatskih",
+    "/participants/soloists/roman-vykulov",
+    "/participants/soloists/rust-pozyumskii",
+    "/participants/soloists/stanislav-malyshev",
+    "/participants/soloists/fyodor-shinkevich",
+    "/participants/soloists/feiginova-ella",
+    "/participants/soloists/eleonora-tepluhina",
+    "/participants/ensembles/2k7b12lg01-solisti-nizhnego-novgoroda",
+    "/participants/ensembles/opensoundorchestra",
+    "/participants/ensembles/185385o731-brezel-ensemble",
+    "/participants/ensembles/bcix09uev1-ansambl-classica-plus",
+    "/participants/ensembles/kvartet_glinki",
+    "/participants/ensembles/2ci5ibo0z1-horovoi-ansambl-melodiya",
+    "/participants/ensembles/jsspbiezo1-le-thlme-ensemble"
+  ],
+  "sitemapUnknownProfiles": [],
+  "programmeMissingImages": [],
+  "duplicateConcertIds": [],
+  "duplicateBroadcastIds": [],
+  "concertCounts": {
+    "programmes": 15,
+    "broadcasts": 12
+  }
+}

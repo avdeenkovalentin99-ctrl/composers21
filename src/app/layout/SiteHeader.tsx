@@ -1,4 +1,4 @@
-import { type CSSProperties, type FocusEvent, type RefObject, useEffect, useId, useRef, useState } from "react";
+import { type CSSProperties, type FocusEvent, type RefObject, useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
 import { navigationItems } from "../data/navigation";
@@ -8,6 +8,7 @@ import { type NavTheme, useNavigationRailTheme } from "./useNavigationRailTheme"
 import { useHomeRailEntrance } from "./useHomeRailEntrance";
 import "./homeRailEntrance.css";
 import { homeDesktopQuery } from "./homeViewport";
+import { useFocusScope } from "./useFocusScope";
 
 function isNavItemActive(item: NavItem, pathname: string) {
   if (item.to === "/") {
@@ -44,12 +45,22 @@ function DesktopNavigationRail({
   const [submenuIndicator, setSubmenuIndicator] = useState({ y: 0, height: 0 });
   const activeGroup = navigationItems.find((item): item is NavGroup => isNavGroup(item) && item.label === openGroup);
   const railRef = useRef<HTMLElement | null>(null);
+  const groupTriggerRef = useRef<HTMLButtonElement | null>(null);
   const clipRef = useRef<SVGClipPathElement | null>(null);
   const clipId = `navigation-rail-${useId().replace(/:/g, "")}`;
   const [hoveredRailIndex, setHoveredRailIndex] = useState<number | null>(null);
   const [focusedRailIndex, setFocusedRailIndex] = useState<number | null>(null);
   useNavigationRailTheme({ railRef, clipRef, pathname, navTheme });
   useHomeRailEntrance({ railRef, pathname });
+  useFocusScope(navigationRef, Boolean(activeGroup), onClose, groupTriggerRef);
+
+  useLayoutEffect(() => {
+    const drawer = navigationRef.current?.querySelector<HTMLElement>("#desktop-navigation-drawer");
+    if (drawer) {
+      drawer.inert = !activeGroup;
+      drawer.setAttribute("aria-hidden", String(!activeGroup));
+    }
+  }, [activeGroup, navigationRef]);
 
   const railItemClassName = "font-editorial-sans relative flex min-h-0 flex-1 items-center justify-center text-[11px] font-medium uppercase leading-none tracking-[0.14em]";
   const renderArtwork = (theme: NavTheme) => (
@@ -90,13 +101,14 @@ function DesktopNavigationRail({
   useEffect(() => setHoveredSubmenuIndex(null), [openGroup]);
 
   return (
-    <div ref={navigationRef} className={`pointer-events-none fixed inset-y-0 right-0 z-[80] hidden ${pathname === "/" ? "home-desktop:block" : "lg:block"}`}>
+    <div ref={navigationRef} role={activeGroup ? "dialog" : undefined} aria-modal={activeGroup ? true : undefined} aria-label={activeGroup ? `Навигация ${activeGroup.label}` : undefined} tabIndex={-1} className={`pointer-events-none fixed inset-y-0 right-0 z-[80] hidden ${pathname === "/" ? "home-desktop:block" : "lg:block"}`}>
       <AnimatePresence>
         {activeGroup ? (
           <motion.button
             key="desktop-navigation-backdrop"
             type="button"
             aria-label="Закрыть подменю"
+            tabIndex={-1}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -182,7 +194,7 @@ function DesktopNavigationRail({
             onBlur: () => setFocusedRailIndex(null),
           };
           return hasSubmenu ? (
-            <button key={item.label} type="button" {...interactionProps} aria-expanded={isOpen} aria-controls="desktop-navigation-drawer" onClick={() => onToggleGroup(item.label)}>
+            <button key={item.label} type="button" {...interactionProps} aria-expanded={isOpen} aria-controls="desktop-navigation-drawer" onClick={(event) => { groupTriggerRef.current = event.currentTarget; onToggleGroup(item.label); }}>
               <span className="sr-only">{item.label}</span>
             </button>
           ) : (
@@ -217,21 +229,13 @@ export function SiteHeader({ mode = "default", navTheme }: { mode?: SiteHeaderMo
     const handlePointerDown = (event: PointerEvent) => {
       if (!desktopNavigationRef.current?.contains(event.target as Node)) setOpenDesktopGroup(null);
     };
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpenDesktopGroup(null);
-    };
     const desktopQuery = window.matchMedia(location.pathname === "/" ? homeDesktopQuery : "(min-width: 64rem)");
     const handleResize = () => { if (!desktopQuery.matches) setOpenDesktopGroup(null); };
     document.addEventListener("pointerdown", handlePointerDown);
-    document.addEventListener("keydown", handleKeyDown);
     desktopQuery.addEventListener("change", handleResize);
-    const previousRootOverflow = document.documentElement.style.overflow;
-    document.documentElement.style.overflow = "hidden";
     return () => {
       document.removeEventListener("pointerdown", handlePointerDown);
-      document.removeEventListener("keydown", handleKeyDown);
       desktopQuery.removeEventListener("change", handleResize);
-      document.documentElement.style.overflow = previousRootOverflow;
     };
   }, [openDesktopGroup, location.pathname]);
 

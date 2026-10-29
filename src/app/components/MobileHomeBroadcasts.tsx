@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "./ResponsiveImage";
 import type { CSSProperties } from "react";
 import { EditorialCta } from "./ui/EditorialCta";
 import type { BroadcastItem } from "../data/broadcasts";
@@ -24,7 +25,7 @@ export function MobileHomeBroadcasts({ broadcasts, activeIndex, onSelect }: Mobi
         <a className="mobile-home-broadcasts__preview" href={activeBroadcast.url} target="_blank" rel="noreferrer"
           aria-label={`Смотреть запись: ${activeBroadcast.title}`}>
           <div data-broadcast-photo>
-          <img src={activeBroadcast.previewImage} alt="" loading="lazy" decoding="async" />
+          <ResponsiveImage src={activeBroadcast.previewImage} alt="" loading="lazy" decoding="async" />
           <span className="mobile-home-broadcasts__watch">смотреть запись <span aria-hidden="true">→</span></span>
           </div>
         </a>

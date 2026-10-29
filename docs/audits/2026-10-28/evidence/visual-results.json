@@ -1,0 +1,427 @@
+[
+  {
+    "probe": "first-screen",
+    "width": 320,
+    "height": 568,
+    "data": {
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 568,
+        "top": 0,
+        "right": 320,
+        "bottom": 568,
+        "left": 0
+      },
+      "title": {
+        "x": 67.203125,
+        "y": 330.0703125,
+        "width": 185.59375,
+        "height": 49.609375,
+        "top": 330.0703125,
+        "right": 252.796875,
+        "bottom": 379.6796875,
+        "left": 67.203125
+      },
+      "meta": {
+        "x": 0,
+        "y": 497.078125,
+        "width": 320,
+        "height": 36.84375,
+        "top": 497.078125,
+        "right": 320,
+        "bottom": 533.921875,
+        "left": 0
+      },
+      "cookie": {
+        "x": 16,
+        "y": 470,
+        "width": 288,
+        "height": 70,
+        "top": 470,
+        "right": 304,
+        "bottom": 540,
+        "left": 16
+      },
+      "root": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 4627,
+        "top": 0,
+        "right": 320,
+        "bottom": 4627,
+        "left": 0
+      },
+      "videos": [
+        {
+          "src": "http://127.0.0.1:4188/assets/herovidv2-DFVyMT-U.mp4",
+          "ready": 4
+        },
+        {
+          "src": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+          "ready": 4
+        }
+      ]
+    }
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 320,
+    "route": "/privacy",
+    "textOverflow": [
+      {
+        "text": "Политика конфиденциальности",
+        "cls": "font-editorial-serif text-[2.35rem] font-normal leading-none text-neutral-950 sm:text-[3rem]",
+        "rect": {
+          "x": 20,
+          "y": 122,
+          "width": 324.21875,
+          "height": 86.59375,
+          "top": 122,
+          "right": 344.21875,
+          "bottom": 208.59375,
+          "left": 20
+        }
+      }
+    ],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "Политика конфиденциальности",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 320,
+    "route": "/team",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "Команда",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 320,
+    "route": "/participants",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "Участники фестиваля",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 320,
+    "route": "/afisha",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "программа фестиваля",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 320,
+    "route": "/translyatsii",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "Трансляции",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 320,
+    "route": "/media",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": []
+  },
+  {
+    "probe": "first-screen",
+    "width": 390,
+    "height": 844,
+    "data": {
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "title": {
+        "x": 81.90625,
+        "y": 512.2265625,
+        "width": 226.1875,
+        "height": 49.609375,
+        "top": 512.2265625,
+        "right": 308.09375,
+        "bottom": 561.8359375,
+        "left": 81.90625
+      },
+      "meta": {
+        "x": 0,
+        "y": 776.390625,
+        "width": 390,
+        "height": 16.984375,
+        "top": 776.390625,
+        "right": 390,
+        "bottom": 793.375,
+        "left": 0
+      },
+      "cookie": {
+        "x": 16,
+        "y": 746,
+        "width": 358,
+        "height": 70,
+        "top": 746,
+        "right": 374,
+        "bottom": 816,
+        "left": 16
+      },
+      "root": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 4882.78125,
+        "top": 0,
+        "right": 390,
+        "bottom": 4882.78125,
+        "left": 0
+      },
+      "videos": [
+        {
+          "src": "http://127.0.0.1:4188/assets/herovidv2-DFVyMT-U.mp4",
+          "ready": 4
+        },
+        {
+          "src": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+          "ready": 4
+        }
+      ]
+    }
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 390,
+    "route": "/privacy",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "Политика конфиденциальности",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 390,
+    "route": "/team",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "Команда",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 390,
+    "route": "/participants",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "Участники фестиваля",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 390,
+    "route": "/afisha",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "программа фестиваля",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 390,
+    "route": "/translyatsii",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": [
+      {
+        "text": "Трансляции",
+        "display": "block",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "probe": "text-and-contrast",
+    "width": 390,
+    "route": "/media",
+    "textOverflow": [],
+    "footer": {
+      "color": "oklab(0.556 0 0 / 0.7)",
+      "compositedOnWhite": [
+        157,
+        157,
+        157,
+        255
+      ],
+      "contrast": 2.7120317074963944,
+      "font": "14px"
+    },
+    "h1": []
+  }
+]

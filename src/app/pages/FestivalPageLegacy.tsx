@@ -1,3 +1,5 @@
+import { MotionImage, ResponsiveImage } from "../components/ResponsiveImage";
+import { Play } from "lucide-react";
 import { type CSSProperties, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Link } from "react-router-dom";
@@ -13,6 +15,7 @@ import { FestivalIntro } from "../components/hero/FestivalIntro";
 import { broadcasts } from "../data/broadcasts";
 import { cultureReports, mediaMaterials } from "../data/media";
 import { PageContainer } from "../layout/PageContainer";
+import { safeLocalStorage } from "../utils/browserStorage";
 import { useFestivalYearEntrance } from "../components/useFestivalYearEntrance";
 import { useFestivalFigureMotion } from "../components/useFestivalFigureMotion";
 import "../components/FestivalYearMotion.css";
@@ -55,11 +58,11 @@ function CookieNotice() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(window.localStorage.getItem(cookieStorageKey) !== "true");
+    setIsVisible(safeLocalStorage.getItem(cookieStorageKey) !== "true");
   }, []);
 
   function acceptCookies() {
-    window.localStorage.setItem(cookieStorageKey, "true");
+    safeLocalStorage.setItem(cookieStorageKey, "true");
     setIsVisible(false);
   }
 
@@ -160,9 +163,10 @@ export function FestivalPageLegacy() {
                   >
                     <div data-broadcast-photo>
                     <AnimatePresence mode="wait" initial={false}>
-                      <motion.img
+                      <MotionImage
                         key={activeBroadcast.id}
                         src={activeBroadcast.previewImage}
+                        loading="lazy" decoding="async"
                         alt=""
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -274,7 +278,7 @@ export function FestivalPageLegacy() {
                 <div className={`relative overflow-hidden ${index === 0 ? "aspect-[1.3/1]" : "aspect-[1.45/1]"}`}>
                   <div data-sync-image-mask>
                     <div data-sync-image-shift>
-                      <img
+                      <ResponsiveImage
                         src={report.previewImage}
                         alt=""
                         loading="lazy"
@@ -284,7 +288,7 @@ export function FestivalPageLegacy() {
                     </div>
                   </div>
                   <span data-sync-play className="absolute bottom-4 left-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/88 pl-0.5 text-[12px] text-neutral-900" aria-hidden="true">
-                    ▶
+                    <Play size={12} fill="currentColor" strokeWidth={0} aria-hidden="true" focusable="false" />
                   </span>
                 </div>
                 <h3 className={`font-editorial-serif mt-4 font-normal leading-[1.18] tracking-[-0.01em] text-neutral-900 ${index === 0 ? "text-[21px] xl:text-[23px]" : "text-[19px] xl:text-[21px]"}`}>

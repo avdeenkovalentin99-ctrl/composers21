@@ -162,7 +162,7 @@
   background: transparent;
   color: inherit;
   font-family: inherit;
-  font-size: clamp(9px, calc(2.15 * var(--home-mobile-unit, 1vw)), 12px);
+  font-size: clamp(11px, calc(2.8 * var(--home-mobile-unit, 1vw)), 12px);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.07em;

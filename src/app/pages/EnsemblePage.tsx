@@ -1,3 +1,4 @@
+import { PHOTO_FALLBACK_SRC, ResponsiveImage } from "../components/ResponsiveImage";
 import { motion } from "motion/react";
 import { ChevronLeft } from "lucide-react";
 import { Link, Navigate, useParams } from "react-router-dom";
@@ -66,8 +67,10 @@ export function EnsemblePage() {
                 transition={{ duration: 0.96, ease: "easeOut" }}
                 className="relative overflow-hidden bg-neutral-950/5"
               >
-                <img
+                <ResponsiveImage
+                  coverAspectRatio={3 / 2}
                   src={ensemble.image}
+                  fallbackSrc={PHOTO_FALLBACK_SRC}
                   alt={ensemble.name}
                   loading="eager"
                   decoding="async"

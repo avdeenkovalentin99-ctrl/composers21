@@ -4,6 +4,17 @@ import { performers as legacyPerformers } from "./performers.legacy";
 import type { PersonItem } from "./types";
 import { resolvePublicAssetPath } from "../utils/assets";
 
+// Verified local copies take precedence over imported CDN URLs for these
+// ensembles. Keep this explicit so unrelated soloist photo choices do not change.
+const verifiedLocalEnsembleSlugs = new Set([
+  "opensoundorchestra",
+  "185385o731-brezel-ensemble",
+  "bcix09uev1-ansambl-classica-plus",
+  "kvartet_glinki",
+  "2ci5ibo0z1-horovoi-ansambl-melodiya",
+  "jsspbiezo1-le-thlme-ensemble",
+]);
+
 function resolveParticipantImage(image: string) {
   return image ? resolvePublicAssetPath(image) : "";
 }
@@ -20,7 +31,8 @@ function mergeBySlug(legacyList: PersonItem[], generatedList: GeneratedParticipa
 
   for (const item of generatedList) {
     const existing = merged.get(item.slug);
-    const generatedImage = item.image || getParticipantImage(item.photo);
+    const verifiedLocalImage = verifiedLocalEnsembleSlugs.has(item.slug) ? existing?.image : "";
+    const generatedImage = verifiedLocalImage || item.image || getParticipantImage(item.photo);
     merged.set(item.slug, {
       slug: item.slug,
       name: item.name || existing?.name || "",

@@ -1,3 +1,5 @@
+import { ResponsiveImage } from "./ResponsiveImage";
+import { Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { MediaMaterial } from "../data/media";
 import { EditorialCta } from "./ui/EditorialCta";
@@ -26,10 +28,10 @@ export function MobileHomeMedia({ reports, articles }: MobileHomeMediaProps) {
               <div className="mobile-home-media__preview">
                 <div data-sync-image-mask>
                   <div data-sync-image-shift>
-                    <img src={report.previewImage} alt="" loading="lazy" decoding="async" />
+                    <ResponsiveImage src={report.previewImage} alt="" loading="lazy" decoding="async" />
                   </div>
                 </div>
-                <span className="mobile-home-media__play" data-sync-play aria-hidden="true">▶</span>
+                <span className="mobile-home-media__play" data-sync-play aria-hidden="true"><Play size={12} fill="currentColor" strokeWidth={0} aria-hidden="true" focusable="false" /></span>
               </div>
               <h3><MediaSyncText id="title">{report.title}</MediaSyncText></h3>
               <p className="mobile-home-media__caption"><MediaSyncText id="meta">{report.source} · {report.date}</MediaSyncText></p>

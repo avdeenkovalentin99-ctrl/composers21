@@ -20,12 +20,17 @@
 }
 .logo-video-hero__heading { position: absolute; z-index: 2; left: 24.21875%; width: 34.375%; bottom: calc(97.297297% + 12px); display: flex; align-items: baseline; justify-content: space-between; }
 .logo-video-hero__status { flex: 0 0 34.375cqw; margin: 0; line-height: 1; text-align: left; font-family: var(--font-editorial-sans); font-size: max(11px, 2.1885cqw); font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; }
-.logo-video-hero__emblem { container-type: inline-size; position: absolute; top: 48%; left: 33%; width: min(48vw, 94.5svh); aspect-ratio: 256 / 185; transform: translate(-50%, -50%); opacity: 0; transition: opacity 320ms ease; }
-.logo-video-hero__emblem[data-video-ready="true"] { opacity: 1; }
-.logo-video-hero__mass { position: absolute; overflow: hidden; background: #777b7d; }
+.logo-video-hero__emblem { container-type: inline-size; position: absolute; top: 48%; left: 33%; width: min(48vw, 94.5svh); aspect-ratio: 256 / 185; transform: translate(-50%, -50%); }
+.logo-video-hero__mass { position: absolute; overflow: hidden; background-color: #777b7d; background-size: cover; filter: grayscale(1); }
 .logo-video-hero__mass--first { left: 24.21875%; top: 2.702703%; width: 34.375%; height: 88.648649%; }
 .logo-video-hero__mass--second { left: 66.40625%; top: 11.351351%; width: 17.96875%; height: 85.405405%; }
-.logo-video-hero__mass video { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+.logo-video-hero__mass video { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; pointer-events: none; }
+.logo-video-hero__mass video::-webkit-media-controls { display: none !important; }
+.logo-video-hero__mass video::-webkit-media-controls-enclosure { display: none !important; }
+.logo-video-hero__mass video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+.logo-video-hero__mass video[data-has-frame="true"] { opacity: 1; }
+.logo-video-hero__mass--first { background-position: 46% center; }
+.logo-video-hero__mass--second { background-position: 58% center; }
 .logo-video-hero__mass--first video { object-position: 46% center; }
 .logo-video-hero__mass--second video { object-position: 58% center; }
 .logo-video-hero__drawing { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }

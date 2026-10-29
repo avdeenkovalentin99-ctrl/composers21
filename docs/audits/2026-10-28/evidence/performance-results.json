@@ -1,0 +1,754 @@
+[
+  {
+    "profile": {
+      "name": "desktop-local",
+      "width": 1440,
+      "height": 900,
+      "throttled": false
+    },
+    "checkpoints": [
+      {
+        "sec": 5,
+        "time": 5026.299999952316,
+        "fonts": "loaded",
+        "emblem": "true",
+        "metrics": {
+          "lcp": [
+            {
+              "start": 384,
+              "size": 4192,
+              "element": "P",
+              "cls": "font-editorial-sans text-sm leading-[1.6] text-neutral-500/70"
+            },
+            {
+              "start": 764,
+              "size": 22952,
+              "element": "H1",
+              "cls": "logo-video-hero__title"
+            }
+          ],
+          "shifts": [
+            {
+              "start": 430.89999997615814,
+              "value": 0.00005629973234953703
+            },
+            {
+              "start": 743.6999999284744,
+              "value": 0.08796296296296297
+            }
+          ],
+          "long": [
+            {
+              "start": 120.79999995231628,
+              "duration": 63
+            },
+            {
+              "start": 186.59999990463257,
+              "duration": 82
+            },
+            {
+              "start": 269.2999999523163,
+              "duration": 81
+            },
+            {
+              "start": 560.1999999284744,
+              "duration": 143
+            }
+          ]
+        },
+        "paint": [
+          {
+            "name": "first-paint",
+            "start": 384
+          },
+          {
+            "name": "first-contentful-paint",
+            "start": 384
+          }
+        ]
+      }
+    ],
+    "network": [
+      {
+        "url": "http://127.0.0.1:4188/",
+        "type": "Document",
+        "bytes": 0,
+        "finished": true,
+        "totalEncoded": 1170
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/index-DGV_nrdb.js",
+        "type": "Script",
+        "bytes": 67353,
+        "finished": true,
+        "totalEncoded": 67708
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/PageContainer-C9t5mpsA.js",
+        "type": "Script",
+        "bytes": 780,
+        "finished": true,
+        "totalEncoded": 1133
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/react-DsxAG0_1.js",
+        "type": "Script",
+        "bytes": 2895,
+        "finished": true,
+        "totalEncoded": 3253
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/chunk-QFMPRPBF-Cev1e9LE.js",
+        "type": "Script",
+        "bytes": 30622,
+        "finished": true,
+        "totalEncoded": 30981
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/reduced-motion-8fmAqGTy.js",
+        "type": "Script",
+        "bytes": 269,
+        "finished": true,
+        "totalEncoded": 590
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/resolve-elements-MF8OGVng.js",
+        "type": "Script",
+        "bytes": 248,
+        "finished": true,
+        "totalEncoded": 569
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/proxy-sf1U8RrW.js",
+        "type": "Script",
+        "bytes": 38873,
+        "finished": true,
+        "totalEncoded": 39228
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/AnimatePresence-D694qv8y.js",
+        "type": "Script",
+        "bytes": 1869,
+        "finished": true,
+        "totalEncoded": 2222
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/createLucideIcon-DEbbfNSo.js",
+        "type": "Script",
+        "bytes": 810,
+        "finished": true,
+        "totalEncoded": 1163
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/viewportFrame-D4r6iycH.js",
+        "type": "Script",
+        "bytes": 731,
+        "finished": true,
+        "totalEncoded": 1052
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/pageMeta-YkbdTnjy.js",
+        "type": "Script",
+        "bytes": 841,
+        "finished": true,
+        "totalEncoded": 1194
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/yandexMetrika-DrkKJyel.js",
+        "type": "Script",
+        "bytes": 998,
+        "finished": true,
+        "totalEncoded": 1319
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/index-Dh7njMnA.css",
+        "type": "Stylesheet",
+        "bytes": 19339,
+        "finished": true,
+        "totalEncoded": 19687
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/FestivalPageLegacy-CxM7bl46.js",
+        "type": "Script",
+        "bytes": 10154,
+        "finished": true,
+        "totalEncoded": 10508
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/FestivalIntro-CZFuv2o9.js",
+        "type": "Script",
+        "bytes": 3088,
+        "finished": true,
+        "totalEncoded": 3446
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/FestivalIntro-Dzzc3Ie1.css",
+        "type": "Stylesheet",
+        "bytes": 1779,
+        "finished": true,
+        "totalEncoded": 2125
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/broadcasts-hfmLaa4M.js",
+        "type": "Script",
+        "bytes": 4844,
+        "finished": true,
+        "totalEncoded": 5203
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/concertProgrammes-DPR03TOW.js",
+        "type": "Script",
+        "bytes": 6341,
+        "finished": true,
+        "totalEncoded": 6700
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/media-c5vDKKSk.js",
+        "type": "Script",
+        "bytes": 1515,
+        "finished": true,
+        "totalEncoded": 1868
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/FestivalPageLegacy-saeHywbd.css",
+        "type": "Stylesheet",
+        "bytes": 3385,
+        "finished": true,
+        "totalEncoded": 3732
+      },
+      {
+        "url": "http://127.0.0.1:4188/fonts/manrope-variable.ttf",
+        "type": "Font",
+        "bytes": 165420,
+        "finished": true,
+        "totalEncoded": 165740
+      },
+      {
+        "url": "http://127.0.0.1:4188/fonts/eb-garamond-variable.ttf",
+        "type": "Font",
+        "bytes": 851176,
+        "finished": true,
+        "totalEncoded": 851496
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/tag.js?id=108978475",
+        "type": "Script",
+        "bytes": 0,
+        "finished": false
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidv2-DFVyMT-U.mp4",
+        "type": "Media",
+        "bytes": 593574,
+        "finished": false
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+        "type": "Media",
+        "bytes": 528038,
+        "finished": false
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/hero/p31.png",
+        "type": "Image",
+        "bytes": 566234,
+        "finished": true,
+        "totalEncoded": 566503
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidv2-DFVyMT-U.mp4",
+        "type": "Media",
+        "bytes": 62392,
+        "finished": true,
+        "totalEncoded": 62742
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+        "type": "Media",
+        "bytes": 57021,
+        "finished": true,
+        "totalEncoded": 57371
+      },
+      {
+        "url": "http://127.0.0.1:4188/fonts/cormorant-garamond-variable.ttf",
+        "type": "Font",
+        "bytes": 1195560,
+        "finished": true,
+        "totalEncoded": 1195882
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+        "type": "Media",
+        "bytes": 2818048,
+        "finished": false
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidv2-DFVyMT-U.mp4",
+        "type": "Media",
+        "bytes": 3145728,
+        "finished": false
+      }
+    ]
+  },
+  {
+    "profile": {
+      "name": "mobile-1.6mbps-150ms-cpu4",
+      "width": 390,
+      "height": 844,
+      "throttled": true
+    },
+    "checkpoints": [
+      {
+        "sec": 5,
+        "time": 5024.899999976158,
+        "fonts": "loading",
+        "emblem": "false",
+        "metrics": {
+          "lcp": [
+            {
+              "start": 2476,
+              "size": 2737,
+              "element": "P",
+              "cls": "font-editorial-serif text-base leading-[1.4] !text-white/90"
+            },
+            {
+              "start": 4100,
+              "size": 5904,
+              "element": "H1",
+              "cls": "logo-video-hero__title"
+            }
+          ],
+          "shifts": [
+            {
+              "start": 4071.6999999284744,
+              "value": 0.09114108640174991
+            }
+          ],
+          "long": [
+            {
+              "start": 1289.8999999761581,
+              "duration": 371
+            },
+            {
+              "start": 1669.1999999284744,
+              "duration": 501
+            },
+            {
+              "start": 2175.7999999523163,
+              "duration": 296
+            },
+            {
+              "start": 2490.6999999284744,
+              "duration": 55
+            },
+            {
+              "start": 3046.1999999284744,
+              "duration": 995
+            },
+            {
+              "start": 4192.100000023842,
+              "duration": 58
+            }
+          ]
+        },
+        "paint": [
+          {
+            "name": "first-paint",
+            "start": 2476
+          },
+          {
+            "name": "first-contentful-paint",
+            "start": 2476
+          }
+        ]
+      },
+      {
+        "sec": 15,
+        "time": 28513.899999976158,
+        "fonts": "loaded",
+        "emblem": "true",
+        "metrics": {
+          "lcp": [
+            {
+              "start": 2476,
+              "size": 2737,
+              "element": "P",
+              "cls": "font-editorial-serif text-base leading-[1.4] !text-white/90"
+            },
+            {
+              "start": 4100,
+              "size": 5904,
+              "element": "H1",
+              "cls": "logo-video-hero__title"
+            }
+          ],
+          "shifts": [
+            {
+              "start": 4071.6999999284744,
+              "value": 0.09114108640174991
+            },
+            {
+              "start": 6501,
+              "value": 0.00008044159260193548
+            },
+            {
+              "start": 22463.100000023842,
+              "value": 0.00026519936896676245
+            }
+          ],
+          "long": [
+            {
+              "start": 1289.8999999761581,
+              "duration": 371
+            },
+            {
+              "start": 1669.1999999284744,
+              "duration": 501
+            },
+            {
+              "start": 2175.7999999523163,
+              "duration": 296
+            },
+            {
+              "start": 2490.6999999284744,
+              "duration": 55
+            },
+            {
+              "start": 3046.1999999284744,
+              "duration": 995
+            },
+            {
+              "start": 4192.100000023842,
+              "duration": 58
+            },
+            {
+              "start": 6247.399999976158,
+              "duration": 275
+            },
+            {
+              "start": 22208.5,
+              "duration": 278
+            }
+          ]
+        },
+        "paint": [
+          {
+            "name": "first-paint",
+            "start": 2476
+          },
+          {
+            "name": "first-contentful-paint",
+            "start": 2476
+          }
+        ]
+      },
+      {
+        "sec": 30,
+        "time": 30004.600000023842,
+        "fonts": "loaded",
+        "emblem": "true",
+        "metrics": {
+          "lcp": [
+            {
+              "start": 2476,
+              "size": 2737,
+              "element": "P",
+              "cls": "font-editorial-serif text-base leading-[1.4] !text-white/90"
+            },
+            {
+              "start": 4100,
+              "size": 5904,
+              "element": "H1",
+              "cls": "logo-video-hero__title"
+            }
+          ],
+          "shifts": [
+            {
+              "start": 4071.6999999284744,
+              "value": 0.09114108640174991
+            },
+            {
+              "start": 6501,
+              "value": 0.00008044159260193548
+            },
+            {
+              "start": 22463.100000023842,
+              "value": 0.00026519936896676245
+            }
+          ],
+          "long": [
+            {
+              "start": 1289.8999999761581,
+              "duration": 371
+            },
+            {
+              "start": 1669.1999999284744,
+              "duration": 501
+            },
+            {
+              "start": 2175.7999999523163,
+              "duration": 296
+            },
+            {
+              "start": 2490.6999999284744,
+              "duration": 55
+            },
+            {
+              "start": 3046.1999999284744,
+              "duration": 995
+            },
+            {
+              "start": 4192.100000023842,
+              "duration": 58
+            },
+            {
+              "start": 6247.399999976158,
+              "duration": 275
+            },
+            {
+              "start": 22208.5,
+              "duration": 278
+            }
+          ]
+        },
+        "paint": [
+          {
+            "name": "first-paint",
+            "start": 2476
+          },
+          {
+            "name": "first-contentful-paint",
+            "start": 2476
+          }
+        ]
+      }
+    ],
+    "network": [
+      {
+        "url": "http://127.0.0.1:4188/",
+        "type": "Document",
+        "bytes": 0,
+        "finished": true,
+        "totalEncoded": 1170
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/index-DGV_nrdb.js",
+        "type": "Script",
+        "bytes": 67353,
+        "finished": true,
+        "totalEncoded": 67708
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/PageContainer-C9t5mpsA.js",
+        "type": "Script",
+        "bytes": 780,
+        "finished": true,
+        "totalEncoded": 1133
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/react-DsxAG0_1.js",
+        "type": "Script",
+        "bytes": 2900,
+        "finished": true,
+        "totalEncoded": 3253
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/chunk-QFMPRPBF-Cev1e9LE.js",
+        "type": "Script",
+        "bytes": 30627,
+        "finished": true,
+        "totalEncoded": 30981
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/reduced-motion-8fmAqGTy.js",
+        "type": "Script",
+        "bytes": 269,
+        "finished": true,
+        "totalEncoded": 590
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/resolve-elements-MF8OGVng.js",
+        "type": "Script",
+        "bytes": 248,
+        "finished": true,
+        "totalEncoded": 569
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/proxy-sf1U8RrW.js",
+        "type": "Script",
+        "bytes": 38873,
+        "finished": true,
+        "totalEncoded": 39228
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/AnimatePresence-D694qv8y.js",
+        "type": "Script",
+        "bytes": 1869,
+        "finished": true,
+        "totalEncoded": 2222
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/createLucideIcon-DEbbfNSo.js",
+        "type": "Script",
+        "bytes": 810,
+        "finished": true,
+        "totalEncoded": 1163
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/viewportFrame-D4r6iycH.js",
+        "type": "Script",
+        "bytes": 731,
+        "finished": true,
+        "totalEncoded": 1052
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/pageMeta-YkbdTnjy.js",
+        "type": "Script",
+        "bytes": 841,
+        "finished": true,
+        "totalEncoded": 1194
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/yandexMetrika-DrkKJyel.js",
+        "type": "Script",
+        "bytes": 998,
+        "finished": true,
+        "totalEncoded": 1319
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/index-Dh7njMnA.css",
+        "type": "Stylesheet",
+        "bytes": 19339,
+        "finished": true,
+        "totalEncoded": 19687
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/FestivalPageLegacy-CxM7bl46.js",
+        "type": "Script",
+        "bytes": 10154,
+        "finished": true,
+        "totalEncoded": 10508
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/FestivalIntro-CZFuv2o9.js",
+        "type": "Script",
+        "bytes": 3093,
+        "finished": true,
+        "totalEncoded": 3446
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/FestivalIntro-Dzzc3Ie1.css",
+        "type": "Stylesheet",
+        "bytes": 1779,
+        "finished": true,
+        "totalEncoded": 2125
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/broadcasts-hfmLaa4M.js",
+        "type": "Script",
+        "bytes": 4849,
+        "finished": true,
+        "totalEncoded": 5203
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/concertProgrammes-DPR03TOW.js",
+        "type": "Script",
+        "bytes": 6346,
+        "finished": true,
+        "totalEncoded": 6700
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/media-c5vDKKSk.js",
+        "type": "Script",
+        "bytes": 1515,
+        "finished": true,
+        "totalEncoded": 1868
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/FestivalPageLegacy-saeHywbd.css",
+        "type": "Stylesheet",
+        "bytes": 3385,
+        "finished": true,
+        "totalEncoded": 3732
+      },
+      {
+        "url": "http://127.0.0.1:4188/fonts/manrope-variable.ttf",
+        "type": "Font",
+        "bytes": 165420,
+        "finished": true,
+        "totalEncoded": 165740
+      },
+      {
+        "url": "http://127.0.0.1:4188/fonts/eb-garamond-variable.ttf",
+        "type": "Font",
+        "bytes": 851176,
+        "finished": true,
+        "totalEncoded": 851496
+      },
+      {
+        "url": "https://mc.yandex.ru/metrika/tag.js?id=108978475",
+        "type": "Script",
+        "bytes": 0,
+        "finished": false
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidv2-DFVyMT-U.mp4",
+        "type": "Media",
+        "bytes": 51750,
+        "finished": false
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+        "type": "Media",
+        "bytes": 47250,
+        "finished": false
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/hero/p31.png",
+        "type": "Image",
+        "bytes": 566234,
+        "finished": true,
+        "totalEncoded": 566503
+      },
+      {
+        "url": "http://127.0.0.1:4188/fonts/cormorant-garamond-variable.ttf",
+        "type": "Font",
+        "bytes": 1195560,
+        "finished": true,
+        "totalEncoded": 1195882
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+        "type": "Media",
+        "bytes": 57021,
+        "finished": true,
+        "totalEncoded": 57371
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidv2-DFVyMT-U.mp4",
+        "type": "Media",
+        "bytes": 62392,
+        "finished": true,
+        "totalEncoded": 62742
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+        "type": "Media",
+        "bytes": 44246,
+        "finished": false
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidv2-DFVyMT-U.mp4",
+        "type": "Media",
+        "bytes": 1256246,
+        "finished": false
+      },
+      {
+        "url": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+        "type": "Media",
+        "bytes": 1218744,
+        "finished": false
+      }
+    ]
+  }
+]

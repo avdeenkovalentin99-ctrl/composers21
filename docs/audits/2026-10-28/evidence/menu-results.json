@@ -1,0 +1,1961 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "first": {
+      "mobileVisible": "false",
+      "bodyText": "ФЕСТИВАЛЬ СОСТОЯЛСЯ\n\n2026\n\nкомпозиторы\nxxı века\n\n10–31 МАЯ\n\nМОСКВА · ГАЛЕРЕЯ НИКО\n\n15 КОНЦЕРТОВ\n\n«Композиторы XXI века» — фестиваль современной академической музыки, объединяющий композиторов, исполни"
+    },
+    "openFocus": {
+      "tag": "A",
+      "text": "Программа",
+      "cls": "",
+      "rect": {
+        "x": 192,
+        "y": 320,
+        "width": 61.046875,
+        "height": 44,
+        "top": 320,
+        "right": 253.046875,
+        "bottom": 364,
+        "left": 192
+      }
+    },
+    "tabs": [
+      {
+        "tag": "A",
+        "text": "Участники",
+        "cls": "",
+        "rect": {
+          "x": 192,
+          "y": 364,
+          "width": 61.046875,
+          "height": 44,
+          "top": 364,
+          "right": 253.046875,
+          "bottom": 408,
+          "left": 192
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Академии",
+        "cls": "",
+        "rect": {
+          "x": 192,
+          "y": 408,
+          "width": 61.046875,
+          "height": 44,
+          "top": 408,
+          "right": 253.046875,
+          "bottom": 452,
+          "left": 192
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Партнёры",
+        "cls": "",
+        "rect": {
+          "x": 192,
+          "y": 452,
+          "width": 61.046875,
+          "height": 44,
+          "top": 452,
+          "right": 253.046875,
+          "bottom": 496,
+          "left": 192
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Команда",
+        "cls": "",
+        "rect": {
+          "x": 192,
+          "y": 496,
+          "width": 61.046875,
+          "height": 44,
+          "top": 496,
+          "right": 253.046875,
+          "bottom": 540,
+          "left": 192
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Главная",
+        "cls": "active",
+        "rect": {
+          "x": 10,
+          "y": 166,
+          "width": 156,
+          "height": 56,
+          "top": 166,
+          "right": 166,
+          "bottom": 222,
+          "left": 10
+        }
+      },
+      {
+        "tag": "A",
+        "text": "О фестивале",
+        "cls": "",
+        "rect": {
+          "x": 10,
+          "y": 222,
+          "width": 156,
+          "height": 56,
+          "top": 222,
+          "right": 166,
+          "bottom": 278,
+          "left": 10
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Трансляции",
+        "cls": "",
+        "rect": {
+          "x": 10,
+          "y": 278,
+          "width": 156,
+          "height": 56,
+          "top": 278,
+          "right": 166,
+          "bottom": 334,
+          "left": 10
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Медиа",
+        "cls": "",
+        "rect": {
+          "x": 10,
+          "y": 334,
+          "width": 156,
+          "height": 56,
+          "top": 334,
+          "right": 166,
+          "bottom": 390,
+          "left": 10
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2026›",
+        "cls": "",
+        "rect": {
+          "x": 10,
+          "y": 390,
+          "width": 156,
+          "height": 56,
+          "top": 390,
+          "right": 166,
+          "bottom": 446,
+          "left": 10
+        }
+      }
+    ],
+    "geometry": [
+      {
+        "text": "Программа",
+        "r": {
+          "x": 192,
+          "y": 320,
+          "width": 61.046875,
+          "height": 44,
+          "top": 320,
+          "right": 253.046875,
+          "bottom": 364,
+          "left": 192
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Участники",
+        "r": {
+          "x": 192,
+          "y": 364,
+          "width": 61.046875,
+          "height": 44,
+          "top": 364,
+          "right": 253.046875,
+          "bottom": 408,
+          "left": 192
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Академии",
+        "r": {
+          "x": 192,
+          "y": 408,
+          "width": 61.046875,
+          "height": 44,
+          "top": 408,
+          "right": 253.046875,
+          "bottom": 452,
+          "left": 192
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Партнёры",
+        "r": {
+          "x": 192,
+          "y": 452,
+          "width": 61.046875,
+          "height": 44,
+          "top": 452,
+          "right": 253.046875,
+          "bottom": 496,
+          "left": 192
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Команда",
+        "r": {
+          "x": 192,
+          "y": 496,
+          "width": 61.046875,
+          "height": 44,
+          "top": 496,
+          "right": 253.046875,
+          "bottom": 540,
+          "left": 192
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Главная",
+        "r": {
+          "x": 10,
+          "y": 166,
+          "width": 156,
+          "height": 56,
+          "top": 166,
+          "right": 166,
+          "bottom": 222,
+          "left": 10
+        },
+        "font": "9px"
+      },
+      {
+        "text": "О фестивале",
+        "r": {
+          "x": 10,
+          "y": 222,
+          "width": 156,
+          "height": 56,
+          "top": 222,
+          "right": 166,
+          "bottom": 278,
+          "left": 10
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Трансляции",
+        "r": {
+          "x": 10,
+          "y": 278,
+          "width": 156,
+          "height": 56,
+          "top": 278,
+          "right": 166,
+          "bottom": 334,
+          "left": 10
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Медиа",
+        "r": {
+          "x": 10,
+          "y": 334,
+          "width": 156,
+          "height": 56,
+          "top": 334,
+          "right": 166,
+          "bottom": 390,
+          "left": 10
+        },
+        "font": "9px"
+      },
+      {
+        "text": "2026›",
+        "r": {
+          "x": 10,
+          "y": 390,
+          "width": 156,
+          "height": 56,
+          "top": 390,
+          "right": 166,
+          "bottom": 446,
+          "left": 10
+        },
+        "font": "9px"
+      }
+    ],
+    "escapeFocus": {
+      "tag": "BUTTON",
+      "text": "2026›",
+      "cls": "",
+      "rect": {
+        "x": 10,
+        "y": 390,
+        "width": 156,
+        "height": 56,
+        "top": 390,
+        "right": 166,
+        "bottom": 446,
+        "left": 10
+      }
+    },
+    "closed": {
+      "overflow": "",
+      "bodyPosition": ""
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "first": {
+      "mobileVisible": "false",
+      "bodyText": "ФЕСТИВАЛЬ СОСТОЯЛСЯ\n\n2026\n\nкомпозиторы\nxxı века\n\n10–31 МАЯ\n\nМОСКВА · ГАЛЕРЕЯ НИКО\n\n15 КОНЦЕРТОВ\n\n«Композиторы XXI века» — фестиваль современной академической музыки, объединяющий композиторов, исполни"
+    },
+    "openFocus": {
+      "tag": "A",
+      "text": "Программа",
+      "cls": "",
+      "rect": {
+        "x": 230.5,
+        "y": 534,
+        "width": 61.046875,
+        "height": 44,
+        "top": 534,
+        "right": 291.546875,
+        "bottom": 578,
+        "left": 230.5
+      }
+    },
+    "tabs": [
+      {
+        "tag": "A",
+        "text": "Участники",
+        "cls": "",
+        "rect": {
+          "x": 230.5,
+          "y": 578,
+          "width": 61.046875,
+          "height": 44,
+          "top": 578,
+          "right": 291.546875,
+          "bottom": 622,
+          "left": 230.5
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Академии",
+        "cls": "",
+        "rect": {
+          "x": 230.5,
+          "y": 622,
+          "width": 61.046875,
+          "height": 44,
+          "top": 622,
+          "right": 291.546875,
+          "bottom": 666,
+          "left": 230.5
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Партнёры",
+        "cls": "",
+        "rect": {
+          "x": 230.5,
+          "y": 666,
+          "width": 61.046875,
+          "height": 44,
+          "top": 666,
+          "right": 291.546875,
+          "bottom": 710,
+          "left": 230.5
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Команда",
+        "cls": "",
+        "rect": {
+          "x": 230.5,
+          "y": 710,
+          "width": 61.046875,
+          "height": 44,
+          "top": 710,
+          "right": 291.546875,
+          "bottom": 754,
+          "left": 230.5
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Главная",
+        "cls": "active",
+        "rect": {
+          "x": 11.6875,
+          "y": 304,
+          "width": 191.125,
+          "height": 56,
+          "top": 304,
+          "right": 202.8125,
+          "bottom": 360,
+          "left": 11.6875
+        }
+      },
+      {
+        "tag": "A",
+        "text": "О фестивале",
+        "cls": "",
+        "rect": {
+          "x": 11.6875,
+          "y": 360,
+          "width": 191.125,
+          "height": 56,
+          "top": 360,
+          "right": 202.8125,
+          "bottom": 416,
+          "left": 11.6875
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Трансляции",
+        "cls": "",
+        "rect": {
+          "x": 11.6875,
+          "y": 416,
+          "width": 191.125,
+          "height": 56,
+          "top": 416,
+          "right": 202.8125,
+          "bottom": 472,
+          "left": 11.6875
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Медиа",
+        "cls": "",
+        "rect": {
+          "x": 11.6875,
+          "y": 472,
+          "width": 191.125,
+          "height": 56,
+          "top": 472,
+          "right": 202.8125,
+          "bottom": 528,
+          "left": 11.6875
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2026›",
+        "cls": "",
+        "rect": {
+          "x": 11.6875,
+          "y": 528,
+          "width": 191.125,
+          "height": 56,
+          "top": 528,
+          "right": 202.8125,
+          "bottom": 584,
+          "left": 11.6875
+        }
+      }
+    ],
+    "geometry": [
+      {
+        "text": "Программа",
+        "r": {
+          "x": 230.5,
+          "y": 534,
+          "width": 61.046875,
+          "height": 44,
+          "top": 534,
+          "right": 291.546875,
+          "bottom": 578,
+          "left": 230.5
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Участники",
+        "r": {
+          "x": 230.5,
+          "y": 578,
+          "width": 61.046875,
+          "height": 44,
+          "top": 578,
+          "right": 291.546875,
+          "bottom": 622,
+          "left": 230.5
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Академии",
+        "r": {
+          "x": 230.5,
+          "y": 622,
+          "width": 61.046875,
+          "height": 44,
+          "top": 622,
+          "right": 291.546875,
+          "bottom": 666,
+          "left": 230.5
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Партнёры",
+        "r": {
+          "x": 230.5,
+          "y": 666,
+          "width": 61.046875,
+          "height": 44,
+          "top": 666,
+          "right": 291.546875,
+          "bottom": 710,
+          "left": 230.5
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Команда",
+        "r": {
+          "x": 230.5,
+          "y": 710,
+          "width": 61.046875,
+          "height": 44,
+          "top": 710,
+          "right": 291.546875,
+          "bottom": 754,
+          "left": 230.5
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Главная",
+        "r": {
+          "x": 11.6875,
+          "y": 304,
+          "width": 191.125,
+          "height": 56,
+          "top": 304,
+          "right": 202.8125,
+          "bottom": 360,
+          "left": 11.6875
+        },
+        "font": "9px"
+      },
+      {
+        "text": "О фестивале",
+        "r": {
+          "x": 11.6875,
+          "y": 360,
+          "width": 191.125,
+          "height": 56,
+          "top": 360,
+          "right": 202.8125,
+          "bottom": 416,
+          "left": 11.6875
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Трансляции",
+        "r": {
+          "x": 11.6875,
+          "y": 416,
+          "width": 191.125,
+          "height": 56,
+          "top": 416,
+          "right": 202.8125,
+          "bottom": 472,
+          "left": 11.6875
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Медиа",
+        "r": {
+          "x": 11.6875,
+          "y": 472,
+          "width": 191.125,
+          "height": 56,
+          "top": 472,
+          "right": 202.8125,
+          "bottom": 528,
+          "left": 11.6875
+        },
+        "font": "9px"
+      },
+      {
+        "text": "2026›",
+        "r": {
+          "x": 11.6875,
+          "y": 528,
+          "width": 191.125,
+          "height": 56,
+          "top": 528,
+          "right": 202.8125,
+          "bottom": 584,
+          "left": 11.6875
+        },
+        "font": "9px"
+      }
+    ],
+    "escapeFocus": {
+      "tag": "BUTTON",
+      "text": "2026›",
+      "cls": "",
+      "rect": {
+        "x": 11.6875,
+        "y": 528,
+        "width": 191.125,
+        "height": 56,
+        "top": 528,
+        "right": 202.8125,
+        "bottom": 584,
+        "left": 11.6875
+      }
+    },
+    "closed": {
+      "overflow": "",
+      "bodyPosition": ""
+    }
+  },
+  {
+    "probe": "history-back",
+    "before": 982,
+    "after": 0
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "first": {
+      "mobileVisible": "false",
+      "bodyText": "ФЕСТИВАЛЬ СОСТОЯЛСЯ\n\n2026\n\nкомпозиторы\nxxı века\n\n10–31 МАЯ\n\nМОСКВА · ГАЛЕРЕЯ НИКО\n\n15 КОНЦЕРТОВ\n\n«Композиторы XXI века» — фестиваль современной академической музыки, объединяющий композиторов, исполни"
+    },
+    "openFocus": {
+      "tag": "A",
+      "text": "Программа",
+      "cls": "",
+      "rect": {
+        "x": 453.109375,
+        "y": 624,
+        "width": 81.40625,
+        "height": 44,
+        "top": 624,
+        "right": 534.515625,
+        "bottom": 668,
+        "left": 453.109375
+      }
+    },
+    "tabs": [
+      {
+        "tag": "A",
+        "text": "Участники",
+        "cls": "",
+        "rect": {
+          "x": 453.109375,
+          "y": 668,
+          "width": 81.40625,
+          "height": 44,
+          "top": 668,
+          "right": 534.515625,
+          "bottom": 712,
+          "left": 453.109375
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Академии",
+        "cls": "",
+        "rect": {
+          "x": 453.109375,
+          "y": 712,
+          "width": 81.40625,
+          "height": 44,
+          "top": 712,
+          "right": 534.515625,
+          "bottom": 756,
+          "left": 453.109375
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Партнёры",
+        "cls": "",
+        "rect": {
+          "x": 453.109375,
+          "y": 756,
+          "width": 81.40625,
+          "height": 44,
+          "top": 756,
+          "right": 534.515625,
+          "bottom": 800,
+          "left": 453.109375
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Команда",
+        "cls": "",
+        "rect": {
+          "x": 453.109375,
+          "y": 800,
+          "width": 81.40625,
+          "height": 44,
+          "top": 800,
+          "right": 534.515625,
+          "bottom": 844,
+          "left": 453.109375
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Главная",
+        "cls": "active",
+        "rect": {
+          "x": 23.03125,
+          "y": 394,
+          "width": 376.328125,
+          "height": 56,
+          "top": 394,
+          "right": 399.359375,
+          "bottom": 450,
+          "left": 23.03125
+        }
+      },
+      {
+        "tag": "A",
+        "text": "О фестивале",
+        "cls": "",
+        "rect": {
+          "x": 23.03125,
+          "y": 450,
+          "width": 376.328125,
+          "height": 56,
+          "top": 450,
+          "right": 399.359375,
+          "bottom": 506,
+          "left": 23.03125
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Трансляции",
+        "cls": "",
+        "rect": {
+          "x": 23.03125,
+          "y": 506,
+          "width": 376.328125,
+          "height": 56,
+          "top": 506,
+          "right": 399.359375,
+          "bottom": 562,
+          "left": 23.03125
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Медиа",
+        "cls": "",
+        "rect": {
+          "x": 23.03125,
+          "y": 562,
+          "width": 376.328125,
+          "height": 56,
+          "top": 562,
+          "right": 399.359375,
+          "bottom": 618,
+          "left": 23.03125
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2026›",
+        "cls": "",
+        "rect": {
+          "x": 23.03125,
+          "y": 618,
+          "width": 376.328125,
+          "height": 56,
+          "top": 618,
+          "right": 399.359375,
+          "bottom": 674,
+          "left": 23.03125
+        }
+      }
+    ],
+    "geometry": [
+      {
+        "text": "Программа",
+        "r": {
+          "x": 453.109375,
+          "y": 624,
+          "width": 81.40625,
+          "height": 44,
+          "top": 624,
+          "right": 534.515625,
+          "bottom": 668,
+          "left": 453.109375
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Участники",
+        "r": {
+          "x": 453.109375,
+          "y": 668,
+          "width": 81.40625,
+          "height": 44,
+          "top": 668,
+          "right": 534.515625,
+          "bottom": 712,
+          "left": 453.109375
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Академии",
+        "r": {
+          "x": 453.109375,
+          "y": 712,
+          "width": 81.40625,
+          "height": 44,
+          "top": 712,
+          "right": 534.515625,
+          "bottom": 756,
+          "left": 453.109375
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Партнёры",
+        "r": {
+          "x": 453.109375,
+          "y": 756,
+          "width": 81.40625,
+          "height": 44,
+          "top": 756,
+          "right": 534.515625,
+          "bottom": 800,
+          "left": 453.109375
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Команда",
+        "r": {
+          "x": 453.109375,
+          "y": 800,
+          "width": 81.40625,
+          "height": 44,
+          "top": 800,
+          "right": 534.515625,
+          "bottom": 844,
+          "left": 453.109375
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Главная",
+        "r": {
+          "x": 23.03125,
+          "y": 394,
+          "width": 376.328125,
+          "height": 56,
+          "top": 394,
+          "right": 399.359375,
+          "bottom": 450,
+          "left": 23.03125
+        },
+        "font": "12px"
+      },
+      {
+        "text": "О фестивале",
+        "r": {
+          "x": 23.03125,
+          "y": 450,
+          "width": 376.328125,
+          "height": 56,
+          "top": 450,
+          "right": 399.359375,
+          "bottom": 506,
+          "left": 23.03125
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Трансляции",
+        "r": {
+          "x": 23.03125,
+          "y": 506,
+          "width": 376.328125,
+          "height": 56,
+          "top": 506,
+          "right": 399.359375,
+          "bottom": 562,
+          "left": 23.03125
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Медиа",
+        "r": {
+          "x": 23.03125,
+          "y": 562,
+          "width": 376.328125,
+          "height": 56,
+          "top": 562,
+          "right": 399.359375,
+          "bottom": 618,
+          "left": 23.03125
+        },
+        "font": "12px"
+      },
+      {
+        "text": "2026›",
+        "r": {
+          "x": 23.03125,
+          "y": 618,
+          "width": 376.328125,
+          "height": 56,
+          "top": 618,
+          "right": 399.359375,
+          "bottom": 674,
+          "left": 23.03125
+        },
+        "font": "12px"
+      }
+    ],
+    "escapeFocus": {
+      "tag": "BUTTON",
+      "text": "2026›",
+      "cls": "",
+      "rect": {
+        "x": 23.03125,
+        "y": 618,
+        "width": 376.328125,
+        "height": 56,
+        "top": 618,
+        "right": 399.359375,
+        "bottom": 674,
+        "left": 23.03125
+      }
+    },
+    "closed": {
+      "overflow": "",
+      "bodyPosition": ""
+    }
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "first": {
+      "mobileVisible": "false",
+      "bodyText": "ФЕСТИВАЛЬ СОСТОЯЛСЯ\n\n2026\n\nкомпозиторы\nxxı века\n\n10–31 МАЯ\n\nМОСКВА · ГАЛЕРЕЯ НИКО\n\n15 КОНЦЕРТОВ\n\n«Композиторы XXI века» — фестиваль современной академической музыки, объединяющий композиторов, исполни"
+    },
+    "openFocus": {
+      "tag": "A",
+      "text": "Программа",
+      "cls": "",
+      "rect": {
+        "x": 496.1875,
+        "y": 142,
+        "width": 81.40625,
+        "height": 44,
+        "top": 142,
+        "right": 577.59375,
+        "bottom": 186,
+        "left": 496.1875
+      }
+    },
+    "tabs": [
+      {
+        "tag": "A",
+        "text": "Участники",
+        "cls": "",
+        "rect": {
+          "x": 496.1875,
+          "y": 186,
+          "width": 81.40625,
+          "height": 44,
+          "top": 186,
+          "right": 577.59375,
+          "bottom": 230,
+          "left": 496.1875
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Академии",
+        "cls": "",
+        "rect": {
+          "x": 496.1875,
+          "y": 230,
+          "width": 81.40625,
+          "height": 44,
+          "top": 230,
+          "right": 577.59375,
+          "bottom": 274,
+          "left": 496.1875
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Партнёры",
+        "cls": "",
+        "rect": {
+          "x": 496.1875,
+          "y": 274,
+          "width": 81.40625,
+          "height": 44,
+          "top": 274,
+          "right": 577.59375,
+          "bottom": 318,
+          "left": 496.1875
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Команда",
+        "cls": "",
+        "rect": {
+          "x": 496.1875,
+          "y": 318,
+          "width": 81.40625,
+          "height": 44,
+          "top": 318,
+          "right": 577.59375,
+          "bottom": 362,
+          "left": 496.1875
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Главная",
+        "cls": "active",
+        "rect": {
+          "x": 25.3125,
+          "y": 77,
+          "width": 413.5625,
+          "height": 56,
+          "top": 77,
+          "right": 438.875,
+          "bottom": 133,
+          "left": 25.3125
+        }
+      },
+      {
+        "tag": "A",
+        "text": "О фестивале",
+        "cls": "",
+        "rect": {
+          "x": 25.3125,
+          "y": 133,
+          "width": 413.5625,
+          "height": 56,
+          "top": 133,
+          "right": 438.875,
+          "bottom": 189,
+          "left": 25.3125
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Трансляции",
+        "cls": "",
+        "rect": {
+          "x": 25.3125,
+          "y": 189,
+          "width": 413.5625,
+          "height": 56,
+          "top": 189,
+          "right": 438.875,
+          "bottom": 245,
+          "left": 25.3125
+        }
+      },
+      {
+        "tag": "A",
+        "text": "Медиа",
+        "cls": "",
+        "rect": {
+          "x": 25.3125,
+          "y": 245,
+          "width": 413.5625,
+          "height": 56,
+          "top": 245,
+          "right": 438.875,
+          "bottom": 301,
+          "left": 25.3125
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "2026›",
+        "cls": "",
+        "rect": {
+          "x": 25.3125,
+          "y": 301,
+          "width": 413.5625,
+          "height": 56,
+          "top": 301,
+          "right": 438.875,
+          "bottom": 357,
+          "left": 25.3125
+        }
+      }
+    ],
+    "geometry": [
+      {
+        "text": "Программа",
+        "r": {
+          "x": 496.1875,
+          "y": 142,
+          "width": 81.40625,
+          "height": 44,
+          "top": 142,
+          "right": 577.59375,
+          "bottom": 186,
+          "left": 496.1875
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Участники",
+        "r": {
+          "x": 496.1875,
+          "y": 186,
+          "width": 81.40625,
+          "height": 44,
+          "top": 186,
+          "right": 577.59375,
+          "bottom": 230,
+          "left": 496.1875
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Академии",
+        "r": {
+          "x": 496.1875,
+          "y": 230,
+          "width": 81.40625,
+          "height": 44,
+          "top": 230,
+          "right": 577.59375,
+          "bottom": 274,
+          "left": 496.1875
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Партнёры",
+        "r": {
+          "x": 496.1875,
+          "y": 274,
+          "width": 81.40625,
+          "height": 44,
+          "top": 274,
+          "right": 577.59375,
+          "bottom": 318,
+          "left": 496.1875
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Команда",
+        "r": {
+          "x": 496.1875,
+          "y": 318,
+          "width": 81.40625,
+          "height": 44,
+          "top": 318,
+          "right": 577.59375,
+          "bottom": 362,
+          "left": 496.1875
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Главная",
+        "r": {
+          "x": 25.3125,
+          "y": 77,
+          "width": 413.5625,
+          "height": 56,
+          "top": 77,
+          "right": 438.875,
+          "bottom": 133,
+          "left": 25.3125
+        },
+        "font": "12px"
+      },
+      {
+        "text": "О фестивале",
+        "r": {
+          "x": 25.3125,
+          "y": 133,
+          "width": 413.5625,
+          "height": 56,
+          "top": 133,
+          "right": 438.875,
+          "bottom": 189,
+          "left": 25.3125
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Трансляции",
+        "r": {
+          "x": 25.3125,
+          "y": 189,
+          "width": 413.5625,
+          "height": 56,
+          "top": 189,
+          "right": 438.875,
+          "bottom": 245,
+          "left": 25.3125
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Медиа",
+        "r": {
+          "x": 25.3125,
+          "y": 245,
+          "width": 413.5625,
+          "height": 56,
+          "top": 245,
+          "right": 438.875,
+          "bottom": 301,
+          "left": 25.3125
+        },
+        "font": "12px"
+      },
+      {
+        "text": "2026›",
+        "r": {
+          "x": 25.3125,
+          "y": 301,
+          "width": 413.5625,
+          "height": 56,
+          "top": 301,
+          "right": 438.875,
+          "bottom": 357,
+          "left": 25.3125
+        },
+        "font": "12px"
+      }
+    ],
+    "escapeFocus": {
+      "tag": "BUTTON",
+      "text": "2026›",
+      "cls": "",
+      "rect": {
+        "x": 25.3125,
+        "y": 301,
+        "width": 413.5625,
+        "height": 56,
+        "top": 301,
+        "right": 438.875,
+        "bottom": 357,
+        "left": 25.3125
+      }
+    },
+    "closed": {
+      "overflow": "",
+      "bodyPosition": ""
+    }
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "first": {
+      "mobileVisible": "false",
+      "railState": "hidden",
+      "bodyText": "ФЕСТИВАЛЬ СОСТОЯЛСЯ\n\n2026\n\nкомпозиторы\nxxı века\n\n10–31 МАЯ\n\nМОСКВА · ГАЛЕРЕЯ НИКО\n\n15 КОНЦЕРТОВ\n\n«Композиторы XXI века» — фестиваль современной академической музыки, объединяющий композиторов, исполни"
+    },
+    "openFocus": {
+      "tag": "BUTTON",
+      "text": "2026",
+      "cls": "font-editorial-sans relative flex min-h-0 flex-1 items-center justify-center text-[11px] font-medium uppercase leading-none tracking-[0.14em] navigation-rail-action group focus-visible:outline-none",
+      "rect": {
+        "x": 954,
+        "y": 614.40625,
+        "width": 55,
+        "height": 153.59375,
+        "top": 614.40625,
+        "right": 1009,
+        "bottom": 768,
+        "left": 954
+      }
+    },
+    "tabs": [
+      {
+        "tag": "A",
+        "text": "О фестивалеО фестивале",
+        "cls": "editorial-cta festival-intro-reveal festival-intro-cta mt-3 home-desktop:mt-auto self-end home-desktop:self-start",
+        "rect": {
+          "x": 636.625,
+          "y": 302.9375,
+          "width": 141.03125,
+          "height": 34,
+          "top": 302.9375,
+          "right": 777.65625,
+          "bottom": 336.9375,
+          "left": 636.625
+        }
+      },
+      {
+        "tag": "A",
+        "text": "смотреть запись→",
+        "cls": "home-broadcast-card group relative block aspect-[1.9/1] overflow-hidden bg-neutral-900 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-white",
+        "rect": {
+          "x": 48,
+          "y": 610.203125,
+          "width": 525,
+          "height": 276.3125,
+          "top": 610.203125,
+          "right": 573,
+          "bottom": 886.515625,
+          "left": 48
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "15Громче слова31 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 621,
+          "y": 611.203125,
+          "width": 340,
+          "height": 69.671875,
+          "top": 611.203125,
+          "right": 961,
+          "bottom": 680.875,
+          "left": 621
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "02De la nuit / О ночи12 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 621,
+          "y": 677.875,
+          "width": 340,
+          "height": 69.6875,
+          "top": 677.875,
+          "right": 961,
+          "bottom": 747.5625,
+          "left": 621
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "12Новая сакральность28 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 621,
+          "y": 747.5625,
+          "width": 340,
+          "height": 69.6875,
+          "top": 747.5625,
+          "right": 961,
+          "bottom": 817.25,
+          "left": 621
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "11Леонид Десятников. Любовь и жизнь поэта27 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 621,
+          "y": 817.25,
+          "width": 340,
+          "height": 69.6875,
+          "top": 817.25,
+          "right": 961,
+          "bottom": 886.9375,
+          "left": 621
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "04Цветущий жасмин15 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 621,
+          "y": 886.9375,
+          "width": 340,
+          "height": 69.671875,
+          "top": 886.9375,
+          "right": 961,
+          "bottom": 956.609375,
+          "left": 621
+        }
+      },
+      {
+        "tag": "A",
+        "text": "все трансляциивсе трансляции",
+        "cls": "editorial-cta editorial-cta--light mt-10 self-end",
+        "rect": {
+          "x": 787.953125,
+          "y": 996.625,
+          "width": 173.046875,
+          "height": 34,
+          "top": 996.625,
+          "right": 961,
+          "bottom": 1030.625,
+          "left": 787.953125
+        }
+      },
+      {
+        "tag": "A",
+        "text": "медиасмотреть медиа",
+        "cls": "home-media-tile group relative flex min-h-[330px] translate-y-22 flex-col justify-between px-7 pb-8 pt-4 text-white xl:min-h-[370px] xl:translate-y-26 xl:px-9 xl:pb-10 xl:pt-5",
+        "rect": {
+          "x": 48,
+          "y": 1294.625,
+          "width": 190,
+          "height": 330,
+          "top": 1294.625,
+          "right": 238,
+          "bottom": 1624.625,
+          "left": 48
+        }
+      }
+    ],
+    "geometry": [
+      {
+        "text": "Главная",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "О фестивале",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Трансляции",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Медиа",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "2026›",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Программа",
+        "r": {
+          "x": 653,
+          "y": 276.5,
+          "width": 259,
+          "height": 43,
+          "top": 276.5,
+          "right": 912,
+          "bottom": 319.5,
+          "left": 653
+        },
+        "font": "11px"
+      },
+      {
+        "text": "Участники",
+        "r": {
+          "x": 653,
+          "y": 319.5,
+          "width": 259,
+          "height": 43,
+          "top": 319.5,
+          "right": 912,
+          "bottom": 362.5,
+          "left": 653
+        },
+        "font": "11px"
+      },
+      {
+        "text": "Академии",
+        "r": {
+          "x": 653,
+          "y": 362.5,
+          "width": 259,
+          "height": 43,
+          "top": 362.5,
+          "right": 912,
+          "bottom": 405.5,
+          "left": 653
+        },
+        "font": "11px"
+      },
+      {
+        "text": "Партнёры",
+        "r": {
+          "x": 653,
+          "y": 405.5,
+          "width": 259,
+          "height": 43,
+          "top": 405.5,
+          "right": 912,
+          "bottom": 448.5,
+          "left": 653
+        },
+        "font": "11px"
+      },
+      {
+        "text": "Команда",
+        "r": {
+          "x": 653,
+          "y": 448.5,
+          "width": 259,
+          "height": 43,
+          "top": 448.5,
+          "right": 912,
+          "bottom": 491.5,
+          "left": 653
+        },
+        "font": "11px"
+      }
+    ],
+    "escapeFocus": {
+      "tag": "A",
+      "text": "медиасмотреть медиа",
+      "cls": "home-media-tile group relative flex min-h-[330px] translate-y-22 flex-col justify-between px-7 pb-8 pt-4 text-white xl:min-h-[370px] xl:translate-y-26 xl:px-9 xl:pb-10 xl:pt-5",
+      "rect": {
+        "x": 48,
+        "y": 1130.625,
+        "width": 190,
+        "height": 330,
+        "top": 1130.625,
+        "right": 238,
+        "bottom": 1460.625,
+        "left": 48
+      }
+    },
+    "closed": {
+      "overflow": "",
+      "bodyPosition": ""
+    }
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "first": {
+      "mobileVisible": "false",
+      "railState": "hidden",
+      "bodyText": "ФЕСТИВАЛЬ СОСТОЯЛСЯ\n\n2026\n\nкомпозиторы\nxxı века\n\n10–31 МАЯ\n\nМОСКВА · ГАЛЕРЕЯ НИКО\n\n15 КОНЦЕРТОВ\n\n«Композиторы XXI века» — фестиваль современной академической музыки, объединяющий композиторов, исполни"
+    },
+    "openFocus": {
+      "tag": "BUTTON",
+      "text": "2026",
+      "cls": "font-editorial-sans relative flex min-h-0 flex-1 items-center justify-center text-[11px] font-medium uppercase leading-none tracking-[0.14em] navigation-rail-action group focus-visible:outline-none",
+      "rect": {
+        "x": 1370,
+        "y": 720,
+        "width": 55,
+        "height": 180,
+        "top": 720,
+        "right": 1425,
+        "bottom": 900,
+        "left": 1370
+      }
+    },
+    "tabs": [
+      {
+        "tag": "A",
+        "text": "О фестивалеО фестивале",
+        "cls": "editorial-cta festival-intro-reveal festival-intro-cta mt-3 home-desktop:mt-auto self-end home-desktop:self-start",
+        "rect": {
+          "x": 881.5,
+          "y": 324,
+          "width": 141.03125,
+          "height": 34,
+          "top": 324,
+          "right": 1022.53125,
+          "bottom": 358,
+          "left": 881.5
+        }
+      },
+      {
+        "tag": "A",
+        "text": "смотреть запись→",
+        "cls": "home-broadcast-card group relative block aspect-[1.9/1] overflow-hidden bg-neutral-900 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-white",
+        "rect": {
+          "x": 48,
+          "y": 703.875,
+          "width": 836.6875,
+          "height": 440.359375,
+          "top": 703.875,
+          "right": 884.6875,
+          "bottom": 1144.234375,
+          "left": 48
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "15Громче слова31 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 948.6875,
+          "y": 704.875,
+          "width": 428.296875,
+          "height": 87.828125,
+          "top": 704.875,
+          "right": 1376.984375,
+          "bottom": 792.703125,
+          "left": 948.6875
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "02De la nuit / О ночи12 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 948.6875,
+          "y": 789.703125,
+          "width": 428.296875,
+          "height": 87.828125,
+          "top": 789.703125,
+          "right": 1376.984375,
+          "bottom": 877.53125,
+          "left": 948.6875
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "12Новая сакральность28 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 948.6875,
+          "y": 877.53125,
+          "width": 428.296875,
+          "height": 87.84375,
+          "top": 877.53125,
+          "right": 1376.984375,
+          "bottom": 965.375,
+          "left": 948.6875
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "11Леонид Десятников. Любовь и жизнь поэта27 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 948.6875,
+          "y": 965.375,
+          "width": 428.296875,
+          "height": 87.828125,
+          "top": 965.375,
+          "right": 1376.984375,
+          "bottom": 1053.203125,
+          "left": 948.6875
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "04Цветущий жасмин15 мая",
+        "cls": "group relative grid h-full w-full grid-cols-[58px_minmax(0,1fr)] items-center gap-x-5 border-b border-transparent text-left xl:grid-cols-[64px_minmax(0,1fr)] xl:gap-x-6",
+        "rect": {
+          "x": 948.6875,
+          "y": 1053.203125,
+          "width": 428.296875,
+          "height": 87.828125,
+          "top": 1053.203125,
+          "right": 1376.984375,
+          "bottom": 1141.03125,
+          "left": 948.6875
+        }
+      },
+      {
+        "tag": "A",
+        "text": "все трансляциивсе трансляции",
+        "cls": "editorial-cta editorial-cta--light mt-10 self-end",
+        "rect": {
+          "x": 1203.9375,
+          "y": 1181.046875,
+          "width": 173.046875,
+          "height": 34,
+          "top": 1181.046875,
+          "right": 1376.984375,
+          "bottom": 1215.046875,
+          "left": 1203.9375
+        }
+      },
+      {
+        "tag": "A",
+        "text": "медиасмотреть медиа",
+        "cls": "home-media-tile group relative flex min-h-[330px] translate-y-22 flex-col justify-between px-7 pb-8 pt-4 text-white xl:min-h-[370px] xl:translate-y-26 xl:px-9 xl:pb-10 xl:pt-5",
+        "rect": {
+          "x": 48,
+          "y": 1527.046875,
+          "width": 233.421875,
+          "height": 370,
+          "top": 1527.046875,
+          "right": 281.421875,
+          "bottom": 1897.046875,
+          "left": 48
+        }
+      }
+    ],
+    "geometry": [
+      {
+        "text": "Главная",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "О фестивале",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Трансляции",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Медиа",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "2026›",
+        "r": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px"
+      },
+      {
+        "text": "Программа",
+        "r": {
+          "x": 1069,
+          "y": 342.5,
+          "width": 259,
+          "height": 43,
+          "top": 342.5,
+          "right": 1328,
+          "bottom": 385.5,
+          "left": 1069
+        },
+        "font": "11px"
+      },
+      {
+        "text": "Участники",
+        "r": {
+          "x": 1069,
+          "y": 385.5,
+          "width": 259,
+          "height": 43,
+          "top": 385.5,
+          "right": 1328,
+          "bottom": 428.5,
+          "left": 1069
+        },
+        "font": "11px"
+      },
+      {
+        "text": "Академии",
+        "r": {
+          "x": 1069,
+          "y": 428.5,
+          "width": 259,
+          "height": 43,
+          "top": 428.5,
+          "right": 1328,
+          "bottom": 471.5,
+          "left": 1069
+        },
+        "font": "11px"
+      },
+      {
+        "text": "Партнёры",
+        "r": {
+          "x": 1069,
+          "y": 471.5,
+          "width": 259,
+          "height": 43,
+          "top": 471.5,
+          "right": 1328,
+          "bottom": 514.5,
+          "left": 1069
+        },
+        "font": "11px"
+      },
+      {
+        "text": "Команда",
+        "r": {
+          "x": 1069,
+          "y": 514.5,
+          "width": 259,
+          "height": 43,
+          "top": 514.5,
+          "right": 1328,
+          "bottom": 557.5,
+          "left": 1069
+        },
+        "font": "11px"
+      }
+    ],
+    "escapeFocus": {
+      "tag": "A",
+      "text": "медиасмотреть медиа",
+      "cls": "home-media-tile group relative flex min-h-[330px] translate-y-22 flex-col justify-between px-7 pb-8 pt-4 text-white xl:min-h-[370px] xl:translate-y-26 xl:px-9 xl:pb-10 xl:pt-5",
+      "rect": {
+        "x": 48,
+        "y": 494.046875,
+        "width": 233.421875,
+        "height": 370,
+        "top": 494.046875,
+        "right": 281.421875,
+        "bottom": 864.046875,
+        "left": 48
+      }
+    },
+    "closed": {
+      "overflow": "",
+      "bodyPosition": ""
+    }
+  },
+  {
+    "probe": "failed-video",
+    "state": {
+      "opacity": "0",
+      "ready": "false",
+      "text": "ФЕСТИВАЛЬ СОСТОЯЛСЯ\n\n2026"
+    }
+  },
+  {
+    "probe": "reduced-motion",
+    "videos": [
+      {
+        "src": "http://127.0.0.1:4188/assets/herovidv2-DFVyMT-U.mp4",
+        "paused": true,
+        "preload": "auto",
+        "ready": 4
+      },
+      {
+        "src": "http://127.0.0.1:4188/assets/herovidmob-_ELWf1Sv.mp4",
+        "paused": true,
+        "preload": "auto",
+        "ready": 4
+      }
+    ],
+    "emblem": "true"
+  }
+]

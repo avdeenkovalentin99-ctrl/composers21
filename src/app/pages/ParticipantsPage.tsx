@@ -1,3 +1,4 @@
+import { MotionImage, PHOTO_FALLBACK_SRC } from "../components/ResponsiveImage";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { LayoutGrid, List } from "lucide-react";
@@ -7,12 +8,12 @@ import { composers } from "../data/composers";
 import { performers } from "../data/performers";
 import { PageContainer } from "../layout/PageContainer";
 import { PARTICIPANTS_SHELL_CLASS } from "../layout/participantsLayout";
+import { safeLocalStorage, safeSessionStorage } from "../utils/browserStorage";
 
 type PersonItem = (typeof composers)[number];
 type CategoryKey = "composers" | "performers";
 type ViewMode = "grid" | "list";
 
-const PARTICIPANTS_SCROLL_KEY = "participants-scroll-y";
 
 const categoryLabels: Record<CategoryKey, string> = {
   composers: "КОМПОЗИТОРЫ",
@@ -24,11 +25,13 @@ function ParticipantCard({
   onOpen,
   imageClassName,
   actionLabel,
+  fallbackSrc,
 }: {
   person: PersonItem;
   onOpen: (person: PersonItem) => void;
   imageClassName?: string;
   actionLabel?: string;
+  fallbackSrc?: string;
 }) {
   return (
     <motion.button
@@ -39,10 +42,13 @@ function ParticipantCard({
     >
       <div className="overflow-hidden bg-white">
         <div className="relative overflow-hidden">
-          <motion.img
+          <MotionImage
             variants={{ hover: { scale: 1.015 } }}
             transition={{ duration: 0.32, ease: "easeOut" }}
             src={person.image}
+            fallbackSrc={fallbackSrc}
+            sizes="(min-width: 1280px) 320px, (min-width: 768px) 45vw, 90vw"
+            coverAspectRatio={imageClassName?.includes("aspect-[3/2]") ? 3 / 2 : 4 / 5}
             alt={person.name}
             loading="lazy"
             decoding="async"
@@ -86,10 +92,12 @@ function SoloistCard({
     >
       <div className="overflow-hidden bg-white">
         <div className="relative overflow-hidden">
-          <motion.img
+          <MotionImage
             variants={{ hover: { scale: 1.015 } }}
             transition={{ duration: 0.32, ease: "easeOut" }}
             src={person.image}
+            sizes="(min-width: 1280px) 320px, (min-width: 768px) 45vw, 90vw"
+            coverAspectRatio={4 / 5}
             alt={person.name}
             loading="lazy"
             decoding="async"
@@ -197,7 +205,7 @@ export function ParticipantsPage() {
       return "composers";
     }
 
-    const savedCategory = window.sessionStorage.getItem("participants-active-category");
+    const savedCategory = safeSessionStorage.getItem("participants-active-category");
     return savedCategory === "performers" ? "performers" : "composers";
   });
   const [isLeaving, setIsLeaving] = useState(false);
@@ -206,7 +214,7 @@ export function ParticipantsPage() {
       return "grid";
     }
 
-    const savedViewMode = window.localStorage.getItem("participants-view-mode");
+    const savedViewMode = safeLocalStorage.getItem("participants-view-mode");
     return savedViewMode === "list" ? "list" : "grid";
   });
   const leaveTimeoutRef = useRef<number | null>(null);
@@ -217,27 +225,15 @@ export function ParticipantsPage() {
   );
 
   useEffect(() => {
-    window.sessionStorage.setItem("participants-active-category", activeCategory);
+    safeSessionStorage.setItem("participants-active-category", activeCategory);
   }, [activeCategory]);
 
   useEffect(() => {
-    window.localStorage.setItem("participants-view-mode", viewMode);
+    safeLocalStorage.setItem("participants-view-mode", viewMode);
   }, [viewMode]);
 
   useEffect(() => {
     document.body.classList.remove("participants-route-leaving");
-
-    const savedScrollY = window.sessionStorage.getItem(PARTICIPANTS_SCROLL_KEY);
-    if (savedScrollY !== null) {
-      window.sessionStorage.removeItem(PARTICIPANTS_SCROLL_KEY);
-
-      const scrollY = Number(savedScrollY);
-      if (!Number.isNaN(scrollY)) {
-        requestAnimationFrame(() => {
-          window.scrollTo({ top: scrollY, behavior: "auto" });
-        });
-      }
-    }
 
     return () => {
       document.body.classList.remove("participants-route-leaving");
@@ -253,8 +249,7 @@ export function ParticipantsPage() {
       return;
     }
 
-    window.sessionStorage.setItem("participants-active-category", activeCategory);
-    window.sessionStorage.setItem(PARTICIPANTS_SCROLL_KEY, String(window.scrollY));
+    safeSessionStorage.setItem("participants-active-category", activeCategory);
     document.body.classList.add("participants-route-leaving");
     window.dispatchEvent(new CustomEvent("participants:leave"));
     setIsLeaving(true);
@@ -289,7 +284,7 @@ export function ParticipantsPage() {
                             return;
                           }
 
-                          window.sessionStorage.setItem("participants-active-category", category);
+                          safeSessionStorage.setItem("participants-active-category", category);
                           setActiveCategory(category);
                         }}
                         className={[
@@ -421,6 +416,7 @@ export function ParticipantsPage() {
                               beginParticipantTransition(`/participants/ensembles/${getPersonSlug(person)}`);
                             }}
                             imageClassName={getEnsembleImageClassName(person)}
+                            fallbackSrc={PHOTO_FALLBACK_SRC}
                           />
                         ))}
                       </div>

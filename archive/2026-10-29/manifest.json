@@ -1,0 +1,386 @@
+[
+  {
+    "from": "src/app/components/hero/DesktopHomeHero.css",
+    "to": "archive/2026-10-29/src/app/components/hero/DesktopHomeHero.css",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "bf4373e37c4acdef23bae48ebdff6b91d41417b4d85fed6365374956033cf6b3"
+  },
+  {
+    "from": "src/app/components/hero/DesktopHomeHero.tsx",
+    "to": "archive/2026-10-29/src/app/components/hero/DesktopHomeHero.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "74c9612bbc6da9e4da91ba2e949324d42f729921c07d247edecdd60378f5294d"
+  },
+  {
+    "from": "src/app/components/hero/HeroConcertSelector.tsx",
+    "to": "archive/2026-10-29/src/app/components/hero/HeroConcertSelector.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "53d7c6022647f14bbf3ce3433ec97e5c70ecce233121e2f857e5869c02cf7199"
+  },
+  {
+    "from": "src/app/components/hero/HeroLoadingTransition.tsx",
+    "to": "archive/2026-10-29/src/app/components/hero/HeroLoadingTransition.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "331a851a33af6b550aa0fe53a018012c950da0524c83b0687147089ecb6e6168"
+  },
+  {
+    "from": "src/app/components/hero/HomeHero.tsx",
+    "to": "archive/2026-10-29/src/app/components/hero/HomeHero.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "60adf0c9c17c70710b706029444cb3c996ed2c91e2a8e36964ffaac569c53bdf"
+  },
+  {
+    "from": "src/app/components/hero/HomeHeroPlaceholder.tsx",
+    "to": "archive/2026-10-29/src/app/components/hero/HomeHeroPlaceholder.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "30ea1fc306c0e2da8bae94708877853db26cec1d4428f20db0d500967833f24e"
+  },
+  {
+    "from": "src/app/components/hero/MobileHomeHero.css",
+    "to": "archive/2026-10-29/src/app/components/hero/MobileHomeHero.css",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "396ce4f268eb8d6951bd54a78c715b78fb137c8f5528a2a1de0575cb4a1dcf79"
+  },
+  {
+    "from": "src/app/components/hero/MobileHomeHero.tsx",
+    "to": "archive/2026-10-29/src/app/components/hero/MobileHomeHero.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "8aa165906a65a102cf1e172f60612c5b873c6f75f06c98d0d916396915b3d4b1"
+  },
+  {
+    "from": "src/app/components/hero/ReferenceHomeHero.css",
+    "to": "archive/2026-10-29/src/app/components/hero/ReferenceHomeHero.css",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "b1e8f1d360180524102f6c6e9f453a4744a2936ebb8ca855b4e273dc179330cb"
+  },
+  {
+    "from": "src/app/components/hero/ReferenceHomeHero.tsx",
+    "to": "archive/2026-10-29/src/app/components/hero/ReferenceHomeHero.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "6cbade3ffaf53adbcc4f2af4aecaaaca52629c499c003fbc8d300b2f46a6feac"
+  },
+  {
+    "from": "src/app/components/hero/VideoHomeHero.css",
+    "to": "archive/2026-10-29/src/app/components/hero/VideoHomeHero.css",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "78f47bd5c4828a44ea060c21838ba5bcc9af75c77e701f5d66bc8b29b2d11b17"
+  },
+  {
+    "from": "src/app/components/hero/VideoHomeHero.tsx",
+    "to": "archive/2026-10-29/src/app/components/hero/VideoHomeHero.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "54b04ae9439294be7df712e87f53b7d41b2f53fb7e2018339005848dd17e617f"
+  },
+  {
+    "from": "src/app/components/sections/FestivalIntro.tsx",
+    "to": "archive/2026-10-29/src/app/components/sections/FestivalIntro.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "c49398062f488736169d2a5012dece8948811254950d54db0b4e726ac631b14e"
+  },
+  {
+    "from": "src/app/components/sections/ParticipantsPreview.tsx",
+    "to": "archive/2026-10-29/src/app/components/sections/ParticipantsPreview.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "5057ba3441f5a8b9f3a56dc51586d328648c78097378f8e70b3036ed841eeb9e"
+  },
+  {
+    "from": "src/app/components/sections/PartnersPreview.tsx",
+    "to": "archive/2026-10-29/src/app/components/sections/PartnersPreview.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "8f834aaf08d4490f726de71e240f6966e81752a620a01c58b78c8a62e4fb6d0e"
+  },
+  {
+    "from": "src/app/components/sections/SelectedPosters.tsx",
+    "to": "archive/2026-10-29/src/app/components/sections/SelectedPosters.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "ca03259d166b3b457631fd7c6a33011f1f73c97a956b211c52dd64570004cc12"
+  },
+  {
+    "from": "src/app/components/ui/LinkArrow.tsx",
+    "to": "archive/2026-10-29/src/app/components/ui/LinkArrow.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "2821b52fd5f4b24ca6b6cebc2ea72ccd4b697cc9cad6e9bb1100de9524959677"
+  },
+  {
+    "from": "src/app/components/ui/SectionTitle.tsx",
+    "to": "archive/2026-10-29/src/app/components/ui/SectionTitle.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "3dadb70a8b4a12146c6eda87df821b104ad7d97727add790224d4363bda44a76"
+  },
+  {
+    "from": "src/app/data/concerts.ts",
+    "to": "archive/2026-10-29/src/app/data/concerts.ts",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "8fe2ebecc45483e2cc0f5b8b3248086e17260fe421908156739ffb8d3a47ced3"
+  },
+  {
+    "from": "src/app/data/featured.ts",
+    "to": "archive/2026-10-29/src/app/data/featured.ts",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "e647b93ee9f7c9797910b0f36f3760da10a653268708d893a4147007dc614f88"
+  },
+  {
+    "from": "src/app/data/heroComposers.ts",
+    "to": "archive/2026-10-29/src/app/data/heroComposers.ts",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "642699a183fa93d3f6f2fe6309a031a0654af5093ebdfabbb67c9a649a172c66"
+  },
+  {
+    "from": "src/app/data/heroSoloists.ts",
+    "to": "archive/2026-10-29/src/app/data/heroSoloists.ts",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "134bcd9f5cca36e89bbda8b470f938d6766e5fbb76bc96b688b0b0027b321618"
+  },
+  {
+    "from": "src/app/data/site.ts",
+    "to": "archive/2026-10-29/src/app/data/site.ts",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "f0d688213a975d3006c5143ee06d932a700450be5545a14246c911066a543965"
+  },
+  {
+    "from": "src/app/pages/FestivalPage.tsx",
+    "to": "archive/2026-10-29/src/app/pages/FestivalPage.tsx",
+    "reason": "unreachable source; verified against current import graph",
+    "sha256": "97d664eb5c59f6bfc2a3bca66a11609606f43d29c6993626675359d928336e63"
+  },
+  {
+    "from": "public/assets/hero/choir.png",
+    "to": "archive/2026-10-29/public/assets/hero/choir.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "ce5ea1f8c846665ba0af7b97861b3beeacf3468509afd8d83815ac31aa90dcb0"
+  },
+  {
+    "from": "public/assets/hero/content.docx",
+    "to": "archive/2026-10-29/public/assets/hero/content.docx",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "6d051529a0d871b7348c2f2251b853d1ad1902f85cf75e0b5c015f95e6bcaf35"
+  },
+  {
+    "from": "public/assets/hero/festival-logo-inverse.svg",
+    "to": "archive/2026-10-29/public/assets/hero/festival-logo-inverse.svg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "07ecdcc50a8a2a228af20f865ad8d08d9e46a77c5c895366408caf00d24e28c0"
+  },
+  {
+    "from": "public/assets/hero/heroback1.png",
+    "to": "archive/2026-10-29/public/assets/hero/heroback1.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "5cc3fda6d7409e97995a271f467de7ee93b51f5f98200c698a922b820b70f152"
+  },
+  {
+    "from": "public/assets/hero/heroref1.png",
+    "to": "archive/2026-10-29/public/assets/hero/heroref1.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "4110bfe8c3da17fb7ca43b9b3ef8c525014c67fac14a6a87f2b405cb830f75ed"
+  },
+  {
+    "from": "public/assets/hero/heroref3.png",
+    "to": "archive/2026-10-29/public/assets/hero/heroref3.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "c5327618d9963d8cb8a9f0d931ca3b4f343273e48557fa389209d517bb4f9cd5"
+  },
+  {
+    "from": "public/assets/hero/newlogoru.jpg",
+    "to": "archive/2026-10-29/public/assets/hero/newlogoru.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "aabcd4acd49ea55d9b010ac95fd6ec79be5dce722bb1206128faa08272b0029b"
+  },
+  {
+    "from": "public/assets/hero/piano.png",
+    "to": "archive/2026-10-29/public/assets/hero/piano.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "970f72112fe8209682af0d1bbe658732f5f300059a6b2b1849a0623d842e289b"
+  },
+  {
+    "from": "public/assets/hero/PIanohero1c.webm",
+    "to": "archive/2026-10-29/public/assets/hero/PIanohero1c.webm",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "c19727f4bad012c84d7499ca9830647742d969f4fa37ba3e95c059b5273ade9f"
+  },
+  {
+    "from": "public/assets/hero/README.md",
+    "to": "archive/2026-10-29/public/assets/hero/README.md",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "cabc356d1ba8e4b29251623021b9f68325ba64141a7373e1ec37dbcf0305af07"
+  },
+  {
+    "from": "public/assets/hero/ref1mobhero.png",
+    "to": "archive/2026-10-29/public/assets/hero/ref1mobhero.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "de5bf145d0835b471db328a377e8d63369bcd013c54cce95a0b581d8ea5c52c2"
+  },
+  {
+    "from": "public/assets/hero/ref4.png",
+    "to": "archive/2026-10-29/public/assets/hero/ref4.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "b740565d36d1cbd10f0a662e063a8416160ab202e9a15ae8399b1d82fb87ca10"
+  },
+  {
+    "from": "public/assets/hero/translref.png",
+    "to": "archive/2026-10-29/public/assets/hero/translref.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "57747ef942a31081cd0d3616443a9d6249b2707ba86032051005b49981f958e3"
+  },
+  {
+    "from": "public/assets/hero/Vertical1.mp4",
+    "to": "archive/2026-10-29/public/assets/hero/Vertical1.mp4",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "795e66f3e367eda9da19822283a9a4a44dcd58c9f19894d397720fe600ad0db6"
+  },
+  {
+    "from": "public/assets/hero/violin.png",
+    "to": "archive/2026-10-29/public/assets/hero/violin.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "4bb073fa616513692d86c15df4d143b650a0a427f0253a992061e2cf8bfd94f1"
+  },
+  {
+    "from": "public/assets/external/heroafisha/39e4c798_noroot.png",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/39e4c798_noroot.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "7e95b81a499d7185653dd4cbf1a8f14e7de29dbcd06db4f3bc3cee20e515b39f"
+  },
+  {
+    "from": "public/assets/external/heroafisha/48f5939f_IMG-20251121-WA0020.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/48f5939f_IMG-20251121-WA0020.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "2415f11652d5de54f85de05987d98802016bd12305d227c06da9e0af9fe56b6e"
+  },
+  {
+    "from": "public/assets/external/heroafisha/5f68f703_5ef851e0c6992bfd3e44.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/5f68f703_5ef851e0c6992bfd3e44.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "d5abca6ce10641dea1526c9271337a47214348398303f007a61239be50c1e192"
+  },
+  {
+    "from": "public/assets/external/heroafisha/6c7af7d8_0c98a711c715d8f20ff7.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/6c7af7d8_0c98a711c715d8f20ff7.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "06605f08120e3ca8404e2000b19a6b63114bbca1699f0f215105efbfd6be719c"
+  },
+  {
+    "from": "public/assets/external/heroafisha/6ff3de26_6b1b5d1bd1f856318444.png",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/6ff3de26_6b1b5d1bd1f856318444.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "225b8ec7e2b99bd7448a326c9371377c32536e2e9b37bcc2ffcbed7b4bcb7b07"
+  },
+  {
+    "from": "public/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.jpeg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.jpeg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "8c1c7346d90cc9da3f7a4b25fe22affad696d8f1bb5b62888e91b411259d38c0"
+  },
+  {
+    "from": "public/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.webp",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.webp",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "8e29baeefca7b4b49980bab9a9a98c8469829bd57a86bf45c9ddecf502369108"
+  },
+  {
+    "from": "public/assets/external/heroafisha/a9da4c31_IMG_20260303_105903_.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/a9da4c31_IMG_20260303_105903_.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "4c3c06bcadecd98a9918f2cb5ff5fd3e0529ef9f5b2e8233c6a62e6713dc08ab"
+  },
+  {
+    "from": "public/assets/external/heroafisha/aca5621a_6362729948f1e85335ac.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/aca5621a_6362729948f1e85335ac.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "26486221d80b242049540ddc1b699b4311ba3edf2ffaf09ec99cede12ede5c56"
+  },
+  {
+    "from": "public/assets/external/heroafisha/BerezovkiBedited (1).webp",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/BerezovkiBedited (1).webp",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "9500fd4190b01570d87a8972e7a53f47b20fc0444e4f2629b61a41d4746b3195"
+  },
+  {
+    "from": "public/assets/external/heroafisha/BerezovkiBedited.png",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/BerezovkiBedited.png",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "e47c30c96a398483e7316e4390df9fb999b683a37e50ed43cca896e8fbe081a5"
+  },
+  {
+    "from": "public/assets/external/heroafisha/BerezovkiBedited.webp",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/BerezovkiBedited.webp",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "e171f382dae37a4a45ef77a516df439b42add3ce1c50a683af875cf78f6d8f62"
+  },
+  {
+    "from": "public/assets/external/heroafisha/bfd7db6d_50a0894752382d8d9b1a.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/bfd7db6d_50a0894752382d8d9b1a.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "cd278be19b591808cb2650ead9f3a1a99770cd93ff02d8481d476cdc0664a4f5"
+  },
+  {
+    "from": "public/assets/external/heroafisha/c31dbe0b_61afb70ee5afd7e2710b.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/c31dbe0b_61afb70ee5afd7e2710b.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "8f87fee0a2f36493658fa9ba09ddc7c8e8f09e11aff268115faf41bcf939f924"
+  },
+  {
+    "from": "public/assets/external/heroafisha/cd0d075c_db39c27515a4605ed73c.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/cd0d075c_db39c27515a4605ed73c.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "df3f1bf7f53a0850e6e0e9383a756f5302d8929d0f96aa63fa6ea1fa4702f3af"
+  },
+  {
+    "from": "public/assets/external/heroafisha/chamberconcerthero.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/chamberconcerthero.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "84b2e317d11f071130d5c6eb0c1158ae36a1920c9e613da34979036c0c8d695c"
+  },
+  {
+    "from": "public/assets/external/heroafisha/d6c06a4b_50d42752bd6c38e0c9da.jpeg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/d6c06a4b_50d42752bd6c38e0c9da.jpeg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "970b5b2ea88425e7e1a8b4a9a01cc26b61e11e9da16b6d918b1f84ad08b7e258"
+  },
+  {
+    "from": "public/assets/external/heroafisha/f4a26f9e_9ba87e7e7bb322482d4d.jpeg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/f4a26f9e_9ba87e7e7bb322482d4d.jpeg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "0156c800aa9681d9d5ecb4bfd8e07a420000fb4744221c2490bfc0f3c6acf304"
+  },
+  {
+    "from": "public/assets/external/heroafisha/finalconcert.jpg",
+    "to": "archive/2026-10-29/public/assets/external/heroafisha/finalconcert.jpg",
+    "reason": "unused published design/reference asset; no current application reference",
+    "sha256": "ff94b66a4392308359a0dd44ec8c8358042f8ac2ede37b4ec646e7fe611fd5c7"
+  },
+  {
+    "from": "public/fonts/roboto-flex.ttf",
+    "to": "archive/2026-10-29/public/fonts/roboto-flex.ttf",
+    "reason": "font used only by archived prototype",
+    "sha256": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281"
+  },
+  {
+    "from": "logofestnew.jpg.bak2",
+    "to": "archive/2026-10-29/logofestnew.jpg.bak2",
+    "reason": "obsolete backup or one-off tool",
+    "sha256": "082abc21e095bb72bfd8fe7bb8e713b1328ff0d46436c2f75ecf5a198accfb00"
+  },
+  {
+    "from": "logofestnew.png.bak",
+    "to": "archive/2026-10-29/logofestnew.png.bak",
+    "reason": "obsolete backup or one-off tool",
+    "sha256": "317778d8fefa9f7f0a854bfc31f9086914b4fb4f4a4f00494ea8ae550966bf53"
+  },
+  {
+    "from": "logofestnew.png.bak2",
+    "to": "archive/2026-10-29/logofestnew.png.bak2",
+    "reason": "obsolete backup or one-off tool",
+    "sha256": "a52983aa1e103c19556348d86349e65681b8ab46ba836478b80d86ce3e0c7ca3"
+  },
+  {
+    "from": "scripts/shrink_logo.py",
+    "to": "archive/2026-10-29/scripts/shrink_logo.py",
+    "reason": "obsolete backup or one-off tool",
+    "sha256": "4a6bc17a25f2aacd6637eafa2f5644fc98a2289b61a4455b7cce929c99d17794"
+  },
+  {
+    "from": "scripts/shrink_logo_more.py",
+    "to": "archive/2026-10-29/scripts/shrink_logo_more.py",
+    "reason": "obsolete backup or one-off tool",
+    "sha256": "e67c1802f8b9fcb0ffcd4e78e5eff4cbd18c89fc5ed8d442e23de6ef467f6cbf"
+  }
+]

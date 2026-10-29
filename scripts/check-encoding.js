@@ -15,6 +15,7 @@ const ignoredDirectories = new Set([
   ".tmp-audit",
   "tmp_scrape",
   "logos_to_send",
+  "archive",
 ]);
 const textExtensions = new Set([
   ".js",

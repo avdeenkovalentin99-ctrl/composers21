@@ -1,5 +1,14 @@
 type BiographyBlock = { slug: string; biography: string[] };
 
+export function assertUniqueParticipantSlugs(blocks: { slug: string; group: string }[]) {
+  const seen = new Set<string>();
+  for (const { slug, group } of blocks) {
+    const key = `${group}/${slug}`;
+    if (seen.has(key)) throw new Error(`Duplicate participant: ${key}. Remove the duplicate source block before generating.`);
+    seen.add(key);
+  }
+}
+
 // A shorter corrected biography must not lose to an unrelated source version.
 // Conflicting versions require an explicit source choice, never a length score.
 export function selectBiographies<T extends BiographyBlock & { source: string }>(

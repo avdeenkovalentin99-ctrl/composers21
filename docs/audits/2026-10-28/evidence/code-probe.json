@@ -1,0 +1,50 @@
+{
+  "academiesMeta": {
+    "title": "Встречи с композиторами и музыкантами",
+    "description": "Встречи с композиторами и музыкантами."
+  },
+  "academyOpened": {
+    "focus": {
+      "tag": "BUTTON",
+      "text": "14 мая — 16:00событие прошлоСергей Ахунов. Беседы о музыкеКомпозитор расскажет о своем опыте сочинит",
+      "label": "Открыть: Сергей Ахунов. Беседы о музыке",
+      "dialog": false
+    },
+    "closeInsideDialog": 0,
+    "dialogs": 1
+  },
+  "academyAfterTab": {
+    "tag": "BUTTON",
+    "text": "17 мая — 19:00событие прошлоВстреча с создателями фестиваляРазговор о фестивале, композиторах, музык",
+    "label": "Открыть: Встреча с создателями фестиваля",
+    "dialog": false
+  },
+  "metaAfterAcademyToMedia": {
+    "url": "http://127.0.0.1:4188/media",
+    "title": "Академии",
+    "description": "Встречи с композиторами и музыкантами."
+  },
+  "desktopOpened": {
+    "tag": "BUTTON",
+    "text": "2026",
+    "label": null,
+    "dialog": false
+  },
+  "desktopAfterTab": {
+    "tag": "A",
+    "text": "Архив трансляций→",
+    "label": null,
+    "dialog": false
+  },
+  "desktopAfterEscape": {
+    "tag": "BODY",
+    "text": "ГлавнаяО фестивалеТрансляцииМедиа2026›ГлавнаяО фестивалеТрансляцииМедиа2026ГлавнаяО фестивалеТрансля",
+    "label": null,
+    "dialog": false
+  },
+  "beforeNavigateScroll": 759,
+  "afterBack": {
+    "url": "http://127.0.0.1:4188/media",
+    "scroll": 0
+  }
+}

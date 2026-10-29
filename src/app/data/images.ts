@@ -1,18 +1,11 @@
-import ileThelemeLogoBlack from "../../../Ile_theleme_logo_black.png";
-import gnessinLogo from "../../../Gnessinlogo.png";
-import tarusaLogo from "../../../tarusalogo.png";
+import { optimizedImages } from "./optimizedImages.generated";
 
-const participantImageModules = import.meta.glob("../../assets/participants/*", {
-  eager: true,
-  import: "default",
-}) as Record<string, string>;
-
-const participantImagesByFileName = Object.fromEntries(
-  Object.entries(participantImageModules).map(([filePath, imageUrl]) => [filePath.split("/").pop() ?? "", imageUrl]),
-);
+const ileThelemeLogoBlack = optimizedImages["brand/ile-theleme"].src;
+const gnessinLogo = optimizedImages["brand/gnessin"].src;
+const tarusaLogo = optimizedImages["brand/tarusa"].src;
 
 export function getParticipantImage(fileName: string) {
-  return participantImagesByFileName[fileName] ?? "";
+  return optimizedImages["participants/" + fileName]?.src ?? "";
 }
 
 const aleksandrChaikovskyImage = getParticipantImage("2401_aleksandr-chajk.jpg");

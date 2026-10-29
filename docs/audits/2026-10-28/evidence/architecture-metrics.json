@@ -1,0 +1,394 @@
+{
+  "profiles": [
+    {
+      "name": "desktop-local",
+      "jsRequests": 17,
+      "jsTransferred": 178137,
+      "fontsTransferred": 2213118,
+      "hasBiography": false,
+      "hasOtherPageCode": [
+        "PageContainer-C9t5mpsA.js",
+        "FestivalPageLegacy-CxM7bl46.js"
+      ]
+    },
+    {
+      "name": "mobile-1.6mbps-150ms-cpu4",
+      "jsRequests": 17,
+      "jsTransferred": 178137,
+      "fontsTransferred": 2213118,
+      "hasBiography": false,
+      "hasOtherPageCode": [
+        "PageContainer-C9t5mpsA.js",
+        "FestivalPageLegacy-CxM7bl46.js"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "name": "biography-B4J3ifmB.js",
+      "bytes": 347793,
+      "gzip": 86038,
+      "imports": [
+        "./createLucideIcon-DEbbfNSo.js"
+      ]
+    },
+    {
+      "name": "index-DGV_nrdb.js",
+      "bytes": 216927,
+      "gzip": 67294,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./proxy-sf1U8RrW.js",
+        "./AnimatePresence-D694qv8y.js",
+        "./createLucideIcon-DEbbfNSo.js",
+        "./viewportFrame-D4r6iycH.js",
+        "./pageMeta-YkbdTnjy.js",
+        "./yandexMetrika-DrkKJyel.js"
+      ]
+    },
+    {
+      "name": "proxy-sf1U8RrW.js",
+      "bytes": 120444,
+      "gzip": 38836,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./resolve-elements-MF8OGVng.js",
+        "./reduced-motion-8fmAqGTy.js"
+      ]
+    },
+    {
+      "name": "chunk-QFMPRPBF-Cev1e9LE.js",
+      "bytes": 93398,
+      "gzip": 30593,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js"
+      ]
+    },
+    {
+      "name": "performers-CLVNfaR5.js",
+      "bytes": 44222,
+      "gzip": 10879,
+      "imports": [
+        "./assets-_t3nKLol.js",
+        "./images-Bzd584qP.js"
+      ]
+    },
+    {
+      "name": "FestivalPageLegacy-CxM7bl46.js",
+      "bytes": 34676,
+      "gzip": 10136,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./proxy-sf1U8RrW.js",
+        "./AnimatePresence-D694qv8y.js",
+        "./FestivalIntro-CZFuv2o9.js",
+        "./viewportFrame-D4r6iycH.js",
+        "./broadcasts-hfmLaa4M.js",
+        "./media-c5vDKKSk.js"
+      ]
+    },
+    {
+      "name": "AboutFestivalPage-DooQb7zm.js",
+      "bytes": 25472,
+      "gzip": 9197,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./proxy-sf1U8RrW.js",
+        "./use-reduced-motion-hJMcwgE6.js"
+      ]
+    },
+    {
+      "name": "FestivalLabPage-CzOnTe1g.js",
+      "bytes": 20424,
+      "gzip": 6967,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./performers-CLVNfaR5.js"
+      ]
+    },
+    {
+      "name": "concertProgrammes-DPR03TOW.js",
+      "bytes": 20397,
+      "gzip": 6328,
+      "imports": []
+    },
+    {
+      "name": "broadcasts-hfmLaa4M.js",
+      "bytes": 16872,
+      "gzip": 4831,
+      "imports": [
+        "./concertProgrammes-DPR03TOW.js"
+      ]
+    },
+    {
+      "name": "AcademiesPage-DYF4hGwA.js",
+      "bytes": 14398,
+      "gzip": 5030,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./proxy-sf1U8RrW.js",
+        "./AnimatePresence-D694qv8y.js"
+      ]
+    },
+    {
+      "name": "AfishaPage-BD6ZIEKy.js",
+      "bytes": 11628,
+      "gzip": 3749,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./proxy-sf1U8RrW.js",
+        "./createLucideIcon-DEbbfNSo.js",
+        "./yandexMetrika-DrkKJyel.js",
+        "./concertProgrammes-DPR03TOW.js",
+        "./assets-_t3nKLol.js"
+      ]
+    },
+    {
+      "name": "ParticipantsPage-Bt2yimou.js",
+      "bytes": 11396,
+      "gzip": 3096,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./proxy-sf1U8RrW.js",
+        "./AnimatePresence-D694qv8y.js",
+        "./createLucideIcon-DEbbfNSo.js",
+        "./performers-CLVNfaR5.js",
+        "./participantsLayout-CH5GgtX0.js"
+      ]
+    },
+    {
+      "name": "IntroTestPage-DLtGpGaO.js",
+      "bytes": 10725,
+      "gzip": 3814,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./use-reduced-motion-hJMcwgE6.js",
+        "./FestivalIntro-CZFuv2o9.js",
+        "./pageMeta-YkbdTnjy.js"
+      ]
+    },
+    {
+      "name": "BroadcastsPage-2h1P0Z6p.js",
+      "bytes": 9229,
+      "gzip": 3030,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./proxy-sf1U8RrW.js",
+        "./AnimatePresence-D694qv8y.js",
+        "./broadcasts-hfmLaa4M.js"
+      ]
+    },
+    {
+      "name": "FestivalIntro-CZFuv2o9.js",
+      "bytes": 7844,
+      "gzip": 3076,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./resolve-elements-MF8OGVng.js"
+      ]
+    },
+    {
+      "name": "react-DsxAG0_1.js",
+      "bytes": 7529,
+      "gzip": 2883,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js"
+      ]
+    },
+    {
+      "name": "images-Bzd584qP.js",
+      "bytes": 7270,
+      "gzip": 2254,
+      "imports": []
+    },
+    {
+      "name": "MediaPage-B7dD6wh7.js",
+      "bytes": 6817,
+      "gzip": 2270,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./proxy-sf1U8RrW.js",
+        "./AnimatePresence-D694qv8y.js",
+        "./createLucideIcon-DEbbfNSo.js",
+        "./media-c5vDKKSk.js"
+      ]
+    },
+    {
+      "name": "PartnersPage-Bk8-Q9VD.js",
+      "bytes": 5487,
+      "gzip": 2129,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./images-Bzd584qP.js"
+      ]
+    },
+    {
+      "name": "AnimatePresence-D694qv8y.js",
+      "bytes": 4005,
+      "gzip": 1852,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./proxy-sf1U8RrW.js"
+      ]
+    },
+    {
+      "name": "media-c5vDKKSk.js",
+      "bytes": 3780,
+      "gzip": 1498,
+      "imports": []
+    },
+    {
+      "name": "SoloistPage-D-9-njaJ.js",
+      "bytes": 3392,
+      "gzip": 1280,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./proxy-sf1U8RrW.js",
+        "./biography-B4J3ifmB.js",
+        "./participantsLayout-CH5GgtX0.js"
+      ]
+    },
+    {
+      "name": "TeamPage-HCJlCCVI.js",
+      "bytes": 3084,
+      "gzip": 1395,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./proxy-sf1U8RrW.js"
+      ]
+    },
+    {
+      "name": "EnsemblePage-B03T9TjY.js",
+      "bytes": 2850,
+      "gzip": 1213,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./proxy-sf1U8RrW.js",
+        "./biography-B4J3ifmB.js",
+        "./participantsLayout-CH5GgtX0.js"
+      ]
+    },
+    {
+      "name": "ComposerPage-DrtSdsTg.js",
+      "bytes": 2846,
+      "gzip": 1186,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./proxy-sf1U8RrW.js",
+        "./biography-B4J3ifmB.js",
+        "./participantsLayout-CH5GgtX0.js"
+      ]
+    },
+    {
+      "name": "PrivacyPage-Cy19Gfnm.js",
+      "bytes": 2328,
+      "gzip": 1112,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js"
+      ]
+    },
+    {
+      "name": "pageMeta-YkbdTnjy.js",
+      "bytes": 1913,
+      "gzip": 824,
+      "imports": []
+    },
+    {
+      "name": "createLucideIcon-DEbbfNSo.js",
+      "bytes": 1413,
+      "gzip": 793,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js"
+      ]
+    },
+    {
+      "name": "PageContainer-C9t5mpsA.js",
+      "bytes": 1362,
+      "gzip": 763,
+      "imports": []
+    },
+    {
+      "name": "yandexMetrika-DrkKJyel.js",
+      "bytes": 998,
+      "gzip": 558,
+      "imports": []
+    },
+    {
+      "name": "participantsLayout-CH5GgtX0.js",
+      "bytes": 862,
+      "gzip": 513,
+      "imports": [
+        "./performers-CLVNfaR5.js"
+      ]
+    },
+    {
+      "name": "viewportFrame-D4r6iycH.js",
+      "bytes": 731,
+      "gzip": 349,
+      "imports": []
+    },
+    {
+      "name": "HeroVariantPage-Bst309fz.js",
+      "bytes": 590,
+      "gzip": 420,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./chunk-QFMPRPBF-Cev1e9LE.js",
+        "./FestivalIntro-CZFuv2o9.js"
+      ]
+    },
+    {
+      "name": "reduced-motion-8fmAqGTy.js",
+      "bytes": 269,
+      "gzip": 199,
+      "imports": []
+    },
+    {
+      "name": "resolve-elements-MF8OGVng.js",
+      "bytes": 248,
+      "gzip": 197,
+      "imports": []
+    },
+    {
+      "name": "use-reduced-motion-hJMcwgE6.js",
+      "bytes": 237,
+      "gzip": 192,
+      "imports": [
+        "./PageContainer-C9t5mpsA.js",
+        "./react-DsxAG0_1.js",
+        "./reduced-motion-8fmAqGTy.js"
+      ]
+    },
+    {
+      "name": "assets-_t3nKLol.js",
+      "bytes": 154,
+      "gzip": 133,
+      "imports": []
+    }
+  ]
+}

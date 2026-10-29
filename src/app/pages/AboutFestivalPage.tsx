@@ -1,9 +1,11 @@
+import { optimizedImages } from "../data/optimizedImages.generated";
+import { MotionImage } from "../components/ResponsiveImage";
 import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { motion, useMotionTemplate, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 import { PageContainer } from "../layout/PageContainer";
-import nikoGalleryPianoDetailImage from "../../../tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png";
-import nikoGalleryHeroPanoramaImage from "../../../tmp_data/niko_refs/ef1e9f3848ad26bbb2044d6aa988f5dd.png";
-import nikoGalleryHeroSecondImage from "../../../tmp_data/niko_refs/15ddc20161b9c42c54840f6fcfe544f5.png";
+const nikoGalleryPianoDetailImage = optimizedImages["niko/8e7dd019db22adc310b92256bb57513b.png"].src;
+const nikoGalleryHeroPanoramaImage = optimizedImages["niko/ef1e9f3848ad26bbb2044d6aa988f5dd.png"].src;
+const nikoGalleryHeroSecondImage = optimizedImages["niko/15ddc20161b9c42c54840f6fcfe544f5.png"].src;
 
 const festivalIntroLead =
   "Этот проект посвящён музыке современников — произведениям, ставшим значимыми событиями нашего времени.";
@@ -244,7 +246,7 @@ function FestivalCutoutMock({
             primaryWindowClassName,
           ].join(" ")}
         >
-          <motion.img
+          <MotionImage
             src={primaryImageSrc}
             alt=""
             aria-hidden="true"
@@ -276,7 +278,7 @@ function FestivalCutoutMock({
               clipPath: secondaryRevealClipPath,
             }}
           >
-            <motion.img
+            <MotionImage
               src={secondaryImageSrc ?? primaryImageSrc}
               alt=""
               aria-hidden="true"
@@ -533,7 +535,7 @@ export function AboutFestivalPage() {
                   className="pointer-events-none absolute bottom-[52px] left-[8%] right-[-1.25rem] top-[78px] sm:bottom-[60px] sm:left-[10%] sm:right-[-2rem] sm:top-[96px] lg:bottom-[42px] lg:left-[6%] lg:right-[-0.25rem] lg:top-[74px] xl:bottom-[68px] xl:left-[10%] xl:right-[clamp(-6rem,calc((1248px-100vw)/2),0px)] xl:top-[118px]"
                 >
                   <div ref={projectMainWindowRef} className="absolute inset-0 overflow-hidden">
-                    <motion.img
+                    <MotionImage
                       src={nikoGalleryHeroSecondImage}
                       alt=""
                       aria-hidden="true"
@@ -559,7 +561,7 @@ export function AboutFestivalPage() {
                     className="absolute bottom-[-28px] right-[calc(100%+0.375rem)] top-[44px] w-[12px] overflow-hidden sm:bottom-[-30px] sm:right-[calc(100%+0.5rem)] sm:top-[54px] sm:w-[16px] lg:bottom-[-18px] lg:right-[calc(100%+0.35rem)] lg:top-[36px] lg:w-[12px] xl:bottom-[-34px] xl:right-[calc(100%+0.625rem)] xl:top-[62px] xl:w-[18px]"
                     style={{ clipPath: projectStripClipPath }}
                   >
-                    <motion.img
+                    <MotionImage
                       src={nikoGalleryHeroSecondImage}
                       alt=""
                       aria-hidden="true"

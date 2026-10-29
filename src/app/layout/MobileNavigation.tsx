@@ -4,6 +4,7 @@ import { navigationItems } from "../data/navigation";
 import type { NavGroup } from "../data/types";
 import "./MobileNavigation.css";
 import { homeDesktopQuery } from "./homeViewport";
+import { useFocusScope } from "./useFocusScope";
 import { useMobileMenuEntrance } from "./useMobileMenuEntrance";
 
 export function MobileNavigation() {
@@ -35,17 +36,12 @@ export function MobileNavigation() {
     return () => desktopQuery.removeEventListener("change", onChange);
   }, [location.pathname]);
 
-  useEffect(() => {
-    if (!isOpen) return;
-    const previousOverflow = document.documentElement.style.overflow;
-    document.documentElement.style.overflow = "hidden";
-    const frame = requestAnimationFrame(() => firstLinkRef.current?.focus({ preventScroll: true }));
-    return () => {
-      cancelAnimationFrame(frame);
-      document.documentElement.style.overflow = previousOverflow;
-      triggerRef.current?.focus({ preventScroll: true });
-    };
-  }, [isOpen]);
+  useFocusScope(rootRef, isOpen, () => {
+    if (activeGroup) {
+      setOpenGroup(null);
+      groupTriggerRef.current?.focus({ preventScroll: true });
+    } else closeMenu();
+  });
 
   useEffect(() => {
     if (!activeGroup) return;
@@ -93,23 +89,7 @@ export function MobileNavigation() {
     <div ref={rootRef} className={`mobile-navigation ${location.pathname === "/" ? "home-desktop:hidden" : "lg:hidden"}`} data-open={isOpen} data-submenu-open={Boolean(activeGroup)} data-trigger-visible={isTriggerVisible}
       role={isOpen ? "dialog" : undefined} aria-modal={isOpen ? true : undefined}
       aria-label={isOpen ? "Мобильная навигация" : undefined}
-      onKeyDown={(event) => {
-        if (!isOpen) return;
-        if (event.key === "Escape") {
-          event.preventDefault();
-          if (activeGroup) {
-            setOpenGroup(null);
-            groupTriggerRef.current?.focus({ preventScroll: true });
-          } else closeMenu();
-        }
-        if (event.key === "Tab") {
-          const items = Array.from(rootRef.current?.querySelectorAll<HTMLElement>('a[href], button:not([tabindex="-1"])') ?? [])
-            .filter((item) => !item.closest("[inert]"));
-          const first = items[0], last = items[items.length - 1];
-          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
-          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
-        }
-      }}>
+      tabIndex={-1}>
       <button className="mobile-navigation__backdrop" type="button" aria-label="Закрыть меню"
         tabIndex={-1} inert={!isOpen} aria-hidden={!isOpen} onClick={closeMenu} />
       <div ref={secondaryRef} className="mobile-navigation__secondary" inert={!isOpen || !activeGroup} aria-hidden={!isOpen || !activeGroup}>

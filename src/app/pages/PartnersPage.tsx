@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "../components/ResponsiveImage";
 import { partners } from "../data/partners";
 import type { PartnerItem } from "../data/types";
 import { PageContainer } from "../layout/PageContainer";
@@ -50,8 +51,9 @@ function PartnerLogo({
     "group relative flex min-h-20 w-full items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[3px] hover:opacity-80 sm:min-h-24";
   const scaleClassName = variant === "general" ? generalLogoScaleByImage[partner.image] ?? "opacity-90" : "";
   const logo = (
-    <img
+    <ResponsiveImage
       src={partner.image}
+      sizes={variant === "general" ? "330px" : variant === "media" ? "190px" : "160px"}
       alt={partner.name}
       loading="lazy"
       decoding="async"

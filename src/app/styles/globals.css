@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("/fonts/cormorant-garamond-variable.ttf") format("truetype");
+  src: url("/fonts/cormorant-garamond-variable.woff2") format("woff2");
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("/fonts/manrope-variable.ttf") format("truetype");
+  src: url("/fonts/manrope-variable.woff2") format("woff2");
   font-weight: 300 500;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: "EB Garamond";
-  src: url("/fonts/eb-garamond-variable.ttf") format("truetype");
+  src: url("/fonts/eb-garamond-variable.woff2") format("woff2");
   font-weight: 400 500;
   font-style: normal;
   font-display: swap;

@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { ResponsiveImage } from "../components/ResponsiveImage";
+import { useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { useFocusScope } from "../layout/useFocusScope";
 import { AnimatePresence, motion } from "motion/react";
 import { PageContainer } from "../layout/PageContainer";
 
 const pageDate = "14–22 мая";
 const pageTitle = "Встречи с композиторами и музыкантами";
-const metaTitle = "Встречи с композиторами и музыкантами";
-const metaDescription = "Встречи с композиторами и музыкантами.";
 
 const introParagraphs = [
   "В Île Thélème мы проведем параллельную программу фестиваля. Эта часть фестиваля живет в подвижном, импровизированном формате и сочетает интервью, живое общение со зрителями и мастер-классы. Каждый раз мы будем подстраивать этот формат под конкретных участников, чтобы наиболее полно раскрыть мир их идей.",
@@ -83,67 +84,12 @@ function isAcademyEventPast(event: AcademyEvent, currentDate = new Date()) {
   return new Date(event.dateTime).getTime() < currentDate.getTime();
 }
 
-function useAcademiesMeta() {
-  useEffect(() => {
-    const previousTitle = document.title;
-    const descriptionMeta = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    const previousDescription = descriptionMeta?.getAttribute("content") ?? null;
-
-    document.title = metaTitle;
-    descriptionMeta?.setAttribute("content", metaDescription);
-
-    return () => {
-      document.title = previousTitle;
-      if (previousDescription !== null) {
-        descriptionMeta?.setAttribute("content", previousDescription);
-      }
-    };
-  }, []);
-}
-
-function useOverlayScrollLock(isOpen: boolean) {
-  useEffect(() => {
-    if (!isOpen) return;
-    const body = document.body;
-    const html = document.documentElement;
-
-    const previousBodyOverflow = body.style.overflow;
-    const previousHtmlOverflow = html.style.overflow;
-
-    body.style.overflow = "hidden";
-    html.style.overflow = "hidden";
-
-    return () => {
-      body.style.overflow = previousBodyOverflow;
-      html.style.overflow = previousHtmlOverflow;
-    };
-  }, [isOpen]);
-}
-
-function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClose: () => void }) {
-  useOverlayScrollLock(Boolean(event));
-  const isPast = event ? isAcademyEventPast(event) : false;
-
-  useEffect(() => {
-    if (!event) {
-      return;
-    }
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        onClose();
-      }
-    }
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [event, onClose]);
-
+function AcademyDialog({ event, onClose }: { event: AcademyEvent; onClose: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useFocusScope(ref, true, onClose);
+  const isPast = isAcademyEventPast(event);
   return (
-    <AnimatePresence>
-      {event ? (
-        <>
-        <motion.div
+        <motion.div ref={ref} tabIndex={-1}
           className="fixed inset-0 z-[60] overflow-y-auto bg-white text-neutral-950"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -161,7 +107,7 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.08, ease: [0.42, 0, 0.58, 1] }}
               >
-                <img
+                <ResponsiveImage
                   src={event.image}
                   alt={event.imageAlt}
                   loading="eager"
@@ -218,7 +164,6 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
               </motion.div>
             </div>
           </div>
-        </motion.div>
 
           <button
             type="button"
@@ -228,16 +173,20 @@ function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClos
           >
             ×
           </button>
-        </>
-      ) : null}
-    </AnimatePresence>
+        </motion.div>
+  );
+}
+
+function AcademyOverlay({ event, onClose }: { event: AcademyEvent | null; onClose: () => void }) {
+  return createPortal(
+    <AnimatePresence>{event ? <AcademyDialog key={event.id} event={event} onClose={onClose} /> : null}</AnimatePresence>,
+    document.body,
   );
 }
 
 export function AcademiesPage() {
   const [selectedEvent, setSelectedEvent] = useState<AcademyEvent | null>(null);
 
-  useAcademiesMeta();
 
   return (
     <section className="bg-white pb-20 pt-32 text-neutral-950 sm:pb-24 sm:pt-36">
@@ -286,7 +235,7 @@ export function AcademiesPage() {
                       </div>
 
                       <div className={`${imageWidthByIndex[index % imageWidthByIndex.length]} overflow-hidden`}>
-                        <img
+                        <ResponsiveImage
                           src={event.image}
                           alt={event.imageAlt}
                           loading="lazy"

@@ -6,3 +6,12 @@ tmp_chaikovsky_page.html
 # Local audit artifacts and temporary build output
 .tmp*/
 .tmp-*
+
+# Machine-local configuration, build caches and diagnostics
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+__pycache__/
+*.pyc

@@ -16,7 +16,7 @@ export function PrivacyPage() {
     <section className="pb-20 pt-32 sm:pb-24 sm:pt-36">
       <PageContainer>
         <article className="mx-auto max-w-2xl">
-          <h1 className="font-editorial-serif text-[2.35rem] font-normal leading-none text-neutral-950 sm:text-[3rem]">
+          <h1 className="font-editorial-serif text-[clamp(1.75rem,8vw,2.35rem)] font-normal leading-[1.05] text-neutral-950 [overflow-wrap:anywhere] sm:text-[3rem]">
             {pageTitle}
           </h1>
           <div className="mt-10 space-y-5 font-editorial-serif text-lg leading-8 text-neutral-700">

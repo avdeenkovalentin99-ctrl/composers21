@@ -1,0 +1,3604 @@
+{
+  "generated": "2026-10-28T15:16:26.199Z",
+  "groups": {
+    "[root files]": {
+      "count": 55,
+      "bytes": 25280707,
+      "trackedCount": 55
+    },
+    ".github": {
+      "count": 1,
+      "bytes": 875,
+      "trackedCount": 1
+    },
+    ".tmp-audit": {
+      "count": 443,
+      "bytes": 117932819,
+      "trackedCount": 0
+    },
+    ".tmp-build": {
+      "count": 7,
+      "bytes": 21747,
+      "trackedCount": 0
+    },
+    ".tmp-checkpoints": {
+      "count": 10,
+      "bytes": 114672,
+      "trackedCount": 0
+    },
+    ".vscode": {
+      "count": 1,
+      "bytes": 88,
+      "trackedCount": 1
+    },
+    "dist": {
+      "count": 240,
+      "bytes": 101522362,
+      "trackedCount": 0
+    },
+    "logos_to_send": {
+      "count": 15,
+      "bytes": 1775233,
+      "trackedCount": 15
+    },
+    "public": {
+      "count": 115,
+      "bytes": 76560515,
+      "trackedCount": 111
+    },
+    "scripts": {
+      "count": 11,
+      "bytes": 65100,
+      "trackedCount": 11
+    },
+    "src": {
+      "count": 184,
+      "bytes": 14864057,
+      "trackedCount": 180
+    },
+    "tmp_data": {
+      "count": 15,
+      "bytes": 2507005,
+      "trackedCount": 15
+    },
+    "tmp_scrape": {
+      "count": 7,
+      "bytes": 741649,
+      "trackedCount": 7
+    }
+  },
+  "publicGroups": {
+    "public/2026ref.png": {
+      "count": 1,
+      "bytes": 1050719
+    },
+    "public/assets/academies": {
+      "count": 4,
+      "bytes": 837513
+    },
+    "public/assets/external": {
+      "count": 51,
+      "bytes": 13946039
+    },
+    "public/assets/hero": {
+      "count": 25,
+      "bytes": 51989708
+    },
+    "public/assets/partners": {
+      "count": 6,
+      "bytes": 400834
+    },
+    "public/favver.png": {
+      "count": 1,
+      "bytes": 261669
+    },
+    "public/festlogo-bottomword.svg": {
+      "count": 1,
+      "bytes": 1405
+    },
+    "public/festlogo-topword.svg": {
+      "count": 1,
+      "bytes": 2551
+    },
+    "public/festlogo.svg": {
+      "count": 1,
+      "bytes": 5723
+    },
+    "public/festlogonowords.svg": {
+      "count": 1,
+      "bytes": 1842
+    },
+    "public/festlogov2.gif": {
+      "count": 1,
+      "bytes": 5684
+    },
+    "public/fonts": {
+      "count": 4,
+      "bytes": 3999448
+    },
+    "public/heroreffinal.png": {
+      "count": 1,
+      "bytes": 1408658
+    },
+    "public/liderylogo.pdf": {
+      "count": 1,
+      "bytes": 74300
+    },
+    "public/logo-header.png": {
+      "count": 1,
+      "bytes": 3583
+    },
+    "public/logo-header.svg": {
+      "count": 1,
+      "bytes": 644
+    },
+    "public/LogoV3main2.0menu.svg": {
+      "count": 1,
+      "bytes": 12123
+    },
+    "public/LogoV5finalbig.svg": {
+      "count": 1,
+      "bytes": 11544
+    },
+    "public/Logo_Lidery2024.png": {
+      "count": 1,
+      "bytes": 170777
+    },
+    "public/muzonlinelogo.jpg": {
+      "count": 1,
+      "bytes": 32105
+    },
+    "public/OGImage3.png": {
+      "count": 1,
+      "bytes": 1349701
+    },
+    "public/Ogimagenew.png": {
+      "count": 1,
+      "bytes": 905825
+    },
+    "public/orpheus-logo.svg": {
+      "count": 1,
+      "bytes": 2430
+    },
+    "public/revizorlogo.png": {
+      "count": 1,
+      "bytes": 71303
+    }
+  },
+  "assets": [
+    {
+      "path": "public/assets/hero/Vertical1.mp4",
+      "bytes": 26729964,
+      "tracked": true,
+      "hash": "795e66f3e367eda9da19822283a9a4a44dcd58c9f19894d397720fe600ad0db6",
+      "nameReferences": []
+    },
+    {
+      "path": "Ilthelemacademy.JPG",
+      "bytes": 4881527,
+      "tracked": true,
+      "hash": "0955fedc0d01aa7c593925b85d5423eef1b075160df856568bbc745487ada09d",
+      "nameReferences": []
+    },
+    {
+      "path": "herovidv2.mp4",
+      "bytes": 4289464,
+      "tracked": true,
+      "hash": "68602f91c22a6206b2e7fcce71a53f98e8037399540934b8f9039711ea3de01d",
+      "nameReferences": [
+        "src/app/components/hero/LogoVideoHero.tsx",
+        "src/app/components/hero/VideoHomeHero.tsx"
+      ]
+    },
+    {
+      "path": "herovidmob.mp4",
+      "bytes": 3989181,
+      "tracked": true,
+      "hash": "4a515e692ef5a448f793a821755cb370b93802aef3f209c318625a8601708ba9",
+      "nameReferences": [
+        "src/app/components/hero/LogoVideoHero.tsx",
+        "src/app/components/hero/VideoHomeHero.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/hero/PIanohero1c.webm",
+      "bytes": 2986431,
+      "tracked": true,
+      "hash": "c19727f4bad012c84d7499ca9830647742d969f4fa37ba3e95c059b5273ade9f",
+      "nameReferences": []
+    },
+    {
+      "path": "herovid.webm",
+      "bytes": 2983667,
+      "tracked": true,
+      "hash": "07a3f8d1a1417c32c078e5e652269794cc583ebb46581ac2ca8668aa548c8dc1",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/violin.png",
+      "bytes": 1956037,
+      "tracked": true,
+      "hash": "4bb073fa616513692d86c15df4d143b650a0a427f0253a992061e2cf8bfd94f1",
+      "nameReferences": []
+    },
+    {
+      "path": "public/fonts/roboto-flex.ttf",
+      "bytes": 1787292,
+      "tracked": true,
+      "hash": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281",
+      "nameReferences": [
+        "src/app/components/hero/DesktopHomeHero.css"
+      ]
+    },
+    {
+      "path": "public/assets/hero/intro3w.png",
+      "bytes": 1670499,
+      "tracked": false,
+      "hash": "56a75721995f56dc2d6797cfa95fae588bdb982f09d8a00ba9962e50b068a230",
+      "nameReferences": [
+        "src/app/components/intro/IntroStorySections.tsx",
+        "src/app/pages/IntroTestPage.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/hero/ref4.png",
+      "bytes": 1657370,
+      "tracked": true,
+      "hash": "b740565d36d1cbd10f0a662e063a8416160ab202e9a15ae8399b1d82fb87ca10",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/choir.png",
+      "bytes": 1640426,
+      "tracked": true,
+      "hash": "ce5ea1f8c846665ba0af7b97861b3beeacf3468509afd8d83815ac31aa90dcb0",
+      "nameReferences": [
+        "src/app/components/hero/DesktopHomeHero.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/hero/intro2w.png",
+      "bytes": 1579674,
+      "tracked": false,
+      "hash": "e6862bf21d09a8644d991c5472cfec987a281307edd715d2cc7e35dfae359bb2",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/piano.png",
+      "bytes": 1511191,
+      "tracked": true,
+      "hash": "970f72112fe8209682af0d1bbe658732f5f300059a6b2b1849a0623d842e289b",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/BerezovkiBedited.png",
+      "bytes": 1509922,
+      "tracked": true,
+      "hash": "e47c30c96a398483e7316e4390df9fb999b683a37e50ed43cca896e8fbe081a5",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/39e4c798_noroot.png",
+      "bytes": 1489230,
+      "tracked": true,
+      "hash": "7e95b81a499d7185653dd4cbf1a8f14e7de29dbcd06db4f3bc3cee20e515b39f",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/heroref3.png",
+      "bytes": 1430831,
+      "tracked": true,
+      "hash": "c5327618d9963d8cb8a9f0d931ca3b4f343273e48557fa389209d517bb4f9cd5",
+      "nameReferences": []
+    },
+    {
+      "path": "OGimage2.png",
+      "bytes": 1429654,
+      "tracked": true,
+      "hash": "b4b879948d252b6ea8b2ce4de7a4777bcc895e808ebbe8efa4c36f46c747ee0d",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/heroback1.png",
+      "bytes": 1415085,
+      "tracked": true,
+      "hash": "5cc3fda6d7409e97995a271f467de7ee93b51f5f98200c698a922b820b70f152",
+      "nameReferences": []
+    },
+    {
+      "path": "public/heroreffinal.png",
+      "bytes": 1408658,
+      "tracked": true,
+      "hash": "19dd284dfa75ec30ead63bfad9d7df02f027c91bd527f947bf2a3648bf5fd5c9",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/heroref1.png",
+      "bytes": 1400176,
+      "tracked": true,
+      "hash": "4110bfe8c3da17fb7ca43b9b3ef8c525014c67fac14a6a87f2b405cb830f75ed",
+      "nameReferences": []
+    },
+    {
+      "path": "OGimage3.png",
+      "bytes": 1349701,
+      "tracked": true,
+      "hash": "b068ab9772a40120bd79894532f8baa961f470e9c0adf627af67199bcd5af834",
+      "nameReferences": []
+    },
+    {
+      "path": "public/OGImage3.png",
+      "bytes": 1349701,
+      "tracked": true,
+      "hash": "b068ab9772a40120bd79894532f8baa961f470e9c0adf627af67199bcd5af834",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/chamberconcerthero.jpg",
+      "bytes": 1314634,
+      "tracked": true,
+      "hash": "84b2e317d11f071130d5c6eb0c1158ae36a1920c9e613da34979036c0c8d695c",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/ref1mobhero.png",
+      "bytes": 1297836,
+      "tracked": true,
+      "hash": "de5bf145d0835b471db328a377e8d63369bcd013c54cce95a0b581d8ea5c52c2",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/translref.png",
+      "bytes": 1232215,
+      "tracked": true,
+      "hash": "57747ef942a31081cd0d3616443a9d6249b2707ba86032051005b49981f958e3",
+      "nameReferences": []
+    },
+    {
+      "path": "public/fonts/cormorant-garamond-variable.ttf",
+      "bytes": 1195560,
+      "tracked": true,
+      "hash": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+      "nameReferences": [
+        "src/app/styles/globals.css"
+      ]
+    },
+    {
+      "path": "public/assets/hero/intro1w.png",
+      "bytes": 1157543,
+      "tracked": false,
+      "hash": "f176ab016cf72d21bc84b6174a2997401b330c5d36d316034b328fadf35f3051",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/heroforintronew.png",
+      "bytes": 1132606,
+      "tracked": false,
+      "hash": "6535048687a072ee8cf7572378d5f0f1c5891ef94e9b0f6cfc42088154627174",
+      "nameReferences": []
+    },
+    {
+      "path": "public/2026ref.png",
+      "bytes": 1050719,
+      "tracked": true,
+      "hash": "1e8c96320507ba6b77acd25e06be59d940f56a84b5aad313b27b9a1e680371cc",
+      "nameReferences": []
+    },
+    {
+      "path": "tarusalogo.png",
+      "bytes": 1002355,
+      "tracked": true,
+      "hash": "2006e5df3c08da17642b56d1466225a931abbd98b6b19bef686935833a15944e",
+      "nameReferences": [
+        "src/app/data/images.ts"
+      ]
+    },
+    {
+      "path": "10aa7226843afc00528da7dfda93102e.png",
+      "bytes": 927199,
+      "tracked": true,
+      "hash": "6a9d614c30683cb6efc4b51708edef600a7967a9defe2f5d0876be44576385eb",
+      "nameReferences": []
+    },
+    {
+      "path": "Ogimagenew.png",
+      "bytes": 905825,
+      "tracked": true,
+      "hash": "edee7e895112bf9371a16311bbcaad9f9589971769a5072e89c44d2b62e8e590",
+      "nameReferences": [
+        "index.html",
+        "src/app/utils/pageMeta.ts"
+      ]
+    },
+    {
+      "path": "public/Ogimagenew.png",
+      "bytes": 905825,
+      "tracked": true,
+      "hash": "edee7e895112bf9371a16311bbcaad9f9589971769a5072e89c44d2b62e8e590",
+      "nameReferences": [
+        "index.html",
+        "src/app/utils/pageMeta.ts"
+      ]
+    },
+    {
+      "path": "public/fonts/eb-garamond-variable.ttf",
+      "bytes": 851176,
+      "tracked": true,
+      "hash": "684fcc0db2239b43497341d596d68422ea60ef7522cf2e857071ad84e4ade2a4",
+      "nameReferences": [
+        "src/app/styles/globals.css"
+      ]
+    },
+    {
+      "path": "favver.png",
+      "bytes": 844270,
+      "tracked": true,
+      "hash": "6e7612b8b8f0a9520f9ffba2366d01c1a3579665f0360773b356641f0708fadb",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/peletsis.png",
+      "bytes": 804760,
+      "tracked": true,
+      "hash": "c19da0538d8e8e0b9952078f838adc91f460205e6b2b21eb47ed44931fd7da77",
+      "nameReferences": [
+        "src/app/data/images.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/PeletsisG.png",
+      "bytes": 804760,
+      "tracked": true,
+      "hash": "c19da0538d8e8e0b9952078f838adc91f460205e6b2b21eb47ed44931fd7da77",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/c31dbe0b_61afb70ee5afd7e2710b.jpg",
+      "bytes": 801057,
+      "tracked": true,
+      "hash": "8f87fee0a2f36493658fa9ba09ddc7c8e8f09e11aff268115faf41bcf939f924",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send.zip",
+      "bytes": 793332,
+      "tracked": true,
+      "hash": "aed563d72856303ee8af4560152bb0354ead437fda3509a41b3cfec879aa4133",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/Festivallogos.7z",
+      "bytes": 773820,
+      "tracked": true,
+      "hash": "302536e8a2f5d23487d35690ca78b07090d6e6122bf09a03db39efa0716d6215",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/ZubetsA.png",
+      "bytes": 703968,
+      "tracked": true,
+      "hash": "f7e11191b0be56b99493a60e89f5d989c7427bad450d1aa5811d31723b4736eb",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/5ac0c729_Aleksej-Lundin.jpg",
+      "bytes": 631034,
+      "tracked": true,
+      "hash": "0531cf80a87b337c8a0344e14f34fc8fe8197e423fb0686d816c684ba16d3b4f",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "public/assets/hero/p15.png",
+      "bytes": 601237,
+      "tracked": true,
+      "hash": "e0a544de1496f21b2de662566e15b6117c9458f0bfa52d4fde1191feabd557f0",
+      "nameReferences": [
+        "src/app/pages/FestivalPageLegacy.tsx"
+      ]
+    },
+    {
+      "path": "src/assets/participants/PyartA.png",
+      "bytes": 600667,
+      "tracked": true,
+      "hash": "6c69027d8416bc07ae53bc0550288234918db566e58cb8a524fad48fc5d3146c",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/hero/p12.png",
+      "bytes": 567731,
+      "tracked": true,
+      "hash": "3a9805c680038d4870a2aa2b503acdbf7daf7089723dad04e9ca6d8cb1957952",
+      "nameReferences": [
+        "src/app/pages/FestivalPageLegacy.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/hero/p31.png",
+      "bytes": 566234,
+      "tracked": true,
+      "hash": "5d033f0196d595523889bbfe6eed06ba02ae3a812895c58c2ebc1cbc935f254f",
+      "nameReferences": [
+        "src/app/pages/FestivalPageLegacy.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/hero/p28.png",
+      "bytes": 541723,
+      "tracked": true,
+      "hash": "349f76e55cbf511f17c83a35e4b8b0b7553980572958f00adc194868a0e0ceb7",
+      "nameReferences": [
+        "src/app/pages/FestivalPageLegacy.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/hero/p27.png",
+      "bytes": 495018,
+      "tracked": true,
+      "hash": "c470cdd3494061d22fe76aba835968ff229e951eeb48482fe8d556a9c763a4d9",
+      "nameReferences": [
+        "src/app/pages/FestivalPageLegacy.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/cd0d075c_db39c27515a4605ed73c.jpg",
+      "bytes": 451713,
+      "tracked": true,
+      "hash": "df3f1bf7f53a0850e6e0e9383a756f5302d8929d0f96aa63fa6ea1fa4702f3af",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/macordamich.jpg",
+      "bytes": 432244,
+      "tracked": true,
+      "hash": "acf52ecea66abb43e0efc6aed4fbc4778fb8a30e043e02f4962e63fbb46cd1af",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "Gnessinlogo.png",
+      "bytes": 414454,
+      "tracked": true,
+      "hash": "07bd61e5971240881fd490755efc514f9634f4316dcb713685245b845532ca8a",
+      "nameReferences": [
+        "src/app/data/images.ts"
+      ]
+    },
+    {
+      "path": "logos_to_send/partners/gnessin-logo.png",
+      "bytes": 414454,
+      "tracked": true,
+      "hash": "07bd61e5971240881fd490755efc514f9634f4316dcb713685245b845532ca8a",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/d6c06a4b_50d42752bd6c38e0c9da.jpeg",
+      "bytes": 409354,
+      "tracked": true,
+      "hash": "970b5b2ea88425e7e1a8b4a9a01cc26b61e11e9da16b6d918b1f84ad08b7e258",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/f4a26f9e_9ba87e7e7bb322482d4d.jpeg",
+      "bytes": 405793,
+      "tracked": true,
+      "hash": "0156c800aa9681d9d5ecb4bfd8e07a420000fb4744221c2490bfc0f3c6acf304",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/2194aac8__DSC5721.jpg",
+      "bytes": 401431,
+      "tracked": true,
+      "hash": "c2feb2435c62eb2ba2f58d60ed018384396eece22fbdeffd4adb646fdf3af315",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "tmp_data/niko_refs/3e66b5a4529f6971b00ef2b9d16c8be8.png",
+      "bytes": 399917,
+      "tracked": true,
+      "hash": "0d2e3127afa331ca0b6e362ff220b5bcb220d5c8b83c2ef34b2a6f7ea0e424db",
+      "nameReferences": []
+    },
+    {
+      "path": "tmp_data/niko_refs/15ddc20161b9c42c54840f6fcfe544f5.png",
+      "bytes": 399089,
+      "tracked": true,
+      "hash": "5da848a0e10e5962ad2311aa410c194fc9e917a10725813f50e86f0924f39798",
+      "nameReferences": [
+        "src/app/pages/AboutFestivalPage.tsx"
+      ]
+    },
+    {
+      "path": "tmp_data/niko_refs/ef1e9f3848ad26bbb2044d6aa988f5dd.png",
+      "bytes": 397210,
+      "tracked": true,
+      "hash": "312d831a6438ca03fa6f7945f33c8014e7fa0658e1cd86a6861de6282484e6e3",
+      "nameReferences": [
+        "src/app/pages/AboutFestivalPage.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/6ff3de26_6b1b5d1bd1f856318444.png",
+      "bytes": 391370,
+      "tracked": true,
+      "hash": "225b8ec7e2b99bd7448a326c9371377c32536e2e9b37bcc2ffcbed7b4bcb7b07",
+      "nameReferences": []
+    },
+    {
+      "path": "tmp_data/niko_refs/8e7dd019db22adc310b92256bb57513b.png",
+      "bytes": 387851,
+      "tracked": true,
+      "hash": "0a6a6e6d9bf65a955534bb5a904d586d976b7eb6904fcfba93ba52543a8fb66b",
+      "nameReferences": [
+        "src/app/pages/AboutFestivalPage.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/external/BerezovkiBcolor.jpg",
+      "bytes": 383666,
+      "tracked": true,
+      "hash": "2829967e372cc48044fc21a7ed4fe04fa54bafd6055876f3b5985e0d9c6beb4c",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/academies/sergey-akhunov.jpeg",
+      "bytes": 371176,
+      "tracked": true,
+      "hash": "73e848b903d9fccf74751edb6ce676c7de42d977099d969dc4efc4329bf708f2",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/5f68f703_5ef851e0c6992bfd3e44.jpg",
+      "bytes": 368423,
+      "tracked": true,
+      "hash": "d5abca6ce10641dea1526c9271337a47214348398303f007a61239be50c1e192",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.jpeg",
+      "bytes": 360717,
+      "tracked": true,
+      "hash": "8c1c7346d90cc9da3f7a4b25fe22affad696d8f1bb5b62888e91b411259d38c0",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/SokolovI.png",
+      "bytes": 323276,
+      "tracked": true,
+      "hash": "e210eea97d68900fd1cfa595341b3bf7841d1e17d3e09ab626ec738d81fdee08",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/f972c468_IMG_2432.jpeg",
+      "bytes": 322969,
+      "tracked": true,
+      "hash": "3e86be5ac8862db5b7a12d04dad4746935c7f80e70a70c3fbf2c4901990b5482",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/NataliMuradymova.jpg",
+      "bytes": 319857,
+      "tracked": true,
+      "hash": "6e33c530c80545e080f35ae6fa67f6fa75f01518a7b6d07b1be1f4386f44c314",
+      "nameReferences": [
+        "src/app/data/images.ts",
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/aca5621a_6362729948f1e85335ac.jpg",
+      "bytes": 310648,
+      "tracked": true,
+      "hash": "26486221d80b242049540ddc1b699b4311ba3edf2ffaf09ec99cede12ede5c56",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/LundinNovikov.webp",
+      "bytes": 304012,
+      "tracked": true,
+      "hash": "fd88fc7bc8000c70ae8ef578b84ede18f98c6508c01316b3d3b26513d402303f",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/51784523_Opensoundorchestra-4.jpeg",
+      "bytes": 302490,
+      "tracked": true,
+      "hash": "ddda334425dbaf875d7eda423882cc05dc380246a976873f7a18a9e65c9783e5",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/rumyantsevE.jfif",
+      "bytes": 295826,
+      "tracked": true,
+      "hash": "98e54cd88f33371494fd0e9417837d98c6559ef14c2a9a4ab9cc7d89ff19c94b",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/GlavatskikhP.png",
+      "bytes": 277623,
+      "tracked": true,
+      "hash": "fd626355906a176423e9cb479147e22a2d43a7e5dc0b39f0a781cd7107fd5e4c",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/NizamovE.jpg",
+      "bytes": 270655,
+      "tracked": true,
+      "hash": "aaa6ddbea8e8030e506946b9dc247a27635f12e27c720cac6afeb2483b6ff442",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/feiginovaE.jpg",
+      "bytes": 268503,
+      "tracked": true,
+      "hash": "e647f4ebacb0f95858573187da0b8d91649137bf71ecc5c522eeda77981702dc",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/chamberconcerthero.webp",
+      "bytes": 267148,
+      "tracked": true,
+      "hash": "b95de73f7fa922d2f1fd450bfaa06e78190f520ae59a698d6106df990b7bc678",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts",
+        "src/app/data/concerts.ts"
+      ]
+    },
+    {
+      "path": "92e2f8774758880a88a1c63625b99f96.png",
+      "bytes": 266735,
+      "tracked": true,
+      "hash": "2575035adf102bdd8bfb5d05aebb4d5ade9476c81674c171e728d194ed318e0c",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/academies/ile-theleme-academy.jpg",
+      "bytes": 263903,
+      "tracked": true,
+      "hash": "9f1992852913664548d20405dba573f962974c50ff017a0fd9c113002895fb97",
+      "nameReferences": [
+        "src/app/pages/AcademiesPage.tsx"
+      ]
+    },
+    {
+      "path": "public/favver.png",
+      "bytes": 261669,
+      "tracked": true,
+      "hash": "06e6ceaa20e8a7cd12e2f48651e46e429731c2fe8d19ade9a9bed1f46291d5f1",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/glavatskihp.jpg",
+      "bytes": 257609,
+      "tracked": true,
+      "hash": "eb6824464df8187af22bb1afcff3d7c6252e9aff4d41aa4662b8a1d316a13944",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/Dombrovskiy.jpg",
+      "bytes": 255028,
+      "tracked": true,
+      "hash": "21c4ff8ba01fffc2a3106edd45d9b37015569078d342382f73cd6759799a9d39",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/KramD.jpg",
+      "bytes": 250818,
+      "tracked": true,
+      "hash": "95420bcbc61e0c04b2ad913cadae27be52c861918b9b1e3a9f2866b5436bee15",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/KasparovY.png",
+      "bytes": 239691,
+      "tracked": true,
+      "hash": "18de678a26d2c224901f8e1204292c2e6758cdb2749d6623073754bebbf51433",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/TarbagaevM.jpg",
+      "bytes": 239251,
+      "tracked": true,
+      "hash": "84d56ce9d601216b460b63a5cc80994870ffec76d8d6bebf046ff6e62b9cd270",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/48f5939f_IMG-20251121-WA0020.webp",
+      "bytes": 232470,
+      "tracked": true,
+      "hash": "f0bb451410d7f57b5ad53eafd469c254cf5a919b9c03d668046f3c5214d9dcad",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/SergPoltavskiy.jpg",
+      "bytes": 231215,
+      "tracked": true,
+      "hash": "b8af6685fc0835b72db5c7b120a9f92b1188105949e80d8ec0e0bfa00c2eb8a3",
+      "nameReferences": [
+        "src/app/data/images.ts",
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/1ce0f2e5_-5451686574358728414.jpg",
+      "bytes": 228757,
+      "tracked": true,
+      "hash": "4c3c06bcadecd98a9918f2cb5ff5fd3e0529ef9f5b2e8233c6a62e6713dc08ab",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/a9da4c31_IMG_20260303_105903_.jpg",
+      "bytes": 228757,
+      "tracked": true,
+      "hash": "4c3c06bcadecd98a9918f2cb5ff5fd3e0529ef9f5b2e8233c6a62e6713dc08ab",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/RadchenkovV.jpg",
+      "bytes": 226553,
+      "tracked": true,
+      "hash": "588888efa398d580fd2b1ea5779992c3f5bf13d21f27db71445581dcd168cec0",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/zilbermani.jpg",
+      "bytes": 226316,
+      "tracked": true,
+      "hash": "7cc31a27fa12e509fd4c51f3209757c1c0ed2ea4ad02d1aa044c3ae0210ef694",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/malyshevs.jpg",
+      "bytes": 224831,
+      "tracked": true,
+      "hash": "07a7488e26d714eca975e65cd176318353b71f584ac3c47e01ead3d0d20a89d7",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/SharrinoS.jpg",
+      "bytes": 218087,
+      "tracked": true,
+      "hash": "854cf8887916af0f0735950d70176d93e9c166b1b67ea74f280e582d7b3c167a",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/shinkevichf.jpeg",
+      "bytes": 213666,
+      "tracked": true,
+      "hash": "0ec2309a404944b2d83a2c47f2a5c6f0198bc99d313fe4f0eddca1cbfacb95e1",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/kalinovao.jpg",
+      "bytes": 213403,
+      "tracked": true,
+      "hash": "43d75be89a6a2ca2c0c67dfb474ebfc51368afb5c6bc657731f18c1fec2d5d24",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/48f5939f_IMG-20251121-WA0020.jpg",
+      "bytes": 211117,
+      "tracked": true,
+      "hash": "2415f11652d5de54f85de05987d98802016bd12305d227c06da9e0af9fe56b6e",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/Karmanov.webp",
+      "bytes": 206466,
+      "tracked": true,
+      "hash": "8fe9828f383c9205a546392a0773b07607d797f33efd61fda31b4b6e51101022",
+      "nameReferences": [
+        "src/app/data/images.ts",
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "Desyatnikon.webp",
+      "bytes": 203656,
+      "tracked": true,
+      "hash": "1c29bb0887ec9ed3a2b9a2884a1154c62a4862b551b6e99e0924272452f9a0ee",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/c3a19a32_-5368621893969188115.jpg",
+      "bytes": 196937,
+      "tracked": true,
+      "hash": "7ecb21aa4b1756062c0ebbc74e1643895d89c13e1665307b65d9a4d45be5bceb",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/volkovv.jpg",
+      "bytes": 192406,
+      "tracked": true,
+      "hash": "1cd050ba1e38cf6e67947db52a086e98ec1045cd7d708e5eae72748200584dd8",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/JuliaIgonina.jpg",
+      "bytes": 188642,
+      "tracked": true,
+      "hash": "ec98c10b2a0254489201503a489048ab671f37704fcda274098b28ef2182fb84",
+      "nameReferences": [
+        "src/app/data/images.ts",
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "Ile_theleme_logo_black.png",
+      "bytes": 183622,
+      "tracked": true,
+      "hash": "31bec738f66dbec39bc92453bbc99492a2f5bb1ad997c35dcb02f5fc3d17f14b",
+      "nameReferences": [
+        "src/app/data/images.ts"
+      ]
+    },
+    {
+      "path": "logos_to_send/partners/ile-theleme-logo-black.png",
+      "bytes": 183622,
+      "tracked": true,
+      "hash": "31bec738f66dbec39bc92453bbc99492a2f5bb1ad997c35dcb02f5fc3d17f14b",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/ZelenskiiA.jpg",
+      "bytes": 183411,
+      "tracked": true,
+      "hash": "ce0cd0aa021001aa24116923699be551a91b9b2ac293eb74141fcc0cc2100465",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/c9619ec7_2J9A7454-scaled.jpg",
+      "bytes": 179376,
+      "tracked": true,
+      "hash": "5727e104da320067dd1346b0ca3c66665023387981d36791dd5a002c71cb624f",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/bfd7db6d_50a0894752382d8d9b1a.jpg",
+      "bytes": 173379,
+      "tracked": true,
+      "hash": "cd278be19b591808cb2650ead9f3a1a99770cd93ff02d8481d476cdc0664a4f5",
+      "nameReferences": []
+    },
+    {
+      "path": "public/Logo_Lidery2024.png",
+      "bytes": 170777,
+      "tracked": true,
+      "hash": "2ec745110a5a4f76eb64a04c4ed3f1e1f180cfe948561250edd09cf7baf4d454",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/culture2.webp",
+      "bytes": 168200,
+      "tracked": true,
+      "hash": "c6e62eb6526f914e0dfa18fb58f61a8698071a563af5dcb68023ec5146867f4f",
+      "nameReferences": [
+        "src/app/pages/FestivalPageLegacy.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/milyausha-khayrullina.jpg",
+      "bytes": 167287,
+      "tracked": true,
+      "hash": "58525b338c4fa752ccb9b285013efbdc1aeddee6fd633b1ce1be237973202c8a",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/onischenkod.jpg",
+      "bytes": 165421,
+      "tracked": true,
+      "hash": "0b45b42f4bcaa1153549b47f7fc995da0434a86511b74ccf37b37559c659b8ab",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/fonts/manrope-variable.ttf",
+      "bytes": 165420,
+      "tracked": true,
+      "hash": "d0639be45d0af36e798172419d7bd173c4bd4f29e2b76cbb69db1d11bf8b0a40",
+      "nameReferences": [
+        "src/app/styles/globals.css"
+      ]
+    },
+    {
+      "path": "public/assets/external/10d8aa03_628777e6-f5b4-4784-c.jpg",
+      "bytes": 163819,
+      "tracked": true,
+      "hash": "6f98ea4aed3e88e47708c02ca49437dd46adc116d577099982e595f81ad7257a",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/PetrovA.jpg",
+      "bytes": 163658,
+      "tracked": true,
+      "hash": "e8ae22ad165dbbcd5942b88718651f40b2cc21906b5744ccf7f67508c9c415b1",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/KomissarovA.jpg",
+      "bytes": 159713,
+      "tracked": true,
+      "hash": "14fa0d842fe2e224370698df6bc21e38104e32726f3cde493ba04cd6f012d54c",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/EshenvaldsE.png",
+      "bytes": 158306,
+      "tracked": true,
+      "hash": "2e446df9bf7e39407041e8f824dd287455fe5ed2a53cc109294831602a695434",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/YakovlevG.jpg",
+      "bytes": 158227,
+      "tracked": true,
+      "hash": "1f0492835ffc07af26e4ef7d15385ed0c6283d4a2a244d2022b1f78e579286e1",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/desyatnikov2.jpg",
+      "bytes": 158119,
+      "tracked": true,
+      "hash": "381864b74b3fc7ccc65e9880db3316202dfd684be46a1e0723254f369c4eb8c0",
+      "nameReferences": [
+        "src/app/data/images.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/DesyatnikovL.jpg",
+      "bytes": 158119,
+      "tracked": true,
+      "hash": "381864b74b3fc7ccc65e9880db3316202dfd684be46a1e0723254f369c4eb8c0",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/ed37e6cf_3356cca21f4277bd7192.jpg",
+      "bytes": 157343,
+      "tracked": true,
+      "hash": "ff94b66a4392308359a0dd44ec8c8358042f8ac2ede37b4ec646e7fe611fd5c7",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/finalconcert.jpg",
+      "bytes": 157343,
+      "tracked": true,
+      "hash": "ff94b66a4392308359a0dd44ec8c8358042f8ac2ede37b4ec646e7fe611fd5c7",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/music-online-logo.png",
+      "bytes": 153960,
+      "tracked": true,
+      "hash": "1a09075e171da2ec571cfb2e324470f5e07013974fe1ddcc163b108fd1ea3d8c",
+      "nameReferences": [
+        "src/app/data/partners.ts"
+      ]
+    },
+    {
+      "path": "public/assets/partners/music-online-logo.png",
+      "bytes": 153960,
+      "tracked": true,
+      "hash": "1a09075e171da2ec571cfb2e324470f5e07013974fe1ddcc163b108fd1ea3d8c",
+      "nameReferences": [
+        "src/app/data/partners.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/BerezovkiBedited (1).webp",
+      "bytes": 151338,
+      "tracked": true,
+      "hash": "9500fd4190b01570d87a8972e7a53f47b20fc0444e4f2629b61a41d4746b3195",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/SaariakhoK.jpg",
+      "bytes": 149812,
+      "tracked": true,
+      "hash": "8b6c9fe92b2cc34efafd75e2fc711bdcc56ed4083477c1a9b34abc4b2dac5ca9",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/PleshakS.jpg",
+      "bytes": 143287,
+      "tracked": true,
+      "hash": "75925cbaf1ad2cbb45cb17684d48979c4ab202f0758357f149170d4c733184fd",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/knorreK.jpg",
+      "bytes": 140538,
+      "tracked": true,
+      "hash": "30f4d9508dbaeebdb5d9d90a3d15a24101582b921379e4c7d963a36db33b38f3",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/ivanovaO.jfif",
+      "bytes": 140010,
+      "tracked": true,
+      "hash": "fd55fe3ca0735973f831506f4e6a700a528fb02697894f2809b5559d6e5ed025",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/90596f76_MaximNovikov1.jpg",
+      "bytes": 136753,
+      "tracked": true,
+      "hash": "5e19db2df248299a4be9f6acce9d4558a29b85c067503fe3d550ad760a829fdd",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/DruzhininaA.jpg",
+      "bytes": 135516,
+      "tracked": true,
+      "hash": "a734c04c2ca03fc45300025d224bf9448758a5e475d9c42d5aca2355ccfb7f20",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/DomnikovaM.jpg",
+      "bytes": 134721,
+      "tracked": true,
+      "hash": "d681d18d3cb998505c8508eb603899a7c04b28e6efa555ea21f0c18f2f1717e2",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/olgademinaB.jpg",
+      "bytes": 130711,
+      "tracked": true,
+      "hash": "cf5afce41310e9be44f413c000ccc82e59be9fb8e8a057c8ed0c4b8fd2ad1b9b",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/VasksP.jpg",
+      "bytes": 129264,
+      "tracked": true,
+      "hash": "7f726b89ea71947c79ee757ba17054490ac0a3589fb48e1609c6dfee06ae0dc8",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/hero/culture1.webp",
+      "bytes": 123984,
+      "tracked": true,
+      "hash": "9bd541c27a6c4ac5091ebf8e910f41a1dbfae7fd9632f4a3d162958b131ef48c",
+      "nameReferences": [
+        "src/app/pages/FestivalPageLegacy.tsx"
+      ]
+    },
+    {
+      "path": "src/assets/participants/MustukisA.png",
+      "bytes": 122342,
+      "tracked": true,
+      "hash": "03f3ff21acfb4fd02abefa81799d5851445ee492989cc2ef802b29ac6c490469",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/EdisonD.jpg",
+      "bytes": 120151,
+      "tracked": true,
+      "hash": "69801820dc6b86216aaaca74591ff351a1595c8af5e5a92a788b4b77c720ff49",
+      "nameReferences": [
+        "src/app/data/composers.legacy.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/Alisaten.jpg",
+      "bytes": 119825,
+      "tracked": true,
+      "hash": "15becaf1c7f12c663dc987604274ba9854f45fa0d3b43675e1fc4ac61c99e935",
+      "nameReferences": [
+        "src/app/data/images.ts",
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "MyagkovaAcademy.jpg",
+      "bytes": 117915,
+      "tracked": true,
+      "hash": "be3e203e7773efddbc1ba4c3d835fa83e779400a14aa7927e5f2d47fffa10e7d",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/academies/myagkova-academy.jpg",
+      "bytes": 117915,
+      "tracked": true,
+      "hash": "be3e203e7773efddbc1ba4c3d835fa83e779400a14aa7927e5f2d47fffa10e7d",
+      "nameReferences": [
+        "src/app/pages/AcademiesPage.tsx"
+      ]
+    },
+    {
+      "path": "src/assets/participants/valievamakorda.jfif",
+      "bytes": 117456,
+      "tracked": true,
+      "hash": "f42097f96ccf2be41103cf7145c954da2fcdc048e0ef4ed5b3f867d55d0993a3",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/MakoyanA.jpg",
+      "bytes": 117181,
+      "tracked": true,
+      "hash": "ea980f6791e05d3b400079d73a65bc2ac1e918feafec677ca2434df1ee55360e",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/stepanichi.jpg",
+      "bytes": 112070,
+      "tracked": true,
+      "hash": "b83a3db589a4817c4fef1e6392f35f8a75d35b97f7d234ed11d34ec4b54c3ce3",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/gruninae.jpg",
+      "bytes": 110922,
+      "tracked": true,
+      "hash": "eb2a82338db6c235961c501c27a016c8a0674327264c8b8aa4e642856cabd5f2",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/IvanovaO.jpg",
+      "bytes": 110762,
+      "tracked": true,
+      "hash": "9c9eb959a4357ed8add4ae02de97db38fe6fecddde7d5cf5481aa2961cc6ec65",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/bfd7db6d_50a0894752382d8d9b1a.webp",
+      "bytes": 110086,
+      "tracked": true,
+      "hash": "15c0055ca6ab67b97606133aaed058d0ab0b5725e16954cc2da2c0691000a10d",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/KozhevnikovaE.jpg",
+      "bytes": 107584,
+      "tracked": true,
+      "hash": "68fda8d7d9e232d4768a9319240cb8581e6bd5ab978f22833d19c9317502ab24",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "tmp_data/niko_refs/b5f6b2f957ee21a91767eef11030da3e.jpg",
+      "bytes": 105015,
+      "tracked": true,
+      "hash": "b30db52c7eee419fd878aebb2889d85f9796286cec75c2d86b4c490ce1bb1869",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/finalconcert.webp",
+      "bytes": 104026,
+      "tracked": true,
+      "hash": "8aa70ef4a2e4ca4f923800cbf86d475ef9f6651745f491a236c4736efb39c2ff",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/pozumskiir.jpg",
+      "bytes": 103072,
+      "tracked": true,
+      "hash": "4404dbe48979eaa90aef758d6742655baf9caad669f4aad9884dd0eb257c8349",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/sokolovskayaN.jpeg",
+      "bytes": 102439,
+      "tracked": true,
+      "hash": "b6af8b2406834272975cc4c31af75acb1234c9f8fdb9493e3ad3d6a1a0bfb849",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "logos_to_send/partners/leaders-building-russia.png",
+      "bytes": 102096,
+      "tracked": true,
+      "hash": "4416bb8618e943e3b7496cf21db21844795f7ec4c60eb9e8f546eaca9e459604",
+      "nameReferences": [
+        "src/app/data/partners.ts",
+        "src/app/pages/PartnersPage.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/partners/leaders-building-russia.png",
+      "bytes": 102096,
+      "tracked": true,
+      "hash": "4416bb8618e943e3b7496cf21db21844795f7ec4c60eb9e8f546eaca9e459604",
+      "nameReferences": [
+        "src/app/data/partners.ts",
+        "src/app/pages/PartnersPage.tsx"
+      ]
+    },
+    {
+      "path": "src/assets/participants/vykulovr.jpg",
+      "bytes": 98154,
+      "tracked": true,
+      "hash": "0d07a8d4b6f3a7db339d9e28b5b1623ffdbaf258a5519922cd1f25140c7a3ee1",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/ile-theleme-ensemble-main.jpg",
+      "bytes": 96542,
+      "tracked": true,
+      "hash": "60e1400a5a2a9cad0a582989427dd267a6ca8fb1dcda0e7097533864f716a07f",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/zhulevak.jpg",
+      "bytes": 96220,
+      "tracked": true,
+      "hash": "e2bbd7d9d00e172bebd511d3f2963863497f69cf04e15668020217fe87124667",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/PozyumskiiR.jpg",
+      "bytes": 91976,
+      "tracked": true,
+      "hash": "c21f7b61e92d3dad259a2fbe9d14a1695d5a30c373770356e68a21286180f3e5",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/KobekinV.jpg",
+      "bytes": 91714,
+      "tracked": true,
+      "hash": "44fe6d5f2b963470755ae7ff2441df31baa6772890a534e223a7edccac135a43",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/a9da4c31_IMG_20260303_105903_.webp",
+      "bytes": 88546,
+      "tracked": true,
+      "hash": "d85573449f643eb5f8df12fb13fceb46097d3a3c7032837727658f66894dea92",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/MochalovaK.jpg",
+      "bytes": 86472,
+      "tracked": true,
+      "hash": "7a14098ea70ba9ca5da2d582679beb61292f9d994a9a406c10dbdd48462614f2",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/academies/akhunov-academy.jpg",
+      "bytes": 84519,
+      "tracked": true,
+      "hash": "52907fa2cfb11d1007a5363e2c4a27141b73002fc1aa343dec4ef21afac0f02f",
+      "nameReferences": [
+        "src/app/pages/AcademiesPage.tsx"
+      ]
+    },
+    {
+      "path": "src/assets/participants/malomozhnova.jpg",
+      "bytes": 82985,
+      "tracked": true,
+      "hash": "fa385ab70dd13d30a45c7af3a6e782a952d4c75eae7b785bb0663eea1cd5f0ea",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/KarmanovP.jpg",
+      "bytes": 82914,
+      "tracked": true,
+      "hash": "74613a4e61beec41cd32b848b7034884bf9fda5de6312f3201985a37f336f1e1",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/cd0d075c_db39c27515a4605ed73c.webp",
+      "bytes": 81214,
+      "tracked": true,
+      "hash": "e54638965c72c19b5f8662163171f38a18c2e197fec616db3628be8fac21d8b1",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/ZhivkovichN.jpeg",
+      "bytes": 81195,
+      "tracked": true,
+      "hash": "9503580cf2a97d95850d86924bce8d9d406c5b6cf0bdd1e09b37b029432e532f",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/5f68f703_5ef851e0c6992bfd3e44.webp",
+      "bytes": 80382,
+      "tracked": true,
+      "hash": "5a6fdb2c5540bd42729a615d43dd0b7ce02d073c305b7fd3f8539e2fe38e7e34",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/KonessonG.jpg",
+      "bytes": 79717,
+      "tracked": true,
+      "hash": "8e7bf108da557504bd842442a77bc0391281a6c2f93f49dc8628ba64c123d785",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/Akhunov.jpeg",
+      "bytes": 79267,
+      "tracked": true,
+      "hash": "d7fb98661bdda13b54cae7956243f39a3f27c198ebf4dbec3d1d6d070ae96b0d",
+      "nameReferences": [
+        "src/app/data/images.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/AkhunovS.jpeg",
+      "bytes": 79267,
+      "tracked": true,
+      "hash": "d7fb98661bdda13b54cae7956243f39a3f27c198ebf4dbec3d1d6d070ae96b0d",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/ZhukovS.jpg",
+      "bytes": 77411,
+      "tracked": true,
+      "hash": "974b95af9e00f1e8d2ea04bb0508a8d16eb64d2571925997879243ba63697004",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/BerezovskiB.jpg",
+      "bytes": 77012,
+      "tracked": true,
+      "hash": "4806e7d840c446a29b4e129f129af7dae5b797852ac4bbf58b507e2ceae0a058",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/2401_aleksandr-chajk.jpg",
+      "bytes": 75629,
+      "tracked": true,
+      "hash": "6906b8971f33903b9d1d6c83defba22866b5c564670c61dbadd53a2ca71f19ff",
+      "nameReferences": [
+        "src/app/data/images.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/ChaikovskiiA.jpg",
+      "bytes": 75629,
+      "tracked": true,
+      "hash": "6906b8971f33903b9d1d6c83defba22866b5c564670c61dbadd53a2ca71f19ff",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/tepluhinae.jpg",
+      "bytes": 75149,
+      "tracked": true,
+      "hash": "911eb0f2344f8d58a526b96597871a1f629a136bb7f058c25699e349bb7709dd",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/liderylogo.pdf",
+      "bytes": 74300,
+      "tracked": true,
+      "hash": "312025222c2ac9360c268a2f8a8536d25bfbf0f9bf506914d3142c2b7b656c60",
+      "nameReferences": []
+    },
+    {
+      "path": "public/revizorlogo.png",
+      "bytes": 71303,
+      "tracked": true,
+      "hash": "4af993a14060076dbdecc83b938b8b8b2be772fa4e16a171325d88c48664017d",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/6c7af7d8_0c98a711c715d8f20ff7.jpg",
+      "bytes": 69555,
+      "tracked": true,
+      "hash": "06605f08120e3ca8404e2000b19a6b63114bbca1699f0f215105efbfd6be719c",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/lotovaa.jpg",
+      "bytes": 66088,
+      "tracked": true,
+      "hash": "c04611eb37d575f4c859d5d61f733894db22954bdc8f61996c32ebdb8f046133",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/RetinskiiA.jpg",
+      "bytes": 65608,
+      "tracked": true,
+      "hash": "1c881d0f63cd1e2e2ac6a8ceb029430d70497786d2405db2c8890d75b711ad24",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "lifestylelogo.png",
+      "bytes": 64103,
+      "tracked": true,
+      "hash": "17b3e9f8575791b11f270023ede44079c5679b313d2e2a8822678f76f3ea9288",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/lifestyle-logo.png",
+      "bytes": 64103,
+      "tracked": true,
+      "hash": "17b3e9f8575791b11f270023ede44079c5679b313d2e2a8822678f76f3ea9288",
+      "nameReferences": [
+        "src/app/data/partners.ts",
+        "src/app/pages/PartnersPage.tsx"
+      ]
+    },
+    {
+      "path": "public/assets/partners/lifestyle-logo.png",
+      "bytes": 64103,
+      "tracked": true,
+      "hash": "17b3e9f8575791b11f270023ede44079c5679b313d2e2a8822678f76f3ea9288",
+      "nameReferences": [
+        "src/app/data/partners.ts",
+        "src/app/pages/PartnersPage.tsx"
+      ]
+    },
+    {
+      "path": "logofestnew.png.bak2",
+      "bytes": 62969,
+      "tracked": true,
+      "hash": "a52983aa1e103c19556348d86349e65681b8ab46ba836478b80d86ce3e0c7ca3",
+      "nameReferences": []
+    },
+    {
+      "path": "logofestnew.png",
+      "bytes": 62962,
+      "tracked": true,
+      "hash": "0c521d8dad712fdc47aecb38a7db613a813a7ba499f6a44312e71f233e2ccee6",
+      "nameReferences": []
+    },
+    {
+      "path": "logofestnew.png.bak",
+      "bytes": 62756,
+      "tracked": true,
+      "hash": "317778d8fefa9f7f0a854bfc31f9086914b4fb4f4a4f00494ea8ae550966bf53",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/newlogoru.jpg",
+      "bytes": 59865,
+      "tracked": true,
+      "hash": "aabcd4acd49ea55d9b010ac95fd6ec79be5dce722bb1206128faa08272b0029b",
+      "nameReferences": []
+    },
+    {
+      "path": "index.pdf",
+      "bytes": 58908,
+      "tracked": true,
+      "hash": "0676a2642391dc3d2cfb8a261365d25538aee6fbcc5408d991d223338fab3089",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/ksenaksisYa.jpg",
+      "bytes": 55532,
+      "tracked": true,
+      "hash": "28b42a9c63da9058432b0400ab7edcb81fb40e6299cf65cd111a23ec8603833d",
+      "nameReferences": [
+        "src/app/data/composers.legacy.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/ca19e99d_IMG_20260305_001127_.jpg",
+      "bytes": 54805,
+      "tracked": true,
+      "hash": "25ee94dbb7f382b142a379c72b914bf5924563ba861e9d81b3293d8b35f24511",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "broadcastref.jpg",
+      "bytes": 54429,
+      "tracked": true,
+      "hash": "dd49ed6305ea4d2c883a4716d1995eb2a071449788625b8649486cc860d1bae7",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/d6c06a4b_50d42752bd6c38e0c9da.webp",
+      "bytes": 51512,
+      "tracked": true,
+      "hash": "e34034c88e3e8e3c19d89d1759479792f2df7b9bb4f69e4dfcae7b74be09bca3",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/f4a26f9e_9ba87e7e7bb322482d4d.webp",
+      "bytes": 49730,
+      "tracked": true,
+      "hash": "d00f8f4a69042a418bc15bcc8e1dc9f0bcdde43698e1708dfb1bcd0288fdc66a",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.webp",
+      "bytes": 49282,
+      "tracked": true,
+      "hash": "8e29baeefca7b4b49980bab9a9a98c8469829bd57a86bf45c9ddecf502369108",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/revizor-logo.png",
+      "bytes": 46345,
+      "tracked": true,
+      "hash": "aad153b15e20e6eafbf3ef008c8d860ea4fd0ed79b6cc415b77fde7efff68327",
+      "nameReferences": [
+        "src/app/data/partners.ts"
+      ]
+    },
+    {
+      "path": "public/assets/partners/revizor-logo.png",
+      "bytes": 46345,
+      "tracked": true,
+      "hash": "aad153b15e20e6eafbf3ef008c8d860ea4fd0ed79b6cc415b77fde7efff68327",
+      "nameReferences": [
+        "src/app/data/partners.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/tanabeA.jpg",
+      "bytes": 42998,
+      "tracked": true,
+      "hash": "64552e7420fbb666dc75f3140ca36a895e37063824d3fd986d78a9f867d256ed",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/hero/content.docx",
+      "bytes": 42222,
+      "tracked": true,
+      "hash": "6d051529a0d871b7348c2f2251b853d1ad1902f85cf75e0b5c015f95e6bcaf35",
+      "nameReferences": [
+        "src/app/data/heroComposers.ts",
+        "src/app/data/heroSoloists.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/tursunov.jpg",
+      "bytes": 42035,
+      "tracked": true,
+      "hash": "a022d2b7dd6ef971b1a7f80597f3723d1987c62d2685aefcd5b474433a0cac9f",
+      "nameReferences": [
+        "src/app/data/images.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/TursunovP.jpg",
+      "bytes": 42035,
+      "tracked": true,
+      "hash": "a022d2b7dd6ef971b1a7f80597f3723d1987c62d2685aefcd5b474433a0cac9f",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/aca5621a_6362729948f1e85335ac.webp",
+      "bytes": 42006,
+      "tracked": true,
+      "hash": "9afee9ba5059476807002eaf88b55b7b196d65a6ba04317d67f4fe2d656d8221",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/6f5aec75_IMG_2162.jpg",
+      "bytes": 38128,
+      "tracked": true,
+      "hash": "b981af0bf55989073410d18c33ec247a1bb66ccdea788622b4b947b47c885a8a",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "БиографииСолисты1.docx",
+      "bytes": 36605,
+      "tracked": true,
+      "hash": "968ca191b1ec861422698cb3b34eed9748ab186cc237f7106868cf6e067a3ba7",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/starodubtsevE.jpg",
+      "bytes": 35466,
+      "tracked": true,
+      "hash": "71762a3baa29416c42e3ffef56f8d2cab5df45db67c7e612095c480759ecd3d9",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/heroafisha/c31dbe0b_61afb70ee5afd7e2710b.webp",
+      "bytes": 32122,
+      "tracked": true,
+      "hash": "ebd7bfc4f04954204dd8480814dbdd772b4169efb8a0ca1f94d2af4ed8f48a54",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "public/muzonlinelogo.jpg",
+      "bytes": 32105,
+      "tracked": true,
+      "hash": "1f264e6f34cf4c29a3ec98e73e176418c8cf178fb4ba81d05b131d1073314d0e",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/KhrushchevaN.jpg",
+      "bytes": 31275,
+      "tracked": true,
+      "hash": "7d8710ad030a164fc623a6c72932c333ace392b16fceaf65b61947e34419210a",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/external/fedbb67f_IMG-20260124-WA0004.jpg",
+      "bytes": 30701,
+      "tracked": true,
+      "hash": "f9f7194023477535f5a0c529b2257611a8d9f56665eac2781848029dd85368f4",
+      "nameReferences": [
+        "src/app/data/performers.legacy.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/martynov.jpg",
+      "bytes": 30486,
+      "tracked": true,
+      "hash": "619d028bd3b51de8254b4dc14240ce682aca60e1f5e2eb51cff7f629a37cc091",
+      "nameReferences": [
+        "src/app/data/images.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/MartynovV.jpg",
+      "bytes": 30486,
+      "tracked": true,
+      "hash": "619d028bd3b51de8254b4dc14240ce682aca60e1f5e2eb51cff7f629a37cc091",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "aboutref.jpg",
+      "bytes": 29835,
+      "tracked": true,
+      "hash": "832db876f5d377adfd1aa7dcc7fbcc6da616e65cd3c643640ca0d601ebb258ca",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/6ff3de26_6b1b5d1bd1f856318444.webp",
+      "bytes": 28036,
+      "tracked": true,
+      "hash": "4deab55f9ab4ad81975677beec56735aa5b9ea171b9ece2170882150e34068c2",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "mediaref1.jpg",
+      "bytes": 27891,
+      "tracked": true,
+      "hash": "6ae575e8d294dc39d7faa2885cdd7ea5e6149d61b9994658a5fb7cd459855b5f",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/BerezovkiBedited.webp",
+      "bytes": 25848,
+      "tracked": true,
+      "hash": "e171f382dae37a4a45ef77a516df439b42add3ce1c50a683af875cf78f6d8f62",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/festival-logo-inverse.svg",
+      "bytes": 25610,
+      "tracked": true,
+      "hash": "07ecdcc50a8a2a228af20f865ad8d08d9e46a77c5c895366408caf00d24e28c0",
+      "nameReferences": [
+        "src/app/components/hero/ReferenceHomeHero.tsx"
+      ]
+    },
+    {
+      "path": "logofestnew.jpg.bak2",
+      "bytes": 23915,
+      "tracked": true,
+      "hash": "082abc21e095bb72bfd8fe7bb8e713b1328ff0d46436c2f75ecf5a198accfb00",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/LengD.jpg",
+      "bytes": 22585,
+      "tracked": true,
+      "hash": "66a9418d86dd22cf4fcba409d7a667f4a14a4edb3d147528cebb23f49acb2532",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "public/assets/partners/niko-logo.png",
+      "bytes": 22426,
+      "tracked": true,
+      "hash": "3d3817ffdb940d257096f7b414d8e1f8109e313bba8c37f0dc2cb2afe5a614b6",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/6c7af7d8_0c98a711c715d8f20ff7.webp",
+      "bytes": 20964,
+      "tracked": true,
+      "hash": "f5cfd734a26abdb9c80c3a56e7ac42231e60a5e58a366b2d22220509467eac70",
+      "nameReferences": [
+        "src/app/data/concertProgrammes.ts"
+      ]
+    },
+    {
+      "path": "src/assets/participants/PaiberdinO.jpeg",
+      "bytes": 18588,
+      "tracked": true,
+      "hash": "b6352ec0e68beacd423cdea4a8e8db3c8ceec4e140b7769cce7367402ff146e1",
+      "nameReferences": [
+        "src/app/data/participants.generated.ts"
+      ]
+    },
+    {
+      "path": "src/logofinalmob.svg",
+      "bytes": 14480,
+      "tracked": true,
+      "hash": "5b32c014ffe0edf77ee69d74ee210ad53af7f08e814f01228736f0f1c86c3663",
+      "nameReferences": []
+    },
+    {
+      "path": "lofofinaldesktop.svg",
+      "bytes": 14394,
+      "tracked": true,
+      "hash": "40fcd6883ee65f27fed5def905fa80d7eca5b04e4f6abd7d1c6ba637cec278c6",
+      "nameReferences": []
+    },
+    {
+      "path": "logofinalmob2.svg",
+      "bytes": 14309,
+      "tracked": true,
+      "hash": "f1f31565ffa22443c396bd515af12aa095ddc4acc21f30c3ee03d1eb0a2b30c4",
+      "nameReferences": []
+    },
+    {
+      "path": "LogoV3main2.0.svg",
+      "bytes": 12133,
+      "tracked": true,
+      "hash": "b2d1b4b70e78dd63e932e19b92127a8b232908e28863d95ed647ef51df58eefc",
+      "nameReferences": []
+    },
+    {
+      "path": "public/LogoV3main2.0menu.svg",
+      "bytes": 12123,
+      "tracked": true,
+      "hash": "c76ae73aa7d6217d522e7572a7d005ec38ca035a9c13df8fd817bc2e5af2e963",
+      "nameReferences": []
+    },
+    {
+      "path": "LogoV3main.svg",
+      "bytes": 11959,
+      "tracked": true,
+      "hash": "0e4f620f05baf7152c81b142172fe0edb7a54fa2d7f5a243a821f710344d3778",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/belcanto-logo.png",
+      "bytes": 11904,
+      "tracked": true,
+      "hash": "62075e4ae36add192fd5e3987ccdfe654ec2e3e2346a0332ccb1d12dd85e7d01",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/partners/belcantologo.png",
+      "bytes": 11904,
+      "tracked": true,
+      "hash": "62075e4ae36add192fd5e3987ccdfe654ec2e3e2346a0332ccb1d12dd85e7d01",
+      "nameReferences": [
+        "src/app/data/partners.ts"
+      ]
+    },
+    {
+      "path": "public/LogoV5finalbig.svg",
+      "bytes": 11544,
+      "tracked": true,
+      "hash": "f59024b2ff29ae156aca0b1a3612f5cd8e3a49d184370690075e15d74939f0ed",
+      "nameReferences": []
+    },
+    {
+      "path": "FestLogo2.svg",
+      "bytes": 5723,
+      "tracked": true,
+      "hash": "f99436b15549a08e316c01aa70f7838cb72c096e3e73c2033e202083c1a7c8d4",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/festival/festival-logo-full.svg",
+      "bytes": 5723,
+      "tracked": true,
+      "hash": "f99436b15549a08e316c01aa70f7838cb72c096e3e73c2033e202083c1a7c8d4",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/festival-logo-full.svg",
+      "bytes": 5723,
+      "tracked": true,
+      "hash": "f99436b15549a08e316c01aa70f7838cb72c096e3e73c2033e202083c1a7c8d4",
+      "nameReferences": []
+    },
+    {
+      "path": "public/festlogo.svg",
+      "bytes": 5723,
+      "tracked": true,
+      "hash": "f99436b15549a08e316c01aa70f7838cb72c096e3e73c2033e202083c1a7c8d4",
+      "nameReferences": []
+    },
+    {
+      "path": "festlogov2.gif",
+      "bytes": 5684,
+      "tracked": true,
+      "hash": "fdd4d10f6ca24562c1679f6888cd620df966ccd33b629103de9bfdb013eea97d",
+      "nameReferences": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "public/festlogov2.gif",
+      "bytes": 5684,
+      "tracked": true,
+      "hash": "fdd4d10f6ca24562c1679f6888cd620df966ccd33b629103de9bfdb013eea97d",
+      "nameReferences": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "logos_to_send/partners/niko-logo.svg",
+      "bytes": 5255,
+      "tracked": true,
+      "hash": "f5050f7ee0a3bd2bb426a62708049c0f0f5b64efce99026c4d9f9c57d0ab09a2",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/c20f321a__.svg",
+      "bytes": 5255,
+      "tracked": true,
+      "hash": "f5050f7ee0a3bd2bb426a62708049c0f0f5b64efce99026c4d9f9c57d0ab09a2",
+      "nameReferences": [
+        "src/app/data/partners.ts",
+        "src/app/pages/PartnersPage.tsx"
+      ]
+    },
+    {
+      "path": "public/logo-header.png",
+      "bytes": 3583,
+      "tracked": true,
+      "hash": "8a8d9db374a2e08f53ab48cdc013dfad3ed26db93a7b1fc4d5db6ccb5fe34bf8",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/festival/festival-logo-topword.svg",
+      "bytes": 2551,
+      "tracked": true,
+      "hash": "5b36e2b90757e028ad2ab7b5638f35c98a00b3f5d877970b21944257326c7428",
+      "nameReferences": []
+    },
+    {
+      "path": "public/festlogo-topword.svg",
+      "bytes": 2551,
+      "tracked": true,
+      "hash": "5b36e2b90757e028ad2ab7b5638f35c98a00b3f5d877970b21944257326c7428",
+      "nameReferences": [
+        "src/app/components/hero/HomeHero.tsx"
+      ]
+    },
+    {
+      "path": "logos_to_send/partners/orpheus-logo.svg",
+      "bytes": 2430,
+      "tracked": true,
+      "hash": "d5f8406eb5353c3df19b7af6338036bf5a4aaf5fd1475d025f2d666d31d15862",
+      "nameReferences": [
+        "src/app/data/partners.ts"
+      ]
+    },
+    {
+      "path": "public/orpheus-logo.svg",
+      "bytes": 2430,
+      "tracked": true,
+      "hash": "d5f8406eb5353c3df19b7af6338036bf5a4aaf5fd1475d025f2d666d31d15862",
+      "nameReferences": [
+        "src/app/data/partners.ts"
+      ]
+    },
+    {
+      "path": "FestLogoNowords.svg",
+      "bytes": 1842,
+      "tracked": true,
+      "hash": "a52bfc66261487ba0377a4c50749ba3418fb2ba42658f38f4738fc18877d8c53",
+      "nameReferences": [
+        "src/app/components/hero/HomeHero.tsx"
+      ]
+    },
+    {
+      "path": "logos_to_send/festival/festival-logo-mark.svg",
+      "bytes": 1842,
+      "tracked": true,
+      "hash": "a52bfc66261487ba0377a4c50749ba3418fb2ba42658f38f4738fc18877d8c53",
+      "nameReferences": []
+    },
+    {
+      "path": "public/festlogonowords.svg",
+      "bytes": 1842,
+      "tracked": true,
+      "hash": "a52bfc66261487ba0377a4c50749ba3418fb2ba42658f38f4738fc18877d8c53",
+      "nameReferences": [
+        "src/app/data/composers.legacy.ts"
+      ]
+    },
+    {
+      "path": "logos_to_send/festival/festival-logo-bottomword.svg",
+      "bytes": 1405,
+      "tracked": true,
+      "hash": "1abde54a00ee6d02df8d0e38379e2b7f458acd59ef1fd526c3fc14553b72d211",
+      "nameReferences": []
+    },
+    {
+      "path": "public/festlogo-bottomword.svg",
+      "bytes": 1405,
+      "tracked": true,
+      "hash": "1abde54a00ee6d02df8d0e38379e2b7f458acd59ef1fd526c3fc14553b72d211",
+      "nameReferences": [
+        "src/app/components/hero/HomeHero.tsx"
+      ]
+    },
+    {
+      "path": "public/logo-header.svg",
+      "bytes": 644,
+      "tracked": true,
+      "hash": "002f8030d075b10efe54c133926890fcee86416815bc2454378af8e298c84dc7",
+      "nameReferences": []
+    },
+    {
+      "path": "logofestnew.jpg",
+      "bytes": 0,
+      "tracked": true,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nameReferences": []
+    }
+  ],
+  "duplicates": [
+    {
+      "redundantBytes": 1349701,
+      "files": [
+        {
+          "path": "OGimage3.png",
+          "bytes": 1349701
+        },
+        {
+          "path": "public/OGImage3.png",
+          "bytes": 1349701
+        }
+      ]
+    },
+    {
+      "redundantBytes": 905825,
+      "files": [
+        {
+          "path": "Ogimagenew.png",
+          "bytes": 905825
+        },
+        {
+          "path": "public/Ogimagenew.png",
+          "bytes": 905825
+        }
+      ]
+    },
+    {
+      "redundantBytes": 804760,
+      "files": [
+        {
+          "path": "src/assets/participants/peletsis.png",
+          "bytes": 804760
+        },
+        {
+          "path": "src/assets/participants/PeletsisG.png",
+          "bytes": 804760
+        }
+      ]
+    },
+    {
+      "redundantBytes": 414454,
+      "files": [
+        {
+          "path": "Gnessinlogo.png",
+          "bytes": 414454
+        },
+        {
+          "path": "logos_to_send/partners/gnessin-logo.png",
+          "bytes": 414454
+        }
+      ]
+    },
+    {
+      "redundantBytes": 228757,
+      "files": [
+        {
+          "path": "public/assets/external/1ce0f2e5_-5451686574358728414.jpg",
+          "bytes": 228757
+        },
+        {
+          "path": "public/assets/external/heroafisha/a9da4c31_IMG_20260303_105903_.jpg",
+          "bytes": 228757
+        }
+      ]
+    },
+    {
+      "redundantBytes": 183622,
+      "files": [
+        {
+          "path": "Ile_theleme_logo_black.png",
+          "bytes": 183622
+        },
+        {
+          "path": "logos_to_send/partners/ile-theleme-logo-black.png",
+          "bytes": 183622
+        }
+      ]
+    },
+    {
+      "redundantBytes": 158119,
+      "files": [
+        {
+          "path": "src/assets/participants/desyatnikov2.jpg",
+          "bytes": 158119
+        },
+        {
+          "path": "src/assets/participants/DesyatnikovL.jpg",
+          "bytes": 158119
+        }
+      ]
+    },
+    {
+      "redundantBytes": 157343,
+      "files": [
+        {
+          "path": "public/assets/external/ed37e6cf_3356cca21f4277bd7192.jpg",
+          "bytes": 157343
+        },
+        {
+          "path": "public/assets/external/heroafisha/finalconcert.jpg",
+          "bytes": 157343
+        }
+      ]
+    },
+    {
+      "redundantBytes": 153960,
+      "files": [
+        {
+          "path": "logos_to_send/partners/music-online-logo.png",
+          "bytes": 153960
+        },
+        {
+          "path": "public/assets/partners/music-online-logo.png",
+          "bytes": 153960
+        }
+      ]
+    },
+    {
+      "redundantBytes": 128206,
+      "files": [
+        {
+          "path": "lifestylelogo.png",
+          "bytes": 64103
+        },
+        {
+          "path": "logos_to_send/partners/lifestyle-logo.png",
+          "bytes": 64103
+        },
+        {
+          "path": "public/assets/partners/lifestyle-logo.png",
+          "bytes": 64103
+        }
+      ]
+    },
+    {
+      "redundantBytes": 117915,
+      "files": [
+        {
+          "path": "MyagkovaAcademy.jpg",
+          "bytes": 117915
+        },
+        {
+          "path": "public/assets/academies/myagkova-academy.jpg",
+          "bytes": 117915
+        }
+      ]
+    },
+    {
+      "redundantBytes": 102096,
+      "files": [
+        {
+          "path": "logos_to_send/partners/leaders-building-russia.png",
+          "bytes": 102096
+        },
+        {
+          "path": "public/assets/partners/leaders-building-russia.png",
+          "bytes": 102096
+        }
+      ]
+    },
+    {
+      "redundantBytes": 79267,
+      "files": [
+        {
+          "path": "src/assets/participants/Akhunov.jpeg",
+          "bytes": 79267
+        },
+        {
+          "path": "src/assets/participants/AkhunovS.jpeg",
+          "bytes": 79267
+        }
+      ]
+    },
+    {
+      "redundantBytes": 75629,
+      "files": [
+        {
+          "path": "src/assets/participants/2401_aleksandr-chajk.jpg",
+          "bytes": 75629
+        },
+        {
+          "path": "src/assets/participants/ChaikovskiiA.jpg",
+          "bytes": 75629
+        }
+      ]
+    },
+    {
+      "redundantBytes": 46345,
+      "files": [
+        {
+          "path": "logos_to_send/partners/revizor-logo.png",
+          "bytes": 46345
+        },
+        {
+          "path": "public/assets/partners/revizor-logo.png",
+          "bytes": 46345
+        }
+      ]
+    },
+    {
+      "redundantBytes": 42035,
+      "files": [
+        {
+          "path": "src/assets/participants/tursunov.jpg",
+          "bytes": 42035
+        },
+        {
+          "path": "src/assets/participants/TursunovP.jpg",
+          "bytes": 42035
+        }
+      ]
+    },
+    {
+      "redundantBytes": 30486,
+      "files": [
+        {
+          "path": "src/assets/participants/martynov.jpg",
+          "bytes": 30486
+        },
+        {
+          "path": "src/assets/participants/MartynovV.jpg",
+          "bytes": 30486
+        }
+      ]
+    },
+    {
+      "redundantBytes": 17169,
+      "files": [
+        {
+          "path": "FestLogo2.svg",
+          "bytes": 5723
+        },
+        {
+          "path": "logos_to_send/festival/festival-logo-full.svg",
+          "bytes": 5723
+        },
+        {
+          "path": "logos_to_send/partners/festival-logo-full.svg",
+          "bytes": 5723
+        },
+        {
+          "path": "public/festlogo.svg",
+          "bytes": 5723
+        }
+      ]
+    },
+    {
+      "redundantBytes": 11904,
+      "files": [
+        {
+          "path": "logos_to_send/partners/belcanto-logo.png",
+          "bytes": 11904
+        },
+        {
+          "path": "public/assets/partners/belcantologo.png",
+          "bytes": 11904
+        }
+      ]
+    },
+    {
+      "redundantBytes": 5684,
+      "files": [
+        {
+          "path": "festlogov2.gif",
+          "bytes": 5684
+        },
+        {
+          "path": "public/festlogov2.gif",
+          "bytes": 5684
+        }
+      ]
+    },
+    {
+      "redundantBytes": 5255,
+      "files": [
+        {
+          "path": "logos_to_send/partners/niko-logo.svg",
+          "bytes": 5255
+        },
+        {
+          "path": "public/assets/external/c20f321a__.svg",
+          "bytes": 5255
+        }
+      ]
+    },
+    {
+      "redundantBytes": 3684,
+      "files": [
+        {
+          "path": "FestLogoNowords.svg",
+          "bytes": 1842
+        },
+        {
+          "path": "logos_to_send/festival/festival-logo-mark.svg",
+          "bytes": 1842
+        },
+        {
+          "path": "public/festlogonowords.svg",
+          "bytes": 1842
+        }
+      ]
+    },
+    {
+      "redundantBytes": 2551,
+      "files": [
+        {
+          "path": "logos_to_send/festival/festival-logo-topword.svg",
+          "bytes": 2551
+        },
+        {
+          "path": "public/festlogo-topword.svg",
+          "bytes": 2551
+        }
+      ]
+    },
+    {
+      "redundantBytes": 2430,
+      "files": [
+        {
+          "path": "logos_to_send/partners/orpheus-logo.svg",
+          "bytes": 2430
+        },
+        {
+          "path": "public/orpheus-logo.svg",
+          "bytes": 2430
+        }
+      ]
+    },
+    {
+      "redundantBytes": 1405,
+      "files": [
+        {
+          "path": "logos_to_send/festival/festival-logo-bottomword.svg",
+          "bytes": 1405
+        },
+        {
+          "path": "public/festlogo-bottomword.svg",
+          "bytes": 1405
+        }
+      ]
+    }
+  ],
+  "unusedByLiteralName": [
+    {
+      "path": "public/assets/hero/Vertical1.mp4",
+      "bytes": 26729964,
+      "tracked": true,
+      "hash": "795e66f3e367eda9da19822283a9a4a44dcd58c9f19894d397720fe600ad0db6",
+      "nameReferences": []
+    },
+    {
+      "path": "Ilthelemacademy.JPG",
+      "bytes": 4881527,
+      "tracked": true,
+      "hash": "0955fedc0d01aa7c593925b85d5423eef1b075160df856568bbc745487ada09d",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/PIanohero1c.webm",
+      "bytes": 2986431,
+      "tracked": true,
+      "hash": "c19727f4bad012c84d7499ca9830647742d969f4fa37ba3e95c059b5273ade9f",
+      "nameReferences": []
+    },
+    {
+      "path": "herovid.webm",
+      "bytes": 2983667,
+      "tracked": true,
+      "hash": "07a3f8d1a1417c32c078e5e652269794cc583ebb46581ac2ca8668aa548c8dc1",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/violin.png",
+      "bytes": 1956037,
+      "tracked": true,
+      "hash": "4bb073fa616513692d86c15df4d143b650a0a427f0253a992061e2cf8bfd94f1",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/ref4.png",
+      "bytes": 1657370,
+      "tracked": true,
+      "hash": "b740565d36d1cbd10f0a662e063a8416160ab202e9a15ae8399b1d82fb87ca10",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/intro2w.png",
+      "bytes": 1579674,
+      "tracked": false,
+      "hash": "e6862bf21d09a8644d991c5472cfec987a281307edd715d2cc7e35dfae359bb2",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/piano.png",
+      "bytes": 1511191,
+      "tracked": true,
+      "hash": "970f72112fe8209682af0d1bbe658732f5f300059a6b2b1849a0623d842e289b",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/BerezovkiBedited.png",
+      "bytes": 1509922,
+      "tracked": true,
+      "hash": "e47c30c96a398483e7316e4390df9fb999b683a37e50ed43cca896e8fbe081a5",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/39e4c798_noroot.png",
+      "bytes": 1489230,
+      "tracked": true,
+      "hash": "7e95b81a499d7185653dd4cbf1a8f14e7de29dbcd06db4f3bc3cee20e515b39f",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/heroref3.png",
+      "bytes": 1430831,
+      "tracked": true,
+      "hash": "c5327618d9963d8cb8a9f0d931ca3b4f343273e48557fa389209d517bb4f9cd5",
+      "nameReferences": []
+    },
+    {
+      "path": "OGimage2.png",
+      "bytes": 1429654,
+      "tracked": true,
+      "hash": "b4b879948d252b6ea8b2ce4de7a4777bcc895e808ebbe8efa4c36f46c747ee0d",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/heroback1.png",
+      "bytes": 1415085,
+      "tracked": true,
+      "hash": "5cc3fda6d7409e97995a271f467de7ee93b51f5f98200c698a922b820b70f152",
+      "nameReferences": []
+    },
+    {
+      "path": "public/heroreffinal.png",
+      "bytes": 1408658,
+      "tracked": true,
+      "hash": "19dd284dfa75ec30ead63bfad9d7df02f027c91bd527f947bf2a3648bf5fd5c9",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/heroref1.png",
+      "bytes": 1400176,
+      "tracked": true,
+      "hash": "4110bfe8c3da17fb7ca43b9b3ef8c525014c67fac14a6a87f2b405cb830f75ed",
+      "nameReferences": []
+    },
+    {
+      "path": "OGimage3.png",
+      "bytes": 1349701,
+      "tracked": true,
+      "hash": "b068ab9772a40120bd79894532f8baa961f470e9c0adf627af67199bcd5af834",
+      "nameReferences": []
+    },
+    {
+      "path": "public/OGImage3.png",
+      "bytes": 1349701,
+      "tracked": true,
+      "hash": "b068ab9772a40120bd79894532f8baa961f470e9c0adf627af67199bcd5af834",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/chamberconcerthero.jpg",
+      "bytes": 1314634,
+      "tracked": true,
+      "hash": "84b2e317d11f071130d5c6eb0c1158ae36a1920c9e613da34979036c0c8d695c",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/ref1mobhero.png",
+      "bytes": 1297836,
+      "tracked": true,
+      "hash": "de5bf145d0835b471db328a377e8d63369bcd013c54cce95a0b581d8ea5c52c2",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/translref.png",
+      "bytes": 1232215,
+      "tracked": true,
+      "hash": "57747ef942a31081cd0d3616443a9d6249b2707ba86032051005b49981f958e3",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/intro1w.png",
+      "bytes": 1157543,
+      "tracked": false,
+      "hash": "f176ab016cf72d21bc84b6174a2997401b330c5d36d316034b328fadf35f3051",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/heroforintronew.png",
+      "bytes": 1132606,
+      "tracked": false,
+      "hash": "6535048687a072ee8cf7572378d5f0f1c5891ef94e9b0f6cfc42088154627174",
+      "nameReferences": []
+    },
+    {
+      "path": "public/2026ref.png",
+      "bytes": 1050719,
+      "tracked": true,
+      "hash": "1e8c96320507ba6b77acd25e06be59d940f56a84b5aad313b27b9a1e680371cc",
+      "nameReferences": []
+    },
+    {
+      "path": "10aa7226843afc00528da7dfda93102e.png",
+      "bytes": 927199,
+      "tracked": true,
+      "hash": "6a9d614c30683cb6efc4b51708edef600a7967a9defe2f5d0876be44576385eb",
+      "nameReferences": []
+    },
+    {
+      "path": "favver.png",
+      "bytes": 844270,
+      "tracked": true,
+      "hash": "6e7612b8b8f0a9520f9ffba2366d01c1a3579665f0360773b356641f0708fadb",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/c31dbe0b_61afb70ee5afd7e2710b.jpg",
+      "bytes": 801057,
+      "tracked": true,
+      "hash": "8f87fee0a2f36493658fa9ba09ddc7c8e8f09e11aff268115faf41bcf939f924",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send.zip",
+      "bytes": 793332,
+      "tracked": true,
+      "hash": "aed563d72856303ee8af4560152bb0354ead437fda3509a41b3cfec879aa4133",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/Festivallogos.7z",
+      "bytes": 773820,
+      "tracked": true,
+      "hash": "302536e8a2f5d23487d35690ca78b07090d6e6122bf09a03db39efa0716d6215",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/cd0d075c_db39c27515a4605ed73c.jpg",
+      "bytes": 451713,
+      "tracked": true,
+      "hash": "df3f1bf7f53a0850e6e0e9383a756f5302d8929d0f96aa63fa6ea1fa4702f3af",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/gnessin-logo.png",
+      "bytes": 414454,
+      "tracked": true,
+      "hash": "07bd61e5971240881fd490755efc514f9634f4316dcb713685245b845532ca8a",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/d6c06a4b_50d42752bd6c38e0c9da.jpeg",
+      "bytes": 409354,
+      "tracked": true,
+      "hash": "970b5b2ea88425e7e1a8b4a9a01cc26b61e11e9da16b6d918b1f84ad08b7e258",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/f4a26f9e_9ba87e7e7bb322482d4d.jpeg",
+      "bytes": 405793,
+      "tracked": true,
+      "hash": "0156c800aa9681d9d5ecb4bfd8e07a420000fb4744221c2490bfc0f3c6acf304",
+      "nameReferences": []
+    },
+    {
+      "path": "tmp_data/niko_refs/3e66b5a4529f6971b00ef2b9d16c8be8.png",
+      "bytes": 399917,
+      "tracked": true,
+      "hash": "0d2e3127afa331ca0b6e362ff220b5bcb220d5c8b83c2ef34b2a6f7ea0e424db",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/6ff3de26_6b1b5d1bd1f856318444.png",
+      "bytes": 391370,
+      "tracked": true,
+      "hash": "225b8ec7e2b99bd7448a326c9371377c32536e2e9b37bcc2ffcbed7b4bcb7b07",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/BerezovkiBcolor.jpg",
+      "bytes": 383666,
+      "tracked": true,
+      "hash": "2829967e372cc48044fc21a7ed4fe04fa54bafd6055876f3b5985e0d9c6beb4c",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/academies/sergey-akhunov.jpeg",
+      "bytes": 371176,
+      "tracked": true,
+      "hash": "73e848b903d9fccf74751edb6ce676c7de42d977099d969dc4efc4329bf708f2",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/5f68f703_5ef851e0c6992bfd3e44.jpg",
+      "bytes": 368423,
+      "tracked": true,
+      "hash": "d5abca6ce10641dea1526c9271337a47214348398303f007a61239be50c1e192",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.jpeg",
+      "bytes": 360717,
+      "tracked": true,
+      "hash": "8c1c7346d90cc9da3f7a4b25fe22affad696d8f1bb5b62888e91b411259d38c0",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/aca5621a_6362729948f1e85335ac.jpg",
+      "bytes": 310648,
+      "tracked": true,
+      "hash": "26486221d80b242049540ddc1b699b4311ba3edf2ffaf09ec99cede12ede5c56",
+      "nameReferences": []
+    },
+    {
+      "path": "92e2f8774758880a88a1c63625b99f96.png",
+      "bytes": 266735,
+      "tracked": true,
+      "hash": "2575035adf102bdd8bfb5d05aebb4d5ade9476c81674c171e728d194ed318e0c",
+      "nameReferences": []
+    },
+    {
+      "path": "public/favver.png",
+      "bytes": 261669,
+      "tracked": true,
+      "hash": "06e6ceaa20e8a7cd12e2f48651e46e429731c2fe8d19ade9a9bed1f46291d5f1",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/1ce0f2e5_-5451686574358728414.jpg",
+      "bytes": 228757,
+      "tracked": true,
+      "hash": "4c3c06bcadecd98a9918f2cb5ff5fd3e0529ef9f5b2e8233c6a62e6713dc08ab",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/a9da4c31_IMG_20260303_105903_.jpg",
+      "bytes": 228757,
+      "tracked": true,
+      "hash": "4c3c06bcadecd98a9918f2cb5ff5fd3e0529ef9f5b2e8233c6a62e6713dc08ab",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/48f5939f_IMG-20251121-WA0020.jpg",
+      "bytes": 211117,
+      "tracked": true,
+      "hash": "2415f11652d5de54f85de05987d98802016bd12305d227c06da9e0af9fe56b6e",
+      "nameReferences": []
+    },
+    {
+      "path": "Desyatnikon.webp",
+      "bytes": 203656,
+      "tracked": true,
+      "hash": "1c29bb0887ec9ed3a2b9a2884a1154c62a4862b551b6e99e0924272452f9a0ee",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/ile-theleme-logo-black.png",
+      "bytes": 183622,
+      "tracked": true,
+      "hash": "31bec738f66dbec39bc92453bbc99492a2f5bb1ad997c35dcb02f5fc3d17f14b",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/bfd7db6d_50a0894752382d8d9b1a.jpg",
+      "bytes": 173379,
+      "tracked": true,
+      "hash": "cd278be19b591808cb2650ead9f3a1a99770cd93ff02d8481d476cdc0664a4f5",
+      "nameReferences": []
+    },
+    {
+      "path": "public/Logo_Lidery2024.png",
+      "bytes": 170777,
+      "tracked": true,
+      "hash": "2ec745110a5a4f76eb64a04c4ed3f1e1f180cfe948561250edd09cf7baf4d454",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/ed37e6cf_3356cca21f4277bd7192.jpg",
+      "bytes": 157343,
+      "tracked": true,
+      "hash": "ff94b66a4392308359a0dd44ec8c8358042f8ac2ede37b4ec646e7fe611fd5c7",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/finalconcert.jpg",
+      "bytes": 157343,
+      "tracked": true,
+      "hash": "ff94b66a4392308359a0dd44ec8c8358042f8ac2ede37b4ec646e7fe611fd5c7",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/BerezovkiBedited (1).webp",
+      "bytes": 151338,
+      "tracked": true,
+      "hash": "9500fd4190b01570d87a8972e7a53f47b20fc0444e4f2629b61a41d4746b3195",
+      "nameReferences": []
+    },
+    {
+      "path": "MyagkovaAcademy.jpg",
+      "bytes": 117915,
+      "tracked": true,
+      "hash": "be3e203e7773efddbc1ba4c3d835fa83e779400a14aa7927e5f2d47fffa10e7d",
+      "nameReferences": []
+    },
+    {
+      "path": "tmp_data/niko_refs/b5f6b2f957ee21a91767eef11030da3e.jpg",
+      "bytes": 105015,
+      "tracked": true,
+      "hash": "b30db52c7eee419fd878aebb2889d85f9796286cec75c2d86b4c490ce1bb1869",
+      "nameReferences": []
+    },
+    {
+      "path": "src/assets/participants/KarmanovP.jpg",
+      "bytes": 82914,
+      "tracked": true,
+      "hash": "74613a4e61beec41cd32b848b7034884bf9fda5de6312f3201985a37f336f1e1",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/BerezovskiB.jpg",
+      "bytes": 77012,
+      "tracked": true,
+      "hash": "4806e7d840c446a29b4e129f129af7dae5b797852ac4bbf58b507e2ceae0a058",
+      "nameReferences": []
+    },
+    {
+      "path": "public/liderylogo.pdf",
+      "bytes": 74300,
+      "tracked": true,
+      "hash": "312025222c2ac9360c268a2f8a8536d25bfbf0f9bf506914d3142c2b7b656c60",
+      "nameReferences": []
+    },
+    {
+      "path": "public/revizorlogo.png",
+      "bytes": 71303,
+      "tracked": true,
+      "hash": "4af993a14060076dbdecc83b938b8b8b2be772fa4e16a171325d88c48664017d",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/6c7af7d8_0c98a711c715d8f20ff7.jpg",
+      "bytes": 69555,
+      "tracked": true,
+      "hash": "06605f08120e3ca8404e2000b19a6b63114bbca1699f0f215105efbfd6be719c",
+      "nameReferences": []
+    },
+    {
+      "path": "lifestylelogo.png",
+      "bytes": 64103,
+      "tracked": true,
+      "hash": "17b3e9f8575791b11f270023ede44079c5679b313d2e2a8822678f76f3ea9288",
+      "nameReferences": []
+    },
+    {
+      "path": "logofestnew.png.bak2",
+      "bytes": 62969,
+      "tracked": true,
+      "hash": "a52983aa1e103c19556348d86349e65681b8ab46ba836478b80d86ce3e0c7ca3",
+      "nameReferences": []
+    },
+    {
+      "path": "logofestnew.png",
+      "bytes": 62962,
+      "tracked": true,
+      "hash": "0c521d8dad712fdc47aecb38a7db613a813a7ba499f6a44312e71f233e2ccee6",
+      "nameReferences": []
+    },
+    {
+      "path": "logofestnew.png.bak",
+      "bytes": 62756,
+      "tracked": true,
+      "hash": "317778d8fefa9f7f0a854bfc31f9086914b4fb4f4a4f00494ea8ae550966bf53",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/hero/newlogoru.jpg",
+      "bytes": 59865,
+      "tracked": true,
+      "hash": "aabcd4acd49ea55d9b010ac95fd6ec79be5dce722bb1206128faa08272b0029b",
+      "nameReferences": []
+    },
+    {
+      "path": "index.pdf",
+      "bytes": 58908,
+      "tracked": true,
+      "hash": "0676a2642391dc3d2cfb8a261365d25538aee6fbcc5408d991d223338fab3089",
+      "nameReferences": []
+    },
+    {
+      "path": "broadcastref.jpg",
+      "bytes": 54429,
+      "tracked": true,
+      "hash": "dd49ed6305ea4d2c883a4716d1995eb2a071449788625b8649486cc860d1bae7",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/7ab9274d_01b3902154153c814c24.webp",
+      "bytes": 49282,
+      "tracked": true,
+      "hash": "8e29baeefca7b4b49980bab9a9a98c8469829bd57a86bf45c9ddecf502369108",
+      "nameReferences": []
+    },
+    {
+      "path": "БиографииСолисты1.docx",
+      "bytes": 36605,
+      "tracked": true,
+      "hash": "968ca191b1ec861422698cb3b34eed9748ab186cc237f7106868cf6e067a3ba7",
+      "nameReferences": []
+    },
+    {
+      "path": "public/muzonlinelogo.jpg",
+      "bytes": 32105,
+      "tracked": true,
+      "hash": "1f264e6f34cf4c29a3ec98e73e176418c8cf178fb4ba81d05b131d1073314d0e",
+      "nameReferences": []
+    },
+    {
+      "path": "aboutref.jpg",
+      "bytes": 29835,
+      "tracked": true,
+      "hash": "832db876f5d377adfd1aa7dcc7fbcc6da616e65cd3c643640ca0d601ebb258ca",
+      "nameReferences": []
+    },
+    {
+      "path": "mediaref1.jpg",
+      "bytes": 27891,
+      "tracked": true,
+      "hash": "6ae575e8d294dc39d7faa2885cdd7ea5e6149d61b9994658a5fb7cd459855b5f",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/external/heroafisha/BerezovkiBedited.webp",
+      "bytes": 25848,
+      "tracked": true,
+      "hash": "e171f382dae37a4a45ef77a516df439b42add3ce1c50a683af875cf78f6d8f62",
+      "nameReferences": []
+    },
+    {
+      "path": "logofestnew.jpg.bak2",
+      "bytes": 23915,
+      "tracked": true,
+      "hash": "082abc21e095bb72bfd8fe7bb8e713b1328ff0d46436c2f75ecf5a198accfb00",
+      "nameReferences": []
+    },
+    {
+      "path": "public/assets/partners/niko-logo.png",
+      "bytes": 22426,
+      "tracked": true,
+      "hash": "3d3817ffdb940d257096f7b414d8e1f8109e313bba8c37f0dc2cb2afe5a614b6",
+      "nameReferences": []
+    },
+    {
+      "path": "src/logofinalmob.svg",
+      "bytes": 14480,
+      "tracked": true,
+      "hash": "5b32c014ffe0edf77ee69d74ee210ad53af7f08e814f01228736f0f1c86c3663",
+      "nameReferences": []
+    },
+    {
+      "path": "lofofinaldesktop.svg",
+      "bytes": 14394,
+      "tracked": true,
+      "hash": "40fcd6883ee65f27fed5def905fa80d7eca5b04e4f6abd7d1c6ba637cec278c6",
+      "nameReferences": []
+    },
+    {
+      "path": "logofinalmob2.svg",
+      "bytes": 14309,
+      "tracked": true,
+      "hash": "f1f31565ffa22443c396bd515af12aa095ddc4acc21f30c3ee03d1eb0a2b30c4",
+      "nameReferences": []
+    },
+    {
+      "path": "LogoV3main2.0.svg",
+      "bytes": 12133,
+      "tracked": true,
+      "hash": "b2d1b4b70e78dd63e932e19b92127a8b232908e28863d95ed647ef51df58eefc",
+      "nameReferences": []
+    },
+    {
+      "path": "public/LogoV3main2.0menu.svg",
+      "bytes": 12123,
+      "tracked": true,
+      "hash": "c76ae73aa7d6217d522e7572a7d005ec38ca035a9c13df8fd817bc2e5af2e963",
+      "nameReferences": []
+    },
+    {
+      "path": "LogoV3main.svg",
+      "bytes": 11959,
+      "tracked": true,
+      "hash": "0e4f620f05baf7152c81b142172fe0edb7a54fa2d7f5a243a821f710344d3778",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/belcanto-logo.png",
+      "bytes": 11904,
+      "tracked": true,
+      "hash": "62075e4ae36add192fd5e3987ccdfe654ec2e3e2346a0332ccb1d12dd85e7d01",
+      "nameReferences": []
+    },
+    {
+      "path": "public/LogoV5finalbig.svg",
+      "bytes": 11544,
+      "tracked": true,
+      "hash": "f59024b2ff29ae156aca0b1a3612f5cd8e3a49d184370690075e15d74939f0ed",
+      "nameReferences": []
+    },
+    {
+      "path": "FestLogo2.svg",
+      "bytes": 5723,
+      "tracked": true,
+      "hash": "f99436b15549a08e316c01aa70f7838cb72c096e3e73c2033e202083c1a7c8d4",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/festival/festival-logo-full.svg",
+      "bytes": 5723,
+      "tracked": true,
+      "hash": "f99436b15549a08e316c01aa70f7838cb72c096e3e73c2033e202083c1a7c8d4",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/festival-logo-full.svg",
+      "bytes": 5723,
+      "tracked": true,
+      "hash": "f99436b15549a08e316c01aa70f7838cb72c096e3e73c2033e202083c1a7c8d4",
+      "nameReferences": []
+    },
+    {
+      "path": "public/festlogo.svg",
+      "bytes": 5723,
+      "tracked": true,
+      "hash": "f99436b15549a08e316c01aa70f7838cb72c096e3e73c2033e202083c1a7c8d4",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/partners/niko-logo.svg",
+      "bytes": 5255,
+      "tracked": true,
+      "hash": "f5050f7ee0a3bd2bb426a62708049c0f0f5b64efce99026c4d9f9c57d0ab09a2",
+      "nameReferences": []
+    },
+    {
+      "path": "public/logo-header.png",
+      "bytes": 3583,
+      "tracked": true,
+      "hash": "8a8d9db374a2e08f53ab48cdc013dfad3ed26db93a7b1fc4d5db6ccb5fe34bf8",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/festival/festival-logo-topword.svg",
+      "bytes": 2551,
+      "tracked": true,
+      "hash": "5b36e2b90757e028ad2ab7b5638f35c98a00b3f5d877970b21944257326c7428",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/festival/festival-logo-mark.svg",
+      "bytes": 1842,
+      "tracked": true,
+      "hash": "a52bfc66261487ba0377a4c50749ba3418fb2ba42658f38f4738fc18877d8c53",
+      "nameReferences": []
+    },
+    {
+      "path": "logos_to_send/festival/festival-logo-bottomword.svg",
+      "bytes": 1405,
+      "tracked": true,
+      "hash": "1abde54a00ee6d02df8d0e38379e2b7f458acd59ef1fd526c3fc14553b72d211",
+      "nameReferences": []
+    },
+    {
+      "path": "public/logo-header.svg",
+      "bytes": 644,
+      "tracked": true,
+      "hash": "002f8030d075b10efe54c133926890fcee86416815bc2454378af8e298c84dc7",
+      "nameReferences": []
+    },
+    {
+      "path": "logofestnew.jpg",
+      "bytes": 0,
+      "tracked": true,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nameReferences": []
+    }
+  ],
+  "largestAll": [
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/Vertical1.mp4",
+      "bytes": 26729964
+    },
+    {
+      "path": "dist/assets/hero/Vertical1.mp4",
+      "bytes": 26729964
+    },
+    {
+      "path": "public/assets/hero/Vertical1.mp4",
+      "bytes": 26729964,
+      "tracked": true,
+      "hash": "795e66f3e367eda9da19822283a9a4a44dcd58c9f19894d397720fe600ad0db6",
+      "nameReferences": []
+    },
+    {
+      "path": "Ilthelemacademy.JPG",
+      "bytes": 4881527,
+      "tracked": true,
+      "hash": "0955fedc0d01aa7c593925b85d5423eef1b075160df856568bbc745487ada09d",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/herovidv2-DFVyMT-U.mp4",
+      "bytes": 4289464
+    },
+    {
+      "path": "dist/assets/herovidv2-DFVyMT-U.mp4",
+      "bytes": 4289464
+    },
+    {
+      "path": "herovidv2.mp4",
+      "bytes": 4289464,
+      "tracked": true,
+      "hash": "68602f91c22a6206b2e7fcce71a53f98e8037399540934b8f9039711ea3de01d",
+      "nameReferences": [
+        "src/app/components/hero/LogoVideoHero.tsx",
+        "src/app/components/hero/VideoHomeHero.tsx"
+      ]
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/herovidmob-_ELWf1Sv.mp4",
+      "bytes": 3989181
+    },
+    {
+      "path": "dist/assets/herovidmob-_ELWf1Sv.mp4",
+      "bytes": 3989181
+    },
+    {
+      "path": "herovidmob.mp4",
+      "bytes": 3989181,
+      "tracked": true,
+      "hash": "4a515e692ef5a448f793a821755cb370b93802aef3f209c318625a8601708ba9",
+      "nameReferences": [
+        "src/app/components/hero/LogoVideoHero.tsx",
+        "src/app/components/hero/VideoHomeHero.tsx"
+      ]
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/PIanohero1c.webm",
+      "bytes": 2986431
+    },
+    {
+      "path": ".tmp-audit/PIanohero1c.webm",
+      "bytes": 2986431
+    },
+    {
+      "path": "dist/assets/hero/PIanohero1c.webm",
+      "bytes": 2986431
+    },
+    {
+      "path": "public/assets/hero/PIanohero1c.webm",
+      "bytes": 2986431,
+      "tracked": true,
+      "hash": "c19727f4bad012c84d7499ca9830647742d969f4fa37ba3e95c059b5273ade9f",
+      "nameReferences": []
+    },
+    {
+      "path": "herovid.webm",
+      "bytes": 2983667,
+      "tracked": true,
+      "hash": "07a3f8d1a1417c32c078e5e652269794cc583ebb46581ac2ca8668aa548c8dc1",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/violin.png",
+      "bytes": 1956037
+    },
+    {
+      "path": "dist/assets/hero/violin.png",
+      "bytes": 1956037
+    },
+    {
+      "path": "public/assets/hero/violin.png",
+      "bytes": 1956037,
+      "tracked": true,
+      "hash": "4bb073fa616513692d86c15df4d143b650a0a427f0253a992061e2cf8bfd94f1",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/fonts/roboto-flex.ttf",
+      "bytes": 1787292
+    },
+    {
+      "path": ".tmp-audit/hero-fonts/roboto-flex.ttf",
+      "bytes": 1787292
+    },
+    {
+      "path": "dist/fonts/roboto-flex.ttf",
+      "bytes": 1787292
+    },
+    {
+      "path": "public/fonts/roboto-flex.ttf",
+      "bytes": 1787292,
+      "tracked": true,
+      "hash": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281",
+      "nameReferences": [
+        "src/app/components/hero/DesktopHomeHero.css"
+      ]
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/intro3w.png",
+      "bytes": 1670499
+    },
+    {
+      "path": "dist/assets/hero/intro3w.png",
+      "bytes": 1670499
+    },
+    {
+      "path": "public/assets/hero/intro3w.png",
+      "bytes": 1670499,
+      "tracked": false,
+      "hash": "56a75721995f56dc2d6797cfa95fae588bdb982f09d8a00ba9962e50b068a230",
+      "nameReferences": [
+        "src/app/components/intro/IntroStorySections.tsx",
+        "src/app/pages/IntroTestPage.tsx"
+      ]
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/ref4.png",
+      "bytes": 1657370
+    },
+    {
+      "path": "dist/assets/hero/ref4.png",
+      "bytes": 1657370
+    },
+    {
+      "path": "public/assets/hero/ref4.png",
+      "bytes": 1657370,
+      "tracked": true,
+      "hash": "b740565d36d1cbd10f0a662e063a8416160ab202e9a15ae8399b1d82fb87ca10",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/choir.png",
+      "bytes": 1640426
+    },
+    {
+      "path": "dist/assets/hero/choir.png",
+      "bytes": 1640426
+    },
+    {
+      "path": "public/assets/hero/choir.png",
+      "bytes": 1640426,
+      "tracked": true,
+      "hash": "ce5ea1f8c846665ba0af7b97861b3beeacf3468509afd8d83815ac31aa90dcb0",
+      "nameReferences": [
+        "src/app/components/hero/DesktopHomeHero.tsx"
+      ]
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/intro2w.png",
+      "bytes": 1579674
+    },
+    {
+      "path": "dist/assets/hero/intro2w.png",
+      "bytes": 1579674
+    },
+    {
+      "path": "public/assets/hero/intro2w.png",
+      "bytes": 1579674,
+      "tracked": false,
+      "hash": "e6862bf21d09a8644d991c5472cfec987a281307edd715d2cc7e35dfae359bb2",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/piano.png",
+      "bytes": 1511191
+    },
+    {
+      "path": "dist/assets/hero/piano.png",
+      "bytes": 1511191
+    },
+    {
+      "path": "public/assets/hero/piano.png",
+      "bytes": 1511191,
+      "tracked": true,
+      "hash": "970f72112fe8209682af0d1bbe658732f5f300059a6b2b1849a0623d842e289b",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/external/heroafisha/BerezovkiBedited.png",
+      "bytes": 1509922
+    },
+    {
+      "path": "dist/assets/external/heroafisha/BerezovkiBedited.png",
+      "bytes": 1509922
+    },
+    {
+      "path": "public/assets/external/heroafisha/BerezovkiBedited.png",
+      "bytes": 1509922,
+      "tracked": true,
+      "hash": "e47c30c96a398483e7316e4390df9fb999b683a37e50ed43cca896e8fbe081a5",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/external/heroafisha/39e4c798_noroot.png",
+      "bytes": 1489230
+    },
+    {
+      "path": "dist/assets/external/heroafisha/39e4c798_noroot.png",
+      "bytes": 1489230
+    },
+    {
+      "path": "public/assets/external/heroafisha/39e4c798_noroot.png",
+      "bytes": 1489230,
+      "tracked": true,
+      "hash": "7e95b81a499d7185653dd4cbf1a8f14e7de29dbcd06db4f3bc3cee20e515b39f",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/heroref3.png",
+      "bytes": 1430831
+    },
+    {
+      "path": "dist/assets/hero/heroref3.png",
+      "bytes": 1430831
+    },
+    {
+      "path": "public/assets/hero/heroref3.png",
+      "bytes": 1430831,
+      "tracked": true,
+      "hash": "c5327618d9963d8cb8a9f0d931ca3b4f343273e48557fa389209d517bb4f9cd5",
+      "nameReferences": []
+    },
+    {
+      "path": "OGimage2.png",
+      "bytes": 1429654,
+      "tracked": true,
+      "hash": "b4b879948d252b6ea8b2ce4de7a4777bcc895e808ebbe8efa4c36f46c747ee0d",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/heroback1.png",
+      "bytes": 1415085
+    },
+    {
+      "path": "dist/assets/hero/heroback1.png",
+      "bytes": 1415085
+    },
+    {
+      "path": "public/assets/hero/heroback1.png",
+      "bytes": 1415085,
+      "tracked": true,
+      "hash": "5cc3fda6d7409e97995a271f467de7ee93b51f5f98200c698a922b820b70f152",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/heroreffinal.png",
+      "bytes": 1408658
+    },
+    {
+      "path": "dist/heroreffinal.png",
+      "bytes": 1408658
+    },
+    {
+      "path": "public/heroreffinal.png",
+      "bytes": 1408658,
+      "tracked": true,
+      "hash": "19dd284dfa75ec30ead63bfad9d7df02f027c91bd527f947bf2a3648bf5fd5c9",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/heroref1.png",
+      "bytes": 1400176
+    },
+    {
+      "path": "dist/assets/hero/heroref1.png",
+      "bytes": 1400176
+    },
+    {
+      "path": "public/assets/hero/heroref1.png",
+      "bytes": 1400176,
+      "tracked": true,
+      "hash": "4110bfe8c3da17fb7ca43b9b3ef8c525014c67fac14a6a87f2b405cb830f75ed",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/OGImage3.png",
+      "bytes": 1349701
+    },
+    {
+      "path": "dist/OGImage3.png",
+      "bytes": 1349701
+    },
+    {
+      "path": "OGimage3.png",
+      "bytes": 1349701,
+      "tracked": true,
+      "hash": "b068ab9772a40120bd79894532f8baa961f470e9c0adf627af67199bcd5af834",
+      "nameReferences": []
+    },
+    {
+      "path": "public/OGImage3.png",
+      "bytes": 1349701,
+      "tracked": true,
+      "hash": "b068ab9772a40120bd79894532f8baa961f470e9c0adf627af67199bcd5af834",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/external/heroafisha/chamberconcerthero.jpg",
+      "bytes": 1314634
+    },
+    {
+      "path": "dist/assets/external/heroafisha/chamberconcerthero.jpg",
+      "bytes": 1314634
+    },
+    {
+      "path": "public/assets/external/heroafisha/chamberconcerthero.jpg",
+      "bytes": 1314634,
+      "tracked": true,
+      "hash": "84b2e317d11f071130d5c6eb0c1158ae36a1920c9e613da34979036c0c8d695c",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/ref1mobhero.png",
+      "bytes": 1297836
+    },
+    {
+      "path": "dist/assets/hero/ref1mobhero.png",
+      "bytes": 1297836
+    },
+    {
+      "path": "public/assets/hero/ref1mobhero.png",
+      "bytes": 1297836,
+      "tracked": true,
+      "hash": "de5bf145d0835b471db328a377e8d63369bcd013c54cce95a0b581d8ea5c52c2",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/assets/hero/translref.png",
+      "bytes": 1232215
+    },
+    {
+      "path": "dist/assets/hero/translref.png",
+      "bytes": 1232215
+    },
+    {
+      "path": "public/assets/hero/translref.png",
+      "bytes": 1232215,
+      "tracked": true,
+      "hash": "57747ef942a31081cd0d3616443a9d6249b2707ba86032051005b49981f958e3",
+      "nameReferences": []
+    },
+    {
+      "path": ".tmp-audit/full-audit-2026-10-28/build/fonts/cormorant-garamond-variable.ttf",
+      "bytes": 1195560
+    }
+  ],
+  "trackedDiagnostics": [
+    {
+      "path": "logofestnew.png.bak2",
+      "bytes": 62969
+    },
+    {
+      "path": "logofestnew.png.bak",
+      "bytes": 62756
+    },
+    {
+      "path": "logofestnew.jpg.bak2",
+      "bytes": 23915
+    },
+    {
+      "path": "debug.log",
+      "bytes": 16642
+    },
+    {
+      "path": "tsconfig.app.tsbuildinfo",
+      "bytes": 3206
+    },
+    {
+      "path": "vite-5176.log",
+      "bytes": 159
+    },
+    {
+      "path": "tsconfig.node.tsbuildinfo",
+      "bytes": 47
+    },
+    {
+      "path": ".env.local",
+      "bytes": 34
+    },
+    {
+      "path": "vite-5176.err.log",
+      "bytes": 0
+    },
+    {
+      "path": "vite-node.err.log",
+      "bytes": 0
+    },
+    {
+      "path": "vite-node.log",
+      "bytes": 0
+    }
+  ]
+}

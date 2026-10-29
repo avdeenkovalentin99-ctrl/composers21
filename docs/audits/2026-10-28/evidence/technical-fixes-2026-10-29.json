@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-10-29T10:34:12.240Z",
+  "scope": "Local production build only; no deployment in this technical pass",
+  "unitTests": 28,
+  "buildPassed": true,
+  "browser": {
+    "checkedAt": "2026-10-29T10:33:26.733Z",
+    "base": "http://127.0.0.1:4173",
+    "results": [
+      {
+        "name": "route metadata survives Academies cleanup, Back and Forward",
+        "pass": true
+      },
+      {
+        "name": "profile metadata contains the participant name",
+        "pass": true
+      },
+      {
+        "name": "desktop submenu has initial focus, Tab order, Escape and focus return",
+        "pass": true
+      },
+      {
+        "name": "Academies modal contains its close button and traps/restores focus",
+        "pass": true
+      },
+      {
+        "name": "Back restores Media scroll; a new visit starts at the top",
+        "pass": true
+      },
+      {
+        "name": "Back restores participant catalog position",
+        "pass": true
+      },
+      {
+        "name": "Afisha deep links open their concert and Back restores the reading position",
+        "pass": true
+      },
+      {
+        "name": "portrait crops select enough source pixels for the visible box",
+        "pass": true
+      },
+      {
+        "name": "mobile menu and submenu keep keyboard focus and restore the trigger",
+        "pass": true
+      },
+      {
+        "name": "optimized fonts and local images decode on main pages at mobile and desktop sizes",
+        "pass": true
+      },
+      {
+        "name": "no page errors or failed local resources",
+        "pass": true
+      }
+    ],
+    "errors": [],
+    "failedResources": []
+  },
+  "biographies": {
+    "routes": 86,
+    "pass": true,
+    "textChangesSinceFixedBiographies": 0
+  },
+  "assets": {
+    "sources": 129,
+    "sourceBytes": 25183535,
+    "largestVariantsBytes": 10074954,
+    "fontsSourceBytes": 2212156,
+    "fontsWoff2Bytes": 560204,
+    "allGlyphsAndMetricsPreserved": true,
+    "publicBytes": 29041713,
+    "distBytes": 38536543,
+    "qualityChecks": 129
+  },
+  "archive": {
+    "files": 64,
+    "hashesVerified": true,
+    "publicFiles": 35
+  },
+  "limitations": [
+    "External CDN images and analytics were excluded from browser checks",
+    "No real Safari/iOS/Android pass",
+    "Server delivery and deployment unchanged"
+  ]
+}

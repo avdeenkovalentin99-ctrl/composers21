@@ -1,0 +1,232 @@
+[
+  {
+    "width": 390,
+    "kind": "composers",
+    "url": "/participants/composers/leonid-desyatnikov",
+    "title": "Композитор",
+    "description": "Страница композитора фестиваля «Композиторы XXI века».",
+    "canonical": "https://21centurycomposers.com/participants/composers/leonid-desyatnikov",
+    "h1": [
+      {
+        "text": "Леонид Десятников",
+        "display": "block",
+        "rect": {
+          "x": 20,
+          "y": 602.75,
+          "width": 335,
+          "height": 31.609375,
+          "top": 602.75,
+          "right": 355,
+          "bottom": 634.359375,
+          "left": 20
+        }
+      }
+    ],
+    "scrollWidth": 375,
+    "innerWidth": 390,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4188/assets/DesyatnikovL-BBHz5SEr.jpg",
+        "naturalWidth": 500,
+        "naturalHeight": 656,
+        "width": 335,
+        "height": 419,
+        "complete": true
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "width": 390,
+    "kind": "soloists",
+    "url": "/participants/soloists/dmitrii-onischenko",
+    "title": "Солист",
+    "description": "Страница солиста фестиваля «Композиторы XXI века».",
+    "canonical": "https://21centurycomposers.com/participants/soloists/dmitrii-onischenko",
+    "h1": [
+      {
+        "text": "Дмитрий Онищенко",
+        "display": "block",
+        "rect": {
+          "x": 20,
+          "y": 602.75,
+          "width": 335,
+          "height": 31.609375,
+          "top": 602.75,
+          "right": 355,
+          "bottom": 634.359375,
+          "left": 20
+        }
+      }
+    ],
+    "scrollWidth": 375,
+    "innerWidth": 390,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4188/assets/onischenkod-DjVMP0Yf.jpg",
+        "naturalWidth": 1066,
+        "naturalHeight": 1600,
+        "width": 335,
+        "height": 419,
+        "complete": true
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "width": 390,
+    "kind": "ensembles",
+    "url": "/participants/ensembles/kvartet_glinki",
+    "title": "Ансамбль",
+    "description": "Страница ансамбля или оркестра фестиваля «Композиторы XXI века».",
+    "canonical": "https://21centurycomposers.com/participants/ensembles/kvartet_glinki",
+    "h1": [
+      {
+        "text": "Государственный струнный квартет имени М. И. Глинки",
+        "display": "block",
+        "rect": {
+          "x": 20,
+          "y": 439.328125,
+          "width": 335,
+          "height": 71.53125,
+          "top": 439.328125,
+          "right": 355,
+          "bottom": 510.859375,
+          "left": 20
+        }
+      }
+    ],
+    "scrollWidth": 375,
+    "innerWidth": 390,
+    "images": [
+      {
+        "src": "https://static.tildacdn.com/tild3236-3465-4532-a131-346636316464/IMG_20260305_001127_.jpg",
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "width": 335,
+        "height": 223,
+        "complete": true
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "kind": "composers",
+    "url": "/participants/composers/leonid-desyatnikov",
+    "title": "Композитор",
+    "description": "Страница композитора фестиваля «Композиторы XXI века».",
+    "canonical": "https://21centurycomposers.com/participants/composers/leonid-desyatnikov",
+    "h1": [
+      {
+        "text": "Леонид Десятников",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      }
+    ],
+    "scrollWidth": 1425,
+    "innerWidth": 1440,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4188/assets/DesyatnikovL-BBHz5SEr.jpg",
+        "naturalWidth": 500,
+        "naturalHeight": 656,
+        "width": 384,
+        "height": 480,
+        "complete": true
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "kind": "soloists",
+    "url": "/participants/soloists/dmitrii-onischenko",
+    "title": "Солист",
+    "description": "Страница солиста фестиваля «Композиторы XXI века».",
+    "canonical": "https://21centurycomposers.com/participants/soloists/dmitrii-onischenko",
+    "h1": [
+      {
+        "text": "Дмитрий Онищенко",
+        "display": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      }
+    ],
+    "scrollWidth": 1425,
+    "innerWidth": 1440,
+    "images": [
+      {
+        "src": "http://127.0.0.1:4188/assets/onischenkod-DjVMP0Yf.jpg",
+        "naturalWidth": 1066,
+        "naturalHeight": 1600,
+        "width": 384,
+        "height": 480,
+        "complete": true
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "kind": "ensembles",
+    "url": "/participants/ensembles/kvartet_glinki",
+    "title": "Ансамбль",
+    "description": "Страница ансамбля или оркестра фестиваля «Композиторы XXI века».",
+    "canonical": "https://21centurycomposers.com/participants/ensembles/kvartet_glinki",
+    "h1": [
+      {
+        "text": "Государственный струнный квартет имени М. И. Глинки",
+        "display": "block",
+        "rect": {
+          "x": 893.1875,
+          "y": 208,
+          "width": 483.8125,
+          "height": 95.34375,
+          "top": 208,
+          "right": 1377,
+          "bottom": 303.34375,
+          "left": 893.1875
+        }
+      }
+    ],
+    "scrollWidth": 1425,
+    "innerWidth": 1440,
+    "images": [
+      {
+        "src": "https://static.tildacdn.com/tild3236-3465-4532-a131-346636316464/IMG_20260305_001127_.jpg",
+        "naturalWidth": 0,
+        "naturalHeight": 0,
+        "width": 797,
+        "height": 531,
+        "complete": true
+      }
+    ],
+    "overflow": []
+  },
+  {
+    "scenario": "one-or-both-videos-unavailable",
+    "emblem": {
+      "opacity": "0",
+      "ready": "false",
+      "text": "Фестиваль состоялся2026"
+    }
+  }
+]

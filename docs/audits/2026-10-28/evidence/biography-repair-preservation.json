@@ -1,0 +1,1219 @@
+{
+  "oldRecords": 82,
+  "newRecords": 82,
+  "missingRecords": [],
+  "newRecordsList": [],
+  "changes": [
+    {
+      "slug": "olga-ivanova",
+      "beforeParagraphs": 18,
+      "afterParagraphs": 16,
+      "removed": [
+        {
+          "index": 16,
+          "characters": 85,
+          "text": "оркестр Musica Viva (художественный руководитель А. Рудин, дирижёр Филипп Чижевский);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 17,
+          "characters": 86,
+          "text": "солисты Музыкального театра Станиславского и Немировича‑Данченко и другие исполнители.",
+          "reason": "contained-in-earlier"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "rust-pozyumskii",
+      "beforeParagraphs": 18,
+      "afterParagraphs": 17,
+      "removed": [
+        {
+          "index": 17,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "aleksandr-chaykovsky",
+      "beforeParagraphs": 26,
+      "afterParagraphs": 16,
+      "removed": [
+        {
+          "index": 16,
+          "characters": 85,
+          "text": "камерные оперы: «Царь Никита и его сорок дочерей», «Мотя и Савелий», «Король шахмат»;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 17,
+          "characters": 99,
+          "text": "для детей: «Второе апреля», «Верность», мюзикл «Жизнь и необыкновенные приключения Оливера Твиста»;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 18,
+          "characters": 188,
+          "text": "оратории: «К солнцу» на стихи Ф. Тютчева, «От имени земного шара» на стихи И. Сельвинского, «Русский реквием» для солистов, хора и оркестра, «Государево дело» (к 400‑летию Дома Романовых);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 19,
+          "characters": 120,
+          "text": "15 концертов для солирующих инструментов с оркестром (фортепиано, скрипки, альта, виолончели, контрабаса, фагота и др.);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 20,
+          "characters": 165,
+          "text": "струнные квартеты, фортепианные трио, фортепианный квинтет, хоровые и вокальные произведения, музыка к теле‑ и радиоспектаклям, кинофильмам, театральным постановкам.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 21,
+          "characters": 92,
+          "text": "Камерном музыкальном театре имени Б. А. Покровского (ныне — Камерная сцена Большого театра);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 22,
+          "characters": 93,
+          "text": "Премии имени Дмитрия Шостаковича Международного благотворительного фонда Юрия Башмета (2022).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 23,
+          "characters": 70,
+          "text": "Почётной памятной медалью «Тихон Хренников — 100 лет со дня рождения»;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 24,
+          "characters": 79,
+          "text": "медалью «За достижения в искусстве» Социалистической Республики Вьетнам (2014).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 25,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "sergey-akhunov",
+      "beforeParagraphs": 12,
+      "afterParagraphs": 10,
+      "removed": [
+        {
+          "index": 10,
+          "characters": 85,
+          "text": "«Шесть миниатюр о пастухе и корове» (по рисункам японского монаха XV века Т. Сюбуна);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 11,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "pavel-karmanov",
+      "beforeParagraphs": 31,
+      "afterParagraphs": 27,
+      "removed": [
+        {
+          "index": 27,
+          "characters": 74,
+          "text": "спектаклю Фёдора Павлова‑Андриевича «Бифем» по пьесе Людмилы Петрушевской;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 28,
+          "characters": 111,
+          "text": "а также к фильмам документалиста Алексея Ханютина: «Музыка для фейерверка», «Контекст», «Эвакуация» и «Дорога».",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 29,
+          "characters": 88,
+          "text": "проекты «13 Карманов» и «Дни рождения» в московском культурном центре «ДОМ» (2000–2006);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 30,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "vladimir-martynov",
+      "beforeParagraphs": 18,
+      "afterParagraphs": 17,
+      "removed": [
+        {
+          "index": 17,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "pavel-tursunov",
+      "beforeParagraphs": 20,
+      "afterParagraphs": 15,
+      "removed": [
+        {
+          "index": 15,
+          "characters": 98,
+          "text": "«В поисках Синей птицы» (постановка Бурятского государственного театра оперы и балета в Улан‑Удэ);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 16,
+          "characters": 70,
+          "text": "двухактная опера «Любовь в футляре» по мотивам рассказов А. П. Чехова;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 17,
+          "characters": 71,
+          "text": "произведения различных симфонических и камерно‑инструментальных жанров;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 18,
+          "characters": 73,
+          "text": "вокальный цикл на стихи Хафиза «Вино предвечности» для баса и фортепиано.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 19,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "georg-peletsis",
+      "beforeParagraphs": 9,
+      "afterParagraphs": 8,
+      "removed": [
+        {
+          "index": 8,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "leonid-desyatnikov",
+      "beforeParagraphs": 15,
+      "afterParagraphs": 11,
+      "removed": [
+        {
+          "index": 11,
+          "characters": 73,
+          "text": "вокальный цикл «Любовь и жизнь поэта» на стихи Д. Хармса и Н. Олейникова;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 12,
+          "characters": 77,
+          "text": "«Свинцовое эхо» для голоса (голосов) и инструментов на стихи Дж. М. Хопкинса;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 13,
+          "characters": 91,
+          "text": "«Москва» (Гран‑при на Фестивале кино‑ и медиамузыки в Бонне за лучший саундтрек, 2000 год).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 14,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "erik-eshenvalds",
+      "beforeParagraphs": 11,
+      "afterParagraphs": 10,
+      "removed": [
+        {
+          "index": 10,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "aleksei-retinskii",
+      "beforeParagraphs": 15,
+      "afterParagraphs": 11,
+      "removed": [
+        {
+          "index": 11,
+          "characters": 120,
+          "text": "работал над музыкой к спектаклю «Норма» (режиссёр — Максим Диденко), открывшему очередной сезон Театра на Малой Бронной;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 12,
+          "characters": 107,
+          "text": "участвовал в концертах электронной музыки на открытии проекта «Дау» (режиссёр — Илья Хржановский) в Париже;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 13,
+          "characters": 105,
+          "text": "получил грант для работы над электронной музыкой в экспериментальной студии Юго‑Западного радио Германии.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 14,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "arvo-pyart",
+      "beforeParagraphs": 14,
+      "afterParagraphs": 13,
+      "removed": [
+        {
+          "index": 13,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "neboisha-zhivkovich",
+      "beforeParagraphs": 16,
+      "afterParagraphs": 11,
+      "removed": [
+        {
+          "index": 11,
+          "characters": 88,
+          "text": "концерт для ударных с оркестром «Концерт безумной королевы» (Concerto of the Mad Queen);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 12,
+          "characters": 120,
+          "text": "концерт для ударных инструментов и духового ансамбля «Сказки из центра Земли» (Tales from the Center of the Earth) и др.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 13,
+          "characters": 107,
+          "text": "филармоническими оркестрами Словении, Штутгарта, Билефельда, Белграда, Будапешта, Санкт‑Петербурга, Москвы;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 14,
+          "characters": 72,
+          "text": "симфоническими оркестрами Мюнхена, Бохума, Миннесоты, Коста‑Рики, Литвы;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 15,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "andrei-komissarov",
+      "beforeParagraphs": 16,
+      "afterParagraphs": 14,
+      "removed": [
+        {
+          "index": 14,
+          "characters": 72,
+          "text": "Патриарший хор Храма Христа Спасителя под управлением И. Толкачёва и др.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 15,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "kaiya-saariakho",
+      "beforeParagraphs": 14,
+      "afterParagraphs": 13,
+      "removed": [
+        {
+          "index": 13,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "nastasya-khrushcheva",
+      "beforeParagraphs": 11,
+      "afterParagraphs": 9,
+      "removed": [
+        {
+          "index": 9,
+          "characters": 81,
+          "text": "премия им. С. Курехина в номинации «Лучший текст о современном искусстве» (2020);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 10,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "andrei-zelenskii",
+      "beforeParagraphs": 16,
+      "afterParagraphs": 14,
+      "removed": [
+        {
+          "index": 14,
+          "characters": 95,
+          "text": "«Всё сложно» — в рамках фестиваля «Театральное притяжение» (2019) в московском театре «АпАРТе».",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 15,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "sergei-zhukov",
+      "beforeParagraphs": 24,
+      "afterParagraphs": 20,
+      "removed": [
+        {
+          "index": 20,
+          "characters": 118,
+          "text": "«Аленький цветочек» по мотивам сказки С. Аксакова (поставлен Днепропетровским государственным театром оперы и балета);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 21,
+          "characters": 131,
+          "text": "«Фатум» по мотивам поэмы М. Лермонтова «Демон» (Санкт‑Петербургский академический Малый театр оперы и балета имени М. Мусоргского);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 22,
+          "characters": 97,
+          "text": "«Бессонница», написанный по заказу Большого театра России к 200‑летию со дня рождения А. Пушкина.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 23,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "sergei-pleshak",
+      "beforeParagraphs": 27,
+      "afterParagraphs": 19,
+      "removed": [
+        {
+          "index": 19,
+          "characters": 80,
+          "text": "2‑й Международный конкурс хорового письма им. А. Д. Кастальского (Москва, 2017);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 20,
+          "characters": 89,
+          "text": "3‑й Международный конкурс хорового письма им. А. Д. Кастальского (Нижний Новгород, 2018);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 21,
+          "characters": 100,
+          "text": "4‑й Всероссийский (с международным участием) конкурс дирижёров академического хора (Белгород, 2019);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 22,
+          "characters": 88,
+          "text": "Южно‑Уральский государственный институт искусств имени П. И. Чайковского (г. Челябинск);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 23,
+          "characters": 76,
+          "text": "Музыкально‑педагогический институт им. М. М. Ипполитова‑Иванова (г. Москва);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 24,
+          "characters": 97,
+          "text": "«Старик Хоттабыч» в театре «Зазеркалье» (постановка Народного артиста России Александра Петрова);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 25,
+          "characters": 101,
+          "text": "«С любимыми не расставайтесь» в театре «Буфф» (постановка Народного артиста России Исаака Штокбанта).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 26,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "dzhordzh-kram",
+      "beforeParagraphs": 5,
+      "afterParagraphs": 4,
+      "removed": [
+        {
+          "index": 4,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "elmir-nizamov",
+      "beforeParagraphs": 8,
+      "afterParagraphs": 7,
+      "removed": [
+        {
+          "index": 7,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "salvatore-sharrino",
+      "beforeParagraphs": 15,
+      "afterParagraphs": 11,
+      "removed": [
+        {
+          "index": 11,
+          "characters": 75,
+          "text": "«Молчаливое пение» для шести голосов, флейты, ударных и электроники (1999);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 12,
+          "characters": 131,
+          "text": "«Этюды к настройке моря» для контральто, 4 флейт, 4 саксофонов, ударных, оркестра из 100 флейт и оркестра из 100 саксофонов (2000);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 13,
+          "characters": 75,
+          "text": "«Фрагменты страсти» для сопрано, флейты, альта, виолончели и органа (2017).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 14,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "giiom-konesson",
+      "beforeParagraphs": 7,
+      "afterParagraphs": 6,
+      "removed": [
+        {
+          "index": 6,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "marianna-domnikova",
+      "beforeParagraphs": 1,
+      "afterParagraphs": 1,
+      "removed": [
+        {
+          "index": 0,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": [
+        "Российская пианистка, композитор, лауреат международных конкурсов и артистка оркестра Мариинского театра"
+      ]
+    },
+    {
+      "slug": "devid-leng",
+      "beforeParagraphs": 5,
+      "afterParagraphs": 4,
+      "removed": [
+        {
+          "index": 4,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "peteris-vasks",
+      "beforeParagraphs": 18,
+      "afterParagraphs": 14,
+      "removed": [
+        {
+          "index": 14,
+          "characters": 117,
+          "text": "для хора (Pater noster, 1991; Dona nobis pacem, 1996; «Месса», 2000, 2005 — все на традиционные католические тексты);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 15,
+          "characters": 94,
+          "text": "для фортепиано («Музыка осени», 1981; «Пейзажи обожжённой земли», 1992; «Музыка весны», 1995).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 16,
+          "characters": 94,
+          "text": "почётным членом Латвийской академии наук (1994) и Шведской королевской академии музыки (2001);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 17,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "petr-glavatskikh",
+      "beforeParagraphs": 14,
+      "afterParagraphs": 9,
+      "removed": [
+        {
+          "index": 9,
+          "characters": 73,
+          "text": "актрисами Ингеборгой Дапкунайте, Юлией Пересильд, Елизаветой Арзамасовой;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 10,
+          "characters": 115,
+          "text": "композиторами Алексеем Сюмаком, Алексеем Ретинским, Григорием Смирновым, Александром Маноцковым, Павлом Кармановым.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 11,
+          "characters": 112,
+          "text": "«Реквием» (музыка Яниса Ксенакиса и собственные композиции), созданный совместно с хореографом Ольгой Цветковой;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 12,
+          "characters": 96,
+          "text": "«Осторожно, Вивальди!» по пьесе Елены Черемных с Елизаветой Арзамасовой в роли Антонио Вивальди.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 13,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "anastasiya-druzhinina",
+      "beforeParagraphs": 15,
+      "afterParagraphs": 11,
+      "removed": [
+        {
+          "index": 11,
+          "characters": 101,
+          "text": "«Аламжи» (реж. А. Устинов) Государственного бурятского академического театра драмы им. Х. Намсараева;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 12,
+          "characters": 103,
+          "text": "Международного театрального фестиваля «Гэгээн Муза» в номинации «Лучшая музыка к спектаклю» (Монголия);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 13,
+          "characters": 76,
+          "text": "XI Международного конкурса композиторов и аранжировщиков им. И. Дунаевского.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 14,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "yurii-kasparov",
+      "beforeParagraphs": 29,
+      "afterParagraphs": 22,
+      "removed": [
+        {
+          "index": 22,
+          "characters": 103,
+          "text": "Guido d’Arezzo (I премия за «Ave Maria» для двенадцати голосов и трёх инструменталистов, Италия, 1989);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 23,
+          "characters": 116,
+          "text": "Henri Dutilleux (Гран‑при за Effet de Nuit для бас‑баритона и пяти исполнителей на стихи П. Верлена, Франция, 1996).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 24,
+          "characters": 97,
+          "text": "Radio France совместно с Институтом музыкальных исследований (GRM: Groupe de Recherche Musicale);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 25,
+          "characters": 86,
+          "text": "международных фестивалей Tage für Neue Musik Zurich (Швейцария) и Feldkirch (Австрия);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 26,
+          "characters": 113,
+          "text": "Эмин Хачатурян, Валерий Полянский, Владимир Зива, Сергей Скрипка, Василий Синайский, Александр Дмитриев (Россия).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 27,
+          "characters": 96,
+          "text": "виолончелисты Владимир Тонха, Сергей Судзиловский (Россия) и Грациано Белуффи (Италия) и другие.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 28,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "vladimir-kobekin",
+      "beforeParagraphs": 37,
+      "afterParagraphs": 24,
+      "removed": [
+        {
+          "index": 24,
+          "characters": 166,
+          "text": "лауреат Всероссийского фестиваля молодых композиторов «Опус первый», конкурса Мариинского театра на сочинение оперы по произведениям Н. В. Гоголя А. Беспалова (2006);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 25,
+          "characters": 100,
+          "text": "руководитель молодёжной секции Уральского отделения Союза композиторов России А. Жемчужников (2003).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 26,
+          "characters": 137,
+          "text": "«Игра про Макса‑Емельяна, Алёну и Ивана» (1989) — шли на сцене Московского камерного музыкального театра под руководством Б. Покровского;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 27,
+          "characters": 92,
+          "text": "«Сапожки» (1982) — ставились на Свердловском телевидении (реж. И. Ширяева, дир. Е. Бражник);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 28,
+          "characters": 115,
+          "text": "«Пугачёв» (1983) — в Ленинградском академическом малом театре оперы и балета (реж. С. Гаудасинский, дир. В. Кожин).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 29,
+          "characters": 106,
+          "text": "одноактная опера «Н. Ф. Б.» по роману Ф. М. Достоевского «Идиот» (1995, реж. К. Гинкас, дир. А. Чистяков);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 30,
+          "characters": 74,
+          "text": "прозвучали оперы «Молодой Давид» и «Моисей» (1997, 1999, дир. Е. Бражник).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 31,
+          "characters": 127,
+          "text": "каприччио для фортепиано «В красном и синем» (III премия, II Международный конкурс имени С. Прокофьева, Санкт‑Петербург, 1995);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 32,
+          "characters": 114,
+          "text": "симфоническая картина «Золотые купола» (III премия, конкурс композиторов имени А. Петрова, Санкт‑Петербург, 2007);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 33,
+          "characters": 79,
+          "text": "фортепианный концерт (III премия, V Международный конкурс имени С. Прокофьева);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 34,
+          "characters": 182,
+          "text": "«Сказка про репку» (I премия, Второй открытый Всероссийский конкурс композиторов на создание симфонических произведений для детей и юношества «Петя и Волк‑2010», Екатеринбург, 2010).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 35,
+          "characters": 87,
+          "text": "сопредседателем (2001–2006, совместно с Л. И. Гуревичем) этого творческого содружества.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 36,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "ivan-sokolov",
+      "beforeParagraphs": 11,
+      "afterParagraphs": 9,
+      "removed": [
+        {
+          "index": 9,
+          "characters": 117,
+          "text": "как композитор — теоретико‑композиторский факультет, композиторское отделение, класс профессора Николая Сидельникова;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 10,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "mikhail-tarbagaev",
+      "beforeParagraphs": 1,
+      "afterParagraphs": 1,
+      "removed": [
+        {
+          "index": 0,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": [
+        "Молодой красноярский композитор"
+      ]
+    },
+    {
+      "slug": "andreas-mustukis",
+      "beforeParagraphs": 6,
+      "afterParagraphs": 5,
+      "removed": [
+        {
+          "index": 5,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "ekaterina-kozhevnikova",
+      "beforeParagraphs": 22,
+      "afterParagraphs": 21,
+      "removed": [
+        {
+          "index": 21,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "andrei-zubets",
+      "beforeParagraphs": 17,
+      "afterParagraphs": 12,
+      "removed": [
+        {
+          "index": 12,
+          "characters": 74,
+          "text": "«Герой нашего времени?» (режиссёр А. Яковлев, МДТ им. Н. В. Гоголя, 2025);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 13,
+          "characters": 75,
+          "text": "«Петя и Фолк: Тайны миров» (режиссёр А. Франдетти, Театр на Таганке, 2022);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 14,
+          "characters": 122,
+          "text": "«Остров забытых сердец» по пьесе Вуди Аллена Central Park West (режиссёр В. Дубровицкий, Театр им. Вл. Маяковского, 2019);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 15,
+          "characters": 135,
+          "text": "к полнометражному фильму «Однажды со мной» (режиссёр Леонид Фомин), получившему музыкальную премию на фестивале кинодебютов «Дух огня»;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 16,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "gleb-yakovlev",
+      "beforeParagraphs": 10,
+      "afterParagraphs": 8,
+      "removed": [
+        {
+          "index": 8,
+          "characters": 79,
+          "text": "вокальное сочинение «Чёрный человек» на слова одноимённой поэмы Сергея Есенина.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 9,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "vladimir-radchenkov",
+      "beforeParagraphs": 35,
+      "afterParagraphs": 23,
+      "removed": [
+        {
+          "index": 23,
+          "characters": 80,
+          "text": "написал саундтрек к фильму Сергея Сельянова «Время печали ещё не пришло» (1995);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 24,
+          "characters": 79,
+          "text": "аранжировал классику для фильма Алексея Балабанова «Про уродов и людей» (1998).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 25,
+          "characters": 149,
+          "text": "«Посвящается Её Величеству» (музыка, написанная для русских цариц в период с 1734 по 1804 год, из Санкт‑Петербургских библиотек) — декабрь 1992 года;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 26,
+          "characters": 78,
+          "text": "«Библия, миф и древняя история в музыке XVII–XVIII веков» — февраль 1994 года;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 27,
+          "characters": 118,
+          "text": "Сонаты Винченцо Манфредини, написанные в 1765 году в честь Её Императорского Величества Екатерины Второй (10.10.1993);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 28,
+          "characters": 70,
+          "text": "концерт «Счастливые мысли», посвящённый Франсуа Куперену (13.11.2007);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 29,
+          "characters": 117,
+          "text": "вечер российских премьер неизвестных у нас шведских представителей барокко Йохана Агреля и Юхана Румана (11.12.2001);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 30,
+          "characters": 95,
+          "text": "«Иоганн Себастьян Бах и клавесинная музыка» в рамках Петербургского Бах‑фестиваля (11.04.2000);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 31,
+          "characters": 112,
+          "text": "сонаты Гайдна в программе «Серебряный свет» (21.04.2009) — так сам композитор называл в письмах камерную музыку.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 32,
+          "characters": 85,
+          "text": "«Музыка и поэзия старой Англии» (в первом Алексей Емельянов читал английскую поэзию);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 33,
+          "characters": 76,
+          "text": "«Поэты о музыке и музыкантах» (во втором Александр Кушнер читал свои стихи).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 34,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "oleg-paiberdin",
+      "beforeParagraphs": 41,
+      "afterParagraphs": 19,
+      "removed": [
+        {
+          "index": 19,
+          "characters": 84,
+          "text": "Асбестовское музыкальное училище по классу баяна у А. В. Ундольского (Асбест, 1991).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 20,
+          "characters": 93,
+          "text": "Уральская государственная консерватория имени М. П. Мусоргского (УГК) в Екатеринбурге (1996).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 21,
+          "characters": 83,
+          "text": "Ассистентура‑стажировка при УГК (1999) по композиции у профессора А. Н. Нименского.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 22,
+          "characters": 116,
+          "text": "Преподаватель кафедры композиции и инструментовки Уральской государственной консерватории (Екатеринбург, 2002–2004).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 23,
+          "characters": 144,
+          "text": "Звукорежиссёр радиоканала «Воскресение», автор и ведущий цикла передач «Музыкальная энциклопедия» на этом радиоканале (Екатеринбург, 2004–2005).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 24,
+          "characters": 99,
+          "text": "Один из основателей и руководителей екатеринбургской Мастерской новой музыки Autograph (1998–2005).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 25,
+          "characters": 91,
+          "text": "С 2005 года живёт в Москве, работает в Московской государственной академической филармонии.",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 26,
+          "characters": 117,
+          "text": "Основатель, художественный руководитель и дирижёр Ансамбля «Галерея актуальной музыки» / ГАМ‑ансамбля (Москва, 2010).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 27,
+          "characters": 157,
+          "text": "Инициатор и куратор фестиваля актуальной музыки «Другое пространство» (2009, 2010, 2012), абонементов современной музыки в Московской филармонии (2009–2025).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 28,
+          "characters": 180,
+          "text": "Художественный руководитель Международного ГАМ‑фестиваля в Государственном центральном музее музыкальной культуры имени М. И. Глинки (2011) и в Московском Доме композиторов (2019).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 29,
+          "characters": 107,
+          "text": "Лауреат III Международного конкурса по композиции имени Сергея Прокофьева (Москва — Санкт‑Петербург, 1999).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 30,
+          "characters": 91,
+          "text": "Лауреат II Международного конкурса современной музыки «Композитор XXI века» (Калуга, 2014).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 31,
+          "characters": 82,
+          "text": "мастер‑класс композитора А. Р. Тертеряна по оркестровке (Екатеринбург, 1993–1994);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 32,
+          "characters": 143,
+          "text": "мастер‑класс композитора С. С. Беринского по композиции (Всероссийские семинары для молодых композиторов, Дом творчества «Иваново», 1995–1997);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 33,
+          "characters": 176,
+          "text": "практические занятия с П. Х. Диттрихом, С. М. Слонимским, Э. Х. Фламмером, К. Х. Штамером (III Международный семинар современной музыки «Звуковые пути», Санкт‑Петербург, 1994);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 34,
+          "characters": 138,
+          "text": "занятия с Ж. Апергисом, П. Биллоне, Р. Саундерс, Х. Черновин (45‑е и 47‑е Международные летние курсы новой музыки, Дармштадт, 2010, 2014);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 35,
+          "characters": 109,
+          "text": "воркшоп для композиторов «Европа встречает Китай» на базе ансамбля Sinfonietta Luxembourg (Люксембург, 2009).",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 36,
+          "characters": 78,
+          "text": "Муниципальный камерный оркестр «Солисты Нижнего Новгорода» и Евгений Кириллов;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 37,
+          "characters": 124,
+          "text": "Камерный ансамбль солистов Академического симфонического оркестра Нижнего Новгорода Camerata Sinfonia и Александр Скульский;",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 38,
+          "characters": 71,
+          "text": "Хор мальчиков Нижегородского хорового колледжа (руководитель А. Орлов);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 39,
+          "characters": 185,
+          "text": "Юлия Мигунова, Екатерина Антокольская, Эдита Фил, Мона Хаба, Екатерина Мечетина, Сергей Асташонок, Михаил Березницкий, Данила Галочкин, Александр Загоринский, Андрей Кравченко (Россия);",
+          "reason": "contained-in-earlier"
+        },
+        {
+          "index": 40,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    },
+    {
+      "slug": "artem-makoyan",
+      "beforeParagraphs": 5,
+      "afterParagraphs": 4,
+      "removed": [
+        {
+          "index": 4,
+          "characters": 98,
+          "text": "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика",
+          "reason": "foreign"
+        }
+      ],
+      "added": []
+    }
+  ],
+  "unexpected": []
+}

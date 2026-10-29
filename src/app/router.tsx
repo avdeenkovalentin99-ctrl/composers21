@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { createBrowserRouter, useLocation, useOutlet } from "react-router-dom";
+import { createBrowserRouter, useLocation, useNavigationType, useOutlet } from "react-router-dom";
+import { RouteScrollRestoration } from "./layout/RouteScrollRestoration";
 import { SiteFooter } from "./layout/SiteFooter";
 import "./layout/HomePhoneLandscape.css";
 import { SiteHeader } from "./layout/SiteHeader";
@@ -22,6 +23,7 @@ const EnsemblePage = lazy(() => import("./pages/EnsemblePage").then((module) => 
 const FestivalLabPage = lazy(() => import("./pages/FestivalLabPage").then((module) => ({ default: module.FestivalLabPage })));
 const FestivalPageLegacy = lazy(() => import("./pages/FestivalPageLegacy").then((module) => ({ default: module.FestivalPageLegacy })));
 const HeroVariantPage = lazy(() => import("./pages/HeroVariantPage").then((module) => ({ default: module.HeroVariantPage })));
+const IntroTestPage = lazy(() => import("./pages/IntroTestPage").then((module) => ({ default: module.IntroTestPage })));
 const MediaPage = lazy(() => import("./pages/MediaPage").then((module) => ({ default: module.MediaPage })));
 const ParticipantsPage = lazy(() => import("./pages/ParticipantsPage").then((module) => ({ default: module.ParticipantsPage })));
 const PartnersPage = lazy(() => import("./pages/PartnersPage").then((module) => ({ default: module.PartnersPage })));
@@ -105,31 +107,20 @@ const PAGE_META_BY_PATHNAME: Record<string, PageMeta> = {
   },
 };
 
-function getPageMeta(pathname: string): PageMeta {
+async function getPageMeta(pathname: string): Promise<PageMeta> {
   if (PAGE_META_BY_PATHNAME[pathname]) {
     return PAGE_META_BY_PATHNAME[pathname];
   }
 
-  if (pathname.startsWith("/participants/composers/")) {
-    return {
-      title: "Композитор",
-      description: "Страница композитора фестиваля «Композиторы XXI века».",
-      canonicalPath: pathname,
-    };
-  }
-
-  if (pathname.startsWith("/participants/ensembles/")) {
-    return {
-      title: "Ансамбль",
-      description: "Страница ансамбля или оркестра фестиваля «Композиторы XXI века».",
-      canonicalPath: pathname,
-    };
-  }
-
-  if (pathname.startsWith("/participants/soloists/")) {
-    return {
-      title: "Солист",
-      description: "Страница солиста фестиваля «Композиторы XXI века».",
+  const profile = pathname.match(/^\/participants\/(composers|soloists|ensembles)\/([^/]+)\/?$/);
+  if (profile) {
+    const { composers } = await import("./data/composers");
+    const { soloists, ensembles } = await import("./data/participants");
+    const people = profile[1] === "composers" ? composers : profile[1] === "soloists" ? soloists : ensembles;
+    const person = people.find(item => item.slug === profile[2]);
+    if (person) return {
+      title: person.name + " — Композиторы XXI века",
+      description: person.description,
       canonicalPath: pathname,
     };
   }
@@ -149,40 +140,13 @@ function PageLoadingSpace() {
 function RootLayout() {
   const location = useLocation();
   const outlet = useOutlet();
-  const previousPathnameRef = useRef(location.pathname);
-  const transitionPendingRef = useRef(false);
+  const navigationType = useNavigationType();
   const lastTrackedUrlRef = useRef<string | null>(null);
 
-  function resetScroll() {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    window.scrollTo({ top: 0, behavior: "auto" });
-  }
-
-  function lockViewportAtCurrentScroll() {
-    const scrollY = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-    document.body.style.position = "fixed";
-    document.body.style.top = `${-scrollY}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
-    document.body.style.width = "100%";
-    document.body.style.overflow = "hidden";
-  }
-
-  function unlockViewport() {
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.width = "";
-    document.body.style.overflow = "";
-  }
-
   useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
+    const previous = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
+    return () => { window.history.scrollRestoration = previous; };
   }, []);
 
   useEffect(() => {
@@ -190,24 +154,10 @@ function RootLayout() {
   }, []);
 
   useEffect(() => {
-    applyPageMeta(getPageMeta(location.pathname));
+    let active = true;
+    void getPageMeta(location.pathname).then(meta => { if (active) applyPageMeta(meta); });
+    return () => { active = false; };
   }, [location.pathname]);
-
-  useEffect(() => {
-    if (previousPathnameRef.current === location.pathname) {
-      return;
-    }
-
-    previousPathnameRef.current = location.pathname;
-    transitionPendingRef.current = true;
-    lockViewportAtCurrentScroll();
-  }, [location.pathname]);
-
-  useEffect(() => {
-    return () => {
-      unlockViewport();
-    };
-  }, []);
 
   useEffect(() => {
     if (!isYandexMetrikaEnabled()) {
@@ -229,16 +179,6 @@ function RootLayout() {
     }
   }, [location.hash, location.pathname, location.search]);
 
-  function handleExitComplete() {
-    if (!transitionPendingRef.current) {
-      return;
-    }
-
-    transitionPendingRef.current = false;
-    unlockViewport();
-    resetScroll();
-  }
-
   return (
     <div className={`site-shell ${location.pathname === "/" ? "site-shell--home" : ""} min-h-screen overflow-x-clip bg-[var(--color-bg)] text-[var(--color-text)]`}>
       {(location.pathname === "/" || location.pathname === "/hero2" || location.pathname === "/hero3") ? (
@@ -250,7 +190,7 @@ function RootLayout() {
         <SiteHeader />
       )}
       <main data-homepage={location.pathname === "/" ? "" : undefined}>
-        <AnimatePresence mode="wait" initial={false} onExitComplete={handleExitComplete}>
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={location.pathname}
             initial={{ opacity: 0 }}
@@ -258,8 +198,12 @@ function RootLayout() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.42, 0, 0.58, 1] }}
           >
-            <Suspense fallback={<PageLoadingSpace />}>{outlet}</Suspense>
-            <SiteFooter />
+            <Suspense fallback={<PageLoadingSpace />}>
+              <RouteScrollRestoration entryKey={location.key} pathname={location.pathname} search={location.search} hash={location.hash} navigationType={navigationType}>
+                {outlet}
+                <SiteFooter />
+              </RouteScrollRestoration>
+            </Suspense>
           </motion.div>
         </AnimatePresence>
       </main>
@@ -268,6 +212,10 @@ function RootLayout() {
 }
 
 export const router = createBrowserRouter([
+  {
+    path: "/intro-test",
+    element: <Suspense fallback={<PageLoadingSpace />}><IntroTestPage /></Suspense>,
+  },
   {
     path: "/",
     element: <RootLayout />,

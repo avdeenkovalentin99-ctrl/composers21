@@ -1,0 +1,210 @@
+[
+  {
+    "probe": "year-focus-300ms",
+    "data": {
+      "opacity": "0",
+      "focused": true,
+      "state": "visible"
+    }
+  },
+  {
+    "probe": "route-state",
+    "route": "/afisha?concert=10may",
+    "status": 200,
+    "data": {
+      "path": "/afisha",
+      "search": "?concert=10may",
+      "title": "Афиша",
+      "robots": "index, follow",
+      "canonical": "https://21centurycomposers.com/afisha",
+      "h1": [
+        "программа фестиваля"
+      ],
+      "expanded": [
+        "Свернуть программу",
+        "Свернуть программу"
+      ],
+      "scrollY": 97
+    }
+  },
+  {
+    "probe": "route-state",
+    "route": "/afisha?concert=2026-05-31-gromche-slova",
+    "status": 200,
+    "data": {
+      "path": "/afisha",
+      "search": "?concert=2026-05-31-gromche-slova",
+      "title": "Афиша",
+      "robots": "index, follow",
+      "canonical": "https://21centurycomposers.com/afisha",
+      "h1": [
+        "программа фестиваля"
+      ],
+      "expanded": [
+        "Свернуть программу",
+        "Свернуть программу"
+      ],
+      "scrollY": 5256
+    }
+  },
+  {
+    "probe": "route-state",
+    "route": "/afisha?concert=unknown",
+    "status": 200,
+    "data": {
+      "path": "/afisha",
+      "search": "?concert=unknown",
+      "title": "Афиша",
+      "robots": "index, follow",
+      "canonical": "https://21centurycomposers.com/afisha",
+      "h1": [
+        "программа фестиваля"
+      ],
+      "expanded": [],
+      "scrollY": 0
+    }
+  },
+  {
+    "probe": "route-state",
+    "route": "/no-such-page-audit-2026",
+    "status": 200,
+    "data": {
+      "path": "/no-such-page-audit-2026",
+      "search": "",
+      "title": "Страница не найдена",
+      "robots": "noindex, follow",
+      "canonical": "https://21centurycomposers.com/no-such-page-audit-2026",
+      "h1": [
+        "Страница не найдена"
+      ],
+      "expanded": [],
+      "scrollY": 0
+    }
+  },
+  {
+    "probe": "route-state",
+    "route": "/participants/composers/no-such-person-audit",
+    "status": 200,
+    "data": {
+      "path": "/participants",
+      "search": "",
+      "title": "Участники",
+      "robots": "index, follow",
+      "canonical": "https://21centurycomposers.com/participants",
+      "h1": [
+        "Участники фестиваля"
+      ],
+      "expanded": [],
+      "scrollY": 0
+    }
+  },
+  {
+    "probe": "media-expanded",
+    "text": "Трансляции концертов фестиваля собраны в отдельном разделе.\n\nАРХИВ ТРАНСЛЯЦИЙ\n→\nрепортажи\nРЕПОРТАЖ\n\nНОВОСТИ КУЛЬТУРЫ\n\n«Новости культуры» о «Форельном концерте»\n19 МАЯ 2026\nОТКРЫТЬ\nРЕПОРТАЖ\n\nНОВОСТИ КУЛЬТУРЫ\n\n«Солисты Нижнего Новгорода» выступили в Москве\n15 МАЯ 2026\nОТКРЫТЬ\nСМИ о нас\nПУБЛИКАЦИЯ\n\nРБК СТИЛЬ\n\nНовая академическая музыка прозвучит на фестивале «Композиторы XXI века»\n18 МАЯ 2026\nОТКРЫТЬ\nИНТЕРВЬЮ\n\nCLASSICALMUSICNEWS\n\nВарвара Мягкова — о диалоге исполнителей, композиторов и слушателя\n9 МАЯ 2026\nОТКРЫТЬ\nПУБЛИКАЦИЯ\n\nМУЗЫКАЛЬНАЯ ЖИЗНЬ\n\nС точностью до бесконечности\n22 МАЯ 2026\nОТКРЫТЬ\nИНТЕРВЬЮ\n\nBELCANTO\n\nВарвара Мягкова: «Большое искусство требует не ума, а интуиции»\n3 МАЯ 2026\nОТКРЫТЬ\nПУБЛИКАЦИЯ\n\nМОСКОВСКИЙ КОМСОМОЛЕЦ\n\nНескучные современные классики прозвучали в галерее «Нико»\n7 ИЮНЯ 2026\nОТКРЫТЬ\nНОВОСТЬ\n\nТАСС\n\nФестиваль «Композиторы XXI века» откроется 10 мая в Москве\n30 АПРЕЛЯ 2026\nОТКРЫТЬ\nПУБЛИКАЦИЯ\n\nРАДИО ОРФЕЙ\n\nМузыка как процесс\n30 АПРЕЛЯ 2026\nОТКРЫТЬ\nНОВОСТЬ\n\nПОРТАЛ «КУЛЬТУРА»\n\nВ Москве пройдет первый фестиваль «Композиторы XXI века»\n30 АПРЕЛЯ 2026\nОТКРЫТЬ\nНОВОСТЬ\n\nINTERMEDIA\n\nУ композиторов XXI века появится свой фестиваль\n30 АПРЕЛЯ 2026\nОТКРЫТЬ\nНОВОСТЬ\n\nАГЕНТСТВО ГОРОДСКИХ НОВОСТЕЙ «МОСКВА»\n\nФестиваль «Композиторы XXI века» пройдет в Москве с 10 по 31 мая\n30 АПРЕЛЯ 2026\nОТКРЫТЬ\nАФИША\n\nTIME OUT МОСКВА\n\nФестиваль «Композиторы XXI века»\n10–31 МАЯ 2026\nОТКРЫТЬ\nСВЕРНУТЬ СПИСОК\n↑\n\nКомпозиторы XXI века\n\n© 2026\n\n10–31 мая 2026 · Москва, Галерея Нико\n\n+7 926 276 8057 · festival@21centurycomposers.com\n\nПолитика конфиденциальности"
+  },
+  {
+    "probe": "broadcast-expanded",
+    "expanded": 1
+  },
+  {
+    "probe": "touch-landscape-hero",
+    "data": {
+      "height": 390,
+      "hero": {
+        "x": 219.5,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 609.5,
+        "bottom": 844,
+        "left": 219.5
+      },
+      "title": {
+        "x": 301.40625,
+        "y": 512.2265625,
+        "width": 226.1875,
+        "height": 49.609375,
+        "top": 512.2265625,
+        "right": 527.59375,
+        "bottom": 561.8359375,
+        "left": 301.40625
+      }
+    }
+  },
+  {
+    "probe": "touch-landscape-menu",
+    "links": [
+      {
+        "text": "Программа",
+        "rect": {
+          "x": 450,
+          "y": 142,
+          "width": 61.046875,
+          "height": 44,
+          "top": 142,
+          "right": 511.046875,
+          "bottom": 186,
+          "left": 450
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Участники",
+        "rect": {
+          "x": 450,
+          "y": 186,
+          "width": 61.046875,
+          "height": 44,
+          "top": 186,
+          "right": 511.046875,
+          "bottom": 230,
+          "left": 450
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Академии",
+        "rect": {
+          "x": 450,
+          "y": 230,
+          "width": 61.046875,
+          "height": 44,
+          "top": 230,
+          "right": 511.046875,
+          "bottom": 274,
+          "left": 450
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Партнёры",
+        "rect": {
+          "x": 450,
+          "y": 274,
+          "width": 61.046875,
+          "height": 44,
+          "top": 274,
+          "right": 511.046875,
+          "bottom": 318,
+          "left": 450
+        },
+        "font": "9px"
+      },
+      {
+        "text": "Команда",
+        "rect": {
+          "x": 450,
+          "y": 318,
+          "width": 61.046875,
+          "height": 44,
+          "top": 318,
+          "right": 511.046875,
+          "bottom": 362,
+          "left": 450
+        },
+        "font": "9px"
+      }
+    ]
+  }
+]

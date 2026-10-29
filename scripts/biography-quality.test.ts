@@ -1,9 +1,15 @@
 // @ts-nocheck
 import assert from "node:assert/strict";
 import test from "node:test";
-import { assertNoSharedBiographyParagraphs, selectBiographies } from "./biography-quality.js";
+import { assertNoSharedBiographyParagraphs, assertUniqueParticipantSlugs, selectBiographies } from "./biography-quality.js";
 
 const paragraph = "Многогранный музыкант, проявляющий себя в трёх основных сферах: фортепиано, композиция, педагогика";
+
+test("duplicate cards fail even when their biographies match; different participant roles remain valid", () => {
+  const composer = { slug: "artem-makoyan", group: "composers" };
+  assert.throws(() => assertUniqueParticipantSlugs([composer, composer]), /Duplicate participant/);
+  assert.doesNotThrow(() => assertUniqueParticipantSlugs([composer, { ...composer, group: "performers" }]));
+});
 
 test("rejects contamination across 38 distinct biographies", () => {
   const blocks = Array.from({ length: 38 }, (_, index) => ({

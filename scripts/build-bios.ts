@@ -2,7 +2,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { assertNoSharedBiographyParagraphs, selectBiographies } from "./biography-quality.js";
+import { assertNoSharedBiographyParagraphs, assertUniqueParticipantSlugs, selectBiographies } from "./biography-quality.js";
 import { detectEncodingIssues } from "./check-encoding.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -191,6 +191,7 @@ async function main() {
     }
   }
 
+  assertUniqueParticipantSlugs(blocks);
   const dedupedPersonDetailsBlocks = selectBiographies(blocks, preferredBiographySources);
 
   // Validate all sources, including blocks currently shadowed by another

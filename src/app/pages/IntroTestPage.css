@@ -1,0 +1,206 @@
+.intro-test {
+  color: #101112;
+  background: #fff;
+  --intro-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.intro-test__presentation { position: relative; overflow-anchor: none; }
+.intro-test__stage { position: relative; }
+.intro-test:not([data-phase="hero"]) .intro-test__presentation { height: calc(var(--intro-stage-height) * 2 + 100svh - var(--intro-pin-top)); }
+.intro-test:not([data-phase="hero"]) .intro-test__stage {
+  position: sticky;
+  top: var(--intro-pin-top);
+  height: calc(100svh - var(--intro-pin-top));
+  overflow: clip;
+  isolation: isolate;
+  background: #fff;
+}
+.intro-test__scenes { position: absolute; top: calc(-1 * var(--intro-pin-top)); right: 0; left: 0; height: 100svh; pointer-events: none; }
+.intro-test__hero { opacity: 1; transition: opacity 450ms ease, visibility 0ms; }
+.intro-test:not([data-scene="1"]) .intro-test__hero { opacity: 0; visibility: hidden; transition: opacity 450ms ease, visibility 0ms 450ms; pointer-events: none; }
+.intro-test__hero { position: relative; }
+.intro-test .logo-video-hero { min-height: 100svh; }
+/* Only the film opacity changes. All original emblem geometry and SVG stay intact. */
+.intro-test .logo-video-hero__mass { background: #080808; }
+.intro-test .logo-video-hero__mass video { opacity: 1; transition: opacity 750ms ease 100ms; }
+.intro-test[data-revealed="true"] .logo-video-hero__mass video { opacity: 0; }
+.intro-test .logo-video-hero__title,
+.intro-test .logo-video-hero__heading,
+.intro-test .logo-video-hero__year,
+.intro-test .logo-video-hero__metadata { transition: opacity 400ms ease; }
+.intro-test[data-revealed="true"] .logo-video-hero__title,
+.intro-test[data-revealed="true"] .logo-video-hero__heading,
+.intro-test[data-revealed="true"] .logo-video-hero__year,
+.intro-test[data-revealed="true"] .logo-video-hero__metadata { opacity: 0; pointer-events: none; }
+.intro-test[data-phase="returning"][data-revealed="false"] .logo-video-hero__title,
+.intro-test[data-phase="returning"][data-revealed="false"] .logo-video-hero__heading,
+.intro-test[data-phase="returning"][data-revealed="false"] .logo-video-hero__year,
+.intro-test[data-phase="returning"][data-revealed="false"] .logo-video-hero__metadata { transition-delay: 230ms; }
+
+.intro-test__first-copy {
+  position: absolute;
+  top: 48%;
+  left: 59%;
+  width: 37%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.intro-test__first-copy h2 {
+  margin: 0;
+  font-family: var(--font-editorial-serif);
+  font-size: clamp(40px, 5.5vw, 112px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  outline: none;
+}
+.intro-test__first-copy h2 span { display: block; white-space: nowrap; }
+.intro-test__first-copy p {
+  max-width: 33ch;
+  margin: clamp(24px, 3.6vw, 60px) 0 0;
+  font-family: var(--font-editorial-sans);
+  font-size: clamp(16px, 1.65vw, 28px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+.intro-test__first-copy h2 span,
+.intro-test__first-copy p {
+  opacity: 0;
+  translate: 0 16px;
+  transition: opacity 350ms ease, translate 350ms var(--intro-ease);
+}
+.intro-test__first-copy p { translate: 0 10px; }
+.intro-test[data-revealed="true"] .intro-test__first-copy h2 span,
+.intro-test[data-revealed="true"] .intro-test__first-copy p {
+  opacity: 1;
+  translate: 0 0;
+  transition-duration: 550ms;
+  transition-delay: 350ms;
+}
+.intro-test[data-revealed="true"] .intro-test__first-copy h2 span:nth-child(2) { transition-delay: 425ms; }
+.intro-test[data-revealed="true"] .intro-test__first-copy h2 span:nth-child(3) { transition-delay: 500ms; }
+.intro-test[data-revealed="true"] .intro-test__first-copy p { transition-delay: 650ms; }
+
+.intro-test__entry {
+  position: absolute;
+  right: 6.3%;
+  bottom: 21.5%;
+  display: grid;
+  place-items: center;
+  min-width: 220px;
+  min-height: 56px;
+  padding: 15px 26px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #222426;
+  font-family: var(--font-editorial-sans);
+  font-size: clamp(16px, 1.45vw, 23px);
+  font-weight: 300;
+  line-height: 1.35;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+.intro-test__entry:focus-visible { outline: none; }
+.intro-test__corner {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  color: #747679;
+  animation: intro-corner-breathe 5.6s ease-in-out infinite;
+  transition: color 280ms ease, translate 280ms ease;
+}
+.intro-test__corner::before,
+.intro-test__corner::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  transition: scale 280ms ease;
+}
+.intro-test__corner::before { width: 100%; height: 1px; scale: 0.065 1; }
+.intro-test__corner::after { height: 100%; width: 1px; scale: 1 0.26; }
+.intro-test__corner--start::before,
+.intro-test__corner--start::after { top: 0; left: 0; transform-origin: top left; }
+.intro-test__corner--end::before,
+.intro-test__corner--end::after { bottom: 0; right: 0; transform-origin: bottom right; }
+.intro-test__corner--start { --corner-shift: -2.5px; }
+.intro-test__corner--end { --corner-shift: 2.5px; }
+.intro-test__entry:is(:hover, :focus-visible) .intro-test__corner {
+  animation: none;
+  translate: 0 0;
+  color: #000;
+}
+.intro-test__entry:is(:hover, :focus-visible) .intro-test__corner::before,
+.intro-test__entry:is(:hover, :focus-visible) .intro-test__corner::after { scale: 1 1; }
+.intro-test[data-revealed="true"] .intro-test__entry { opacity: 0; pointer-events: none; }
+.intro-test[data-phase="returning"][data-revealed="false"] .intro-test__entry { transition-delay: 650ms; }
+.intro-test:not([data-phase="hero"]) .intro-test__corner { animation-play-state: paused; }
+@keyframes intro-corner-breathe {
+  0%, 79%, 100% { translate: 0 0; }
+  89% { translate: var(--corner-shift) var(--corner-shift); }
+}
+
+.intro-test__home-nav {
+  position: absolute;
+  z-index: 10;
+  top: calc(12px - var(--intro-pin-top));
+  right: clamp(12px, 3vw, 48px);
+  width: max-content;
+  pointer-events: none;
+}
+.intro-test__return {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  background: transparent;
+  color: #505155;
+  font: 400 11px/1.4 var(--font-editorial-sans);
+  letter-spacing: 0.12em;
+  text-underline-offset: 4px;
+  pointer-events: auto;
+}
+.intro-test__return:is(:hover, :focus-visible) { color: #101112; text-decoration: underline; }
+.intro-test__return:focus-visible { outline: 1px solid #101112; outline-offset: -4px; }
+.intro-test__return[aria-disabled="true"] { cursor: default; }
+.intro-test[data-scene="3"] .intro-test__return { color: #fff; }
+.intro-test[data-scene="3"] .intro-test__return:focus-visible { outline-color: #fff; }
+
+@media (max-width: 63.99rem) and (orientation: portrait) {
+  /* Reserve the mobile story space from the first render: entry never resizes the hero. */
+  .intro-test .logo-video-hero { min-height: max(100svh, 640px); }
+  .intro-test__entry { right: 7%; bottom: 18%; min-width: 200px; min-height: 50px; padding: 13px 22px; font-size: 16px; }
+  .intro-test__first-copy { top: 59%; left: 8%; width: 84%; transform: none; }
+  .intro-test__first-copy h2 { font-size: clamp(36px, 10.8vw, 64px); line-height: 0.96; }
+  .intro-test__first-copy p { max-width: 38ch; margin-top: 20px; font-size: clamp(14px, 3.85vw, 20px); line-height: 1.5; }
+}
+@media (max-width: 700px) {
+  .intro-test__home-nav { top: calc(4px - var(--intro-pin-top)); right: 8px; }
+  .intro-test__return { min-height: 36px; padding: 6px 8px; font-size: 10px; }
+  .intro-test[data-scene="2"] .intro-test__return { color: #fff; }
+  .intro-test[data-scene="2"] .intro-test__return:focus-visible { outline-color: #fff; }
+  .intro-test[data-scene="3"] .intro-test__return { color: #505155; }
+  .intro-test[data-scene="3"] .intro-test__return:focus-visible { outline-color: #101112; }
+}
+@media (min-width: 40rem) and (max-width: 63.99rem) and (orientation: portrait) {
+  .intro-test .logo-video-hero { min-height: max(100svh, 960px); }
+  .intro-test__first-copy { top: 64%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro-test .logo-video-hero__mass video,
+  .intro-test .logo-video-hero__title,
+  .intro-test .logo-video-hero__heading,
+  .intro-test .logo-video-hero__year,
+  .intro-test .logo-video-hero__metadata,
+  .intro-test .intro-test__first-copy h2 span,
+  .intro-test .intro-test__first-copy p,
+  .intro-test .intro-test__entry {
+    transition-duration: 160ms !important;
+    transition-delay: 0ms !important;
+  }
+  .intro-test .intro-test__first-copy h2 span,
+  .intro-test .intro-test__first-copy p { translate: none; }
+  .intro-test .intro-test__corner { animation: none; }
+  .intro-test .intro-test__hero { transition-duration: 160ms; }
+}
